@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<HEAD>
+
+<script type="text/javascript" language="JavaScript">
+
+NumberOfImagesToRotate = 2;
+
+FirstPart = '<img src="image';
+MiddlePart = '.png" height="40" width="40" title="Type';
+LastPart= '">'
+
+function printImage() {
+var i = Math.ceil(Math.random() * NumberOfImagesToRotate); //image to be displayed
+var t = Math.ceil(Math.random() * NumberOfImagesToRotate); //Image title
+document.write(FirstPart + i + MiddlePart+t+LastPart);
+}
+
+</script>
+
+</HEAD>
+
+<body>
+
+<h2>Current Status</h2>
+
+<table style="width:50%">
+  <tr>
+    <th>Item</th>
+    <th>Status</th> 
+  </tr>
+  <tr>
+    <td>Example 1</td>
+    <td><script type="text/javascript" language="JavaScript"> printImage();</script></td>
+  </tr>
+  <tr>
+    <td>Example 2</td>
+    <td><script type="text/javascript" language="JavaScript"> printImage();</script></td>
+  </tr>
+  <tr>
+    <td>Example 3</td>
+    <td><script type="text/javascript" language="JavaScript"> printImage();</script></td>
+  </tr>
+  <tr>
+    <td>Example 4</td>
+    <td><script type="text/javascript" language="JavaScript"> printImage();</script></td>
+  </tr>
+  <tr>
+    <td>Example 5</td>
+    <td><script type="text/javascript" language="JavaScript"> printImage();</script></td>
+  </tr>
+  <tr>
+    <td>Example 6</td>
+    <td><script type="text/javascript" language="JavaScript"> printImage();</script></td>
+  </tr>
+    <tr>
+    <td>Example 7</td>
+    <td><script type="text/javascript" language="JavaScript"> printImage();</script></td>
+  </tr>
+</table>
+
+</body>
+</html>
