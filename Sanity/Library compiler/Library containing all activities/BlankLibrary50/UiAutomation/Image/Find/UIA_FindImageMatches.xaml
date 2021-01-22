@@ -1,0 +1,260 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="UIA_FindImageMatches" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1202,2247.33333333333" sap2010:WorkflowViewState.IdRef="UIA_FindImageMatches_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="UIA_FindImageMatches" sap:VirtualizedContainerService.HintSize="1182,2147.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Count Errors" sap:VirtualizedContainerService.HintSize="1140,2055.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="CurrentDirectory" />
+        <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="XMatches" />
+        <Variable x:TypeArguments="x:String" Name="PagePath" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Init PagePath" sap:VirtualizedContainerService.HintSize="1098,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign DisplayName="Assign Current Directory" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[CurrentDirectory]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">[Environment.CurrentDirectory]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Assign DisplayName="Assign Target Directory" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_2">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[CurrentDirectory]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">[CurrentDirectory+"\Tools\Helpers"]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Assign DisplayName="Assign Page Path" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_3">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[PagePath]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">[Path.Combine(CurrentDirectory,"DemoPage","Table.html")]</InArgument>
+          </Assign.Value>
+        </Assign>
+      </Sequence>
+      <ui:OpenBrowser CommunicationMethod="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Open Browser" Hidden="False" sap:VirtualizedContainerService.HintSize="1098,1854" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="[PagePath]">
+        <ui:OpenBrowser.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1064,1755.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:Int32" Default="0" Name="Type1Err" />
+                <Variable x:TypeArguments="x:Int32" Default="0" Name="Type2Err" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="1022,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" sap2010:Annotation.AnnotationText="ContinueOnError is True, in case content is allowed.&#xA;Security settings may cause this pop-up to appear." ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click Allow blocked content" sap:VirtualizedContainerService.HintSize="1022,151.333333333333" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="f5224422632347f9a710c7fa44da27ca" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' /&gt;&lt;wnd aaname='Notification' cls='DirectUIHWND' /&gt;&lt;ctrl automationid='IENotificationBar' /&gt;&lt;ctrl name='Allow blocked content' role='push button' /&gt;" TimeoutMS="2000" WaitForReady="INTERACTIVE" />
+                </ui:Click.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:Click>
+              <ui:FindImageMatches DisplayName="Find Image Matches Error" sap:VirtualizedContainerService.HintSize="1022,106" sap2010:WorkflowViewState.IdRef="FindImageMatches_1" Matches="[XMatches]">
+                <ui:FindImageMatches.Image>
+                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+                </ui:FindImageMatches.Image>
+                <ui:FindImageMatches.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" WaitForReady="COMPLETE">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                  </ui:Target>
+                </ui:FindImageMatches.Target>
+              </ui:FindImageMatches>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1022,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Total number of errors: &quot;+XMatches.Count.ToString]" />
+              <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each element found" sap:VirtualizedContainerService.HintSize="1022,752" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[XMatches]">
+                <ui:ForEach.Body>
+                  <ActivityAction x:TypeArguments="ui:UiElement">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:UiElement" Name="element" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="985.333333333333,616.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Hover current element" sap:VirtualizedContainerService.HintSize="943.333333333333,68" sap2010:WorkflowViewState.IdRef="Hover_1" SendWindowMessages="False" SimulateHover="False">
+                        <ui:Hover.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Hover.CursorPosition>
+                        <ui:Hover.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[element]" WaitForReady="COMPLETE">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                          </ui:Target>
+                        </ui:Hover.Target>
+                      </ui:Hover>
+                      <Pick sap:VirtualizedContainerService.HintSize="943.333333333333,416.666666666667" sap2010:WorkflowViewState.IdRef="Pick_1">
+                        <PickBranch DisplayName="PickBranch Type1" sap:VirtualizedContainerService.HintSize="384.666666666667,370.666666666667" sap2010:WorkflowViewState.IdRef="PickBranch_1">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <PickBranch.Trigger>
+                            <ui:WaitImageAppear FoundElement="{x:Null}" DisplayName="Find Image Type1" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitImageAppear_1">
+                              <ui:WaitImageAppear.Image>
+                                <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADEAAAAcCAYAAADIrlf0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEZSURBVFhH7ZOBCYMwEEU7rRs4ghu4QUZwBbdwmJRn/XAcsQjthSh5EGrMxfx32ld+AF2iFbpEK3SJVni2xDRNeRiG4kgpHVXxkGNd12NW5tKb4EE1gwPB1bRbSizLksdx3K/DJJjP83zMPqhz27bttdQQRt1keKiz6+z1cD9EQuEsSElM4awo1+ouUGPnpWdCmAT4hxNIcx9Q2D1c+86zBxlLqITtPIf4LrPHo5CEJ1xpVJWwwZGx698k2CeJK4RKgELxaz8NaiUoFFx1V8JBuIQ67rvOfQ63e6jxf3RqLHZdhEuou/47lpyCMrwo2HVG6Qzu/0XiDB7OIR5J1OInCf+JiFtI6DM4C3qrN9EKXaIVukQrPEAi5zfb+X6Pk1PZpwAAAABJRU5ErkJggg==" />
+                              </ui:WaitImageAppear.Image>
+                              <ui:WaitImageAppear.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
+                              </ui:WaitImageAppear.Target>
+                            </ui:WaitImageAppear>
+                          </PickBranch.Trigger>
+                          <Assign DisplayName="Type1++" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_4">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Int32">[Type1Err]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Int32">[Type1Err+1]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </PickBranch>
+                        <PickBranch DisplayName="PickBranch Type2" sap:VirtualizedContainerService.HintSize="384.666666666667,370.666666666667" sap2010:WorkflowViewState.IdRef="PickBranch_2">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <PickBranch.Trigger>
+                            <ui:WaitImageAppear FoundElement="{x:Null}" DisplayName="Find Image Type2" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitImageAppear_2">
+                              <ui:WaitImageAppear.Image>
+                                <ui:ImageTarget Image="{x:Null}" Accuracy="0.9" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAcCAYAAAAjmez3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAE2SURBVFhH7ZKBDYIwEEWdlg0YgQ3YgBFYgS0YBvMMP/meLRIbSTV9SSPQq3evd7ftT2gitdFEaqOJ1EYTqY1DkWEYtq7rkmuapj3qeyzL8pRzHMd955XTHUHqiuKdWHjf91mZqkUi8zw/ZFJ8LMJ7vB2Nwrquj1hiSO7jESHO9zmb4ysiKtBBTHIq0GV59kKI8ffUfzr+/5Gi0SIpXRAUpfdYpPAzPMcOcAahiC4mR5GI3xDFxdvmTESFIkBhqRVFyMH3I4pEvHiS+f6RCOck8g7ic+PkFImACuPXx4RYSQoVrzieNWYpcjlTFIvo5uPt851C/QwxfrupkdH+2Y6JYhEljHMtQRXLirLg+yzloFP+3Veqi6dFcihhRCJXUSwSx0X8jIhGIlfsz3WkFppIbTSRuti2Owyd4XSnRdv2AAAAAElFTkSuQmCC" />
+                              </ui:WaitImageAppear.Image>
+                              <ui:WaitImageAppear.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" WaitForReady="INTERACTIVE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
+                              </ui:WaitImageAppear.Target>
+                            </ui:WaitImageAppear>
+                          </PickBranch.Trigger>
+                          <Assign DisplayName="Type2++" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_5">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Int32">[Type2Err]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Int32">[Type2Err+1]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </PickBranch>
+                      </Pick>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEach.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:ForEach>
+              <ui:LogMessage DisplayName="Log Message #Type1" sap:VirtualizedContainerService.HintSize="1022,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Errors of type 1: &quot;+ Type1Err.ToString]" />
+              <ui:LogMessage DisplayName="Log Message #Type2" sap:VirtualizedContainerService.HintSize="1022,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Errors of type 2 :&quot;+ Type2Err.ToString]" />
+              <ui:CloseWindow Selector="{x:Null}" TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window" sap:VirtualizedContainerService.HintSize="1022,68" sap2010:WorkflowViewState.IdRef="CloseWindow_1" WaitForReady="INTERACTIVE" />
+            </Sequence>
+          </ActivityAction>
+        </ui:OpenBrowser.Body>
+      </ui:OpenBrowser>
+    </Sequence>
+  </Sequence>
+</Activity>
