@@ -1,24 +1,15 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ActivitateCuArgumente" this:ActivitateCuArgumente.inArg="Default value for argument" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ActivitateCuArgumente" this:ActivitateCuArgumente.outArgument="[new DataTable]" this:ActivitateCuArgumente.outArg="True" this:ActivitateCuArgumente.inArg="Default value for argument" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="outArgument" Type="InArgument(sd:DataTable)" />
     <x:Property Name="inOutArg" Type="InOutArgument(scg:Dictionary(x:String, sd:DataTable))" />
     <x:Property Name="outArg" Type="InArgument(x:Boolean)" />
     <x:Property Name="inArg" Type="InArgument(x:String)" />
+    <x:Property Name="inArgument" Type="InArgument(sd:DataTable)" />
   </x:Members>
-  <this:ActivitateCuArgumente.outArgument>
-    <InArgument x:TypeArguments="sd:DataTable">
-      <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="new DataTable" />
-    </InArgument>
-  </this:ActivitateCuArgumente.outArgument>
-  <this:ActivitateCuArgumente.outArg>
-    <InArgument x:TypeArguments="x:Boolean">
-      <Literal x:TypeArguments="x:Boolean" Value="True" />
-    </InArgument>
-  </this:ActivitateCuArgumente.outArg>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1726.66666666667,975.333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1730,1075.33333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivitateCuArgumente_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="42">
@@ -80,11 +71,7 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="ActivitateCuArgumente" sap:VirtualizedContainerService.HintSize="560,910.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Object" Name="message">
-        <Variable.Default>
-          <mva:VisualBasicValue x:TypeArguments="x:Object" ExpressionText="&quot;Ana are mere&quot;" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Object" Default="[&quot;Ana are mere&quot;]" Name="message" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -102,11 +89,7 @@
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="518,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[message]" />
     <Sequence DisplayName="Sequence1" sap:VirtualizedContainerService.HintSize="518,582" sap2010:WorkflowViewState.IdRef="Sequence_5">
       <Sequence.Variables>
-        <Variable x:TypeArguments="x:String" Name="wr_message">
-          <Variable.Default>
-            <Literal x:TypeArguments="x:String">Abc</Literal>
-          </Variable.Default>
-        </Variable>
+        <Variable x:TypeArguments="x:String" Default="Abc" Name="wr_message" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -116,11 +99,7 @@
       <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="476,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[wr_message]" />
       <Sequence DisplayName="Sequence2" sap:VirtualizedContainerService.HintSize="476,387.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
         <Sequence.Variables>
-          <Variable x:TypeArguments="x:Int32" Name="inArgument">
-            <Variable.Default>
-              <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="&quot;Default value for inline created argument&quot;.Length" />
-            </Variable.Default>
-          </Variable>
+          <Variable x:TypeArguments="x:Int32" Default="[&quot;Default value for inline created argument&quot;.Length]" Name="inArgument" />
         </Sequence.Variables>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -143,10 +122,13 @@
               <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_3" />
             </ActivityAction>
           </p:CVScope.Body>
+          <p:CVScope.DesignTimeCache>
+            <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" />
+          </p:CVScope.DesignTimeCache>
           <p:CVScope.DesignTimeCacheContainer>
             <uc:CvCacheContainer>
               <uc:CvCacheContainer.Caches>
-                <scg:List x:TypeArguments="uc:CVCache" Capacity="4">
+                <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
                   <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DisplayName="1" Id="919c5596-b810-49c7-9cfd-3116b48c9765" />
                 </scg:List>
               </uc:CvCacheContainer.Caches>
