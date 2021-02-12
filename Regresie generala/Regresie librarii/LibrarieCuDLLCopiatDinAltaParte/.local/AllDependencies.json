@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.6.1": {
+      "AccelerateRPA.PushBullet.Activities/1.0.4": {
+        "type": "package",
+        "dependencies": {
+          "BouncyCastle": "1.8.5",
+          "PushBulletSharp": "3.1.0"
+        },
+        "compile": {
+          "lib/_._": {}
+        },
+        "runtime": {
+          "lib/PushNotification.dll": {}
+        }
+      },
       "AForge/2.2.5": {
         "type": "package",
         "compile": {
@@ -593,6 +606,16 @@
           "lib/net45/NPOI.dll": {}
         }
       },
+      "PushBulletSharp/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-windows8+net45/_._": {}
+        },
+        "runtime": {
+          "lib/portable-windows8+net45/BouncyCastle.dll": {},
+          "lib/portable-windows8+net45/PushbulletSharp.dll": {}
+        }
+      },
       "SharpZipLib/1.2.0": {
         "type": "package",
         "compile": {
@@ -1167,7 +1190,7 @@
           "lib/net461/UiPath.Platform.dll": {}
         }
       },
-      "UiPath.System.Activities/20.10.1": {
+      "UiPath.System.Activities/20.10.3": {
         "type": "package",
         "dependencies": {
           "CsvHelper": "2.13.5",
@@ -1608,6 +1631,17 @@
     }
   },
   "libraries": {
+    "AccelerateRPA.PushBullet.Activities/1.0.4": {
+      "sha512": "aE9LGLMZmsdg0DrX8/vWNf/pQc4ehNWRpDY3U6YvgXvErv0ADOkrS/notBXkqVDfFbs+HmbPLtaFjkYtMNlaOw==",
+      "type": "package",
+      "path": "acceleraterpa.pushbullet.activities/1.0.4",
+      "files": [
+        ".nupkg.metadata",
+        "acceleraterpa.pushbullet.activities.1.0.4.nupkg.sha512",
+        "acceleraterpa.pushbullet.activities.nuspec",
+        "lib/PushNotification.dll"
+      ]
+    },
     "AForge/2.2.5": {
       "sha512": "clkumhM9DggqIzEXAHgVLeWO4arG5YfoPr7J4jfjJx35AoeEIJSSm49J25bwp/9mXQYLwi7y1Wunc8qgYJsGxg==",
       "type": "package",
@@ -2450,6 +2484,20 @@
         "npoi.nuspec"
       ]
     },
+    "PushBulletSharp/3.1.0": {
+      "sha512": "sP2ppGLR2lKdLxyG6U5MSDwOBmp7fDETcjehh8TNSlT5Fl5vJcJ4AnvmHzms8T1WhUO2YqZeY80AvF7FV68DgA==",
+      "type": "package",
+      "path": "pushbulletsharp/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/portable-windows8+net45/BouncyCastle.dll",
+        "lib/portable-windows8+net45/PushbulletSharp.dll",
+        "lib/portable-windows8+net45/PushbulletSharp.pdb",
+        "pushbulletsharp.3.1.0.nupkg.sha512",
+        "pushbulletsharp.nuspec"
+      ]
+    },
     "SharpZipLib/1.2.0": {
       "sha512": "zvWa/L02JHNatdtjya6Swpudb2YEHaOLHL1eRrqpjm71iGRNUNONO5adUF/9CHbSJbzhELW1UoH4NGy7n7+3bQ==",
       "type": "package",
@@ -3160,10 +3208,10 @@
         "uipath.platform.nuspec"
       ]
     },
-    "UiPath.System.Activities/20.10.1": {
-      "sha512": "Ho9XHfnlPXpXxPkCc9wQt5kffIuWKPSiS0TCr2yYrWs1V8cp6XKjZwv2znsB/VRMiHrQdE7ucBnvs3bpQEUouQ==",
+    "UiPath.System.Activities/20.10.3": {
+      "sha512": "TivmsA09tbv+wG9abR93owdCavHXXdB0pOUAPtp9u9LACpQJBcdAOZdp+wwlFNwGnNyq1lKYaUPFbfKepNVmwg==",
       "type": "package",
-      "path": "uipath.system.activities/20.10.1",
+      "path": "uipath.system.activities/20.10.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3202,7 +3250,7 @@
         "lib/net461/tr/UiPath.System.Activities.resources.dll",
         "lib/net461/zh-CN/UiPath.System.Activities.Design.resources.dll",
         "lib/net461/zh-CN/UiPath.System.Activities.resources.dll",
-        "uipath.system.activities.20.10.1.nupkg.sha512",
+        "uipath.system.activities.20.10.3.nupkg.sha512",
         "uipath.system.activities.nuspec"
       ]
     },
@@ -3490,26 +3538,32 @@
   "projectFileDependencyGroups": {
     "": [],
     ".NETFramework,Version=v4.6.1": [
+      "AccelerateRPA.PushBullet.Activities >= 1.0.4 <= 1.0.4",
       "UiPath.Excel.Activities >= 2.9.5-beta.1355806 <= 2.9.5-beta.1355806",
       "UiPath.Mail.Activities >= 1.9.5-beta.1347297 <= 1.9.5-beta.1347297",
-      "UiPath.System.Activities >= 20.10.1 <= 20.10.1",
+      "UiPath.System.Activities >= 20.10.3 <= 20.10.3",
       "UiPath.UIAutomation.Activities >= 20.10.8 <= 20.10.8"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Liviu.Ponova\\.nuget\\packages\\": {}
+    "C:\\Users\\Liviu.Ponova.UIPATH\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "LibrarieCuDLLCopiatDinAltaParte",
       "projectName": "LibrarieCuDLLCopiatDinAltaParte",
-      "projectPath": "C:\\Users\\Liviu.Ponova\\Desktop\\workRepo\\workRepo\\LibrarieCuDLLCopiatDinAltaParte\\.local",
-      "packagesPath": "C:\\Users\\Liviu.Ponova\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Liviu.Ponova\\Desktop\\workRepo\\workRepo\\LibrarieCuDLLCopiatDinAltaParte\\.local"
+      "projectPath": "C:\\Work\\Helpers\\GitRepoCentralized-Remote\\workRepo\\Regresie generala\\Regresie librarii\\LibrarieCuDLLCopiatDinAltaParte\\.local",
+      "packagesPath": "C:\\Users\\Liviu.Ponova.UIPATH\\.nuget\\packages\\",
+      "outputPath": "C:\\Work\\Helpers\\GitRepoCentralized-Remote\\workRepo\\Regresie generala\\Regresie librarii\\LibrarieCuDLLCopiatDinAltaParte\\.local"
     },
     "frameworks": {
       "net461": {
         "dependencies": {
+          "AccelerateRPA.PushBullet.Activities": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[1.0.4, 1.0.4]"
+          },
           "UiPath.Excel.Activities": {
             "include": "Runtime",
             "target": "Package",
@@ -3523,7 +3577,7 @@
           "UiPath.System.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[20.10.1, 20.10.1]"
+            "version": "[20.10.3, 20.10.3]"
           },
           "UiPath.UIAutomation.Activities": {
             "include": "Runtime",
@@ -3533,5 +3587,20 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Work\\Helpers\\GitRepoCentralized-Remote\\workRepo\\Regresie generala\\Regresie librarii\\LibrarieCuDLLCopiatDinAltaParte\\.local\\nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
+    {
+      "code": "NU3034",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'PushBulletSharp 3.1.0' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
+      "libraryId": "PushBulletSharp"
+    }
+  ]
 }
