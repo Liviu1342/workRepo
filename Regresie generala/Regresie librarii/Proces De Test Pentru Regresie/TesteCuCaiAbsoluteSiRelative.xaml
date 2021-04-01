@@ -1,15 +1,16 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.csvPath="C:\Work\Helpers\GitRepoCentralized-Remote\workRepo\Librarie Pentru Regresie\Fisiere utile\Ne queue items.csv" this:Main.txtPath="C:\Work\Helpers\Tools\Test Files\testTextDoc.txt" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:Librarie_Pentru_Regresie;assembly=Librarie Pentru Regresie" xmlns:lxv="clr-namespace:Librarie_Pentru_Regresie.Xamluri_importate.Vechi;assembly=Librarie Pentru Regresie" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.csvPath="C:\Work\Helpers\GitRepoCentralized-Remote\workRepo\Regresie generala\Regresie librarii\Librarie Pentru Regresie\Fisiere utile\Ne queue items.csv" this:Main.txtPath="C:\Work\Helpers\Tools\Test Files\testTextDoc.txt" this:Main.csvRelativePath="Fisiere utile\Ne queue items.csv" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:Librarie_Pentru_Regresie;assembly=Librarie Pentru Regresie" xmlns:lxv="clr-namespace:Librarie_Pentru_Regresie.Xamluri_importate.Vechi;assembly=Librarie Pentru Regresie" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="csvPath" Type="InArgument(x:String)" />
     <x:Property Name="txtPath" Type="InArgument(x:String)" />
+    <x:Property Name="csvRelativePath" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>820,915.333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1676.66666666667,1254</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="31">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -41,10 +42,10 @@
       <x:String>UiPath.CSV.Activities</x:String>
       <x:String>Librarie_Pentru_Regresie.Xamluri_importate.Vechi</x:String>
       <x:String>Librarie_Pentru_Regresie.Folder_pentru_invoke</x:String>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="20">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -65,54 +66,65 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="418,652" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="520.666666666667,1049.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <lxv:Main argInOut="{x:Null}" argOut="{x:Null}" sap:VirtualizedContainerService.HintSize="376,22" sap2010:WorkflowViewState.IdRef="Main_1" argIn="test" />
-    <Sequence DisplayName="Aici folosesc cale absoluta" sap:VirtualizedContainerService.HintSize="376,114" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <lxv:Main argInOut="{x:Null}" argOut="{x:Null}" sap:VirtualizedContainerService.HintSize="478.666666666667,22" sap2010:WorkflowViewState.IdRef="Main_1" argIn="test" />
+    <Sequence DisplayName="Aici folosesc cale absoluta" sap:VirtualizedContainerService.HintSize="478.666666666667,227.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <l:ActivitateCareFolosestePathuri sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ActivitateCareFolosestePathuri_1" csvPath="[csvPath]" txtPath="[txtPath]" />
+      <l:ActivitateCareFolosestePathuri sap:VirtualizedContainerService.HintSize="284,135.333333333333" sap2010:WorkflowViewState.IdRef="ActivitateCareFolosestePathuri_1" csvPath="[csvPath]" csvRelativePath="[csvRelativePath]" txtPath="[txtPath]" useRelativePath="True" />
     </Sequence>
-    <Sequence DisplayName="Aici folosesc cale relativa" sap:VirtualizedContainerService.HintSize="376,282" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="Aici folosesc cale relativa" sap:VirtualizedContainerService.HintSize="478.666666666667,566" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="334,128" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
-        <ui:MultipleAssign.AssignOperations>
-          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">[csvPath]</OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">..\..\..\..\..\..\..\..\Work\Helpers\GitRepoCentralized-Remote\workRepo\Librarie Pentru Regresie\Fisiere utile\Ne queue items.csv</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">[txtPath]</OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">..\..\..\..\..\..\..\..\Work\Helpers\Tools\Test Files\testTextDoc.txt</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-          </scg:List>
-        </ui:MultipleAssign.AssignOperations>
-      </ui:MultipleAssign>
-      <l:ActivitateCareFolosestePathuri sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="ActivitateCareFolosestePathuri_2" csvPath="[csvPath]" txtPath="[txtPath]" />
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436.666666666667,298.666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,220" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="334,128" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[csvPath]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">..\..\..\..\..\..\..\..\Work\Helpers\GitRepoCentralized-Remote\workRepo\Librarie Pentru Regresie\Fisiere utile\Ne queue items.csv</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[txtPath]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">..\..\..\..\..\..\..\..\Work\Helpers\Tools\Test Files\testTextDoc.txt</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+          </Sequence>
+        </ui:CommentOut.Body>
+      </ui:CommentOut>
+      <l:ActivitateCareFolosestePathuri sap:VirtualizedContainerService.HintSize="436.666666666667,135.333333333333" sap2010:WorkflowViewState.IdRef="ActivitateCareFolosestePathuri_2" csvPath="[csvPath]" csvRelativePath="[csvRelativePath]" txtPath="[txtPath]" useRelativePath="False" />
     </Sequence>
-    <lxv:ActivitateCareInvocaXamluriVechi sap:VirtualizedContainerService.HintSize="376,22" sap2010:WorkflowViewState.IdRef="ActivitateCareInvocaXamluriVechi_1" argIn="test">
+    <lxv:ActivitateCareInvocaXamluriVechi sap:VirtualizedContainerService.HintSize="478.666666666667,22" sap2010:WorkflowViewState.IdRef="ActivitateCareInvocaXamluriVechi_1" argIn="test">
       <lxv:ActivitateCareInvocaXamluriVechi.argInOut>
         <InArgument x:TypeArguments="x:String" />
       </lxv:ActivitateCareInvocaXamluriVechi.argInOut>

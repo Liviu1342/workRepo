@@ -5,21 +5,22 @@
   <this:ProcessMyPet.petResponseArg>
     <InArgument x:TypeArguments="s:Pet" />
   </this:ProcessMyPet.petResponseArg>
-  <sap:VirtualizedContainerService.HintSize>1848,1185.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1986,1185.33333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
-    <scg1:List x:TypeArguments="x:String" Capacity="6">
+    <scg1:List x:TypeArguments="x:String" Capacity="12">
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>SwaggerPetstore</x:String>
       <x:String>System</x:String>
       <x:String>System.Collections.Generic</x:String>
       <x:String>System.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
     </scg1:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg1:List x:TypeArguments="AssemblyReference" Capacity="12">
+    <scg1:List x:TypeArguments="AssemblyReference" Capacity="24">
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>SwaggerPetstore</AssemblyReference>
@@ -32,9 +33,11 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg1:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Private: Process my pet" sap:VirtualizedContainerService.HintSize="478.666666666667,597.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Private: Process my pet" sap:VirtualizedContainerService.HintSize="478.666666666667,765.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int64" Name="petId" />
       <Variable x:TypeArguments="s:Pet" Name="petResponse" />
@@ -53,7 +56,7 @@
         <InArgument x:TypeArguments="x:Int64">100</InArgument>
       </Assign.Value>
     </Assign>
-    <uwc:GetPetByIdActivity BearerToken="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" Headers="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" Username="{x:Null}" DisplayName="GetPetById" Endpoint="[&quot;https://petstore.swagger.io/v2&quot;]" sap:VirtualizedContainerService.HintSize="436.666666666667,22" sap2010:WorkflowViewState.IdRef="GetPetByIdActivity_1" Response="[petResponseArg]" TimeoutMS="30000">
+    <uwc:GetPetByIdActivity BearerToken="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" Headers="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" Username="{x:Null}" DisplayName="GetPetById" Endpoint="[&quot;https://petstore.swagger.io/v2&quot;]" sap:VirtualizedContainerService.HintSize="436.666666666667,190" sap2010:WorkflowViewState.IdRef="GetPetByIdActivity_1" Response="[petResponseArg]" TimeoutMS="30000">
       <uwc:GetPetByIdActivity.Request>
         <uwc:ClientGetPetByIdRequest PetId="[petId]" />
       </uwc:GetPetByIdActivity.Request>
@@ -66,7 +69,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg1:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+          <ui:Click CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -78,7 +81,11 @@
               </ui:CursorPosition>
             </ui:Click.CursorPosition>
             <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="sadfg" WaitForReady="INTERACTIVE" />
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8b34c79e-015f-4457-b4ad-f299592ff3b7" Selector="sadfg" WaitForReady="INTERACTIVE">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+              </ui:Target>
             </ui:Click.Target>
           </ui:Click>
         </Sequence>
