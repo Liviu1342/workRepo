@@ -7,7 +7,7 @@
     </x:Property>
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>871.3333333333334,1248.6666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1728,1760</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -87,7 +87,7 @@
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Invoke" sap:VirtualizedContainerService.HintSize="478.6666666666667,1184" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Invoke" sap:VirtualizedContainerService.HintSize="478.6666666666667,1695.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="myDate" />
     </Sequence.Variables>
@@ -96,17 +96,43 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke RandomFileToInvoke workflow" sap:VirtualizedContainerService.HintSize="436.6666666666667,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" LogEntry="No" LogExit="No" UnSafe="True" WorkflowFileName="RandomFileToInvoke.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke TestFlowchart workflow" sap:VirtualizedContainerService.HintSize="436.6666666666667,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="TestFlowchart.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke RandomFileToInvoke workflow" sap:VirtualizedContainerService.HintSize="436.6666666666667,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="RandomFileToInvoke.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:Object" x:Key="myMessage">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">myMessage</CSharpValue>
         </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436.6666666666667,163.33333333333334" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="200,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke RandomFileToInvoke workflow" sap:VirtualizedContainerService.HintSize="436.6666666666667,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="RandomFileToInvoke.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:Object" x:Key="myMessage">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">myMessage</CSharpValue>
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InvokeIsolated workflow" sap:VirtualizedContainerService.HintSize="436.6666666666667,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Workflow\\InvokeIsolated.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:Object" x:Key="myMessage">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"Test"</CSharpValue>
+        </InArgument>
+        <InArgument x:TypeArguments="scg:IList(x:String)" x:Key="myList">
+          <CSharpValue x:TypeArguments="scg:IList(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">new List&lt;String&gt;()</CSharpValue>
         </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
@@ -129,7 +155,7 @@
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeProcess.Arguments>
     </ui:InvokeProcess>
-    <ui:BeginProcess DisplayName="Run Parallel Process" FolderPath="Modern" sap:VirtualizedContainerService.HintSize="436.6666666666667,168" sap2010:WorkflowViewState.IdRef="BeginProcess_4" ProcessName="NET5-Win-VB-BlankProcess8">
+    <ui:BeginProcess DisplayName="Run Parallel Process" FolderPath="Modern" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="BeginProcess_4" ProcessName="NET5-Win-VB-BlankProcess8">
       <ui:BeginProcess.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, InArgument" />
       </ui:BeginProcess.Arguments>
