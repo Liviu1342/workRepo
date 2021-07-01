@@ -1,0 +1,146 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Jobs" this:Jobs.processName="test process" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="jobs" Type="OutArgument(scg:IEnumerable(ui:OrchestratorJob))" />
+    <x:Property Name="folderPath" Type="InArgument(x:String)" />
+    <x:Property Name="processName" Type="InArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="numberOfRobots" Type="InArgument(x:Int32)" />
+    <x:Property Name="jobName" Type="InArgument(ui:OrchestratorJob)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+  </x:Members>
+  <this:Jobs.folderPath>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Jobs.folderPath>
+  <this:Jobs.numberOfRobots>
+    <InArgument x:TypeArguments="x:Int32" />
+  </this:Jobs.numberOfRobots>
+  <this:Jobs.jobName>
+    <InArgument x:TypeArguments="ui:OrchestratorJob">
+      <CSharpValue x:TypeArguments="ui:OrchestratorJob" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">new OrchestratorJob()</CSharpValue>
+    </InArgument>
+  </this:Jobs.jobName>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>1740,929.3333333333334</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Jobs" sap:VirtualizedContainerService.HintSize="326,355.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:GetJobs Filter="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" Top="{x:Null}" DisplayName="Get Jobs" sap:VirtualizedContainerService.HintSize="284,22" sap2010:WorkflowViewState.IdRef="GetJobs_1">
+      <ui:GetJobs.FolderPath>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">folderPath</CSharpValue>
+        </InArgument>
+      </ui:GetJobs.FolderPath>
+      <ui:GetJobs.Result>
+        <OutArgument x:TypeArguments="scg:IEnumerable(ui:OrchestratorJob)">
+          <CSharpReference x:TypeArguments="scg:IEnumerable(ui:OrchestratorJob)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">jobs</CSharpReference>
+        </OutArgument>
+      </ui:GetJobs.Result>
+    </ui:GetJobs>
+    <ui:StartJob TimeoutMS="{x:Null}" DisplayName="Start Job" sap:VirtualizedContainerService.HintSize="284,80.66666666666667" sap2010:WorkflowViewState.IdRef="StartJob_1">
+      <ui:StartJob.FolderPath>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">folderPath</CSharpValue>
+        </InArgument>
+      </ui:StartJob.FolderPath>
+      <ui:StartJob.NumberOfRobots>
+        <InArgument x:TypeArguments="x:Int32">
+          <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">numberOfRobots</CSharpValue>
+        </InArgument>
+      </ui:StartJob.NumberOfRobots>
+      <ui:StartJob.ProcessName>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">processName</CSharpValue>
+        </InArgument>
+      </ui:StartJob.ProcessName>
+    </ui:StartJob>
+    <ui:StopJob TimeoutMS="{x:Null}" DisplayName="Stop Job" sap:VirtualizedContainerService.HintSize="284,80.66666666666667" sap2010:WorkflowViewState.IdRef="StopJob_1" Strategy="Stop">
+      <ui:StopJob.FolderPath>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">folderPath</CSharpValue>
+        </InArgument>
+      </ui:StopJob.FolderPath>
+      <ui:StopJob.Job>
+        <InArgument x:TypeArguments="ui:OrchestratorJob">
+          <CSharpValue x:TypeArguments="ui:OrchestratorJob" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">jobName</CSharpValue>
+        </InArgument>
+      </ui:StopJob.Job>
+    </ui:StopJob>
+  </Sequence>
+</Activity>
