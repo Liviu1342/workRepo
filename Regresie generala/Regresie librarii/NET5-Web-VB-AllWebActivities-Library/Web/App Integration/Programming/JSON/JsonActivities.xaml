@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>466,1017.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1760.6666666666667,929.3333333333334</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>JsonActivities_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="28">
@@ -67,7 +67,7 @@
       <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="JsonActivities" sap:VirtualizedContainerService.HintSize="476,952.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="JsonActivities" sap:VirtualizedContainerService.HintSize="476,804.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="jsonFile" />
       <Variable x:TypeArguments="x:Object" Name="deserializedJsonObject" />
@@ -78,21 +78,21 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:ReadTextFile Content="[jsonFile]" DisplayName="Read Text File" FileName="Tools\\UiPath.Service.Api.deps.json" sap:VirtualizedContainerService.HintSize="434,80.66666666666667" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-    <ui:DeserializeJson x:TypeArguments="x:Object" DisplayName="Deserialize json" sap:VirtualizedContainerService.HintSize="434,80.66666666666667" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[deserializedJsonObject]" JsonString="[jsonFile]" />
+    <ui:DeserializeJson x:TypeArguments="x:Object" DisplayName="Deserialize json" sap:VirtualizedContainerService.HintSize="434,62" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[deserializedJsonObject]" JsonString="[jsonFile]" />
     <ui:WriteTextFile DisplayName="Write Text File" FileName="[outputFile]" sap:VirtualizedContainerService.HintSize="434,135.33333333333334" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[deserializedJsonObject.ToString]" />
     <ui:ReadTextFile Content="[jsonFile]" DisplayName="Read Text File" FileName="Tools\\UiPath.Service.Api.deps.json" sap:VirtualizedContainerService.HintSize="434,80.66666666666667" sap2010:WorkflowViewState.IdRef="ReadTextFile_2" />
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,323.3333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,194" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Variables>
         <Variable x:TypeArguments="njl:JArray" Name="myjsonArray" />
       </TryCatch.Variables>
       <TryCatch.Try>
-        <ui:DeserializeJsonArray DisplayName="Deserialize json array" sap:VirtualizedContainerService.HintSize="284,80.66666666666667" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_1" JsonArray="[myjsonArray]" JsonString="[jsonFile]" />
+        <ui:DeserializeJsonArray DisplayName="Deserialize json array" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_1" JsonArray="[myjsonArray]" JsonString="[jsonFile]" />
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,151.33333333333334" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -100,7 +100,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="334,80.66666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Deserialize JSON Array activity threw an exception, as expected&quot;]" />
+            <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="334,94.66666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Deserialize JSON Array activity threw an exception, as expected&quot;]" />
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>

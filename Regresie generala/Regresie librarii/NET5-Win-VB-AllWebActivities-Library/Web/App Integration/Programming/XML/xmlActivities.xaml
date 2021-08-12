@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1694,1810.6666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1760.6666666666667,1603.3333333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>xmlActivities_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="29">
@@ -75,9 +75,11 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
       <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="xmlActivities" sap:VirtualizedContainerService.HintSize="554.6666666666666,1746" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="xmlActivities" sap:VirtualizedContainerService.HintSize="554.6666666666666,1538.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="sampleXmlFile" />
       <Variable x:TypeArguments="sxl:XDocument" Name="xmlDoc" />
@@ -91,17 +93,17 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:ReadTextFile Content="[sampleXmlFile]" DisplayName="Read Text File" FileName="Tools\sample.xml" sap:VirtualizedContainerService.HintSize="512.6666666666666,80.66666666666667" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-    <ui:DeserializeXml DisplayName="Deserialize xml" sap:VirtualizedContainerService.HintSize="512.6666666666666,80.66666666666667" sap2010:WorkflowViewState.IdRef="DeserializeXml_1" XMLDocument="[xmlDoc]" XMLString="[sampleXmlFile]" />
+    <ui:DeserializeXml DisplayName="Deserialize xml" sap:VirtualizedContainerService.HintSize="512.6666666666666,62" sap2010:WorkflowViewState.IdRef="DeserializeXml_1" XMLDocument="[xmlDoc]" XMLString="[sampleXmlFile]" />
     <ui:CheckFalse DisplayName="Check False" ErrorMessage="No XML file was generated" Expression="[xmlDoc is Nothing]" sap:VirtualizedContainerService.HintSize="512.6666666666666,86.66666666666667" sap2010:WorkflowViewState.IdRef="CheckFalse_1" />
-    <ui:GetXMLNodes XMLString="{x:Null}" DisplayName="Get XML nodes" ExistingXML="[xmlDoc]" sap:VirtualizedContainerService.HintSize="512.6666666666666,135.33333333333334" sap2010:WorkflowViewState.IdRef="GetXMLNodes_1" XMLNodes="[xmlNodes]" />
+    <ui:GetNodes XMLString="{x:Null}" DisplayName="Get XML Nodes" ExistingXML="[xmlDoc]" sap:VirtualizedContainerService.HintSize="512.6666666666666,62" sap2010:WorkflowViewState.IdRef="GetNodes_1" XMLNodes="[xmlNodes]" />
     <ui:CheckFalse DisplayName="Check False" ErrorMessage="No nodes found in XML file" Expression="[xmlNodes is Nothing]" sap:VirtualizedContainerService.HintSize="512.6666666666666,86.66666666666667" sap2010:WorkflowViewState.IdRef="CheckFalse_2" />
-    <ui:ForEach x:TypeArguments="sxl:XNode" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="512.6666666666666,655.3333333333334" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[xmlNodes]">
+    <ui:ForEach x:TypeArguments="sxl:XNode" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="512.6666666666666,636.6666666666666" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[xmlNodes]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="sxl:XNode">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sxl:XNode" Name="node" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,527.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,508.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="scg:IEnumerable(sxl:XAttribute)" Name="attributes" />
             </Sequence.Variables>
@@ -110,7 +112,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:GetXMLNodeAttributes Attributes="[attributes]" DisplayName="Get XML node attributes" ExistingXMLNode="[node]" sap:VirtualizedContainerService.HintSize="434,80.66666666666667" sap2010:WorkflowViewState.IdRef="GetXMLNodeAttributes_1" />
+            <ui:GetXMLNodeAttributes Attributes="[attributes]" DisplayName="Get XML node attributes" ExistingXMLNode="[node]" sap:VirtualizedContainerService.HintSize="434,62" sap2010:WorkflowViewState.IdRef="GetXMLNodeAttributes_1" />
             <ui:ForEach x:TypeArguments="sxl:XAttribute" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434,314.6666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[attributes]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="sxl:XAttribute">
@@ -132,7 +134,7 @@
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <ui:ExecuteXPath XMLString="{x:Null}" DisplayName="Execute x path" ExistingXML="[xmlDoc]" sap:VirtualizedContainerService.HintSize="512.6666666666666,190" sap2010:WorkflowViewState.IdRef="ExecuteXPath_1" Result="[xPathResult]" XPathExpression="[xPathExpression]" />
+    <ui:ExecuteXPath XMLString="{x:Null}" DisplayName="Execute x path" ExistingXML="[xmlDoc]" sap:VirtualizedContainerService.HintSize="512.6666666666666,93.33333333333333" sap2010:WorkflowViewState.IdRef="ExecuteXPath_1" Result="[xPathResult]" XPathExpression="[xPathExpression]" />
     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="512.6666666666666,58.666666666666664" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[xPathResult]" />
   </Sequence>
 </Activity>
