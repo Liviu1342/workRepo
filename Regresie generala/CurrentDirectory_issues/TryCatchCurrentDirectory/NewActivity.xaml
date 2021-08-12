@@ -1,0 +1,141 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1848,1494" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="28">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="46">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="514.666666666667,1289.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="472.666666666667,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Enter TryCatch" />
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="472.666666666667,992" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Variables>
+        <Variable x:TypeArguments="x:String" Name="output" />
+      </TryCatch.Variables>
+      <TryCatch.Try>
+        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Calculator" sap:VirtualizedContainerService.HintSize="434,754" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" Version="V1">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,459.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[Environment.CurrentDirectory]" />
+                <uix:NClick ClickType="Single" DisplayName="Click '7'" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Timeout="2">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable DesignTimeRectangle="131, 674, 111, 65" ElementType="Button" FriendlyName="'7'" FullSelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='NumberPad' cls='NamedContainerAutomationPeer' name='Number pad' /&gt;&lt;uia automationid='num7Button' cls='Button' name='Seven' /&gt;" FuzzySelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='NumberPad' cls='NamedContainerAutomationPeer' name='Number pad' /&gt;&lt;uia automationid='num7Button' cls='Button' name='Seven' role='button' check:fulltext='7' /&gt;" ImageBase64="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" InformativeScreenshot="aecda30cd84cba66a9e58225b3717bbf.png" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='Microsoft.WindowsCalculator_8wekyb3d8bbwe!App' title='Calculator' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                  </uix:NClick.Target>
+                </uix:NClick>
+              </Sequence>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="4513, 817, 603, 960" FilePath="Microsoft.WindowsCalculator_8wekyb3d8bbwe!App" InformativeScreenshot="d0767d0c9a72020f91d859a772c9398d.png" Selector="&lt;wnd app='applicationframehost.exe' appid='Microsoft.WindowsCalculator_8wekyb3d8bbwe!App' title='Calculator'/&gt;" />
+          </uix:NApplicationCard.TargetApp>
+        </uix:NApplicationCard>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="438.666666666667,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="426,442" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ReadTextFile Content="[output]" DisplayName="Read Text File" FileName="myTextFile.txt" sap:VirtualizedContainerService.HintSize="384,80.6666666666667" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="384,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[Environment.CurrentDirectory]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="384,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[output]" />
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+      <TryCatch.Finally>
+        <Sequence sap:VirtualizedContainerService.HintSize="426,442" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ReadTextFile Content="[output]" DisplayName="Read Text File" FileName="C:\Users\Liviu.Ponova.UIPATH\Desktop\TestTextDocument_modified.txt" sap:VirtualizedContainerService.HintSize="384,80.6666666666667" sap2010:WorkflowViewState.IdRef="ReadTextFile_2" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="384,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[Environment.CurrentDirectory]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="384,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn" Message="[output]" />
+        </Sequence>
+      </TryCatch.Finally>
+    </TryCatch>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="472.666666666667,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Exit TryCatch" />
+  </Sequence>
+</Activity>

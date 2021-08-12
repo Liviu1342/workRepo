@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>546,1423.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>798,1388</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Programming_ExistsInCollection_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -32,6 +32,8 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -54,13 +56,16 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Programming_ExistsInCollection" sap:VirtualizedContainerService.HintSize="526,1323.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(Of String)]" Name="myStringList" />
       <Variable x:TypeArguments="x:Int32" Name="initialNoOfElements" />
-      <Variable x:TypeArguments="ui:GenericValue" Name="finalNoOfElements" />
+      <Variable x:TypeArguments="x:Int32" Name="finalNoOfElements" />
       <Variable x:TypeArguments="x:Int32" Name="counter" />
       <Variable x:TypeArguments="x:String" Name="element" />
     </Sequence.Variables>
@@ -105,19 +110,19 @@
       </Assign.Value>
     </Assign>
     <RemoveFromCollection x:TypeArguments="x:String" Collection="[myStringList]" DisplayName="Remove From Collection" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="RemoveFromCollection`1_1" Item="[elementToRemoveFromCollection]" />
-    <Assign sap:VirtualizedContainerService.HintSize="484,62" sap2010:WorkflowViewState.IdRef="Assign_4">
+    <Assign sap:VirtualizedContainerService.HintSize="484,62" sap2010:WorkflowViewState.IdRef="Assign_6">
       <Assign.To>
-        <OutArgument x:TypeArguments="ui:GenericValue">[finalNoOfElements]</OutArgument>
+        <OutArgument x:TypeArguments="x:Int32">[finalNoOfElements]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="ui:GenericValue">[myStringList.Count]</InArgument>
+        <InArgument x:TypeArguments="x:Int32">[myStringList.Count]</InArgument>
       </Assign.Value>
     </Assign>
     <ui:CheckTrue DisplayName="Check True" ErrorMessage="[&quot;Unexpected number of elements in collection. Expected &quot; + (noOfelementsInCollection-1).ToString + &quot;, but found &quot; + (initialNoOfElements-finalNoOfElements).ToString + &quot;!&quot;]" Expression="[finalNoOfElements.Equals(noOfelementsInCollection-1)]" sap:VirtualizedContainerService.HintSize="484,86.6666666666667" sap2010:WorkflowViewState.IdRef="CheckTrue_1" />
     <ClearCollection x:TypeArguments="x:String" Collection="[myStringList]" DisplayName="Clear Collection" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="ClearCollection`1_1" />
     <Assign sap:VirtualizedContainerService.HintSize="484,62" sap2010:WorkflowViewState.IdRef="Assign_5">
       <Assign.To>
-        <OutArgument x:TypeArguments="ui:GenericValue">[finalNoOfElements]</OutArgument>
+        <OutArgument x:TypeArguments="x:Int32">[finalNoOfElements]</OutArgument>
       </Assign.To>
       <Assign.Value>
         <InArgument x:TypeArguments="ui:GenericValue">[myStringList.Count]</InArgument>

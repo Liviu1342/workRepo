@@ -1,0 +1,217 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="790,2439.3333333333335" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:nd="clr-namespace:NET5_Win_CS_AllActivitiesInSystemPackage_Library.Data;assembly=NET5-Win-CS-AllActivitiesInSystemPackage-Library" xmlns:np="clr-namespace:NET5_Win_CS_AllActivitiesInSystemPackage_Library.Programming;assembly=NET5-Win-CS-AllActivitiesInSystemPackage-Library" xmlns:ns="clr-namespace:NET5_Win_CS_AllActivitiesInSystemPackage_Library.System;assembly=NET5-Win-CS-AllActivitiesInSystemPackage-Library" xmlns:nuc="clr-namespace:NET5_Win_CS_AllActivitiesInSystemPackage_Library.UiPath.Core;assembly=NET5-Win-CS-AllActivitiesInSystemPackage-Library" xmlns:nw="clr-namespace:NET5_Win_CS_AllActivitiesInSystemPackage_Library.Workflow;assembly=NET5-Win-CS-AllActivitiesInSystemPackage-Library" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>NET5_Win_CS_AllActivitiesInSystemPackage_Library.Data</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Activities.System.Arrays</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>NET5_Win_CS_AllActivitiesInSystemPackage_Library.Programming</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Core.Activities.DateModifications</x:String>
+      <x:String>UiPath.Activities.System.Workflow.Business</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.Core.Activities.TextModifications</x:String>
+      <x:String>NET5_Win_CS_AllActivitiesInSystemPackage_Library.System</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.Activities.System.Compression.Zip</x:String>
+      <x:String>UiPath.Activities.System.Encode</x:String>
+      <x:String>UiPath.Activities.System.Compression.Workflow</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>NET5_Win_CS_AllActivitiesInSystemPackage_Library.UiPath.Core</x:String>
+      <x:String>NET5_Win_CS_AllActivitiesInSystemPackage_Library.Workflow</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>NET5-Win-CS-AllActivitiesInSystemPackage-Library</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="478.6666666666667,2374.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:CurrentJobInfo" Name="jobData" />
+      <Variable x:TypeArguments="x:String" Name="selectedFile" />
+      <Variable x:TypeArguments="x:String" Name="modifyTextResult" />
+      <Variable x:TypeArguments="x:String" Name="modifiedDate" />
+      <Variable x:TypeArguments="x:String" Name="itemAfterUpdate" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <nw:InvokeIsolated sap:VirtualizedContainerService.HintSize="436.6666666666667,22" sap2010:WorkflowViewState.IdRef="InvokeIsolated_1">
+      <nw:InvokeIsolated.myList>
+        <InArgument x:TypeArguments="scg:IList(x:String)" />
+      </nw:InvokeIsolated.myList>
+      <nw:InvokeIsolated.myMessage>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">"Test"</CSharpValue>
+        </InArgument>
+      </nw:InvokeIsolated.myMessage>
+    </nw:InvokeIsolated>
+    <nd:Lists myList="{x:Null}" sap:VirtualizedContainerService.HintSize="436.6666666666667,190" sap2010:WorkflowViewState.IdRef="Lists_1" itemToAppend="test" updatedItem="gigi">
+      <nd:Lists.itemAfterUpdate>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">itemAfterUpdate</CSharpReference>
+        </OutArgument>
+      </nd:Lists.itemAfterUpdate>
+    </nd:Lists>
+    <np:Datatable sap:VirtualizedContainerService.HintSize="436.6666666666667,22" sap2010:WorkflowViewState.IdRef="Datatable_1" columnToAdd="Is True" />
+    <np:Date sap:VirtualizedContainerService.HintSize="436.6666666666667,80.66666666666667" sap2010:WorkflowViewState.IdRef="Date_1">
+      <np:Date.modifiedDate>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">modifiedDate</CSharpReference>
+        </OutArgument>
+      </np:Date.modifiedDate>
+    </np:Date>
+    <np:Debug sap:VirtualizedContainerService.HintSize="436.6666666666667,80.66666666666667" sap2010:WorkflowViewState.IdRef="Debug_1" myMesasge="This is my message">
+      <np:Debug.myStatus>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"This is my status"</CSharpValue>
+        </InArgument>
+      </np:Debug.myStatus>
+    </np:Debug>
+    <np:Execute sap:VirtualizedContainerService.HintSize="436.6666666666667,22" sap2010:WorkflowViewState.IdRef="Execute_1" />
+    <np:GenericValue sap:VirtualizedContainerService.HintSize="436.6666666666667,80.66666666666667" sap2010:WorkflowViewState.IdRef="GenericValue_1">
+      <np:GenericValue.myGenericValue>
+        <InArgument x:TypeArguments="ui:GenericValue">
+          <CSharpValue x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"2387298534"</CSharpValue>
+        </InArgument>
+      </np:GenericValue.myGenericValue>
+    </np:GenericValue>
+    <np:String replaceResult="{x:Null}" textToTheLeft="{x:Null}" textToTheRight="{x:Null}" sap:VirtualizedContainerService.HintSize="436.6666666666667,190" sap2010:WorkflowViewState.IdRef="String_1" myInput="testabc" textToLeftAndRightInput="Ana are mere" textToLeftandrightSeparator=" are ">
+      <np:String.modifyTextResult>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">modifyTextResult</CSharpReference>
+        </OutArgument>
+      </np:String.modifyTextResult>
+    </np:String>
+    <ns:Application sap:VirtualizedContainerService.HintSize="436.6666666666667,80.66666666666667" sap2010:WorkflowViewState.IdRef="Application_1" processName="notepad" />
+    <ns:Dialog sap:VirtualizedContainerService.HintSize="436.6666666666667,80.66666666666667" sap2010:WorkflowViewState.IdRef="Dialog_1">
+      <ns:Dialog.selectedFile>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">selectedFile</CSharpReference>
+        </OutArgument>
+      </ns:Dialog.selectedFile>
+    </ns:Dialog>
+    <ns:Environment sap:VirtualizedContainerService.HintSize="436.6666666666667,22" sap2010:WorkflowViewState.IdRef="Environment_1" />
+    <ns:File sap:VirtualizedContainerService.HintSize="436.6666666666667,135.33333333333334" sap2010:WorkflowViewState.IdRef="File_1" myText="Hello world!" newDestinationFolder="C:\\Work\\Test\\Archived" newFile="myTestFile.txt" newFolder="C:\\Work\\Test" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436.6666666666667,251.33333333333334" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,172.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ns:PowerShell powerShellOutput="{x:Null}" sap:VirtualizedContainerService.HintSize="334,80.66666666666667" sap2010:WorkflowViewState.IdRef="PowerShell_1" myPowerShellInput="tasklist /v /fo csv | findstr /i 'UiPath.Studio.exe' | out-file -append Performance_old.csv" />
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ns:VBScript vbScriptOutput="{x:Null}" sap:VirtualizedContainerService.HintSize="436.6666666666667,80.66666666666667" sap2010:WorkflowViewState.IdRef="VBScript_1" myVBScript="C:\\Users\\Liviu.Ponova.UIPATH\\Documents\\UiPath\\NET5 projects\\NET5-Win-CS-AllActivitiesInSystemPackage-Library\\Tools\\abcde.vbs" />
+    <nuc:Activities sap:VirtualizedContainerService.HintSize="436.6666666666667,80.66666666666667" sap2010:WorkflowViewState.IdRef="Activities_1">
+      <nuc:Activities.jobData>
+        <OutArgument x:TypeArguments="ui:CurrentJobInfo">
+          <CSharpReference x:TypeArguments="ui:CurrentJobInfo" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">jobData</CSharpReference>
+        </OutArgument>
+      </nuc:Activities.jobData>
+    </nuc:Activities>
+    <nw:Checkpoint sap:VirtualizedContainerService.HintSize="436.6666666666667,22" sap2010:WorkflowViewState.IdRef="Checkpoint_1" />
+    <nw:Control sap:VirtualizedContainerService.HintSize="436.6666666666667,80.66666666666667" sap2010:WorkflowViewState.IdRef="Control_1" numberOfElementsInList="10">
+      <nw:Control.myList>
+        <InArgument x:TypeArguments="scg:List(x:String)" />
+      </nw:Control.myList>
+    </nw:Control>
+    <nw:Invoke sap:VirtualizedContainerService.HintSize="436.6666666666667,80.66666666666667" sap2010:WorkflowViewState.IdRef="Invoke_1" myMessage="Ciao" />
+  </Sequence>
+</Activity>
