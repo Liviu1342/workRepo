@@ -1,6 +1,5 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="PowerShell" this:PowerShell.myPowerShellInput="tasklist /v /fo csv | findstr /i 'UiPath.Studio.exe' | out-file -append Performance_old.csv" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sma="clr-namespace:System.Management.Automation;assembly=System.Management.Automation" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="PowerShell" this:PowerShell.myPowerShellInput="tasklist /v /fo csv | findstr /i 'UiPath.Studio.exe' | out-file -append Performance_old.csv" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sma="clr-namespace:System.Management.Automation;assembly=System.Management.Automation" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="powerShellOutput" Type="OutArgument(sco:Collection(sma:PSObject))" />
     <x:Property Name="myPowerShellInput" Type="InArgument(x:String)">
       <x:Property.Attributes>
         <RequiredArgumentAttribute />
@@ -8,10 +7,10 @@
     </x:Property>
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1690.6666666666667,929.3333333333334</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1268,1319.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="54">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -38,10 +37,13 @@
       <x:String>System.Dynamic</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Linq.Expressions</x:String>
-    </sco:Collection>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="50">
       <AssemblyReference>Microsoft.CSharp</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
@@ -84,53 +86,91 @@
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-    </sco:Collection>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PowerShell" sap:VirtualizedContainerService.HintSize="476,505.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PowerShell" sap:VirtualizedContainerService.HintSize="544,1254.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="pathExists" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokePowerShell x:TypeArguments="sma:PSObject" ContinueOnError="{x:Null}" DisplayName="Invoke Power Shell" sap:VirtualizedContainerService.HintSize="434,58.666666666666664" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_1">
+    <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists" sap:VirtualizedContainerService.HintSize="481.6,100" sap2010:WorkflowViewState.IdRef="PathExists_2" Path="Performance_old.csv" PathType="File">
+      <ui:PathExists.Exists>
+        <OutArgument x:TypeArguments="x:Boolean">
+          <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">pathExists</CSharpReference>
+        </OutArgument>
+      </ui:PathExists.Exists>
+    </ui:PathExists>
+    <If sap:VirtualizedContainerService.HintSize="481.6,494.4" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">pathExists</CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="400,213.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="337.6,90.4" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="Performance_old.csv" />
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="400,115.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <ui:InvokePowerShell x:TypeArguments="sma:PSObject" ContinueOnError="{x:Null}" DisplayName="Invoke Power Shell" sap:VirtualizedContainerService.HintSize="481.6,69.6" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_1" IsScript="True">
       <ui:InvokePowerShell.CommandText>
         <InArgument x:TypeArguments="x:String">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">myPowerShellInput</CSharpValue>
         </InArgument>
       </ui:InvokePowerShell.CommandText>
-      <ui:InvokePowerShell.Output>
-        <OutArgument x:TypeArguments="sco:Collection(sma:PSObject)">
-          <CSharpReference x:TypeArguments="sco:Collection(sma:PSObject)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">powerShellOutput</CSharpReference>
-        </OutArgument>
-      </ui:InvokePowerShell.Output>
+      <ui:InvokePowerShell.PowerShellVariables>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokePowerShell.PowerShellVariables>
     </ui:InvokePowerShell>
-    <ui:ForEach x:TypeArguments="sma:PSObject" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434,314.6666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
-      <ui:ForEach.Body>
-        <ActivityAction x:TypeArguments="sma:PSObject">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="sma:PSObject" Name="psObject" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,186.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.66666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1">
-              <ui:LogMessage.Message>
-                <InArgument x:TypeArguments="x:Object">
-                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">psObject.ToString()</CSharpValue>
-                </InArgument>
-              </ui:LogMessage.Message>
-            </ui:LogMessage>
-          </Sequence>
-        </ActivityAction>
-      </ui:ForEach.Body>
-      <ui:ForEach.Values>
-        <InArgument x:TypeArguments="sc:IEnumerable">
-          <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">powerShellOutput</CSharpValue>
+    <Assign sap:VirtualizedContainerService.HintSize="481.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Boolean">
+          <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">pathExists</CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists" sap:VirtualizedContainerService.HintSize="481.6,100" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="Performance_old.csv" PathType="File">
+      <ui:PathExists.Exists>
+        <OutArgument x:TypeArguments="x:Boolean">
+          <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">pathExists</CSharpReference>
+        </OutArgument>
+      </ui:PathExists.Exists>
+    </ui:PathExists>
+    <ui:CheckTrue DisplayName="Check True" ErrorMessage="The file was not found!!" sap:VirtualizedContainerService.HintSize="481.6,97.6" sap2010:WorkflowViewState.IdRef="CheckTrue_1">
+      <ui:CheckTrue.Expression>
+        <InArgument x:TypeArguments="x:Boolean">
+          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">pathExists</CSharpValue>
         </InArgument>
-      </ui:ForEach.Values>
-    </ui:ForEach>
+      </ui:CheckTrue.Expression>
+    </ui:CheckTrue>
   </Sequence>
 </Activity>

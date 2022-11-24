@@ -1,0 +1,204 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Collections_Workflow" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:uasc="clr-namespace:UiPath.Activities.System.Collections;assembly=UiPath.System.Activities" xmlns:uascf="clr-namespace:UiPath.Activities.System.Collections.Filters;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_NewCollection" Type="OutArgument(scg:List(x:String))" />
+    <x:Property Name="in_ShouldExist" Type="InArgument(x:Boolean)" />
+    <x:Property Name="out_ElementExists" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="out_CollectionAfterAppend" Type="OutArgument(scg:List(x:String))" />
+    <x:Property Name="out_FilteredCollection1" Type="OutArgument(scg:List(x:String))" />
+    <x:Property Name="out_FilteredCollection2" Type="OutArgument(scg:List(x:String))" />
+    <x:Property Name="out_MergedCollection" Type="OutArgument(scg:List(x:String))" />
+    <x:Property Name="out_CollectionRemoved" Type="OutArgument(scg:List(x:String))" />
+    <x:Property Name="out_DataTableFromCollection" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="out_CollectionRemoveAll" Type="OutArgument(scg:List(x:String))" />
+    <x:Property Name="in_ElementsToAppend" Type="InArgument(scg:List(x:String))" />
+    <x:Property Name="out_ElementPositionIfExists" Type="OutArgument(x:Int32)" />
+  </x:Members>
+  <this:Collections_Workflow.in_ShouldExist>
+    <InArgument x:TypeArguments="x:Boolean" />
+  </this:Collections_Workflow.in_ShouldExist>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1198.4,4880</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Collections_Workflow_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Activities.System.Collections</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Activities.System.Collections.Filters</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="39">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Collections_Workflow" sap:VirtualizedContainerService.HintSize="544,4815.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uasc:BuildCollection x:TypeArguments="x:String" Items="{x:Null}" DisplayName="Build collection" FirstItem="Element 1" sap:VirtualizedContainerService.HintSize="481.6,273.6" sap2010:WorkflowViewState.IdRef="BuildCollection`1_2" Result="[out_NewCollection]">
+      <uasc:BuildCollection.NextItems>
+        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+          <InArgument x:TypeArguments="x:String">Element 2</InArgument>
+          <InArgument x:TypeArguments="x:String">Element 3</InArgument>
+          <InArgument x:TypeArguments="x:String">Element 4</InArgument>
+          <InArgument x:TypeArguments="x:String">Element 5</InArgument>
+        </scg:List>
+      </uasc:BuildCollection.NextItems>
+    </uasc:BuildCollection>
+    <If Condition="[in_ShouldExist]" sap:VirtualizedContainerService.HintSize="481.6,1063.2" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="400,448.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uasc:ExistsInCollection x:TypeArguments="x:String" Collection="[out_NewCollection]" DisplayName="Exists in collection" Exists="[out_ElementExists]" sap:VirtualizedContainerService.HintSize="337.6,325.6" sap2010:WorkflowViewState.IdRef="ExistsInCollection`1_2" Index="[out_ElementPositionIfExists]" Item="Element 3" />
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="400,448.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uasc:ExistsInCollection x:TypeArguments="x:String" Collection="[out_NewCollection]" DisplayName="Exists in collection" Exists="[out_ElementExists]" sap:VirtualizedContainerService.HintSize="337.6,325.6" sap2010:WorkflowViewState.IdRef="ExistsInCollection`1_4" Index="[out_ElementPositionIfExists]" Item="abc" />
+        </Sequence>
+      </If.Else>
+    </If>
+    <Assign sap:VirtualizedContainerService.HintSize="481.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="scg:List(x:String)">[out_CollectionAfterAppend]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="scg:List(x:String)">[out_NewCollection]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="481.6,530.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_ElementsToAppend]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:String" Name="element" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,396" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uasc:AppendItemToCollection x:TypeArguments="x:String" Collection="[out_CollectionAfterAppend]" DisplayName="Append item to collection" sap:VirtualizedContainerService.HintSize="337.6,272.8" sap2010:WorkflowViewState.IdRef="AppendItemToCollection`1_2" Result="[out_CollectionAfterAppend]">
+              <uasc:AppendItemToCollection.Items>
+                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                  <InArgument x:TypeArguments="x:String">[element]</InArgument>
+                </scg:List>
+              </uasc:AppendItemToCollection.Items>
+            </uasc:AppendItemToCollection>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="481.6,1214.4" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,1126.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uasc:FilterCollection x:TypeArguments="x:String" FilterAction="{x:Null}" Collection="[out_CollectionAfterAppend]" DisplayName="Filter collection" sap:VirtualizedContainerService.HintSize="337.6,324.8" sap2010:WorkflowViewState.IdRef="FilterCollection`1_2" Result="[out_FilteredCollection1]">
+            <uasc:FilterCollection.Filter>
+              <uascf:CollectionFilterSettings LogicalOperator="And">
+                <uascf:CollectionFilterSettings.Filters>
+                  <scg:List x:TypeArguments="uascf:Filter" Capacity="0" />
+                </uascf:CollectionFilterSettings.Filters>
+              </uascf:CollectionFilterSettings>
+            </uasc:FilterCollection.Filter>
+          </uasc:FilterCollection>
+          <uasc:FilterCollection x:TypeArguments="x:String" FilterAction="{x:Null}" Collection="[out_CollectionAfterAppend]" DisplayName="Filter collection" sap:VirtualizedContainerService.HintSize="337.6,324.8" sap2010:WorkflowViewState.IdRef="FilterCollection`1_3" Result="[out_FilteredCollection2]">
+            <uasc:FilterCollection.Filter>
+              <uascf:CollectionFilterSettings LogicalOperator="And">
+                <uascf:CollectionFilterSettings.Filters>
+                  <scg:List x:TypeArguments="uascf:Filter" Capacity="0" />
+                </uascf:CollectionFilterSettings.Filters>
+              </uascf:CollectionFilterSettings>
+            </uasc:FilterCollection.Filter>
+          </uasc:FilterCollection>
+          <uasc:MergeCollections x:TypeArguments="x:String" Collection="[out_FilteredCollection1]" DisplayName="Merge collections" sap:VirtualizedContainerService.HintSize="337.6,273.6" sap2010:WorkflowViewState.IdRef="MergeCollections`1_2" Result="[out_MergedCollection]" SecondCollection="[out_FilteredCollection2]" />
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <uasc:RemoveFromCollection x:TypeArguments="x:String" Index="{x:Null}" Collection="[out_NewCollection]" DisplayName="Remove from collection" sap:VirtualizedContainerService.HintSize="481.6,350.4" sap2010:WorkflowViewState.IdRef="RemoveFromCollection`1_2" Item="Element 1" RemoveAllElements="False" Result="[out_CollectionRemoved]" />
+    <uasc:RemoveFromCollection x:TypeArguments="x:String" Item="{x:Null}" Collection="[out_CollectionRemoved]" DisplayName="Remove from collection" sap:VirtualizedContainerService.HintSize="481.6,350.4" sap2010:WorkflowViewState.IdRef="RemoveFromCollection`1_4" Index="1" RemoveAllElements="False" Result="[out_CollectionRemoved]" />
+    <ui:CollectionToDataTable x:TypeArguments="x:String" Collection="[out_NewCollection]" DataTable="[out_DataTableFromCollection]" DisplayName="Collection to DataTable" sap:VirtualizedContainerService.HintSize="481.6,221.6" sap2010:WorkflowViewState.IdRef="CollectionToDataTable`1_2" />
+    <uasc:RemoveFromCollection x:TypeArguments="x:String" Index="{x:Null}" Item="{x:Null}" Collection="[out_NewCollection]" DisplayName="Remove from collection" sap:VirtualizedContainerService.HintSize="481.6,298.4" sap2010:WorkflowViewState.IdRef="RemoveFromCollection`1_6" RemoveAllElements="True" Result="[out_CollectionRemoveAll]" />
+  </Sequence>
+</Activity>

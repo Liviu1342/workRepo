@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="790,2439.3333333333335" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:nd="clr-namespace:NET5_Win_CS_AllActivitiesInSystemPackage_Library.Data;assembly=NET5-Win-CS-AllActivitiesInSystemPackage-Library" xmlns:np="clr-namespace:NET5_Win_CS_AllActivitiesInSystemPackage_Library.Programming;assembly=NET5-Win-CS-AllActivitiesInSystemPackage-Library" xmlns:ns="clr-namespace:NET5_Win_CS_AllActivitiesInSystemPackage_Library.System;assembly=NET5-Win-CS-AllActivitiesInSystemPackage-Library" xmlns:nuc="clr-namespace:NET5_Win_CS_AllActivitiesInSystemPackage_Library.UiPath.Core;assembly=NET5-Win-CS-AllActivitiesInSystemPackage-Library" xmlns:nw="clr-namespace:NET5_Win_CS_AllActivitiesInSystemPackage_Library.Workflow;assembly=NET5-Win-CS-AllActivitiesInSystemPackage-Library" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1268,3600.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:nd="clr-namespace:NET5_Win_CS_AllActivitiesInSystemPackage_Library.Data;assembly=NET5-Win-CS-AllActivitiesInSystemPackage-Library" xmlns:np="clr-namespace:NET5_Win_CS_AllActivitiesInSystemPackage_Library.Programming;assembly=NET5-Win-CS-AllActivitiesInSystemPackage-Library" xmlns:ns="clr-namespace:NET5_Win_CS_AllActivitiesInSystemPackage_Library.System;assembly=NET5-Win-CS-AllActivitiesInSystemPackage-Library" xmlns:nuc="clr-namespace:NET5_Win_CS_AllActivitiesInSystemPackage_Library.UiPath.Core;assembly=NET5-Win-CS-AllActivitiesInSystemPackage-Library" xmlns:nw="clr-namespace:NET5_Win_CS_AllActivitiesInSystemPackage_Library.Workflow;assembly=NET5-Win-CS-AllActivitiesInSystemPackage-Library" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -49,10 +49,14 @@
       <x:String>NET5_Win_CS_AllActivitiesInSystemPackage_Library.UiPath.Core</x:String>
       <x:String>NET5_Win_CS_AllActivitiesInSystemPackage_Library.Workflow</x:String>
       <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Activities.System.Collections</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="57">
       <AssemblyReference>Microsoft.CSharp</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
@@ -108,9 +112,10 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-    </sco:Collection>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="478.6666666666667,2374.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap:VirtualizedContainerService.HintSize="400,3536" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:CurrentJobInfo" Name="jobData" />
       <Variable x:TypeArguments="x:String" Name="selectedFile" />
@@ -123,7 +128,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <nw:InvokeIsolated sap:VirtualizedContainerService.HintSize="436.6666666666667,22" sap2010:WorkflowViewState.IdRef="InvokeIsolated_1">
+    <nw:InvokeIsolated sap:VirtualizedContainerService.HintSize="337.6,150.4" sap2010:WorkflowViewState.IdRef="InvokeIsolated_1">
       <nw:InvokeIsolated.myList>
         <InArgument x:TypeArguments="scg:IList(x:String)" />
       </nw:InvokeIsolated.myList>
@@ -133,85 +138,76 @@
         </InArgument>
       </nw:InvokeIsolated.myMessage>
     </nw:InvokeIsolated>
-    <nd:Lists myList="{x:Null}" sap:VirtualizedContainerService.HintSize="436.6666666666667,190" sap2010:WorkflowViewState.IdRef="Lists_1" itemToAppend="test" updatedItem="gigi">
+    <nd:Lists myList="{x:Null}" sap:VirtualizedContainerService.HintSize="337.6,254.4" sap2010:WorkflowViewState.IdRef="Lists_1" itemToAppend="test" updatedItem="gigi">
       <nd:Lists.itemAfterUpdate>
         <OutArgument x:TypeArguments="x:String">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">itemAfterUpdate</CSharpReference>
         </OutArgument>
       </nd:Lists.itemAfterUpdate>
     </nd:Lists>
-    <np:Datatable sap:VirtualizedContainerService.HintSize="436.6666666666667,22" sap2010:WorkflowViewState.IdRef="Datatable_1" columnToAdd="Is True" />
-    <np:Date sap:VirtualizedContainerService.HintSize="436.6666666666667,80.66666666666667" sap2010:WorkflowViewState.IdRef="Date_1">
+    <np:Datatable sap:VirtualizedContainerService.HintSize="337.6,98.4" sap2010:WorkflowViewState.IdRef="Datatable_1" columnToAdd="Is True" />
+    <np:Date sap:VirtualizedContainerService.HintSize="337.6,98.4" sap2010:WorkflowViewState.IdRef="Date_1">
       <np:Date.modifiedDate>
         <OutArgument x:TypeArguments="x:String">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">modifiedDate</CSharpReference>
         </OutArgument>
       </np:Date.modifiedDate>
     </np:Date>
-    <np:Debug sap:VirtualizedContainerService.HintSize="436.6666666666667,80.66666666666667" sap2010:WorkflowViewState.IdRef="Debug_1" myMesasge="This is my message">
+    <np:Debug sap:VirtualizedContainerService.HintSize="337.6,150.4" sap2010:WorkflowViewState.IdRef="Debug_1" myMesasge="This is my message">
       <np:Debug.myStatus>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"This is my status"</CSharpValue>
         </InArgument>
       </np:Debug.myStatus>
     </np:Debug>
-    <np:Execute sap:VirtualizedContainerService.HintSize="436.6666666666667,22" sap2010:WorkflowViewState.IdRef="Execute_1" />
-    <np:GenericValue sap:VirtualizedContainerService.HintSize="436.6666666666667,80.66666666666667" sap2010:WorkflowViewState.IdRef="GenericValue_1">
+    <np:Execute sap:VirtualizedContainerService.HintSize="337.6,32" sap2010:WorkflowViewState.IdRef="Execute_1" />
+    <np:GenericValue sap:VirtualizedContainerService.HintSize="337.6,98.4" sap2010:WorkflowViewState.IdRef="GenericValue_1">
       <np:GenericValue.myGenericValue>
         <InArgument x:TypeArguments="ui:GenericValue">
           <CSharpValue x:TypeArguments="ui:GenericValue" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"2387298534"</CSharpValue>
         </InArgument>
       </np:GenericValue.myGenericValue>
     </np:GenericValue>
-    <np:String replaceResult="{x:Null}" textToTheLeft="{x:Null}" textToTheRight="{x:Null}" sap:VirtualizedContainerService.HintSize="436.6666666666667,190" sap2010:WorkflowViewState.IdRef="String_1" myInput="testabc" textToLeftAndRightInput="Ana are mere" textToLeftandrightSeparator=" are ">
+    <np:String replaceResult="{x:Null}" textToTheLeft="{x:Null}" textToTheRight="{x:Null}" sap:VirtualizedContainerService.HintSize="337.6,410.4" sap2010:WorkflowViewState.IdRef="String_1" myInput="testabc" textToLeftAndRightInput="Ana are mere" textToLeftandrightSeparator=" are ">
       <np:String.modifyTextResult>
         <OutArgument x:TypeArguments="x:String">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">modifyTextResult</CSharpReference>
         </OutArgument>
       </np:String.modifyTextResult>
     </np:String>
-    <ns:Application sap:VirtualizedContainerService.HintSize="436.6666666666667,80.66666666666667" sap2010:WorkflowViewState.IdRef="Application_1" processName="notepad" />
-    <ns:Dialog sap:VirtualizedContainerService.HintSize="436.6666666666667,80.66666666666667" sap2010:WorkflowViewState.IdRef="Dialog_1">
+    <ns:Application sap:VirtualizedContainerService.HintSize="337.6,98.4" sap2010:WorkflowViewState.IdRef="Application_1" processName="notepad" />
+    <ns:Dialog sap:VirtualizedContainerService.HintSize="337.6,98.4" sap2010:WorkflowViewState.IdRef="Dialog_1">
       <ns:Dialog.selectedFile>
         <OutArgument x:TypeArguments="x:String">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">selectedFile</CSharpReference>
         </OutArgument>
       </ns:Dialog.selectedFile>
     </ns:Dialog>
-    <ns:Environment sap:VirtualizedContainerService.HintSize="436.6666666666667,22" sap2010:WorkflowViewState.IdRef="Environment_1" />
-    <ns:File sap:VirtualizedContainerService.HintSize="436.6666666666667,135.33333333333334" sap2010:WorkflowViewState.IdRef="File_1" myText="Hello world!" newDestinationFolder="C:\\Work\\Test\\Archived" newFile="myTestFile.txt" newFolder="C:\\Work\\Test" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436.6666666666667,251.33333333333334" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,172.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ns:PowerShell powerShellOutput="{x:Null}" sap:VirtualizedContainerService.HintSize="334,80.66666666666667" sap2010:WorkflowViewState.IdRef="PowerShell_1" myPowerShellInput="tasklist /v /fo csv | findstr /i 'UiPath.Studio.exe' | out-file -append Performance_old.csv" />
-        </Sequence>
-      </ui:CommentOut.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:CommentOut>
-    <ns:VBScript vbScriptOutput="{x:Null}" sap:VirtualizedContainerService.HintSize="436.6666666666667,80.66666666666667" sap2010:WorkflowViewState.IdRef="VBScript_1" myVBScript="C:\\Users\\Liviu.Ponova.UIPATH\\Documents\\UiPath\\NET5 projects\\NET5-Win-CS-AllActivitiesInSystemPackage-Library\\Tools\\abcde.vbs" />
-    <nuc:Activities sap:VirtualizedContainerService.HintSize="436.6666666666667,80.66666666666667" sap2010:WorkflowViewState.IdRef="Activities_1">
+    <ns:Environment sap:VirtualizedContainerService.HintSize="337.6,32" sap2010:WorkflowViewState.IdRef="Environment_1" />
+    <ns:File sap:VirtualizedContainerService.HintSize="337.6,254.4" sap2010:WorkflowViewState.IdRef="File_1" myText="Hello world!" newDestinationFolder="C:\\Work\\Test\\Archived" newFile="myTestFile.txt" newFolder="C:\\Work\\Test" />
+    <ns:PowerShell DisplayName=" ()" sap:VirtualizedContainerService.HintSize="337.6,98.4" sap2010:WorkflowViewState.IdRef="PowerShell_2" myPowerShellInput="tasklist /v /fo csv | findstr /i 'UiPath.Studio.exe' | out-file -append Performance_old.csv" />
+    <ns:VBScript vbScriptOutput="{x:Null}" sap:VirtualizedContainerService.HintSize="337.6,150.4" sap2010:WorkflowViewState.IdRef="VBScript_1">
+      <ns:VBScript.myVBScript>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">"C:\\Work\\Tools\\abcde.vbs"</CSharpValue>
+        </InArgument>
+      </ns:VBScript.myVBScript>
+    </ns:VBScript>
+    <nuc:Activities sap:VirtualizedContainerService.HintSize="337.6,98.4" sap2010:WorkflowViewState.IdRef="Activities_1">
       <nuc:Activities.jobData>
         <OutArgument x:TypeArguments="ui:CurrentJobInfo">
           <CSharpReference x:TypeArguments="ui:CurrentJobInfo" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">jobData</CSharpReference>
         </OutArgument>
       </nuc:Activities.jobData>
     </nuc:Activities>
-    <nw:Checkpoint sap:VirtualizedContainerService.HintSize="436.6666666666667,22" sap2010:WorkflowViewState.IdRef="Checkpoint_1" />
-    <nw:Control sap:VirtualizedContainerService.HintSize="436.6666666666667,80.66666666666667" sap2010:WorkflowViewState.IdRef="Control_1" numberOfElementsInList="10">
+    <nw:Checkpoint sap:VirtualizedContainerService.HintSize="337.6,32" sap2010:WorkflowViewState.IdRef="Checkpoint_1" />
+    <nw:Control sap:VirtualizedContainerService.HintSize="337.6,150.4" sap2010:WorkflowViewState.IdRef="Control_1" numberOfElementsInList="10">
       <nw:Control.myList>
         <InArgument x:TypeArguments="scg:List(x:String)" />
       </nw:Control.myList>
     </nw:Control>
-    <nw:Invoke sap:VirtualizedContainerService.HintSize="436.6666666666667,80.66666666666667" sap2010:WorkflowViewState.IdRef="Invoke_1" myMessage="Ciao" />
+    <nw:Invoke sap:VirtualizedContainerService.HintSize="337.6,98.4" sap2010:WorkflowViewState.IdRef="Invoke_1" myMessage="Ciao" />
+    <nw:Invoke_ArgsDict DisplayName="Invoke-ArgsDict" sap:VirtualizedContainerService.HintSize="337.6,150.4" sap2010:WorkflowViewState.IdRef="Invoke_ArgsDict_1" argName="myMessage" argValue="test invoke with arguments" />
+    <nw:InvokeProces_SpecifyEntryPoint DisplayName="InvokeProces-SpecifyEntryPoint" sap:VirtualizedContainerService.HintSize="337.6,98.4" sap2010:WorkflowViewState.IdRef="InvokeProces_SpecifyEntryPoint_1" entryPoint="EP.xaml" />
   </Sequence>
 </Activity>

@@ -29,7 +29,7 @@
     <InArgument x:TypeArguments="x:String" />
   </this:Assets.username>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1740,929.3333333333334</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>389.6,1437.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -98,32 +98,35 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Assets" sap:VirtualizedContainerService.HintSize="486,813.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Assets" sap:VirtualizedContainerService.HintSize="400,1372.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="444,140.66666666666666" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotAsset CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="337.6,416.8" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.AssetName>
         <InArgument x:TypeArguments="x:String">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">assetName</CSharpValue>
         </InArgument>
       </ui:GetRobotAsset.AssetName>
+      <ui:GetRobotAsset.TimeoutMS>
+        <InArgument x:TypeArguments="x:Int32" />
+      </ui:GetRobotAsset.TimeoutMS>
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">assetValue</CSharpReference>
         </OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:GetRobotCredential Password="{x:Null}" TimeoutMS="{x:Null}" Username="{x:Null}" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="444,80.66666666666667" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1">
+    <ui:GetRobotCredential Password="{x:Null}" TimeoutMS="{x:Null}" Username="{x:Null}" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="337.6,185.6" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1">
       <ui:GetRobotCredential.AssetName>
         <InArgument x:TypeArguments="x:String">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">credentialName</CSharpValue>
         </InArgument>
       </ui:GetRobotCredential.AssetName>
     </ui:GetRobotCredential>
-    <ui:SetAsset TimeoutMS="{x:Null}" DisplayName="Set Asset" sap:VirtualizedContainerService.HintSize="444,135.33333333333334" sap2010:WorkflowViewState.IdRef="SetAsset_1">
+    <ui:SetAsset TimeoutMS="{x:Null}" DisplayName="Set Asset" sap:VirtualizedContainerService.HintSize="337.6,237.6" sap2010:WorkflowViewState.IdRef="SetAsset_1">
       <ui:SetAsset.AssetName>
         <InArgument x:TypeArguments="x:String">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">assetName</CSharpValue>
@@ -135,7 +138,7 @@
         </InArgument>
       </ui:SetAsset.Value>
     </ui:SetAsset>
-    <ui:SetCredential SecurePassword="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Credential" sap:VirtualizedContainerService.HintSize="444,244.66666666666666" sap2010:WorkflowViewState.IdRef="SetCredential_1">
+    <ui:SetCredential SecurePassword="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Credential" sap:VirtualizedContainerService.HintSize="337.6,289.6" sap2010:WorkflowViewState.IdRef="SetCredential_1">
       <ui:SetCredential.CredentialName>
         <InArgument x:TypeArguments="x:String">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">credentialName</CSharpValue>
