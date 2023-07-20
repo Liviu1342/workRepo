@@ -3,12 +3,20 @@
   "description": "Test Automation Project",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.System.Activities": "[22.12.0-alpha.3247178]",
-    "UiPath.Testing.Activities": "[22.10.0]",
-    "UiPath.UIAutomation.Activities": "[22.10.3]",
-    "UiPath.WebAPI.Activities": "[1.13.2]"
+    "UiPath.Excel.Activities": "[2.20.1]",
+    "UiPath.System.Activities": "[23.4.2]",
+    "UiPath.Testing.Activities": "[23.4.0]",
+    "UiPath.UIAutomation.Activities": "[23.4.5]",
+    "UiPath.WebAPI.Activities": "[1.16.2]"
   },
-  "webServices": [],
+  "webServices": [
+    {
+      "namespace": "SwaggerPetstore",
+      "serviceDocument": "Services\\SwaggerPetstore.json",
+      "webDocumentUri": "https://petstore.swagger.io/v2/swagger.json",
+      "uniqueReference": "OVwicxJr8F4txhXsrbNWkoA9IgU70aAGj+u87wwkze0="
+    }
+  ],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.10.4.0",
@@ -20,6 +28,7 @@
     "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
@@ -42,42 +51,6 @@
     },
     "fileInfoCollection": [
       {
-        "editingStatus": "InProgress",
-        "testCaseId": "c66c8af3-4bd8-4c86-adf7-d10248d4ca8d",
-        "testCaseType": "TestCase",
-        "fileName": "TestCase.xaml"
-      },
-      {
-        "editingStatus": "Publishable",
-        "testCaseId": "0d8e307d-8aba-439a-812d-0cd90d03d28c",
-        "testCaseType": "TestCase",
-        "fileName": "Tests\\Collections\\Test_Collections.xaml"
-      },
-      {
-        "editingStatus": "Publishable",
-        "testCaseId": "239f275e-59f3-4ddc-8284-2a778820ec37",
-        "testCaseType": "TestCase",
-        "fileName": "Tests\\Orchestrtator\\Assets\\Test_GetAsset_noFolder_assetAsVariable.xaml"
-      },
-      {
-        "editingStatus": "Publishable",
-        "testCaseId": "460b9261-320e-41b7-98c7-5767a3b84e99",
-        "testCaseType": "TestCase",
-        "fileName": "Tests\\Orchestrtator\\Assets\\Test_GetAsset_noFolder_assetHardcoded.xaml"
-      },
-      {
-        "editingStatus": "Publishable",
-        "testCaseId": "d9a7cb3a-6a1b-4933-b9d0-a8d77be5ce39",
-        "testCaseType": "TestCase",
-        "fileName": "Tests\\Orchestrtator\\Credentials\\Test_GetCredential_noFolder_credentialAsVariable.xaml"
-      },
-      {
-        "editingStatus": "Publishable",
-        "testCaseId": "591792d9-071b-434c-9fe1-b06ad2c3e466",
-        "testCaseType": "TestCase",
-        "fileName": "Tests\\Orchestrtator\\Credentials\\Test_GetCredential_noFolder_credentialHardcoded.xaml"
-      },
-      {
         "editingStatus": "Publishable",
         "testCaseId": "962c2fcc-f2e9-4d4b-98cb-c82013496083",
         "testCaseType": "TestCase",
@@ -94,6 +67,99 @@
         "testCaseId": "78e5dd95-88cc-4b6a-a743-967b1408c4a0",
         "testCaseType": "TestCase",
         "fileName": "Tests\\Web\\XML\\Test_XML_activities.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "0d8e307d-8aba-439a-812d-0cd90d03d28c",
+        "testCaseType": "TestCase",
+        "fileName": "Tests\\System\\Collections\\Test_Collections.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "239f275e-59f3-4ddc-8284-2a778820ec37",
+        "testCaseType": "TestCase",
+        "fileName": "Tests\\System\\Orchestrtator\\Assets\\Test_GetAsset_noFolder_assetAsVariable.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "460b9261-320e-41b7-98c7-5767a3b84e99",
+        "testCaseType": "TestCase",
+        "fileName": "Tests\\System\\Orchestrtator\\Assets\\Test_GetAsset_noFolder_assetHardcoded.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "d9a7cb3a-6a1b-4933-b9d0-a8d77be5ce39",
+        "testCaseType": "TestCase",
+        "fileName": "Tests\\System\\Orchestrtator\\Credentials\\Test_GetCredential_noFolder_credentialAsVariable.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "591792d9-071b-434c-9fe1-b06ad2c3e466",
+        "testCaseType": "TestCase",
+        "fileName": "Tests\\System\\Orchestrtator\\Credentials\\Test_GetCredential_noFolder_credentialHardcoded.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "3bbf87b2-fd2b-447a-ad3e-11b52aab4909",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\System\\Orchestrtator\\Jobs\\Test_Orchestrator_Jobs.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "fc9ad1e4-3ba1-4caf-a4ef-45e3f75629c0",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\System\\Data\\Test_Data_Lists.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "01c22820-531b-4132-90d5-7c984bad7e1a",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\System\\Orchestrtator\\Processes\\Test_Orchestrator_Processes.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "103c29b7-9d6e-43cc-8bb4-81642512b860",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "System\\Orchestrtator\\Storage\\Test_Orchestrator_Storage.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "07faa5c2-a60e-4310-9b93-e97ac7201cd2",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\System\\Programming\\Data Table\\Test_Programming_DataTable.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "3d0d009b-27d3-494c-b1c9-f1d755e86995",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\System\\Programming\\Date\\Test_Programming_Date.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "cd897b1f-d5f6-4691-aeb8-0fefd66a3681",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\System\\Programming\\Execute\\Test_Programming_Execute.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "1e0b9c22-aaed-4e31-a6a8-ee3510beb3be",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\System\\Programming\\GenericValue\\Test_Programming_GenericValue.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "4f02452d-f74c-4172-adcd-b368a671aa73",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\System\\Programming\\String\\Test_Programming_String.xaml"
       }
     ],
     "modernBehavior": true

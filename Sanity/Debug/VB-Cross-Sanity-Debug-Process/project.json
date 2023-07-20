@@ -1,0 +1,85 @@
+{
+  "name": "VB-Cross-Sanity-Debug-Process",
+  "description": "This cross-platform project will be used for common debugging scenarios",
+  "main": "TypesOfFiles\\TestFlowchart.xaml",
+  "dependencies": {
+    "CS-Cross-Sanity-Debug-Library": "[1.0.4]",
+    "UiPath.System.Activities": "[22.10.3]",
+    "UiPath.Testing.Activities": "[22.4.3]",
+    "UiPath.UIAutomation.Activities": "[22.6.0-beta.2738600]",
+    "UiPath.WebAPI.Activities": "[1.9.2]",
+    "VB-Cross-Sanity-Debug-Library": "[1.0.1]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "22.6.0.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "exceptionHandlerWorkflow": "GlobalHandler.xaml",
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": false,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": true
+  },
+  "arguments": {
+    "input": [],
+    "output": []
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "6ecfca0e-05ab-44ac-a682-d52e3832c6f4",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TypesOfFiles\\TestSequence.xaml",
+      "uniqueId": "4cc8c18f-db70-4cd3-af9e-b166e733b518",
+      "input": [
+        {
+          "name": "argumentsList",
+          "type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+          "required": false,
+          "hasDefault": false
+        }
+      ],
+      "output": []
+    },
+    {
+      "filePath": "TypesOfFiles\\TestFlowchart.xaml",
+      "uniqueId": "38bfab33-3291-4cd9-a981-30d5b1586346",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Portable"
+}

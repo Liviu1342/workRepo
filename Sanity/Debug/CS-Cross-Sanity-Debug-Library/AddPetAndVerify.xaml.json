@@ -1,0 +1,36 @@
+{
+  "DisplayName": "AddPetAndVerify",
+  "Tooltip": "This activity uses the Petstore REST webservice to add a pet and verify it was added in the database. \r\nProvide an ID and a name for the pet to be added.\r\nThe activity outputs a Pet object",
+  "HelpLink": "https://petstore.swagger.io/v2/swagger.json",
+  "Color": "#FFA32357",
+  "OriginalIconFileName": "forecast-moon-night-svgrepo-com.svg",
+  "Arguments": [
+    {
+      "Name": "petId",
+      "DisplayName": "petId",
+      "Category": null,
+      "Tooltip": "The ID of the pet to be added.\r\nRequires a numeric expression. Also accepts Null",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "petName",
+      "DisplayName": "petName",
+      "Category": null,
+      "Tooltip": "The name of the pet",
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true
+    },
+    {
+      "Name": "petResponse",
+      "DisplayName": "petResponse",
+      "Category": "Argumente de iesire",
+      "Tooltip": "The Pet object resulted after interrogating the database using the provided petID",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": false
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="UIA_actions" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_AppToSearch" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:UIA_actions.in_AppToSearch>
+    <InArgument x:TypeArguments="x:String" />
+  </this:UIA_actions.in_AppToSearch>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1724.6666666666667,1233.3333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>UIA_actions_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="UIA_actions" sap:VirtualizedContainerService.HintSize="588,1168.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="SingleWindow" DisplayName="Use Browser: My Apps" sap:VirtualizedContainerService.HintSize="526,1058" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="42272a7d-b18a-48cf-b752-213792ab5c36" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="492,666.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NHighlight Color="Gold" DisplayName="Highlight 'INPUT SearchBox12'" sap:VirtualizedContainerService.HintSize="450,184" sap2010:WorkflowViewState.IdRef="NHighlight_1" ScopeIdentifier="42272a7d-b18a-48cf-b752-213792ab5c36" Version="V3">
+              <uix:NHighlight.Target>
+                <uix:TargetAnchorable BrowserURL="https://myapplications.microsoft.com/#optIn" DesignTimeRectangle="1628, 197, 642, 48" ElementType="InputBox" FriendlyName="'INPUT SearchBox12'" FullSelectorArgument="&lt;webctrl id='SearchBox12' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='SearchBox12' tag='INPUT' type='' class='ms-SearchBox-field field-362' aaname='' /&gt;" Guid="865004cc-96ee-483f-98e6-8309f1f9d7a0" InformativeScreenshot="ab2de95907376920f60e4a28f939bce6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='My Apps' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NHighlight.Target>
+            </uix:NHighlight>
+            <uix:NTypeInto ActivateBefore="True" DisplayName="Type Into 'INPUT SearchBox12'" sap:VirtualizedContainerService.HintSize="450,184" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="42272a7d-b18a-48cf-b752-213792ab5c36" Text="[in_AppToSearch]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://myapplications.microsoft.com/#optIn" DesignTimeRectangle="1628, 197, 642, 48" ElementType="InputBox" FriendlyName="'INPUT SearchBox12'" FullSelectorArgument="&lt;webctrl id='SearchBox12' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='SearchBox12' tag='INPUT' type='' class='ms-SearchBox-field field-362' aaname='' /&gt;" Guid="3ee6b0fd-1ad8-4176-9815-803d8a6ebfd8" InformativeScreenshot="e34abc50856aeb7767b0c962760448b6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='My Apps' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Benefits'" sap:VirtualizedContainerService.HintSize="450,131.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="42272a7d-b18a-48cf-b752-213792ab5c36" Timeout="2" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://myapplications.microsoft.com/#optIn" DesignTimeRectangle="1640, 343, 630, 24" ElementType="Text" FriendlyName="'Benefits'" FullSelectorArgument="&lt;webctrl class='appNameHorizontal-233' parentid='root' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='appNameHorizontal-233' parentid='root' tag='SPAN' type='' aaname='Benefits' check:innerText='Benefits' /&gt;" Guid="2699eda1-884b-40a8-9d46-82beab143864" InformativeScreenshot="7db2b9cf3f8fb3c7c5eb9fb69a4069d2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='My Apps' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="None">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="1628, 197, 594, 48" ElementType="InputBox" FriendlyName="'Benefit'" FullSelectorArgument="&lt;webctrl id='SearchBox12' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='SearchBox12' tag='INPUT' type='' class='ms-SearchBox-field field-362' aaname='' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" InformativeScreenshot="5ed099e0d5fc0d0c2681d999f2952e51.jpg" Selector="&lt;html title='My Apps' app='chrome.exe' /&gt;" Title="My Apps" Url="https://myapplications.microsoft.com/#optIn" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

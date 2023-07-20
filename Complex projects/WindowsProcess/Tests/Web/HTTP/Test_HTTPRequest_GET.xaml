@@ -1,0 +1,209 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Test_HTTPRequest_GET" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_endpoint" Type="InArgument(x:String)" />
+    <x:Property Name="out_httpHeaders" Type="OutArgument(scg:Dictionary(x:String, x:String))" />
+    <x:Property Name="out_httpResponseAttachment" Type="OutArgument(upr:ILocalResource)" />
+    <x:Property Name="out_httpResponseContent" Type="OutArgument(x:String)" />
+    <x:Property Name="out_httpResponseStatus" Type="OutArgument(x:Int32)" />
+    <x:Property Name="in_filenameForResponseAttachments" Type="InArgument(x:String)" />
+    <x:Property Name="in_username" Type="InArgument(x:String)" />
+    <x:Property Name="in_stringPassword" Type="InArgument(x:String)" />
+    <x:Property Name="in_SecurePassword" Type="InArgument(ss:SecureString)" />
+    <x:Property Name="in_fileAttachments" Type="InArgument(scg:ICollection(upr:ILocalResource))" />
+    <x:Property Name="in_Body" Type="InArgument(x:String)" />
+    <x:Property Name="in_useSpecificEndpoint" Type="InArgument(x:Boolean)" />
+  </x:Members>
+  <this:Test_HTTPRequest_GET.in_endpoint>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Test_HTTPRequest_GET.in_endpoint>
+  <this:Test_HTTPRequest_GET.in_filenameForResponseAttachments>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Test_HTTPRequest_GET.in_filenameForResponseAttachments>
+  <this:Test_HTTPRequest_GET.in_username>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Test_HTTPRequest_GET.in_username>
+  <this:Test_HTTPRequest_GET.in_stringPassword>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Test_HTTPRequest_GET.in_stringPassword>
+  <this:Test_HTTPRequest_GET.in_SecurePassword>
+    <InArgument x:TypeArguments="ss:SecureString" />
+  </this:Test_HTTPRequest_GET.in_SecurePassword>
+  <this:Test_HTTPRequest_GET.in_fileAttachments>
+    <InArgument x:TypeArguments="scg:ICollection(upr:ILocalResource)" />
+  </this:Test_HTTPRequest_GET.in_fileAttachments>
+  <this:Test_HTTPRequest_GET.in_Body>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Test_HTTPRequest_GET.in_Body>
+  <this:Test_HTTPRequest_GET.in_useSpecificEndpoint>
+    <InArgument x:TypeArguments="x:Boolean" />
+  </this:Test_HTTPRequest_GET.in_useSpecificEndpoint>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1198.4,964</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Test_HTTPRequest_GET_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Testing.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="43">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Test_HTTPRequest_GET" sap:VirtualizedContainerService.HintSize="462.4,899.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="400,192.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="337.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Boolean">[in_useSpecificEndpoint]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+        </Assign.Value>
+      </Assign>
+    </Sequence>
+    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="400,246.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Web\HTTP\HTTP_Request.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="337.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Web\HTTP\HTTP_Request.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="in_endpoint">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_endpoint" />
+          </InArgument>
+          <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="out_httpHeaders">
+            <VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:String)" ExpressionText="out_httpHeaders" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="upr:ILocalResource" x:Key="out_httpResponseAttachment">
+            <VisualBasicReference x:TypeArguments="upr:ILocalResource" ExpressionText="out_httpResponseAttachment" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_httpResponseContent">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="out_httpResponseContent" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:Int32" x:Key="out_httpResponseStatus">
+            <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="out_httpResponseStatus" />
+          </OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_filenameForResponseAttachments">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_filenameForResponseAttachments" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_username">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_username" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_stringPassword">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_stringPassword" />
+          </InArgument>
+          <InArgument x:TypeArguments="ss:SecureString" x:Key="in_SecurePassword">
+            <VisualBasicValue x:TypeArguments="ss:SecureString" ExpressionText="in_SecurePassword" />
+          </InArgument>
+          <InArgument x:TypeArguments="scg:ICollection(upr:ILocalResource)" x:Key="in_fileAttachments">
+            <VisualBasicValue x:TypeArguments="scg:ICollection(upr:ILocalResource)" ExpressionText="in_fileAttachments" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_Body">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Body" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:Boolean" x:Key="in_useSpecificEndpoint">
+            <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="in_useSpecificEndpoint" />
+          </InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+    </Sequence>
+    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="400,256.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uta:VerifyExpression AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[out_httpResponseStatus = 200]" sap:VirtualizedContainerService.HintSize="337.6,133.6" sap2010:WorkflowViewState.IdRef="VerifyExpression_1" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uta:VerifyExpression>
+    </Sequence>
+  </Sequence>
+</Activity>

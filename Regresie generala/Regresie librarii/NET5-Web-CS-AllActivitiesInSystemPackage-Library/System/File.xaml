@@ -1,0 +1,403 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="File" this:File.newFolder="C:\Work\Test" this:File.newFile="myTestFile.txt" this:File.myText="Hello world!" this:File.newDestinationFolder="C:\Work\Test\Archived" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uasc="clr-namespace:UiPath.Activities.System.Collections;assembly=UiPath.System.Activities" xmlns:uascw="clr-namespace:UiPath.Activities.System.Compression.Workflow;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="newFolder" Type="InArgument(x:String)" />
+    <x:Property Name="newFile" Type="InArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="myText" Type="InArgument(x:String)" />
+    <x:Property Name="newDestinationFolder" Type="InArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>1086.4,5576.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="19">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Activities.System.Compression.Zip</x:String>
+      <x:String>UiPath.Activities.System.Encode</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Activities.System.Compression.Workflow</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Activities.System.Collections</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="51">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="698.4,5512" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="File" sap:VirtualizedContainerService.HintSize="636,5400" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:Boolean" Name="pathExists" />
+        <Variable x:TypeArguments="upr:ILocalResource" Name="myFile" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists" sap:VirtualizedContainerService.HintSize="573.6,171.2" sap2010:WorkflowViewState.IdRef="PathExists_1" PathType="Folder">
+        <ui:PathExists.Exists>
+          <OutArgument x:TypeArguments="x:Boolean">
+            <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">pathExists</CSharpReference>
+          </OutArgument>
+        </ui:PathExists.Exists>
+        <ui:PathExists.Path>
+          <InArgument x:TypeArguments="x:String">
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">newFolder</CSharpValue>
+          </InArgument>
+        </ui:PathExists.Path>
+      </ui:PathExists>
+      <If sap:VirtualizedContainerService.HintSize="573.6,697.6" sap2010:WorkflowViewState.IdRef="If_1">
+        <If.Condition>
+          <InArgument x:TypeArguments="x:Boolean">
+            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">pathExists</CSharpValue>
+          </InArgument>
+        </If.Condition>
+        <If.Then>
+          <Sequence sap:VirtualizedContainerService.HintSize="462.4,414.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="400,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+              <ui:LogMessage.Message>
+                <InArgument x:TypeArguments="x:Object">
+                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">"Folder " + newFolder + " already exists! Deleting it..."</CSharpValue>
+                </InArgument>
+              </ui:LogMessage.Message>
+            </ui:LogMessage>
+            <ui:Delete ContinueOnError="{x:Null}" ResourceFile="{x:Null}" sap:VirtualizedContainerService.HintSize="400,120" sap2010:WorkflowViewState.IdRef="Delete_1">
+              <ui:Delete.Path>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">newFolder</CSharpValue>
+                </InArgument>
+              </ui:Delete.Path>
+            </ui:Delete>
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence sap:VirtualizedContainerService.HintSize="400,104.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </If.Else>
+      </If>
+      <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="573.6,120" sap2010:WorkflowViewState.IdRef="CreateDirectory_1">
+        <ui:CreateDirectory.Path>
+          <InArgument x:TypeArguments="x:String">
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">newFolder</CSharpValue>
+          </InArgument>
+        </ui:CreateDirectory.Path>
+      </ui:CreateDirectory>
+      <ui:CreateFile ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create File" sap:VirtualizedContainerService.HintSize="573.6,172" sap2010:WorkflowViewState.IdRef="CreateFile_1">
+        <ui:CreateFile.Name>
+          <InArgument x:TypeArguments="x:String">
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">newFile</CSharpValue>
+          </InArgument>
+        </ui:CreateFile.Name>
+        <ui:CreateFile.Path>
+          <InArgument x:TypeArguments="x:String">
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">newFolder</CSharpValue>
+          </InArgument>
+        </ui:CreateFile.Path>
+      </ui:CreateFile>
+      <ui:PathExists DisplayName="Path Exists" sap:VirtualizedContainerService.HintSize="573.6,299.2" sap2010:WorkflowViewState.IdRef="PathExists_2" PathType="File">
+        <ui:PathExists.Exists>
+          <OutArgument x:TypeArguments="x:Boolean">
+            <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">pathExists</CSharpReference>
+          </OutArgument>
+        </ui:PathExists.Exists>
+        <ui:PathExists.Path>
+          <InArgument x:TypeArguments="x:String">
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">newFolder+"\\"+newFile</CSharpValue>
+          </InArgument>
+        </ui:PathExists.Path>
+        <ui:PathExists.Resource>
+          <OutArgument x:TypeArguments="upr:ILocalResource">
+            <CSharpReference x:TypeArguments="upr:ILocalResource" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">myFile</CSharpReference>
+          </OutArgument>
+        </ui:PathExists.Resource>
+      </ui:PathExists>
+      <If sap:VirtualizedContainerService.HintSize="573.6,3468" sap2010:WorkflowViewState.IdRef="If_2">
+        <If.Condition>
+          <InArgument x:TypeArguments="x:Boolean">
+            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">pathExists</CSharpValue>
+          </InArgument>
+        </If.Condition>
+        <If.Then>
+          <Sequence sap:VirtualizedContainerService.HintSize="496,3087.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="extractedText" />
+              <Variable x:TypeArguments="si:FileInfo" Name="compressedFile" />
+              <Variable x:TypeArguments="x:String" Name="contentOfExtractedfile" />
+              <Variable x:TypeArguments="scg:List(upr:ILocalResource)" Name="resourcesList">
+                <Variable.Default>
+                  <CSharpValue x:TypeArguments="scg:List(upr:ILocalResource)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">new List&lt;ILocalResource&gt;()</CSharpValue>
+                </Variable.Default>
+              </Variable>
+              <Variable x:TypeArguments="x:String" Name="compressedFilePath" />
+              <Variable x:TypeArguments="upr:ILocalResource" Name="myCompresedFile" />
+              <Variable x:TypeArguments="upr:ILocalResource[]" Name="extractedFile" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" sap:VirtualizedContainerService.HintSize="433.6,172" sap2010:WorkflowViewState.IdRef="WriteTextFile_1">
+              <ui:WriteTextFile.FileName>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">newFolder+"\\"+newFile</CSharpValue>
+                </InArgument>
+              </ui:WriteTextFile.FileName>
+              <ui:WriteTextFile.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">myText</CSharpValue>
+                </InArgument>
+              </ui:WriteTextFile.Text>
+            </ui:WriteTextFile>
+            <ui:ReadTextFile File="{x:Null}" DisplayName="Read Text File" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
+              <ui:ReadTextFile.Content>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">extractedText</CSharpReference>
+                </OutArgument>
+              </ui:ReadTextFile.Content>
+              <ui:ReadTextFile.FileName>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">newFolder+"\\"+newFile</CSharpValue>
+                </InArgument>
+              </ui:ReadTextFile.FileName>
+            </ui:ReadTextFile>
+            <ui:AppendLine File="{x:Null}" DisplayName="Append Line" sap:VirtualizedContainerService.HintSize="433.6,172" sap2010:WorkflowViewState.IdRef="AppendLine_1" Text="This is a new line added through the Append Line activity" UseDefaultEncoding="False">
+              <ui:AppendLine.FileName>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">newFolder+"\\"+newFile</CSharpValue>
+                </InArgument>
+              </ui:AppendLine.FileName>
+            </ui:AppendLine>
+            <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="CreateDirectory_2">
+              <ui:CreateDirectory.Path>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">newDestinationFolder</CSharpValue>
+                </InArgument>
+              </ui:CreateDirectory.Path>
+            </ui:CreateDirectory>
+            <uasc:AppendItemToCollection x:TypeArguments="upr:ILocalResource" DisplayName="Append item to collection" sap:VirtualizedContainerService.HintSize="433.6,247.2" sap2010:WorkflowViewState.IdRef="AppendItemToCollection`1_2">
+              <uasc:AppendItemToCollection.Collection>
+                <InArgument x:TypeArguments="scg:ICollection(upr:ILocalResource)">
+                  <CSharpValue x:TypeArguments="scg:ICollection(upr:ILocalResource)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">resourcesList</CSharpValue>
+                </InArgument>
+              </uasc:AppendItemToCollection.Collection>
+              <uasc:AppendItemToCollection.Items>
+                <scg:List x:TypeArguments="InArgument(upr:ILocalResource)" Capacity="4">
+                  <InArgument x:TypeArguments="upr:ILocalResource">
+                    <CSharpValue x:TypeArguments="upr:ILocalResource" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">myFile</CSharpValue>
+                  </InArgument>
+                </scg:List>
+              </uasc:AppendItemToCollection.Items>
+              <uasc:AppendItemToCollection.Result>
+                <OutArgument x:TypeArguments="scg:List(upr:ILocalResource)">
+                  <CSharpReference x:TypeArguments="scg:List(upr:ILocalResource)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">resourcesList</CSharpReference>
+                </OutArgument>
+              </uasc:AppendItemToCollection.Result>
+            </uasc:AppendItemToCollection>
+            <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">compressedFilePath</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">newFile.Replace(".txt",String.Empty)+"-compressed.zip"</CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <uascw:CompressFiles CompressedFileInfo="{x:Null}" SecurePassword="{x:Null}" CodePage="Default" CompressionLevel="Normal" DisplayName="Compress/Zip Files" EncryptionAlgorithm="Classic" sap:VirtualizedContainerService.HintSize="433.6,472.8" sap2010:WorkflowViewState.IdRef="CompressFiles_1" OverrideExistingFile="True">
+              <uascw:CompressFiles.CompressedFileName>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">compressedFilePath</CSharpValue>
+                </InArgument>
+              </uascw:CompressFiles.CompressedFileName>
+              <uascw:CompressFiles.CompressedResource>
+                <OutArgument x:TypeArguments="upr:ILocalResource" />
+              </uascw:CompressFiles.CompressedResource>
+              <uascw:CompressFiles.ContentToArchive>
+                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+              </uascw:CompressFiles.ContentToArchive>
+              <uascw:CompressFiles.Password>
+                <InArgument x:TypeArguments="x:String" />
+              </uascw:CompressFiles.Password>
+              <uascw:CompressFiles.ResourcesToArchive>
+                <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)">
+                  <CSharpValue x:TypeArguments="scg:IEnumerable(upr:IResource)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">resourcesList</CSharpValue>
+                </InArgument>
+              </uascw:CompressFiles.ResourcesToArchive>
+            </uascw:CompressFiles>
+            <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="433.6,218.4" sap2010:WorkflowViewState.IdRef="MoveFile_1">
+              <ui:MoveFile.Destination>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">newDestinationFolder</CSharpValue>
+                </InArgument>
+              </ui:MoveFile.Destination>
+              <ui:MoveFile.Path>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">compressedFilePath</CSharpValue>
+                </InArgument>
+              </ui:MoveFile.Path>
+            </ui:MoveFile>
+            <ui:PathExists DisplayName="Path Exists" sap:VirtualizedContainerService.HintSize="433.6,299.2" sap2010:WorkflowViewState.IdRef="PathExists_3" PathType="File">
+              <ui:PathExists.Exists>
+                <OutArgument x:TypeArguments="x:Boolean" />
+              </ui:PathExists.Exists>
+              <ui:PathExists.Path>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">newDestinationFolder+"\\"+compressedFilePath</CSharpValue>
+                </InArgument>
+              </ui:PathExists.Path>
+              <ui:PathExists.Resource>
+                <OutArgument x:TypeArguments="upr:ILocalResource">
+                  <CSharpReference x:TypeArguments="upr:ILocalResource" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">myCompresedFile</CSharpReference>
+                </OutArgument>
+              </ui:PathExists.Resource>
+            </ui:PathExists>
+            <uascw:ExtractFiles DestinationFolder="{x:Null}" DestinationFolderInfo="{x:Null}" FileToExtract="{x:Null}" CodePage="Default" DisplayName="Extract/Unzip Files" ExtractToADedicatedFolder="True" sap:VirtualizedContainerService.HintSize="433.6,369.6" sap2010:WorkflowViewState.IdRef="ExtractFiles_1" SkipUnsupportedFiles="False">
+              <uascw:ExtractFiles.Content>
+                <OutArgument x:TypeArguments="upr:ILocalResource[]">
+                  <CSharpReference x:TypeArguments="upr:ILocalResource[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">extractedFile</CSharpReference>
+                </OutArgument>
+              </uascw:ExtractFiles.Content>
+              <uascw:ExtractFiles.File>
+                <InArgument x:TypeArguments="upr:IResource">
+                  <CSharpValue x:TypeArguments="upr:IResource" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">myCompresedFile</CSharpValue>
+                </InArgument>
+              </uascw:ExtractFiles.File>
+              <uascw:ExtractFiles.Password>
+                <InArgument x:TypeArguments="x:String" />
+              </uascw:ExtractFiles.Password>
+            </uascw:ExtractFiles>
+            <ui:ReadTextFile File="{x:Null}" DisplayName="Read Text File" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ReadTextFile_2">
+              <ui:ReadTextFile.Content>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">contentOfExtractedfile</CSharpReference>
+                </OutArgument>
+              </ui:ReadTextFile.Content>
+              <ui:ReadTextFile.FileName>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">newDestinationFolder+"\\"+compressedFilePath</CSharpValue>
+                </InArgument>
+              </ui:ReadTextFile.FileName>
+            </ui:ReadTextFile>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn">
+              <ui:LogMessage.Message>
+                <InArgument x:TypeArguments="x:Object">
+                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">contentOfExtractedfile</CSharpValue>
+                </InArgument>
+              </ui:LogMessage.Message>
+            </ui:LogMessage>
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence sap:VirtualizedContainerService.HintSize="462.4,202.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Throw sap:VirtualizedContainerService.HintSize="400,90.4" sap2010:WorkflowViewState.IdRef="Throw_1">
+              <InArgument x:TypeArguments="s:Exception">
+                <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">new Exception("The path " + newFolder+"\\"+newFile + " does not exist!!")</CSharpValue>
+              </InArgument>
+            </Throw>
+          </Sequence>
+        </If.Else>
+      </If>
+      <ui:Delete ContinueOnError="{x:Null}" ResourceFile="{x:Null}" sap:VirtualizedContainerService.HintSize="573.6,120" sap2010:WorkflowViewState.IdRef="Delete_2">
+        <ui:Delete.Path>
+          <InArgument x:TypeArguments="x:String">
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">newFolder</CSharpValue>
+          </InArgument>
+        </ui:Delete.Path>
+      </ui:Delete>
+    </Sequence>
+  </Sequence>
+</Activity>

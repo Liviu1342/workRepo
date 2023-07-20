@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Orchestrator" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1268,3453.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:no="clr-namespace:NET5_Win_CS_AllActivitiesInSystemPackage_Library.Orchestator;assembly=NET5-Win-CS-AllActivitiesInSystemPackage-Library" xmlns:noc="clr-namespace:NET5_Win_CS_AllActivitiesInSystemPackage_Library.Orchestator.CacheStrategy;assembly=NET5-Win-CS-AllActivitiesInSystemPackage-Library" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Orchestrator" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1040,3995.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:no="clr-namespace:NET5_Win_CS_AllActivitiesInSystemPackage_Library.Orchestator;assembly=NET5-Win-CS-AllActivitiesInSystemPackage-Library" xmlns:noc="clr-namespace:NET5_Win_CS_AllActivitiesInSystemPackage_Library.Orchestator.CacheStrategy;assembly=NET5-Win-CS-AllActivitiesInSystemPackage-Library" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -34,10 +34,13 @@
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Xml.Serialization</x:String>
       <x:String>UiPath.Core.Activities.Storage</x:String>
+      <x:String>UiPath.Orchestrator.Client.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Activities.System.Collections</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="42">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="84">
       <AssemblyReference>Microsoft.CSharp</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
@@ -79,60 +82,55 @@
       <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
       <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.OrchestratorClient</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Orchestrator" sap:VirtualizedContainerService.HintSize="497.6,3388.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Orchestrator" sap:VirtualizedContainerService.HintSize="497.6,3930.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <noc:Asset_24Hours DisplayName="Asset-24Hours" sap:VirtualizedContainerService.HintSize="435.2,98.4" sap2010:WorkflowViewState.IdRef="Asset_24Hours_1" noOfSteps="5" />
-    <noc:Asset_Execution DisplayName="Asset-Execution" sap:VirtualizedContainerService.HintSize="435.2,98.4" sap2010:WorkflowViewState.IdRef="Asset_Execution_1" noOfSteps="5" />
-    <noc:Asset_None DisplayName="Asset-None" sap:VirtualizedContainerService.HintSize="435.2,98.4" sap2010:WorkflowViewState.IdRef="Asset_None_1" noOfSteps="5" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,180.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <noc:Asset_Execution DisplayName="Asset-Execution" sap:VirtualizedContainerService.HintSize="435.2,90.4" sap2010:WorkflowViewState.IdRef="Asset_Execution_1" noOfSteps="5" />
+    <noc:Asset_None DisplayName="Asset-None" sap:VirtualizedContainerService.HintSize="435.2,90.4" sap2010:WorkflowViewState.IdRef="Asset_None_1" noOfSteps="5" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,161.6" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,92.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,83.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <noc:AssetPerUserValue_24Hours DisplayName="AssetPerUserValue-24Hours" sap:VirtualizedContainerService.HintSize="337.6,98.4" sap2010:WorkflowViewState.IdRef="AssetPerUserValue_24Hours_1" noOfSteps="5" />
-          <noc:AssetPerUserValue_Execution DisplayName="AssetPerUserValue-Execution" sap:VirtualizedContainerService.HintSize="337.6,98.4" sap2010:WorkflowViewState.IdRef="AssetPerUserValue_Execution_1" noOfSteps="5" />
-          <noc:AssetPerUserValue_None DisplayName="AssetPerUserValue-None" sap:VirtualizedContainerService.HintSize="337.6,98.4" sap2010:WorkflowViewState.IdRef="AssetPerUserValue_None_1" noOfSteps="5" />
+          <noc:AssetPerUserValue_Execution DisplayName="AssetPerUserValue-Execution" sap:VirtualizedContainerService.HintSize="337.6,90.4" sap2010:WorkflowViewState.IdRef="AssetPerUserValue_Execution_1" noOfSteps="5" />
+          <noc:AssetPerUserValue_None DisplayName="AssetPerUserValue-None" sap:VirtualizedContainerService.HintSize="337.6,90.4" sap2010:WorkflowViewState.IdRef="AssetPerUserValue_None_1" noOfSteps="5" />
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <noc:Credential_24Hours DisplayName="Credential-24Hours" sap:VirtualizedContainerService.HintSize="435.2,98.4" sap2010:WorkflowViewState.IdRef="Credential_24Hours_1" noOfSteps="5" />
-    <noc:Credential_Execution DisplayName="Credential-Execution" sap:VirtualizedContainerService.HintSize="435.2,98.4" sap2010:WorkflowViewState.IdRef="Credential_Execution_1" noOfSteps="5" />
-    <noc:Credential_None DisplayName="Credential-None" sap:VirtualizedContainerService.HintSize="435.2,98.4" sap2010:WorkflowViewState.IdRef="Credential_None_1" noOfSteps="5" />
-    <no:Alerts sap:VirtualizedContainerService.HintSize="435.2,98.4" sap2010:WorkflowViewState.IdRef="Alerts_1" notification="test" />
-    <no:API headers="{x:Null}" jsonResponse="{x:Null}" responseCode="{x:Null}" sap:VirtualizedContainerService.HintSize="435.2,306.4" sap2010:WorkflowViewState.IdRef="API_1" endpoint="test endpoint" jsonPayload="my json payload" />
-    <no:Assets sap:VirtualizedContainerService.HintSize="435.2,358.4" sap2010:WorkflowViewState.IdRef="Assets_1" assetName="test_new_asset" credentialName="test_credential_1" folderPath="test">
-      <no:Assets.assetValue>
-        <InArgument x:TypeArguments="x:String" />
-      </no:Assets.assetValue>
-      <no:Assets.password>
-        <InArgument x:TypeArguments="x:String" />
-      </no:Assets.password>
-      <no:Assets.username>
-        <InArgument x:TypeArguments="x:String" />
-      </no:Assets.username>
+    <noc:Credential_Execution DisplayName="Credential-Execution" sap:VirtualizedContainerService.HintSize="435.2,90.4" sap2010:WorkflowViewState.IdRef="Credential_Execution_1" noOfSteps="5" />
+    <noc:Credential_None DisplayName="Credential-None" sap:VirtualizedContainerService.HintSize="435.2,90.4" sap2010:WorkflowViewState.IdRef="Credential_None_1" noOfSteps="5" />
+    <no:Alerts sap:VirtualizedContainerService.HintSize="435.2,90.4" sap2010:WorkflowViewState.IdRef="Alerts_1" notification="test" />
+    <no:API headers="{x:Null}" jsonResponse="{x:Null}" responseCode="{x:Null}" sap:VirtualizedContainerService.HintSize="435.2,298.4" sap2010:WorkflowViewState.IdRef="API_1" endpoint="test endpoint" jsonPayload="my json payload" />
+    <no:Assets out_Password="{x:Null}" out_Username="{x:Null}" out_assetValue="{x:Null}" sap:VirtualizedContainerService.HintSize="435.2,506.4" sap2010:WorkflowViewState.IdRef="Assets_1" in_assetName="test_asset_1" in_credentialName="test_credential_1" in_folderPath="test" in_password="hehehehehehe" in_username="gigi becali">
+      <no:Assets.in_assetValue>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">"my input for asset"</CSharpValue>
+        </InArgument>
+      </no:Assets.in_assetValue>
     </no:Assets>
-    <no:Jobs jobs="{x:Null}" sap:VirtualizedContainerService.HintSize="435.2,306.4" sap2010:WorkflowViewState.IdRef="Jobs_1" folderPath="test" processName="3_WriteLine-Activities">
+    <no:Jobs BreakTriggerScopeInArgument="{x:Null}" sap:VirtualizedContainerService.HintSize="435.2,298.4" sap2010:WorkflowViewState.IdRef="Jobs_1" in_folderPath="test" in_processName="Delay_1_minute">
       <no:Jobs.jobName>
         <InArgument x:TypeArguments="ui:OrchestratorJob">
-          <CSharpValue x:TypeArguments="ui:OrchestratorJob" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">new OrchestratorJob()</CSharpValue>
+          <CSharpValue x:TypeArguments="ui:OrchestratorJob" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">new OrchestratorJob()</CSharpValue>
         </InArgument>
       </no:Jobs.jobName>
       <no:Jobs.numberOfRobots>
         <InArgument x:TypeArguments="x:Int32" />
       </no:Jobs.numberOfRobots>
     </no:Jobs>
-    <no:Process sap:VirtualizedContainerService.HintSize="435.2,32" sap2010:WorkflowViewState.IdRef="Process_1" />
-    <no:Queues bulkAddResult="{x:Null}" sap:VirtualizedContainerService.HintSize="435.2,462.4" sap2010:WorkflowViewState.IdRef="Queues_1" folderPath="test" queueName="test_queue_1">
+    <no:Process sap:VirtualizedContainerService.HintSize="435.2,24.8" sap2010:WorkflowViewState.IdRef="Process_1" />
+    <no:Queues bulkAddResult="{x:Null}" out_SuccessfulQueueItems="{x:Null}" out_transactionItem="{x:Null}" sap:VirtualizedContainerService.HintSize="435.2,662.4" sap2010:WorkflowViewState.IdRef="Queues_1" folderPath="test" in_QueueReference="Queue reference" queueName="test_queue_1" transactionReference="This is a test transaction reference">
       <no:Queues.dataTable>
         <InArgument x:TypeArguments="sd:DataTable" />
       </no:Queues.dataTable>
@@ -151,13 +149,16 @@
         </InArgument>
       </no:Queues.transactionItem>
     </no:Queues>
-    <no:Storage listStorageFilesResult="{x:Null}" sap:VirtualizedContainerService.HintSize="435.2,410.4" sap2010:WorkflowViewState.IdRef="Storage_1" folderPath="test" path="path" storageBucketName="Test Storage" textToWrite="blabla">
+    <no:Storage BreakTriggerScopeInArgument="{x:Null}" listStorageFilesResult="{x:Null}" out_CurrentFiles="{x:Null}" out_DownloadedFileText="{x:Null}" out_FileAfterWriting="{x:Null}" out_FileExistsAfterDelete="{x:Null}" out_FileFound="{x:Null}" out_FileName="{x:Null}" out_FilesInStorageBucketAfterDelete="{x:Null}" sap:VirtualizedContainerService.HintSize="435.2,974.4" sap2010:WorkflowViewState.IdRef="Storage_1" folderPath="test" in_DownloadLocation="C:\\Work\\Test\\SystemActivities\\Files" in_FileName="simple text file.txt" in_TextToWrite="blabla" path="path" storageBucketName="System Activities Bucket">
       <no:Storage.destination>
         <InArgument x:TypeArguments="x:String" />
       </no:Storage.destination>
       <no:Storage.directory>
         <InArgument x:TypeArguments="x:String" />
       </no:Storage.directory>
+      <no:Storage.out_DownloadedFileExists>
+        <InArgument x:TypeArguments="x:Boolean" />
+      </no:Storage.out_DownloadedFileExists>
     </no:Storage>
   </Sequence>
 </Activity>

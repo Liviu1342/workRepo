@@ -1,0 +1,57 @@
+{
+  "name": "DebugSanity-Library",
+  "description": "Blank Library",
+  "main": "NewActivity.xaml",
+  "dependencies": {
+    "UiPath.System.Activities": "22.10.0-preview"
+  },
+  "webServices": [
+    {
+      "namespace": "SwaggerPetstore",
+      "serviceDocument": "Services\\SwaggerPetstore.json",
+      "webDocumentUri": "https://petstore.swagger.io/v2/swagger.json",
+      "uniqueReference": "OVwicxJr8F4txhXsrbNWkoA9IgU70aAGj+u87wwkze0="
+    }
+  ],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "22.10.0.0",
+  "projectVersion": "1.0.1",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Library",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": [
+        "AddPet.xaml"
+      ]
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": true
+  },
+  "expressionLanguage": "VisualBasic",
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}

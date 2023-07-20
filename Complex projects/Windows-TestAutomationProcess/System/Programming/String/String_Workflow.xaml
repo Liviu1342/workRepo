@@ -1,0 +1,189 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="String_Workflow" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:this="clr-namespace:" xmlns:uasc="clr-namespace:UiPath.Activities.System.Collections;assembly=UiPath.System.Activities" xmlns:ucat="clr-namespace:UiPath.Core.Activities.TextModifications;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_FindMatchingPatternsResult" Type="OutArgument(scg:List(str:Match))" />
+    <x:Property Name="in_ModifyText_SearchFor" Type="InArgument(x:String)" />
+    <x:Property Name="in_ModifyText_ReplaceWith" Type="InArgument(x:String)" />
+    <x:Property Name="out_ModifyText_Result" Type="OutArgument(x:String)" />
+    <x:Property Name="in_Replace_Pattern" Type="InArgument(x:String)" />
+    <x:Property Name="in_Replace_Replacement" Type="InArgument(x:String)" />
+    <x:Property Name="in_Replace_TextToReplace" Type="InArgument(x:String)" />
+    <x:Property Name="out_Replace_Result" Type="OutArgument(x:String)" />
+    <x:Property Name="in_TextToLeftRight_FullText" Type="InArgument(x:String)" />
+    <x:Property Name="in_TextToLeftRight_Separator" Type="InArgument(x:String)" />
+    <x:Property Name="out_TextToLeftRight_TextToLeft" Type="OutArgument(x:String)" />
+    <x:Property Name="out_TextToLeftRight_TextToRight" Type="OutArgument(x:String)" />
+    <x:Property Name="in_IsTextMatching_Pattern" Type="InArgument(x:String)" />
+    <x:Property Name="in_IsTextMatching_TextToSearchIn" Type="InArgument(x:String)" />
+    <x:Property Name="out_IsTextMatching_Result" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="in_FindMatchingPatterns_Input" Type="InArgument(x:String)" />
+    <x:Property Name="in_FindMatchingPatterns_Pattern" Type="InArgument(x:String)" />
+    <x:Property Name="in_ModifyText_TextToModify" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:String_Workflow.in_ModifyText_SearchFor>
+    <InArgument x:TypeArguments="x:String" />
+  </this:String_Workflow.in_ModifyText_SearchFor>
+  <this:String_Workflow.in_ModifyText_ReplaceWith>
+    <InArgument x:TypeArguments="x:String" />
+  </this:String_Workflow.in_ModifyText_ReplaceWith>
+  <this:String_Workflow.in_Replace_Pattern>
+    <InArgument x:TypeArguments="x:String" />
+  </this:String_Workflow.in_Replace_Pattern>
+  <this:String_Workflow.in_Replace_Replacement>
+    <InArgument x:TypeArguments="x:String" />
+  </this:String_Workflow.in_Replace_Replacement>
+  <this:String_Workflow.in_Replace_TextToReplace>
+    <InArgument x:TypeArguments="x:String" />
+  </this:String_Workflow.in_Replace_TextToReplace>
+  <this:String_Workflow.in_TextToLeftRight_FullText>
+    <InArgument x:TypeArguments="x:String" />
+  </this:String_Workflow.in_TextToLeftRight_FullText>
+  <this:String_Workflow.in_TextToLeftRight_Separator>
+    <InArgument x:TypeArguments="x:String" />
+  </this:String_Workflow.in_TextToLeftRight_Separator>
+  <this:String_Workflow.in_IsTextMatching_Pattern>
+    <InArgument x:TypeArguments="x:String" />
+  </this:String_Workflow.in_IsTextMatching_Pattern>
+  <this:String_Workflow.in_IsTextMatching_TextToSearchIn>
+    <InArgument x:TypeArguments="x:String" />
+  </this:String_Workflow.in_IsTextMatching_TextToSearchIn>
+  <this:String_Workflow.in_FindMatchingPatterns_Input>
+    <InArgument x:TypeArguments="x:String" />
+  </this:String_Workflow.in_FindMatchingPatterns_Input>
+  <this:String_Workflow.in_FindMatchingPatterns_Pattern>
+    <InArgument x:TypeArguments="x:String" />
+  </this:String_Workflow.in_FindMatchingPatterns_Pattern>
+  <this:String_Workflow.in_ModifyText_TextToModify>
+    <InArgument x:TypeArguments="x:String" />
+  </this:String_Workflow.in_ModifyText_TextToModify>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1343.2,1716.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>String_Workflow_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Core.Activities.TextModifications</x:String>
+      <x:String>UiPath.Activities.System.Workflow.Business</x:String>
+      <x:String>UiPath.Activities.System.Collections</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="String_Workflow" sap:VirtualizedContainerService.HintSize="496,1652" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="findMatchingPatterns_Result" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:IsMatch BuilderPattern="abc" DisplayName="Is Text Matching" sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="IsMatch_1" Input="[in_IsTextMatching_TextToSearchIn]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;abc&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="[in_IsTextMatching_Pattern]" RegexOption="IgnoreCase, Compiled" Result="[out_IsTextMatching_Result]" />
+    <ui:Matches FirstMatch="{x:Null}" BuilderPattern="abc" DisplayName="Find Matching Patterns" sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="Matches_1" Input="[in_FindMatchingPatterns_Input]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;abc&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="[in_FindMatchingPatterns_Pattern]" RegexOption="IgnoreCase, Compiled" Result="[findMatchingPatterns_Result]" />
+    <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="scg:List(str:Match)">[out_FindMatchingPatternsResult]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="scg:List(str:Match)">[new List(Of Match)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:ForEach x:TypeArguments="str:Match" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="433.6,419.2" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[findMatchingPatterns_Result]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="str:Match">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="str:Match" Name="currentItem" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="377.6,231.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uasc:AppendItemToCollection x:TypeArguments="str:Match" Collection="[out_FindMatchingPatternsResult]" DisplayName="Append items to collection" sap:VirtualizedContainerService.HintSize="334.4,141.6" sap2010:WorkflowViewState.IdRef="AppendItemToCollection`1_1" Result="[out_FindMatchingPatternsResult]">
+              <uasc:AppendItemToCollection.Items>
+                <scg:List x:TypeArguments="InArgument(str:Match)" Capacity="4">
+                  <InArgument x:TypeArguments="str:Match">[currentItem]</InArgument>
+                </scg:List>
+              </uasc:AppendItemToCollection.Items>
+            </uasc:AppendItemToCollection>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="433.6,344.8" sap2010:WorkflowViewState.IdRef="ModifyText_1" OutputText="[out_ModifyText_Result]" SourceText="[in_ModifyText_TextToModify]">
+      <ui:ModifyText.Body>
+        <ActivityAction>
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ucat:FindAndReplaceTextModification DisplayName="Find and replace text" sap:VirtualizedContainerService.HintSize="333.6,150.4" sap2010:WorkflowViewState.IdRef="FindAndReplaceTextModification_1" ReplaceText="[in_ModifyText_ReplaceWith]" SearchText="[in_ModifyText_SearchFor]" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ModifyText.Body>
+    </ui:ModifyText>
+    <ui:Replace sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="Replace_1" Input="[in_Replace_TextToReplace]" IsBuilderTabModified="False" Pattern="[in_Replace_Pattern]" RegexOption="IgnoreCase, Compiled" Replacement="[in_Replace_Replacement]" Result="[out_Replace_Result]" />
+    <ui:TextToLeftRight DisplayName="Text to Left/Right" FullText="[in_TextToLeftRight_FullText]" sap:VirtualizedContainerService.HintSize="433.6,274.4" sap2010:WorkflowViewState.IdRef="TextToLeftRight_1" Separator="[in_TextToLeftRight_Separator]" SeparatorKey="Custom" TextToLeft="[out_TextToLeftRight_TextToLeft]" TextToRight="[out_TextToLeftRight_TextToRight]" />
+  </Sequence>
+</Activity>

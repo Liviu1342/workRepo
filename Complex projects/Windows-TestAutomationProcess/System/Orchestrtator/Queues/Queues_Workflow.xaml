@@ -1,0 +1,243 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Queues_Workflow" this:Queues_Workflow.in_OrchFolder="test" this:Queues_Workflow.in_QueueName="test queue" this:Queues_Workflow.in_transactionReference="This is a test transaction reference" this:Queues_Workflow.in_QueueReference="Queue reference" this:Queues_Workflow.in_Postpone="[DateTime.Now.AddDays(5)]" this:Queues_Workflow.in_Progress="Abandoned" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_OrchFolder" Type="InArgument(x:String)" />
+    <x:Property Name="in_QueueName" Type="InArgument(x:String)" />
+    <x:Property Name="out_bulkAddResult" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="out_queueItems" Type="OutArgument(scg:IEnumerable(ui:QueueItem))" />
+    <x:Property Name="out_transactionItem" Type="OutArgument(ui:QueueItem)" />
+    <x:Property Name="in_transactionReference" Type="InArgument(x:String)" />
+    <x:Property Name="in_QueueReference" Type="InArgument(x:String)" />
+    <x:Property Name="out_transactionItem2" Type="OutArgument(ui:QueueItem)" />
+    <x:Property Name="in_Postpone" Type="InArgument(s:DateTime)" />
+    <x:Property Name="in_Progress" Type="InArgument(x:String)" />
+    <x:Property Name="out_SuccessfulQueueItems" Type="OutArgument(scg:IEnumerable(ui:QueueItem))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1787.2,4204</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Queues_Workflow_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Queues_Workflow" sap:VirtualizedContainerService.HintSize="1797.6,4139.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dataTable" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" FolderPath="[in_OrchFolder]" sap:VirtualizedContainerService.HintSize="1735.2,194.4" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[in_QueueName]">
+      <ui:AddQueueItem.ItemInformation>
+        <InArgument x:TypeArguments="x:String" x:Key="test">Abc</InArgument>
+      </ui:AddQueueItem.ItemInformation>
+    </ui:AddQueueItem>
+    <ui:ReadCsvFile DataTable="[dataTable]" Delimitator="Comma" DisplayName="Read CSV" FilePath="Tools\Ne queue items.csv" sap:VirtualizedContainerService.HintSize="1735.2,155.2" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+    <ui:BulkAddQueueItems TimeoutMS="{x:Null}" DisplayName="Bulk Add Queue Items" FolderPath="[in_OrchFolder]" sap:VirtualizedContainerService.HintSize="1735.2,195.2" sap2010:WorkflowViewState.IdRef="BulkAddQueueItems_1" QueueItemsDataTable="[dataTable]" QueueName="[in_QueueName]" Result="[out_bulkAddResult]" />
+    <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Reference="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="StartsWith" FolderPath="[in_OrchFolder]" sap:VirtualizedContainerService.HintSize="1735.2,143.2" sap2010:WorkflowViewState.IdRef="GetQueueItems_1" QueueItemStates="New, InProgress, Failed, Abandoned" QueueName="[in_QueueName]" Result="[out_queueItems]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1735.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn" Message="[out_queueItems.Count]" />
+    <ui:DeleteQueueItems TimeoutMS="{x:Null}" DisplayName="Delete Queue Items" FolderPath="[in_OrchFolder]" sap:VirtualizedContainerService.HintSize="1735.2,143.2" sap2010:WorkflowViewState.IdRef="DeleteQueueItems_1" QueueItems="[out_queueItems]" />
+    <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Reference="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="StartsWith" FolderPath="[in_OrchFolder]" sap:VirtualizedContainerService.HintSize="1735.2,143.2" sap2010:WorkflowViewState.IdRef="GetQueueItems_3" QueueItemStates="New, InProgress, Failed, Abandoned" QueueName="[in_QueueName]" Result="[out_queueItems]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1735.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn" Message="[out_queueItems.Count]" />
+    <ui:AddTransactionItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Transaction Item" FolderPath="[in_OrchFolder]" sap:VirtualizedContainerService.HintSize="1735.2,195.2" sap2010:WorkflowViewState.IdRef="AddTransactionItem_1" QueueType="[in_QueueName]" Reference="[in_transactionReference]" TransactionItem="[out_transactionItem]">
+      <ui:AddTransactionItem.TransactionInformation>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+      </ui:AddTransactionItem.TransactionInformation>
+    </ui:AddTransactionItem>
+    <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" FolderPath="[in_OrchFolder]" sap:VirtualizedContainerService.HintSize="1735.2,194.4" sap2010:WorkflowViewState.IdRef="AddQueueItem_2" Priority="Normal" QueueType="[in_QueueName]" Reference="[in_QueueReference]">
+      <ui:AddQueueItem.ItemInformation>
+        <InArgument x:TypeArguments="x:String" x:Key="test">Abc</InArgument>
+      </ui:AddQueueItem.ItemInformation>
+    </ui:AddQueueItem>
+    <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Transaction Item" FolderPath="[in_OrchFolder]" sap:VirtualizedContainerService.HintSize="1735.2,143.2" sap2010:WorkflowViewState.IdRef="GetQueueItem_1" QueueType="[in_QueueName]" TransactionItem="[out_transactionItem2]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1735.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[&quot;Queues.xaml: Transaction &quot; + out_transactionItem.Id.ToString() + &quot; was added with reference &quot; + out_transactionItem2.Reference]" />
+    <ui:PostponeTransactionItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DeferDate="[in_Postpone]" DisplayName="Postpone Transaction Item" FolderPath="[in_OrchFolder]" sap:VirtualizedContainerService.HintSize="1735.2,194.4" sap2010:WorkflowViewState.IdRef="PostponeTransactionItem_1" TransactionItem="[out_transactionItem]" />
+    <ui:SetTransactionProgress TimeoutMS="{x:Null}" DisplayName="Set Transaction Progress" FolderPath="[in_OrchFolder]" sap:VirtualizedContainerService.HintSize="1735.2,194.4" sap2010:WorkflowViewState.IdRef="SetTransactionProgress_1" Progress="[in_Progress]" TransactionItem="[out_transactionItem2]" />
+    <ui:SetTransactionStatus ContinueOnError="{x:Null}" Reason="{x:Null}" ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status" ErrorType="Business" FolderPath="[in_OrchFolder]" sap:VirtualizedContainerService.HintSize="1735.2,193.6" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_1" Status="Successful" TransactionItem="[out_transactionItem2]">
+      <ui:SetTransactionStatus.Analytics>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+      </ui:SetTransactionStatus.Analytics>
+      <ui:SetTransactionStatus.Output>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+      </ui:SetTransactionStatus.Output>
+    </ui:SetTransactionStatus>
+    <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Reference="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="Equals" FolderPath="[in_OrchFolder]" sap:VirtualizedContainerService.HintSize="1735.2,143.2" sap2010:WorkflowViewState.IdRef="GetQueueItems_2" QueueItemStates="Successful" QueueName="[in_QueueName]" Result="[out_SuccessfulQueueItems]" />
+    <Parallel sap:VirtualizedContainerService.HintSize="1735.2,876" sap2010:WorkflowViewState.IdRef="Parallel_1">
+      <ui:WaitQueueItem PollTimeMS="{x:Null}" Reference="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Wait Queue Item" FilterStrategy="StartsWith" FolderPath="[in_OrchFolder]" sap:VirtualizedContainerService.HintSize="334.4,829.6" sap2010:WorkflowViewState.IdRef="WaitQueueItem_1" QueueName="[in_QueueName]" />
+      <Sequence sap:VirtualizedContainerService.HintSize="593.6,829.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:Int32" Name="counter1" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign sap:VirtualizedContainerService.HintSize="531.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:Int32">[counter1]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:Int32">0</InArgument>
+          </Assign.Value>
+        </Assign>
+        <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[counter1 &lt; 5]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="531.2,595.2" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+          <ui:InterruptibleDoWhile.Body>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,428" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" FolderPath="[in_OrchFolder]" sap:VirtualizedContainerService.HintSize="433.6,194.4" sap2010:WorkflowViewState.IdRef="AddQueueItem_3" Priority="Normal" QueueType="[in_QueueName]">
+                <ui:AddQueueItem.ItemInformation>
+                  <InArgument x:TypeArguments="x:String" x:Key="test">Abc</InArgument>
+                </ui:AddQueueItem.ItemInformation>
+              </ui:AddQueueItem>
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[counter1]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">[counter1+1]</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+          </ui:InterruptibleDoWhile.Body>
+        </ui:InterruptibleDoWhile>
+      </Sequence>
+      <Sequence sap:VirtualizedContainerService.HintSize="593.6,829.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:Int32" Name="counter2" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign sap:VirtualizedContainerService.HintSize="531.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:Int32">[counter2]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:Int32">0</InArgument>
+          </Assign.Value>
+        </Assign>
+        <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[counter2 &lt; 5]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="531.2,596" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+          <ui:InterruptibleDoWhile.Body>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,428.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="ui:QueueItem" Name="transactionItem" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:AddTransactionItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Transaction Item" FolderPath="[in_OrchFolder]" sap:VirtualizedContainerService.HintSize="433.6,195.2" sap2010:WorkflowViewState.IdRef="AddTransactionItem_2" QueueType="[in_QueueName]" Reference="[in_transactionReference + &quot; &quot; + (counter2+1).ToString()]" TransactionItem="[transactionItem]">
+                <ui:AddTransactionItem.TransactionInformation>
+                  <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+                </ui:AddTransactionItem.TransactionInformation>
+              </ui:AddTransactionItem>
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[counter2]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">[counter2+1]</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+          </ui:InterruptibleDoWhile.Body>
+        </ui:InterruptibleDoWhile>
+      </Sequence>
+    </Parallel>
+  </Sequence>
+</Activity>

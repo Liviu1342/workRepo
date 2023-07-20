@@ -1,164 +1,223 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Assets" this:Assets.assetName="test asset" this:Assets.credentialName="test credential" this:Assets.folderPath="test folder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Assets" this:Assets.in_assetName="test_asset_1" this:Assets.in_credentialName="test_credential_1" this:Assets.in_password="hehehehehehe" this:Assets.in_username="gigi becali" this:Assets.in_folderPath="test" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="assetName" Type="InArgument(x:String)">
+    <x:Property Name="out_Username" Type="OutArgument(x:String)" />
+    <x:Property Name="out_Password" Type="OutArgument(ss:SecureString)" />
+    <x:Property Name="out_assetValue" Type="OutArgument(x:String)" />
+    <x:Property Name="in_assetValue" Type="InArgument(x:Object)">
       <x:Property.Attributes>
         <RequiredArgumentAttribute />
       </x:Property.Attributes>
     </x:Property>
-    <x:Property Name="assetValue" Type="InArgument(x:String)" />
-    <x:Property Name="credentialName" Type="InArgument(x:String)">
+    <x:Property Name="in_assetName" Type="InArgument(x:String)" />
+    <x:Property Name="in_credentialName" Type="InArgument(x:String)" />
+    <x:Property Name="in_password" Type="InArgument(x:String)">
       <x:Property.Attributes>
         <RequiredArgumentAttribute />
       </x:Property.Attributes>
     </x:Property>
-    <x:Property Name="password" Type="InArgument(x:String)" />
-    <x:Property Name="username" Type="InArgument(x:String)" />
-    <x:Property Name="folderPath" Type="InArgument(x:String)">
+    <x:Property Name="in_username" Type="InArgument(x:String)">
       <x:Property.Attributes>
         <RequiredArgumentAttribute />
       </x:Property.Attributes>
     </x:Property>
+    <x:Property Name="in_folderPath" Type="InArgument(x:String)" />
   </x:Members>
-  <this:Assets.assetValue>
-    <InArgument x:TypeArguments="x:String" />
-  </this:Assets.assetValue>
-  <this:Assets.password>
-    <InArgument x:TypeArguments="x:String" />
-  </this:Assets.password>
-  <this:Assets.username>
-    <InArgument x:TypeArguments="x:String" />
-  </this:Assets.username>
+  <this:Assets.in_assetValue>
+    <InArgument x:TypeArguments="x:Object">
+      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">"my input for asset"</CSharpValue>
+    </InArgument>
+  </this:Assets.in_assetValue>
+  <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>389.6,1437.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1040,1996</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System</x:String>
       <x:String>System.Activities</x:String>
-      <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Validation</x:String>
       <x:String>System.Activities.XamlIntegration</x:String>
-      <x:String>Microsoft.VisualBasic</x:String>
-      <x:String>Microsoft.VisualBasic.Activities</x:String>
-      <x:String>System</x:String>
       <x:String>System.Collections</x:String>
       <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
       <x:String>System.Data</x:String>
       <x:String>System.Diagnostics</x:String>
       <x:String>System.Linq</x:String>
-      <x:String>System.Net.Mail</x:String>
-      <x:String>System.Xml</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
       <x:String>System.Text</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
       <x:String>System.Xml.Linq</x:String>
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
-      <x:String>System.Windows.Markup</x:String>
-      <x:String>System.Security</x:String>
       <x:String>UiPath.Core.Activities.Orchestrator</x:String>
-      <x:String>System.Reflection</x:String>
-      <x:String>System.Collections.ObjectModel</x:String>
-      <x:String>System.Linq.Expressions</x:String>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
       <AssemblyReference>Microsoft.CSharp</AssemblyReference>
-      <AssemblyReference>System</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
-      <AssemblyReference>System.Data</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>System.Activities</AssemblyReference>
-      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
-      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
-      <AssemblyReference>System.Data</AssemblyReference>
-      <AssemblyReference>System</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
-      <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.ObjectModel</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Assets" sap:VirtualizedContainerService.HintSize="400,1372.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Assets" sap:VirtualizedContainerService.HintSize="400,1931.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotAsset CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="337.6,416.8" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:SetAsset DisplayName="Set Asset" sap:VirtualizedContainerService.HintSize="337.6,352.8" sap2010:WorkflowViewState.IdRef="SetAsset_1">
+      <ui:SetAsset.AssetName>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">in_assetName</CSharpValue>
+        </InArgument>
+      </ui:SetAsset.AssetName>
+      <ui:SetAsset.FolderPath>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">in_folderPath</CSharpValue>
+        </InArgument>
+      </ui:SetAsset.FolderPath>
+      <ui:SetAsset.TimeoutMS>
+        <InArgument x:TypeArguments="x:Int32" />
+      </ui:SetAsset.TimeoutMS>
+      <ui:SetAsset.Value>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">in_assetValue</CSharpValue>
+        </InArgument>
+      </ui:SetAsset.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:SetAsset>
+    <ui:GetRobotAsset CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="337.6,376" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.AssetName>
         <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">assetName</CSharpValue>
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">in_assetName</CSharpValue>
         </InArgument>
       </ui:GetRobotAsset.AssetName>
+      <ui:GetRobotAsset.FolderPath>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">in_folderPath</CSharpValue>
+        </InArgument>
+      </ui:GetRobotAsset.FolderPath>
       <ui:GetRobotAsset.TimeoutMS>
         <InArgument x:TypeArguments="x:Int32" />
       </ui:GetRobotAsset.TimeoutMS>
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">
-          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">assetValue</CSharpReference>
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">out_assetValue</CSharpReference>
         </OutArgument>
       </ui:GetRobotAsset.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotAsset>
-    <ui:GetRobotCredential Password="{x:Null}" TimeoutMS="{x:Null}" Username="{x:Null}" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="337.6,185.6" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1">
-      <ui:GetRobotCredential.AssetName>
-        <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">credentialName</CSharpValue>
-        </InArgument>
-      </ui:GetRobotCredential.AssetName>
-    </ui:GetRobotCredential>
-    <ui:SetAsset TimeoutMS="{x:Null}" DisplayName="Set Asset" sap:VirtualizedContainerService.HintSize="337.6,237.6" sap2010:WorkflowViewState.IdRef="SetAsset_1">
-      <ui:SetAsset.AssetName>
-        <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">assetName</CSharpValue>
-        </InArgument>
-      </ui:SetAsset.AssetName>
-      <ui:SetAsset.Value>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+      <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
-          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">assetValue</CSharpValue>
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">"Assets.xaml: " + " Asset Value: " + out_assetValue</CSharpValue>
         </InArgument>
-      </ui:SetAsset.Value>
-    </ui:SetAsset>
-    <ui:SetCredential SecurePassword="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Credential" sap:VirtualizedContainerService.HintSize="337.6,289.6" sap2010:WorkflowViewState.IdRef="SetCredential_1">
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <ui:SetCredential SecurePassword="{x:Null}" DisplayName="Set Credential" sap:VirtualizedContainerService.HintSize="337.6,276.8" sap2010:WorkflowViewState.IdRef="SetCredential_1">
       <ui:SetCredential.CredentialName>
         <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">credentialName</CSharpValue>
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">in_credentialName</CSharpValue>
         </InArgument>
       </ui:SetCredential.CredentialName>
       <ui:SetCredential.FolderPath>
         <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">folderPath</CSharpValue>
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">in_folderPath</CSharpValue>
         </InArgument>
       </ui:SetCredential.FolderPath>
       <ui:SetCredential.Password>
         <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">password</CSharpValue>
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">in_password</CSharpValue>
         </InArgument>
       </ui:SetCredential.Password>
+      <ui:SetCredential.TimeoutMS>
+        <InArgument x:TypeArguments="x:Int32" />
+      </ui:SetCredential.TimeoutMS>
       <ui:SetCredential.UserName>
         <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">username</CSharpValue>
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">in_username</CSharpValue>
         </InArgument>
       </ui:SetCredential.UserName>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:SetCredential>
+    <ui:GetRobotCredential CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="337.6,428" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1">
+      <ui:GetRobotCredential.AssetName>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">in_credentialName</CSharpValue>
+        </InArgument>
+      </ui:GetRobotCredential.AssetName>
+      <ui:GetRobotCredential.FolderPath>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">in_folderPath</CSharpValue>
+        </InArgument>
+      </ui:GetRobotCredential.FolderPath>
+      <ui:GetRobotCredential.Password>
+        <OutArgument x:TypeArguments="ss:SecureString">
+          <CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">out_Password</CSharpReference>
+        </OutArgument>
+      </ui:GetRobotCredential.Password>
+      <ui:GetRobotCredential.TimeoutMS>
+        <InArgument x:TypeArguments="x:Int32" />
+      </ui:GetRobotCredential.TimeoutMS>
+      <ui:GetRobotCredential.Username>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">out_Username</CSharpReference>
+        </OutArgument>
+      </ui:GetRobotCredential.Username>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:GetRobotCredential>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">"Assets.xaml: " + " Credential Username Value: " + out_Username</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
   </Sequence>
 </Activity>

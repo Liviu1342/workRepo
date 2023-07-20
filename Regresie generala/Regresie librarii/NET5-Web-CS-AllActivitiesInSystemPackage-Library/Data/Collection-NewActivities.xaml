@@ -1,0 +1,767 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Collection_NewActivities" this:Collection_NewActivities.itemToAppend1="adaugat-1" this:Collection_NewActivities.itemToAppend2="adaugat-2" this:Collection_NewActivities.itemToAppend3="adaugat-3" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:uasc="clr-namespace:UiPath.Activities.System.Collections;assembly=UiPath.System.Activities" xmlns:uascf="clr-namespace:UiPath.Activities.System.Collections.Filters;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="itemToAppend1" Type="InArgument(x:String)" />
+    <x:Property Name="itemToAppend2" Type="InArgument(x:String)" />
+    <x:Property Name="itemToAppend3" Type="InArgument(x:String)" />
+    <x:Property Name="itemToAppend4" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>1780,6480</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="56">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Activities.System.Collections</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Activities.System.Collections.Filters</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="86">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Collection_NewActivities" sap:VirtualizedContainerService.HintSize="606.4,6375.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:List(x:String)" Name="myNewCollection" />
+      <Variable x:TypeArguments="x:Boolean" Name="elementExists" />
+      <Variable x:TypeArguments="x:Int32" Name="elementIndex" />
+      <Variable x:TypeArguments="scg:List(x:String)" Name="myFilteredCollection1" />
+      <Variable x:TypeArguments="scg:List(x:String)" Name="myFilteredCollection2" />
+      <Variable x:TypeArguments="scg:List(x:String)" Name="myMergedCollection" />
+      <Variable x:TypeArguments="sd:DataTable" Name="myDt" />
+      <Variable x:TypeArguments="x:Int32" Name="counter" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="544,150.4" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+      <ui:LogMessage.Level>
+        <InArgument x:TypeArguments="ui:LogLevel">
+          <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">UiPath.Core.Activities.LogLevel.Warn</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Level>
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"Starting execution for: Collection-NewActivities.xaml"</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <uasc:BuildCollection x:TypeArguments="x:String" Items="{x:Null}" DisplayName="Build collection" FirstItem="myFirstItem" sap:VirtualizedContainerService.HintSize="544,185.6" sap2010:WorkflowViewState.IdRef="BuildCollection`1_2">
+      <uasc:BuildCollection.NextItems>
+        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+          <InArgument x:TypeArguments="x:String">mySecondItem</InArgument>
+          <InArgument x:TypeArguments="x:String">myThirdItem</InArgument>
+        </scg:List>
+      </uasc:BuildCollection.NextItems>
+      <uasc:BuildCollection.Result>
+        <OutArgument x:TypeArguments="scg:List(x:String)">
+          <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">myNewCollection</CSharpReference>
+        </OutArgument>
+      </uasc:BuildCollection.Result>
+    </uasc:BuildCollection>
+    <Sequence DisplayName="Verify current state of collection" sap:VirtualizedContainerService.HintSize="544,92.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="544,150.4" sap2010:WorkflowViewState.IdRef="LogMessage_2">
+        <ui:LogMessage.Message>
+          <InArgument x:TypeArguments="x:Object">
+            <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">"Collection now contains " + myNewCollection.Count.ToString() + " items: "</CSharpValue>
+          </InArgument>
+        </ui:LogMessage.Message>
+      </ui:LogMessage>
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For each" sap:VirtualizedContainerService.HintSize="544,492" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="x:String">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="462.4,273.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="400,150.4" sap2010:WorkflowViewState.IdRef="LogMessage_3">
+                <ui:LogMessage.Message>
+                  <InArgument x:TypeArguments="x:Object">
+                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">currentItem</CSharpValue>
+                  </InArgument>
+                </ui:LogMessage.Message>
+              </ui:LogMessage>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEach.Body>
+        <ui:ForEach.Values>
+          <InArgument x:TypeArguments="sc:IEnumerable">
+            <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">myNewCollection</CSharpValue>
+          </InArgument>
+        </ui:ForEach.Values>
+      </ui:ForEach>
+    </Sequence>
+    <uasc:AppendItemToCollection x:TypeArguments="x:String" DisplayName="Append item to collection" sap:VirtualizedContainerService.HintSize="544,184.8" sap2010:WorkflowViewState.IdRef="AppendItemToCollection`1_2">
+      <uasc:AppendItemToCollection.Collection>
+        <InArgument x:TypeArguments="scg:ICollection(x:String)">
+          <CSharpValue x:TypeArguments="scg:ICollection(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">myNewCollection</CSharpValue>
+        </InArgument>
+      </uasc:AppendItemToCollection.Collection>
+      <uasc:AppendItemToCollection.Items>
+        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+          <InArgument x:TypeArguments="x:String">
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">itemToAppend1</CSharpValue>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String">
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">itemToAppend2</CSharpValue>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String">
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">itemToAppend3</CSharpValue>
+          </InArgument>
+        </scg:List>
+      </uasc:AppendItemToCollection.Items>
+      <uasc:AppendItemToCollection.Result>
+        <OutArgument x:TypeArguments="scg:List(x:String)">
+          <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">myNewCollection</CSharpReference>
+        </OutArgument>
+      </uasc:AppendItemToCollection.Result>
+    </uasc:AppendItemToCollection>
+    <If sap:VirtualizedContainerService.HintSize="544,502.4" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">myNewCollection.Count != 6</CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="462.4,221.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Throw sap:VirtualizedContainerService.HintSize="400,98.4" sap2010:WorkflowViewState.IdRef="Throw_1">
+            <InArgument x:TypeArguments="s:Exception">
+              <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">new Exception("The collection does not have the expected number of elements. Expected 6, but found " + myNewCollection.Count.ToString())</CSharpValue>
+            </InArgument>
+          </Throw>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="400,115.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <Sequence DisplayName="Verify current state of collection" sap:VirtualizedContainerService.HintSize="544,92.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="544,150.4" sap2010:WorkflowViewState.IdRef="LogMessage_4">
+        <ui:LogMessage.Message>
+          <InArgument x:TypeArguments="x:Object">
+            <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">"Collection now contains " + myNewCollection.Count.ToString() + " items: "</CSharpValue>
+          </InArgument>
+        </ui:LogMessage.Message>
+      </ui:LogMessage>
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For each" sap:VirtualizedContainerService.HintSize="544,492" sap2010:WorkflowViewState.IdRef="ForEach`1_3">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="x:String">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="462.4,273.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="400,150.4" sap2010:WorkflowViewState.IdRef="LogMessage_5">
+                <ui:LogMessage.Message>
+                  <InArgument x:TypeArguments="x:Object">
+                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">currentItem</CSharpValue>
+                  </InArgument>
+                </ui:LogMessage.Message>
+              </ui:LogMessage>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEach.Body>
+        <ui:ForEach.Values>
+          <InArgument x:TypeArguments="sc:IEnumerable">
+            <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">myNewCollection</CSharpValue>
+          </InArgument>
+        </ui:ForEach.Values>
+      </ui:ForEach>
+    </Sequence>
+    <uasc:ExistsInCollection x:TypeArguments="x:String" DisplayName="Exists in collection" sap:VirtualizedContainerService.HintSize="544,185.6" sap2010:WorkflowViewState.IdRef="ExistsInCollection`1_2">
+      <uasc:ExistsInCollection.Collection>
+        <InArgument x:TypeArguments="scg:ICollection(x:String)">
+          <CSharpValue x:TypeArguments="scg:ICollection(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">myNewCollection</CSharpValue>
+        </InArgument>
+      </uasc:ExistsInCollection.Collection>
+      <uasc:ExistsInCollection.Exists>
+        <OutArgument x:TypeArguments="x:Boolean">
+          <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">elementExists</CSharpReference>
+        </OutArgument>
+      </uasc:ExistsInCollection.Exists>
+      <uasc:ExistsInCollection.Index>
+        <OutArgument x:TypeArguments="x:Int32">
+          <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">elementIndex</CSharpReference>
+        </OutArgument>
+      </uasc:ExistsInCollection.Index>
+      <uasc:ExistsInCollection.Item>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">itemToAppend1</CSharpValue>
+        </InArgument>
+      </uasc:ExistsInCollection.Item>
+    </uasc:ExistsInCollection>
+    <If sap:VirtualizedContainerService.HintSize="544,502.4" sap2010:WorkflowViewState.IdRef="If_2">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">! elementExists</CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="462.4,221.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Throw sap:VirtualizedContainerService.HintSize="400,98.4" sap2010:WorkflowViewState.IdRef="Throw_2">
+            <InArgument x:TypeArguments="s:Exception">
+              <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">new Exception("Element " + itemToAppend1 + " was not found in the collection!!")</CSharpValue>
+            </InArgument>
+          </Throw>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="400,115.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="544,150.4" sap2010:WorkflowViewState.IdRef="LogMessage_6">
+      <ui:LogMessage.Level>
+        <InArgument x:TypeArguments="ui:LogLevel">
+          <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">UiPath.Core.Activities.LogLevel.Warn</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Level>
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">itemToAppend1 + " was found in the collection on position " + (elementIndex+1).ToString()</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <uasc:RemoveFromCollection x:TypeArguments="x:String" Index="{x:Null}" DisplayName="Remove from collection" sap:VirtualizedContainerService.HintSize="544,262.4" sap2010:WorkflowViewState.IdRef="RemoveFromCollection`1_3" RemoveAllElements="False">
+      <uasc:RemoveFromCollection.Collection>
+        <InArgument x:TypeArguments="scg:ICollection(x:String)">
+          <CSharpValue x:TypeArguments="scg:ICollection(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">myNewCollection</CSharpValue>
+        </InArgument>
+      </uasc:RemoveFromCollection.Collection>
+      <uasc:RemoveFromCollection.Item>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">itemToAppend2</CSharpValue>
+        </InArgument>
+      </uasc:RemoveFromCollection.Item>
+      <uasc:RemoveFromCollection.Result>
+        <OutArgument x:TypeArguments="scg:List(x:String)">
+          <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">myNewCollection</CSharpReference>
+        </OutArgument>
+      </uasc:RemoveFromCollection.Result>
+    </uasc:RemoveFromCollection>
+    <uasc:RemoveFromCollection x:TypeArguments="x:String" Item="{x:Null}" DisplayName="Remove from collection" sap:VirtualizedContainerService.HintSize="544,262.4" sap2010:WorkflowViewState.IdRef="RemoveFromCollection`1_4" RemoveAllElements="False">
+      <uasc:RemoveFromCollection.Collection>
+        <InArgument x:TypeArguments="scg:ICollection(x:String)">
+          <CSharpValue x:TypeArguments="scg:ICollection(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">myNewCollection</CSharpValue>
+        </InArgument>
+      </uasc:RemoveFromCollection.Collection>
+      <uasc:RemoveFromCollection.Index>
+        <InArgument x:TypeArguments="x:Int32">
+          <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">elementIndex</CSharpValue>
+        </InArgument>
+      </uasc:RemoveFromCollection.Index>
+      <uasc:RemoveFromCollection.Result>
+        <OutArgument x:TypeArguments="scg:List(x:String)">
+          <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">myNewCollection</CSharpReference>
+        </OutArgument>
+      </uasc:RemoveFromCollection.Result>
+    </uasc:RemoveFromCollection>
+    <Sequence DisplayName="Verify current state of collection" sap:VirtualizedContainerService.HintSize="544,92.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="544,150.4" sap2010:WorkflowViewState.IdRef="LogMessage_14">
+        <ui:LogMessage.Message>
+          <InArgument x:TypeArguments="x:Object">
+            <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">"Collection now contains " + myNewCollection.Count.ToString() + " items: "</CSharpValue>
+          </InArgument>
+        </ui:LogMessage.Message>
+      </ui:LogMessage>
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For each" sap:VirtualizedContainerService.HintSize="544,492" sap2010:WorkflowViewState.IdRef="ForEach`1_8">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="x:String">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="462.4,273.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="400,150.4" sap2010:WorkflowViewState.IdRef="LogMessage_15">
+                <ui:LogMessage.Message>
+                  <InArgument x:TypeArguments="x:Object">
+                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">currentItem</CSharpValue>
+                  </InArgument>
+                </ui:LogMessage.Message>
+              </ui:LogMessage>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEach.Body>
+        <ui:ForEach.Values>
+          <InArgument x:TypeArguments="sc:IEnumerable">
+            <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">myNewCollection</CSharpValue>
+          </InArgument>
+        </ui:ForEach.Values>
+      </ui:ForEach>
+    </Sequence>
+    <uasc:FilterCollection x:TypeArguments="x:String" FilterAction="{x:Null}" DisplayName="Filter collection" sap:VirtualizedContainerService.HintSize="544,324.8" sap2010:WorkflowViewState.IdRef="FilterCollection`1_3">
+      <uasc:FilterCollection.Collection>
+        <InArgument x:TypeArguments="scg:ICollection(x:String)">
+          <CSharpValue x:TypeArguments="scg:ICollection(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">myNewCollection</CSharpValue>
+        </InArgument>
+      </uasc:FilterCollection.Collection>
+      <uasc:FilterCollection.Filter>
+        <uascf:CollectionFilterSettings LogicalOperator="And">
+          <uascf:CollectionFilterSettings.Filters>
+            <scg:List x:TypeArguments="uascf:Filter" Capacity="4">
+              <uascf:Filter x:TypeArguments="x:String" Criteria="CurrentItem">
+                <uascf:Filter.Operator>
+                  <uascf:ContainsOperator x:Name="__ReferenceID0" />
+                </uascf:Filter.Operator>
+                <uascf:Filter.Value>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">"item"</CSharpValue>
+                  </InArgument>
+                </uascf:Filter.Value>
+              </uascf:Filter>
+            </scg:List>
+          </uascf:CollectionFilterSettings.Filters>
+        </uascf:CollectionFilterSettings>
+      </uasc:FilterCollection.Filter>
+      <uasc:FilterCollection.Result>
+        <OutArgument x:TypeArguments="scg:List(x:String)">
+          <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">myFilteredCollection1</CSharpReference>
+        </OutArgument>
+      </uasc:FilterCollection.Result>
+    </uasc:FilterCollection>
+    <uasc:FilterCollection x:TypeArguments="x:String" DisplayName="Filter collection" sap:VirtualizedContainerService.HintSize="544,324.8" sap2010:WorkflowViewState.IdRef="FilterCollection`1_4">
+      <uasc:FilterCollection.Collection>
+        <InArgument x:TypeArguments="scg:ICollection(x:String)">
+          <CSharpValue x:TypeArguments="scg:ICollection(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">myNewCollection</CSharpValue>
+        </InArgument>
+      </uasc:FilterCollection.Collection>
+      <uasc:FilterCollection.Filter>
+        <uascf:CollectionFilterSettings LogicalOperator="Or">
+          <uascf:CollectionFilterSettings.Filters>
+            <scg:List x:TypeArguments="uascf:Filter" Capacity="4">
+              <uascf:Filter x:TypeArguments="x:String" Operator="{x:Reference __ReferenceID0}" Criteria="CurrentItem" Value="adaugat" />
+              <uascf:Filter x:TypeArguments="x:String" Operator="{x:Reference __ReferenceID0}" Criteria="CurrentItem" Value="Second" />
+            </scg:List>
+          </uascf:CollectionFilterSettings.Filters>
+        </uascf:CollectionFilterSettings>
+      </uasc:FilterCollection.Filter>
+      <uasc:FilterCollection.FilterAction>
+        <InArgument x:TypeArguments="uascf:FilterAction">
+          <CSharpValue x:TypeArguments="uascf:FilterAction" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">UiPath.Activities.System.Collections.Filters.FilterAction.RemoveMatchingElements</CSharpValue>
+        </InArgument>
+      </uasc:FilterCollection.FilterAction>
+      <uasc:FilterCollection.Result>
+        <OutArgument x:TypeArguments="scg:List(x:String)">
+          <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">myFilteredCollection2</CSharpReference>
+        </OutArgument>
+      </uasc:FilterCollection.Result>
+    </uasc:FilterCollection>
+    <Sequence DisplayName="Verify current state of collection" sap:VirtualizedContainerService.HintSize="544,92.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="544,150.4" sap2010:WorkflowViewState.IdRef="LogMessage_16">
+        <ui:LogMessage.Message>
+          <InArgument x:TypeArguments="x:Object">
+            <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">"Collection now contains " + myNewCollection.Count.ToString() + " items: "</CSharpValue>
+          </InArgument>
+        </ui:LogMessage.Message>
+      </ui:LogMessage>
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For each" sap:VirtualizedContainerService.HintSize="544,492" sap2010:WorkflowViewState.IdRef="ForEach`1_9">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="x:String">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="462.4,273.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="400,150.4" sap2010:WorkflowViewState.IdRef="LogMessage_17">
+                <ui:LogMessage.Message>
+                  <InArgument x:TypeArguments="x:Object">
+                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">currentItem</CSharpValue>
+                  </InArgument>
+                </ui:LogMessage.Message>
+              </ui:LogMessage>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEach.Body>
+        <ui:ForEach.Values>
+          <InArgument x:TypeArguments="sc:IEnumerable">
+            <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">myNewCollection</CSharpValue>
+          </InArgument>
+        </ui:ForEach.Values>
+      </ui:ForEach>
+    </Sequence>
+    <Sequence DisplayName="Verify current state of collection" sap:VirtualizedContainerService.HintSize="544,92.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="544,150.4" sap2010:WorkflowViewState.IdRef="LogMessage_7">
+        <ui:LogMessage.Message>
+          <InArgument x:TypeArguments="x:Object">
+            <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">"Collection now contains " + myFilteredCollection1.Count.ToString() + " items: "</CSharpValue>
+          </InArgument>
+        </ui:LogMessage.Message>
+      </ui:LogMessage>
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For each" sap:VirtualizedContainerService.HintSize="544,492" sap2010:WorkflowViewState.IdRef="ForEach`1_4">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="x:String">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="462.4,273.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="400,150.4" sap2010:WorkflowViewState.IdRef="LogMessage_8">
+                <ui:LogMessage.Message>
+                  <InArgument x:TypeArguments="x:Object">
+                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">currentText</CSharpValue>
+                  </InArgument>
+                </ui:LogMessage.Message>
+              </ui:LogMessage>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEach.Body>
+        <ui:ForEach.Values>
+          <InArgument x:TypeArguments="sc:IEnumerable">
+            <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">myFilteredCollection1</CSharpValue>
+          </InArgument>
+        </ui:ForEach.Values>
+      </ui:ForEach>
+    </Sequence>
+    <Sequence DisplayName="Verify current state of collection" sap:VirtualizedContainerService.HintSize="544,92.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="544,150.4" sap2010:WorkflowViewState.IdRef="LogMessage_9">
+        <ui:LogMessage.Message>
+          <InArgument x:TypeArguments="x:Object">
+            <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">"Collection now contains " + myFilteredCollection2.Count.ToString() + " items: "</CSharpValue>
+          </InArgument>
+        </ui:LogMessage.Message>
+      </ui:LogMessage>
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For each" sap:VirtualizedContainerService.HintSize="544,492" sap2010:WorkflowViewState.IdRef="ForEach`1_5">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="x:String">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="462.4,273.6" sap2010:WorkflowViewState.IdRef="Sequence_16">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="400,150.4" sap2010:WorkflowViewState.IdRef="LogMessage_10">
+                <ui:LogMessage.Message>
+                  <InArgument x:TypeArguments="x:Object">
+                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">currentText</CSharpValue>
+                  </InArgument>
+                </ui:LogMessage.Message>
+              </ui:LogMessage>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEach.Body>
+        <ui:ForEach.Values>
+          <InArgument x:TypeArguments="sc:IEnumerable">
+            <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">myFilteredCollection2</CSharpValue>
+          </InArgument>
+        </ui:ForEach.Values>
+      </ui:ForEach>
+    </Sequence>
+    <uasc:MergeCollections x:TypeArguments="x:String" DisplayName="Merge collections" sap:VirtualizedContainerService.HintSize="544,273.6" sap2010:WorkflowViewState.IdRef="MergeCollections`1_2">
+      <uasc:MergeCollections.Collection>
+        <InArgument x:TypeArguments="scg:ICollection(x:String)">
+          <CSharpValue x:TypeArguments="scg:ICollection(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">myFilteredCollection1</CSharpValue>
+        </InArgument>
+      </uasc:MergeCollections.Collection>
+      <uasc:MergeCollections.Result>
+        <OutArgument x:TypeArguments="scg:List(x:String)">
+          <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">myMergedCollection</CSharpReference>
+        </OutArgument>
+      </uasc:MergeCollections.Result>
+      <uasc:MergeCollections.SecondCollection>
+        <InArgument x:TypeArguments="scg:ICollection(x:String)">
+          <CSharpValue x:TypeArguments="scg:ICollection(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">myFilteredCollection2</CSharpValue>
+        </InArgument>
+      </uasc:MergeCollections.SecondCollection>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uasc:MergeCollections>
+    <Sequence DisplayName="Verify current state of collection" sap:VirtualizedContainerService.HintSize="544,92.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="544,150.4" sap2010:WorkflowViewState.IdRef="LogMessage_11">
+        <ui:LogMessage.Message>
+          <InArgument x:TypeArguments="x:Object">
+            <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">"Collection now contains " + myMergedCollection.Count.ToString() + " items: "</CSharpValue>
+          </InArgument>
+        </ui:LogMessage.Message>
+      </ui:LogMessage>
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For each" sap:VirtualizedContainerService.HintSize="544,492" sap2010:WorkflowViewState.IdRef="ForEach`1_6">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="x:String">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="462.4,273.6" sap2010:WorkflowViewState.IdRef="Sequence_18">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="400,150.4" sap2010:WorkflowViewState.IdRef="LogMessage_12">
+                <ui:LogMessage.Message>
+                  <InArgument x:TypeArguments="x:Object">
+                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">currentText</CSharpValue>
+                  </InArgument>
+                </ui:LogMessage.Message>
+              </ui:LogMessage>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEach.Body>
+        <ui:ForEach.Values>
+          <InArgument x:TypeArguments="sc:IEnumerable">
+            <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">myMergedCollection</CSharpValue>
+          </InArgument>
+        </ui:ForEach.Values>
+      </ui:ForEach>
+    </Sequence>
+    <ui:CollectionToDataTable x:TypeArguments="x:String" DisplayName="Collection to data table" sap:VirtualizedContainerService.HintSize="544,133.6" sap2010:WorkflowViewState.IdRef="CollectionToDataTable`1_2">
+      <ui:CollectionToDataTable.Collection>
+        <InArgument x:TypeArguments="scg:ICollection(x:String)">
+          <CSharpValue x:TypeArguments="scg:ICollection(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">myNewCollection</CSharpValue>
+        </InArgument>
+      </ui:CollectionToDataTable.Collection>
+      <ui:CollectionToDataTable.DataTable>
+        <OutArgument x:TypeArguments="sd:DataTable">
+          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">myDt</CSharpReference>
+        </OutArgument>
+      </ui:CollectionToDataTable.DataTable>
+    </ui:CollectionToDataTable>
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="544,566.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="462.4,383.2" sap2010:WorkflowViewState.IdRef="Sequence_20">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="400,69.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">
+                  <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">counter</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">
+                  <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">counter+1</CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="400,150.4" sap2010:WorkflowViewState.IdRef="LogMessage_13">
+              <ui:LogMessage.Level>
+                <InArgument x:TypeArguments="ui:LogLevel">
+                  <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_51">UiPath.Core.Activities.LogLevel.Warn</CSharpValue>
+                </InArgument>
+              </ui:LogMessage.Level>
+              <ui:LogMessage.Message>
+                <InArgument x:TypeArguments="x:Object">
+                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">"Row " + counter.ToString() + ": " + CurrentRow[0]</CSharpValue>
+                </InArgument>
+              </ui:LogMessage.Message>
+            </ui:LogMessage>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+      <ui:ForEachRow.DataTable>
+        <InArgument x:TypeArguments="sd:DataTable">
+          <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_47">myDt</CSharpValue>
+        </InArgument>
+      </ui:ForEachRow.DataTable>
+    </ui:ForEachRow>
+    <uasc:RemoveFromCollection x:TypeArguments="x:String" Index="{x:Null}" Item="{x:Null}" DisplayName="Remove from collection" sap:VirtualizedContainerService.HintSize="544,210.4" sap2010:WorkflowViewState.IdRef="RemoveFromCollection`1_7" RemoveAllElements="True">
+      <uasc:RemoveFromCollection.Collection>
+        <InArgument x:TypeArguments="scg:ICollection(x:String)">
+          <CSharpValue x:TypeArguments="scg:ICollection(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_52">myFilteredCollection2</CSharpValue>
+        </InArgument>
+      </uasc:RemoveFromCollection.Collection>
+      <uasc:RemoveFromCollection.Result>
+        <OutArgument x:TypeArguments="scg:List(x:String)">
+          <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">myFilteredCollection2</CSharpReference>
+        </OutArgument>
+      </uasc:RemoveFromCollection.Result>
+    </uasc:RemoveFromCollection>
+    <If sap:VirtualizedContainerService.HintSize="544,502.4" sap2010:WorkflowViewState.IdRef="If_3">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">! myFilteredCollection2.Count.Equals(0)</CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="462.4,221.6" sap2010:WorkflowViewState.IdRef="Sequence_21">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Throw sap:VirtualizedContainerService.HintSize="400,98.4" sap2010:WorkflowViewState.IdRef="Throw_3">
+            <InArgument x:TypeArguments="s:Exception">
+              <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">new Exception("The collection is not empty!!")</CSharpValue>
+            </InArgument>
+          </Throw>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="400,115.2" sap2010:WorkflowViewState.IdRef="Sequence_22">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>
