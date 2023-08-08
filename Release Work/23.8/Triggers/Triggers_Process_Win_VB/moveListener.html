@@ -1,0 +1,92 @@
+<!-- form
+{
+  "Metadata": {
+    "Id": "87314330-b8c1-4b87-ac18-446448f4ec90",
+    "Kind": "Html"
+  }
+}
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo page</title>
+    <!-- //NOSONAR --><script src="https://uipath.studio.internal.host/dist/jquery.min.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var uiPathApi = {
+            // called by the forms engine
+            getValue: function (elementId) {
+                if (elementId == 'getArray') {
+                    return [1, 2, 3];
+                }
+
+                return $("#" + elementId).val().toString();
+            },
+
+            setValue: function (elementId, value) {
+                // execute this to throw in case the element does not exist
+                $("#" + elementId).val().toString();
+                $("#" + elementId).val(value);
+            },
+
+            // Call this to trigger a "Form Message" event
+            // This function is set by the forms engine after the page loads,
+            // but declaring it here as empty helps with code autocompletion
+            sendMessage: function (id, value) { },
+
+            // Called by the forms engine when the api is ready to be used
+            // This method is called only if it set here.
+            initialized: function () {
+                uiPathApi.target.addEventListener("visibilityChanged", (e) => {
+                    console.log("target visibility changed triggered: " + e.detail);
+                    window.targetVisibilityChangedArg = e.detail;
+                    window.targetVisibilityChangedCount++;
+                });
+
+                uiPathApi.target.addEventListener("locationChanged", (e) => {
+                    window.targetLocationChangedArg = e.detail.left + " " + e.detail.top;
+                    window.targetLocationChangedCount++;
+                    console.log("target location changed triggered: " + window.targetLocationChangedArg);
+                });
+
+                uiPathApi.target.addEventListener("sizeChanged", (e) => {
+                    window.targetSizeChangedArg = e.detail.width + " " + e.detail.height;
+                    window.targetSizeChangedCount++;
+                    console.log("target size changed triggered: " + window.targetSizeChangedArg);
+                });
+
+                uiPathApi.form.addEventListener("visibilityChanged", (e) => {
+                    console.log("form visibility changed triggered: " + e.detail);
+                    window.formVisibilityChangedArg = e.detail;
+                    window.formVisibilityChangedCount++;
+                });
+
+                uiPathApi.form.addEventListener("locationChanged", (e) => {
+                    window.formLocationChangedArg = e.detail.left + " " + e.detail.top;
+                    window.formLocationChangedCount++;
+                    console.log("form location changed triggered: " + window.formLocationChangedArg);
+                });
+
+            }
+        };
+
+        window.targetVisibilityChangedArg = '';
+        window.targetSizeChangedArg = '';
+        window.targetLocationChangedArg = '';
+        window.formLocationChangedArg = '';
+        window.formVisibilityChangedArg = '';
+
+        window.targetVisibilityChangedCount = 0;
+        window.targetSizeChangedCount = 0;
+        window.targetLocationChangedCount = 0;
+        window.formLocationChangedCount = 0;
+        window.formVisibilityChangedCount = 0;
+    </script>
+    <textarea>Content</textarea>
+</body>
+</html>
