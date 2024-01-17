@@ -1,0 +1,508 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Zoom_activity" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:uzia="clr-namespace:UiPath.Zoom.IntegrationService.Activities;assembly=UiPath.Zoom.IntegrationService.Activities" xmlns:uzic="clr-namespace:UiPath.Zoom.IntegrationService.Client;assembly=UiPath.Zoom.IntegrationService" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_meetingId" Type="OutArgument(s:Nullable(x:Int64))" />
+    <x:Property Name="in_test" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1702,1014</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Zoom_activity_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Entity</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.Descriptor</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Enums</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Telemetry</x:String>
+      <x:String>UiPath.BAF.Infrastructure</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Connection</x:String>
+      <x:String>UiPath.Zoom.IntegrationService.Activities</x:String>
+      <x:String>UiPath.IntegrationCore.Activities</x:String>
+      <x:String>UiPath.BAF.Activities</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.BAF.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.Jira.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Zoom.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Zoom_activity" sap:VirtualizedContainerService.HintSize="450,949.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uzia:ScheduleOneTimeMeeting Language="{x:Null}" ActivityInstanceId="71fd3d8d-be04-4f41-9b4a-e94e0fd192e2" BindingsVersion="2.1" BusinessEntityName="Meetings" ConfiguredBusinessEntity="me::meetings" ConnectionId="55a61517-66a1-443f-bd31-7d9be941b242" Connector="uipath-zoom-zoom" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Schedule One Time Meeting" sap:VirtualizedContainerService.HintSize="388,448.6666666666667" sap2010:WorkflowViewState.IdRef="ScheduleOneTimeMeeting_2" IsAdditionalPropertiesActive="True">
+      <uzia:ScheduleOneTimeMeeting.BusinessEntity>
+        <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID0}" Name="me::meetings">
+          <uibi:BusinessEntity.AllFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="84">
+              <uiisi:OperationEntityField x:TypeArguments="uzic:Me_meetings" ArgumentDirection="In" ArgumentType="uzic:Me_meetings" DataType="Me_meetings" Description="The object body" DisplayName="Body" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="scg:IDictionary(x:String, x:Object)" Description="{x:Null}" ArgumentDirection="In" ArgumentType="scg:IDictionary(x:String, x:Object)" ContainingType="Me_meetings" DataType="IDictionary" DisplayName="AdditionalProperties" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.AdditionalProperties" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" ContainingType="Me_meetingsSettings" DataType="String" Description="The type of approval required for invited meeting registrants" DisplayName="approval type" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Approval_type" Order="1" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.EnumValues>
+                  <scg:List x:TypeArguments="x:String" Capacity="3">
+                    <x:String>Automatically approve registration</x:String>
+                    <x:String>Manually approve registration</x:String>
+                    <x:String>No registration required</x:String>
+                  </scg:List>
+                </uiisi:OperationEntityField.EnumValues>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="uzic:Me_meetingsSettingsApproved_or_denied_countries_or_regions" Description="{x:Null}" ArgumentDirection="In" ArgumentType="uzic:Me_meetingsSettingsApproved_or_denied_countries_or_regions" ContainingType="Me_meetingsSettings" DataType="Me_meetingsSettingsApproved_or_denied_countries_or_regions" DisplayName="Approved_or_denied_countries_or_regions" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Approved_or_denied_countries_or_regions" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="uzic:Me_meetingsSettingsAuthentication_exception" Description="{x:Null}" ArgumentDirection="In" ArgumentType="uzic:Me_meetingsSettingsAuthentication_exception" ContainingType="Me_meetingsSettings" DataType="Me_meetingsSettingsAuthentication_exception" DisplayName="Authentication_exception" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Authentication_exception" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="uzic:Me_meetingsSettingsBreakout_room" Description="{x:Null}" ArgumentDirection="In" ArgumentType="uzic:Me_meetingsSettingsBreakout_room" ContainingType="Me_meetingsSettings" DataType="Me_meetingsSettingsBreakout_room" DisplayName="Breakout_room" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Breakout_room" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="uzic:Me_meetingsSettingsCustom_keys" Description="{x:Null}" ArgumentDirection="In" ArgumentType="uzic:Me_meetingsSettingsCustom_keys" ContainingType="Me_meetingsSettings" DataType="Me_meetingsSettingsCustom_keys" DisplayName="Custom_keys" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Custom_keys" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="uzic:Me_meetingsSettingsGlobal_dial_in_numbers" Description="{x:Null}" ArgumentDirection="In" ArgumentType="uzic:Me_meetingsSettingsGlobal_dial_in_numbers" ContainingType="Me_meetingsSettings" DataType="Me_meetingsSettingsGlobal_dial_in_numbers" DisplayName="Global_dial_in_numbers" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Global_dial_in_numbers" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="uzic:Me_meetingsSettingsLanguage_interpretationInterpreters" Description="{x:Null}" ArgumentDirection="In" ArgumentType="uzic:Me_meetingsSettingsLanguage_interpretationInterpreters" ContainingType="Me_meetingsSettingsLanguage_interpretation" DataType="Me_meetingsSettingsLanguage_interpretationInterpreters" DisplayName="Interpreters" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Language_interpretation.Interpreters" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="uzic:Me_meetingsSettingsLanguage_interpretation" Description="{x:Null}" ArgumentDirection="In" ArgumentType="uzic:Me_meetingsSettingsLanguage_interpretation" ContainingType="Me_meetingsSettings" DataType="Me_meetingsSettingsLanguage_interpretation" DisplayName="Language_interpretation" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Language_interpretation" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="uzic:Me_meetingsSettingsMeeting_invitees" Description="{x:Null}" ArgumentDirection="In" ArgumentType="uzic:Me_meetingsSettingsMeeting_invitees" ContainingType="Me_meetingsSettings" DataType="Me_meetingsSettingsMeeting_invitees" DisplayName="Meeting_invitees" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Meeting_invitees" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetings" DataType="Boolean" Description="The Pre schedule" DisplayName="Pre schedule" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Pre_schedule" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" ContainingType="Me_meetingsRecurrence" DataType="String" Description="The Recurrence end date time" DisplayName="Recurrence end date time" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Recurrence.End_date_time" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int64" ArgumentDirection="In" ArgumentType="x:Int64" ContainingType="Me_meetingsRecurrence" DataType="Int64" Description="The Recurrence end times" DisplayName="Recurrence end times" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Recurrence.End_times" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int64" ArgumentDirection="In" ArgumentType="x:Int64" ContainingType="Me_meetingsRecurrence" DataType="Int64" Description="The Recurrence monthly day" DisplayName="Recurrence monthly day" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Recurrence.Monthly_day" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int64" ArgumentDirection="In" ArgumentType="x:Int64" ContainingType="Me_meetingsRecurrence" DataType="Int64" Description="The Recurrence monthly week day" DisplayName="Recurrence monthly week day" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Recurrence.Monthly_week_day" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int64" ArgumentDirection="In" ArgumentType="x:Int64" ContainingType="Me_meetingsRecurrence" DataType="Int64" Description="The Recurrence monthly week" DisplayName="Recurrence monthly week" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Recurrence.Monthly_week" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int64" ArgumentDirection="In" ArgumentType="x:Int64" ContainingType="Me_meetingsRecurrence" DataType="Int64" Description="The Recurrence repeat interval" DisplayName="Recurrence repeat interval" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Recurrence.Repeat_interval" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int64" ArgumentDirection="In" ArgumentType="x:Int64" ContainingType="Me_meetingsRecurrence" DataType="Int64" Description="The Recurrence type" DisplayName="Recurrence type" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Recurrence.Type" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" ContainingType="Me_meetingsRecurrence" DataType="String" Description="The Recurrence weekly days" DisplayName="Recurrence weekly days" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Recurrence.Weekly_days" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="uzic:Me_meetingsRecurrence" Description="{x:Null}" ArgumentDirection="In" ArgumentType="uzic:Me_meetingsRecurrence" ContainingType="Me_meetings" DataType="Me_meetingsRecurrence" DisplayName="Recurrence" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Recurrence" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="uzic:Me_meetingsSettingsBreakout_roomRooms" Description="{x:Null}" ArgumentDirection="In" ArgumentType="uzic:Me_meetingsSettingsBreakout_roomRooms" ContainingType="Me_meetingsSettingsBreakout_room" DataType="Me_meetingsSettingsBreakout_roomRooms" DisplayName="Rooms" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Breakout_room.Rooms" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" ContainingType="Me_meetings" DataType="String" Description="The Schedule for" DisplayName="Schedule for" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Schedule_for" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="scg:ICollection(x:String)" ArgumentDirection="In" ArgumentType="scg:ICollection(x:String)" ContainingType="Me_meetingsSettings" DataType="ICollection" Description="The Settings additional data center regions" DisplayName="Settings additional data center regions" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Additional_data_center_regions" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettings" DataType="Boolean" Description="The Settings allow multiple devices" DisplayName="Settings allow multiple devices" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Allow_multiple_devices" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettings" DataType="Boolean" Description="The Settings alternative host update polls" DisplayName="Settings alternative host update polls" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Alternative_host_update_polls" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettings" DataType="Boolean" Description="The Settings alternative hosts email notification" DisplayName="Settings alternative hosts email notification" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Alternative_hosts_email_notification" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" ContainingType="Me_meetingsSettings" DataType="String" Description="The Settings alternative hosts" DisplayName="Settings alternative hosts" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Alternative_hosts" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="scg:ICollection(x:String)" ArgumentDirection="In" ArgumentType="scg:ICollection(x:String)" ContainingType="Me_meetingsSettingsApproved_or_denied_countries_or_regions" DataType="ICollection" Description="The Settings approved or denied countries or regions approved list" DisplayName="Settings approved or denied countries or regions approved list" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Approved_or_denied_countries_or_regions.Approved_list" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="scg:ICollection(x:String)" ArgumentDirection="In" ArgumentType="scg:ICollection(x:String)" ContainingType="Me_meetingsSettingsApproved_or_denied_countries_or_regions" DataType="ICollection" Description="The Settings approved or denied countries or regions denied list" DisplayName="Settings approved or denied countries or regions denied list" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Approved_or_denied_countries_or_regions.Denied_list" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettingsApproved_or_denied_countries_or_regions" DataType="Boolean" Description="The Settings approved or denied countries or regions enable" DisplayName="Settings approved or denied countries or regions enable" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Approved_or_denied_countries_or_regions.Enable" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" ContainingType="Me_meetingsSettingsApproved_or_denied_countries_or_regions" DataType="String" Description="The Settings approved or denied countries or regions method" DisplayName="Settings approved or denied countries or regions method" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Approved_or_denied_countries_or_regions.Method" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" ContainingType="Me_meetingsSettings" DataType="String" Description="The Settings audio" DisplayName="Settings audio" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Audio" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" ContainingType="Me_meetingsSettings" DataType="String" Description="The Settings authentication domains" DisplayName="Settings authentication domains" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Authentication_domains" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" ContainingType="Me_meetingsSettings" DataType="String" Description="The Settings authentication name" DisplayName="Settings authentication name" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Authentication_name" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" ContainingType="Me_meetingsSettings" DataType="String" Description="The Settings authentication option" DisplayName="Settings authentication option" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Authentication_option" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" ContainingType="Me_meetingsSettings" DataType="String" Description="The Settings auto recording" DisplayName="Settings auto recording" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Auto_recording" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettingsBreakout_room" DataType="Boolean" Description="The Settings breakout room enable" DisplayName="Settings breakout room enable" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Breakout_room.Enable" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int64" ArgumentDirection="In" ArgumentType="x:Int64" ContainingType="Me_meetingsSettings" DataType="Int64" Description="The Settings calendar type" DisplayName="Settings calendar type" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Calendar_type" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettings" DataType="Boolean" Description="The Settings close registration" DisplayName="Settings close registration" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Close_registration" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" ContainingType="Me_meetingsSettings" DataType="String" Description="The Settings contact email" DisplayName="Settings contact email" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Contact_email" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" ContainingType="Me_meetingsSettings" DataType="String" Description="The Settings contact name" DisplayName="Settings contact name" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Contact_name" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettings" DataType="Boolean" Description="The Settings email notification" DisplayName="Settings email notification" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Email_notification" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" ContainingType="Me_meetingsSettings" DataType="String" Description="The Settings encryption type" DisplayName="Settings encryption type" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Encryption_type" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettings" DataType="Boolean" Description="The Settings focus mode" DisplayName="Settings focus mode" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Focus_mode" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="scg:ICollection(x:String)" ArgumentDirection="In" ArgumentType="scg:ICollection(x:String)" ContainingType="Me_meetingsSettings" DataType="ICollection" Description="The Settings global dial in countries" DisplayName="Settings global dial in countries" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Global_dial_in_countries" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettings" DataType="Boolean" Description="The Settings host save video order" DisplayName="Settings host save video order" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Host_save_video_order" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettings" DataType="Boolean" Description="The Settings host video" DisplayName="Settings host video" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Host_video" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int64" ArgumentDirection="In" ArgumentType="x:Int64" ContainingType="Me_meetingsSettings" DataType="Int64" Description="The Settings jbh time" DisplayName="Settings jbh time" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Jbh_time" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettings" DataType="Boolean" Description="The Settings join before host" DisplayName="Settings join before host" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Join_before_host" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettingsLanguage_interpretation" DataType="Boolean" Description="The Settings language interpretation enable" DisplayName="Settings language interpretation enable" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Language_interpretation.Enable" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettings" DataType="Boolean" Description="The Settings meeting authentication" DisplayName="Settings meeting authentication" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Meeting_authentication" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettings" DataType="Boolean" Description="The Settings mute upon entry" DisplayName="Settings mute upon entry" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Mute_upon_entry" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettings" DataType="Boolean" Description="The Settings participant video" DisplayName="Settings participant video" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Participant_video" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettings" DataType="Boolean" Description="The Settings private meeting" DisplayName="Settings private meeting" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Private_meeting" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettings" DataType="Boolean" Description="The Settings registrants confirmation email" DisplayName="Settings registrants confirmation email" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Registrants_confirmation_email" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettings" DataType="Boolean" Description="The Settings registrants email notification" DisplayName="Settings registrants email notification" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Registrants_email_notification" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int64" ArgumentDirection="In" ArgumentType="x:Int64" ContainingType="Me_meetingsSettings" DataType="Int64" Description="The Settings registration type" DisplayName="Settings registration type" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Registration_type" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettings" DataType="Boolean" Description="The Settings show share button" DisplayName="Settings show share button" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Show_share_button" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettings" DataType="Boolean" Description="The Settings use pmi" DisplayName="Settings use pmi" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Use_pmi" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int64" ArgumentDirection="In" ArgumentType="x:Int64" ContainingType="Me_meetingsSettingsWaiting_room_options" DataType="Int64" Description="The Settings waiting room options admit type" DisplayName="Settings waiting room options admit type" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Waiting_room_options.Admit_type" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int64" ArgumentDirection="In" ArgumentType="x:Int64" ContainingType="Me_meetingsSettingsWaiting_room_options" DataType="Int64" Description="The Settings waiting room options auto admit" DisplayName="Settings waiting room options auto admit" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Waiting_room_options.Auto_admit" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettingsWaiting_room_options" DataType="Boolean" Description="The Settings waiting room options enable" DisplayName="Settings waiting room options enable" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Waiting_room_options.Enable" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int64" ArgumentDirection="In" ArgumentType="x:Int64" ContainingType="Me_meetingsSettingsWaiting_room_options" DataType="Int64" Description="The Settings waiting room options internal user auto admit" DisplayName="Settings waiting room options internal user auto admit" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Waiting_room_options.Internal_user_auto_admit" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettings" DataType="Boolean" Description="The Settings waiting room" DisplayName="Settings waiting room" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Waiting_room" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" ContainingType="Me_meetingsSettings" DataType="Boolean" Description="The Settings watermark" DisplayName="Settings watermark" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Watermark" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="uzic:Me_meetingsSettings" Description="{x:Null}" ArgumentDirection="In" ArgumentType="uzic:Me_meetingsSettings" ContainingType="Me_meetings" DataType="Me_meetingsSettings" DisplayName="Settings" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" ContainingType="Me_meetings" DataType="String" Description="The Template ID" DisplayName="Template ID" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Template_id" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="uzic:Me_meetingsTracking_fields" Description="{x:Null}" ArgumentDirection="In" ArgumentType="uzic:Me_meetingsTracking_fields" ContainingType="Me_meetings" DataType="Me_meetingsTracking_fields" DisplayName="Tracking_fields" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Tracking_fields" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int64" ArgumentDirection="In" ArgumentType="x:Int64" ContainingType="Me_meetings" DataType="Int64" Description="The Type" DisplayName="Type" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Type" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="uzic:Me_meetingsSettingsWaiting_room_options" Description="{x:Null}" ArgumentDirection="In" ArgumentType="uzic:Me_meetingsSettingsWaiting_room_options" ContainingType="Me_meetingsSettings" DataType="Me_meetingsSettingsWaiting_room_options" DisplayName="Waiting_room_options" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.Settings.Waiting_room_options" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="uzic:Me_meetings" ArgumentDirection="Out" ArgumentType="uzic:Me_meetings" DataType="Me_meetings" Description="The Meetings object returned." DisplayName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPermanentlyHidden">True</x:Boolean>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID5" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The meeting’s topic" DisplayName="Topic" FormDataType="ExpressionTextBox" InArgumentValue="test" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.topic" Order="1" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="x:String">test</InArgument>
+                </uiisi:OperationEntityField.ArgumentValue>
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+                <uiisi:OperationEntityField.Value>
+                  <Literal x:TypeArguments="x:String">test</Literal>
+                </uiisi:OperationEntityField.Value>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="s:Nullable(s:DateTimeOffset)" x:Name="__ReferenceID6" ArgumentDirection="In" ArgumentType="s:Nullable(s:DateTimeOffset)" DataType="DateTimeOffset" Description="The meeting's start time" DisplayName="When" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.start_time" Order="1" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Select the time zone for your meeting start time" DisplayName="Time zone" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.timezone" Order="1" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.EnumValues>
+                  <scg:List x:TypeArguments="x:String" Capacity="135">
+                    <x:String>Pacific/Midway</x:String>
+                    <x:String>Pacific/Pago_Pago</x:String>
+                    <x:String>Pacific/Honolulu</x:String>
+                    <x:String>America/Anchorage</x:String>
+                    <x:String>America/Vancouver</x:String>
+                    <x:String>America/Los_Angeles</x:String>
+                    <x:String>America/Tijuana</x:String>
+                    <x:String>America/Edmonton</x:String>
+                    <x:String>America/Denver</x:String>
+                    <x:String>America/Phoenix</x:String>
+                    <x:String>America/Mazatlan</x:String>
+                    <x:String>America/Winnipeg</x:String>
+                    <x:String>America/Regina</x:String>
+                    <x:String>America/Chicago</x:String>
+                    <x:String>America/Mexico_City</x:String>
+                    <x:String>America/Guatemala</x:String>
+                    <x:String>America/El_Salvador</x:String>
+                    <x:String>America/Managua</x:String>
+                    <x:String>America/Costa_Rica</x:String>
+                    <x:String>America/Montreal</x:String>
+                    <x:String>America/New_York</x:String>
+                    <x:String>America/Indianapolis</x:String>
+                    <x:String>America/Panama</x:String>
+                    <x:String>America/Bogota</x:String>
+                    <x:String>America/Lima</x:String>
+                    <x:String>America/Halifax</x:String>
+                    <x:String>America/Puerto_Rico</x:String>
+                    <x:String>America/Caracas</x:String>
+                    <x:String>America/Santiago</x:String>
+                    <x:String>America/St_Johns</x:String>
+                    <x:String>America/Montevideo</x:String>
+                    <x:String>America/Araguaina</x:String>
+                    <x:String>America/Argentina/Buenos_Aires</x:String>
+                    <x:String>America/Godthab</x:String>
+                    <x:String>America/Sao_Paulo</x:String>
+                    <x:String>Atlantic/Azores</x:String>
+                    <x:String>Canada/Atlantic</x:String>
+                    <x:String>Atlantic/Cape_Verde</x:String>
+                    <x:String>UTC</x:String>
+                    <x:String>Etc/Greenwich</x:String>
+                    <x:String>Europe/Belgrade</x:String>
+                    <x:String>CET</x:String>
+                    <x:String>Atlantic/Reykjavik</x:String>
+                    <x:String>Europe/Dublin</x:String>
+                    <x:String>Europe/London</x:String>
+                    <x:String>Europe/Lisbon</x:String>
+                    <x:String>Africa/Casablanca</x:String>
+                    <x:String>Africa/Nouakchott</x:String>
+                    <x:String>Europe/Oslo</x:String>
+                    <x:String>Europe/Copenhagen</x:String>
+                    <x:String>Europe/Brussels</x:String>
+                    <x:String>Europe/Berlin</x:String>
+                    <x:String>Europe/Helsinki</x:String>
+                    <x:String>Europe/Amsterdam</x:String>
+                    <x:String>Europe/Rome</x:String>
+                    <x:String>Europe/Stockholm</x:String>
+                    <x:String>Europe/Vienna</x:String>
+                    <x:String>Europe/Luxembourg</x:String>
+                    <x:String>Europe/Paris</x:String>
+                    <x:String>Europe/Zurich</x:String>
+                    <x:String>Europe/Madrid</x:String>
+                    <x:String>Africa/Bangui</x:String>
+                    <x:String>Africa/Algiers</x:String>
+                    <x:String>Africa/Tunis</x:String>
+                    <x:String>Africa/Harare</x:String>
+                    <x:String>Africa/Nairobi</x:String>
+                    <x:String>Europe/Warsaw</x:String>
+                    <x:String>Europe/Prague</x:String>
+                    <x:String>Europe/Budapest</x:String>
+                    <x:String>Europe/Sofia</x:String>
+                    <x:String>Europe/Istanbul</x:String>
+                    <x:String>Europe/Athens</x:String>
+                    <x:String>Europe/Bucharest</x:String>
+                    <x:String>Asia/Nicosia</x:String>
+                    <x:String>Asia/Beirut</x:String>
+                    <x:String>Asia/Damascus</x:String>
+                    <x:String>Asia/Jerusalem</x:String>
+                    <x:String>Asia/Amman</x:String>
+                    <x:String>Africa/Tripoli</x:String>
+                    <x:String>Africa/Cairo</x:String>
+                    <x:String>Africa/Johannesburg</x:String>
+                    <x:String>Europe/Moscow</x:String>
+                    <x:String>Asia/Baghdad</x:String>
+                    <x:String>Asia/Kuwait</x:String>
+                    <x:String>Asia/Riyadh</x:String>
+                    <x:String>Asia/Bahrain</x:String>
+                    <x:String>Asia/Qatar</x:String>
+                    <x:String>Asia/Aden</x:String>
+                    <x:String>Asia/Tehran</x:String>
+                    <x:String>Africa/Khartoum</x:String>
+                    <x:String>Africa/Djibouti</x:String>
+                    <x:String>Africa/Mogadishu</x:String>
+                    <x:String>Asia/Dubai</x:String>
+                    <x:String>Asia/Muscat</x:String>
+                    <x:String>Asia/Baku</x:String>
+                    <x:String>Asia/Kabul</x:String>
+                    <x:String>Asia/Yekaterinburg</x:String>
+                    <x:String>Asia/Tashkent</x:String>
+                    <x:String>Asia/Calcutta</x:String>
+                    <x:String>Asia/Kathmandu</x:String>
+                    <x:String>Asia/Novosibirsk</x:String>
+                    <x:String>Asia/Almaty</x:String>
+                    <x:String>Asia/Dacca</x:String>
+                    <x:String>Asia/Krasnoyarsk</x:String>
+                    <x:String>Asia/Dhaka</x:String>
+                    <x:String>Asia/Bangkok</x:String>
+                    <x:String>Asia/Saigon</x:String>
+                    <x:String>Asia/Jakarta</x:String>
+                    <x:String>Asia/Irkutsk</x:String>
+                    <x:String>Asia/Shanghai</x:String>
+                    <x:String>Asia/Hong_Kong</x:String>
+                    <x:String>Asia/Taipei</x:String>
+                    <x:String>Asia/Kuala_Lumpur</x:String>
+                    <x:String>Asia/Singapore</x:String>
+                    <x:String>Australia/Perth</x:String>
+                    <x:String>Asia/Yakutsk</x:String>
+                    <x:String>Asia/Seoul</x:String>
+                    <x:String>Asia/Tokyo</x:String>
+                    <x:String>Australia/Darwin</x:String>
+                    <x:String>Australia/Adelaide</x:String>
+                    <x:String>Asia/Vladivostok</x:String>
+                    <x:String>Pacific/Port_Moresby</x:String>
+                    <x:String>Australia/Brisbane</x:String>
+                    <x:String>Australia/Sydney</x:String>
+                    <x:String>Australia/Hobart</x:String>
+                    <x:String>Asia/Magadan</x:String>
+                    <x:String>SST</x:String>
+                    <x:String>Pacific/Noumea</x:String>
+                    <x:String>Asia/Kamchatka</x:String>
+                    <x:String>Pacific/Fiji</x:String>
+                    <x:String>Pacific/Auckland</x:String>
+                    <x:String>Asia/Kolkata</x:String>
+                    <x:String>Europe/Kiev</x:String>
+                    <x:String>America/Tegucigalpa</x:String>
+                    <x:String>Pacific/Apia</x:String>
+                  </scg:List>
+                </uiisi:OperationEntityField.EnumValues>
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="s:Nullable(x:Int64)" InArgumentValue="{x:Reference __ReferenceID2}" Value="{x:Reference __ReferenceID1}" x:Name="__ReferenceID7" ArgumentDirection="In" ArgumentType="s:Nullable(x:Int64)" DataType="Int64" DefaultValue="60" Description="The meeting's scheduled duration, in minutes" DisplayName="Duration" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.duration" Order="1" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="s:Nullable(x:Int64)" x:Name="__ReferenceID2">
+                    <Literal x:TypeArguments="s:Nullable(x:Int64)" x:Name="__ReferenceID1" Value="60" />
+                  </InArgument>
+                </uiisi:OperationEntityField.ArgumentValue>
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID8" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The meeting’s agenda" DisplayName="Agenda" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.agenda" Order="1" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="s:Nullable(x:Boolean)" InArgumentValue="{x:Reference __ReferenceID4}" Value="{x:Reference __ReferenceID3}" x:Name="__ReferenceID9" ArgumentDirection="In" ArgumentType="s:Nullable(x:Boolean)" DataType="Boolean" DefaultValue="false" Description="Whether to generate a default password using the user's settings. This value defaults to false" DisplayName="Use default password" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.default_password" Order="1" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="s:Nullable(x:Boolean)" x:Name="__ReferenceID4">
+                    <Literal x:TypeArguments="s:Nullable(x:Boolean)" x:Name="__ReferenceID3" Value="False" />
+                  </InArgument>
+                </uiisi:OperationEntityField.ArgumentValue>
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID10" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The password required to join the meeting. By default, a password can only have a maximum length of 10 characters and only contain alphanumeric characters and the @, -, _, and * characters." DisplayName="Password" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.password" Order="1" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="s:Nullable(x:Int64)" x:Name="__ReferenceID11" ArgumentDirection="Out" ArgumentType="s:Nullable(x:Int64)" DataType="Int64" Description="The Meeting ID" DisplayName="Meeting ID" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.id" OutArgumentValue="[out_meetingId]" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.ArgumentValue>
+                  <OutArgument x:TypeArguments="s:Nullable(x:Int64)">[out_meetingId]</OutArgument>
+                </uiisi:OperationEntityField.ArgumentValue>
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+                <uiisi:OperationEntityField.Value>
+                  <VisualBasicReference x:TypeArguments="s:Nullable(x:Int64)">[out_meetingId]</VisualBasicReference>
+                </uiisi:OperationEntityField.Value>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID12" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="The password required to join the meeting. By default, a password can only have a maximum length of 10 characters and only contain alphanumeric characters and the @, -, _, and * characters." DisplayName="Password" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.password" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID13" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="The Encrypted password" DisplayName="Encrypted password" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.encrypted_password" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID14" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="The URL to start the meeting" DisplayName="Start URL" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.start_url" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID15" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="The URL to join the meeting" DisplayName="Join URL" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.join_url" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+            </scg:List>
+          </uibi:BusinessEntity.AllFields>
+          <uibi:BusinessEntity.EntityMetadata>
+            <uibi:EntityMetadata DisplayName="Meetings" EligibleOperations="1" IsCustomEntity="False" Name="me::meetings">
+              <uibi:EntityMetadata.Metadata>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+                  <x:String x:Key="Object">me::meetings</x:String>
+                  <x:String x:Key="Client">UiPath.Zoom.IntegrationService.Client.Me__meetingsAPIClient</x:String>
+                  <x:String x:Key="Operation">CreateMeMeeting</x:String>
+                  <x:String x:Key="Path">/me/meetings</x:String>
+                </scg:Dictionary>
+              </uibi:EntityMetadata.Metadata>
+            </uibi:EntityMetadata>
+          </uibi:BusinessEntity.EntityMetadata>
+          <uibi:BusinessEntity.SelectedFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="16">
+              <x:Reference>__ReferenceID5</x:Reference>
+              <x:Reference>__ReferenceID6</x:Reference>
+              <x:Reference>__ReferenceID7</x:Reference>
+              <x:Reference>__ReferenceID8</x:Reference>
+              <x:Reference>__ReferenceID9</x:Reference>
+              <x:Reference>__ReferenceID10</x:Reference>
+              <x:Reference>__ReferenceID11</x:Reference>
+              <x:Reference>__ReferenceID12</x:Reference>
+              <x:Reference>__ReferenceID13</x:Reference>
+              <x:Reference>__ReferenceID14</x:Reference>
+              <x:Reference>__ReferenceID15</x:Reference>
+            </scg:List>
+          </uibi:BusinessEntity.SelectedFields>
+          <uibi:BusinessEntity.TelemetryProperties>
+            <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+          </uibi:BusinessEntity.TelemetryProperties>
+        </uibi:BusinessEntity>
+      </uzia:ScheduleOneTimeMeeting.BusinessEntity>
+      <uzia:ScheduleOneTimeMeeting.CachedLookupValues>
+        <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)" />
+      </uzia:ScheduleOneTimeMeeting.CachedLookupValues>
+      <uzia:ScheduleOneTimeMeeting.DesignConnectionRequest>
+        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="55a61517-66a1-443f-bd31-7d9be941b242" ConnectionName="liviu.ponova@uipath.com" ConnectorKey="uipath-zoom-zoom">
+          <uiisi:ConnectionParameters.TelemetryInfo>
+            <uiisi:TelemetryInfo ActivityPack="UiPath.Zoom.IntegrationService.Activities" ActivityPackVersion="6.0.1" Source="Windows" />
+          </uiisi:ConnectionParameters.TelemetryInfo>
+        </uiisi:ConnectionParameters>
+      </uzia:ScheduleOneTimeMeeting.DesignConnectionRequest>
+      <uzia:ScheduleOneTimeMeeting.SelectedFields>
+        <scg:List x:TypeArguments="uibi:EntityField" Capacity="11">
+          <x:Reference>__ReferenceID5</x:Reference>
+          <x:Reference>__ReferenceID6</x:Reference>
+          <x:Reference>__ReferenceID7</x:Reference>
+          <x:Reference>__ReferenceID8</x:Reference>
+          <x:Reference>__ReferenceID9</x:Reference>
+          <x:Reference>__ReferenceID10</x:Reference>
+          <x:Reference>__ReferenceID11</x:Reference>
+          <x:Reference>__ReferenceID12</x:Reference>
+          <x:Reference>__ReferenceID13</x:Reference>
+          <x:Reference>__ReferenceID14</x:Reference>
+          <x:Reference>__ReferenceID15</x:Reference>
+        </scg:List>
+      </uzia:ScheduleOneTimeMeeting.SelectedFields>
+      <uzia:ScheduleOneTimeMeeting.TelemetryProperties>
+        <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+      </uzia:ScheduleOneTimeMeeting.TelemetryProperties>
+    </uzia:ScheduleOneTimeMeeting>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[out_meetingId]" />
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Console.WriteLine(test)" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="388,165.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="test">[in_test]</InArgument>
+        <OutArgument x:TypeArguments="s:Nullable(x:Int64)" x:Key="meetingId">[out_meetingId]</OutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+  </Sequence>
+</Activity>

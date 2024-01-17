@@ -1,0 +1,159 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Webservice_activity" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:s1="clr-namespace:SwaggerPetstore;assembly=SwaggerPetstore" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uwp="clr-namespace:UiPath.WebClient.PetClientNamespace;assembly=SwaggerPetstore" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_PetId" Type="InArgument(s:Nullable(x:Int64))" />
+    <x:Property Name="in_PetName" Type="InArgument(x:String)" />
+    <x:Property Name="out_PetResponse" Type="OutArgument(s1:Pet)" />
+  </x:Members>
+  <this:Webservice_activity.in_PetId>
+    <InArgument x:TypeArguments="s:Nullable(x:Int64)" />
+  </this:Webservice_activity.in_PetId>
+  <this:Webservice_activity.in_PetName>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Webservice_activity.in_PetName>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>1702,1602</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>SwaggerPetstore</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.WebClient.PetClientNamespace</x:String>
+      <x:String>UiPath.WebClient.Activities.Generator.Swagger</x:String>
+      <x:String>UiPath.WebClient.Activities.Generator.Code</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>SwaggerPetstore</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Webservice_activity" sap:VirtualizedContainerService.HintSize="484.6666666666667,1537.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s1:Pet" Name="pet" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="422.6666666666667,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="s1:Pet">
+                <CSharpReference x:TypeArguments="s1:Pet" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">pet</CSharpReference>
+              </OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="s1:Pet">
+                <CSharpValue x:TypeArguments="s1:Pet" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">new Pet()</CSharpValue>
+              </InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="s:Nullable(x:Int64)">
+                <CSharpReference x:TypeArguments="s:Nullable(x:Int64)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">pet.Id</CSharpReference>
+              </OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="s:Nullable(x:Int64)">
+                <CSharpValue x:TypeArguments="s:Nullable(x:Int64)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">in_PetId</CSharpValue>
+              </InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">pet.Name</CSharpReference>
+              </OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">in_PetName</CSharpValue>
+              </InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+    </ui:MultipleAssign>
+    <uwp:AddPetActivity BearerToken="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" Headers="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" Username="{x:Null}" DisplayName="AddPet" Endpoint="https://petstore.swagger.io/v2" sap:VirtualizedContainerService.HintSize="422.6666666666667,566" sap2010:WorkflowViewState.IdRef="AddPetActivity_1" TimeoutMS="30000">
+      <uwp:AddPetActivity.Request>
+        <uwp:PetClientAddPetRequest>
+          <uwp:PetClientAddPetRequest.Body>
+            <InArgument x:TypeArguments="s1:Pet">
+              <CSharpValue x:TypeArguments="s1:Pet" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">pet</CSharpValue>
+            </InArgument>
+          </uwp:PetClientAddPetRequest.Body>
+        </uwp:PetClientAddPetRequest>
+      </uwp:AddPetActivity.Request>
+    </uwp:AddPetActivity>
+    <uwp:GetPetByIdActivity BearerToken="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" Headers="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" Username="{x:Null}" DisplayName="GetPetById" Endpoint="https://petstore.swagger.io/v2" sap:VirtualizedContainerService.HintSize="422.6666666666667,618.6666666666666" sap2010:WorkflowViewState.IdRef="GetPetByIdActivity_1" TimeoutMS="30000">
+      <uwp:GetPetByIdActivity.Request>
+        <uwp:PetClientGetPetByIdRequest>
+          <uwp:PetClientGetPetByIdRequest.PetId>
+            <InArgument x:TypeArguments="x:Int64">
+              <CSharpValue x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">in_PetId.GetValueOrDefault()</CSharpValue>
+            </InArgument>
+          </uwp:PetClientGetPetByIdRequest.PetId>
+        </uwp:PetClientGetPetByIdRequest>
+      </uwp:GetPetByIdActivity.Request>
+      <uwp:GetPetByIdActivity.Response>
+        <OutArgument x:TypeArguments="s1:Pet">
+          <CSharpReference x:TypeArguments="s1:Pet" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">out_PetResponse</CSharpReference>
+        </OutArgument>
+      </uwp:GetPetByIdActivity.Response>
+    </uwp:GetPetByIdActivity>
+  </Sequence>
+</Activity>

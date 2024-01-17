@@ -1,0 +1,338 @@
+﻿<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ufa="clr-namespace:UiPath.Forms.Activities;assembly=UiPath.Forms.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:upt="clr-namespace:UiPath.Platform.Triggers;assembly=UiPath.Platform" xmlns:uuat="clr-namespace:UiPath.UIAutomationNext.Activities.Triggers;assembly=UiPath.UIAutomationNext.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="myProcess" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Forms.Activities</x:String>
+      <x:String>UiPath.Forms.Activities.Base</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Platform.GlobalVariables</x:String>
+      <x:String>UiPath.Mail.Outlook.Enums</x:String>
+      <x:String>UiPath.Mail.Activities.Triggers</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.Mail.Activities.Outlook</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Forms.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Generated_1090">
+    <Sequence.Variables>
+      <x:Reference>__ReferenceID0</x:Reference>
+    </Sequence.Variables>
+    <upt:InterruptibleTriggerInitializer sap2010:WorkflowViewState.IdRef="Generated_871" />
+    <Parallel sap2010:WorkflowViewState.IdRef="Generated_882">
+      <Parallel.CompletionCondition>
+        <CSharpValue x:TypeArguments="x:Boolean">StopTriggersVariable</CSharpValue>
+      </Parallel.CompletionCondition>
+      <Sequence sap2010:WorkflowViewState.IdRef="Generated_913">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:String" Name="BreakTriggerScopeVariableName">
+            <Variable.Default>
+              <CSharpValue x:TypeArguments="x:String">"0"</CSharpValue>
+            </Variable.Default>
+          </Variable>
+        </Sequence.Variables>
+        <ui:TriggerScope sap2010:WorkflowViewState.IdRef="Generated_904" SchedulingMode="Sequential">
+          <ui:TriggerScope.Action>
+            <ActivityAction x:TypeArguments="ufa:FormInfoTriggerEventArgs">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="ufa:FormInfoTriggerEventArgs" Name="TriggerEventArgs" />
+              </ActivityAction.Argument>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Triggers\Forms\Form.xaml - Invoke Workflow File" sap2010:WorkflowViewState.IdRef="Generated_896" UnSafe="False" WorkflowFileName="Triggers\Forms\Form.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="ufa:FormInfoTriggerEventArgs" x:Key="TriggerEventArgs">
+                    <CSharpValue x:TypeArguments="ufa:FormInfoTriggerEventArgs">TriggerEventArgs</CSharpValue>
+                  </InArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+            </ActivityAction>
+          </ui:TriggerScope.Action>
+          <ui:TriggerScope.Triggers>
+            <scg:List x:TypeArguments="Activity" Capacity="1">
+              <ufa:FormTriggerActivity x:TypeArguments="ufa:FormInfoTriggerEventArgs" MessageId="{x:Null}" Tag="{x:Null}" DisplayName="Form Event Trigger" Enabled="True" Event="click.submit" FormId="4201be0a-09f1-4613-938c-1d9c538fbf42" sap:VirtualizedContainerService.HintSize="387.2,370.4" sap2010:WorkflowViewState.IdRef="FormTriggerActivity`1_15" SchedulingMode="Sequential" TriggerId="105e656d-3af2-4428-ae47-aedc5d2cb745" />
+            </scg:List>
+          </ui:TriggerScope.Triggers>
+        </ui:TriggerScope>
+      </Sequence>
+      <Sequence sap2010:WorkflowViewState.IdRef="Generated_947">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:String" Name="BreakTriggerScopeVariableName">
+            <Variable.Default>
+              <CSharpValue x:TypeArguments="x:String">"0"</CSharpValue>
+            </Variable.Default>
+          </Variable>
+        </Sequence.Variables>
+        <ui:TriggerScope sap2010:WorkflowViewState.IdRef="Generated_938" SchedulingMode="Sequential">
+          <ui:TriggerScope.Action>
+            <ActivityAction x:TypeArguments="ui:FileChangeTriggerArgs">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="ui:FileChangeTriggerArgs" Name="TriggerEventArgs" />
+              </ActivityAction.Argument>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Triggers\System\File Changed.xaml - Invoke Workflow File" sap2010:WorkflowViewState.IdRef="Generated_9210" UnSafe="False" WorkflowFileName="Triggers\System\File Changed.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="ui:FileChangeTriggerArgs" x:Key="TriggerEventArgs">
+                    <CSharpValue x:TypeArguments="ui:FileChangeTriggerArgs">TriggerEventArgs</CSharpValue>
+                  </InArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+            </ActivityAction>
+          </ui:TriggerScope.Action>
+          <ui:TriggerScope.Triggers>
+            <scg:List x:TypeArguments="Activity" Capacity="1">
+              <ui:FileChangeTriggerV3 FileNameFilter="{x:Null}" ChangeType="All" DisplayName="File Change Trigger" Enabled="True" sap:VirtualizedContainerService.HintSize="433.6,204.8" sap2010:WorkflowViewState.IdRef="FileChangeTriggerV3_19" IncludeSubdirectories="True" NotifyFilters="FileName, DirectoryName, Attributes, Size, LastWrite, LastAccess, CreationTime, Security" Path="C:\\Work\\Files" SchedulingMode="Sequential" TriggerId="b4f756ac-28be-49ea-a9cd-4fcf72b95a37" />
+            </scg:List>
+          </ui:TriggerScope.Triggers>
+        </ui:TriggerScope>
+      </Sequence>
+      <Sequence sap2010:WorkflowViewState.IdRef="Generated_9711">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:String" Name="BreakTriggerScopeVariableName">
+            <Variable.Default>
+              <CSharpValue x:TypeArguments="x:String">"0"</CSharpValue>
+            </Variable.Default>
+          </Variable>
+        </Sequence.Variables>
+        <ui:TriggerScope sap2010:WorkflowViewState.IdRef="Generated_9612" SchedulingMode="Sequential">
+          <ui:TriggerScope.Action>
+            <ActivityAction x:TypeArguments="ui:GlobalVariableTriggerArgs">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="ui:GlobalVariableTriggerArgs" Name="TriggerEventArgs" />
+              </ActivityAction.Argument>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Triggers\System\GlobalVariable.xaml - Invoke Workflow File" sap2010:WorkflowViewState.IdRef="Generated_9514" UnSafe="False" WorkflowFileName="Triggers\System\GlobalVariable.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="ui:GlobalVariableTriggerArgs" x:Key="TriggerEventArgs">
+                    <CSharpValue x:TypeArguments="ui:GlobalVariableTriggerArgs">TriggerEventArgs</CSharpValue>
+                  </InArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+            </ActivityAction>
+          </ui:TriggerScope.Action>
+          <ui:TriggerScope.Triggers>
+            <scg:List x:TypeArguments="Activity" Capacity="1">
+              <ui:GlobalVariableChangedTrigger DisplayName="Global Variable Changed Trigger" Enabled="True" sap:VirtualizedContainerService.HintSize="387.2,140.8" sap2010:WorkflowViewState.IdRef="GlobalVariableChangedTrigger_113" SchedulingMode="Sequential" TriggerId="211d4ddc-d219-4d0d-badb-197b5c80167b">
+                <ui:GlobalVariableChangedTrigger.VariableName>
+                  <InArgument x:TypeArguments="x:Object">
+                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">GlobalVariables.GlobalVar1</CSharpValue>
+                  </InArgument>
+                </ui:GlobalVariableChangedTrigger.VariableName>
+              </ui:GlobalVariableChangedTrigger>
+            </scg:List>
+          </ui:TriggerScope.Triggers>
+        </ui:TriggerScope>
+      </Sequence>
+      <Sequence sap2010:WorkflowViewState.IdRef="Generated_10015">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:String" Name="BreakTriggerScopeVariableName">
+            <Variable.Default>
+              <CSharpValue x:TypeArguments="x:String">"0"</CSharpValue>
+            </Variable.Default>
+          </Variable>
+        </Sequence.Variables>
+        <ui:TriggerScope sap2010:WorkflowViewState.IdRef="Generated_9916" SchedulingMode="Sequential">
+          <ui:TriggerScope.Action>
+            <ActivityAction x:TypeArguments="ui:RepeatTriggerArgs">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="ui:RepeatTriggerArgs" Name="TriggerEventArgs" />
+              </ActivityAction.Argument>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Triggers\System\Repeat.xaml - Invoke Workflow File" sap2010:WorkflowViewState.IdRef="Generated_9818" UnSafe="False" WorkflowFileName="Triggers\System\Repeat.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <OutArgument x:TypeArguments="x:Boolean" x:Key="StopTriggersOutArgument">
+                    <CSharpReference x:TypeArguments="x:Boolean">StopTriggersVariable</CSharpReference>
+                  </OutArgument>
+                  <InArgument x:TypeArguments="ui:RepeatTriggerArgs" x:Key="TriggerEventArgs">
+                    <CSharpValue x:TypeArguments="ui:RepeatTriggerArgs">TriggerEventArgs</CSharpValue>
+                  </InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="BreakTriggerScopeInArgument">
+                    <CSharpValue x:TypeArguments="x:String">BreakTriggerScopeVariableName</CSharpValue>
+                  </InArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+            </ActivityAction>
+          </ui:TriggerScope.Action>
+          <ui:TriggerScope.Triggers>
+            <scg:List x:TypeArguments="Activity" Capacity="1">
+              <ui:RepeatTrigger DisplayName="Repeat trigger" Enabled="True" sap:VirtualizedContainerService.HintSize="387.2,141.6" sap2010:WorkflowViewState.IdRef="RepeatTrigger_117" Interval="00:05:00" SchedulingMode="Sequential" TriggerId="2302be5c-c22e-4983-aabd-82f8d12c9436" />
+            </scg:List>
+          </ui:TriggerScope.Triggers>
+        </ui:TriggerScope>
+      </Sequence>
+      <Sequence sap2010:WorkflowViewState.IdRef="Generated_10319">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:String" Name="BreakTriggerScopeVariableName">
+            <Variable.Default>
+              <CSharpValue x:TypeArguments="x:String">"0"</CSharpValue>
+            </Variable.Default>
+          </Variable>
+        </Sequence.Variables>
+        <ui:TriggerScope sap2010:WorkflowViewState.IdRef="Generated_10220" SchedulingMode="Sequential">
+          <ui:TriggerScope.Action>
+            <ActivityAction x:TypeArguments="uuat:EmptyArgs">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="uuat:EmptyArgs" Name="TriggerEventArgs" />
+              </ActivityAction.Argument>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Triggers\UIA\Application Event.xaml - Invoke Workflow File" sap2010:WorkflowViewState.IdRef="Generated_10122" UnSafe="False" WorkflowFileName="Triggers\UIA\Application Event.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="uuat:EmptyArgs" x:Key="TriggerEventArgs">
+                    <CSharpValue x:TypeArguments="uuat:EmptyArgs">TriggerEventArgs</CSharpValue>
+                  </InArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+            </ActivityAction>
+          </ui:TriggerScope.Action>
+          <ui:TriggerScope.Triggers>
+            <scg:List x:TypeArguments="Activity" Capacity="1">
+              <uix:NNativeEventTrigger x:TypeArguments="uuat:EmptyArgs" AvailableEventTypes="UiaFocusGained,UiaFocusLost,UiaInvoked,UiaTextChanged,UiaSelected,UiaDeselected,UiaToggled,ElementAppeared,ElementDisappeared" DisplayName="Application Event Trigger '5'" Enabled="True" EventType="ElementAppeared" sap:VirtualizedContainerService.HintSize="387.2,179.2" sap2010:WorkflowViewState.IdRef="NNativeEventTrigger`1_121" SchedulingMode="Sequential" TriggerId="31709420-d939-4223-a2dd-f082bcd16f0b" Version="V3">
+                <uix:NNativeEventTrigger.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="128, 841, 111, 133" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'5'" FullSelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='NumberPad' cls='NamedContainerAutomationPeer' name='Number pad' /&gt;&lt;uia automationid='num5Button' cls='Button' name='Five' /&gt;" Guid="162dc0d7-8f8c-4f57-a0dc-2ac779017151" InformativeScreenshot="38d25013b911422aee381f31de39a353.png" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='Microsoft.WindowsCalculator_8wekyb3d8bbwe!App' title='Calculator' /&gt;" SearchSteps="Selector" Version="V2" />
+                </uix:NNativeEventTrigger.Target>
+              </uix:NNativeEventTrigger>
+            </scg:List>
+          </ui:TriggerScope.Triggers>
+        </ui:TriggerScope>
+      </Sequence>
+      <Sequence sap2010:WorkflowViewState.IdRef="Generated_10623">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:String" Name="BreakTriggerScopeVariableName">
+            <Variable.Default>
+              <CSharpValue x:TypeArguments="x:String">"0"</CSharpValue>
+            </Variable.Default>
+          </Variable>
+        </Sequence.Variables>
+        <ui:TriggerScope sap2010:WorkflowViewState.IdRef="Generated_10524" SchedulingMode="Sequential">
+          <ui:TriggerScope.Action>
+            <ActivityAction x:TypeArguments="uuat:MonitorKeyboardEventArgs">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="uuat:MonitorKeyboardEventArgs" Name="TriggerEventArgs" />
+              </ActivityAction.Argument>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Triggers\UIA\Keypress Event.xaml - Invoke Workflow File" sap2010:WorkflowViewState.IdRef="Generated_10426" UnSafe="False" WorkflowFileName="Triggers\UIA\Keypress Event.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="uuat:MonitorKeyboardEventArgs" x:Key="TriggerEventArgs">
+                    <CSharpValue x:TypeArguments="uuat:MonitorKeyboardEventArgs">TriggerEventArgs</CSharpValue>
+                  </InArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+            </ActivityAction>
+          </ui:TriggerScope.Action>
+          <ui:TriggerScope.Triggers>
+            <scg:List x:TypeArguments="Activity" Capacity="1">
+              <uix:NKeyboardTrigger BlockEvent="False" DisplayName="Keypress Event Trigger '1'" Enabled="True" sap:VirtualizedContainerService.HintSize="387.2,192" sap2010:WorkflowViewState.IdRef="NKeyboardTrigger_125" IncludeChildren="True" Key="%[k(Tab)]" KeyModifiers="Shift, Win" Mode="Down" SchedulingMode="Sequential" TriggerId="db861359-b0a4-4375-9e5a-695be53d0cf6" Version="V3">
+                <uix:NKeyboardTrigger.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="14, 976, 111, 133" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'1'" FullSelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='NumberPad' cls='NamedContainerAutomationPeer' name='Number pad' /&gt;&lt;uia automationid='num1Button' cls='Button' name='One' /&gt;" Guid="73560ae3-ae19-4c0a-911c-b53d3481b9e6" InformativeScreenshot="2f319d65c1a58b6df0b8d2452ce44306.png" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='Microsoft.WindowsCalculator_8wekyb3d8bbwe!App' title='Calculator' /&gt;" SearchSteps="Selector" Version="V2" />
+                </uix:NKeyboardTrigger.Target>
+              </uix:NKeyboardTrigger>
+            </scg:List>
+          </ui:TriggerScope.Triggers>
+        </ui:TriggerScope>
+      </Sequence>
+      <Sequence sap2010:WorkflowViewState.IdRef="Generated_10727">
+        <ui:ListenForStopTriggers sap2010:WorkflowViewState.IdRef="Generated_10828" />
+        <Assign x:TypeArguments="x:Boolean" Value="True">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:Boolean">
+              <VariableReference x:TypeArguments="x:Boolean">
+                <VariableReference.Variable>
+                  <Variable x:TypeArguments="x:Boolean" x:Name="__ReferenceID0" Name="StopTriggersVariable">
+                    <Variable.Default>
+                      <CSharpValue x:TypeArguments="x:Boolean">false</CSharpValue>
+                    </Variable.Default>
+                  </Variable>
+                </VariableReference.Variable>
+              </VariableReference>
+            </OutArgument>
+          </Assign.To>
+        </Assign>
+      </Sequence>
+    </Parallel>
+  </Sequence>
+</Activity>

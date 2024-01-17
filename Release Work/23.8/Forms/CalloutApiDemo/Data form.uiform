@@ -1,0 +1,112 @@
+﻿{
+  "Metadata": {
+    "Id": "01d2a729-0e79-4f3e-b479-72ec857259db",
+    "Kind": "FormIo"
+  },
+  "DesignProperties": {
+    "Title": "Data form",
+    "Theme": "Default",
+    "ShowInTaskbar": true,
+    "ShowMargin": true,
+    "CustomStyle": ""
+  },
+  "Data": {
+    "components": [
+      {
+        "type": "button",
+        "label": "Submit",
+        "key": "submit",
+        "disableOnInvalid": true,
+        "input": true,
+        "tableView": false
+      },
+      {
+        "label": "Nume",
+        "tableView": true,
+        "key": "name",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "label": "Prenume",
+        "tableView": true,
+        "key": "surname",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "label": "Data Nasterii",
+        "hideInputLabels": false,
+        "inputsLabelPosition": "top",
+        "tableView": false,
+        "fields": {
+          "day": {
+            "placeholder": "Ziua nasterii",
+            "hide": false
+          },
+          "month": {
+            "placeholder": "Luna",
+            "hide": false
+          },
+          "year": {
+            "placeholder": "Anul nasterii",
+            "hide": false,
+            "minYear": 2000
+          }
+        },
+        "key": "dateOfBirth",
+        "type": "day",
+        "input": true,
+        "minYear": 2000
+      },
+      {
+        "label": "Adresa (linia 1)",
+        "placeholder": "Strada",
+        "tableView": true,
+        "key": "adresaLinia1",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "label": "Numarul",
+        "placeholder": "numarul strazii",
+        "tableView": true,
+        "key": "numarul",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "label": "Tara de resedinta",
+        "widget": "choicesjs",
+        "tableView": true,
+        "data": {
+          "values": [
+            {
+              "label": "Romania",
+              "value": "romania"
+            },
+            {
+              "label": "USA",
+              "value": "usa"
+            },
+            {
+              "label": "Belgia",
+              "value": "belgium"
+            },
+            {
+              "label": "Papua Noua Guinee",
+              "value": "papuaNewGuinea"
+            },
+            {
+              "label": "Fiji",
+              "value": "fiji"
+            }
+          ]
+        },
+        "key": "taraDeResedinta",
+        "type": "select",
+        "input": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+<!-- form
+{
+  "Metadata": {
+    "Id": "87314330-b8c1-4b87-ac18-446448f4ec90",
+    "Kind": "Html"
+  }
+}
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo page</title>
+    <!-- //NOSONAR --><script src="https://uipath.studio.internal.host/dist/jquery.min.js" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color:#b8e6f2">
+    <script type="text/javascript">
+        var uiPathApi = {
+            // called by the forms engine
+            getValue: function (elementId) {
+                if (elementId == 'getArray') {
+                    return [1, 2, 3];
+                }
+
+                return $("#" + elementId).val().toString();
+            },
+
+            setValue: function (elementId, value) {
+                // execute this to throw in case the element does not exist
+                $("#" + elementId).val().toString();
+                $("#" + elementId).val(value);
+            },
+
+            // Call this to trigger a "Form Message" event
+            // This function is set by the forms engine after the page loads,
+            // but declaring it here as empty helps with code autocompletion
+            sendMessage: function (id, value) { },
+
+            // Called by the forms engine when the api is ready to be used
+            // This method is called only if it set here.
+            initialized: function () {
+                uiPathApi.target.addEventListener("sizeChanged", (e) => {
+                    console.log("size changed triggered");
+					uiPathApi.updateStatus();
+                });
+				
+				uiPathApi.target.addEventListener("locationChanged", (e) => {
+                    console.log("location changed triggered");
+					uiPathApi.updateStatus();
+                });
+				
+				 uiPathApi.form.addEventListener("sizeChanged", (e) => {
+                    console.log("form state changed triggered: " + e.detail);
+					uiPathApi.updateStatus();
+                });
+
+                uiPathApi.form.addEventListener("locationChanged", (e) => {
+                    console.log("form moved triggered: " + window.formMovedArg);
+					uiPathApi.updateStatus();
+                });
+            },
+			
+			updateStatus: function() {
+				uiPathApi.setValue("statusText", "target visible:" + uiPathApi.target.isVisible + "\ntarget.left:" + uiPathApi.target.left + "\ntarget.top:" + uiPathApi.target.top + "\ntarget.width:" + uiPathApi.target.width + "\ntarget.height:" + uiPathApi.target.height + "\nform left: " + uiPathApi.form.left + "\nform top: " + uiPathApi.form.top + "\nform width: " + uiPathApi.form.width + "\nform height: " + uiPathApi.form.height + "\nform visible: " + uiPathApi.form.isVisible);
+			}
+        };
+		
+        window.changeCount = 0;
+		
+		window.onload = function () {
+			$("#syncSizeId").click(function () {
+				uiPathApi.form.resize(uiPathApi.target.width, uiPathApi.target.height);
+                uiPathApi.updateStatus();
+			});
+		}
+    </script>
+	<textarea rows="10" id="statusText" style="width: 100%; height: 100%;">
+	</textarea>
+	<button type="button" id="syncSizeId">Sync size</button>
+</body>
+</html>

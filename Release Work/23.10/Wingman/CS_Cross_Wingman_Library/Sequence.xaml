@@ -1,0 +1,446 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1258,3168.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Data;assembly=Studio.Generated.TypedDataTable4" xmlns:sd2="clr-namespace:System.Data;assembly=Studio.Generated.TypedDataTable1" xmlns:sd3="clr-namespace:System.Data;assembly=Studio.Generated.TypedDataTable2" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:uiit="clr-namespace:UiPath.IntegrationService.Infrastructure.Triggers;assembly=UiPath.IntegrationService.Infrastructure" xmlns:uisad="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:uisascb="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType0684Ec5832F04327B06D4C4869A32Ce1.Bundle;assembly=CustomGptDocumentTyp.FbDkU3kAggM1JvyQi13NXeB2" xmlns:uisascb1="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentTypeFdd44Be8F7D941499168469B34547Db9.Bundle;assembly=CustomGptDocumentTyp.dNq862JGZqH1LFEPl3njI5H1" xmlns:uisascb2="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType4D3B3528Ff4542Cd940FCfe331Eabc56.Bundle;assembly=CustomGptDocumentTyp.gS7Zz32vgLK1aE8g6tWPCz" xmlns:ujia="clr-namespace:UiPath.Jira.IntegrationService.Activities;assembly=UiPath.Jira.IntegrationService.Activities" xmlns:umae="clr-namespace:UiPath.MicrosoftOffice365.Activities.Excel;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umafe="clr-namespace:UiPath.MicrosoftOffice365.Activities.Files.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umem="clr-namespace:UiPath.MicrosoftOffice365.Excel.Models;assembly=UiPath.MicrosoftOffice365" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:usau1="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:usia="clr-namespace:UiPath.Salesforce.IntegrationService.Activities;assembly=UiPath.Salesforce.IntegrationService.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DocumentClassification</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.DataExtraction</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Results</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Dom</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentTypeFdd44Be8F7D941499168469B34547Db9.Bundle</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType4D3B3528Ff4542Cd940FCfe331Eabc56.Bundle</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentTypeC245Eb82Bfaf41B29136592017830Be5.Bundle</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Sheets.Enums</x:String>
+      <x:String>UiPath.GSuite.Sheets.Enums</x:String>
+      <x:String>UiPath.GSuite.Sheets.Models</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Files.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Excel.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType2E0DcdafD0B7427EA9C0928B91Cd0446.Bundle</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentTypeAb15Ee7507B94C2AA6C33Bca2Df2149D.Bundle</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.Triggers</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.CEQL</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Entity</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.Descriptor</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Enums</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Telemetry</x:String>
+      <x:String>UiPath.BAF.Infrastructure</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Connection</x:String>
+      <x:String>UiPath.Jira.IntegrationService.Activities</x:String>
+      <x:String>UiPath.IntegrationCore.Models</x:String>
+      <x:String>UiPath.IntegrationCore.Activities</x:String>
+      <x:String>UiPath.BAF.Activities</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Contracts</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType0684Ec5832F04327B06D4C4869A32Ce1.Bundle</x:String>
+      <x:String>UiPath.Salesforce.IntegrationService.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.StudioWeb.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>CustomGptDocumentTyp.dNq862JGZqH1LFEPl3njI5H1</AssemblyReference>
+      <AssemblyReference>CustomGptDocumentTyp.gS7Zz32vgLK1aE8g6tWPCz</AssemblyReference>
+      <AssemblyReference>CustomGptDocumentTyp.D9Dh54cjmhF13uqp54a0e4O2</AssemblyReference>
+      <AssemblyReference>CS_Cross_Wingman_Library.Core</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable1</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable2</AssemblyReference>
+      <AssemblyReference>CustomGptDocumentTyp.M47dg1aGkK1rnSvH2e22g14</AssemblyReference>
+      <AssemblyReference>CustomGptDocumentTyp.RQPi04omwlI1AgkcN4miais2</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.BAF.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.Jira.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Jira.IntegrationService</AssemblyReference>
+      <AssemblyReference>CustomGptDocumentTyp.FbDkU3kAggM1JvyQi13NXeB2</AssemblyReference>
+      <AssemblyReference>UiPath.Salesforce.IntegrationService.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="512,3103.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dataTable" />
+      <Variable x:TypeArguments="njl:JObject" Name="jsonOutput" />
+      <Variable x:TypeArguments="upr:ILocalResource" Name="_out_PathExists_1__Resource" />
+      <Variable x:TypeArguments="x:String" Name="_out_ReadTextFile_1__Content" />
+      <Variable x:TypeArguments="upr:IResource" Name="myFile" />
+      <Variable x:TypeArguments="uisad:IDocumentData(uisascb1:CustomGptDocumentTypeFdd44Be8F7D941499168469B34547Db9)" Name="abcde" />
+      <Variable x:TypeArguments="uisad:IDocumentData(uisascb2:CustomGptDocumentType4D3B3528Ff4542Cd940FCfe331Eabc56)" Name="askhfberw" />
+      <Variable x:TypeArguments="sd2:DataTable1" Name="my_Dt1" />
+      <Variable x:TypeArguments="umem:RangeInformation" Name="myRangeInfo" />
+      <Variable x:TypeArguments="sd:DataTable" Name="_out_ReadRangeConnections_Generic_1_1__Result" />
+      <Variable x:TypeArguments="sd3:DataTable2" Name="my_Dt2" />
+      <Variable x:TypeArguments="sd1:DataTable4" Name="_out_ReadRangeConnections_Generic_1_2__Result" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:PathExists Exists="{x:Null}" DisplayName="Path Exists" sap:VirtualizedContainerService.HintSize="450,142.4" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="test.json" PathType="File">
+      <ui:PathExists.Resource>
+        <OutArgument x:TypeArguments="upr:ILocalResource">
+          <CSharpReference x:TypeArguments="upr:ILocalResource" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">_out_PathExists_1__Resource</CSharpReference>
+        </OutArgument>
+      </ui:PathExists.Resource>
+    </ui:PathExists>
+    <ui:ReadTextFile FileName="{x:Null}" DisplayName="Read Text File" sap:VirtualizedContainerService.HintSize="450,91.2" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
+      <ui:ReadTextFile.Content>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">_out_ReadTextFile_1__Content</CSharpReference>
+        </OutArgument>
+      </ui:ReadTextFile.Content>
+      <ui:ReadTextFile.File>
+        <InArgument x:TypeArguments="upr:IResource">
+          <CSharpValue x:TypeArguments="upr:IResource" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">_out_PathExists_1__Resource</CSharpValue>
+        </InArgument>
+      </ui:ReadTextFile.File>
+    </ui:ReadTextFile>
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="450,91.2" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1">
+      <ui:DeserializeJson.JsonObject>
+        <OutArgument x:TypeArguments="njl:JObject">
+          <CSharpReference x:TypeArguments="njl:JObject" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">jsonOutput</CSharpReference>
+        </OutArgument>
+      </ui:DeserializeJson.JsonObject>
+      <ui:DeserializeJson.JsonString>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">_out_ReadTextFile_1__Content</CSharpValue>
+        </InArgument>
+      </ui:DeserializeJson.JsonString>
+    </ui:DeserializeJson>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">new InArgument&lt;string&gt;(jsonOutput.GetValue("message").ToString())</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_2">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">jsonOutput["message"]</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="450,91.2" sap2010:WorkflowViewState.IdRef="WriteLine_1">
+      <InArgument x:TypeArguments="x:String">
+        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">$"{{string.Concat({dataTable.TableName}, {jsonOutput.Path}).ToUpper()}}"</CSharpValue>
+      </InArgument>
+    </WriteLine>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="450,91.2" sap2010:WorkflowViewState.IdRef="WriteLine_2">
+      <InArgument x:TypeArguments="x:String">
+        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">3&gt;2</CSharpValue>
+      </InArgument>
+    </WriteLine>
+    <ujia:WhenEventHappens EventObjectId="{x:Null}" Language="{x:Null}" UiPathEvent="{x:Null}" UiPathEventConnector="{x:Null}" UiPathEventObjectId="{x:Null}" UiPathEventObjectType="{x:Null}" ActivityInstanceId="ea6cd9a6-85a2-4861-835d-011fc64432d5" BindingsVersion="2.1" ConfiguredBusinessEntity="" ConnectionId="b154b758-a99f-ec11-a99b-e42aac668fcd" Connector="uipath-atlassian-jira" CrudOperation="Trigger" DesignConnectionEnabled="True" DisplayName="Event Trigger" FilterExpression="((contains(fields.issuetype.name,'2q3wrfed'))&amp;&amp;(contains(fields.issuetype.name,'awef')))" sap:VirtualizedContainerService.HintSize="450,332.4" sap2010:WorkflowViewState.IdRef="WhenEventHappens_1" ObjectName="issue">
+      <ujia:WhenEventHappens.BusinessEntity>
+        <uibi:BusinessEntity AllFields="{x:Null}" Metadata="{x:Reference __ReferenceID0}" Name="issue">
+          <uibi:BusinessEntity.EntityMetadata>
+            <uibi:EntityMetadata DisplayName="Issues" EligibleOperations="64" IsCustomEntity="False" Name="issue">
+              <uibi:EntityMetadata.Metadata>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+                  <x:String x:Key="Object">issue</x:String>
+                  <x:String x:Key="Client">UiPath.Jira.IntegrationService.Client.IssueAPIClient</x:String>
+                  <x:String x:Key="Operation">GetIssue</x:String>
+                  <x:String x:Key="Path">/issue</x:String>
+                </scg:Dictionary>
+              </uibi:EntityMetadata.Metadata>
+            </uibi:EntityMetadata>
+          </uibi:BusinessEntity.EntityMetadata>
+          <uibi:BusinessEntity.SelectedFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="0" />
+          </uibi:BusinessEntity.SelectedFields>
+          <uibi:BusinessEntity.TelemetryProperties>
+            <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+          </uibi:BusinessEntity.TelemetryProperties>
+        </uibi:BusinessEntity>
+      </ujia:WhenEventHappens.BusinessEntity>
+      <ujia:WhenEventHappens.CachedLookupValues>
+        <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)" />
+      </ujia:WhenEventHappens.CachedLookupValues>
+      <ujia:WhenEventHappens.DesignConnectionRequest>
+        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="b154b758-a99f-ec11-a99b-e42aac668fcd" ConnectionName="liviu.ponova@uipath.com" ConnectorKey="uipath-atlassian-jira">
+          <uiisi:ConnectionParameters.TelemetryInfo>
+            <uiisi:TelemetryInfo ActivityPack="UiPath.Jira.IntegrationService.Activities" ActivityPackVersion="6.2.0" Source="StudioDesktop" />
+          </uiisi:ConnectionParameters.TelemetryInfo>
+        </uiisi:ConnectionParameters>
+      </ujia:WhenEventHappens.DesignConnectionRequest>
+      <ujia:WhenEventHappens.Filter>
+        <uiisi:FilterTree Index="0" SearchableJoin="And">
+          <uiisi:FilterTree.Filters>
+            <scg:List x:TypeArguments="uiisi:Filter" Capacity="4">
+              <uiisi:Filter ComputedValue="{x:Null}" SearchableField="{x:Null}" Criteria="fields.issuetype.name" Operator="Contains" Value="2q3wrfed" />
+              <uiisi:Filter ComputedValue="{x:Null}" SearchableField="{x:Null}" Criteria="fields.issuetype.name" Operator="Contains" Value="awef" />
+            </scg:List>
+          </uiisi:FilterTree.Filters>
+          <uiisi:FilterTree.Groups>
+            <scg:List x:TypeArguments="uiisi:FilterTree" Capacity="0" />
+          </uiisi:FilterTree.Groups>
+        </uiisi:FilterTree>
+      </ujia:WhenEventHappens.Filter>
+      <ujia:WhenEventHappens.Operation>
+        <uiit:TriggerOperation DisplayName="Record created" Key="CREATED" ObjectName="" />
+      </ujia:WhenEventHappens.Operation>
+      <ujia:WhenEventHappens.TelemetryProperties>
+        <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+      </ujia:WhenEventHappens.TelemetryProperties>
+    </ujia:WhenEventHappens>
+    <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisascb:CustomGptDocumentType0684Ec5832F04327B06D4C4869A32Ce1" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractionResults="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" FileInput="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" DisplayName="Extract Document Data" DocType="Generative (Preview)" sap:VirtualizedContainerService.HintSize="450,247.2" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_1" ProjectId="00000000-0000-0000-0000-000000000000" Prompt="{}{&quot;2134&quot;:&quot;asdf&quot;,&quot;q23wer&quot;:&quot;23qr4e&quot;}" />
+    <uga:ReadRangeConnections x:TypeArguments="sd:DataTable" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" ColumnNames="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Range="{x:Null}" RangeInformation="{x:Null}" RangeMetadata="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" ConnectionId="952542ee-6da0-ec11-a99b-e42aac668fcd" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="450,312.4" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_1" ItemSelectionMode="Browse" ReadAs="Values" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False">
+      <uga:ReadRangeConnections.FileIdBackup>
+        <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:ReadRangeConnections.FileIdBackup>
+      <uga:ReadRangeConnections.Result>
+        <OutArgument x:TypeArguments="sd:DataTable">
+          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">_out_ReadRangeConnections_Generic_1_1__Result</CSharpReference>
+        </OutArgument>
+      </uga:ReadRangeConnections.Result>
+    </uga:ReadRangeConnections>
+    <umae:ReadRangeConnections x:TypeArguments="sd1:DataTable4" BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" TemplateBrowserDriveName="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" TemplateBrowserSiteUrl="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" BrowserDriveId="b!frXXpPiMUUeySBdPnsYDdp3DcBCUf9JJj0-gqeG1o5if5BnfZwKOTptt-oCH_wTS" BrowserDriveName="OneDrive" BrowserItemFriendlyName="Automation_Tests.xlsx" BrowserItemId="01E5QZP42XD6L5II3Z4VCI4KNQLXI4WHGU" BrowserSiteUrl="https://uipath-my.sharepoint.com/personal/liviu_ponova_uipath_com/Documents" ConnectionId="6c7f2070-9d31-4c48-8be2-75a2929ce624" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="450,260" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_2" ItemSelectionMode="Browse" Range="'2_CSharp_Fwk'" ReadAs="Values" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
+      <umae:ReadRangeConnections.ColumnNames>
+        <x:Array Type="x:String">
+          <x:String></x:String>
+          <x:String>Test ID</x:String>
+          <x:String>Test Name</x:String>
+          <x:String>Test in project</x:String>
+          <x:String>Status</x:String>
+          <x:String>Notes</x:String>
+          <x:String></x:String>
+          <x:String></x:String>
+        </x:Array>
+      </umae:ReadRangeConnections.ColumnNames>
+      <umae:ReadRangeConnections.ItemIdBackup>
+        <usau1:BackupSlot x:TypeArguments="umafe:EDriveItemMode" StoredValue="Browse">
+          <usau1:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="umafe:EDriveItemMode, scg:List(x:Object)" />
+          </usau1:BackupSlot.BackupValues>
+        </usau1:BackupSlot>
+      </umae:ReadRangeConnections.ItemIdBackup>
+      <umae:ReadRangeConnections.RangeMetadata>
+        <umem:RangeMetadataSlim ColumnStart="1" RangeType="Sheet" />
+      </umae:ReadRangeConnections.RangeMetadata>
+      <umae:ReadRangeConnections.Result>
+        <OutArgument x:TypeArguments="sd1:DataTable4">
+          <CSharpReference x:TypeArguments="sd1:DataTable4" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">_out_ReadRangeConnections_Generic_1_2__Result</CSharpReference>
+        </OutArgument>
+      </umae:ReadRangeConnections.Result>
+    </umae:ReadRangeConnections>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_3">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">_out_ReadRangeConnections_Generic_1_2__Result.Rows.Count</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_4">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">_out_ReadRangeConnections_Generic_1_2__RangeInformation.Name</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <usia:InsertRecord Language="{x:Null}" ActivityInstanceId="51842089-738c-463d-84af-28b8343b0b59" BindingsVersion="2.1" BusinessEntityName="Campaign" ConfiguredBusinessEntity="" ConnectionId="bc2cedb0-9d12-4913-a169-73934141de60" Connector="uipath-salesforce-sfdc" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Insert Record" sap:VirtualizedContainerService.HintSize="450,238.8" sap2010:WorkflowViewState.IdRef="InsertRecord_1">
+      <usia:InsertRecord.BusinessEntity>
+        <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID1}" Name="Campaign">
+          <uibi:BusinessEntity.AllFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="18">
+              <x:Reference>__ReferenceID2</x:Reference>
+              <x:Reference>__ReferenceID3</x:Reference>
+              <x:Reference>__ReferenceID4</x:Reference>
+              <uiisi:OperationEntityField x:TypeArguments="x:Single" ArgumentDirection="In" ArgumentType="x:Single" DataType="Single" Description="Actual Cost in Campaign" DisplayName="Actual Cost in Campaign" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="ActualCost" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Single" ArgumentDirection="In" ArgumentType="x:Single" DataType="Single" Description="Budgeted Cost in Campaign" DisplayName="Budgeted Cost in Campaign" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="BudgetedCost" ShouldFilterOnChange="False" />
+              <x:Reference>__ReferenceID5</x:Reference>
+              <uiisi:OperationEntityField x:TypeArguments="s:DateTimeOffset" ArgumentDirection="In" ArgumentType="s:DateTimeOffset" DataType="DateTimeOffset" Description="End Date" DisplayName="End Date" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Mask="yyyy-MM-dd" Name="EndDate" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Single" ArgumentDirection="In" ArgumentType="x:Single" DataType="Single" Description="Expected Response (%)" DisplayName="Expected Response (%)" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="ExpectedResponse" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Single" ArgumentDirection="In" ArgumentType="x:Single" DataType="Single" Description="Expected Revenue in Campaign" DisplayName="Expected Revenue in Campaign" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="ExpectedRevenue" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Single" ArgumentDirection="In" ArgumentType="x:Single" DataType="Single" Description="Num Sent in Campaign" DisplayName="Num Sent in Campaign" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="NumberSent" ShouldFilterOnChange="False" />
+              <x:Reference>__ReferenceID6</x:Reference>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Parent Campaign ID" DisplayName="Parent Campaign ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="ParentId" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Record Type ID" DisplayName="Record Type ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="CampaignMemberRecordTypeId" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="ST_id" DisplayName="ST_id" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="True" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Sailthru__ST_id__c" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" DataType="Boolean" Description="ST_synchable" DisplayName="ST_synchable" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="True" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Sailthru__ST_synchable__c" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="s:DateTimeOffset" ArgumentDirection="In" ArgumentType="s:DateTimeOffset" DataType="DateTimeOffset" Description="Start Date" DisplayName="Start Date" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Mask="yyyy-MM-dd" Name="StartDate" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Status" DisplayName="Status" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Status" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.EnumValues>
+                  <scg:List x:TypeArguments="x:String" Capacity="4">
+                    <x:String>Planned</x:String>
+                    <x:String>In Progress</x:String>
+                    <x:String>Completed</x:String>
+                    <x:String>Aborted</x:String>
+                  </scg:List>
+                </uiisi:OperationEntityField.EnumValues>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Type" DisplayName="Type" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Type" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.EnumValues>
+                  <scg:List x:TypeArguments="x:String" Capacity="12">
+                    <x:String>Conference</x:String>
+                    <x:String>Webinar</x:String>
+                    <x:String>Trade Show</x:String>
+                    <x:String>Public Relations</x:String>
+                    <x:String>Partners</x:String>
+                    <x:String>Referral Program</x:String>
+                    <x:String>Advertisement</x:String>
+                    <x:String>Banner Ads</x:String>
+                    <x:String>Direct Mail</x:String>
+                    <x:String>Email</x:String>
+                    <x:String>Telemarketing</x:String>
+                    <x:String>Other</x:String>
+                  </scg:List>
+                </uiisi:OperationEntityField.EnumValues>
+              </uiisi:OperationEntityField>
+            </scg:List>
+          </uibi:BusinessEntity.AllFields>
+          <uibi:BusinessEntity.EntityMetadata>
+            <uibi:EntityMetadata DisplayName="Campaign" EligibleOperations="1" IsCustomEntity="False" Name="Campaign">
+              <uibi:EntityMetadata.Metadata>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID1">
+                  <x:String x:Key="Object">Campaign</x:String>
+                  <x:String x:Key="FullPath">/Campaign</x:String>
+                  <x:String x:Key="Method">POST</x:String>
+                  <x:Null x:Key="BaseObject" />
+                </scg:Dictionary>
+              </uibi:EntityMetadata.Metadata>
+            </uibi:EntityMetadata>
+          </uibi:BusinessEntity.EntityMetadata>
+          <uibi:BusinessEntity.SelectedFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="5">
+              <x:Reference>__ReferenceID2</x:Reference>
+              <x:Reference>__ReferenceID3</x:Reference>
+              <x:Reference>__ReferenceID4</x:Reference>
+              <x:Reference>__ReferenceID5</x:Reference>
+              <x:Reference>__ReferenceID6</x:Reference>
+            </scg:List>
+          </uibi:BusinessEntity.SelectedFields>
+          <uibi:BusinessEntity.TelemetryProperties>
+            <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+          </uibi:BusinessEntity.TelemetryProperties>
+        </uibi:BusinessEntity>
+      </usia:InsertRecord.BusinessEntity>
+      <usia:InsertRecord.CachedLookupValues>
+        <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)" />
+      </usia:InsertRecord.CachedLookupValues>
+      <usia:InsertRecord.DesignConnectionRequest>
+        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="bc2cedb0-9d12-4913-a169-73934141de60" ConnectionName="Liviu-PersonalWorkspace-SalesforceConnector" ConnectorKey="uipath-salesforce-sfdc">
+          <uiisi:ConnectionParameters.TelemetryInfo>
+            <uiisi:TelemetryInfo ActivityPack="UiPath.Salesforce.IntegrationService.Activities" ActivityPackVersion="6.1.0" Source="StudioDesktop" />
+          </uiisi:ConnectionParameters.TelemetryInfo>
+        </uiisi:ConnectionParameters>
+      </usia:InsertRecord.DesignConnectionRequest>
+      <usia:InsertRecord.SelectedFields>
+        <scg:List x:TypeArguments="uibi:EntityField" Capacity="5">
+          <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID2" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="Campaign ID" DisplayName="Campaign ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="True" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Id" ShouldFilterOnChange="False" />
+          <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID3" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Name" DisplayName="Name" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsPriority="False" IsSelected="False" Location="Body" Name="Name" ShouldFilterOnChange="False" />
+          <uiisi:OperationEntityField x:TypeArguments="x:Boolean" x:Name="__ReferenceID4" ArgumentDirection="In" ArgumentType="x:Boolean" DataType="Boolean" Description="Active" DisplayName="Active" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="IsActive" ShouldFilterOnChange="False" />
+          <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID5" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Description" DisplayName="Description" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Description" ShouldFilterOnChange="False" />
+          <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID6" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Owner ID" DisplayName="Owner ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="OwnerId" ShouldFilterOnChange="False" />
+        </scg:List>
+      </usia:InsertRecord.SelectedFields>
+      <usia:InsertRecord.TelemetryProperties>
+        <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+      </usia:InsertRecord.TelemetryProperties>
+    </usia:InsertRecord>
+  </Sequence>
+</Activity>

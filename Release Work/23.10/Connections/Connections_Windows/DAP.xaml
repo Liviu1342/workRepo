@@ -1,0 +1,188 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="DAP" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1258,1699.6" sap2010:WorkflowViewState.IdRef="DAP_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C82A501238D_teams_sub_channels_Create.Bundle;assembly=C82A501238D_teams_su.TaDdk1Mt5vO1QUbnC4TulPo3" xmlns:uiascb1="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C82A501238D_teams_sub_channels_List.Bundle;assembly=C82A501238D_teams_su.sTNIN19N2kD1kU2vX2USJtf1" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="DAP" sap:VirtualizedContainerService.HintSize="450,1634.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="fileId" />
+      <Variable x:TypeArguments="x:String" Name="recordId" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACuVY224qNxT9FcsveRk4QEAiSHlIgDS0odADOVV7FEVm7AE3gz31hZQi/qWf0G/ocz+q254ZMlxy4Sg9qlQeYLy9L/Zey96bWeGe0IaIkA2JInNmmNK4tcKf4JdLgVu4Wq6UKzjAbSkEC41U37EliC1PiJmV5jxUUsvIlAwjcw16F6HhC26W42XCcKsS4MHkF7D7HpyDmddqtcIZAW+x0782JukzM5MUt+rrAF9xFlMN0Qzhgim3mJ5IrEnluPV5hTNflOskJks/CnCnMGrlIySySaZDxROTbmk8Y4gWFJCMkAGZYI8oWxnYpBvA2igupjAeSWUGirolVQM8VHxO1NInIyKxZgH+yH61TBvcMsr6oU6k0OBje9y2ihhGt8y4coJUr6e/5eluNyp+dCNDkm6g6jfEp8InR/dtbPiIxZDljcWNJPRy2WERgcmNtCvIJGa3mqnBginFKdtM9fQ1p5SJjWAoNc/CASoQBeDIt7C9uoFoE7EgOt3AOtgANGfzCfBoxhOfy12M2mmqkckm9zByEw6bDBM0YYAEChVz+Ssj2Ac6GQF5KVH0BEVSIT0jDi2PZm71yM0MkRjiAPdQtqYAnQCCC3D0iqH2eWV0yxpBTAgNNuy1wAmTSczQRMIzFxpS7o2lNf7Z6TvPL/Ot9r/jW1fYuT/rn0hsXVpynLHjVy7MIMTruy9kqEv9Pad71BynkOxQ0tExByy7OFRKUoJCq42cp1O9Thn1ovSZaySkAY5YQJ0Lb0+VTEpUPooALaVFIREo4kobBNGkI2pRBxmeiYBDPoREU2ZSRoOULAiPXZp9vJSaIAe7veX+9cfff75MtNPjiLaZfy+mAdFvpHywiWPafuHA+XROAA/dEAoRPH/YVnF2rlykOsVacbcu8jkDHpxA7XMwrwq6a1RCK07X4OFNvE/3+ZWvWVpg6V4d3J7bL4NPkrwKvqkC1v+dG2mTpf/YlVQ7Dhu4jgbWHGxaDlw2eR3sdfYg6nWO7k0a28jkmc+A2TmxzyLzZHYkMI2vC0zlSw8N7ON+vxndrwIaFae3wHnC4Za7O6jcE4ZNIYEwPWJqwUNWzrphznR59GNXmPSx3axdNCrV2mmzky7iXtvJfR7ovu07nPIllIyYlZ9VCNAhP+Ux6dCHat80FoPqD7cT0a6PbTyUpwHKmvpz39KXK2APAFjFzgWzRpE4QEM7iXkIxBnLBybOhY0d21466XuEenNNOECplHX7jDru6H0kj8+dvqx37MDXmB/425AmliIK31B4vcZ237978q6kmhPIA3YmpcykT/QDiJbwKfX7JUpPxifX1635vKWBB6PRz4eTmv8NWuFvumP3c/SxPZxkOCPg8PInuGDe1enwYty+ftnlcWxwPgejd956p3vTHXffdZlrR7MrHkPHcGl5DNzYUM01F20SzhgtdCr+L3Xeazo6jjx9Uu5kDGzL2M4FaOJV1bcdFd91gD6O6lXSCKNqKWTkrFRn1bPS2VmFlU6jZmVyWm/UJs3mE5U3jj6/1XCoJLWhgaAdtkBtGUUMlny3eziGh9Rg9KYoa5eYIQkfyJQ9vVxw91CtWny7sP3ioVmDuVdeIAwSlt65/m1D8XVCSqadBvHDKgNi/aHg5IaIqYWlgRrUGXeCfxvCcMR/B1Gjsv4H7urROigRAAA=" ConnectionId="c72318e2-86c7-491c-958e-1b82a501238d" DisplayName="Create Channel" sap:VirtualizedContainerService.HintSize="388,290.4" sap2010:WorkflowViewState.IdRef="ConnectorActivity_6" UiPathActivityTypeId="0fbe2082-28e0-3ad0-b077-8449360d5cc4">
+      <isactr:ConnectorActivity.Arguments>
+        <isactr:FieldArgument Name="_displayName">
+          <isactr:FieldArgument.Argument>
+            <InArgument x:TypeArguments="x:String">test</InArgument>
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+        <isactr:FieldArgument Name="membershipType">
+          <isactr:FieldArgument.Argument>
+            <InArgument x:TypeArguments="x:String">Standard</InArgument>
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+        <isactr:FieldArgument Name="team_id">
+          <isactr:FieldArgument.Argument>
+            <InArgument x:TypeArguments="x:String">f41a5cf1-cea9-4e19-990e-3f80b3452b88</InArgument>
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+        <isactr:FieldArgument Name="description">
+          <isactr:FieldArgument.Argument>
+            <InArgument x:TypeArguments="x:String" />
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+        <isactr:FieldArgument Name="out_id">
+          <isactr:FieldArgument.Argument>
+            <OutArgument x:TypeArguments="x:String" />
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+        <isactr:FieldArgument Name="Jit_teams_sub_channels">
+          <isactr:FieldArgument.Argument>
+            <OutArgument x:TypeArguments="uiascb:teams_sub_channels_Create" />
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+      </isactr:ConnectorActivity.Arguments>
+    </isactr:ConnectorActivity>
+    <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACuVY224qNxT9FcsveRk4QEAiSHlIgDS0odADOVV7FEVm7AE3gz31hZQi/qWf0G/ocz+q254ZMlxy4Sg9qlQeYLy9L/Zey96bWeGe0IaIkA2JInNmmNK4tcKf4JdLgVu4Wq6UKzjAbSkEC41U37EliC1PiJmV5jxUUsvIlAwjcw16F6HhC26W42XCcKsS4MHkF7D7HpyDmddqtcIZAW+x0782JukzM5MUt+rrAF9xFlMN0Qzhgim3mJ5IrEnluPV5hTNflOskJks/CnCnMGrlIySySaZDxROTbmk8Y4gWFJCMkAGZYI8oWxnYpBvA2igupjAeSWUGirolVQM8VHxO1NInIyKxZgH+yH61TBvcMsr6oU6k0OBje9y2ihhGt8y4coJUr6e/5eluNyp+dCNDkm6g6jfEp8InR/dtbPiIxZDljcWNJPRy2WERgcmNtCvIJGa3mqnBginFKdtM9fQ1p5SJjWAoNc/CASoQBeDIt7C9uoFoE7EgOt3AOtgANGfzCfBoxhOfy12M2mmqkckm9zByEw6bDBM0YYAEChVz+Ssj2Ac6GQF5KVH0BEVSIT0jDi2PZm71yM0MkRjiAPdQtqYAnQCCC3D0iqH2eWV0yxpBTAgNNuy1wAmTSczQRMIzFxpS7o2lNf7Z6TvPL/Ot9r/jW1fYuT/rn0hsXVpynLHjVy7MIMTruy9kqEv9Pad71BynkOxQ0tExByy7OFRKUoJCq42cp1O9Thn1ovSZaySkAY5YQJ0Lb0+VTEpUPooALaVFIREo4kobBNGkI2pRBxmeiYBDPoREU2ZSRoOULAiPXZp9vJSaIAe7veX+9cfff75MtNPjiLaZfy+mAdFvpHywiWPafuHA+XROAA/dEAoRPH/YVnF2rlykOsVacbcu8jkDHpxA7XMwrwq6a1RCK07X4OFNvE/3+ZWvWVpg6V4d3J7bL4NPkrwKvqkC1v+dG2mTpf/YlVQ7Dhu4jgbWHGxaDlw2eR3sdfYg6nWO7k0a28jkmc+A2TmxzyLzZHYkMI2vC0zlSw8N7ON+vxndrwIaFae3wHnC4Za7O6jcE4ZNIYEwPWJqwUNWzrphznR59GNXmPSx3axdNCrV2mmzky7iXtvJfR7ovu07nPIllIyYlZ9VCNAhP+Ux6dCHat80FoPqD7cT0a6PbTyUpwHKmvpz39KXK2APAFjFzgWzRpE4QEM7iXkIxBnLBybOhY0d21466XuEenNNOECplHX7jDru6H0kj8+dvqx37MDXmB/425AmliIK31B4vcZ237978q6kmhPIA3YmpcykT/QDiJbwKfX7JUpPxifX1635vKWBB6PRz4eTmv8NWuFvumP3c/SxPZxkOCPg8PInuGDe1enwYty+ftnlcWxwPgejd956p3vTHXffdZlrR7MrHkPHcGl5DNzYUM01F20SzhgtdCr+L3Xeazo6jjx9Uu5kDGzL2M4FaOJV1bcdFd91gD6O6lXSCKNqKWTkrFRn1bPS2VmFlU6jZmVyWm/UJs3mE5U3jj6/1XCoJLWhgaAdtkBtGUUMlny3eziGh9Rg9KYoa5eYIQkfyJQ9vVxw91CtWny7sP3ioVmDuVdeIAwSlt65/m1D8XVCSqadBvHDKgNi/aHg5IaIqYWlgRrUGXeCfxvCcMR/B1Gjsv4H7urROigRAAA=" ConnectionId="c72318e2-86c7-491c-958e-1b82a501238d" DisplayName="Create Channel" sap:VirtualizedContainerService.HintSize="388,290.4" sap2010:WorkflowViewState.IdRef="ConnectorActivity_7" UiPathActivityTypeId="0fbe2082-28e0-3ad0-b077-8449360d5cc4">
+      <isactr:ConnectorActivity.Arguments>
+        <isactr:FieldArgument Name="_displayName">
+          <isactr:FieldArgument.Argument>
+            <InArgument x:TypeArguments="x:String">test</InArgument>
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+        <isactr:FieldArgument Name="membershipType">
+          <isactr:FieldArgument.Argument>
+            <InArgument x:TypeArguments="x:String">Standard</InArgument>
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+        <isactr:FieldArgument Name="team_id">
+          <isactr:FieldArgument.Argument>
+            <InArgument x:TypeArguments="x:String">f41a5cf1-cea9-4e19-990e-3f80b3452b88</InArgument>
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+        <isactr:FieldArgument Name="description">
+          <isactr:FieldArgument.Argument>
+            <InArgument x:TypeArguments="x:String" />
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+        <isactr:FieldArgument Name="out_id">
+          <isactr:FieldArgument.Argument>
+            <OutArgument x:TypeArguments="x:String" />
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+        <isactr:FieldArgument Name="Jit_teams_sub_channels">
+          <isactr:FieldArgument.Argument>
+            <OutArgument x:TypeArguments="uiascb:teams_sub_channels_Create" />
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+      </isactr:ConnectorActivity.Arguments>
+    </isactr:ConnectorActivity>
+    <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACtVXbW8iNxD+K5a/3Bd2A4ToLkj5kABpuEJCD3LXaxRFZncWXHbtrV9IKOK/d7xeCISkSduo0iEB6/HM2H6ex/bsknaFNkxEMGCKZWBAadpc0q/4z6WgTVoLq2GVVmhLCgGRkepnWKDZ8pyZaZDxSEktExMYYJlGv9PI8Dk3i9EiB9qsVujV+HeMu8TkGFZ4NZvRlGG21PlfGJP3wUxlTJu1VYWec0hjjaMZxgUoN5muyK3xdtq8WdKtXHc8xhxtrvOULUr7CO3OCDpSPDd+GW46xEzxi71EoCeRihhnZSSy2sjMd3XbIekm/plrIqQhibQiJlwU8bGSeRDLe1EhC2lJxARJuNKG4GgyTXd9iOGlaSxNMYQkEzCElVY2Zzxl49RPSxOG46Ad4/amiyvykFJtFBcTbA8Uz5haFIQkLNVQoV/gDwva0KZRtmjqXAoNW/3e0LKKGYh34rhyBh/Y1Z+5h3zjUrR6MmIe0XqF9qSc2dwxtM8xXXd/Zal11oKoAWoGnw92XVycY9b7xFtk3q4KHvkEB1yuacYkKFNH6nLLd0UCsuTxCjN0dd+mhg8hxUlt5t+TLD5btCFh2LleZ0c49K81qKs5KMXjR6i6+oLHMYiNYSA192t3OsVBUKBrPLehWlU2EoWHHCndU2hnY97R6EDJOc6g4D2SWcYCDTkriCIpR4nJxNnzFB6ILBBH6bldQbSNpoRpkkE2xp3rZOaHLhSlABUD8yIxV9jUOcZyNGg7LlP8X/LagPuavg7fCLH2LD+FuCT/30BcYmqmzBAB4B4lGSNYiBpPeISbd7HBdHMuqHKaIfleHgvef4HnC8KscdfjgeOec2TItRJ/VnhBkhzPDFCGw3q4F0f4Yam6n4KCPaa+ra275zUuuNX5pUc0MIXiRjnj+os76cda/i3egNY8e4Fh4rv9C3H/MtNku3sHpkcwrrk7XMOuMDDBJWH3ENScRxCWNzIqKxx+6wjjH1uf6qdH1Vr98FPbT+IOVXq3Huiuh5shPMN7L4Xwhe6b2wp5LkuoR5fdy9rxZX3Wrs2u6/Nf69fDzyapVUhZVpwURUVYxXiUvlVwIsAaxdIKGdhxyiNkciRnIE6ETdNXCH5C6H9j2KvlCcFHLxDsnB2/X9j9SxRHCtzgbfwZ8eIS36W35ftJjL9YLBQeQ6nMlYpd7VPb1/q5VBnDZVMXEpQhfaZnaFrgJ+j3gzj+MPpwcdHMsqZG0ofD357HcF13LelPnZH7exnU3W30CqZ4PWLCs+/d9vsmHZyOWhd/n/Kfke9yXg3feentTq8z6rzrNFdOZuc8xbrnzPIUtbGRmiuRWiyaQrxVbxU1/Lo+dnIcFvLx2ikV2JKpzQR60mWtKJ6qRe2E/pQdMjiu15MgiT+yoJEcN4Ljj7U4aBweHTVgPB43WONRyptEN28NNAiKr2x7eDJZiovb3RZPHHB2b8q8cmAMWDRjE3h8g3FHTb22/Qqz+3bzqY59r7ylXOHd/Hjcb7+zFFvnSWV7sCyxXx1s5egxMbE4M1cXuluszx4G2BzyP9F0VF39BZJ/re+MDQAA" ConnectionId="c72318e2-86c7-491c-958e-1b82a501238d" DisplayName="List All Channels" sap:VirtualizedContainerService.HintSize="388,185.6" sap2010:WorkflowViewState.IdRef="ConnectorActivity_10" UiPathActivityTypeId="43ada18e-0ab3-351b-8f2e-9119ed31109a">
+      <isactr:ConnectorActivity.Arguments>
+        <isactr:FieldArgument Name="team_id">
+          <isactr:FieldArgument.Argument>
+            <InArgument x:TypeArguments="x:String">a3ae922f-fd7a-4f94-971d-43554ebbb4a4</InArgument>
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+        <isactr:FieldArgument Name="Jit_teams_sub_channels">
+          <isactr:FieldArgument.Argument>
+            <OutArgument x:TypeArguments="uiascb1:teams_sub_channels_List[]" />
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+      </isactr:ConnectorActivity.Arguments>
+    </isactr:ConnectorActivity>
+    <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACtVXbW/iOBD+K1a+7JeQAqtKvUj90AI9sgeFW+ju7a4qZJIJ+EjsnO3Q5hD//cZxSKGUrfauOmkrFeyx58XzPB4PGyfgSlMewphKmoIGqRx/43zCbya44zstr+k1HdfpCM4h1EL+BgWKc5ZRvWykLJRCiVg3NNBU4b6rULM108W0yMDxm64zmv+JerdoHNXKXb4fLilaS8z+vtbZEPRSRI7f2rrODYMkUuhNU8ZBmmACnuXayh3/28bZszVjEdroMpUltKjkU5QbIahQskzbY5hwiF7iP64SjjuJkEQbKSVhrrRI7VLQ9UgQ2zFThAtNYpHziDBe6kdSZI1IPHCXFCInIeUkZlJpgt5EkhzuIZpVornQpQtBFqAJraR0TVlC54kNSxGKflCOekfh4olsSh2lJeMLnI8lS6ksSkBimihwnY/wVw5KO76WeTlVmeAK9tatoJNLqiE60GPSCKxioD4wm/J6SzkbiJDajLZdZyDEKs8MQscYO7vlTzTJjbQEaoycwfHZ4RajZ5C1e6I9MO+3JY5sgQ43O5jRCNLUgLrZ27slDbJh0RYtBGqYJ5pNIMGg6vgHgkbXRRdiiou7c/a4yf6dAjlag5QsekpVoPosioDXgrFQzJ7d8BSdIEF3+TxM1Yh3KF9TZb1s3Zqy8JghxEeM7dXiA86OpVhjRCUPQpGmtKEgoyVwJGFIOREbeZbAIxElAkhFc0uIysMloYqkkM7xJhvaWdclwyQgg2BdGmYSpypDXYYClc8rE/8X3epkv8a3999L+V6KlUX9eYorMvybFFc51UuqCQcwQ0HmmCzMGotZiJe5qHNa1wlZhemRL1WZsPsLrDeYZoVVAAuQGWeIkJnFtnZYgpIMawhIzWDn7qSHnxaqhyVIOELq8056WL/xwJ3e7wOigEokN9IZz1++UT/X8e+xPOT6xQcNDc+OH8jjx02R/eWDND0l446ZYusFXMMCj4TLE5BrFoJXvdDILG/yuce1HXYu2lfnzVb7/UXXBjFDls52jmYDvAzeNb6DCXgnlr/du+QlK56a3ga3rV9u26tua3XXXv/Rvpt80HHLJVWbcVk2GV4T9ZH6uYRLDrmWNHHJOJ8nLEQkp2IF/JLnSfIKwM8A/W8IW7Y8A/j8BMBlsUd8P9KHUxCHEozzLn5MWfmoH8Lbseskwk9sHsodEyH1SEamF2odc/1GyJTisR2j0qhUhlStUFTgX2M4bETRu+m7ft9PU18h6JPJ15dzuOvDNs6vvan5Op3Uw2v0Sk7xuUSD11+C7tsaHV9NO/3vm/wx8I3N0eSNj97tDXrT3puGuTU0u2EJ9kHXOUuQGzXVTMvUoeESkLB1/1X29Lt+2TeXyJyUhiu6gKdW39zBdmu/1z/8GXDRxrVX2vkRPlpPdXC/uS859awFPNtUQW3P9mwMKF/kGJlpmEx5H9LHMU4n7G8UnTe3/wC4YJUttQwAAA==" ConnectionId="c72318e2-86c7-491c-958e-1b82a501238d" DisplayName="List All Channels" sap:VirtualizedContainerService.HintSize="388,185.6" sap2010:WorkflowViewState.IdRef="ConnectorActivity_11" UiPathActivityTypeId="43ada18e-0ab3-351b-8f2e-9119ed31109a">
+      <isactr:ConnectorActivity.Arguments>
+        <isactr:FieldArgument Name="team_id" />
+        <isactr:FieldArgument Name="Jit_teams_sub_channels">
+          <isactr:FieldArgument.Argument>
+            <OutArgument x:TypeArguments="uiascb1:teams_sub_channels_List[]" />
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+      </isactr:ConnectorActivity.Arguments>
+    </isactr:ConnectorActivity>
+    <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACtVXbW/iOBD+K5a/7BdCgVJti9QPLdAre1C4he7LVVVlkgn4SOys7dByiP++YztQKO127646aZGAeDwe28/zeDxZ0o7QhokQBkyxFAwoTRtL+gn/uRS0QavlSrlCS7QphYDQSPU7LNCc84yZaZDyUEktYxMYYKlGv7PQ8Dk3i9EiA9qolGh//BeOu8LgOMx5NRrhlGG0xPpfGpP1wExlRBvVVYlecEgijbMZxgUou5iOyHLj7bRxs6Rbse54hDFaXGcJWxT2EdqtEXSoeGb8NuxyiJniF3uJQE8iFTHWykiYayNT39VplUkn9s9cEyENiWUuIsKFGx8pmQWRvBclspA5CZkgMVfaEJxNJsmuDzG8MI2lcVNIMgFDWGFlc8YTNk78sjRhOA/acdzecnFHHlKqjeJigu2B4ilTC0dIzBINJfoRvuWgDW0YlbumzqTQsNXvDc1cMQPRzjiurMEP7OgP3EO+cXGtrgyZR7RWol0pZ3lmGdrnmK67P7Ekt1ZH1AA1g88Huy52nGXW+0RbZN6uHI98ghMu1zRjEJSpJXW55bsiAVnyaIUROrqXJ4YPIcFFbdbflSw6X7QgZti53mdbWPSvNaj+HJTi0SNUHX3JowjExjCQmvu9W53iJCjQNZ67UPVFk4k5036WVWkjWXjIkOI9xbY35h3NDpSc44qcDkKZpizQkDFHHEk4Sk7G1p4l8ECkYwClaE8J0Xk4JUyTFNIxnmQrOz+1U5gCVBDMXWCusKkzHMvRoPNxEeL/ktsG7Nf0dvgjyLcg1p71pxAXYvg3EBeYmikzRADYR0nGCBaixmMe4mFebDDd5AlVLLNMvhZpwvsvMN8gzBqzACYg+5whQ7YV+9zhBUoyzCGgDIf1dC/O8MtSdT8FBXtMfV5bd/M3brjZ/qNLNDCF4kY54/7dHfVrbf8W00Nunr3QMPDd/gW5f7lpst29A9MjGNfcJttyRxiY4JawewhqzkMoFzc0Kqs8/NwWxj82j2tnR5Vq7fC45Rdxhyq9W09018XDUD7HezCB8gvdN7cl8lyUsh5dda6qJ1e1Was6u67Nv9Suhx9MXC2Rosw4dUVGuYLjUfq5glMBuVEsKZFBPk54iEyO5AzEqciT5BWCnxD63xj2anlC8NELBLtkj/x+ZPcvURwqsJO38GfE3aW+S2/T95MIf7F4cB5DqUxfRbYWqu5r/UKqlOG2qR0SFEN6TM/QtMBP0OsFUfRu9O7yspGmDY2kD4d/Po/hug5b0t/aI/v3Mqi7x+gVTPG6xIDnXzuttw06OBs1L38c8p+Rb2P2h2+89Va72x6133SZKyuzC55gHXSe8wS1sZGaLZmaLJxCtFV/uZp+XS9bOQ6dfLx2CgU2ZZKnAj3psuqKqYqrpdCfskMGJ7VaHMTRexbU45N6cPK+GgX1w6OjOozH4zqrP0p5E+jmZwcaBMVXul3MTDnFze0eiycOuLqfiryyYAxYOGMTeHyjsammVt1+pdl92zmuYd8rby19vJsf0/32O4w7Ok8q3YNlgf3qYCtGl4lJjiuzdaG9xXrsYYDNIf8bTUeV1XeCA21inA0AAA==" ConnectionId="c72318e2-86c7-491c-958e-1b82a501238d" DisplayName="List All Channels" sap:VirtualizedContainerService.HintSize="388,185.6" sap2010:WorkflowViewState.IdRef="ConnectorActivity_13" UiPathActivityTypeId="43ada18e-0ab3-351b-8f2e-9119ed31109a">
+      <isactr:ConnectorActivity.Arguments>
+        <isactr:FieldArgument Name="team_id" />
+        <isactr:FieldArgument Name="Jit_teams_sub_channels">
+          <isactr:FieldArgument.Argument>
+            <OutArgument x:TypeArguments="uiascb1:teams_sub_channels_List[]" />
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+      </isactr:ConnectorActivity.Arguments>
+    </isactr:ConnectorActivity>
+    <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACtVXbW/iOBD+K1a+7JeQAqtKvUj90AI9sgeFW+ju7a4qZJIJ+EjsnO3Q5hD//cZxSKGUrfauOmkrFeyx58XzPB4PGyfgSlMewphKmoIGqRx/43zCbya44zstr+k1HdfpCM4h1EL+BgWKc5ZRvWykLJRCiVg3NNBU4b6rULM108W0yMDxm64zmv+JerdoHNXKXb4fLilaS8z+vtbZEPRSRI7f2rrODYMkUuhNU8ZBmmACnuXayh3/28bZszVjEdroMpUltKjkU5QbIahQskzbY5hwiF7iP64SjjuJkEQbKSVhrrRI7VLQ9UgQ2zFThAtNYpHziDBe6kdSZI1IPHCXFCInIeUkZlJpgt5EkhzuIZpVornQpQtBFqAJraR0TVlC54kNSxGKflCOekfh4olsSh2lJeMLnI8lS6ksSkBimihwnY/wVw5KO76WeTlVmeAK9tatoJNLqiE60GPSCKxioD4wm/J6SzkbiJDajLZdZyDEKs8MQscYO7vlTzTJjbQEaoycwfHZ4RajZ5C1e6I9MO+3JY5sgQ43O5jRCNLUgLrZ27slDbJh0RYtBGqYJ5pNIMGg6vgHgkbXRRdiiou7c/a4yf6dAjlag5QsekpVoPosioDXgrFQzJ7d8BSdIEF3+TxM1Yh3KF9TZb1s3Zqy8JghxEeM7dXiA86OpVhjRCUPQpGmtKEgoyVwJGFIOREbeZbAIxElAkhFc0uIysMloYqkkM7xJhvaWdclwyQgg2BdGmYSpypDXYYClc8rE/8X3epkv8a3999L+V6KlUX9eYorMvybFFc51UuqCQcwQ0HmmCzMGotZiJe5qHNa1wlZhemRL1WZsPsLrDeYZoVVAAuQGWeIkJnFtnZYgpIMawhIzWDn7qSHnxaqhyVIOELq8056WL/xwJ3e7wOigEokN9IZz1++UT/X8e+xPOT6xQcNDc+OH8jjx02R/eWDND0l446ZYusFXMMCj4TLE5BrFoJXvdDILG/yuce1HXYu2lfnzVb7/UXXBjFDls52jmYDvAzeNb6DCXgnlr/du+QlK56a3ga3rV9u26tua3XXXv/Rvpt80HHLJVWbcVk2GV4T9ZH6uYRLDrmWNHHJOJ8nLEQkp2IF/JLnSfIKwM8A/W8IW7Y8A/j8BMBlsUd8P9KHUxCHEozzLn5MWfmoH8Lbseskwk9sHsodEyH1SEamF2odc/1GyJTisR2j0qhUhlStUFTgX2M4bETRu+m7ft9PU18h6JPJ15dzuOvDNs6vvan5Op3Uw2v0Sk7xuUSD11+C7tsaHV9NO/3vm/wx8I3N0eSNj97tDXrT3puGuTU0u2EJ9kHXOUuQGzXVTMvUoeESkLB1/1X29Lt+2TeXyJyUhiu6gKdW39zBdmu/1z/8GXDRxrVX2vkRPlpPdXC/uS859awFPNtUQW3P9mwMKF/kGJlpmEx5H9LHMU4n7G8UnTe3/wC4YJUttQwAAA==" ConnectionId="c72318e2-86c7-491c-958e-1b82a501238d" DisplayName="List All Channels" sap:VirtualizedContainerService.HintSize="388,185.6" sap2010:WorkflowViewState.IdRef="ConnectorActivity_12" UiPathActivityTypeId="43ada18e-0ab3-351b-8f2e-9119ed31109a">
+      <isactr:ConnectorActivity.Arguments>
+        <isactr:FieldArgument Name="team_id" />
+        <isactr:FieldArgument Name="Jit_teams_sub_channels">
+          <isactr:FieldArgument.Argument>
+            <OutArgument x:TypeArguments="uiascb1:teams_sub_channels_List[]" />
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+      </isactr:ConnectorActivity.Arguments>
+    </isactr:ConnectorActivity>
+  </Sequence>
+</Activity>

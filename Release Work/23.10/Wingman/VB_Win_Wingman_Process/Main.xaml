@@ -1,0 +1,494 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Data;assembly=Studio.Generated.TypedDataTable1" xmlns:sd2="clr-namespace:System.Data;assembly=Studio.Generated.TypedDataTable3" xmlns:ugia="clr-namespace:UiPath.GitHub.IntegrationService.Activities;assembly=UiPath.GitHub.IntegrationService.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:uiit="clr-namespace:UiPath.IntegrationService.Infrastructure.Triggers;assembly=UiPath.IntegrationService.Infrastructure" xmlns:uisad="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:ujia="clr-namespace:UiPath.Jira.IntegrationService.Activities;assembly=UiPath.Jira.IntegrationService.Activities" xmlns:ujic="clr-namespace:UiPath.Jira.IntegrationService.Client;assembly=UiPath.Jira.IntegrationService" xmlns:umacf="clr-namespace:UiPath.MicrosoftOffice365.Activities.Calendar.Filters;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umact="clr-namespace:UiPath.MicrosoftOffice365.Activities.Calendar.Triggers;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umae="clr-namespace:UiPath.MicrosoftOffice365.Activities.Excel;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umafe="clr-namespace:UiPath.MicrosoftOffice365.Activities.Files.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umcm="clr-namespace:UiPath.MicrosoftOffice365.Calendar.Models;assembly=UiPath.MicrosoftOffice365" xmlns:umem="clr-namespace:UiPath.MicrosoftOffice365.Excel.Models;assembly=UiPath.MicrosoftOffice365" xmlns:uoia="clr-namespace:UiPath.OracleNetSuite.IntegrationService.Activities;assembly=UiPath.OracleNetSuite.IntegrationService.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="UiPathEventConnector" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathEvent" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathEventObjectType" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathEventObjectId" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathAdditionalEventData" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1214,3348.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Entity</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.Descriptor</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Enums</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Telemetry</x:String>
+      <x:String>UiPath.BAF.Infrastructure</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Connection</x:String>
+      <x:String>UiPath.Jira.IntegrationService.Activities</x:String>
+      <x:String>UiPath.IntegrationCore.Activities</x:String>
+      <x:String>UiPath.BAF.Activities</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Contracts</x:String>
+      <x:String>UiPath.Jira.IntegrationService.Client</x:String>
+      <x:String>UiPath.Jira.IntegrationService.Client</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DocumentClassification</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.DataExtraction</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Results</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Dom</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Files.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Excel.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Enums</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Calendar.Filters</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Calendar.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Filters</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Calendar.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Utilities</x:String>
+      <x:String>UiPath.Shared.Activities.Triggers</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Calendar.Triggers</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.Triggers</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.CEQL</x:String>
+      <x:String>UiPath.Workday.IntegrationService.Activities</x:String>
+      <x:String>UiPath.IntegrationCore.Models</x:String>
+      <x:String>UiPath.OracleNetSuite.IntegrationService.Activities</x:String>
+      <x:String>UiPath.GitHub.IntegrationService.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.BAF.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.Jira.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Jira.IntegrationService</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.StudioWeb.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable1</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable3</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable2</AssemblyReference>
+      <AssemblyReference>UiPath.Workday.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workday.IntegrationService</AssemblyReference>
+      <AssemblyReference>UiPath.OracleNetSuite.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GitHub.IntegrationService.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="433.6,81.6" Id="Assign_1" />
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="433.6,164.8" Id="InvokeCode_1" />
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="433.6,142.4" Id="LogMessage_3" />
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="433.6,142.4" Id="LogMessage_1" />
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="433.6,90.4" Id="WriteLine_1" />
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="433.6,205.6" Id="GetRecord_1" />
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="496,1139.2" Id="Sequence_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="1216,1204" Id="ActivityBuilder_1" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="496,3283.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:List(x:String)" Name="myList" />
+      <Variable x:TypeArguments="x:Object" Name="myIEnum" />
+      <Variable x:TypeArguments="x:String" Name="result" />
+      <Variable x:TypeArguments="x:String" Name="var_filterId" />
+      <Variable x:TypeArguments="ujic:Issue_comment" Name="myResponse" />
+      <Variable x:TypeArguments="uisad:IDocumentData(uisad:ExtendedExtractionResultsForDocumentData)" Name="my_DocData" />
+      <Variable x:TypeArguments="x:String" Name="issue" />
+      <Variable x:TypeArguments="umcm:O365EventItem" Name="eventCreated" />
+      <Variable x:TypeArguments="x:String" Name="groupName" />
+      <Variable x:TypeArguments="x:String" Name="filterName" />
+      <Variable x:TypeArguments="x:String" Name="filterId" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="scg:List(x:String)">[myList]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="scg:List(x:String)">[New List(Of String) From {"Charles I", "Charles II", "Edward I", "Edward II", "Edward III", "Edward IV", "Edward V", "Edward VI", "Philip", "Philip II", "Philip III", "Philip IV", "Philip V"}]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="result = myList.Where(Function(king) king.StartsWith(&quot;C&quot;) Or king.StartsWith(&quot;E&quot;) Or king.StartsWith(&quot;P&quot;)).OrderBy(Function(king) king.Length).ElementAt(4).ToLower()" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="434,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+      <ui:InvokeCode.Arguments>
+        <OutArgument x:TypeArguments="x:String" x:Key="result">[result]</OutArgument>
+        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="myList">[myList]</InArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[result]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[New List(Of String) From {&quot;Charles I&quot;, &quot;Charles II&quot;, &quot;Edward I&quot;, &quot;Edward II&quot;, &quot;Edward III&quot;, &quot;Edward IV&quot;, &quot;Edward V&quot;, &quot;Edward VI&quot;, &quot;Philip&quot;, &quot;Philip II&quot;, &quot;Philip III&quot;, &quot;Philip IV&quot;, &quot;Philip V&quot;}.Where(Function(king) king.StartsWith(&quot;C&quot;) Or king.StartsWith(&quot;E&quot;) Or king.StartsWith(&quot;P&quot;)).OrderBy(Function(king) king.Length).ElementAt(4).ToLower()]" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,91.2" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[String.Concat(gc_test, my_gv, result)]" />
+    <ujia:GetRecord ActivityInstanceId="da1b47ce-ec2d-4ddd-a3cc-c932d989e547" BindingsVersion="2.1" BusinessEntityName="Issues" ConfiguredBusinessEntity="" ConnectionId="b154b758-a99f-ec11-a99b-e42aac668fcd" Connector="uipath-atlassian-jira" CrudOperation="Get" DesignConnectionEnabled="True" DisplayName="Get Record" sap:VirtualizedContainerService.HintSize="434,207.6" sap2010:WorkflowViewState.IdRef="GetRecord_1" IsAdditionalPropertiesActive="False">
+      <ujia:GetRecord.BusinessEntity>
+        <uibi:BusinessEntity Name="curated_issue">
+          <uibi:BusinessEntity.AllFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="2">
+              <x:Reference>__ReferenceID0</x:Reference>
+              <x:Reference>__ReferenceID1</x:Reference>
+            </scg:List>
+          </uibi:BusinessEntity.AllFields>
+          <uibi:BusinessEntity.EntityMetadata>
+            <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID2}" DisplayName="Issues" EligibleOperations="2" IsCustomEntity="False" Name="curated_issue" />
+          </uibi:BusinessEntity.EntityMetadata>
+          <uibi:BusinessEntity.Metadata>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID2">
+              <x:String x:Key="Object">curated_issue</x:String>
+              <x:String x:Key="Client">UiPath.Jira.IntegrationService.Client.Curated_issueAPIClient</x:String>
+              <x:String x:Key="Operation">GetCurated_issueByIssueId</x:String>
+              <x:String x:Key="Path">/curated_issue/{issueId}</x:String>
+            </scg:Dictionary>
+          </uibi:BusinessEntity.Metadata>
+          <uibi:BusinessEntity.SelectedFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
+              <x:Reference>__ReferenceID0</x:Reference>
+              <x:Reference>__ReferenceID1</x:Reference>
+            </scg:List>
+          </uibi:BusinessEntity.SelectedFields>
+          <uibi:BusinessEntity.TelemetryProperties>
+            <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+          </uibi:BusinessEntity.TelemetryProperties>
+        </uibi:BusinessEntity>
+      </ujia:GetRecord.BusinessEntity>
+      <ujia:GetRecord.CachedLookupValues>
+        <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)" />
+      </ujia:GetRecord.CachedLookupValues>
+      <ujia:GetRecord.DesignConnectionRequest>
+        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="b154b758-a99f-ec11-a99b-e42aac668fcd" ConnectionName="liviu.ponova@uipath.com" ConnectorKey="uipath-atlassian-jira">
+          <uiisi:ConnectionParameters.TelemetryInfo>
+            <uiisi:TelemetryInfo ActivityPack="UiPath.Jira.IntegrationService.Activities" ActivityPackVersion="6.1.0" Source="StudioDesktop" />
+          </uiisi:ConnectionParameters.TelemetryInfo>
+        </uiisi:ConnectionParameters>
+      </ujia:GetRecord.DesignConnectionRequest>
+      <ujia:GetRecord.SelectedFields>
+        <scg:List x:TypeArguments="uibi:EntityField" Capacity="2">
+          <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID0" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="To begin, enter the full issue key(Project-1234)" DisplayName="Issue" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="issueId" ShouldFilterOnChange="False" />
+          <uiisi:OperationEntityField x:TypeArguments="ujic:Curated_issue" Description="{x:Null}" x:Name="__ReferenceID1" ArgumentDirection="Out" ArgumentType="ujic:Curated_issue" DataType="Curated_issue" DisplayName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response" ShouldFilterOnChange="False" />
+        </scg:List>
+      </ujia:GetRecord.SelectedFields>
+      <ujia:GetRecord.TelemetryProperties>
+        <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+      </ujia:GetRecord.TelemetryProperties>
+    </ujia:GetRecord>
+    <ujia:GetRecord Language="{x:Null}" ActivityInstanceId="f6c65d3c-fdec-4769-a816-269d1c3253c9" BindingsVersion="2.1" BusinessEntityName="Filters" ConfiguredBusinessEntity="" ConnectionId="b154b758-a99f-ec11-a99b-e42aac668fcd" Connector="uipath-atlassian-jira" CrudOperation="Get" DesignConnectionEnabled="True" DisplayName="Get Record" sap:VirtualizedContainerService.HintSize="434,207.6" sap2010:WorkflowViewState.IdRef="GetRecord_2" IsAdditionalPropertiesActive="False">
+      <ujia:GetRecord.BusinessEntity>
+        <uibi:BusinessEntity Name="filter">
+          <uibi:BusinessEntity.AllFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="3">
+              <x:Reference>__ReferenceID3</x:Reference>
+              <x:Reference>__ReferenceID4</x:Reference>
+              <x:Reference>__ReferenceID5</x:Reference>
+            </scg:List>
+          </uibi:BusinessEntity.AllFields>
+          <uibi:BusinessEntity.EntityMetadata>
+            <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID6}" DisplayName="Filters" EligibleOperations="2" IsCustomEntity="False" Name="filter" />
+          </uibi:BusinessEntity.EntityMetadata>
+          <uibi:BusinessEntity.Metadata>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID6">
+              <x:String x:Key="Object">filter</x:String>
+              <x:String x:Key="Client">UiPath.Jira.IntegrationService.Client.FilterAPIClient</x:String>
+              <x:String x:Key="Operation">GetFilterByFilterId</x:String>
+              <x:String x:Key="Path">/filter/{filterId}</x:String>
+            </scg:Dictionary>
+          </uibi:BusinessEntity.Metadata>
+          <uibi:BusinessEntity.SelectedFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
+              <x:Reference>__ReferenceID3</x:Reference>
+              <x:Reference>__ReferenceID4</x:Reference>
+              <x:Reference>__ReferenceID5</x:Reference>
+            </scg:List>
+          </uibi:BusinessEntity.SelectedFields>
+          <uibi:BusinessEntity.TelemetryProperties>
+            <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+          </uibi:BusinessEntity.TelemetryProperties>
+        </uibi:BusinessEntity>
+      </ujia:GetRecord.BusinessEntity>
+      <ujia:GetRecord.CachedLookupValues>
+        <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)" />
+      </ujia:GetRecord.CachedLookupValues>
+      <ujia:GetRecord.DesignConnectionRequest>
+        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="b154b758-a99f-ec11-a99b-e42aac668fcd" ConnectionName="liviu.ponova@uipath.com" ConnectorKey="uipath-atlassian-jira">
+          <uiisi:ConnectionParameters.TelemetryInfo>
+            <uiisi:TelemetryInfo ActivityPack="UiPath.Jira.IntegrationService.Activities" ActivityPackVersion="6.1.0" Source="StudioDesktop" />
+          </uiisi:ConnectionParameters.TelemetryInfo>
+        </uiisi:ConnectionParameters>
+      </ujia:GetRecord.DesignConnectionRequest>
+      <ujia:GetRecord.SelectedFields>
+        <scg:List x:TypeArguments="uibi:EntityField" Capacity="3">
+          <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID3" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The filter id" DisplayName="Filter id" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="filterId" ShouldFilterOnChange="False" />
+          <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID4" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Use [expand](#expansion) to include additional information about filter in the response. This parameter accepts a comma-separated list. Expand options include:&#xA;&#xA; *  `sharedUsers` Returns the users that the filter is shared with. This includes users that can browse projects that the filter is shared with. If you don't specify `sharedUsers`, then the `sharedUsers` object is returned but it doesn't list any users. The list of users returned is limited to 1000, to access additional users append `[start-index:end-index]` to the expand request. For example, to access the next 1000 users, use `?expand=sharedUsers[1001:2000]`.&#xA; *  `subscriptions` Returns the users that are subscribed to the filter. If you don't specify `subscriptions`, the `subscriptions` object is returned but it doesn't list any subscriptions. The list of subscriptions returned is limited to 1000, to access additional subscriptions append `[start-index:end-index]` to the expand request. For example, to access the next 1000 subscriptions, use `?expand=subscriptions[1001:2000]`." DisplayName="Expand" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="expand" ShouldFilterOnChange="False" />
+          <uiisi:OperationEntityField x:TypeArguments="ujic:Filter" Description="{x:Null}" x:Name="__ReferenceID5" ArgumentDirection="Out" ArgumentType="ujic:Filter" DataType="Filter" DisplayName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response" ShouldFilterOnChange="False" />
+        </scg:List>
+      </ujia:GetRecord.SelectedFields>
+      <ujia:GetRecord.TelemetryProperties>
+        <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+      </ujia:GetRecord.TelemetryProperties>
+    </ujia:GetRecord>
+    <umact:NewEventCreated BrowserCalendarFriendlyName="{x:Null}" BrowserCalendarGroupId="{x:Null}" BrowserCalendarId="{x:Null}" BrowserGroupId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" JobData="{x:Null}" AuthScopesInvalid="False" ConnectionId="7ab8e158-a79f-ec11-a99b-e42aac668fcd" DisplayName="Calendar Event Created" FilterExpression="((AllDay==`false`))" sap:VirtualizedContainerService.HintSize="434,176" sap2010:WorkflowViewState.IdRef="NewEventCreated_1" Result="[eventCreated]" UiPathEvent="[UiPathEvent]" UiPathEventConnector="[UiPathEventConnector]" UiPathEventObjectId="[UiPathEventObjectId]" UiPathEventObjectType="[UiPathEventObjectType]" UseConnectionService="True">
+      <umact:NewEventCreated.Filter>
+        <umacf:TriggerEventFilterCollection LogicalOperator="And">
+          <umacf:TriggerEventFilterCollection.Filters>
+            <umacf:TriggerEventFilterElement StringValue="{x:Null}" ArrayStringComposedOperator="Contains" ArrayStringOperator="Contains" BoolOperator="IsFalse" Criteria="AllDay" EqualityOperator="Equals" ImportanceValue="Low" SensitivityValue="Normal" ShowAsValue="Free" StringOperator="Contains" StringSubsetOperator="Contains" />
+          </umacf:TriggerEventFilterCollection.Filters>
+        </umacf:TriggerEventFilterCollection>
+      </umact:NewEventCreated.Filter>
+    </umact:NewEventCreated>
+    <uoia:CreateTrigger EventObjectId="{x:Null}" Language="{x:Null}" UiPathEvent="{x:Null}" UiPathEventConnector="{x:Null}" UiPathEventObjectId="{x:Null}" UiPathEventObjectType="{x:Null}" ActivityInstanceId="835e5420-6f59-4c76-b8e0-ec7d4cfb5e1b" BindingsVersion="2.1" ConfiguredBusinessEntity="" ConnectionId="952d4aad-d564-ed11-ade6-e42aac668fcd" Connector="uipath-oracle-netsuite" CrudOperation="Trigger" DesignConnectionEnabled="True" DisplayName="Event Trigger" FilterExpression="((contains(category.name,'test')))" sap:VirtualizedContainerService.HintSize="434,280.8" sap2010:WorkflowViewState.IdRef="CreateTrigger_1" ObjectName="SupportCase">
+      <uoia:CreateTrigger.BusinessEntity>
+        <uibi:BusinessEntity AllFields="{x:Null}" Name="SupportCase">
+          <uibi:BusinessEntity.EntityMetadata>
+            <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID7}" Category="Lists" DisplayName="Support Case" EligibleOperations="64" IsCustomEntity="False" Name="SupportCase" Section="Support" />
+          </uibi:BusinessEntity.EntityMetadata>
+          <uibi:BusinessEntity.Metadata>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID7">
+              <x:String x:Key="Object">SupportCase</x:String>
+              <x:String x:Key="Client">UiPath.OracleNetSuite.IntegrationService.Client.SupportCaseAPIClient</x:String>
+              <x:String x:Key="Operation">GetSupportCase</x:String>
+              <x:String x:Key="Path">/SupportCase</x:String>
+            </scg:Dictionary>
+          </uibi:BusinessEntity.Metadata>
+          <uibi:BusinessEntity.TelemetryProperties>
+            <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+          </uibi:BusinessEntity.TelemetryProperties>
+        </uibi:BusinessEntity>
+      </uoia:CreateTrigger.BusinessEntity>
+      <uoia:CreateTrigger.CachedLookupValues>
+        <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)" />
+      </uoia:CreateTrigger.CachedLookupValues>
+      <uoia:CreateTrigger.DesignConnectionRequest>
+        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="952d4aad-d564-ed11-ade6-e42aac668fcd" ConnectionName="2144368" ConnectorKey="uipath-oracle-netsuite">
+          <uiisi:ConnectionParameters.TelemetryInfo>
+            <uiisi:TelemetryInfo ActivityPack="UiPath.OracleNetSuite.IntegrationService.Activities" ActivityPackVersion="5.2.0" Source="StudioDesktop" />
+          </uiisi:ConnectionParameters.TelemetryInfo>
+        </uiisi:ConnectionParameters>
+      </uoia:CreateTrigger.DesignConnectionRequest>
+      <uoia:CreateTrigger.Filter>
+        <uiisi:FilterTree Index="0" SearchableJoin="And">
+          <uiisi:FilterTree.Filters>
+            <scg:List x:TypeArguments="uiisi:Filter" Capacity="4">
+              <uiisi:Filter ComputedValue="{x:Null}" SearchableField="{x:Null}" Criteria="category.name" Operator="Contains" Value="test" />
+            </scg:List>
+          </uiisi:FilterTree.Filters>
+          <uiisi:FilterTree.Groups>
+            <scg:List x:TypeArguments="uiisi:FilterTree" Capacity="0" />
+          </uiisi:FilterTree.Groups>
+        </uiisi:FilterTree>
+      </uoia:CreateTrigger.Filter>
+      <uoia:CreateTrigger.Operation>
+        <uiit:TriggerOperation DisplayName="Support case raised" Key="SUPPORT_CASE_CREATED" ObjectName="SupportCase" />
+      </uoia:CreateTrigger.Operation>
+      <uoia:CreateTrigger.TelemetryProperties>
+        <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+      </uoia:CreateTrigger.TelemetryProperties>
+    </uoia:CreateTrigger>
+    <ugia:CreateTrigger EventObjectId="{x:Null}" Language="{x:Null}" UiPathEvent="{x:Null}" UiPathEventConnector="{x:Null}" UiPathEventObjectId="{x:Null}" UiPathEventObjectType="{x:Null}" ActivityInstanceId="c76ef7e4-f7a8-42a2-b55a-f704bae6ecf7" BindingsVersion="2.1" ConfiguredBusinessEntity="" ConnectionId="e173e903-6ea0-ec11-a99b-e42aac668fcd" Connector="uipath-microsoft-github" CrudOperation="Trigger" DesignConnectionEnabled="True" DisplayName="Event Trigger" FilterExpression="((allow_forking==`true`))" sap:VirtualizedContainerService.HintSize="434,280.8" sap2010:WorkflowViewState.IdRef="CreateTrigger_2" ObjectName="repos">
+      <ugia:CreateTrigger.BusinessEntity>
+        <uibi:BusinessEntity AllFields="{x:Null}" Name="repos">
+          <uibi:BusinessEntity.EntityMetadata>
+            <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID8}" DisplayName="Repos" EligibleOperations="64" IsCustomEntity="False" Name="repos" />
+          </uibi:BusinessEntity.EntityMetadata>
+          <uibi:BusinessEntity.Metadata>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID8">
+              <x:String x:Key="Object">repos</x:String>
+              <x:String x:Key="Client">UiPath.GitHub.IntegrationService.Client.ReposAPIClient</x:String>
+              <x:String x:Key="Operation">GetRepos</x:String>
+              <x:String x:Key="Path">/repos</x:String>
+            </scg:Dictionary>
+          </uibi:BusinessEntity.Metadata>
+          <uibi:BusinessEntity.TelemetryProperties>
+            <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+          </uibi:BusinessEntity.TelemetryProperties>
+        </uibi:BusinessEntity>
+      </ugia:CreateTrigger.BusinessEntity>
+      <ugia:CreateTrigger.CachedLookupValues>
+        <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)" />
+      </ugia:CreateTrigger.CachedLookupValues>
+      <ugia:CreateTrigger.DesignConnectionRequest>
+        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="e173e903-6ea0-ec11-a99b-e42aac668fcd" ConnectionName="LiviuPonova" ConnectorKey="uipath-microsoft-github">
+          <uiisi:ConnectionParameters.TelemetryInfo>
+            <uiisi:TelemetryInfo ActivityPack="UiPath.GitHub.IntegrationService.Activities" ActivityPackVersion="5.1.0" Source="StudioDesktop" />
+          </uiisi:ConnectionParameters.TelemetryInfo>
+        </uiisi:ConnectionParameters>
+      </ugia:CreateTrigger.DesignConnectionRequest>
+      <ugia:CreateTrigger.Filter>
+        <uiisi:FilterTree Index="0" SearchableJoin="And">
+          <uiisi:FilterTree.Filters>
+            <scg:List x:TypeArguments="uiisi:Filter" Capacity="4">
+              <uiisi:Filter ComputedValue="{x:Null}" SearchableField="{x:Null}" Value="{x:Null}" Criteria="allow_forking" Operator="Is" />
+            </scg:List>
+          </uiisi:FilterTree.Filters>
+          <uiisi:FilterTree.Groups>
+            <scg:List x:TypeArguments="uiisi:FilterTree" Capacity="0" />
+          </uiisi:FilterTree.Groups>
+        </uiisi:FilterTree>
+      </ugia:CreateTrigger.Filter>
+      <ugia:CreateTrigger.Operation>
+        <uiit:TriggerOperation DisplayName="Repository created" Key="REPO_CREATED" ObjectName="repos" />
+      </ugia:CreateTrigger.Operation>
+      <ugia:CreateTrigger.TelemetryProperties>
+        <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+      </ugia:CreateTrigger.TelemetryProperties>
+    </ugia:CreateTrigger>
+    <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisad:ExtendedExtractionResultsForDocumentData" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" DisplayName="Extract Document Data" DocType="Generative (Preview)" ExtractionResults="[my_DocData]" FileInput="[LocalResource.FromPath(&quot;Sequence.xaml&quot;)]" sap:VirtualizedContainerService.HintSize="434,247.2" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_1" ProjectId="00000000-0000-0000-0000-000000000000" Prompt="{}{&quot;prompt&quot;:&quot;test&quot;,&quot;promnpt2&quot;:&quot;test2&quot;,&quot;zvb&quot;:&quot;zsx&quot;}" />
+    <umae:ForEachRowConnections x:TypeArguments="sd:DataRow" ConnectionAccountName="{x:Null}" Length="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" TemplateBrowserDriveName="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" TemplateBrowserSiteUrl="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" BrowserDriveId="b!frXXpPiMUUeySBdPnsYDdp3DcBCUf9JJj0-gqeG1o5if5BnfZwKOTptt-oCH_wTS" BrowserDriveName="OneDrive" BrowserItemFriendlyName="Automation_Tests.xlsx" BrowserItemId="01E5QZP42XD6L5II3Z4VCI4KNQLXI4WHGU" BrowserSiteUrl="https://uipath-my.sharepoint.com/personal/liviu_ponova_uipath_com/Documents" ConnectionId="6c7f2070-9d31-4c48-8be2-75a2929ce624" DisplayName="For Each Row in Workbook" EmptyRowAction="Skip" sap:VirtualizedContainerService.HintSize="434,706.8" sap2010:WorkflowViewState.IdRef="ForEachRowConnections`1_1" IncludeHeaders="True" ItemSelectionMode="Browse" Range="'5_E2E_Automation_Status_Legacy_'" UseConnectionService="True">
+      <umae:ForEachRowConnections.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow, x:Int32">
+          <ActivityAction.Argument1>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+          </ActivityAction.Argument1>
+          <ActivityAction.Argument2>
+            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentRowIndex" />
+          </ActivityAction.Argument2>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,400.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd1:DataTable1" Name="my_Dt1" />
+              <Variable x:TypeArguments="umem:RangeInformation" Name="out_RangeInfo" />
+              <Variable x:TypeArguments="sd2:DataTable3" Name="my_Dt4" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <umae:ReadRangeConnections x:TypeArguments="sd:DataTable" BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" ColumnNames="{x:Array Type=x:String}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" Result="{x:Null}" TemplateBrowserDriveName="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" TemplateBrowserSiteUrl="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" BrowserDriveId="b!frXXpPiMUUeySBdPnsYDdp3DcBCUf9JJj0-gqeG1o5if5BnfZwKOTptt-oCH_wTS" BrowserDriveName="OneDrive" BrowserItemFriendlyName="Automation_Tests.xlsx" BrowserItemId="01E5QZP42XD6L5II3Z4VCI4KNQLXI4WHGU" BrowserSiteUrl="https://uipath-my.sharepoint.com/personal/liviu_ponova_uipath_com/Documents" ConnectionId="6c7f2070-9d31-4c48-8be2-75a2929ce624" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="334,312.4" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_1" ItemSelectionMode="Browse" Range="'5_E2E_Automation_Status_Legacy_'" ReadAs="Values" UseConnectionService="True" WorkingWithTemplateWorkbook="True">
+              <umae:ReadRangeConnections.ItemIdBackup>
+                <usau:BackupSlot x:TypeArguments="umafe:EDriveItemMode" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="umafe:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </umae:ReadRangeConnections.ItemIdBackup>
+              <umae:ReadRangeConnections.RangeMetadata>
+                <umem:RangeMetadataSlim ColumnStart="1" RangeType="Sheet" />
+              </umae:ReadRangeConnections.RangeMetadata>
+            </umae:ReadRangeConnections>
+          </Sequence>
+        </ActivityAction>
+      </umae:ForEachRowConnections.Body>
+      <umae:ForEachRowConnections.ColumnNames>
+        <x:Array Type="x:String">
+          <x:String></x:String>
+          <x:String></x:String>
+          <x:String></x:String>
+          <x:String></x:String>
+          <x:String></x:String>
+          <x:String></x:String>
+        </x:Array>
+      </umae:ForEachRowConnections.ColumnNames>
+      <umae:ForEachRowConnections.ItemIdBackup>
+        <usau:BackupSlot x:TypeArguments="umafe:EDriveItemMode" StoredValue="Browse">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="umafe:EDriveItemMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </umae:ForEachRowConnections.ItemIdBackup>
+      <umae:ForEachRowConnections.RangeMetadata>
+        <umem:RangeMetadataSlim ColumnStart="1" RangeType="Sheet" />
+      </umae:ForEachRowConnections.RangeMetadata>
+    </umae:ForEachRowConnections>
+  </Sequence>
+</Activity>

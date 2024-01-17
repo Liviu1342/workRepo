@@ -1,0 +1,216 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1024,1223.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:d="clr-namespace:DictionaryWidget_Win_CS_Lib;assembly=DictionaryWidget_Win_CS_Lib" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uisad="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DocumentClassification;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:uisad1="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:uisad2="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DataValidation;assembly=UiPath.IntelligentOCR.StudioWeb.Activities" xmlns:uisasepb="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.PaySlips.Bundle;assembly=ExtendedExtractionRe.IafYF2H1yoE1zuG29sHBig1" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>DictionaryWidget_Win_CS_Lib</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DocumentClassification</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.DataExtraction</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Results</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Dom</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.EUDeclarationOfConformity.Bundle</x:String>
+      <x:String>TestActivities</x:String>
+      <x:String>TestActivities.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Classification</x:String>
+      <x:String>UiPath.DocumentUnderstanding.ML.Activities</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DataValidation</x:String>
+      <x:String>UiPath.IntelligentOCR.Actions.Abstractions</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.PaySlips.Bundle</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Actions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>DictionaryWidget_Win_CS_Lib</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.StudioWeb.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>ExtendedExtractionRe.yJZ032SWBnO1lnDPe3o2KNQ1</AssemblyReference>
+      <AssemblyReference>TestActivities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR</AssemblyReference>
+      <AssemblyReference>ExtendedExtractionRe.IafYF2H1yoE1zuG29sHBig1</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="450,1158.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="uisad:DocumentData" Name="_out_ClassifyDocument_1__ClassificationResults" />
+      <Variable x:TypeArguments="uisad1:IDocumentData(uisasepb:PaySlips)" Name="_out_ExtractDocumentDataWithDocumentData_Generic_1_1__ExtractionResults" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <p:ClassifyDocument ClassifierResult="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" DocumentTypes="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" DisplayName="Classify Document" sap:VirtualizedContainerService.HintSize="388,319.2" sap2010:WorkflowViewState.IdRef="ClassifyDocument_1">
+      <p:ClassifyDocument.ApiKey>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_4">+BEDWC4X2ui62KdfbYgUVd4i97/DEyVng8ifjTYOH8ikA+EGU+MiFRLRpFmPUALP</Literal>
+        </InArgument>
+      </p:ClassifyDocument.ApiKey>
+      <p:ClassifyDocument.ClassificationResults>
+        <OutArgument x:TypeArguments="uisad:DocumentData">
+          <CSharpReference x:TypeArguments="uisad:DocumentData">_out_ClassifyDocument_1__ClassificationResults</CSharpReference>
+        </OutArgument>
+      </p:ClassifyDocument.ClassificationResults>
+      <p:ClassifyDocument.ClassifierId>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_2">Predefined</Literal>
+        </InArgument>
+      </p:ClassifyDocument.ClassifierId>
+      <p:ClassifyDocument.Endpoint>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_3">https://du-alpha.uipath.com:443/classify/MLclassification</Literal>
+        </InArgument>
+      </p:ClassifyDocument.Endpoint>
+      <p:ClassifyDocument.FileInput>
+        <InArgument x:TypeArguments="upr:IResource">
+          <CSharpValue x:TypeArguments="upr:IResource">LocalResource.FromPath("C:\\Users\\Liviu.Ponova\\Downloads\\TREZ706_ExtrasPF_PDFCLI_1870718410017_XML_SIGNED_30062023h2133 (1).pdf")</CSharpValue>
+        </InArgument>
+      </p:ClassifyDocument.FileInput>
+      <p:ClassifyDocument.MinimumConfidence>
+        <InArgument x:TypeArguments="x:Single">
+          <Literal x:TypeArguments="x:Single" sap2010:WorkflowViewState.IdRef="Literal`1_5" Value="50" />
+        </InArgument>
+      </p:ClassifyDocument.MinimumConfidence>
+      <p:ClassifyDocument.ProjectId>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_1">00000000-0000-0000-0000-000000000000</Literal>
+        </InArgument>
+      </p:ClassifyDocument.ProjectId>
+    </p:ClassifyDocument>
+    <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisasepb:PaySlips" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" DisplayName="Extract Document Data" sap:VirtualizedContainerService.HintSize="388,320" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_1">
+      <p:ExtractDocumentDataWithDocumentData.DocType>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_12">Pay slips</Literal>
+        </InArgument>
+      </p:ExtractDocumentDataWithDocumentData.DocType>
+      <p:ExtractDocumentDataWithDocumentData.ExtractionResults>
+        <OutArgument x:TypeArguments="uisad1:IDocumentData(uisasepb:PaySlips)">
+          <CSharpReference x:TypeArguments="uisad1:IDocumentData(uisasepb:PaySlips)">_out_ExtractDocumentDataWithDocumentData_Generic_1_1__ExtractionResults</CSharpReference>
+        </OutArgument>
+      </p:ExtractDocumentDataWithDocumentData.ExtractionResults>
+      <p:ExtractDocumentDataWithDocumentData.FileInput>
+        <InArgument x:TypeArguments="upr:IResource">
+          <CSharpValue x:TypeArguments="upr:IResource">LocalResource.FromPath("C:\\Users\\Liviu.Ponova\\Downloads\\Lista_38.pdf")</CSharpValue>
+        </InArgument>
+      </p:ExtractDocumentDataWithDocumentData.FileInput>
+      <p:ExtractDocumentDataWithDocumentData.ProjectId>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_11">00000000-0000-0000-0000-000000000000</Literal>
+        </InArgument>
+      </p:ExtractDocumentDataWithDocumentData.ProjectId>
+    </p:ExtractDocumentDataWithDocumentData>
+    <uisad2:CreateValidationAction x:TypeArguments="uisasepb:PaySlips" ContainsDocument="{x:Null}" ContainsTaxonomy="{x:Null}" CreatedValidationAction="{x:Null}" FieldsValidationConfidence="{x:Null}" OrchestratorFolderId="{x:Null}" OriginalFilePath="{x:Null}" DisplayName="Create Validation Task" sap:VirtualizedContainerService.HintSize="388,144.4" sap2010:WorkflowViewState.IdRef="CreateValidationAction`1_1">
+      <uisad2:CreateValidationAction.ActionCatalogue>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_7">default_du_actions</Literal>
+        </InArgument>
+      </uisad2:CreateValidationAction.ActionCatalogue>
+      <uisad2:CreateValidationAction.ActionPriority>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_6">Medium</Literal>
+        </InArgument>
+      </uisad2:CreateValidationAction.ActionPriority>
+      <uisad2:CreateValidationAction.ActionTitle>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_13">test</Literal>
+        </InArgument>
+      </uisad2:CreateValidationAction.ActionTitle>
+      <uisad2:CreateValidationAction.AutomaticExtractionResults>
+        <InArgument x:TypeArguments="uisad1:IDocumentData(uisasepb:PaySlips)">
+          <CSharpValue x:TypeArguments="uisad1:IDocumentData(uisasepb:PaySlips)">_out_ExtractDocumentDataWithDocumentData_Generic_1_1__ExtractionResults</CSharpValue>
+        </InArgument>
+      </uisad2:CreateValidationAction.AutomaticExtractionResults>
+      <uisad2:CreateValidationAction.BucketId>
+        <InArgument x:TypeArguments="x:Int64">
+          <Literal x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="Literal`1_8" Value="49737" />
+        </InArgument>
+      </uisad2:CreateValidationAction.BucketId>
+      <uisad2:CreateValidationAction.BucketName>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_9">du_storage_bucket</Literal>
+        </InArgument>
+      </uisad2:CreateValidationAction.BucketName>
+      <uisad2:CreateValidationAction.OrchestratorFolderName>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_10">liviu.ponova@uipath.com's workspace</Literal>
+        </InArgument>
+      </uisad2:CreateValidationAction.OrchestratorFolderName>
+    </uisad2:CreateValidationAction>
+    <d:NewActivity out_Property="{x:Null}" sap:VirtualizedContainerService.HintSize="388,143.6" sap2010:WorkflowViewState.IdRef="NewActivity_1">
+      <d:NewActivity.inOut_TestArg>
+        <InArgument x:TypeArguments="scg:IDictionary(x:String, InArgument(x:Int32))" />
+      </d:NewActivity.inOut_TestArg>
+    </d:NewActivity>
+  </Sequence>
+</Activity>

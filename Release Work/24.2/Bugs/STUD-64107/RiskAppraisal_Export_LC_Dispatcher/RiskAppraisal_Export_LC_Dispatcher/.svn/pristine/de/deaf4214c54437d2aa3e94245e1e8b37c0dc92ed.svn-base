@@ -1,0 +1,496 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Process" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Transaction item to be processed." Name="in_TransactionItem" Type="InArgument(sd:DataRow)" />
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_dt_TransactionData" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="In_TransactionNumber" Type="InArgument(x:Int32)" />
+    <x:Property Name="out_TFReference" Type="OutArgument(x:String)" />
+    <x:Property Name="in_LogFilePath" Type="InArgument(x:String)" />
+    <x:Property Name="in_dtCountryVariants" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_dtBeneRating" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_dtPortCountryList" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_dtCustomerList" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_dtCountryCodes" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="out_blnLCDownloadSuccess" Type="OutArgument(x:Boolean)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>713,2918</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="58">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Windows.Forms</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="48">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualStudio.Services.Common</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="702,2853" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="str_ApplicantCountry">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="str_AutomaticEdd">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="str_BeneCountry">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="str_GoodsDescription">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="str_ApplicantName">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="str_BeneName">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="str_AvailableWithBank">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="str_IssBnkCtry">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="str_LcCurrencyType">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="str_TenorAndValidity">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="str_LcAmount">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="strTFReference">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="str_TypeOfLc">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="str_PortOfLoading">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="str_IssBnkName">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:Boolean" Name="bol_InvalidError" />
+      <Variable x:TypeArguments="x:String" Name="str_PortOfDischarge">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="str_PortOfDischargeCountry">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="str_AvailableWithCountry">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="str_PortOfLoadingCountry">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="str_BeneRating">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="str_ExpiryDate">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:Boolean" Name="bol_AmendmentInfoExists" />
+      <Variable x:TypeArguments="x:String" Name="str_LcNumber">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:Boolean" Name="blnLCDownloadSuccess" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="640,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
+    <Sequence sap:VirtualizedContainerService.HintSize="640,2538" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign DisplayName="Assign TFReference" sap:VirtualizedContainerService.HintSize="578,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[strTFReference]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[in_TransactionItem("Transaction Ref").ToString.ToUpper]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="578,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+        <ui:CommentOut.Body>
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,224" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 1. LoginT24 workflow" sap:VirtualizedContainerService.HintSize="338,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="T24\T24 Login.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
+        </ui:CommentOut.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:CommentOut>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="578,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;TFReference being processed is: &quot; + strTFReference.ToString]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LogMessage>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName=" T24 Extractions workflow" sap:VirtualizedContainerService.HintSize="578,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Extraction Workflows\T24 Extractions.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <OutArgument x:TypeArguments="x:String" x:Key="OUT_IssBnkName">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_IssBnkName" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="OUT_IssBnkCtryRisk">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_IssBnkCtry" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="OUT_LcCurrencyType">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_LcCurrencyType" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="OUT_LcAmount">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_LcAmount" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="OUT_ApplicantName">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_ApplicantName" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="OUT_AppNameCtry">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_ApplicantCountry" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="OUT_BeneName">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_BeneName" />
+          </OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="IN_TfReference">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strTFReference" />
+          </InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="OUT_PortOfLoading">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_PortOfLoading" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="OUT_BeneCountry">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_BeneCountry" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="OUT_ApplicantCountry">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_ApplicantCountry" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="OUT_TypeOfLC">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_TypeOfLc" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="OUT_TenorAndValidity">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_TenorAndValidity" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="OUT_PortOfLoadingCountry">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_PortOfLoadingCountry" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="OUT_AvailableWithBank">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_AvailableWithBank" />
+          </OutArgument>
+          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+            <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+          </InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="OUT_AvailableWithCountry">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_AvailableWithCountry" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="OUT_PortOfDischarge">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_PortOfDischarge" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="OUT_PortOFDischargeCountry">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_PortOfDischargeCountry" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="OUT_BeneRating">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_BeneRating" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="OUT_ExpiryDate">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_ExpiryDate" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="OUT_LCNumber">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_LCNumber" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:Boolean" x:Key="OUT_AmendmentInfoExist">
+            <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="bol_AmendmentInfoExists" />
+          </OutArgument>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtCountryVariants">
+            <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="in_dtCountryVariants" />
+          </InArgument>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtBeneRating">
+            <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="in_dtBeneRating" />
+          </InArgument>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtPortCountryList">
+            <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="in_dtPortCountryList" />
+          </InArgument>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtCustomerList">
+            <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="in_dtCustomerList" />
+          </InArgument>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtCountryCodes">
+            <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="in_dtCountryCodes" />
+          </InArgument>
+          <OutArgument x:TypeArguments="x:Boolean" x:Key="out_blnLCDownloadSuccess">
+            <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="blnLCDownloadSuccess" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_GoodsDescription">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_GoodsDescription" />
+          </OutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="578,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[bol_AmendmentInfoExists]" />
+      <If Condition="[bol_AmendmentInfoExists]" DisplayName="If bol_AmendmentInfoExists" sap:VirtualizedContainerService.HintSize="578,1817" sap2010:WorkflowViewState.IdRef="If_2">
+        <If.Then>
+          <Sequence sap:VirtualizedContainerService.HintSize="400,224" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke PopulateLogSheet_Archive workflow" sap:VirtualizedContainerService.HintSize="338,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="PopulateCompletedTfRefSheet.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TFReference">[strTFReference]</InArgument>
+                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_config">[in_Config]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence sap:VirtualizedContainerService.HintSize="500,1417" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke PopulateLogSheet_Export workflow" sap:VirtualizedContainerService.HintSize="438,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="PopulateLogSheet_Export.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TFReference">[strTFReference]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_ApplicantName">[str_ApplicantName]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_BeneficiaryName">[str_BeneName]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_BeneficiaryCountry">[str_BeneCountry]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_PortOfLoading">[str_PortOfLoading]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_PortOfDischarge">[str_PortOfDischarge]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_GoodsShort">[str_GoodsDescription]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_Currency">[str_LcCurrencyType]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_Amount">[str_LcAmount]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_AvailableWIthCountry">[str_AvailableWithCountry]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_AvailableWithBank">[str_AvailableWithBank]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_ExpiryDate">[str_ExpiryDate]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_LCNumber">[str_LcNumber]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_ApplicantCountry">[str_ApplicantCountry]</InArgument>
+                <OutArgument x:TypeArguments="x:Boolean" x:Key="out_bol_InvalidError">[bol_InvalidError]</OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_IssBnkCtryRisk">[str_IssBnkCtry]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_IssBnkName">[str_IssBnkName]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_BeneficiaryRating">[str_BeneRating]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_LcCurrencyType">[str_LcCurrencyType]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_LcAmount">[str_LcAmount]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_AvailableWith" />
+                <InArgument x:TypeArguments="x:String" x:Key="in_LoadPortIfDiff" />
+                <InArgument x:TypeArguments="x:String" x:Key="in_TenorAndValidity">[str_TenorAndValidity]</InArgument>
+                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_config">[in_Config]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_PortofLoadingCountry">[str_PortOfLoadingCountry]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_PortOfDischargeCountry">[str_PortOfDischargeCountry]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TypeOfLc">[str_TypeOfLc]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_LogFilePath">[in_LogFilePath]</InArgument>
+                <InArgument x:TypeArguments="x:Boolean" x:Key="in_blnLCDownloadSuccess">[blnLCDownloadSuccess]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <TryCatch sap2010:Annotation.AnnotationText="Before we didn't add an item to the queue if any data was missing now we will add anyway " DisplayName="Try Catch Add Queue Item" sap:VirtualizedContainerService.HintSize="438,1000" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <TryCatch.Try>
+                <Sequence sap:VirtualizedContainerService.HintSize="400,730" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:AddQueueItem ServiceBaseAddress="{x:Null}" DisplayName="Add Queue Item" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="338,619" sap2010:WorkflowViewState.IdRef="AddQueueItem_3" Priority="Normal" QueueType="[in_Config(&quot;OrchestratorQueueName&quot;).ToString]" Reference="[strTFReference]">
+                    <ui:AddQueueItem.ItemInformation>
+                      <InArgument x:TypeArguments="x:String" x:Key="TFReference">[strTFReference]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="LCNumber">[str_LcNumber]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="TypeOfLC">[str_TypeOfLc]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="ApplicantName">[str_ApplicantName]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="ApplicantCountry">[str_ApplicantCountry]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="BeneficiaryName">[str_BeneName]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="BeneficiaryCountry">[str_BeneCountry]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="PortOfLoading">[str_PortOfLoading]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="PortOfDischarge">[str_PortOfDischarge]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="Currency">[str_LcCurrencyType]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="Amount">[str_LcAmount]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="AvailableWithBank">[str_AvailableWithBank]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="AvailableWithCountry">[str_AvailableWithCountry]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="BeneficaryRating">[str_BeneRating]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="PortOfLoadingCountry">[str_PortOfLoadingCountry]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="PortOfDischargeCountry">[str_PortOfDischargeCountry]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="TenorAndValidity">[str_TenorAndValidity]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="IssuingBankName">[str_IssBnkName]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="IssuingBankCountryOfRisk">[str_IssBnkCtry]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="ExpiryDate">[str_ExpiryDate]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="GoodsDescription">[str_GoodsDescription]</InArgument>
+                    </ui:AddQueueItem.ItemInformation>
+                    <ui:AddQueueItem.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:AddQueueItem.TimeoutMS>
+                  </ui:AddQueueItem>
+                </Sequence>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <Throw DisplayName="Throw SE: Could not enter queue item for TF Reference " Exception="[new SystemException(&quot;SE: Could not enter queue item for TF Reference &quot; + strTFReference )]" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke PopulateLogSheet_Archive workflow" sap:VirtualizedContainerService.HintSize="438,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="PopulateCompletedTfRefSheet.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TFReference">[strTFReference]</InArgument>
+                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_config">[in_Config]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
+        </If.Else>
+      </If>
+    </Sequence>
+  </Sequence>
+</Activity>

@@ -1,0 +1,167 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="786.4,693.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:SimpleProcess_for_compiler_v3;assembly=DataService.SimpleProcess_for_compiler_v3" xmlns:s1="clr-namespace:SimpleLibrary_for_compiler_v3;assembly=SimpleLibrary_for_compiler_v3" xmlns:s2="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core" xmlns:udam="clr-namespace:UiPath.DataService.Activities.Models;assembly=UiPath.DataService.Activities.Core" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>SimpleLibrary_for_compiler_v3</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>SwaggerPetstore</x:String>
+      <x:String>UiPath.WebClient.PetClientNamespace</x:String>
+      <x:String>UiPath.WebClient.Activities.Generator.Swagger</x:String>
+      <x:String>UiPath.WebClient.Activities.Generator.Code</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Files.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.DataService.Activities</x:String>
+      <x:String>UiPath.DataService.Definition</x:String>
+      <x:String>SimpleProcess_for_compiler_v3</x:String>
+      <x:String>UiPath.DataService.Activities.Models</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>DataService.SimpleProcess_for_compiler_v3</AssemblyReference>
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>SimpleLibrary_for_compiler_v3</AssemblyReference>
+      <AssemblyReference>SwaggerPetstore</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="449.6,628.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uda:CreateEntityRecord x:TypeArguments="s:CatEntity" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" ContinueOnError="False" DisplayName="Create Entity Record" EntityId="e60e179b-1d7a-ed11-ade6-a085fc8e3893" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="387.2,282.4" sap2010:WorkflowViewState.IdRef="CreateEntityRecord`1_1" TimeoutInMs="30000">
+      <uda:CreateEntityRecord.InputEntityInFieldView>
+        <InArgument x:TypeArguments="s:CatEntity">
+          <CSharpValue x:TypeArguments="s:CatEntity" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2" xml:space="preserve">new SimpleProcess_for_compiler_v3.CatEntity() {  ChoiceSet = (new List&lt;SimpleProcess_for_compiler_v3.CatChoiceSet&gt;(){SimpleProcess_for_compiler_v3.CatChoiceSet.DN10,SimpleProcess_for_compiler_v3.CatChoiceSet.DN1}).ToHashSet(),  ChoiceSet2 = (new List&lt;SimpleProcess_for_compiler_v3.CatChoiceSet2&gt;(){SimpleProcess_for_compiler_v3.CatChoiceSet2.Name3}).ToHashSet(),  Name = "test" }</CSharpValue>
+        </InArgument>
+      </uda:CreateEntityRecord.InputEntityInFieldView>
+      <uda:CreateEntityRecord.State>
+        <udam:RecordState RequiredFieldCount="3">
+          <udam:RecordState.SelectedFields>
+            <scg:List x:TypeArguments="udam:DynamicEntityField" Capacity="3">
+              <udam:DynamicEntityField Id="e2aa545f-c3e8-ed11-9f71-000d3a591d41" IsRequired="True" Name="ChoiceSet">
+                <udam:DynamicEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="scg:IReadOnlyList(s:CatChoiceSet)">
+                    <CSharpValue x:TypeArguments="scg:IReadOnlyList(s:CatChoiceSet)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">new List&lt;SimpleProcess_for_compiler_v3.CatChoiceSet&gt;(){SimpleProcess_for_compiler_v3.CatChoiceSet.DN10,SimpleProcess_for_compiler_v3.CatChoiceSet.DN1}</CSharpValue>
+                  </InArgument>
+                </udam:DynamicEntityField.ArgumentValue>
+              </udam:DynamicEntityField>
+              <udam:DynamicEntityField Id="d159644c-c4e8-ed11-9f71-000d3a591d41" IsRequired="True" Name="ChoiceSet2">
+                <udam:DynamicEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="scg:IReadOnlyList(s:CatChoiceSet2)">
+                    <CSharpValue x:TypeArguments="scg:IReadOnlyList(s:CatChoiceSet2)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">new List&lt;SimpleProcess_for_compiler_v3.CatChoiceSet2&gt;(){SimpleProcess_for_compiler_v3.CatChoiceSet2.Name3}</CSharpValue>
+                  </InArgument>
+                </udam:DynamicEntityField.ArgumentValue>
+              </udam:DynamicEntityField>
+              <udam:DynamicEntityField Id="8f20ead6-c1e8-ed11-9f71-000d3a591d41" IsRequired="True" Name="Name">
+                <udam:DynamicEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="x:String">test</InArgument>
+                </udam:DynamicEntityField.ArgumentValue>
+              </udam:DynamicEntityField>
+            </scg:List>
+          </udam:RecordState.SelectedFields>
+        </udam:RecordState>
+      </uda:CreateEntityRecord.State>
+    </uda:CreateEntityRecord>
+    <s1:simple_activity DisplayName="simple activity" sap:VirtualizedContainerService.HintSize="387.2,194.4" sap2010:WorkflowViewState.IdRef="simple_activity_1" in_petName="Gigi">
+      <s1:simple_activity.in_message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"ciao"</CSharpValue>
+        </InArgument>
+      </s1:simple_activity.in_message>
+      <s1:simple_activity.in_petId>
+        <InArgument x:TypeArguments="s2:Nullable(x:Int64)">
+          <Literal x:TypeArguments="s2:Nullable(x:Int64)" DisplayName="Literal&lt;Nullable&lt;Int64&gt;&gt;" Value="2344223" />
+        </InArgument>
+      </s1:simple_activity.in_petId>
+    </s1:simple_activity>
+  </Sequence>
+</Activity>

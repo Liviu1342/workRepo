@@ -1,0 +1,295 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="MultipleConnections_activity_1" VisualBasic.Settings="{x:Null}" sap2010:Annotation.AnnotationText="UPTF000000A8eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjoiaHR0cHM6XC9cL3d3dy5nb29nbGUuY29tIiwiPEluaXRpYWxUb29sdGlwPmtfX0JhY2tpbmdGaWVsZCI6bnVsbCwiPFZlcnNpb24+a19fQmFja2luZ0ZpZWxkIjoxfQ==" sap:VirtualizedContainerService.HintSize="1237.2,768.8" sap2010:WorkflowViewState.IdRef="MultipleConnections_activity_1_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugagf="clr-namespace:UiPath.GSuite.Activities.Gmail.Filters;assembly=UiPath.GSuite.Activities" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:usia="clr-namespace:UiPath.Slack.IntegrationService.Activities;assembly=UiPath.Slack.IntegrationService.Activities" xmlns:usic="clr-namespace:UiPath.Slack.IntegrationService.Client;assembly=UiPath.Slack.IntegrationService" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Filters</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Filters</x:String>
+      <x:String>UiPath.GSuite.Models</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.Api.Google.Gmail.Models</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.CEQL</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Entity</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.Descriptor</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Enums</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Telemetry</x:String>
+      <x:String>UiPath.BAF.Infrastructure</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Connection</x:String>
+      <x:String>UiPath.Slack.IntegrationService.Activities</x:String>
+      <x:String>UiPath.IntegrationCore.Activities</x:String>
+      <x:String>UiPath.BAF.Activities</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.BAF.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.Slack.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="MultipleConnections_activity_1" sap:VirtualizedContainerService.HintSize="450,703.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uga:GetFileListConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Filter="{x:Null}" ManualEntryLocation="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" DisplayName="Get File/Folder List" sap:VirtualizedContainerService.HintSize="388,153.6" sap2010:WorkflowViewState.IdRef="GetFileListConnections_1" LocationInputMode="Browse" UseConnectionService="True">
+      <uga:GetFileListConnections.BrowserLocation>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_1">root</Literal>
+        </InArgument>
+      </uga:GetFileListConnections.BrowserLocation>
+      <uga:GetFileListConnections.ConnectionId>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_6">fc7c19d6-6da0-ec11-a99b-e42aac668fcd</Literal>
+        </InArgument>
+      </uga:GetFileListConnections.ConnectionId>
+      <uga:GetFileListConnections.FolderIdBackup>
+        <usau:BackupSlot x:TypeArguments="ugade:EDriveMode" StoredValue="Browse">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="ugade:EDriveMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:GetFileListConnections.FolderIdBackup>
+      <uga:GetFileListConnections.LocationFriendlyName>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_2">My Drive</Literal>
+        </InArgument>
+      </uga:GetFileListConnections.LocationFriendlyName>
+      <uga:GetFileListConnections.MaxResults>
+        <InArgument x:TypeArguments="x:Int32">
+          <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_3" Value="200" />
+        </InArgument>
+      </uga:GetFileListConnections.MaxResults>
+      <uga:GetFileListConnections.StarredOnly>
+        <InArgument x:TypeArguments="x:Boolean">
+          <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_5" />
+        </InArgument>
+      </uga:GetFileListConnections.StarredOnly>
+      <uga:GetFileListConnections.WhatToReturn>
+        <InArgument x:TypeArguments="ugade:LocationType">
+          <Literal x:TypeArguments="ugade:LocationType" sap2010:WorkflowViewState.IdRef="Literal`1_4" Value="Files" />
+        </InArgument>
+      </uga:GetFileListConnections.WhatToReturn>
+    </uga:GetFileListConnections>
+    <uga:GetNewestEmailConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntryFolderPath="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" BrowserFolderLabelId="INBOX" DisplayName="Get Newest Email" FolderInputSelectionMode="Browse" sap:VirtualizedContainerService.HintSize="388,205.2" sap2010:WorkflowViewState.IdRef="GetNewestEmailConnections_1" UseConnectionService="True">
+      <uga:GetNewestEmailConnections.BrowserFolderPath>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_7">Inbox</Literal>
+        </InArgument>
+      </uga:GetNewestEmailConnections.BrowserFolderPath>
+      <uga:GetNewestEmailConnections.ConnectionId>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_14">17d677e4-6ae6-ec11-b656-e42aac668fcd</Literal>
+        </InArgument>
+      </uga:GetNewestEmailConnections.ConnectionId>
+      <uga:GetNewestEmailConnections.Filter>
+        <ugagf:MailFilterCollection LogicalOperator="And">
+          <ugagf:MailFilterCollection.Filters>
+            <ugagf:MailFilterElement DateEqualsFilter="{x:Null}" Criteria="BCC" DateOperator="NewerThan" StringOperator="Contains">
+              <ugagf:MailFilterElement.Value>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_13">@uipath.com</Literal>
+                </InArgument>
+              </ugagf:MailFilterElement.Value>
+            </ugagf:MailFilterElement>
+          </ugagf:MailFilterCollection.Filters>
+        </ugagf:MailFilterCollection>
+      </uga:GetNewestEmailConnections.Filter>
+      <uga:GetNewestEmailConnections.FolderIdBackup>
+        <usau:BackupSlot x:TypeArguments="ugage:FolderInputMode" StoredValue="Browse">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="ugage:FolderInputMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:GetNewestEmailConnections.FolderIdBackup>
+      <uga:GetNewestEmailConnections.ImportantOnly>
+        <InArgument x:TypeArguments="x:Boolean">
+          <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_10" />
+        </InArgument>
+      </uga:GetNewestEmailConnections.ImportantOnly>
+      <uga:GetNewestEmailConnections.MarkAsRead>
+        <InArgument x:TypeArguments="x:Boolean">
+          <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_12" />
+        </InArgument>
+      </uga:GetNewestEmailConnections.MarkAsRead>
+      <uga:GetNewestEmailConnections.StarredOnly>
+        <InArgument x:TypeArguments="x:Boolean">
+          <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_11" />
+        </InArgument>
+      </uga:GetNewestEmailConnections.StarredOnly>
+      <uga:GetNewestEmailConnections.UnreadOnly>
+        <InArgument x:TypeArguments="x:Boolean">
+          <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_8" />
+        </InArgument>
+      </uga:GetNewestEmailConnections.UnreadOnly>
+      <uga:GetNewestEmailConnections.WithAttachmentsOnly>
+        <InArgument x:TypeArguments="x:Boolean">
+          <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_9" />
+        </InArgument>
+      </uga:GetNewestEmailConnections.WithAttachmentsOnly>
+    </uga:GetNewestEmailConnections>
+    <usia:ListAllUsers Language="{x:Null}" ActivityInstanceId="75f5ce10-fee8-41dc-b9a4-28a6581048f5" BindingsVersion="2.1" BusinessEntityName="users" ConfiguredBusinessEntity="users" ConnectionId="0fdf3771-f7b3-4126-962f-0cc052707c93" Connector="uipath-salesforce-slack" CrudOperation="Search" DesignConnectionEnabled="True" DisplayName="List All Users" sap:VirtualizedContainerService.HintSize="388,153.6" sap2010:WorkflowViewState.IdRef="ListAllUsers_1" UseRawCEQL="False">
+      <usia:ListAllUsers.BusinessEntity>
+        <uibi:BusinessEntity Name="users">
+          <uibi:BusinessEntity.AllFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="8">
+              <uiisi:OperationEntityField x:TypeArguments="x:Int32" ArgumentValue="{x:Reference __ReferenceID1}" Value="{x:Reference __ReferenceID0}" x:Name="__ReferenceID6" ArgumentDirection="In" ArgumentType="x:Int32" DataType="Int32" Description="The maximum number of records to return." DisplayName="Max records" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="maximumRecordsReturned" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.InArgumentValue>
+                  <InArgument x:TypeArguments="x:Int32" x:Name="__ReferenceID1">
+                    <Literal x:TypeArguments="x:Int32" x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="Literal`1_15" Value="50" />
+                  </InArgument>
+                </uiisi:OperationEntityField.InArgumentValue>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" x:Name="__ReferenceID4" ArgumentDirection="In" ArgumentType="x:Boolean" DataType="Boolean" Description="Whether to include the native user language in the response?" DisplayName="Include locale?" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="include_locale" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPermanentlyHidden">False</x:Boolean>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:Int32" ArgumentValue="{x:Reference __ReferenceID2}" ArgumentDirection="In" ArgumentType="x:Int32" DataType="Int32" Description="The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the users list hasn't been reached. Providing no `limit` value will result in Slack attempting to deliver you the entire result set. If the collection is too large you may experience `limit_required` or HTTP 500 errors." DisplayName="Page size" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="pageSize" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.InArgumentValue>
+                  <InArgument x:TypeArguments="x:Int32" x:Name="__ReferenceID2">
+                    <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_16" Value="1000" />
+                  </InArgument>
+                </uiisi:OperationEntityField.InArgumentValue>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID7" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The token for the next page of records. Use this token to iterate through the pages until a empty list is returned." DisplayName="Next Page Token" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="nextPage" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Encoded team id to list channels in, required if token belongs to org-wide app" DisplayName="Team ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="team_id" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="usic:Users" ArgumentDirection="Out" ArgumentType="usic:Users" DataType="Users" Description="The first record returned." DisplayName="First users Record" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="findFirstRecordResultField" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="usic:Users[]" x:Name="__ReferenceID5" ArgumentDirection="Out" ArgumentType="usic:Users[]" DataType="Users[]" Description="The users object returned." DisplayName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPermanentlyHidden">False</x:Boolean>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="The token for the next page of records. Use this token to iterate through the pages until a empty list is returned." DisplayName="Next Page Token" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Header" Name="nextPageTokenFromHeader" ShouldFilterOnChange="False" />
+            </scg:List>
+          </uibi:BusinessEntity.AllFields>
+          <uibi:BusinessEntity.EntityMetadata>
+            <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID3}" DisplayName="users" EligibleOperations="64" IsCustomEntity="False" Name="users" />
+          </uibi:BusinessEntity.EntityMetadata>
+          <uibi:BusinessEntity.Metadata>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID3">
+              <x:String x:Key="Object">users</x:String>
+              <x:String x:Key="Client">UiPath.Slack.IntegrationService.Client.UsersAPIClient</x:String>
+              <x:String x:Key="Operation">GetUsers</x:String>
+              <x:String x:Key="Path">/users</x:String>
+            </scg:Dictionary>
+          </uibi:BusinessEntity.Metadata>
+          <uibi:BusinessEntity.SearchableFields>
+            <scg:List x:TypeArguments="uibi:SearchableField" Capacity="0" />
+          </uibi:BusinessEntity.SearchableFields>
+          <uibi:BusinessEntity.SearchableJoins>
+            <scg:List x:TypeArguments="x:String" Capacity="0" />
+          </uibi:BusinessEntity.SearchableJoins>
+          <uibi:BusinessEntity.SelectedFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
+              <x:Reference>__ReferenceID4</x:Reference>
+              <x:Reference>__ReferenceID5</x:Reference>
+              <x:Reference>__ReferenceID6</x:Reference>
+              <x:Reference>__ReferenceID7</x:Reference>
+            </scg:List>
+          </uibi:BusinessEntity.SelectedFields>
+          <uibi:BusinessEntity.TelemetryProperties>
+            <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+          </uibi:BusinessEntity.TelemetryProperties>
+        </uibi:BusinessEntity>
+      </usia:ListAllUsers.BusinessEntity>
+      <usia:ListAllUsers.CachedLookupValues>
+        <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)" />
+      </usia:ListAllUsers.CachedLookupValues>
+      <usia:ListAllUsers.DesignConnectionRequest>
+        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="0fdf3771-f7b3-4126-962f-0cc052707c93" ConnectionName="Slack #3" ConnectorKey="uipath-salesforce-slack">
+          <uiisi:ConnectionParameters.TelemetryInfo>
+            <uiisi:TelemetryInfo ActivityPack="UiPath.Slack.IntegrationService.Activities" ActivityPackVersion="5.2.1" Source="StudioDesktop" />
+          </uiisi:ConnectionParameters.TelemetryInfo>
+        </uiisi:ConnectionParameters>
+      </usia:ListAllUsers.DesignConnectionRequest>
+      <usia:ListAllUsers.SelectedFields>
+        <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
+          <x:Reference>__ReferenceID4</x:Reference>
+          <x:Reference>__ReferenceID5</x:Reference>
+          <x:Reference>__ReferenceID6</x:Reference>
+          <x:Reference>__ReferenceID7</x:Reference>
+        </scg:List>
+      </usia:ListAllUsers.SelectedFields>
+      <usia:ListAllUsers.TelemetryProperties>
+        <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+      </usia:ListAllUsers.TelemetryProperties>
+    </usia:ListAllUsers>
+  </Sequence>
+</Activity>

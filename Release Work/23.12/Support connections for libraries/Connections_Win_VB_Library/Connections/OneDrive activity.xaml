@@ -1,0 +1,176 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="OneDrive_activity" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1362,642" sap2010:WorkflowViewState.IdRef="OneDrive_activity_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umaf="clr-namespace:UiPath.MicrosoftOffice365.Activities.Files;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umafe="clr-namespace:UiPath.MicrosoftOffice365.Activities.Files.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:ume="clr-namespace:UiPath.MicrosoftOffice365.Enums;assembly=UiPath.MicrosoftOffice365" xmlns:umfm="clr-namespace:UiPath.MicrosoftOffice365.Files.Models;assembly=UiPath.MicrosoftOffice365" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Files.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Filters</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="OneDrive_activity" sap:VirtualizedContainerService.HintSize="450,449.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="umfm:O365DriveRemoteItem[]" Name="_out_GetFileListConnections_1__Result" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <umaf:GetFileListConnections BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Filter="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" SimpleSearch="{x:Null}" AuthScopesInvalid="False" DisplayName="Get File/Folder List" sap:VirtualizedContainerService.HintSize="388,154.4" sap2010:WorkflowViewState.IdRef="GetFileListConnections_1" ItemSelectionMode="Browse" Result="[_out_GetFileListConnections_1__Result]" SearchMode="UseSimple" UseConnectionService="True">
+      <umaf:GetFileListConnections.BrowserDriveId>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_37">b!frXXpPiMUUeySBdPnsYDdp3DcBCUf9JJj0-gqeG1o5if5BnfZwKOTptt-oCH_wTS</Literal>
+        </InArgument>
+      </umaf:GetFileListConnections.BrowserDriveId>
+      <umaf:GetFileListConnections.BrowserDriveName>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_35">OneDrive</Literal>
+        </InArgument>
+      </umaf:GetFileListConnections.BrowserDriveName>
+      <umaf:GetFileListConnections.BrowserItemFriendlyName>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_32">Automation</Literal>
+        </InArgument>
+      </umaf:GetFileListConnections.BrowserItemFriendlyName>
+      <umaf:GetFileListConnections.BrowserItemId>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_34">01E5QZP44HAM3P7TVY65DY6CPR66TZTQDV</Literal>
+        </InArgument>
+      </umaf:GetFileListConnections.BrowserItemId>
+      <umaf:GetFileListConnections.BrowserSiteUrl>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_36">https://uipath-my.sharepoint.com/personal/liviu_ponova_uipath_com/Documents</Literal>
+        </InArgument>
+      </umaf:GetFileListConnections.BrowserSiteUrl>
+      <umaf:GetFileListConnections.BrowserSpecificUrl>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_33">https://uipath-my.sharepoint.com/personal/liviu_ponova_uipath_com/Documents/Automation</Literal>
+        </InArgument>
+      </umaf:GetFileListConnections.BrowserSpecificUrl>
+      <umaf:GetFileListConnections.ConnectionId>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_38">6c7f2070-9d31-4c48-8be2-75a2929ce624</Literal>
+        </InArgument>
+      </umaf:GetFileListConnections.ConnectionId>
+      <umaf:GetFileListConnections.IncludeSubfolders>
+        <InArgument x:TypeArguments="x:Boolean">
+          <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_6" />
+        </InArgument>
+      </umaf:GetFileListConnections.IncludeSubfolders>
+      <umaf:GetFileListConnections.ItemIdBackup>
+        <usau:BackupSlot x:TypeArguments="umafe:EDriveItemMode" StoredValue="Browse">
+          <usau:BackupSlot.BackupValues>
+            <scg:List x:TypeArguments="x:Object" x:Key="Browse" Capacity="3">
+              <InArgument x:TypeArguments="x:String">
+                <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_29">B0B78D322E902DF3!1745</Literal>
+              </InArgument>
+              <InArgument x:TypeArguments="x:String">
+                <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_27">Desktop</Literal>
+              </InArgument>
+              <InArgument x:TypeArguments="x:String">
+                <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_30">b0b78d322e902df3</Literal>
+              </InArgument>
+            </scg:List>
+            <scg:List x:TypeArguments="x:Object" x:Key="UseExisting" Capacity="1">
+              <InArgument x:TypeArguments="umfm:O365DriveRemoteItem">[in_Location]</InArgument>
+            </scg:List>
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </umaf:GetFileListConnections.ItemIdBackup>
+      <umaf:GetFileListConnections.MaxResults>
+        <InArgument x:TypeArguments="x:Int32">
+          <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_3" Value="200" />
+        </InArgument>
+      </umaf:GetFileListConnections.MaxResults>
+      <umaf:GetFileListConnections.TrimDuplicates>
+        <InArgument x:TypeArguments="x:Boolean">
+          <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_5" />
+        </InArgument>
+      </umaf:GetFileListConnections.TrimDuplicates>
+      <umaf:GetFileListConnections.WhatToReturn>
+        <InArgument x:TypeArguments="ume:FindFilesAndFoldersResultType">
+          <Literal x:TypeArguments="ume:FindFilesAndFoldersResultType" sap2010:WorkflowViewState.IdRef="Literal`1_4" Value="Files" />
+        </InArgument>
+      </umaf:GetFileListConnections.WhatToReturn>
+    </umaf:GetFileListConnections>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Found &quot; + _out_GetFileListConnections_1__Result.Length.ToString + &quot; files&quot;]" />
+  </Sequence>
+</Activity>

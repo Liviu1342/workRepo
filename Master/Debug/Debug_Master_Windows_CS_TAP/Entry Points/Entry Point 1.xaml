@@ -1,9 +1,9 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Entry_Points" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Entry_Points" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:e="clr-namespace:EntitiesLibrary;assembly=EntitiesLibrary" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="clr-namespace:OR_Library_Windows_VB;assembly=OR_Library_Windows_VB" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_ErrorCodes" Type="InArgument(scg:List(x:Int32))" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1209.6,1868</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1155.2,3678.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -34,71 +34,188 @@
       <x:String>System.Activities.Runtime.Collections</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>EntitiesLibrary</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>UiPath.DataService.Definition</x:String>
+      <x:String>UiPath.DataService.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>OR_Library_Windows_VB</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
       <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>System.Activities</AssemblyReference>
-      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
-      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
-      <AssemblyReference>System.Data</AssemblyReference>
-      <AssemblyReference>System</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
-      <AssemblyReference>System.ObjectModel</AssemblyReference>
-      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
-      <AssemblyReference>System.Collections</AssemblyReference>
-      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>Debug_Master_Windows_CS_TAP.Core</AssemblyReference>
+      <AssemblyReference>DataService.EntitiesLibrary</AssemblyReference>
+      <AssemblyReference>EntitiesLibrary</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>Debug_Master_Windows_CS_TAP.Core</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>Debug_Master_Windows_CS_TAP.Core</AssemblyReference>
+      <AssemblyReference>OR_Library_Windows_VB</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Entry_Points" sap:VirtualizedContainerService.HintSize="638.4,1803.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Entry_Points" sap:VirtualizedContainerService.HintSize="637.6,3613.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="calculatorResult" />
+      <Variable x:TypeArguments="s:Guid" Name="entityRecord">
+        <Variable.Default>
+          <CSharpValue x:TypeArguments="s:Guid" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">new Guid("6AB678C0-AA5E-EE11-9937-00224802FD73")</CSharpValue>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="myMessage" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="576,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_8">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="575.6,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_8">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">"Starting main entry point"</CSharpValue>
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Files to Use For Invoke\\File actions.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="576,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Files to Use For Invoke\\File actions.xaml">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="575.6,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_9">
+      <ui:LogMessage.Level>
+        <InArgument x:TypeArguments="ui:LogLevel">
+          <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">UiPath.Core.Activities.LogLevel.Warn</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Level>
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">myMessage</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="575.6,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_10">
+      <ui:LogMessage.Level>
+        <InArgument x:TypeArguments="ui:LogLevel">
+          <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">UiPath.Core.Activities.LogLevel.Error</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Level>
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">myMessage</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="575.6,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_11">
+      <ui:LogMessage.Level>
+        <InArgument x:TypeArguments="ui:LogLevel">
+          <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Level>
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">myMessage</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <e:Get_Name_for_Entity_by_ID DisplayName="Get Name for Entity by ID" sap:VirtualizedContainerService.HintSize="575.6,91.2" sap2010:WorkflowViewState.IdRef="Get_Name_for_Entity_by_ID_1">
+      <e:Get_Name_for_Entity_by_ID.in_RecordId>
+        <InArgument x:TypeArguments="s:Guid">
+          <CSharpValue x:TypeArguments="s:Guid" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">new Guid("75AACAB7-AA5E-EE11-9937-00224802FD75")</CSharpValue>
+        </InArgument>
+      </e:Get_Name_for_Entity_by_ID.in_RecordId>
+    </e:Get_Name_for_Entity_by_ID>
+    <o:Add_some_Numbers_With_Calculator_App DisplayName="Add some Numbers With Calculator App" sap:VirtualizedContainerService.HintSize="575.6,24.8" sap2010:WorkflowViewState.IdRef="Add_some_Numbers_With_Calculator_App_1" />
+    <e:Get_Name_for_Entity_by_ID DisplayName="Get Name for Entity by ID" sap:VirtualizedContainerService.HintSize="575.6,91.2" sap2010:WorkflowViewState.IdRef="Get_Name_for_Entity_by_ID_2">
+      <e:Get_Name_for_Entity_by_ID.in_RecordId>
+        <InArgument x:TypeArguments="s:Guid">
+          <CSharpValue x:TypeArguments="s:Guid" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">entityRecord</CSharpValue>
+        </InArgument>
+      </e:Get_Name_for_Entity_by_ID.in_RecordId>
+    </e:Get_Name_for_Entity_by_ID>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Main Screen" sap:VirtualizedContainerService.HintSize="575.6,567.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="84ca0e49-f113-45d3-a2b7-37bf8f031eda" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,272.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NHighlight Color="Gold" DisplayName="Highlight 'digit 5'" HighlightTime="1" sap:VirtualizedContainerService.HintSize="388,158" sap2010:WorkflowViewState.IdRef="NHighlight_1" Version="V3">
+              <uix:NHighlight.Target>
+                <uix:TargetAnchorable ContentHash="_JN4qCdflEetMxjisUpUzA" DesignTimeRectangle="217, 849, 197, 130" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'5'" FullSelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='NumberPad' cls='NamedContainerAutomationPeer' name='Number pad' /&gt;&lt;uia automationid='num5Button' cls='Button' name='Five' /&gt;" FuzzySelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='NumberPad' cls='NamedContainerAutomationPeer' name='Number pad' /&gt;&lt;uia automationid='num5Button' cls='Button' name='Five' role='button' check:fulltext='5' /&gt;" Guid="971db7f3-d33f-4ca3-ae65-84c0187af7f0" InformativeScreenshot="8b7c20f4ffe3ec1730309b9ee85af44a.png" Reference="LcgIwV9so0Oc0ke5IBfnPQ/85THQ_sGRU-Fi-cEwVRCfw" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='Microsoft.WindowsCalculator_8wekyb3d8bbwe!App' title='Calculator' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NHighlight.Target>
+            </uix:NHighlight>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" ContentHash="gVmn-cP-b06MHyKZhj5frg" FilePath="Microsoft.WindowsCalculator_8wekyb3d8bbwe!App" IconBase64="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" InformativeScreenshot="054cddc5e389166bbe833736b5fab4d5.png" Reference="LcgIwV9so0Oc0ke5IBfnPQ/5U1tDRtj3UyZ8o1dAnau2g" Selector="&lt;wnd app='applicationframehost.exe' appid='Microsoft.WindowsCalculator_8wekyb3d8bbwe!App' title='Calculator' /&gt;" Title="Calculator" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Files to Use For Invoke\\File actions.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="575.6,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="True" WorkflowFileName="Files to Use For Invoke\\File actions.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Filename">Fisier de test pentru debug.txt</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_OrchFolder">test</InArgument>
@@ -107,14 +224,20 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_LocalFile">Files\myTextFile.txt</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Files to Use For Invoke\\UIA actions.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="576,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Files to Use For Invoke\\UIA actions.xaml">
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="575.6,91.2" sap2010:WorkflowViewState.IdRef="WriteLine_3" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PetActivity.cs - Invoke Workflow File - ISOLATED" sap:VirtualizedContainerService.HintSize="575.6,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Coded\\Coded Wfs\\PetActivity.cs">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Files to Use For Invoke\\UIA actions.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="575.6,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Files to Use For Invoke\\UIA actions.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="x:String" x:Key="out_CalculatorResult">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">calculatorResult</CSharpReference>
         </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <Sequence DisplayName="Handled Exceptions" sap:VirtualizedContainerService.HintSize="576,985.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="Handled Exceptions" sap:VirtualizedContainerService.HintSize="575.6,974.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -133,21 +256,21 @@
           </InArgument>
         </Assign.Value>
       </Assign>
-      <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="513.6,752" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
+      <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="513.6,742" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="errorCode" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="480,550.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="479.6,553.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,460.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="437.6,465.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <TryCatch.Try>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Files to Use For Invoke\\Errors.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Files to Use For Invoke\\Errors.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Files to Use For Invoke\\Errors.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Files to Use For Invoke\\Errors.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:Int32" x:Key="in_ErrorCode">
                         <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">errorCode</CSharpValue>
@@ -156,7 +279,7 @@
                   </ui:InvokeWorkflowFile>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:NullReferenceException" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <Catch x:TypeArguments="s:NullReferenceException" sap:VirtualizedContainerService.HintSize="403.6,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -167,7 +290,7 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:NullReferenceException" Name="exception" />
                       </ActivityAction.Argument>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn">
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn">
                         <ui:LogMessage.Message>
                           <InArgument x:TypeArguments="x:Object">
                             <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"Handled Exception - NullReferenceException"</CSharpValue>
@@ -176,7 +299,7 @@
                       </ui:LogMessage>
                     </ActivityAction>
                   </Catch>
-                  <Catch x:TypeArguments="s:ArgumentNullException" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                  <Catch x:TypeArguments="s:ArgumentNullException" sap:VirtualizedContainerService.HintSize="403.6,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -187,7 +310,7 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:ArgumentNullException" Name="exception" />
                       </ActivityAction.Argument>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Error">
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Error">
                         <ui:LogMessage.Message>
                           <InArgument x:TypeArguments="x:Object">
                             <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">"This branch should have never been reached"</CSharpValue>
@@ -196,7 +319,7 @@
                       </ui:LogMessage>
                     </ActivityAction>
                   </Catch>
-                  <Catch x:TypeArguments="s:NotFiniteNumberException" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                  <Catch x:TypeArguments="s:NotFiniteNumberException" sap:VirtualizedContainerService.HintSize="403.6,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -207,7 +330,7 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:NotFiniteNumberException" Name="exception" />
                       </ActivityAction.Argument>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3">
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_3">
                         <ui:LogMessage.Message>
                           <InArgument x:TypeArguments="x:Object">
                             <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">"Handled Exception - NotFiniteNumberException"</CSharpValue>
@@ -216,7 +339,7 @@
                       </ui:LogMessage>
                     </ActivityAction>
                   </Catch>
-                  <Catch x:TypeArguments="s:ArgumentOutOfRangeException" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                  <Catch x:TypeArguments="s:ArgumentOutOfRangeException" sap:VirtualizedContainerService.HintSize="403.6,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -227,7 +350,7 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:ArgumentOutOfRangeException" Name="exception" />
                       </ActivityAction.Argument>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4">
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_4">
                         <ui:LogMessage.Message>
                           <InArgument x:TypeArguments="x:Object">
                             <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">"Handled Exception - ArgumentOutOfRangeException"</CSharpValue>
@@ -236,7 +359,7 @@
                       </ui:LogMessage>
                     </ActivityAction>
                   </Catch>
-                  <Catch x:TypeArguments="s:InvalidOperationException" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                  <Catch x:TypeArguments="s:InvalidOperationException" sap:VirtualizedContainerService.HintSize="403.6,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -247,7 +370,7 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:InvalidOperationException" Name="exception" />
                       </ActivityAction.Argument>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Error">
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Error">
                         <ui:LogMessage.Message>
                           <InArgument x:TypeArguments="x:Object">
                             <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">"This branch should have never been reached"</CSharpValue>
@@ -256,7 +379,7 @@
                       </ui:LogMessage>
                     </ActivityAction>
                   </Catch>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_6">
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.6,22.8" sap2010:WorkflowViewState.IdRef="Catch`1_6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -267,7 +390,7 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                       </ActivityAction.Argument>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_7">
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_7">
                         <ui:LogMessage.Message>
                           <InArgument x:TypeArguments="x:Object">
                             <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">"Handled Exception - Generic exception"</CSharpValue>
@@ -294,14 +417,14 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEach>
     </Sequence>
-    <Sequence DisplayName="Unhandled Exception" sap:VirtualizedContainerService.HintSize="576,225.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence DisplayName="Unhandled Exception" sap:VirtualizedContainerService.HintSize="575.6,225.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Files to Use For Invoke\\Errors.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Files to Use For Invoke\\Errors.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Files to Use For Invoke\\Errors.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Files to Use For Invoke\\Errors.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:Int32" x:Key="in_ErrorCode">1</InArgument>
         </ui:InvokeWorkflowFile.Arguments>

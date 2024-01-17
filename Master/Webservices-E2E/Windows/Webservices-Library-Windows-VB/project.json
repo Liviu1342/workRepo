@@ -1,13 +1,14 @@
 {
   "name": "Webservices-Library-Windows-VB",
+  "projectId": "a506ccde-4175-4ce5-b882-b8dd297d35b5",
   "description": "Blank Library",
   "main": "NewActivity.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "2.19.0-preview",
-    "UiPath.Mail.Activities": "1.18.2",
-    "UiPath.System.Activities": "23.4.0-preview",
-    "UiPath.Testing.Activities": "23.4.0-preview",
-    "UiPath.UIAutomation.Activities": "23.2.0-preview"
+    "UiPath.Excel.Activities": "2.22.1-preview",
+    "UiPath.Mail.Activities": "1.21.1",
+    "UiPath.System.Activities": "23.10.0-preview",
+    "UiPath.Testing.Activities": "23.10.0-preview",
+    "UiPath.UIAutomation.Activities": "23.10.0-preview"
   },
   "webServices": [
     {
@@ -15,12 +16,18 @@
       "serviceDocument": "Services\\SwaggerPetstore.json",
       "webDocumentUri": "https://petstore.swagger.io/v2/swagger.json",
       "uniqueReference": "fLFthZ5dXh6CClY1sbkNKVzkL9c81eSNpexur0NP0GI="
+    },
+    {
+      "namespace": "UiPathWebApi170",
+      "serviceDocument": "Services\\UiPathWebApi170.json",
+      "webDocumentUri": "https://alpha.uipath.com/Liviu/NewTenant/orchestrator_/swagger/v17.0/swagger.json",
+      "uniqueReference": "NyXzb3rxnzeI5IeXkC4F9Zh1tv/wbpne4Ux2Emlemuk="
     }
   ],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "23.4.0.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "5.5.5",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -50,7 +57,8 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "modernBehavior": true
+    "modernBehavior": true,
+    "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "isTemplate": false,

@@ -1,0 +1,163 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Disabled_Gmail_Connection_activity" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="2029.1999999999998,930" sap2010:WorkflowViewState.IdRef="Disabled_Gmail_Connection_activity_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugagf="clr-namespace:UiPath.GSuite.Activities.Gmail.Filters;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Filters</x:String>
+      <x:String>UiPath.GSuite.Models</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.Api.Google.Gmail.Models</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Disabled_Gmail_Connection_activity" sap:VirtualizedContainerService.HintSize="547.6,690.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="485.6,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Gmail connection coming right up&quot;]" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="485.6,396" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,317.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uga:GetNewestEmailConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntryFolderPath="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" BrowserFolderLabelId="INBOX" DisplayName="Get Newest Email" FolderInputSelectionMode="Browse" sap:VirtualizedContainerService.HintSize="388,206.4" sap2010:WorkflowViewState.IdRef="GetNewestEmailConnections_1" UseConnectionService="True">
+            <uga:GetNewestEmailConnections.BrowserFolderPath>
+              <InArgument x:TypeArguments="x:String">
+                <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_1">Inbox</Literal>
+              </InArgument>
+            </uga:GetNewestEmailConnections.BrowserFolderPath>
+            <uga:GetNewestEmailConnections.ConnectionId>
+              <InArgument x:TypeArguments="x:String">
+                <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_8">17d677e4-6ae6-ec11-b656-e42aac668fcd</Literal>
+              </InArgument>
+            </uga:GetNewestEmailConnections.ConnectionId>
+            <uga:GetNewestEmailConnections.Filter>
+              <ugagf:MailFilterCollection LogicalOperator="And">
+                <ugagf:MailFilterCollection.Filters>
+                  <ugagf:MailFilterElement DateEqualsFilter="{x:Null}" Criteria="CC" DateOperator="NewerThan" StringOperator="Contains">
+                    <ugagf:MailFilterElement.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_7">@uipath.com</Literal>
+                      </InArgument>
+                    </ugagf:MailFilterElement.Value>
+                  </ugagf:MailFilterElement>
+                </ugagf:MailFilterCollection.Filters>
+              </ugagf:MailFilterCollection>
+            </uga:GetNewestEmailConnections.Filter>
+            <uga:GetNewestEmailConnections.FolderIdBackup>
+              <usau:BackupSlot x:TypeArguments="ugage:FolderInputMode" StoredValue="Browse">
+                <usau:BackupSlot.BackupValues>
+                  <scg:Dictionary x:TypeArguments="ugage:FolderInputMode, scg:List(x:Object)" />
+                </usau:BackupSlot.BackupValues>
+              </usau:BackupSlot>
+            </uga:GetNewestEmailConnections.FolderIdBackup>
+            <uga:GetNewestEmailConnections.ImportantOnly>
+              <InArgument x:TypeArguments="x:Boolean">
+                <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_4" />
+              </InArgument>
+            </uga:GetNewestEmailConnections.ImportantOnly>
+            <uga:GetNewestEmailConnections.MarkAsRead>
+              <InArgument x:TypeArguments="x:Boolean">
+                <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_6" />
+              </InArgument>
+            </uga:GetNewestEmailConnections.MarkAsRead>
+            <uga:GetNewestEmailConnections.StarredOnly>
+              <InArgument x:TypeArguments="x:Boolean">
+                <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_5" />
+              </InArgument>
+            </uga:GetNewestEmailConnections.StarredOnly>
+            <uga:GetNewestEmailConnections.UnreadOnly>
+              <InArgument x:TypeArguments="x:Boolean">
+                <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_2" />
+              </InArgument>
+            </uga:GetNewestEmailConnections.UnreadOnly>
+            <uga:GetNewestEmailConnections.WithAttachmentsOnly>
+              <InArgument x:TypeArguments="x:Boolean">
+                <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_3" />
+              </InArgument>
+            </uga:GetNewestEmailConnections.WithAttachmentsOnly>
+          </uga:GetNewestEmailConnections>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+  </Sequence>
+</Activity>

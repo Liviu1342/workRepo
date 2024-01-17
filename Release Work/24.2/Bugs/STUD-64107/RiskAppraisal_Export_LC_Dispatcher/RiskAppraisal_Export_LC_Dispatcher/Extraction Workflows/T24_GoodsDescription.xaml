@@ -1,0 +1,286 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Tenor_and_Validity" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="out_GoodsDescription" Type="OutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1704,1693</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Tenor_and_Validity_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="72">
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="92">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Tenor_and_Validity" sap:VirtualizedContainerService.HintSize="1714,1628" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="strTenorAndValidity" />
+      <Variable x:TypeArguments="x:String" Name="strTenorAndValidityDays" />
+      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="ienResult" />
+      <Variable x:TypeArguments="x:String" Name="str_GoodsDescription" />
+      <Variable x:TypeArguments="x:Int32" Name="int_Result" />
+      <Variable x:TypeArguments="x:String" Name="strDefPayment1" />
+      <Variable x:TypeArguments="x:String" Name="strAvailableWithNxtLine" />
+      <Variable x:TypeArguments="x:String" Name="strLeft" />
+      <Variable x:TypeArguments="x:String" Name="strDefPayment2" />
+      <Variable x:TypeArguments="x:String" Name="strDefPayment3" />
+      <Variable x:TypeArguments="x:String" Name="strDefPaymentFull" />
+      <Variable x:TypeArguments="x:Boolean" Name="bol_ExistsDef1" />
+      <Variable x:TypeArguments="x:Boolean" Name="bol_ExistsDef2" />
+      <Variable x:TypeArguments="x:Boolean" Name="bol_ExistsDef3" />
+      <Variable x:TypeArguments="x:Boolean" Name="bol_ExistsNeg1" />
+      <Variable x:TypeArguments="x:Boolean" Name="bol_ExistsNeg2" />
+      <Variable x:TypeArguments="x:String" Name="strNegFull" />
+      <Variable x:TypeArguments="x:String" Name="strNeg2" />
+      <Variable x:TypeArguments="x:String" Name="strNeg1" />
+      <Variable x:TypeArguments="x:String" Name="strNeg3" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1652,52" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,172" sap2010:WorkflowViewState.IdRef="Sequence_53">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_34">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[out_GoodsDescription]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">No Value Found</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <Assign sap:VirtualizedContainerService.HintSize="1652,61" sap2010:WorkflowViewState.IdRef="Assign_44">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[out_GoodsDescription]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Welcome to TF Officer Home Page - T24" sap:VirtualizedContainerService.HintSize="1652,1324" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="7c99d4a5-071f-444f-9a49-178db771cb95" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1618,1107" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'MT 700/710/720'" sap:VirtualizedContainerService.HintSize="1556,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7c99d4a5-071f-444f-9a49-178db771cb95" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://bavdwasapp01:9448/BrowserWeb/servlet/BrowserServlet" DesignTimeRectangle="1347, 215, 126, 17" ElementType="Text" FriendlyName="'MT 700/710/720'" FullSelectorArgument="&lt;webctrl tag='FRAME' title='Welcome to TF Officer Home Page - T24*' idx='4' /&gt;&lt;webctrl tag='FRAME' title='Exp LCs &amp;amp; Drawings Pending Action - T24*' idx='2' /&gt;&lt;webctrl id='toolBar' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl aaname='MT 700/710/720' parentid='headtab' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='PFO*' tag='FRAME' /&gt;&lt;webctrl id='workarea*' tag='FRAME' /&gt;&lt;webctrl aaname='MT 700/710/720' parentid='headtab' tag='SPAN' type='' check:text='MT 700/710/720' /&gt;" Guid="4393c17c-9320-4168-9043-eafdc982a556" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIIAAAAVCAYAAACKYDYGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKUSURBVGhD7ZVLagMxDIZ7pt6ilwnkEl1mNbQn6K5QuuwZCiGB9g4p5A6uJb/0sEym8aZEHwzJ2B7J+vV75i44TgSN8Pz65dcNX8wIzm3iRnAQN4KDuBEcZL4R9i9h837KN4nj8hTecOgQdg+P4d64dntc3oixeutqfDb/Eo5pFDku5JnlkEcF8Pz2I5zj3/P7E4nVLr4n2D/PE8IpvG3bell7AfZT5ka5+FzRLXP6CBtr7kqmGwEbkMVNJKG0QMkUqvkDkki5EShKEwPnaFPrHqz8vDkSVUc1Xcdw1WhWTTBuN67lgr2SdZiz5BOx2dz1TDZCOR1kg8XF6lSuNQJvKDabxqzGSOtoXG6MAuS3hBR7g9iQS4mvG8yNkYHnVP2FgQ5YU84HMVgNa/UbM9kISZhd/BSUDUITNkv8XHQbsaIQ0QR9mktTym8eBpSIHSMR+saJSCPQRmV0XG1MipkrQufWxl3LXCMUYcoJqq86aA4XbJ0R+NsA6BsB4hlGYPlHIg72dakRaGM7axqDXPhcm7OMYH3a1jLXCPXkwSah+FhovZcFD0SQqEZe+UYAkek9YXRCLzYCaRjcW82ycyW9ZJx/80agm4X/O/gkZBHsE5xvB/S+u0qY2hQtkFwL9/3mpGetxmlDatPxOiGeMGXFzoX7FQZTZu7kvoaJRhCFYWPaRlXjLjaCUTA2pY1Ts+D/KprMMxCwc8IZygip5lqXqFk3j2DlwvGOLmIc9bRi/4GJRpACR5EWstGuoy8wwkDMdHJiI+Bia3KD8hw7dRCPGbKhzSpQRgBSHSUXrQcMadXXz8X3Xa+yDvOX8YFh/8BEIzj/GTeCg7gRHMSN4CDVCPDn8/sHb5zbA3oPHsA3gnPrhPALZTwbTzHDbIoAAAAASUVORK5CYII=" InformativeScreenshot="634ffcd22cfb12771f22935957e40219.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Welcome to TF Officer Home Page - T24*' /&gt;" SearchSteps="Selector" WaitForReadyArgument="Complete" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NCheckState DisplayName="Check App State  Description Of Goods" sap:VirtualizedContainerService.HintSize="1556,795" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="7c99d4a5-071f-444f-9a49-178db771cb95" Timeout="30" Version="V1">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1004,578" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Pick sap:VirtualizedContainerService.HintSize="942,463" sap2010:WorkflowViewState.IdRef="Pick_1">
+                    <PickBranch sap:VirtualizedContainerService.HintSize="384,416" sap2010:WorkflowViewState.IdRef="PickBranch_2">
+                      <PickBranch.Trigger>
+                        <uix:NGetText DisplayName="Get Text 45A Description of Goods single line" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="7c99d4a5-071f-444f-9a49-178db771cb95" Version="V1">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://t24.bacbad.bacb/servlet/BrowserServlet" DesignTimeRectangle="1079, 827, 381, 17" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'37,000 METRIC TONS PLUS…'" FullSelectorArgument="&lt;webctrl id='PFO*' tag='FRAME' isleaf='1' /&gt;&lt;webctrl id='workarea*' tag='FRAME' isleaf='1' /&gt;&lt;webctrl id='tab8' tableRow='4' tag='TABLE' /&gt;&lt;webctrl id='fieldCaption:DESC.GOODS' tableRow='32' tag='A' aaname='45A Description*of Goods' /&gt;&lt;nav up='3' /&gt;&lt;webctrl tag='SPAN' parentname='visibletab' rowName='45A Descriptionof Goods' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl id='PFO400025362504' tag='FRAME' /&gt;&lt;webctrl id='workarea037665366601' tag='FRAME' /&gt;&lt;webctrl id='tab8' tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='disabled_dealbox disabled_dealbox_LETTEROFCREDIT disabled_dealbox_LETTEROFCREDIT_BACBEXPINLC2' /&gt;" Guid="af598be3-a826-47d9-b647-972f7e2bbe6a" ImageBase64="" InformativeScreenshot="887ec409d14adc9454291af01187d6de.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Welcome to TF Officer Home Page*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                          </uix:NGetText.Target>
+                          <uix:NGetText.Text>
+                            <OutArgument x:TypeArguments="x:String">[out_GoodsDescription]</OutArgument>
+                          </uix:NGetText.Text>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NGetText>
+                      </PickBranch.Trigger>
+                    </PickBranch>
+                    <PickBranch sap:VirtualizedContainerService.HintSize="384,416" sap2010:WorkflowViewState.IdRef="PickBranch_1">
+                      <PickBranch.Trigger>
+                        <uix:NGetText DisplayName="Get Text 45A Description of Goods multi line" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="7c99d4a5-071f-444f-9a49-178db771cb95" Version="V1">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://bavdwasapp04.bacbad.bacb:9446/BrowserWeb/servlet/BrowserServlet" DesignTimeRectangle="1084, 785, 327, 104" DesignTimeScaleFactor="1" FriendlyName="'+MEDICAL MATERIEL.+TERM…'" FullSelectorArgument="&lt;webctrl tag='FRAME' isleaf='1' idx='4' /&gt;&lt;webctrl tag='FRAME' idx='2' /&gt;&lt;webctrl id='tab8' tableRow='4' tag='TABLE' /&gt;&lt;webctrl id='fieldCaption:DESC.GOODS' tag='A' aaname='45A Descriptionof Goods' rowName='45A Descriptionof Goods' /&gt;&lt;nav up='3' /&gt;&lt;webctrl tag='SPAN' isleaf='0' rowName='45A Descriptionof Goods' /&gt;" FuzzySelectorArgument="&lt;webctrl id='PFO584214664204' tag='FRAME' /&gt;&lt;webctrl id='workarea352204667401' tag='FRAME' /&gt;&lt;webctrl id='tab8' tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='disabled_dealbox disabled_dealbox_LETTEROFCREDIT disabled_dealbox_LETTEROFCREDIT_BACBEXPINLC2' aaname='  ' /&gt;" Guid="bcad4b1b-e624-45fb-93de-be562e5ff5a8" ImageBase64="" InformativeScreenshot="a43bcbb9d3f34ee2fcd9e949d03d6ba7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Welcome to TF Officer Home Page*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                          </uix:NGetText.Target>
+                          <uix:NGetText.Text>
+                            <OutArgument x:TypeArguments="x:String">[out_GoodsDescription]</OutArgument>
+                          </uix:NGetText.Text>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NGetText>
+                      </PickBranch.Trigger>
+                    </PickBranch>
+                  </Pick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="498,395" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,280" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,201" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Throw DisplayName="Throw &quot;SE: GoodsDescription not available&quot;" Exception="[new SystemException(&quot;SE: GoodsDescription not available&quot;)]" sap:VirtualizedContainerService.HintSize="338,90" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                  </ui:CommentOut>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://bavdwasapp04.bacbad.bacb:9446/BrowserWeb/servlet/BrowserServlet" DesignTimeRectangle="877, 830, 139, 15" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'45A Descriptionof Goods'" FullSelectorArgument="&lt;webctrl tag='FRAME' css-selector='html&amp;gt;frameset&amp;gt;frameset&amp;gt;frame' isleaf='1' idx='3' /&gt;&lt;webctrl tag='FRAME' css-selector='html&amp;gt;frameset&amp;gt;frame' idx='2' /&gt;&lt;webctrl id='tab8' tableRow='4' tag='TABLE' /&gt;&lt;webctrl id='fieldCaption:DESC.GOODS' tag='A' rowName='45A Descriptionof Goods' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='FRAME' isleaf='1' /&gt;&lt;webctrl tag='FRAME' /&gt;&lt;webctrl id='tab8' tag='TABLE' /&gt;&lt;webctrl id='fieldCaption:DESC.GOODS' tag='A' rowName='45A Descriptionof Goods' type='' class='field field_LETTEROFCREDIT field_LETTEROFCREDIT_BACBEXPINLC2' aaname='45A Descriptionof Goods' check:text='45A Descriptionof Goods' /&gt;" Guid="d9afdd8a-356d-4a07-8c25-5e96da1448f4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI8AAAATCAYAAACpx16rAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMASURBVGhD7VZtjusgDMwZI/VCVa6SHqV7kP3RY7DYGDI2hmx52z5pl5FQE4y/xkPUJUxMDGKKZ2IYUzwTw5jimRjG3xHP5x7WZQ37p7w/i48tLMsW7vL6GjzCfllinriur83Uxz1s3+CqLZ5I1np7pGcmXpqSVWwF1HiPXCroLMYL8Yx4SCiXPXYEeIN4Hre1zlvB8viKmv5FPCIWLZ6TYEzuErYPea9gCxIS/usNa8ATzxtwv55cKDuXCBLcz1/CYfEcn85nxEONb9ce6U5BVVwRlKyDFL2PAqW8eT/n5hscRcm/fD77Sy4ZQvGjlUVsbRSz7MEtN+dKTSK8HepSF0ouWVpH714fGmkup0Jp1UVo5CZkriq7iqd9KvFwE9K8Fk8OQMt8KsnODfcU69kSIanBNODSrOSk9ywGC3tTH7eN4/P5yxo2JJrjISFYixmM9+Vh4qVvqI2B8WRAxYZ+/Ax50RZh+9HocSs4rauRm8/hTI9cvZqUeJL6UhDlRMHL8OTLBMMkv3y2nawtHjqfBq4HRrE4j22cgMQYeLHUecdX+VC+jnjq+CA+HAoBcpV+CvSF6Q2qWXP0z9z06urlZr/KBjGVsA4c4jHFdRtR5BpRcBwvmSce0wATYVZuiodCexK7mccjIwL7cwahelL9CUAUXvzCF5xjQK6a0zTcUfEwYL9XVy832VriIZTZGE5EPCmQGpostxlLtOOXCTngiOdkIB5Koy0yI0bEwz7PiEfZ3/DlwRwIK55GXb3cZ+JJqPM7f5gTVCNUYAmOQdKzFYovBFMQN43FaCIJ9/hH1+IgqG5G/eex+VEw+MwwfbAADHkoCuuP5zvisTauE9774olgf8M35n6iLpXb2KpZCazIviceIbd8WXKAKqmgGg4hiaPEiMuKLvnBGblFqdG8j3FNXXj+VDzgF5cdGhPFNp/89G7OlH04Z7jQvWjuTsVDcGqvxZRtyFU/t7YdvgcPtLRPUzy/GmagE2OY4pkYxhTPxDD+pngmfgRTPBODCOELADEwvVjqIBIAAAAASUVORK5CYII=" InformativeScreenshot="40aab4a55d4254f38e3ec46eb37d8059.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Welcome to TF Officer Home Page*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="12, 0, 1377, 1047" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="6f27c8e37bf97bccc2d034fd1fe6bde7.png" Selector="&lt;html app='chrome.exe' title='Welcome to TF Officer Home Page - T24*' /&gt;" Title="Welcome to TF Officer Home Page - T24*" Url="[in_config(&quot;T24_LoginUrl&quot;).ToString]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

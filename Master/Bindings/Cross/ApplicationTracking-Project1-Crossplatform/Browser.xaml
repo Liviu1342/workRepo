@@ -1,0 +1,222 @@
+<Activity x:Class="Browser" this:Browser.myUrl="www.bbc.com" this:Browser.baseUrl="https://print.f64.ro/ro" this:Browser.myApp="chrome.exe" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="myUrl" Type="InArgument(x:String)" />
+    <x:Property Name="baseUrl" Type="InArgument(x:String)" />
+    <x:Property Name="folderPAth" Type="InArgument(x:String)" />
+    <x:Property Name="myApp" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Browser.folderPAth>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Browser.folderPAth>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="43">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml.XDocument</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Browser">
+    <uix:NApplicationCard AttachMode="SingleWindow" DisplayName="Use Browser: Produs – City Grill Family" ScopeGuid="42cd06e0-0928-48ee-a7fb-ed666b65f3d2" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" />
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.InUiElement>
+        <InArgument x:TypeArguments="ui:UiElement" />
+      </uix:NApplicationCard.InUiElement>
+      <uix:NApplicationCard.OutUiElement>
+        <OutArgument x:TypeArguments="ui:UiElement" />
+      </uix:NApplicationCard.OutUiElement>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" InformativeScreenshot="e80224cec2b272a407290fa1f5c97980.jpg" Selector="&lt;html title='Produs – City Grill Family' app='chrome.exe' /&gt;" Title="Produs – City Grill Family">
+          <uix:TargetApp.Url>
+            <InArgument x:TypeArguments="x:String">
+              <CSharpValue x:TypeArguments="x:String">myUrl</CSharpValue>
+            </InArgument>
+          </uix:TargetApp.Url>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+      <uix:NApplicationCard.Timeout>
+        <InArgument x:TypeArguments="x:Double" />
+      </uix:NApplicationCard.Timeout>
+      <uix:NApplicationCard.UserDataFolderPath>
+        <InArgument x:TypeArguments="x:String" />
+      </uix:NApplicationCard.UserDataFolderPath>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="SingleWindow" DisplayName="Use Browser: F64 Studio" ScopeGuid="9d7836f2-286d-46d6-ba6b-48e26eb84afc" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do">
+            <uix:NGoToUrl DisplayName="Go To URL" Version="V3">
+              <uix:NGoToUrl.DelayAfter>
+                <InArgument x:TypeArguments="x:Double" />
+              </uix:NGoToUrl.DelayAfter>
+              <uix:NGoToUrl.DelayBefore>
+                <InArgument x:TypeArguments="x:Double" />
+              </uix:NGoToUrl.DelayBefore>
+              <uix:NGoToUrl.Timeout>
+                <InArgument x:TypeArguments="x:Double" />
+              </uix:NGoToUrl.Timeout>
+              <uix:NGoToUrl.Url>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String">baseUrl</CSharpValue>
+                </InArgument>
+              </uix:NGoToUrl.Url>
+            </uix:NGoToUrl>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Wall Deco'" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9d7836f2-286d-46d6-ba6b-48e26eb84afc" Version="V3">
+              <uix:NClick.DelayAfter>
+                <InArgument x:TypeArguments="x:Double" />
+              </uix:NClick.DelayAfter>
+              <uix:NClick.DelayBefore>
+                <InArgument x:TypeArguments="x:Double" />
+              </uix:NClick.DelayBefore>
+              <uix:NClick.InUiElement>
+                <InArgument x:TypeArguments="ui:UiElement" />
+              </uix:NClick.InUiElement>
+              <uix:NClick.OutUiElement>
+                <OutArgument x:TypeArguments="ui:UiElement" />
+              </uix:NClick.OutUiElement>
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://print.f64.ro/ro/" DesignTimeRectangle="1576, 385, 209, 75" ElementType="Text" FriendlyName="'Wall Deco'" FullSelectorArgument="&lt;webctrl aaname='Wall Deco' parentid='block_top_menu' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Wall Deco' parentid='block_top_menu' tag='A' type='' class='' check:innerText='Wall Deco' /&gt;" Guid="7e3f0b46-68a1-4ff2-9edf-c195a57c5b6d" InformativeScreenshot="05b24625c924e9c3e53ad2460e6cd862.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='F64 - F64 Studio' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+              <uix:NClick.Timeout>
+                <InArgument x:TypeArguments="x:Double" />
+              </uix:NClick.Timeout>
+            </uix:NClick>
+            <uix:NHighlight Color="Gold" DisplayName="Highlight 'Creați acum'" ScopeIdentifier="9d7836f2-286d-46d6-ba6b-48e26eb84afc" Version="V3">
+              <uix:NHighlight.HighlightTime>
+                <InArgument x:TypeArguments="x:Double" />
+              </uix:NHighlight.HighlightTime>
+              <uix:NHighlight.Target>
+                <uix:TargetAnchorable BrowserURL="https://print.f64.ro/ro/walldeco" DesignTimeRectangle="1094, 892, 299, 66" ElementType="Text" FriendlyName="'Creați acum'" FullSelectorArgument="&lt;webctrl parentid='app' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='app' tag='A' type='' class='Button primary' aaname='Creați acum' check:innerText='CREAȚI ACUM' /&gt;" Guid="159e0c53-195e-4b4f-b6bb-fadc4750ff9c" InformativeScreenshot="201ff90bf2290b0e99fbf27944780603.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Canvas' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NHighlight.Target>
+            </uix:NHighlight>
+            <Assign>
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String">baseUrl</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">www.f64.ro</InArgument>
+              </Assign.Value>
+            </Assign>
+            <uix:NGoToUrl DisplayName="Go To URL" Version="V3">
+              <uix:NGoToUrl.DelayAfter>
+                <InArgument x:TypeArguments="x:Double" />
+              </uix:NGoToUrl.DelayAfter>
+              <uix:NGoToUrl.DelayBefore>
+                <InArgument x:TypeArguments="x:Double" />
+              </uix:NGoToUrl.DelayBefore>
+              <uix:NGoToUrl.Timeout>
+                <InArgument x:TypeArguments="x:Double" />
+              </uix:NGoToUrl.Timeout>
+              <uix:NGoToUrl.Url>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String">baseUrl</CSharpValue>
+                </InArgument>
+              </uix:NGoToUrl.Url>
+            </uix:NGoToUrl>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.InUiElement>
+        <InArgument x:TypeArguments="ui:UiElement" />
+      </uix:NApplicationCard.InUiElement>
+      <uix:NApplicationCard.OutUiElement>
+        <OutArgument x:TypeArguments="ui:UiElement" />
+      </uix:NApplicationCard.OutUiElement>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" InformativeScreenshot="c79b32ab0706767d733ea7db532e3d79.jpg" Title="F64 Studio">
+          <uix:TargetApp.Selector>
+            <InArgument x:TypeArguments="x:String">
+              <CSharpValue x:TypeArguments="x:String">"&lt;html title='F64 Studio' app='"+myApp+"' /&gt;"</CSharpValue>
+            </InArgument>
+          </uix:TargetApp.Selector>
+          <uix:TargetApp.Url>
+            <InArgument x:TypeArguments="x:String">
+              <CSharpValue x:TypeArguments="x:String">baseUrl+"/index.php?controller=history"</CSharpValue>
+            </InArgument>
+          </uix:TargetApp.Url>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+      <uix:NApplicationCard.Timeout>
+        <InArgument x:TypeArguments="x:Double" />
+      </uix:NApplicationCard.Timeout>
+      <uix:NApplicationCard.UserDataFolderPath>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String">folderPAth</CSharpValue>
+        </InArgument>
+      </uix:NApplicationCard.UserDataFolderPath>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

@@ -1,0 +1,161 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Event" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:uiit="clr-namespace:UiPath.IntegrationService.Infrastructure.Triggers;assembly=UiPath.IntegrationService.Infrastructure" xmlns:ujia="clr-namespace:UiPath.Jira.IntegrationService.Activities;assembly=UiPath.Jira.IntegrationService.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="UiPathEventConnector" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathEvent" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathEventObjectType" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathEventObjectId" Type="InArgument(x:String)" />
+    <x:Property Name="UiPathAdditionalEventData" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Event.UiPathEventConnector>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Event.UiPathEventConnector>
+  <this:Event.UiPathEvent>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Event.UiPathEvent>
+  <this:Event.UiPathEventObjectType>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Event.UiPathEventObjectType>
+  <this:Event.UiPathEventObjectId>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Event.UiPathEventObjectId>
+  <this:Event.UiPathAdditionalEventData>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Event.UiPathAdditionalEventData>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1205.2,898</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Event_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.Triggers</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.CEQL</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Entity</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.Descriptor</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Enums</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Telemetry</x:String>
+      <x:String>UiPath.BAF.Infrastructure</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Connection</x:String>
+      <x:String>UiPath.Jira.IntegrationService.Activities</x:String>
+      <x:String>UiPath.IntegrationCore.Models</x:String>
+      <x:String>UiPath.IntegrationCore.Activities</x:String>
+      <x:String>UiPath.BAF.Activities</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.BAF.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.Jira.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Jira.IntegrationService</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Event" sap:VirtualizedContainerService.HintSize="512,444.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Object" Name="UiPathEventData" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ujia:WhenEventHappens EventObjectId="{x:Null}" Language="{x:Null}" ActivityInstanceId="93dec90a-e96c-42c5-9180-ed7aa21004dc" BindingsVersion="2.1" ConfiguredBusinessEntity="" ConnectionId="b154b758-a99f-ec11-a99b-e42aac668fcd" Connector="uipath-atlassian-jira" CrudOperation="Trigger" DesignConnectionEnabled="True" DisplayName="Event Trigger" FilterExpression="((contains(fields.issuetype.name,'&quot;;knlk&quot;')))" sap:VirtualizedContainerService.HintSize="450,333.2" sap2010:WorkflowViewState.IdRef="WhenEventHappens_1" ObjectName="issue" UiPathEvent="[UiPathEvent]" UiPathEventConnector="[UiPathEventConnector]" UiPathEventObjectId="[UiPathEventObjectId]" UiPathEventObjectType="[UiPathEventObjectType]">
+      <ujia:WhenEventHappens.BusinessEntity>
+        <uibi:BusinessEntity AllFields="{x:Null}" Metadata="{x:Reference __ReferenceID0}" Name="issue">
+          <uibi:BusinessEntity.EntityMetadata>
+            <uibi:EntityMetadata DisplayName="Issues" EligibleOperations="64" IsCustomEntity="False" Name="issue">
+              <uibi:EntityMetadata.Metadata>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+                  <x:String x:Key="Object">issue</x:String>
+                  <x:String x:Key="Client">UiPath.Jira.IntegrationService.Client.IssueAPIClient</x:String>
+                  <x:String x:Key="Operation">GetIssue</x:String>
+                  <x:String x:Key="Path">/issue</x:String>
+                </scg:Dictionary>
+              </uibi:EntityMetadata.Metadata>
+            </uibi:EntityMetadata>
+          </uibi:BusinessEntity.EntityMetadata>
+          <uibi:BusinessEntity.TelemetryProperties>
+            <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+          </uibi:BusinessEntity.TelemetryProperties>
+        </uibi:BusinessEntity>
+      </ujia:WhenEventHappens.BusinessEntity>
+      <ujia:WhenEventHappens.CachedLookupValues>
+        <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)" />
+      </ujia:WhenEventHappens.CachedLookupValues>
+      <ujia:WhenEventHappens.DesignConnectionRequest>
+        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="b154b758-a99f-ec11-a99b-e42aac668fcd" ConnectionName="liviu.ponova@uipath.com" ConnectorKey="uipath-atlassian-jira">
+          <uiisi:ConnectionParameters.TelemetryInfo>
+            <uiisi:TelemetryInfo ActivityPack="UiPath.Jira.IntegrationService.Activities" ActivityPackVersion="6.2.0" Source="StudioDesktop" />
+          </uiisi:ConnectionParameters.TelemetryInfo>
+        </uiisi:ConnectionParameters>
+      </ujia:WhenEventHappens.DesignConnectionRequest>
+      <ujia:WhenEventHappens.Filter>
+        <uiisi:FilterTree Index="0" SearchableJoin="And">
+          <uiisi:FilterTree.Filters>
+            <scg:List x:TypeArguments="uiisi:Filter" Capacity="4">
+              <uiisi:Filter ComputedValue="{x:Null}" SearchableField="{x:Null}" Criteria="fields.issuetype.name" Operator="Contains" Value="&quot;;knlk&quot;" />
+            </scg:List>
+          </uiisi:FilterTree.Filters>
+          <uiisi:FilterTree.Groups>
+            <scg:List x:TypeArguments="uiisi:FilterTree" Capacity="0" />
+          </uiisi:FilterTree.Groups>
+        </uiisi:FilterTree>
+      </ujia:WhenEventHappens.Filter>
+      <ujia:WhenEventHappens.Operation>
+        <uiit:TriggerOperation DisplayName="Record updated" Key="UPDATED" ObjectName="" />
+      </ujia:WhenEventHappens.Operation>
+      <ujia:WhenEventHappens.TelemetryProperties>
+        <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+      </ujia:WhenEventHappens.TelemetryProperties>
+    </ujia:WhenEventHappens>
+  </Sequence>
+</Activity>

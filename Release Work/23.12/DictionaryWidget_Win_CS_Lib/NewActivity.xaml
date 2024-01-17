@@ -1,0 +1,177 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:t="clr-namespace:TestActivities;assembly=TestActivities" xmlns:ta="clr-namespace:TestActivities.Activities;assembly=TestActivities" xmlns:this="clr-namespace:" xmlns:uisaseeb="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.EUDeclarationOfConformity.Bundle;assembly=ExtendedExtractionRe.yJZ032SWBnO1lnDPe3o2KNQ1" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_Property" Type="OutArgument(scg:IDictionary(x:String, InArgument(x:Int32)))" />
+    <x:Property Name="inOut_TestArg" Type="InArgument(scg:IDictionary(x:String, InArgument(x:Int32)))" />
+  </x:Members>
+  <this:Main.inOut_TestArg>
+    <InArgument x:TypeArguments="scg:IDictionary(x:String, InArgument(x:Int32))" />
+  </this:Main.inOut_TestArg>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>1024,1713.2</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DocumentClassification</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.DataExtraction</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Results</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Dom</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.EUDeclarationOfConformity.Bundle</x:String>
+      <x:String>TestActivities</x:String>
+      <x:String>TestActivities.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.StudioWeb.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>ExtendedExtractionRe.yJZ032SWBnO1lnDPe3o2KNQ1</AssemblyReference>
+      <AssemblyReference>TestActivities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="450,1648" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:IDictionary(x:String, InArgument(x:Int32))" Name="myVariable1" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisaseeb:EUDeclarationOfConformity" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractionResults="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" Prompt="{x:Null}" DisplayName="Extract Document Data" sap:VirtualizedContainerService.HintSize="388,320" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_1">
+      <p:ExtractDocumentDataWithDocumentData.DocType>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_2">EU Declaration of Conformity</Literal>
+        </InArgument>
+      </p:ExtractDocumentDataWithDocumentData.DocType>
+      <p:ExtractDocumentDataWithDocumentData.FileInput>
+        <InArgument x:TypeArguments="upr:IResource">
+          <CSharpValue x:TypeArguments="upr:IResource">LocalResource.FromPath("C:\\Users\\Liviu.Ponova\\Downloads\\RaspunsSesizare.pdf")</CSharpValue>
+        </InArgument>
+      </p:ExtractDocumentDataWithDocumentData.FileInput>
+      <p:ExtractDocumentDataWithDocumentData.ProjectId>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_3">00000000-0000-0000-0000-000000000000</Literal>
+        </InArgument>
+      </p:ExtractDocumentDataWithDocumentData.ProjectId>
+    </p:ExtractDocumentDataWithDocumentData>
+    <t:ActivityWithViewModelnDifferentAssembly Argument="{x:Null}" DisplayName="ActivityWithViewModelnDifferentAssemblyDisplayName" sap:VirtualizedContainerService.HintSize="388,24.8" sap2010:WorkflowViewState.IdRef="ActivityWithViewModelnDifferentAssembly_1" />
+    <ta:DictionaryStringWithMetadataActivity InArgument="{x:Null}" InOutArgument="{x:Null}" OutArgument="{x:Null}" DisplayName="DictionaryActivityWithMetadataViewModelKey" sap:VirtualizedContainerService.HintSize="388,248" sap2010:WorkflowViewState.IdRef="DictionaryStringWithMetadataActivity_1">
+      <ta:DictionaryStringWithMetadataActivity.Property>
+        <scg:Dictionary x:TypeArguments="x:String, x:String">
+          <x:String x:Key="name">the name in the document</x:String>
+          <x:String x:Key="age">subtract birth year from current year</x:String>
+        </scg:Dictionary>
+      </ta:DictionaryStringWithMetadataActivity.Property>
+    </ta:DictionaryStringWithMetadataActivity>
+    <ta:DictionaryArgumentActivity InArgument="{x:Null}" InOutArgument="{x:Null}" OutArgument="{x:Null}" DisplayName="DictionaryArgumentActivityDisplayNameKey" sap:VirtualizedContainerService.HintSize="388,248" sap2010:WorkflowViewState.IdRef="DictionaryArgumentActivity_1">
+      <ta:DictionaryArgumentActivity.Property>
+        <scg:Dictionary x:TypeArguments="x:String, Argument">
+          <InArgument x:TypeArguments="x:String" x:Key="test">
+            <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_4">abc</Literal>
+          </InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="number">
+            <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_5" Value="12" />
+          </InArgument>
+        </scg:Dictionary>
+      </ta:DictionaryArgumentActivity.Property>
+    </ta:DictionaryArgumentActivity>
+    <ta:DictionaryIntInArgumentActivityWithMetadata DisplayName="DictionaryIntInArgumentActivityWithMetadataDisplayNameKey" sap:VirtualizedContainerService.HintSize="388,248" sap2010:WorkflowViewState.IdRef="DictionaryIntInArgumentActivityWithMetadata_1">
+      <ta:DictionaryIntInArgumentActivityWithMetadata.InArgument>
+        <InArgument x:TypeArguments="scg:IDictionary(x:String, InArgument(x:Int32))">
+          <CSharpValue x:TypeArguments="scg:IDictionary(x:String, InArgument(x:Int32))">myVariable1</CSharpValue>
+        </InArgument>
+      </ta:DictionaryIntInArgumentActivityWithMetadata.InArgument>
+      <ta:DictionaryIntInArgumentActivityWithMetadata.InOutArgument>
+        <InOutArgument x:TypeArguments="scg:IDictionary(x:String, InArgument(x:Int32))">
+          <CSharpReference x:TypeArguments="scg:IDictionary(x:String, InArgument(x:Int32))">inOut_TestArg</CSharpReference>
+        </InOutArgument>
+      </ta:DictionaryIntInArgumentActivityWithMetadata.InOutArgument>
+      <ta:DictionaryIntInArgumentActivityWithMetadata.OutArgument>
+        <OutArgument x:TypeArguments="scg:IDictionary(x:String, InArgument(x:Int32))">
+          <CSharpReference x:TypeArguments="scg:IDictionary(x:String, InArgument(x:Int32))">out_Property</CSharpReference>
+        </OutArgument>
+      </ta:DictionaryIntInArgumentActivityWithMetadata.OutArgument>
+      <ta:DictionaryIntInArgumentActivityWithMetadata.Property>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:Int32)">
+          <InArgument x:TypeArguments="x:Int32" x:Key="test">
+            <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_6" Value="12345" />
+          </InArgument>
+        </scg:Dictionary>
+      </ta:DictionaryIntInArgumentActivityWithMetadata.Property>
+    </ta:DictionaryIntInArgumentActivityWithMetadata>
+    <ta:DictionaryStringActivity InArgument="{x:Null}" InOutArgument="{x:Null}" OutArgument="{x:Null}" DisplayName="DictionaryStringActivityDisplayNameKey" sap:VirtualizedContainerService.HintSize="388,248" sap2010:WorkflowViewState.IdRef="DictionaryStringActivity_1">
+      <ta:DictionaryStringActivity.Property>
+        <scg:Dictionary x:TypeArguments="x:String, x:String">
+          <x:String x:Key="abc">123</x:String>
+        </scg:Dictionary>
+      </ta:DictionaryStringActivity.Property>
+    </ta:DictionaryStringActivity>
+  </Sequence>
+</Activity>

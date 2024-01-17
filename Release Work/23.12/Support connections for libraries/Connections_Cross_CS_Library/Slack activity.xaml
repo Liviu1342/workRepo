@@ -1,0 +1,83 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Slack_activity" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1723.2,930" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.CC052707C93_conversations_List.Bundle;assembly=CC052707C93_conversa.Kkv2xwN1UQ1QR0Kj1DwJJ42" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>CC052707C93_conversa.Kkv2xwN1UQ1QR0Kj1DwJJ42</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Slack_activity" sap:VirtualizedContainerService.HintSize="512,244.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACq1VXW/jNhD8K4SeeoCiWnbboAHycHXS1kl8cWzf9eEQGLS0tniWSJUfjt0g/71DSo7j2GiBoshDot3Z5ezskHmOfhVU5qavpOVCko4unqOBrJ1t4tHF1+foE68ouohok5UupxnXWSHWlEdxdCVMXfJtC7huAOwtgEymRW2FkgBMyDKrmNWO/G96h2dZwaWk0rCFVhWzBbFSGIs2023tD5grVRKXCEyUtvc693zTOLqXfS7XHGx967iZ6U5lvD33wZHeNmzEEoHnaKSMaJLdl5f4dURLvJqJ48mmiLPB1dFA1zJTOYj7OqY0e1J6ZWqeEcB+Qk8/zPE6mZAJGyyYVLYQcsmEYTU3hvI4wFClFk2BAj6z6L3v+Z2hsonNtwHkDGnGLZoayyUQmaYw8wf2JMqSzYnltOCuRM1eRWM1jj4Usft/iohjzLGEu+iBgEOxYVzmrOI2K3YqsdDBD1lrtRa5F4pDkariZ4ZqrrnXIGgLtbjc+txcyMDUh2o3L0U2a9vFaCPWqNkHqlpUMRPVP4vS+y+iDMwQeotJWNWu7K1SMVzjqnCxvvDS+cNHge9u/Mhr+ZpqqJ/MhYMgh92ywfAg4z8f36yk4htRuWpMmdK5GZN1Wp64wEO+YbrBHG1qCr+1bRj4z+E8KN2ivdd16LpXVEhLS8gI0ZTGfj0taXvd0DmYsmWbdjqdl0do7ezJd+dG2Bmuw5q0CbIfe6vf3q6TpF+vHghqQc271HL8LEbcFgl40RKuQtGE9FpklHzMrFhjZ2SSyR/X0jZ/9vudH7vnnfP+z71DSrM7uDH5xcm8pOQ48/UxZqdqk9vVurt5+pR+fkgfxp3bb+nV083ND92YfUEa5Zdp0vE/KIdgTtOlJGc1h4cb09zSdqpWJC+lK0sMNqY/HeHNvFjw0sB5AwP5gqY7L8KgeOnHZGqwo4PUe3c3GwlWwu6aN2aE61eRBT3v9pYmsIEoCPSbh0tpMEPYwaC2ODO8JLNQOqMzU/JsBeD9/Btw7Qbf7/d3a+sh2UKBW/QbgQM686wg0FMrVwfreAaIj9CPL+mQSu+Ml3XBk26n20vT9Dz56S23PbabpMl579/o3NfU2AM5v88jhtdThLyX8PH9++o7LpcODP3/UH9BcM1G+JyIv3bu/xtnT0IKhwcAAA==" ConnectionId="33dce89c-5bcf-4da1-a9c6-90b97bf74137" DisplayName="List All Channels" sap:VirtualizedContainerService.HintSize="450,133.2" sap2010:WorkflowViewState.IdRef="ConnectorActivity_1" UiPathActivityTypeId="be8ce9db-240e-3839-88c6-3f611c01df17">
+      <isactr:ConnectorActivity.Arguments>
+        <isactr:FieldArgument Name="Jit_conversations">
+          <isactr:FieldArgument.Argument>
+            <OutArgument x:TypeArguments="uiascb:conversations_List[]" />
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+        <isactr:FieldArgument Name="exclude_archived" />
+        <isactr:FieldArgument Name="team_id">
+          <isactr:FieldArgument.Argument>
+            <InArgument x:TypeArguments="x:String" />
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+        <isactr:FieldArgument Name="types" />
+      </isactr:ConnectorActivity.Arguments>
+    </isactr:ConnectorActivity>
+  </Sequence>
+</Activity>

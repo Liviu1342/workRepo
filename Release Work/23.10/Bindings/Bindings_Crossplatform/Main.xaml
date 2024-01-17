@@ -1,0 +1,268 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:ujia="clr-namespace:UiPath.Jira.IntegrationService.Activities;assembly=UiPath.Jira.IntegrationService.Activities" xmlns:ujic="clr-namespace:UiPath.Jira.IntegrationService.Client;assembly=UiPath.Jira.IntegrationService" xmlns:umaf="clr-namespace:UiPath.MicrosoftOffice365.Activities.Files;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umafe="clr-namespace:UiPath.MicrosoftOffice365.Activities.Files.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umfm="clr-namespace:UiPath.MicrosoftOffice365.Files.Models;assembly=UiPath.MicrosoftOffice365" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="my_Asset" Type="InArgument(x:String)" />
+    <x:Property Name="my_Queue" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Main.my_Asset>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.my_Asset>
+  <this:Main.my_Queue>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.my_Queue>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1258,1899.6</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Orchestrator.Client.Models</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Entity</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.Descriptor</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Enums</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Telemetry</x:String>
+      <x:String>UiPath.BAF.Infrastructure</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Connection</x:String>
+      <x:String>UiPath.Jira.IntegrationService.Activities</x:String>
+      <x:String>UiPath.IntegrationCore.Activities</x:String>
+      <x:String>UiPath.BAF.Activities</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Files.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.OrchestratorClient</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.BAF.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.Jira.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="512,1834.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="myFolder" />
+      <Variable x:TypeArguments="x:String" Name="myProcess" />
+      <Variable x:TypeArguments="x:String" Name="myFilter" />
+      <Variable x:TypeArguments="umfm:O365DriveRemoteItem" Name="_out_GetFileFolderConnections_1__Result" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:StartJob ArgumentsVariable="{x:Null}" JobId="{x:Null}" Key="{x:Null}" NumberOfRobots="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Start Job" FolderPath="test" sap:VirtualizedContainerService.HintSize="450,196.8" sap2010:WorkflowViewState.IdRef="StartJob_1" JobPriority="Normal" ModernFolder="True" ProcessName="Assets" ResumeOnSameContext="False">
+      <ui:StartJob.Arguments>
+        <InArgument x:TypeArguments="x:Int32" x:Key="noOfSteps" />
+      </ui:StartJob.Arguments>
+    </ui:StartJob>
+    <ui:StartJob ArgumentsVariable="{x:Null}" JobId="{x:Null}" Key="{x:Null}" NumberOfRobots="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Start Job" FolderPath="[myFolder]" sap:VirtualizedContainerService.HintSize="450,144.4" sap2010:WorkflowViewState.IdRef="StartJob_2" JobPriority="Normal" ModernFolder="True" ProcessName="[myProcess]" ResumeOnSameContext="False">
+      <ui:StartJob.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:StartJob.Arguments>
+    </ui:StartJob>
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" Value="{x:Null}" AssetName="bool asset" CacheStrategy="None" DisplayName="Get Asset" FolderPath="test" sap:VirtualizedContainerService.HintSize="450,144.4" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1" />
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" Value="{x:Null}" AssetName="[my_Asset]" CacheStrategy="None" DisplayName="Get Asset" FolderPath="[myFolder]" sap:VirtualizedContainerService.HintSize="450,144.4" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2" />
+    <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Reference="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="Equals" FolderPath="test" sap:VirtualizedContainerService.HintSize="450,144.4" sap2010:WorkflowViewState.IdRef="GetQueueItems_1" QueueItemStates="All" QueueName="QueueTest1" />
+    <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Reference="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="Equals" FolderPath="[myFolder]" sap:VirtualizedContainerService.HintSize="450,144.4" sap2010:WorkflowViewState.IdRef="GetQueueItems_2" QueueItemStates="All" QueueName="[my_Queue]" />
+    <ujia:GetRecord ActivityInstanceId="f045540d-34cd-4326-a11f-c4382a50272a" BindingsVersion="2.1" BusinessEntityName="Filters" ConfiguredBusinessEntity="" ConnectionId="b154b758-a99f-ec11-a99b-e42aac668fcd" Connector="uipath-atlassian-jira" CrudOperation="Get" DesignConnectionEnabled="True" DisplayName="Get Record" sap:VirtualizedContainerService.HintSize="450,238.8" sap2010:WorkflowViewState.IdRef="GetRecord_1" IsAdditionalPropertiesActive="True">
+      <ujia:GetRecord.BusinessEntity>
+        <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID0}" Name="filter">
+          <uibi:BusinessEntity.AllFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="51">
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID1" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The filter id" DisplayName="Filter id" FormDataType="ExpressionTextBox" InArgumentValue="[myFilter]" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="filterId" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="x:String">[myFilter]</InArgument>
+                </uiisi:OperationEntityField.ArgumentValue>
+                <uiisi:OperationEntityField.Value>
+                  <VisualBasicValue x:TypeArguments="x:String">[myFilter]</VisualBasicValue>
+                </uiisi:OperationEntityField.Value>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Use [expand](#expansion) to include additional information about filter in the response. This parameter accepts a comma-separated list. Expand options include:&#xA;&#xA; *  `sharedUsers` Returns the users that the filter is shared with. This includes users that can browse projects that the filter is shared with. If you don't specify `sharedUsers`, then the `sharedUsers` object is returned but it doesn't list any users. The list of users returned is limited to 1000, to access additional users append `[start-index:end-index]` to the expand request. For example, to access the next 1000 users, use `?expand=sharedUsers[1001:2000]`.&#xA; *  `subscriptions` Returns the users that are subscribed to the filter. If you don't specify `subscriptions`, the `subscriptions` object is returned but it doesn't list any subscriptions. The list of subscriptions returned is limited to 1000, to access additional subscriptions append `[start-index:end-index]` to the expand request. For example, to access the next 1000 subscriptions, use `?expand=subscriptions[1001:2000]`." DisplayName="Expand" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="expand" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="x:String" ContainingType="FilterOwnerAvatarUrls" DataType="String" DisplayName="_16x16" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.AvatarUrls._16x16" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="x:String" ContainingType="FilterOwnerAvatarUrls" DataType="String" DisplayName="_24x24" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.AvatarUrls._24x24" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="x:String" ContainingType="FilterOwnerAvatarUrls" DataType="String" DisplayName="_32x32" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.AvatarUrls._32x32" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="x:String" ContainingType="FilterOwnerAvatarUrls" DataType="String" DisplayName="_48x48" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.AvatarUrls._48x48" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="scg:IDictionary(x:String, x:Object)" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="scg:IDictionary(x:String, x:Object)" ContainingType="Filter" DataType="IDictionary" DisplayName="AdditionalProperties" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.AdditionalProperties" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="ujic:FilterOwnerApplicationRoles" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="ujic:FilterOwnerApplicationRoles" ContainingType="FilterOwner" DataType="FilterOwnerApplicationRoles" DisplayName="ApplicationRoles" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.ApplicationRoles" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="ujic:FilterOwnerAvatarUrls" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="ujic:FilterOwnerAvatarUrls" ContainingType="FilterOwner" DataType="FilterOwnerAvatarUrls" DisplayName="AvatarUrls" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.AvatarUrls" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" ContainingType="Filter" DataType="String" Description="A description of the filter." DisplayName="Description" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Description" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int32" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="x:Int32" ContainingType="FilterSharedUsers" DataType="Int32" DisplayName="EndIndex" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.SharedUsers.EndIndex" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int32" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="x:Int32" ContainingType="FilterSubscriptions" DataType="Int32" DisplayName="EndIndex" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Subscriptions.EndIndex" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int64" ArgumentDirection="Out" ArgumentType="x:Int64" ContainingType="Filter" DataType="Int64" Description="The count of how many users have selected this filter as a favorite, including the filter owner." DisplayName="Favourited count" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.FavouritedCount" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="Out" ArgumentType="x:Boolean" ContainingType="Filter" DataType="Boolean" Description="Whether the filter is selected as a favorite." DisplayName="Favourite" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Favourite" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="ujic:FilterOwnerGroups" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="ujic:FilterOwnerGroups" ContainingType="FilterOwner" DataType="FilterOwnerGroups" DisplayName="Groups" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.Groups" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" ContainingType="Filter" DataType="String" Description="The unique identifier for the filter." DisplayName="ID" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Id" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="ujic:FilterOwnerApplicationRolesItems" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="ujic:FilterOwnerApplicationRolesItems" ContainingType="FilterOwnerApplicationRoles" DataType="FilterOwnerApplicationRolesItems" DisplayName="Items" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.ApplicationRoles.Items" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="ujic:FilterOwnerGroupsItems" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="ujic:FilterOwnerGroupsItems" ContainingType="FilterOwnerGroups" DataType="FilterOwnerGroupsItems" DisplayName="Items" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.Groups.Items" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="ujic:FilterSharedUsersItems" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="ujic:FilterSharedUsersItems" ContainingType="FilterSharedUsers" DataType="FilterSharedUsersItems" DisplayName="Items" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.SharedUsers.Items" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="ujic:FilterSubscriptionsItems" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="ujic:FilterSubscriptionsItems" ContainingType="FilterSubscriptions" DataType="FilterSubscriptionsItems" DisplayName="Items" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Subscriptions.Items" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" ContainingType="Filter" DataType="String" Description="The JQL query for the filter. For example, *project = SSP AND issuetype = Bug*." DisplayName="Jql" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Jql" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int32" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="x:Int32" ContainingType="FilterOwnerApplicationRoles" DataType="Int32" DisplayName="MaxResults" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.ApplicationRoles.MaxResults" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int32" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="x:Int32" ContainingType="FilterOwnerGroups" DataType="Int32" DisplayName="MaxResults" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.Groups.MaxResults" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int32" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="x:Int32" ContainingType="FilterSharedUsers" DataType="Int32" DisplayName="MaxResults" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.SharedUsers.MaxResults" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int32" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="x:Int32" ContainingType="FilterSubscriptions" DataType="Int32" DisplayName="MaxResults" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Subscriptions.MaxResults" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" ContainingType="Filter" DataType="String" Description="The name of the filter. Must be unique." DisplayName="Name" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Name" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" ContainingType="FilterOwner" DataType="String" Description="The account ID of the user, which uniquely identifies the user across all Atlassian products. For example, *5b10ac8d82e05b22cc7d4ef5*. Required in requests." DisplayName="Owner account ID" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.AccountId" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" ContainingType="FilterOwner" DataType="String" Description="The user account type. Can take the following values:&#xA;&#xA; *  `atlassian` regular Atlassian user account&#xA; *  `app` system account used for Connect applications and OAuth to represent external systems&#xA; *  `customer` Jira Service Desk account representing an external service desk" DisplayName="Owner account type" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.AccountType" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="Out" ArgumentType="x:Boolean" ContainingType="FilterOwner" DataType="Boolean" Description="Whether the user is active." DisplayName="Owner active" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.Active" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int32" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="x:Int32" ContainingType="FilterOwnerApplicationRoles" DataType="Int32" DisplayName="Owner application roles size" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.ApplicationRoles.Size" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" ContainingType="FilterOwner" DataType="String" Description="The display name of the user. Depending on the user’s privacy setting, this may return an alternative value." DisplayName="Owner display name" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.DisplayName" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" ContainingType="FilterOwner" DataType="String" Description="The email address of the user. Depending on the user’s privacy setting, this may be returned as null." DisplayName="Owner email address" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.EmailAddress" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" ContainingType="FilterOwner" DataType="String" Description="Expand options that include additional user details in the response." DisplayName="Owner expand" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.Expand" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int32" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="x:Int32" ContainingType="FilterOwnerGroups" DataType="Int32" DisplayName="Owner groups size" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.Groups.Size" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" ContainingType="FilterOwner" DataType="String" Description="This property is no longer available and will be removed from the documentation soon. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details." DisplayName="Owner key" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.Key" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" ContainingType="FilterOwner" DataType="String" Description="The locale of the user. Depending on the user’s privacy setting, this may be returned as null." DisplayName="Owner locale" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.Locale" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" ContainingType="FilterOwner" DataType="String" Description="This property is no longer available and will be removed from the documentation soon. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details." DisplayName="Owner name" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.Name" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" ContainingType="FilterOwner" DataType="String" Description="The URL of the user." DisplayName="Owner self" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.Self" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" ContainingType="FilterOwner" DataType="String" Description="The time zone specified in the user's profile. Depending on the user’s privacy setting, this may be returned as null." DisplayName="Owner time zone" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner.TimeZone" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="ujic:FilterOwner" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="ujic:FilterOwner" ContainingType="Filter" DataType="FilterOwner" DisplayName="Owner" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Owner" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="ujic:Filter" ArgumentDirection="Out" ArgumentType="ujic:Filter" DataType="Filter" Description="The Filters object returned." DisplayName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" ContainingType="Filter" DataType="String" Description="A URL to view the filter results in Jira, using the [Search for issues using JQL](#api-rest-api-2-filter-search-get) operation with the filter's JQL string to return the filter results. For example, *https://your-domain.atlassian.net/rest/api/2/search?jql=project+%3D+SSP+AND+issuetype+%3D+Bug*." DisplayName="Search url" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.SearchUrl" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" ContainingType="Filter" DataType="String" Description="The URL of the filter." DisplayName="Self" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Self" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int32" ArgumentDirection="Out" ArgumentType="x:Int32" ContainingType="FilterSharedUsers" DataType="Int32" Description="The number of items on the page." DisplayName="Shared users size" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.SharedUsers.Size" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="ujic:FilterSharedUsers" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="ujic:FilterSharedUsers" ContainingType="Filter" DataType="FilterSharedUsers" DisplayName="SharedUsers" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.SharedUsers" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="ujic:FilterSharePermissions" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="ujic:FilterSharePermissions" ContainingType="Filter" DataType="FilterSharePermissions" DisplayName="SharePermissions" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.SharePermissions" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int32" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="x:Int32" ContainingType="FilterSharedUsers" DataType="Int32" DisplayName="StartIndex" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.SharedUsers.StartIndex" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int32" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="x:Int32" ContainingType="FilterSubscriptions" DataType="Int32" DisplayName="StartIndex" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Subscriptions.StartIndex" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int32" ArgumentDirection="Out" ArgumentType="x:Int32" ContainingType="FilterSubscriptions" DataType="Int32" Description="The number of items on the page." DisplayName="Subscriptions size" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Subscriptions.Size" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="ujic:FilterSubscriptions" Description="{x:Null}" ArgumentDirection="Out" ArgumentType="ujic:FilterSubscriptions" ContainingType="Filter" DataType="FilterSubscriptions" DisplayName="Subscriptions" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.Subscriptions" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" ContainingType="Filter" DataType="String" Description="A URL to view the filter results in Jira, using the ID of the filter. For example, *https://your-domain.atlassian.net/issues/?filter=10100*." DisplayName="View url" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.ViewUrl" ShouldFilterOnChange="False" />
+            </scg:List>
+          </uibi:BusinessEntity.AllFields>
+          <uibi:BusinessEntity.EntityMetadata>
+            <uibi:EntityMetadata DisplayName="Filters" EligibleOperations="2" IsCustomEntity="False" Name="filter">
+              <uibi:EntityMetadata.Metadata>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+                  <x:String x:Key="Object">filter</x:String>
+                  <x:String x:Key="Client">UiPath.Jira.IntegrationService.Client.FilterAPIClient</x:String>
+                  <x:String x:Key="Operation">GetFilterByFilterId</x:String>
+                  <x:String x:Key="Path">/filter/{filterId}</x:String>
+                </scg:Dictionary>
+              </uibi:EntityMetadata.Metadata>
+            </uibi:EntityMetadata>
+          </uibi:BusinessEntity.EntityMetadata>
+          <uibi:BusinessEntity.SelectedFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
+              <x:Reference>__ReferenceID1</x:Reference>
+            </scg:List>
+          </uibi:BusinessEntity.SelectedFields>
+          <uibi:BusinessEntity.TelemetryProperties>
+            <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+          </uibi:BusinessEntity.TelemetryProperties>
+        </uibi:BusinessEntity>
+      </ujia:GetRecord.BusinessEntity>
+      <ujia:GetRecord.CachedLookupValues>
+        <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)" />
+      </ujia:GetRecord.CachedLookupValues>
+      <ujia:GetRecord.DesignConnectionRequest>
+        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="b154b758-a99f-ec11-a99b-e42aac668fcd" ConnectionName="liviu.ponova@uipath.com" ConnectorKey="uipath-atlassian-jira">
+          <uiisi:ConnectionParameters.TelemetryInfo>
+            <uiisi:TelemetryInfo ActivityPack="UiPath.Jira.IntegrationService.Activities" ActivityPackVersion="6.2.0" Source="StudioDesktop" />
+          </uiisi:ConnectionParameters.TelemetryInfo>
+        </uiisi:ConnectionParameters>
+      </ujia:GetRecord.DesignConnectionRequest>
+      <ujia:GetRecord.SelectedFields>
+        <scg:List x:TypeArguments="uibi:EntityField" Capacity="1">
+          <x:Reference>__ReferenceID1</x:Reference>
+        </scg:List>
+      </ujia:GetRecord.SelectedFields>
+      <ujia:GetRecord.TelemetryProperties>
+        <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+      </ujia:GetRecord.TelemetryProperties>
+    </ujia:GetRecord>
+    <umaf:GetFileFolderConnections BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" AuthScopesInvalid="False" BrowserDriveId="b!frXXpPiMUUeySBdPnsYDdp3DcBCUf9JJj0-gqeG1o5if5BnfZwKOTptt-oCH_wTS" BrowserDriveName="OneDrive" BrowserItemFriendlyName="Automation" BrowserItemId="01E5QZP44HAM3P7TVY65DY6CPR66TZTQDV" BrowserSiteUrl="https://uipath-my.sharepoint.com/personal/liviu_ponova_uipath_com/Documents" ConnectionId="6c7f2070-9d31-4c48-8be2-75a2929ce624" DisplayName="Get File/Folder" sap:VirtualizedContainerService.HintSize="450,154.4" sap2010:WorkflowViewState.IdRef="GetFileFolderConnections_1" ItemSelectionMode="Browse" Result="[_out_GetFileFolderConnections_1__Result]" UseConnectionService="True">
+      <umaf:GetFileFolderConnections.ItemIdBackup>
+        <usau:BackupSlot x:TypeArguments="umafe:EDriveItemMode" StoredValue="Browse">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="umafe:EDriveItemMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </umaf:GetFileFolderConnections.ItemIdBackup>
+    </umaf:GetFileFolderConnections>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="450,91.2" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[String.Join(&quot;-&quot;, String.Concat(&quot;randomString1&quot;.Select(Function(c) c.ToString() + &quot;-&quot;)), String.Concat(&quot;randomString2&quot;.Select(Function(c) c.ToString() + &quot;-&quot;)), String.Concat(&quot;randomString3&quot;.Select(Function(c) c.ToString() + &quot;-&quot;))).TrimEnd(&quot;-&quot;c)]" />
+  </Sequence>
+</Activity>

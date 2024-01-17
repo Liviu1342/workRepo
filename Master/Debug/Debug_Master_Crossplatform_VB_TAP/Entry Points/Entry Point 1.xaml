@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Entry_Point_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Entry_Point_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:e="clr-namespace:EntitiesLibrary;assembly=EntitiesLibrary" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_ErrorCodes" Type="InArgument(scg:List(x:Int32))" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1884,4934.666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1782,4968</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Entry_Point_1_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -35,47 +35,62 @@
       <x:String>System.Collections.ObjectModel</x:String>
       <x:String>System.Activities.Runtime.Collections</x:String>
       <x:String>System.Reflection</x:String>
+      <x:String>EntitiesLibrary</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.DataService.Activities</x:String>
+      <x:String>UiPath.DataService.Definition</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
-      <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
-      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Drawing</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
-      <AssemblyReference>System.Xml</AssemblyReference>
-      <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
       <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
-      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>DataService.EntitiesLibrary</AssemblyReference>
+      <AssemblyReference>EntitiesLibrary</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Entry_Point_1" sap:VirtualizedContainerService.HintSize="726,4870" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Entry_Point_1" sap:VirtualizedContainerService.HintSize="726,4902.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="errorCode" />
     </Sequence.Variables>
@@ -84,25 +99,40 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="664,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Starting main entry point&quot;]" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Files to Use For Invoke\File actions.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="664,388" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Files to Use For Invoke\File actions.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_Filename">Fisier de test pentru debug.txt</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_OrchFolder">test</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_OrchStorageBucketName">MAster test files</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_TextForFile">Test pentru master-ul de debug</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_LocalFile">Files\myTextFile.txt</InArgument>
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="664,956" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="664,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Starting main entry point&quot;]" />
+    <Sequence sap:VirtualizedContainerService.HintSize="664,628" sap2010:WorkflowViewState.IdRef="Sequence_19">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="s:Guid" Name="entity_RecordId">
+          <Variable.Default>
+            <VisualBasicValue x:TypeArguments="s:Guid" ExpressionText="new Guid(&quot;74AACAB7-AA5E-EE11-9937-00224802FD72&quot;)" />
+          </Variable.Default>
+        </Variable>
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Files to Use For Invoke\File actions.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,385.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Files to Use For Invoke\File actions.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="in_Filename">Fisier de test pentru debug.txt</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_OrchFolder">test</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_OrchStorageBucketName">MAster test files</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_TextForFile">Test pentru master-ul de debug</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_LocalFile">Files\myTextFile.txt</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <e:Get_Name_of_Entity_by_ID DisplayName="Get Name of Entity by ID" sap:VirtualizedContainerService.HintSize="450,91.2" sap2010:WorkflowViewState.IdRef="Get_Name_of_Entity_by_ID_1" in_Id="[entity_RecordId]" />
+    </Sequence>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="664,749.2" sap2010:WorkflowViewState.IdRef="TryCatch_3">
       <TryCatch.Try>
-        <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="492,264.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="492,264.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Files to Use For Invoke\UIA actions.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Files to Use For Invoke\UIA actions.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Files to Use For Invoke\UIA actions.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Files to Use For Invoke\UIA actions.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_AppToSearch">Benefits</InArgument>
             </ui:InvokeWorkflowFile.Arguments>

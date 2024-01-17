@@ -1,0 +1,240 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Microsoft_activity_2" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1723.2,1142.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umac="clr-namespace:UiPath.MicrosoftOffice365.Activities.Calendar;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umace="clr-namespace:UiPath.MicrosoftOffice365.Activities.Calendar.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umcm="clr-namespace:UiPath.MicrosoftOffice365.Calendar.Models;assembly=UiPath.MicrosoftOffice365" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Calendar.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Calendar.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Calendar.Filters</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Calendar.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Filters</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Calendar</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Filters</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Mail.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Models</x:String>
+      <x:String>UiPath.Shared.Services.Graph.Mail.Models</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Microsoft_activity_2" sap:VirtualizedContainerService.HintSize="588,1077.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:List(umcm:O365EventItem)" Name="_out_GetEventListConnections_1__EventList" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <umac:GetEventListConnections Calendar="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Filter="{x:Null}" AuthScopesInvalid="False" CalendarInputMode="Browse" DisplayName="Get Event List" sap:VirtualizedContainerService.HintSize="526,259.2" sap2010:WorkflowViewState.IdRef="GetEventListConnections_1" UseConnectionService="True">
+      <umac:GetEventListConnections.BrowserCalendarFriendlyName>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_9">Product - Dev Coffees - Calendar (view only)</Literal>
+        </InArgument>
+      </umac:GetEventListConnections.BrowserCalendarFriendlyName>
+      <umac:GetEventListConnections.BrowserCalendarGroupId>
+        <InArgument x:TypeArguments="x:String" />
+      </umac:GetEventListConnections.BrowserCalendarGroupId>
+      <umac:GetEventListConnections.BrowserCalendarId>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_10">AQMkADFiYTBhNmYxLTZiZTMtNGRiNi05M2EwLThiZTgzZjYzMDYzMQAuAAADvhDG_Loz5ESm2NSBlI7QEAEAodS5yEEXN02PRIKRq4_gPgAAAgENAAAA</Literal>
+        </InArgument>
+      </umac:GetEventListConnections.BrowserCalendarId>
+      <umac:GetEventListConnections.BrowserGroupId>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_11">f41a5cf1-cea9-4e19-990e-3f80b3452b88</Literal>
+        </InArgument>
+      </umac:GetEventListConnections.BrowserGroupId>
+      <umac:GetEventListConnections.CalendarIdBackup>
+        <usau:BackupSlot x:TypeArguments="umace:ECalendarMode" StoredValue="Browse">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="umace:ECalendarMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </umac:GetEventListConnections.CalendarIdBackup>
+      <umac:GetEventListConnections.ConnectionId>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_22">7ab8e158-a79f-ec11-a99b-e42aac668fcd</Literal>
+        </InArgument>
+      </umac:GetEventListConnections.ConnectionId>
+      <umac:GetEventListConnections.EndDate>
+        <InArgument x:TypeArguments="s:DateTimeOffset">
+          <Literal x:TypeArguments="s:DateTimeOffset" sap2010:WorkflowViewState.IdRef="Literal`1_5" Value="2023-12-01T00:00:00.0000000+02:00" />
+        </InArgument>
+      </umac:GetEventListConnections.EndDate>
+      <umac:GetEventListConnections.EventList>
+        <OutArgument x:TypeArguments="scg:List(umcm:O365EventItem)">
+          <CSharpReference x:TypeArguments="scg:List(umcm:O365EventItem)">_out_GetEventListConnections_1__EventList</CSharpReference>
+        </OutArgument>
+      </umac:GetEventListConnections.EventList>
+      <umac:GetEventListConnections.MaxResults>
+        <InArgument x:TypeArguments="x:Int32">
+          <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_6" Value="50" />
+        </InArgument>
+      </umac:GetEventListConnections.MaxResults>
+      <umac:GetEventListConnections.PreferredReturnTimezone>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_7">UTC</Literal>
+        </InArgument>
+      </umac:GetEventListConnections.PreferredReturnTimezone>
+      <umac:GetEventListConnections.StartDate>
+        <InArgument x:TypeArguments="s:DateTimeOffset">
+          <Literal x:TypeArguments="s:DateTimeOffset" sap2010:WorkflowViewState.IdRef="Literal`1_4" Value="2023-11-16T00:00:00.0000000+02:00" />
+        </InArgument>
+      </umac:GetEventListConnections.StartDate>
+    </umac:GetEventListConnections>
+    <ui:ForEach x:TypeArguments="umcm:O365EventItem" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="526,420.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="umcm:O365EventItem">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="umcm:O365EventItem" Name="currentItem" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="492,232" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+              <ui:LogMessage.Message>
+                <InArgument x:TypeArguments="x:Object">
+                  <CSharpValue x:TypeArguments="x:Object">currentItem.Subject</CSharpValue>
+                </InArgument>
+              </ui:LogMessage.Message>
+            </ui:LogMessage>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+      <ui:ForEach.Values>
+        <InArgument x:TypeArguments="sc:IEnumerable">
+          <CSharpValue x:TypeArguments="sc:IEnumerable">_out_GetEventListConnections_1__EventList</CSharpValue>
+        </InArgument>
+      </ui:ForEach.Values>
+    </ui:ForEach>
+    <umam:GetEmailListConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" EmailList="{x:Null}" Filter="{x:Null}" Mailbox="{x:Null}" ManualEntryFolder="{x:Null}" AuthScopesInvalid="False" BrowserFolderId="AAMkADIxOTk4ODViLWEzOGUtNDMzYy04YzM2LTE1ZWQ1YWMzMTM5YwAuAAAAAADJ1v1iaUE7Ro0D_ZnWVvehAQDRF-qtdOjXT4c9QsLpW7vVAAAAAAEMAAA=" DisplayName="Get Email List" sap:VirtualizedContainerService.HintSize="526,206.4" sap2010:WorkflowViewState.IdRef="GetEmailListConnections_1" SelectionMode="Browse" UseConnectionService="True">
+      <umam:GetEmailListConnections.BodyAsHtml>
+        <InArgument x:TypeArguments="x:Boolean">
+          <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_17" />
+        </InArgument>
+      </umam:GetEmailListConnections.BodyAsHtml>
+      <umam:GetEmailListConnections.BrowserFolder>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_12">Inbox</Literal>
+        </InArgument>
+      </umam:GetEmailListConnections.BrowserFolder>
+      <umam:GetEmailListConnections.ConnectionId>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_23">7ab8e158-a79f-ec11-a99b-e42aac668fcd</Literal>
+        </InArgument>
+      </umam:GetEmailListConnections.ConnectionId>
+      <umam:GetEmailListConnections.FolderIdBackup>
+        <usau:BackupSlot x:TypeArguments="umame:ItemSelectionMode" StoredValue="Browse">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="umame:ItemSelectionMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </umam:GetEmailListConnections.FolderIdBackup>
+      <umam:GetEmailListConnections.Importance>
+        <InArgument x:TypeArguments="umame:ImportanceFilter">
+          <Literal x:TypeArguments="umame:ImportanceFilter" sap2010:WorkflowViewState.IdRef="Literal`1_20" />
+        </InArgument>
+      </umam:GetEmailListConnections.Importance>
+      <umam:GetEmailListConnections.IncludeSubfolders>
+        <InArgument x:TypeArguments="x:Boolean">
+          <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_13" />
+        </InArgument>
+      </umam:GetEmailListConnections.IncludeSubfolders>
+      <umam:GetEmailListConnections.MarkAsRead>
+        <InArgument x:TypeArguments="x:Boolean">
+          <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_19" />
+        </InArgument>
+      </umam:GetEmailListConnections.MarkAsRead>
+      <umam:GetEmailListConnections.MaxResults>
+        <InArgument x:TypeArguments="x:Int32">
+          <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_15" Value="100" />
+        </InArgument>
+      </umam:GetEmailListConnections.MaxResults>
+      <umam:GetEmailListConnections.OrderByDate>
+        <InArgument x:TypeArguments="umam:EOrderByDate">
+          <Literal x:TypeArguments="umam:EOrderByDate" sap2010:WorkflowViewState.IdRef="Literal`1_14" />
+        </InArgument>
+      </umam:GetEmailListConnections.OrderByDate>
+      <umam:GetEmailListConnections.UnreadOnly>
+        <InArgument x:TypeArguments="x:Boolean">
+          <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_16" />
+        </InArgument>
+      </umam:GetEmailListConnections.UnreadOnly>
+      <umam:GetEmailListConnections.WithAttachmentsOnly>
+        <InArgument x:TypeArguments="x:Boolean">
+          <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_18" />
+        </InArgument>
+      </umam:GetEmailListConnections.WithAttachmentsOnly>
+    </umam:GetEmailListConnections>
+  </Sequence>
+</Activity>

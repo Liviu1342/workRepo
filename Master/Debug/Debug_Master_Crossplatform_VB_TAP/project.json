@@ -1,11 +1,13 @@
 {
   "name": "Debug_Master_Crossplatform_VB_TAP",
+  "projectId": "8275ba5e-9d94-45ee-968a-c4d76bbcba50",
   "description": "Test Automation Project",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.System.Activities": "[23.4.1-preview]",
-    "UiPath.Testing.Activities": "[23.4.0-preview]",
-    "UiPath.UIAutomation.Activities": "[23.4.1-preview]",
+    "EntitiesLibrary": "[1.0.1]",
+    "UiPath.System.Activities": "[23.10.0-preview]",
+    "UiPath.Testing.Activities": "[23.10.0-preview]",
+    "UiPath.UIAutomation.Activities": "[23.10.0-preview]",
     "UiPath.WebAPI.Activities": "[1.16.0-preview]"
   },
   "webServices": [],
@@ -14,11 +16,12 @@
   "studioVersion": "23.4.0.0",
   "projectVersion": "1.0.0",
   "runtimeOptions": {
+    "exceptionHandlerWorkflow": "Global Handlers\\GlobalHandler-Ignore.xaml",
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
     "isPausable": true,
     "isAttended": false,
-    "requiresUserInteraction": true,
+    "requiresUserInteraction": false,
     "supportsPersistence": false,
     "workflowSerialization": "DataContract",
     "excludedLoggedData": [
@@ -49,7 +52,8 @@
         "fileName": "TestCase.xaml"
       }
     ],
-    "modernBehavior": true
+    "modernBehavior": true,
+    "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "isTemplate": false,
