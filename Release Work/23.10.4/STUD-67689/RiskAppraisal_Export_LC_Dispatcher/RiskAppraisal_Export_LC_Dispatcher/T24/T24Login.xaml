@@ -1,0 +1,580 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Generic_Login_Template" this:Generic_Login_Template.in_strCredentialName="JoshT24" this:Generic_Login_Template.in_strPreLoginURL="https://t24.bacbad.bacb/servlet/BrowserServlet" this:Generic_Login_Template.in_strPostLoginURL="https://t24.bacbad.bacb/servlet/BrowserLoginServlet" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_blnSuccessful" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_strCredentialName" Type="InArgument(x:String)" />
+    <x:Property Name="in_strPreLoginURL" Type="InArgument(x:String)" />
+    <x:Property Name="in_strPostLoginURL" Type="InArgument(x:String)" />
+    <x:Property Name="out_T24Browser" Type="OutArgument(ui:UiElement)" />
+    <x:Property Name="argument1" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>2164,6822</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>FILE_CopyFile_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="74">
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="90">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Generic Login Template:&#xA;&#xA;Description: Template for loggin in to applications&#xA;&#xA;Prerequisites: &#xA;&#xA;Inputs:&#xA;in_Config (Always have the config file as an input)&#xA;in_strCredentialName&#xA;in_strPreLoginURL&#xA;in_strPostLoginURL&#xA;&#xA;Outputs:&#xA;out_blnSuccessful" DisplayName="T24Login" sap:VirtualizedContainerService.HintSize="2174,6757" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:DateTime" Name="dtStartTime" />
+      <Variable x:TypeArguments="s:DateTime" Name="dtEndTime" />
+      <Variable x:TypeArguments="x:String" Name="strRunTime" />
+      <Variable x:TypeArguments="x:String" Default="T24Login" Name="strComponentName" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message &quot;Component: &quot;+strComponentName+ &quot; Started&quot;" sap:VirtualizedContainerService.HintSize="2112,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Component: &quot;+strComponentName+ &quot; Started&quot;]" />
+    <Assign DisplayName="Assign dtStartTime" sap:VirtualizedContainerService.HintSize="2112,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:DateTime">[dtStartTime]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:DateTime">[datetime.Now]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Sequence sap2010:Annotation.AnnotationText="Check that required input arguments have values else throw a Business Exception" DisplayName="Sequence Check Inputs" sap:VirtualizedContainerService.HintSize="2112,123" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If Condition="[string.IsNullOrEmpty(in_strCredentialName)]" DisplayName="If string.IsNullOrEmpty(in_strCredentialName)" sap:VirtualizedContainerService.HintSize="478,480" sap2010:WorkflowViewState.IdRef="If_4">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Sequence DisplayName="Sequence Ifstring.IsNullOrEmpty(in_strCredentialName) TRUE" sap:VirtualizedContainerService.HintSize="400,201" sap2010:WorkflowViewState.IdRef="Sequence_17">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Throw DisplayName="Throw SE: in_strCredentialName missing" Exception="[new SystemException(&quot;BE: in_strCredentialName missing in &quot;+strComponentName)]" sap:VirtualizedContainerService.HintSize="338,90" sap2010:WorkflowViewState.IdRef="Throw_5" />
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence sap:VirtualizedContainerService.HintSize="400,103" sap2010:WorkflowViewState.IdRef="Sequence_18">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </If.Else>
+      </If>
+      <If Condition="[string.IsNullOrEmpty(in_strPreLoginURL)]" DisplayName="If string.IsNullOrEmpty(in_strPreLoginUrl)" sap:VirtualizedContainerService.HintSize="478,480" sap2010:WorkflowViewState.IdRef="If_5">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Sequence DisplayName="Sequence Ifstring.IsNullOrEmpty(in_strPreLoginUrl) TRUE" sap:VirtualizedContainerService.HintSize="400,201" sap2010:WorkflowViewState.IdRef="Sequence_19">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Throw DisplayName="Throw BE: in_strPreLoginUrl missing" Exception="[new BusinessRuleException(&quot;BE: in_strPreLoginUrl missing in &quot; + strComponentName)]" sap:VirtualizedContainerService.HintSize="338,90" sap2010:WorkflowViewState.IdRef="Throw_6" />
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence sap:VirtualizedContainerService.HintSize="400,103" sap2010:WorkflowViewState.IdRef="Sequence_20">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </If.Else>
+      </If>
+      <If Condition="[string.IsNullOrEmpty(in_strPostLoginURL)]" DisplayName="If string.IsNullOrEmpty(in_strPostLoginUrl)" sap:VirtualizedContainerService.HintSize="478,480" sap2010:WorkflowViewState.IdRef="If_6">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Sequence DisplayName="Sequence Ifstring.IsNullOrEmpty(in_strPostLoginUrl) TRUE" sap:VirtualizedContainerService.HintSize="400,201" sap2010:WorkflowViewState.IdRef="Sequence_32">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Throw DisplayName="Throw BE: in_strPostLoginUrl missing" Exception="[new BusinessRuleException(&quot;BE: in_strPostLoginUrl missing in &quot; + strComponentName)]" sap:VirtualizedContainerService.HintSize="338,90" sap2010:WorkflowViewState.IdRef="Throw_9" />
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence sap:VirtualizedContainerService.HintSize="400,103" sap2010:WorkflowViewState.IdRef="Sequence_33">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </If.Else>
+      </If>
+    </Sequence>
+    <Sequence sap2010:Annotation.AnnotationText="May want to put the work in a try catch so you can control the exception reporting messages" DisplayName="Sequence  Login to T24" sap:VirtualizedContainerService.HintSize="2112,5694" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch DisplayName="Try Catch in T24Login try to login" sap:VirtualizedContainerService.HintSize="2050,5552" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <TryCatch.Try>
+          <Sequence DisplayName="Sequence T24 login" sap:VirtualizedContainerService.HintSize="2012,5324" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: T24 Sign in" sap:VirtualizedContainerService.HintSize="1950,5112" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" OutUiElement="[out_T24Browser]" ScopeGuid="9c6e8fcd-f9b6-4d4d-a73d-49cd175533fa" Version="V1" WindowResize="Maximize">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1916,4895" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="ss:SecureString" Name="sstrT24Password" />
+                      <Variable x:TypeArguments="x:String" Name="strT24Username" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NCheckState sap2010:Annotation.AnnotationText="When Google Chrome is closed down improperly, the next time you open it it will ask if you want to restore the previously closed pages. This checks for that message and dismisses it if it appears." DisplayName="Check App State Restore pages close" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="1854,678" sap2010:WorkflowViewState.IdRef="NCheckState_9" ScopeIdentifier="9c6e8fcd-f9b6-4d4d-a73d-49cd175533fa" Version="V1">
+                      <uix:NCheckState.IfExists>
+                        <Sequence DisplayName="Target appears restore pages close" sap:VirtualizedContainerService.HintSize="400,404" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9c6e8fcd-f9b6-4d4d-a73d-49cd175533fa" Version="V1">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="299, 9, 24, 22" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;ctrl name='Restore pages?' role='*' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Restore pages?' role='alert' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:text='Close' /&gt;" Guid="9871a9b8-f40f-41c6-a62a-efc9172fbce6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAaCAYAAACkVDyJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACzSURBVEhL7ZPBCsIwDED9Uw9e/AjFgeJQcEwU/dKeMx6smBUZaYnDQx8MRlL2miVZycJUoTtV6M5/CvvHS9prJyGEMfKBGLn78z1G5jEJz5ebrDdb2TeniZR3YuQ4Y8Ek5MO7w3Ei1TJy+iJzmHuYSktkkDU0Wloig2xhrCxW+jOhllGZ/r05UvPQpD3jKZGahHEt0p5pKbtowSRk8ZF+q4IYOc5YyBoaD6rQnSp0Z2GhyABRpwF2fV4G3wAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Restore pages?' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <ui:LogMessage DisplayName="Log Message restore pages message close" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Closed restore pages window in Chrome&quot;]" />
+                        </Sequence>
+                      </uix:NCheckState.IfExists>
+                      <uix:NCheckState.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="299, 9, 24, 22" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;ctrl name='Restore pages?' role='*' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Restore pages?' role='alert' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:text='Close' /&gt;" Guid="5a7ada79-fb50-4be3-a898-425d57dae3a9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAaCAYAAACkVDyJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACzSURBVEhL7ZPBCsIwDED9Uw9e/AjFgeJQcEwU/dKeMx6smBUZaYnDQx8MRlL2miVZycJUoTtV6M5/CvvHS9prJyGEMfKBGLn78z1G5jEJz5ebrDdb2TeniZR3YuQ4Y8Ek5MO7w3Ei1TJy+iJzmHuYSktkkDU0Wloig2xhrCxW+jOhllGZ/r05UvPQpD3jKZGahHEt0p5pKbtowSRk8ZF+q4IYOc5YyBoaD6rQnSp0Z2GhyABRpwF2fV4G3wAAAABJRU5ErkJggg==" InformativeScreenshot="dfdbd7a2759b86dc3edea820f6ed17e0.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Restore pages?' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                      </uix:NCheckState.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NCheckState>
+                    <uix:NCheckState sap2010:Annotation.AnnotationText="Checking if we can see the login screen for T24 or not." DisplayName="Check App State 'T24 Sign in' 1" EnableIfExists="False" sap:VirtualizedContainerService.HintSize="1854,1547" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="9c6e8fcd-f9b6-4d4d-a73d-49cd175533fa" Timeout="30" Version="V1">
+                      <uix:NCheckState.IfNotExists>
+                        <Sequence DisplayName="Target does not appear T24 sign in page" sap:VirtualizedContainerService.HintSize="916,1299" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NCheckState sap2010:Annotation.AnnotationText="Checking if we can see the privacy notice that occasionally appears when navigating to T24" DisplayName="Check App State 'chrome.exe Privacy'" sap:VirtualizedContainerService.HintSize="854,691" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="9c6e8fcd-f9b6-4d4d-a73d-49cd175533fa" Timeout="30" Version="V1">
+                            <uix:NCheckState.IfExists>
+                              <Sequence DisplayName="Target appears security window" sap:VirtualizedContainerService.HintSize="400,443" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts T24 Login Security Window" sap:VirtualizedContainerService.HintSize="338,196" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" InteractionMode="WindowMessages" Shortcuts="[d(hk)][k(tab)][u(hk)][d(hk)][k(tab)][u(hk)][d(hk)][k(tab)][u(hk)][d(hk)][k(tab)][u(hk)][d(hk)][k(enter)][u(hk)][d(hk)][k(tab)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V1" />
+                                <ui:LogMessage DisplayName="Log Message Security bypass" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;T24 security page found and tried to bypass. In &quot; + strComponentName]" />
+                              </Sequence>
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Target does not appear privacy" sap:VirtualizedContainerService.HintSize="400,205" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Throw DisplayName="Throw SE: Neither T24 login screen or security page were found in " Exception="[new SystemException(&quot;SE: Neither T24 login screen or security page were found in &quot; + strComponentName)]" sap:VirtualizedContainerService.HintSize="338,90" sap2010:WorkflowViewState.IdRef="Throw_11" />
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="665, 253, 72, 62" FriendlyName="'chrome.exe Privacy'" Guid="db9a378c-d6a6-4977-afd1-383c3cc20c79" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAA+CAYAAACIll2bAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUMSURBVHhe7ZpJaxVBFIX9RZo4ojExDjiCLhwWIoKruFR3EpfRnaIrRVcKulHQjQjOQ+KsURPnGEckcQrirDFln/huqFfvVldVV1V3L96BA2+o7vT9cvt29+GNE3Wlqg7IoDogg+qADCoVoG9Xu0ZdJpUH0PCweLlu1ajxuiwqDaChwwfF03nTRo3XZVEpAA0PfRL9y+aOAcJrfFYGlQLQ4PatY3DI+KwMKhzQr77Hom/+9BpA+AzfFa3CAb3Z2FYDh4zvilahgL6cO8mCkY01RaowQCO/fooXq5eyUGRjDdYWpcIAfdy/lwXCGWuLUiGA/gwOiGdLZrEwOGMttilChQAa6GhnQaQZ2xSh3AH96LnDArAxts1b+QIaGRGv1q9li7cxtsU+8lSugD4fP8oW7mLsI0/lBujv16+if8VCtmgXYx/YV17KDdD73TvZgrMY+8pLuQD6/fql6FvYxBabxdgX9pmHcgH0tn0TW6iPsc88FB3Qt2tdbIEhjH3HVlxAlRiVKy6E84hnowKSY9RYjh3PRgOkxqixHDuejQbo3Y5tbEExjL8VS1EA6WJUnXW6OWsSu151zHg2CqC0GJWzTqdnTBC3LCHFimeDA7KJUVXrdCYBdLZpgrjdagcpRjwbFJBtjKpaJ8A519QgLs5ssIIUI54NCujjgX3sgZusEwBdSOAAUGdzo7jTOpndXjaOIaSCAXKNUWXrdL7SPZdmNoquBNCV5oni3ux0SKHj2WCAssSoZJ3k7rmc+GrLRHEtcc/sKex+yCHj2SCAfGJUWCfqHsBB9wDO9cS4svXOSYcUKp71B+QZo8I6UfcADnUP7o0ACEP7fgqkUPGsN6DPx4+xB+hinQAHswdw4BsSHAxszKOHc6ay+4RxbL7yAoTo8/nKRezBuVgnuXtwalH3dCdw7iZwAAin2qO5PCQcm2886wXow55d7IG5WicazLru6U2GNU6zBymQcIw+ygwoZIyK4nHPw13W5e4BHOoeXMnQPQRIB8k3ns0MKHSMCgDyZV2GI3ePfGrJcNIg+cSzmQDFilEBwNQ9gEPdI4MxdVLWeNYdUOQYFRBo9shwqHu4U0s1vlMhZY1nnQENHTlU9YdjGENY1z0YzGndI1uFhGN3lROgvGJUGDDUwUyzh4NBVmHJkLLEs06AYsWoOnUm8wiAuMt62immWobkGs9aA3KNUV2sExJFzCN59qjF24IiSK7xrDUg1xjVxTohUcS9EZ7B5O6xte50c4lnrQB9OX+qpqiQ1onSRFz6b7ZMqipWtQxDBSO/J0ioyUZGQFljVBfrhBtHui/CVa07mUdqwVkMSLbxrBFQ1hjVxTrJd9UUddxNBjYV6gMKkGzi2VRAPjGqiwHgxPTx4mRiDGbKoikso3siepLvSYY2VzQHLA3ik8Utxng2FdBAxxa2oBhGhwAODWZ0D51a1D10N20zsG27660hntUC8o1RsxgPpfJgRvcADj2sjt0PVYoDKCrUFoi8jl5/7+muVF0rHlCAGDWrAQKA1Ocx+VGDCpSLTLNpTX/bGm08ywIKEaP6GKcSDWZ0T9XddKUorhN079NMa4c0v56tARQqRvU1Zo08mE3PYSYopu+fLF/AxrM1gELFqCGMxwsazHht6hQTBDK3Dp8NMr+erQIU+teoIYyuMXWPbBRqC0r1QzynKfFsFaAYv0YNYbkI3X9f994Glrzm1eYNFRr/xQ7pukhC/APktOfE4lAt3AAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Privacy error - Google Chrome' /&gt;" SearchSteps="Image" TargetType="ImageBased" Visibility="Interactive" WaitForReadyArgument="Complete">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NCheckState.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NCheckState>
+                          <uix:NCheckState sap2010:Annotation.AnnotationText="Checking we can see the T24 login screen after clearing the security screen" DisplayName="Check App State 'T24 Sign in'" EnableIfExists="False" sap:VirtualizedContainerService.HintSize="854,453" sap2010:WorkflowViewState.IdRef="NCheckState_8" ScopeIdentifier="9c6e8fcd-f9b6-4d4d-a73d-49cd175533fa" Timeout="30" Version="V1">
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Target does not appear T24 sign in 2" sap:VirtualizedContainerService.HintSize="400,205" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Throw DisplayName="Throw SE: SE: T24 login screen not found after clearing the security page in" Exception="[new SystemException(&quot;SE: T24 login screen not found after clearing the security page in &quot; + strComponentName)]" sap:VirtualizedContainerService.HintSize="338,90" sap2010:WorkflowViewState.IdRef="Throw_12" />
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable BrowserURL="https://t24.bacbad.bacb/servlet/BrowserServlet" DesignTimeRectangle="702, 257, 93, 21" FriendlyName="'T24 Sign in'" FullSelectorArgument="&lt;webctrl tag='B' aaname='T24 Sign in' innertext='T24 Sign in' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='B' aaname='T24 Sign in' innertext='T24 Sign in' type='' class='' check:text='T24 Sign in' /&gt;" Guid="ed107343-2c70-4b17-875c-2309863cd6e7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAAAZCAYAAAAhd0APAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPJSURBVGhD7VjfS9tQFN7/tCfffBJ8KkhBEHzYW58CgoWBDMSBrKwsSC0FpQgKExlIK6IQUOYY4oQKeZB2IiLFQsEiKkUWFL6d5J40SZPUdJaadv3gPPTek/vjfOfX7RsM8OoYkBACDEgIAQYkhAADEkKAAQkhAJOgQh79hLdBZEpBTXyE+zMFiVgSQzwXlVawdlTl2dbQTtYRHc0gF0T9uoC12RRGImKfoXEZ8YUDlO54XkdxCxM0P5FRofFQd1DD3kc619gydis81Cb+mYTadqZh/GaR8ldiWT9UFEiGQQOQUN1n3WaRsXHJOgR1yRxfp9t0ETcHiPOZpHwwB2yGTzqqIjf1zMJ3v7HxIQX5+xW0J/r9dIvjRVkYYnwTJaHlxtMVctOmwZ4noZRNCt3YJlTD8x+hlQvIziu4MDQYvR8JzQhAghcoxQjj+nljHapJVEAS1EWhG10955EXol5Aen4fFd1xQoKOklDLZ4RxYzvwcooKzespTMornP7aiIQI6ZYfedQJkyhDbDXLXUtSiEvCCaKZUyNixJmTkHcPkX2fxDCvMxJbQ+7sVqzjhyqlVdbXRT7hcXZGafUQuYS1//DEMrIeNbNzJDydIjvu/40oxHT5RT1dmDUoQE24OcTcmFhXl9hSAZWmfONJAuXqGc9aQjJJ6ZIjoeE4npJy1B0XniHBTxI/6qwo0DESSllOM7YLNsCFeGha4TTQBgk6qP7k5mWrEYjImMufO3J/w5hm49D4vYXSjYgg7XKHjZZEtmgMWXqTK8gV2fNpvzW+/xBFTGtYTY2LhEgK6SOzZlaxl+Cont63opXQERI09Zvh5XrHklb/8CijToec1A9EBm/kqDZJYGgVKsiSOJdxtm3rYxcJ1L0Zv/WCHoQEilA7mtfzRwsSmr9tRIizZr6chIdTpHUjk66ZZy3cis7B2NhfAqc8A3Ucf2GPsnVhLqOZ5Nv2aYhXOupdEmzdziQt7Ex1BGudVtIeCQSPy3gZzYpQlkgS7xKK45HX8ySYxVZPQ/KJi4EWaCMdlRXMzO9ArXCao/dIaZUN1CoSHmgPo1Gg/r3sf7beJoH6bXFJH2l5+OAkXHy1vyvs4iTeZbRremm7viEZSyJOHVatH9KRmhHzvtIhEvRirPf6UbNNJSPGZrdwXHW+GdxGqxsRY/bozWI+/kJMQr/iEffKSkDjdg99TUIlvwxJf9w9cNRoV/j5mdNb4leX/2PyR9+SoBU3MWGEvoc43iyvjz6OBEo9xQOkbf8dGUV5QYF6zSohwX9WE8KJAQmvDuAvifyTrQt+0CUAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='chrome.exe' title='T24 Sign in' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="484, 122, 188, 41" ElementType="Icon" FriendlyName="'IMG logo'" FullSelectorArgument="&lt;webctrl tag='TABLE' title='T24 Sign in' idx='1' /&gt;&lt;webctrl tableRow='1' title='T24 Sign in' idx='2' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' title='T24 Sign in' /&gt;&lt;webctrl tag='IMG' title='T24 Sign in' type='' class='' aaname='Temenos' /&gt;" ImageBase64="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" SearchSteps="Selector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NCheckState.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NCheckState>
+                        </Sequence>
+                      </uix:NCheckState.IfNotExists>
+                      <uix:NCheckState.Target>
+                        <uix:TargetAnchorable BrowserURL="https://t24.bacbad.bacb/servlet/BrowserServlet" DesignTimeRectangle="702, 257, 93, 21" FriendlyName="'T24 Sign in'" FullSelectorArgument="&lt;webctrl tag='B' aaname='T24 Sign in' innertext='T24 Sign in' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='B' aaname='T24 Sign in' innertext='T24 Sign in' type='' class='' check:text='T24 Sign in' /&gt;" Guid="ed107343-2c70-4b17-875c-2309863cd6e7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAAAZCAYAAAAhd0APAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPJSURBVGhD7VjfS9tQFN7/tCfffBJ8KkhBEHzYW58CgoWBDMSBrKwsSC0FpQgKExlIK6IQUOYY4oQKeZB2IiLFQsEiKkUWFL6d5J40SZPUdJaadv3gPPTek/vjfOfX7RsM8OoYkBACDEgIAQYkhAADEkKAAQkhAJOgQh79hLdBZEpBTXyE+zMFiVgSQzwXlVawdlTl2dbQTtYRHc0gF0T9uoC12RRGImKfoXEZ8YUDlO54XkdxCxM0P5FRofFQd1DD3kc619gydis81Cb+mYTadqZh/GaR8ldiWT9UFEiGQQOQUN1n3WaRsXHJOgR1yRxfp9t0ETcHiPOZpHwwB2yGTzqqIjf1zMJ3v7HxIQX5+xW0J/r9dIvjRVkYYnwTJaHlxtMVctOmwZ4noZRNCt3YJlTD8x+hlQvIziu4MDQYvR8JzQhAghcoxQjj+nljHapJVEAS1EWhG10955EXol5Aen4fFd1xQoKOklDLZ4RxYzvwcooKzespTMornP7aiIQI6ZYfedQJkyhDbDXLXUtSiEvCCaKZUyNixJmTkHcPkX2fxDCvMxJbQ+7sVqzjhyqlVdbXRT7hcXZGafUQuYS1//DEMrIeNbNzJDydIjvu/40oxHT5RT1dmDUoQE24OcTcmFhXl9hSAZWmfONJAuXqGc9aQjJJ6ZIjoeE4npJy1B0XniHBTxI/6qwo0DESSllOM7YLNsCFeGha4TTQBgk6qP7k5mWrEYjImMufO3J/w5hm49D4vYXSjYgg7XKHjZZEtmgMWXqTK8gV2fNpvzW+/xBFTGtYTY2LhEgK6SOzZlaxl+Cont63opXQERI09Zvh5XrHklb/8CijToec1A9EBm/kqDZJYGgVKsiSOJdxtm3rYxcJ1L0Zv/WCHoQEilA7mtfzRwsSmr9tRIizZr6chIdTpHUjk66ZZy3cis7B2NhfAqc8A3Ucf2GPsnVhLqOZ5Nv2aYhXOupdEmzdziQt7Ex1BGudVtIeCQSPy3gZzYpQlkgS7xKK45HX8ySYxVZPQ/KJi4EWaCMdlRXMzO9ArXCao/dIaZUN1CoSHmgPo1Gg/r3sf7beJoH6bXFJH2l5+OAkXHy1vyvs4iTeZbRremm7viEZSyJOHVatH9KRmhHzvtIhEvRirPf6UbNNJSPGZrdwXHW+GdxGqxsRY/bozWI+/kJMQr/iEffKSkDjdg99TUIlvwxJf9w9cNRoV/j5mdNb4leX/2PyR9+SoBU3MWGEvoc43iyvjz6OBEo9xQOkbf8dGUV5QYF6zSohwX9WE8KJAQmvDuAvifyTrQt+0CUAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='chrome.exe' title='T24 Sign in' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="484, 122, 188, 41" ElementType="Icon" FriendlyName="'IMG logo'" FullSelectorArgument="&lt;webctrl tag='TABLE' title='T24 Sign in' idx='1' /&gt;&lt;webctrl tableRow='1' title='T24 Sign in' idx='2' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' title='T24 Sign in' /&gt;&lt;webctrl tag='IMG' title='T24 Sign in' type='' class='' aaname='Temenos' /&gt;" ImageBase64="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" SearchSteps="Selector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NCheckState.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NCheckState>
+                    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_strCredentialName]" CacheStrategy="None" DisplayName="Get Credential T24 login" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="1854,168" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[sstrT24Password]" Username="[strT24Username]" />
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into Username" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1854,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="9c6e8fcd-f9b6-4d4d-a73d-49cd175533fa" Text="[strT24Username]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://t24.bacbad.bacb/servlet/BrowserServlet" DesignTimeRectangle="321, 326, 206, 19" ElementType="InputBox" FriendlyName="'INPUT signOnName'" FullSelectorArgument="&lt;webctrl parentid='middle' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' aaname='Username' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='middle' tag='TABLE' /&gt;&lt;webctrl type='' tag='INPUT' aaname='Username' class='input_user' /&gt;" Guid="6a70961d-b701-4a26-a072-29266b09a2e6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANIAAAAXCAYAAAB+vBFFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADjSURBVHhe7dshbsNAFEXRLsGs8cJKXN4ldgfhRqXdQ1GqgqkemJESOU6UfHiedJBteCWDmZdmZk9PSGYFGyGdfv/auq5tWZY2z3Obpgm4kDbSSFpJM30jpDx4PRw2PwbOpZU00zdCSmV54e39o30ev9vx6we4kDbSSFpJM30jpP47JyLYl0bSSprpGyHlQWx9CJzrvfQJCR4gJCggJCggJCggJCggJCggJCggJCggJCggJChwNSRn7eA+u2ftnP6G29LG7ulv95HgflfvI7khC7eljTSSVjZvyJrZ4xOS2dNr7R8nT3Qpct0+2AAAAABJRU5ErkJggg==" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='T24 Sign in' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="238, 328, 82, 15" ElementType="Text" FriendlyName="'Username'" FullSelectorArgument="&lt;webctrl parentid='middle' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='LABEL' innertext='Username' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='middle' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' innertext='Username' class='' aaname='' check:text='Username' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFYAAAATCAYAAAAKw/ooAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGMSURBVFhH7ZS70cIwDICZiQloaTMGU1DkaJMVUlBSskIa7lgjY+iXbDm25YRcHvorfXc+sOWH/NnxCYzDOV8fYGIVMLFKmFglhNgv1Jc7VK+B68yng9Olg56rxjImVgkTq8QGsQM8b3esc7m9sYUZ3lCFdirNlwMYerV+jtCHxtF//O1djMek87l1uV3GJsbWHwr4PRT9EZ8Dx8b+OqwWOwrykYgT1sIz7twfAMv141qomvIg4noz6ztYWDgsOdbVO6ibkFs+l1tfHgzGteSuv7F8i2RCfZNsOlAcSCoeKQ5jZh4mixVjfe5pXrF/GSN+rbWXbW8sn3Yq2CXJbXlJxSZzEItixbNDJdy6DWKzeUL5H7F+I4tiA67db27p9NeLzZ+Ssb5DrLyxmgixLEA8+rPS0s25/3JjUeRWseMh4yHS+7lN7NT62H9qTwdRiCVcQvSZhJIk4BOMsex2s9w4DiVweL1YxH0RYS5qS+StFEvI3GvMPVn6UCbFGvsxsUqYWCVMrBImVonz9QF/Q93N1sG4FSMAAAAASUVORK5CYII=" SearchSteps="Selector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into Password" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1854,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="9c6e8fcd-f9b6-4d4d-a73d-49cd175533fa" SecureText="[sstrT24Password]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://t24.bacbad.bacb/servlet/BrowserServlet" DesignTimeRectangle="319, 349, 206, 19" ElementType="InputBoxPassword" FriendlyName="'INPUT password'" FullSelectorArgument="&lt;webctrl parentid='middle' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='INPUT' aaname='Password ' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='middle' tag='TABLE' /&gt;&lt;webctrl type='password' tag='INPUT' aaname='Password ' class='input_box' /&gt;" Guid="ee8d6d17-043d-4156-9168-493ce50d44f2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANIAAAAXCAYAAAB+vBFFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB2SURBVHhe7dNBDcJAAADBaqqLGsMZFhCCgeN1l/RBQuk+Z5ORsNuQdDsjSUFrpP14ABfNTiM9X2/gR0aCgJEgYCQIGAkCRoKAkSBgJAgYCQJGgoCRIGAkCBgJAkaCgJEgYCQIGAkCX0cCrpmtkST9n5Gk243xAa3tzhAaf3w0AAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' title='T24 Sign in' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="238, 351, 81, 15" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl parentid='middle' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='LABEL' innertext='Password ' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='middle' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' innertext='Password ' class='' aaname='' check:text='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFUAAAATCAYAAADh9EErAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGrSURBVFhH7ZU9rsIwDMc5EydgZeUYPQVDxVqu0KFjR44ACxLju0L3d4FgO05r54M3vAaClL8UqY2dxPnZSTamajVt9ydqFeqKQqDXn98KdU1VqBkUgfow7e5oNrI1FzOx9Ws1XcxhdzbDGzaShHoYl9Wn8Qxwe3Pj/69UaVDfGVA2lQzVVq24GroHO4HuvbK1d9utx+A8kxkabw0Ym06k9V/mEKeG/HAt57OAC2ItCSoFF7tXeUPWN5IM1Lxp/mf5c9462LT4JzsnLGpzYF0MTa+AKR8UJfzDUFWGkw+VrDiulMCX55MVTcJ+3iSCgXEDwLPw7Vz0HU2KnVPadTKF3Yn8CqpULYYkmwBGVYV9Cq44vp4vroNVRethNaGdqkpWog8jhPonwHKh+jYGHFQhQ4xWpxiP8ODYttDsMcVxAHiufuxKAXoBVUJ3Kh2qC3YaAUi33H1SVLEJ2C+TEtx9YYLUHRuF6k6M/6AVCRVB4gOAAbPPHCwDmpt+SOZ+787FxOiNwjzBvSyuDzk3KgEVJWO17WNQq/6rCjWDKtQMqlAzqELNIIS63Z/ME9cXkb65rJdFAAAAAElFTkSuQmCC" SearchSteps="Selector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Login" sap:VirtualizedContainerService.HintSize="1854,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9c6e8fcd-f9b6-4d4d-a73d-49cd175533fa" Version="V1">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://t24.bacbad.bacb/servlet/BrowserServlet" DesignTimeRectangle="321, 385, 55, 19" ElementType="Button" FriendlyName="'Sign in'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' title='T24 Sign in' idx='2' /&gt;&lt;nav up='7' /&gt;&lt;webctrl parentid='middle' tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='INPUT' aaname='Sign in' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='middle' tag='TABLE' /&gt;&lt;webctrl type='submit' tag='INPUT' class='sign_in' aaname='Sign in' check:text='Sign in' /&gt;" Guid="86f78d7a-42b4-4966-8d6b-22477bb1d15f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADsAAAAXCAYAAAC1Szf+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHGSURBVFhH5ZexSgQxEIb3YQQrGwuvOLurbESwEKyOQ7ASC8HGQitBweIqRa4SwcJaBRG10U7hQKxtbSx8gZHvYMJszK3r3qobd+CHbLLJzJeZLNlEamT1hr24eZL22pE0ZndkcmY7KhEzscMQshTs3uGVzC/35OC0L7f9N7l7fo9KxEzsMMDim4NlN3gpRkhfMMDiZ9jBkn52JTQ5RsECkzUHS71nZfX8/kUa0y1JkmSgsfEJOTl7cONLKxsD2TmjivWnmq2Un7yCBSZrDpYDHpqEFHRzt+f6/ECqBotgspYLdphT4OwGVE2FYEOZ9eVnlraWPG3ms45u3GJnNTVu11LZTf7OPFUhWLR/fOmcIJ7tOI7VOWMKd/34KnMLnRQs513f1Wd/PR2zsHnnqQrDWuEQYPuRsrC2jSy8BWBMqyYPbN55qlJgVQCRNbKngJpJW/JRwRK4zZTt92Hpt20UFSwOKFmbLXWmfRbQwoXObKVhkS4+7CPlZ5O2nuv1rW61YL+6QY0iAtJyD43/hDJvUGXeje0Z1zK2Wf8NZd6Ny/zr8Uv+L7Ka+deD1eZ/Vo3dIP3UOwc8JhEzsfsZVfsE+5+tRrAiH4BZl6JK/vLqAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' title='T24 Sign in' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NCheckState sap2010:Annotation.AnnotationText="Every year, we must pay maintenance fees to Temenos for T24. If we fail to do so, all users get a message box telling them the fees are overdue. &#xA;&#xA;This checks for that before allowing the system to progress as it blocks the next set of pick branches. &#xA;&#xA;DO NOT set this to wait for page load, as the dialogue box keeps T24 'spinning', or loading. " DisplayName="Check App State 'YOUR MAINTENANCE'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="1854,753" sap2010:WorkflowViewState.IdRef="NCheckState_12" ScopeIdentifier="9c6e8fcd-f9b6-4d4d-a73d-49cd175533fa" Version="V3">
+                      <uix:NCheckState.IfExists>
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,404" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Warn" Message="[&quot;T24 Maintenance Fees are overdue. Bypassing error.&quot;]" />
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK' on maintenace fee window" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9c6e8fcd-f9b6-4d4d-a73d-49cd175533fa" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable Accuracy="0.84" DesignTimeRectangle="1432, 177, 64, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'OK'" FullSelectorArgument="&lt;ctrl name='t24.bacbad.bacb says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='t24.bacbad.bacb says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' check:text='OK' /&gt;" Guid="34929982-8d5c-4071-aa05-4852fcd4e90b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAkCAYAAAAw55zoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH2SURBVGhD7Zq7agJBFIbzHHmB5Al8ikAKO5/APkWKgJUvEOxsU4idhRAIJJ0pgtgswUIrsYiCl4i43k/mOOcfd9WUO4R4PvhxZ3d0OZ87MyvrBSkxVMgBMSEvn3O6LQzo+qFHl3df/zpcI9fKNUdxQp6D+ck3nkO4duCE3DwOTnY+h3DtwAm5OoNh8lu4duCEnOp4TgEqRAJUiASoEAlQIRKgQiRAhUiARyFDKjZXNF7KCWlDnfaUsnkcn1HL7B23J7adn1Kd+w5CysQ+J5kAT0L6VOxuzVk21AqmdP/0TYXGkvh2KOzNpOCokAGVe6b/ckXl4uFnJRPgR0hpviu+0xjG9qfe+RLYUr3K7b2QzMeKQiOvVunH+icZ4EVIOlibM5hv2w0PxEroNUdue9xdUIdfjZhUrG+yAV6E5NobotmCckfHJlSbYZhYIZY1VTwNFQR4EZJtyhVydMxK6AT8SxtDJvQ6mSLAzxxSXZg54XgOSZu5gq+GtxK3IcQMlcqCxtiO9E8ywI8QrBrRVSYwS7DZE3anUvReCK9Ku2HGE+6rn4kVeBJikh9Rsb3eSbDY+5D9sIgK4badX3wtvcCfkD8eoEIkQIVIgAqRABUiASpEAlSIBKgQCXBC9EGVxQnRR5kWJ0QfdlucEEb/DnEgRFEhBxD9AFHQXOQvKWqDAAAAAElFTkSuQmCC" InformativeScreenshot="7102858ba1c3a4cf21d638f65c60e0f4.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='T24*' /&gt;" SearchSteps="Selector, Image" Version="V1" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                        </Sequence>
+                      </uix:NCheckState.IfExists>
+                      <uix:NCheckState.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="1080, 121, 416, 20" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'YOUR MAINTENANCE'" FullSelectorArgument="&lt;ctrl name='*says' role='dialog' /&gt;&lt;ctrl name=' YOUR MAINTENANCE FEES ARE OVERDUE* ' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='*says' role='dialog' /&gt;&lt;ctrl name=' YOUR MAINTENANCE FEES ARE OVERDUE* ' role='text' automationid='' check:text='YOUR MAINTENANCE FEES ARE OVERDUE 20230330' /&gt;" Guid="4219ff80-ec30-456f-af4d-d5b84e5d920e" ImageBase64="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" InformativeScreenshot="db54d57d2a02cd82d0bcfaf1bb021d2f.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='T24*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" WaitForReadyArgument="None" />
+                      </uix:NCheckState.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NCheckState>
+                    <Pick sap2010:Annotation.AnnotationText="This pick branch is used to decide which T24 profile has been logged into. As we are asked to automate more T24 jobs with different profiles, we can check we're logging into the correct department's profile in this pick branch. " DisplayName="Pick T24 password reset or logged in screen" sap:VirtualizedContainerService.HintSize="1854,761" sap2010:WorkflowViewState.IdRef="Pick_1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <PickBranch DisplayName="PickBranch Check for T24 password reset message" sap:VirtualizedContainerService.HintSize="352,683" sap2010:WorkflowViewState.IdRef="PickBranch_2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <PickBranch.Trigger>
+                          <uix:NCheckState DisplayName="Check App State 'Please set pwd'" EnableIfExists="False" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="334,177" sap2010:WorkflowViewState.IdRef="NCheckState_10" ScopeIdentifier="9c6e8fcd-f9b6-4d4d-a73d-49cd175533fa" Timeout="20" Version="V1">
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable BrowserURL="https://bavdwasapp03:9444/BrowserWeb/servlet/BrowserLoginServlet" DesignTimeRectangle="22, 157, 296, 15" ElementType="Text" FriendlyName="'Please set'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tag='TD' aaname='Please set your new password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tag='TD' aaname='Please set your new password' type='' check:text='Please set your new password' /&gt;" Guid="ea411ad9-8647-493b-ba19-ce13cfbdf7ea" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASwAAAATCAYAAAAqJjC5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPZSURBVHhe7ZdRbtswDIZ9RgO9UOCrpEdxD9KHPO5hB9BE0rJ+UpTqbsMWO/wAI7UtUiRF/k2mHz9ToisIguBZKToVghUEwdMTghUEwWkIwQqC4DR8W7DW25Tm98d2FwT/k0e6v01p+dhug8vjCNaalmlKE1zYEOcVrGju6xFn+mp0BGtO909+n5GmKCIVghU8D3Gmr8YBwcpt8T6n6bby355g0bP9G9nbPbeR81x9U9Pf4rDheK/93ZJX+qh1sGf6vKd5t6+++7EUtDALuhajPJXdx7K/L7Ur8XrDJfZ3qInJ282pjXe9oV1/mG0tJjxvs1e/tsXGOUvKH3PIdkunPr3zEr+0x+a/rGffdb22Ca7OHwsWN//2rgxJva/IwEoToz+EnxshUAOz08bIcPPDc27ucn/gvzEOEgH3NhbM29YE7SSnWQ+sgX3BgKPvUU66jjLYe35sZ4RvQ/kn2Ke3VnyW3Jo8M/5Z6vPxzpX9bGKlYy524mN+w7jsuR840+BSHBAs3RSqae0wEb3mxwGCoavIcKjm8/wzvjA2g7itk3iPNLfOvebqxAZ5NoNM75Rg1WH1sHGjzTAnU1P+lob7NkIitD6d/DYwN/Zpz9Y9S7SjeJd0z7biv9a4rQ2eV6fmzvrxmQZXoiNYuaHhwmHEBpaB0WvlKk1tfUFjc6OP1pbLEyxCmpXWlHh4EBt7HJyvm7vmVwdL/70BYqFqQljB6ghHgeMeCdaXOdGnxLfe6LPee9j9bG1EmGA/Gxs9Q+FozjJTakCfZE/1os9yn/Fq49dfwLoIx840uA4dwRo3+z6c+B++wfjhpm791uEZ79uFYxA7FVvDweYug0Z+9+Gg2Iwt5/NvBKufU1mbfzoV+7z3fMuXGmyN3Q/z0/FKzdr45bmNS/uV85x34SSbJS15jRJGFSf6bfuhtz4E63X4LcHCBm6a/2PlIUYh4cbK//m9n3fYhE1DfmZfnTgqICZqT+KR1vzto/ztD5+F1uWfLxQvDKTOU/vScW/vMKcv9rQ1VP6GOWX4PQ6t7D8SufbMqsCqdyR+uRZe/I2PjD0/XgP3KPKMzY3fl3unD51ahGC9Ft8WrDIgtVm3AaVnfFVbbmB4Voa3PtfrCW7y/V2vGUWk9nU4ONz0nXcldvvcIPHZGpg8lT3Gk+3e/943LGaUE8V1g7WZR96/e34ZW2MlIpgL71P7QduJzegsKW59ftmXrYXKDe3rvgpbi3yFYL0OjmAFPBQoGBfDCmQQnIUQLAca6NFPqrMTghWclRAsZPvJeGWxIkKwgrMSghUEwWkIwQqC4DSITqX0C4WgGSqvZ5qqAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Please set your new password' /&gt;" SearchSteps="Selector" WaitForReadyArgument="Complete">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NCheckState.Target>
+                          </uix:NCheckState>
+                        </PickBranch.Trigger>
+                        <Sequence DisplayName="Target appears T24 Password Reset Required" sap:VirtualizedContainerService.HintSize="400,201" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Throw DisplayName="Throw SE:T24 Needs Password Reset" Exception="[new SystemException(&quot;SE:T24 Needs Password Reset&quot;)]" sap:VirtualizedContainerService.HintSize="338,90" sap2010:WorkflowViewState.IdRef="Throw_13" />
+                        </Sequence>
+                      </PickBranch>
+                      <PickBranch DisplayName="PickBranch T24 trade services inputter login" sap:VirtualizedContainerService.HintSize="384,683" sap2010:WorkflowViewState.IdRef="PickBranch_1">
+                        <PickBranch.Trigger>
+                          <uix:NCheckState DisplayName="Check App State after login to Trade Services inputter" EnableIfExists="False" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="334,177" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="9c6e8fcd-f9b6-4d4d-a73d-49cd175533fa" Timeout="28" Version="V1">
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Target does not appear for T24 loign fail" sap:VirtualizedContainerService.HintSize="400,201" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Throw DisplayName="Throw SE: Login failed after entering credentials for &quot; + strComponentName" Exception="[new SystemException(&quot;SE: Login failed after entering credentials for T24 in &quot; + strComponentName)]" sap:VirtualizedContainerService.HintSize="338,90" sap2010:WorkflowViewState.IdRef="Throw_10" />
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable BrowserURL="https://bavdwasapp03.bacbad.bacb:9444/BrowserWeb/servlet/BrowserServlet" DesignTimeRectangle="101, 131, 46, 15" ElementType="Text" FriendlyName="'Sign Off'" FullSelectorArgument="&lt;webctrl tag='FRAME' title='Welcome to TF Officer Home Page*' idx='1' /&gt;&lt;webctrl tag='TABLE' innertext='  HelpToolsSign Off' /&gt;&lt;webctrl aaname='Sign Off' tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='FRAME' title='Welcome to TF Officer Home Page*' /&gt;&lt;webctrl tag='TABLE' innertext='  HelpToolsSign Off' /&gt;&lt;webctrl aaname='Sign Off' type='' tag='A' class='textbtn' check:text='Sign Off' /&gt;" Guid="bda9b12e-3645-4751-b240-aea8da2e96af" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAATCAYAAADSz14iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFuSURBVEhL7VU7csIwEM2ZuEUOQskh3KRyR0tBRe3WlQsuwKRxFYahYsghNvuR5NUi8XFGg4ekeIVW+3v7Vvbb4fsMr4B/IlPDHyPSrWH2voY2dVcaXPsDsYRVn7dFRNqaLj1sYAEifQPzUA+xaGAX+WyhQnvV3bJpIqbZti6sgCOhG9ptlvHA2Mf0kbIhAhFOcjERRJjaECwF1STdHSk63zQ8MW2P8jmIb2/sPawWzm7UYsIpm4sdFPFO9TZcBmi1IuWksI+R1Rya53MqX2Y9CDwkH5OafsqGMI9dCjBj3YBq3iqnz7bxrMrliXhIoSD9hSL+Q5BQZFpETMJonfwKOahG7yeSWzv1Rug8igg6VOHxmYSaCCW6s7lrRKShWBUZkGpyFBFulhI56GlZItpP+T5EhGBzWd9RRMaCE6uf55PARD73x3jCGUgQPlQ9OaVWKqY0vk6ngchD6FAB+lKFZM9Xg/D71ZoIXoTIGX4Aa1eX78aCSYQAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Welcome to TF Officer Home Page*' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="375, 275, 90, 15" ElementType="Text" FriendlyName="'Transaction Ref'" FullSelectorArgument="&lt;webctrl tag='FRAME' title='Welcome to TF Officer Home Page*' idx='4' /&gt;&lt;webctrl tag='FRAME' title='TF OFFICER HOME PAGE*' /&gt;&lt;webctrl tag='FRAME' title='TF Officer Home Page*' idx='2' /&gt;&lt;webctrl tag='FRAME' title='Reports*' /&gt;&lt;webctrl tag='FRAME' title='Message*' idx='2' /&gt;&lt;webctrl tag='FRAME' title='Message Recd*' idx='1' /&gt;&lt;webctrl tag='FRAME' title='Messages Received*' idx='2' /&gt;&lt;webctrl parentid='columnHeader1' tableRow='3' tag='TABLE' aaname='Transaction Ref' /&gt;&lt;webctrl tableRow='1' tag='TH' aaname='Transaction Ref' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='FRAME' title='Welcome to TF Officer Home Page*' /&gt;&lt;webctrl tag='FRAME' title='TF OFFICER HOME PAGE*' /&gt;&lt;webctrl tag='FRAME' title='TF Officer Home Page*' /&gt;&lt;webctrl tag='FRAME' title='Reports*' /&gt;&lt;webctrl tag='FRAME' title='Message*' /&gt;&lt;webctrl tag='FRAME' title='Message Recd*' /&gt;&lt;webctrl tag='FRAME' title='Messages Received*' /&gt;&lt;webctrl parentid='columnHeader1' tag='TABLE' aaname='Transaction Ref' /&gt;&lt;webctrl type='' tag='TH' aaname='Transaction Ref' class='columnHeader' check:text='Transaction Ref' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAATCAYAAAAZFLrcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHqSURBVFhH7ZVhjoQgDIU9o4kXMl5Fj+IcZH54DLbQFkotzuisy07CS0hGKPD6tTqda6qiBr6SGvhKauAricCvbuo615XGMLsNA/+5NjcPd/g1+Jy6g3yFvROcZnY8XfIFsNdR+7wZ/OiRiec37wk+u97NT5oAfTH4uyBb0uAZJnbvsWyfb4HnS+alT6/LY6LfOPqFop+z6/3zwLEUj6vOqX3Tw0/KV1HFg7Z4rx/YOehJDIAS52SSJZ9hvgefaa1cxNfgc4+cF+2LI3X9CfBsGiAteZ3xUjqUwKf90nSewLbM0XiSjsGEMBGQBxbWrE5Sc9wEGWw6iwvCMHVsptyT7TFBzZ8pVhX1BPh0MIrixAgJ7RLgbvbdkfZEkCTdMXi/bRr1GrzuyujZA5NFCDq6a59rqQhBGQP73FOfml0CHCOTOAQPonVMAIuZd7WEZyQVdQW8WL8CPvjQcfRsDTMedQ28hnsGPEu86vn5d4IX510GD6K9WUebHr3scz8Cz5fhOhl5AX4d+ZxkGPer/4gYL9a8fNLhXqugqhhHDfIJeJD0Vfbo9ZvgQdk3GWDGPYfg+TcPVYQwejeN8tPD9+s9oFgknlfgvQgwD7MIQefAJ8/op+ixcK4Bvukv1MBXUgNfSQ18JTXwVeTcD5LJaMtUsRYhAAAAAElFTkSuQmCC" SearchSteps="Selector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NCheckState.Target>
+                          </uix:NCheckState>
+                        </PickBranch.Trigger>
+                        <ui:LogMessage DisplayName="Log Message Logged in trade services" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Logged into T24 as Trade Services Inputter&quot;]" />
+                      </PickBranch>
+                      <PickBranch DisplayName="PickBranch BACB-IT.SOG Account" sap:VirtualizedContainerService.HintSize="904,683" sap2010:WorkflowViewState.IdRef="PickBranch_3">
+                        <PickBranch.Trigger>
+                          <uix:NCheckState DisplayName="Check App State after login to IT Admin" sap:VirtualizedContainerService.HintSize="854,424" sap2010:WorkflowViewState.IdRef="NCheckState_11" ScopeIdentifier="9c6e8fcd-f9b6-4d4d-a73d-49cd175533fa" Timeout="28" Version="V1">
+                            <uix:NCheckState.IfExists>
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,207" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message Logged in it admin" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Logged into T24 as IT Admin&quot;]" />
+                              </Sequence>
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,205" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Throw DisplayName="Throw SE: Login failed after entering credentials for &quot; + strComponentName 2" Exception="[new SystemException(&quot;SE: Login failed after entering credentials for T24 in &quot; + strComponentName)]" sap:VirtualizedContainerService.HintSize="338,90" sap2010:WorkflowViewState.IdRef="Throw_14" />
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable BrowserURL="https://bavdwasapp04.bacbad.bacb:9446/BrowserWeb/servlet/BrowserServlet" DesignTimeRectangle="15, 213, 188, 16" FriendlyName="'Security Management'" FullSelectorArgument="&lt;webctrl tag='FRAME' idx='2' /&gt;&lt;webctrl tag='SPAN' aaname='Security Management System' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='FRAME' /&gt;&lt;webctrl tag='SPAN' aaname='Security Management System' type='' class='' check:text='Security Management System' /&gt;" Guid="32021690-2525-455a-91f1-55f00f392fab" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMAAAAAUCAYAAADbczI+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAR4SURBVGhD7VnbShxBEN3PEwS/ZsFdMAHzYh6MsAgaheQDRCZvux8hSAQ/wGfNP3S6qm+nqntm22Rll50WDjs93V2XU3V6ZpLJy9uraWgYK5oAGkaNJoCGUaMJoGHUaAJoGDX2RADPZnE0MQc3z4W5hoZ+ZAK4u+vEuAbdbGImk4BDs3gqr/s4KAE8XZuDydx02bp6dDOdx9JMj67NA6wZHxzP01VpLmFj/bCBOq5DJoCLi0tzdfXDvL39Efd7sZrbJFOQ3exjA67CfxNnm90WTzxR2OY2xL1LqBDAJvthGwJYLL6b+/tf/FsjgoebQzMZOBl5Pp4GKhlOMJ0WjticZLYxW4rrYJfWhRPHNaxr3mDT+XT3ROGGyA1xeZ8E9Ofulfzg/rlZQO4oJnlCluLqmS/yRSDOrDhXad7NQYyQC0HEAPWj+wc315Bbymswbg/mqdQPShhxLcclucxiZ2h+9Xp/3/ruIu9+D/tWaz0yAZyfXxr6e3z8zddrRRCCUQQTNBlMYBjzPiTEJsw2KgRgiz0V7/tuz9ArENoojQWIsKO5feUJNlyDTe1rkXgqRDj/0Z7nRMZTfnpwHDFWV/SQu5jTNrioYez9R67Jjo0/nL5qL9ch5i5jd02euCut1U0k4HPPudV707i3FmwrxZLu9fDgfUfeac5y4PrK+1HizARwdvaNBUB/9CSg8fonAag1JiKLyYDgJbGInGQkqJRE2DMkAHlvuJDBH/3yGtpLPpnQUsyqiJCnmy9wEYBx6X0wzvnCnFX+WX7gP4vNgpvIxaD9SL6HeUso9UOJI5+3EDMA13gM8lDkD/ZDnmF/JoDT06/c/PQEoOvqbwGGS9wVAkgQSAVNBUPkJCNxgsQI1QAF4oTd4nxCjI3WkS9LXCJYEwq5hUbhdVhQLQDNTViL/PlcvT8uvNjj4Naq/DMOwT/HVrIFfoDffxNAgMwH+cvqGLkEfjXfFoM8aN71/hoBnJx84ZOfft/X/A4pMUoem0BCE52Qk4xkZcQxVAMUiCPEvURE0TcB/dM1PUKxQf012YAnEedTJQDFCxdFj0Nh032ynxpcQ+WfcQj+e7gJ2KwAdL3SfvJTsiP8F2Id5EHzrvfXCGA+/2yOjz/VN791kt7HZSEkebR2aTpRaAzGFsknLovgihfG9QIoEUy2qKEHiqhI7GsAcZ84sN8IVQIQc9YefVfgmD5m4z5AZvPZdKsy7xinG4N/O9ZN/rKydfHXeq6Uf84/gLjo6QcG1Z3ey1UjBmheszoO8aDnePxOAdze/hTjtRAnVk4OEwrzIhm1N875xN19/68p3m6VAMI6bdfCxVMmn0ExxYJb2Fjwg5v2Oz++GcgHr4emy4okGzDF5taknMBmhC4gzEUedP4QC4+l/9xPinVYABZYm6wOFmv6IcSS+Yh7kLeeOvb50Lzz+J0C2HekZivP7xZ0Y+8DtDi3i5EJYLfIL0H+D7Q+ufcA+lTeMsYjAP/Y3O1mWlqB4uvAfp3+a18/t4DRvQI1NCCaABpGjFfzF658BfKy/PXaAAAAAElFTkSuQmCC" InformativeScreenshot="a8187f7a41330e9b36642b082ea4adcb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='T24*' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                            </uix:NCheckState.Target>
+                          </uix:NCheckState>
+                        </PickBranch.Trigger>
+                      </PickBranch>
+                    </Pick>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="1043, 167, 976, 879" BrowserType="Chrome" IconBase64="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" Selector="&lt;html app='chrome.exe' title='T24 Sign in' /&gt;" Url="[in_strPreLoginURL]" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+            <Assign DisplayName="Assign out_blnSuccessful TRUE" sap:VirtualizedContainerService.HintSize="1950,61" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Boolean">[out_blnSuccessful]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </TryCatch.Try>
+        <TryCatch.Catches>
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="2016,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ActivityAction x:TypeArguments="s:Exception">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Sequence Throw SE: Couldn't Login" sap:VirtualizedContainerService.HintSize="400,203" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Throw DisplayName="Throw SE: Couldn't login" Exception="[new SystemException(&quot;SE: Couldn't sign in: &quot;+strComponentName+vbNewLine+vbNewLine+&quot;ErrorSource: &quot;+exception.Source+vbNewLine+vbNewLine+&quot;ErrorMessage: &quot;+exception.Message)]" sap:VirtualizedContainerService.HintSize="338,90" sap2010:WorkflowViewState.IdRef="Throw_4" />
+              </Sequence>
+            </ActivityAction>
+          </Catch>
+        </TryCatch.Catches>
+      </TryCatch>
+    </Sequence>
+    <Assign DisplayName="Assign dtEndTime" sap:VirtualizedContainerService.HintSize="2112,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:DateTime">[dtEndTime]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:DateTime">[datetime.Now]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign DisplayName="Assign strRunTime" sap:VirtualizedContainerService.HintSize="2112,61" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[strRunTime]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[(dtEndTime.Subtract(dtStartTime)).ToString("hh\:mm\:ss")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:LogMessage DisplayName="Log Message &quot;Component: &quot;+strComponentName+ &quot; Ended&quot;" sap:VirtualizedContainerService.HintSize="2112,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Component: &quot;+strComponentName+ &quot; Finished&quot;  + vbNewLine +&quot;Time Taken: &quot; +strRunTime]" />
+  </Sequence>
+</Activity>

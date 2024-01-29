@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
+    "net8.0": {
       "AutoMapper/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -1834,7 +1834,7 @@
         }
       }
     },
-    "net6.0/win10-x64": {
+    "net8.0/win-x64": {
       "AutoMapper/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -2542,15 +2542,6 @@
           "lib/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
-      "runtime.win7.System.Private.Uri/4.3.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard/_._": {}
-        },
-        "runtime": {
-          "runtimes/win/lib/netstandard1.0/System.Private.Uri.dll": {}
-        }
-      },
       "SharpZipLib/1.3.3": {
         "type": "package",
         "compile": {
@@ -2747,8 +2738,7 @@
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
-          "Microsoft.NETCore.Targets": "1.1.0",
-          "runtime.win7.System.Private.Uri": "4.3.0"
+          "Microsoft.NETCore.Targets": "1.1.0"
         },
         "compile": {
           "ref/netstandard/_._": {}
@@ -4872,23 +4862,6 @@
         "runtime.any.system.threading.tasks.4.3.0.nupkg.sha512",
         "runtime.any.system.threading.tasks.nuspec",
         "runtimes/aot/lib/netcore50/_._"
-      ]
-    },
-    "runtime.win7.System.Private.Uri/4.3.0": {
-      "sha512": "Q+IBgaPYicSQs2tBlmXqbS25c/JLIthWrgrpMwxKSOobW/OqIMVFruUGfuaz4QABVzV8iKdCAbN7APY7Tclbnw==",
-      "type": "package",
-      "path": "runtime.win7.system.private.uri/4.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "ref/netstandard/_._",
-        "runtime.win7.system.private.uri.4.3.0.nupkg.sha512",
-        "runtime.win7.system.private.uri.nuspec",
-        "runtimes/aot/lib/netcore50/System.Private.Uri.dll",
-        "runtimes/win/lib/netcore50/System.Private.Uri.dll",
-        "runtimes/win/lib/netstandard1.0/System.Private.Uri.dll"
       ]
     },
     "SharpZipLib/1.3.3": {
@@ -7102,7 +7075,7 @@
   },
   "projectFileDependencyGroups": {
     "": [],
-    "net6.0": [
+    "net8.0": [
       "UiPath.Platform >= 23.12.0-alpha.4797216 <= 23.12.0-alpha.4797216",
       "UiPath.Studio.ViewModels.TestActivities >= 23.12.0-dev.61644 <= 23.12.0-dev.61644",
       "UiPath.System.Activities >= 23.12.0-alpha.4717855 <= 23.12.0-alpha.4717855",
@@ -7127,7 +7100,7 @@
       ]
     },
     "frameworks": {
-      "net6.0": {
+      "net8.0": {
         "dependencies": {
           "UiPath.Platform": {
             "include": "Runtime",
@@ -7160,11 +7133,11 @@
             "version": "[1.18.0, 1.18.0]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Liviu.Ponova\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
-      "win10-x64": {
+      "win-x64": {
         "#import": []
       }
     }
