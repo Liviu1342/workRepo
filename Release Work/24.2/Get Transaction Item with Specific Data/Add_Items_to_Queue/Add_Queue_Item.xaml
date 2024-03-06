@@ -1,0 +1,208 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Add_Queue_Item" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1201.6,3302.4" sap2010:WorkflowViewState.IdRef="Add_Queue_Item_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uasc="clr-namespace:UiPath.Activities.System.Collections;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:utat="clr-namespace:UiPath.Testing.Activities.TestData;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Testing.Enums</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Testing.Activities.TestData</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Activities.System.Collections</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.Testing</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Add Queue Item" sap:VirtualizedContainerService.HintSize="592,3237.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Decimal" Name="_out_RandomNumber_2__Output" />
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(Of String)]" Name="limbiStraine" />
+      <Variable x:TypeArguments="scg:List(x:Int32)" Default="[new List(Of Int32)]" Name="notaPerLimbaStraina" />
+      <Variable x:TypeArguments="x:Decimal" Name="_out_RandomNumber_3__Output" />
+      <Variable x:TypeArguments="x:String" Name="_out_RandomString_1__Output" />
+      <Variable x:TypeArguments="x:String" Name="_out_RandomString_2__Output" />
+      <Variable x:TypeArguments="x:Decimal" Name="_out_RandomNumber_1__Output" />
+      <Variable x:TypeArguments="x:Boolean" Name="areSapca" />
+      <Variable x:TypeArguments="s:DateTime" Name="_out_RandomDate_1__Output" />
+      <Variable x:TypeArguments="x:String" Name="_out_RandomString_3__Output" />
+      <Variable x:TypeArguments="x:Int32" Name="_out_ForEach_Generic_1_1__CurrentIndex" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <utat:RandomString Case="CamelCase" DisplayName="Random String" sap:VirtualizedContainerService.HintSize="529.6,225.6" sap2010:WorkflowViewState.IdRef="RandomString_1" Length="10" Output="[_out_RandomString_1__Output]" />
+    <utat:RandomString Case="CamelCase" DisplayName="Random String" sap:VirtualizedContainerService.HintSize="529.6,225.6" sap2010:WorkflowViewState.IdRef="RandomString_2" Length="10" Output="[_out_RandomString_2__Output]" />
+    <utat:RandomNumber Decimals="0" DisplayName="Random Number" sap:VirtualizedContainerService.HintSize="529.6,226.4" sap2010:WorkflowViewState.IdRef="RandomNumber_1" Max="100" Min="0" Output="[_out_RandomNumber_1__Output]" />
+    <utat:RandomDate DisplayName="Random Date" sap:VirtualizedContainerService.HintSize="529.6,226.4" sap2010:WorkflowViewState.IdRef="RandomDate_1" MaxDate="2024-02-21" MinDate="1912-01-01" Output="[_out_RandomDate_1__Output]" />
+    <utat:RandomNumber Decimals="0" DisplayName="Random Number" sap:VirtualizedContainerService.HintSize="529.6,226.4" sap2010:WorkflowViewState.IdRef="RandomNumber_2" Max="9999999999999" Min="1000000000000" Output="[_out_RandomNumber_2__Output]" />
+    <If Condition="[_out_RandomNumber_2__Output &gt; 10]" sap:VirtualizedContainerService.HintSize="529.6,900" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,364.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Boolean">[areSapca]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+            </Assign.Value>
+          </Assign>
+          <uasc:AppendItemToCollection x:TypeArguments="x:String" Collection="[limbiStraine]" DisplayName="Append Items to Collection" sap:VirtualizedContainerService.HintSize="433.6,164.8" sap2010:WorkflowViewState.IdRef="AppendItemToCollection`1_1">
+            <uasc:AppendItemToCollection.Items>
+              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="8">
+                <InArgument x:TypeArguments="x:String">Engleza</InArgument>
+                <InArgument x:TypeArguments="x:String">Fanceza</InArgument>
+                <InArgument x:TypeArguments="x:String">Italiana</InArgument>
+                <InArgument x:TypeArguments="x:String">Chineza</InArgument>
+                <InArgument x:TypeArguments="x:String">Romana</InArgument>
+              </scg:List>
+            </uasc:AppendItemToCollection.Items>
+          </uasc:AppendItemToCollection>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,364.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Boolean">[areSapca]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+            </Assign.Value>
+          </Assign>
+          <uasc:AppendItemToCollection x:TypeArguments="x:String" Collection="[limbiStraine]" DisplayName="Append Items to Collection" sap:VirtualizedContainerService.HintSize="433.6,164.8" sap2010:WorkflowViewState.IdRef="AppendItemToCollection`1_2" Result="[limbiStraine]">
+            <uasc:AppendItemToCollection.Items>
+              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="8">
+                <InArgument x:TypeArguments="x:String">Swahili</InArgument>
+                <InArgument x:TypeArguments="x:String">Coreeana</InArgument>
+                <InArgument x:TypeArguments="x:String">Italiana</InArgument>
+                <InArgument x:TypeArguments="x:String">Norvegiana</InArgument>
+                <InArgument x:TypeArguments="x:String">Inuita</InArgument>
+              </scg:List>
+            </uasc:AppendItemToCollection.Items>
+          </uasc:AppendItemToCollection>
+        </Sequence>
+      </If.Else>
+    </If>
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[_out_ForEach_Generic_1_1__CurrentIndex]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="529.6,675.2" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[limbiStraine]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,477.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <utat:RandomNumber Decimals="0" DisplayName="Random Number" sap:VirtualizedContainerService.HintSize="353.6,226.4" sap2010:WorkflowViewState.IdRef="RandomNumber_3" Max="10" Min="1" Output="[_out_RandomNumber_3__Output]" />
+            <uasc:AppendItemToCollection x:TypeArguments="x:Int32" Collection="[notaPerLimbaStraina]" DisplayName="Append Items to Collection" sap:VirtualizedContainerService.HintSize="353.6,164.8" sap2010:WorkflowViewState.IdRef="AppendItemToCollection`1_3" Result="[notaPerLimbaStraina]">
+              <uasc:AppendItemToCollection.Items>
+                <scg:List x:TypeArguments="InArgument(x:Int32)" Capacity="4">
+                  <InArgument x:TypeArguments="x:Int32">[int32.Parse(_out_RandomNumber_3__Output.ToString)]</InArgument>
+                </scg:List>
+              </uasc:AppendItemToCollection.Items>
+            </uasc:AppendItemToCollection>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <utat:RandomString Case="UpperCase" DisplayName="Random String" sap:VirtualizedContainerService.HintSize="529.6,225.6" sap2010:WorkflowViewState.IdRef="RandomString_3" Length="5" Output="[_out_RandomString_3__Output]" />
+    <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" FolderPath="ModernFolder" sap:VirtualizedContainerService.HintSize="529.6,217.6" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="Liviu_Json_Schema_Persoana" Reference="[&quot;test &quot; +_out_RandomString_3__Output]">
+      <ui:AddQueueItem.ItemInformation>
+        <InArgument x:TypeArguments="x:String" x:Key="nume">[_out_RandomString_1__Output]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="prenume">[_out_RandomString_2__Output]</InArgument>
+        <InArgument x:TypeArguments="x:Double" x:Key="cnp">[double.Parse(_out_RandomNumber_2__Output.ToString)]</InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="varsta">[int32.Parse(_out_RandomNumber_1__Output.ToString)]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="dataNasterii">[_out_RandomDate_1__Output.ToString]</InArgument>
+        <InArgument x:TypeArguments="x:Boolean" x:Key="areSapca">[areSapca]</InArgument>
+      </ui:AddQueueItem.ItemInformation>
+    </ui:AddQueueItem>
+  </Sequence>
+</Activity>

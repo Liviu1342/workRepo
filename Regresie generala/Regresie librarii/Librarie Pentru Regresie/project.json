@@ -1,17 +1,12 @@
 {
   "name": "Librarie Pentru Regresie",
+  "projectId": "e7c17998-f05b-49a2-9739-fb04ad628cd6",
   "description": "Blank Library",
   "main": "NewActivity.xaml",
   "dependencies": {
-    "AForge": "2.2.5",
-    "Google.Apis.Core": "1.49.0",
-    "InstagramGraphAPI.Activities": "0.1.1",
-    "NetsuiteActivities": "1.0.49",
     "UiPath.Excel.Activities": "2.9.5",
-    "UiPath.IntelligentOCR.Activities": "4.12.0-alpha.1395811",
-    "UiPath.Mail.Activities": "1.9.5",
     "UiPath.System.Activities": "20.10.3",
-    "UiPath.UIAutomation.Activities": "20.10.8"
+    "UiPath.UIAutomation.Activities": "24.2.0-preview"
   },
   "webServices": [
     {
@@ -24,19 +19,24 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "20.11.0.0",
-  "projectVersion": "1.0.18",
+  "projectVersion": "1.0.19",
   "runtimeOptions": {
     "autoDispose": false,
+    "netFrameworkLazyLoading": false,
     "isPausable": true,
+    "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
     ],
     "executionType": "Workflow",
     "readyForPiP": false,
-    "startsInPiP": false
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": false,
+    "pipType": "ChildSession"
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -49,7 +49,8 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "modernBehavior": false
+    "modernBehavior": false,
+    "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "isTemplate": false,

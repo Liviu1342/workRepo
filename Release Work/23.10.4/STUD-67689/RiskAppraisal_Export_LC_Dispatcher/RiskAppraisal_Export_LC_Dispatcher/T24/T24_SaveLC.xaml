@@ -1,94 +1,98 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="FILE_CopyFile" this:FILE_CopyFile.in_strComponentName="T24_SaveLC" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="FILE_CopyFile" this:FILE_CopyFile.in_strComponentName="T24_SaveLC" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_strComponentName" Type="InArgument(x:String)" />
     <x:Property Name="out_blnSuccessful" Type="OutArgument(x:Boolean)" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_strTFReference" Type="InArgument(x:String)" />
   </x:Members>
-  <mva:VisualBasic.Settings>
+  <VisualBasic.Settings>
     <x:Null />
-  </mva:VisualBasic.Settings>
+  </VisualBasic.Settings>
   <sap:VirtualizedContainerService.HintSize>1434,12998</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>FILE_CopyFile_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="35">
-      <x:String>System.Activities</x:String>
-      <x:String>System.Activities.Statements</x:String>
-      <x:String>System.Activities.Expressions</x:String>
-      <x:String>System.Activities.Validation</x:String>
-      <x:String>System.Activities.XamlIntegration</x:String>
       <x:String>Microsoft.VisualBasic</x:String>
       <x:String>Microsoft.VisualBasic.Activities</x:String>
       <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
       <x:String>System.Collections</x:String>
       <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.ComponentModel</x:String>
       <x:String>System.Data</x:String>
       <x:String>System.Diagnostics</x:String>
       <x:String>System.Drawing</x:String>
       <x:String>System.IO</x:String>
       <x:String>System.Linq</x:String>
       <x:String>System.Net.Mail</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Windows.Markup</x:String>
       <x:String>System.Xml</x:String>
       <x:String>System.Xml.Linq</x:String>
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
-      <x:String>System.Windows.Markup</x:String>
-      <x:String>System.Collections.ObjectModel</x:String>
-      <x:String>System.Runtime.InteropServices</x:String>
-      <x:String>System.Reflection</x:String>
-      <x:String>System.Runtime.Serialization</x:String>
-      <x:String>System.Activities.DynamicUpdate</x:String>
-      <x:String>UiPath.UIAutomationNext.Enums</x:String>
-      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
-      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.PDF.Activities</x:String>
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
       <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
-      <x:String>System.ComponentModel</x:String>
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
-      <x:String>UiPath.PDF.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <scg:List x:TypeArguments="AssemblyReference" Capacity="74">
-      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Drawing</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>PresentationCore</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>System.ServiceModel</AssemblyReference>
-      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
-      <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Linq.Async</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="T24_SaveLC&#xA;&#xA;Description: Saves the LC to folder for TMD team&#xA;&#xA;Inputs:&#xA;in_Config &#xA;in_strTFReference&#xA;in_strCopyToPath&#xA;&#xA;Outputs:&#xA;out_blnSuccessful" DisplayName="T24_SaveLC" sap:VirtualizedContainerService.HintSize="1444,12933" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -190,7 +194,7 @@
               </Assign.Value>
             </Assign>
           </Sequence>
-          <ui:InterruptibleDoWhile Condition="[intLCLoopCounter&lt;10]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1322,11241" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_3">
+          <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[intLCLoopCounter&lt;10]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1322,11241" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_3">
             <ui:InterruptibleDoWhile.Body>
               <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1286,11076" sap2010:WorkflowViewState.IdRef="Sequence_45">
                 <sap:WorkflowViewStateService.ViewState>
@@ -285,7 +289,7 @@
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State are we on right page" sap:VirtualizedContainerService.HintSize="756,51" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="6b94e87a-1350-417b-bc06-f42ec8ad337f" Timeout="20" Version="V1">
+                          <uix:NCheckState DisplayName="Check App State are we on right page" sap:VirtualizedContainerService.HintSize="756,51" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="6b94e87a-1350-417b-bc06-f42ec8ad337f" Timeout="20" Version="V1">
                             <uix:NCheckState.IfExists>
                               <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                 <sap:WorkflowViewStateService.ViewState>
@@ -347,7 +351,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NGetText>
-                          <uix:NClick ClickType="Single" DisplayName="Click get LC button" sap:VirtualizedContainerService.HintSize="756,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6b94e87a-1350-417b-bc06-f42ec8ad337f" Version="V1">
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click get LC button" sap:VirtualizedContainerService.HintSize="756,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6b94e87a-1350-417b-bc06-f42ec8ad337f" Version="V1">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="https://bavdwasapp01:9448/BrowserWeb/servlet/BrowserServlet" DesignTimeRectangle="1222, 295, 17, 16" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="[String.Format(&quot;&lt;webctrl tag='FRAME' title='Welcome to TF Officer Home Page - T24*' idx='4' /&gt;&lt;webctrl tag='FRAME' title='Exp LCs &amp;amp; Drawings Pending Action - T24*' idx='2' /&gt;&lt;webctrl tag='A' aaname='Inward Msg Ref.{0}' /&gt;&lt;nav up='3' /&gt;&lt;webctrl parentid='tab1' tag='IMG' aaname='Context Enquiry' /&gt;&quot;, strLCLoopCounter)]" FuzzySelectorArgument="&lt;webctrl id='PFO341546316703' tag='FRAME' /&gt;&lt;webctrl id='workarea444776317601' tag='FRAME' /&gt;&lt;webctrl parentid='tab1' tag='IMG' type='' aaname='Context Enquiry' /&gt;" Guid="6d9c1e79-783e-4f83-9fb1-9ed90933f549" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAAUCAYAAABiS3YzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHZSURBVDhPvZSxS8NAFMYdMjr2T3AS6SDSwbk4iDhIpyIOpWOnEhxKcRBxKNJBSociDhIcSnCQ4FA6OkkmCU7BQYJTcAoOEny+75K7XtPDReoHH/fy7r1f3rVJVmgJ+l9o/JbQdBKSOw5oMPRpMPJFjFz4GudVZi1A08+U3PtQQJzbgJxxSN4kEkYMX10Hoga1Js1B448km4p9Ngro4tKnLhurbjk5jJ6iFDT9SnkCn+weA6X7mdPvVBgxbiLzqEFPUQrqP0fUOp6SffJI3XNu7j2qWEIRyxxWgNGDXl0KiiPZHQblbv2ySotahqNXl4K22jwlFzXb8FStcko4y2d7qMcKKGJdClrdd0VDreEVPAMv7nkCXD1wc0omBV2rOFQqO2StL1pCTXvo2dh2ckqm2aR1j6yyS9am5grnKu4Mimu1l6/cg15dCop/29rx2VhnlkAFLuxbu9mToktB/aeIVo8CYaseZuYGFZuu2aVGIHp1KSimwB1L/YisfjJnU07kh5F4WdCrS0Gh+D2hw1OfNu5iI0S69prS1kMsak0flzkohCK8ins3IbWeGTDhR0mz/ZKIPZtrMIRJC1AIx8HvhI9Kk49X7XjCTbzvnMNe8ci6jNC/aglQoh/jNnMhTTMakQAAAABJRU5ErkJggg==" InformativeScreenshot="e85357b5aee650114eceaea6dc5da33b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Welcome to TF Officer Home Page - T24*' /&gt;" SearchSteps="Selector" WaitForReadyArgument="Complete" />
                             </uix:NClick.Target>
@@ -377,7 +381,7 @@
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'View Inward Message'" sap:VirtualizedContainerService.HintSize="680,528" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="3d5633bd-3dd5-4a66-b201-9e4f924fde8b" Timeout="30" Version="V1">
+                                  <uix:NCheckState DisplayName="Check App State 'View Inward Message'" sap:VirtualizedContainerService.HintSize="680,528" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="3d5633bd-3dd5-4a66-b201-9e4f924fde8b" Timeout="30" Version="V1">
                                     <uix:NCheckState.IfExists>
                                       <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,312" sap2010:WorkflowViewState.IdRef="Sequence_47">
                                         <sap:WorkflowViewStateService.ViewState>
@@ -385,7 +389,7 @@
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <uix:NClick ClickType="Single" DisplayName="Click 'View Inward Message'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3d5633bd-3dd5-4a66-b201-9e4f924fde8b" Timeout="10" Version="V1">
+                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'View Inward Message'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3d5633bd-3dd5-4a66-b201-9e4f924fde8b" Timeout="10" Version="V1">
                                           <uix:NClick.Target>
                                             <uix:TargetAnchorable BrowserURL="https://bavdwasapp01:9448/BrowserWeb/jsps/context.jsp?fname=fieldName:INWARD.MSG.REF:1&amp;skin=default&amp;fname=fieldName:INWARD.MSG.REF:1&amp;actualfname=INWARD.MSG.REF&amp;ceids=LETTER.OF.CREDIT-INWARD.MSG.REF_&amp;enqids=INC.MSG.DETS_&amp;enqdescs=View%20Inward%20Message_&amp;olddata=R20220324906263334703&amp;formid=appreq&amp;lngDir=LTR&amp;noRightClick=" DesignTimeRectangle="17, 67, 123, 15" ElementType="Text" FriendlyName="'View Inward Message'" FullSelectorArgument="&lt;webctrl tag='A' aaname='View Inward Message' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='A' aaname='View Inward Message' type='' check:text='View Inward Message' /&gt;" Guid="b3ebaaf4-8c0d-4253-ba1c-a64142ae8438" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH8AAAATCAYAAAC5i9IyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMhSURBVGhD7Vg7jiIxEN0zcQsug8QlJiRC3IAYEZJxAkTfggBptMmmvfVx2a/KNgPSjjRs95NKtNuu7ysXzPw6n8/jLNMUIX/G9DCTP2HM5E8Yr5F/O42r5W483NJ6Argfd+Nie02r/wtA/m08rD8aiV7HzfJj3Fzo8dvJ1xhWx5/TXV+RP2xjPahe69N4T6ufDH/zL/txsdyPg64UrXffhncjXy+Gi/eNpqMnH295wrC1aaB7i5CY7Mt7Euv42DBUkA0WiPebt8OTz7ZXR9I1+9lm3STDFhtU9zkPIS/rRx1daw6Wl+UJ0iNfiPb75g9rmM8lKXvel713NU22H+XRirns+z3UC+QnxzkZVgSyQ1f7s1pwXXs9CRzItqLXqMnHJkJ//kZqgrmoEmdjWklT+vhX650jKsbm/QRIE+9pzGNTkj36Ksg2Qs0whqbtXuwIl0e4CG6vVZeyrsh3zvkZbygmgs8Gcay6pYgc3H48UKLqNDSUQ4N8KI5rIoyT/MqESHt9wrzvaL8V2yPybY8/JTerF9ch6dQ+IEdHlEEJy2Q2gXHq+dLAZe3qlYDx1OSn4EzZBVGRT4YqKYSIYysEn+dPKEyNF8jPcfKnxqQ/vspaoecwRisU2+/ml2AEt5D1Ibe8hkuAvk2yX2kAfpfqJlAC+X0htZdHem8xij3NQWKH81nS2Qb5lvApFJGAxYEE29Du5LGqNjhIGpFUjJJQhCbyHPm2Jh+Q+Iq++8u0UnvZn8T8r8hH25ab6ZabWfnoIOYqECK5xo/zsLWRa+/7sSua5OfOi4qhOFXAl6trBtnHsZOT6eE18qsiBH0cgQyeDCsoYk1M1H9QwFALHxuQFc7x3kDTKqLKjZF1v87Dnj28HmMgjgwd8jsGG4lwkmWk4B6ByPY2KJgHnWj2niafz9OEwoLdj/T7IsTgbgSvk42afEZqfJRWzGBHQLXBv2icbYgB7Uk++X2qndS4nG3ZaOVheyrAQ7CHMXfJn/G+iJemB0e+755Z3kEYPEHKhPXTs6XD8vn7z3zz3x/8Tyr8+iB54tYzZvInjEz+LFOU8/gXXctUBOnAgeoAAAAASUVORK5CYII=" InformativeScreenshot="2ff16c532c6cc16eee747d5cebb8d161.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Context Enquiries' /&gt;" SearchSteps="Selector" WaitForReadyArgument="Complete" />
                                           </uix:NClick.Target>
@@ -458,7 +462,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NCheckState Exists="{x:Null}" DisplayName="Check App StateIncoming Message Details" sap:VirtualizedContainerService.HintSize="1126,2511" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="c0ffa673-ca1a-4e3a-a83d-61e54c93b8e9" Timeout="20" Version="V1">
+                          <uix:NCheckState DisplayName="Check App StateIncoming Message Details" sap:VirtualizedContainerService.HintSize="1126,2511" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="c0ffa673-ca1a-4e3a-a83d-61e54c93b8e9" Timeout="20" Version="V1">
                             <uix:NCheckState.IfExists>
                               <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="822,2295" sap2010:WorkflowViewState.IdRef="Sequence_22">
                                 <sap:WorkflowViewStateService.ViewState>
@@ -466,12 +470,12 @@
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <uix:NClick ClickType="Single" DisplayName="Click Download LC button" sap:VirtualizedContainerService.HintSize="780,156" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c0ffa673-ca1a-4e3a-a83d-61e54c93b8e9" Version="V1">
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Download LC button" sap:VirtualizedContainerService.HintSize="780,156" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c0ffa673-ca1a-4e3a-a83d-61e54c93b8e9" Version="V1">
                                   <uix:NClick.Target>
                                     <uix:TargetAnchorable BrowserURL="https://bavdwasapp01:9448/BrowserWeb/servlet/BrowserServlet" DesignTimeRectangle="202, 109, 24, 16" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl tag='SPAN' aaname='Results*' /&gt;&lt;nav up='2' /&gt;&lt;webctrl aaname='Enquiry Actions' parentid='enq_toolHeader' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Enquiry Actions' parentid='enq_toolHeader' tag='IMG' type='' /&gt;" Guid="bc5261c2-3951-4e1f-a8fb-e3373fe34948" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAUCAYAAACeXl35AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEzSURBVEhLvZPBSsNAEIbHg+BbCGIRfB3Bk+Cl5lQ85hUCkhfIQXyAHPMAUbymPbaGHlqKCkbQsyiM/gsbdtfpJk1LDh8MM/nnI7ssPY4n3Cc0fppxn9B0uWCJNE05iiIRzKRMG2j+8soSRHs8HF6JYCZl2kCL6o0lgiD4W0z/+uhh5vbbQsv3iiW00O1rodtvSy1cPdzzzcF+J5A1l/qohQhOr0f8c3e7Ecggay71YQk/z8/4+/LCoixLC3eOTGfh8/Ehf5wcWWRZxkmSKFB/nQ6sOTKdhRJxHHOe5wrU0jfAXOqj8Q7DMOSiKBSo3flWd4gjwpGZ4AmYuHNkdirEHZm4cy3E+1zHRsImzD9skqlvdLELoVrokam5LhCS3mET0jtcJwOWcBvMpT5qYV/0LKz4FxGHo04jOavXAAAAAElFTkSuQmCC" InformativeScreenshot="5a66aa105794dc115e0ce38829a336cc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Incoming Message Details' /&gt;" SearchSteps="Selector" WaitForReadyArgument="Complete" />
                                   </uix:NClick.Target>
                                 </uix:NClick>
-                                <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Save as PDF'" EnableIfExists="False" sap:VirtualizedContainerService.HintSize="780,869" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="c0ffa673-ca1a-4e3a-a83d-61e54c93b8e9" Timeout="20" Version="V1">
+                                <uix:NCheckState DisplayName="Check App State 'Save as PDF'" EnableIfExists="False" sap:VirtualizedContainerService.HintSize="780,869" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="c0ffa673-ca1a-4e3a-a83d-61e54c93b8e9" Timeout="20" Version="V1">
                                   <uix:NCheckState.IfExists>
                                     <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="200,84" sap2010:WorkflowViewState.IdRef="Sequence_39">
                                       <sap:WorkflowViewStateService.ViewState>
@@ -500,7 +504,7 @@
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <uix:NClick ClickType="Single" DisplayName="Click 'Close' save as PDF" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="380cee1c-69df-4699-b362-1f7ffbbec71a" Version="V1">
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close' save as PDF" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="380cee1c-69df-4699-b362-1f7ffbbec71a" Version="V1">
                                                 <uix:NClick.Target>
                                                   <uix:TargetAnchorable DesignTimeRectangle="746, 1, 46, 29" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;ctrl name='Incoming Message Details - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Incoming Message Details - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:text='Close' /&gt;" Guid="709eb396-3630-406a-b68e-f58f2f2eb0e4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAgCAYAAABQISshAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD2SURBVFhH7dNLDoIwEIBhzwEFXeDNRD0dBGJceBPlofi6xsgQiixGRFNKS7r4A8l0MV/Szvz1FnRr5W+aPG8JrruAWV48QaeyywPS8x2S/AZJdq0gjjM3kNFCBIecsqKGuNOAMKYppLpWZcdUY0jzRsr38YY404DYtoGMlzSIzRjs9gdyhuEMz1CzPtEQJh7CF6UwXbO+SYNg1MIiEJhUCNZeXBQCoyCWNSAE4wBRCMxA/o0j8Nv+p87+klQItbgojDRI18IiMNIg3xblGGrWp1Ee+xAZiGoZiGoZiGoZiGoZiGp9hMRxDDoVRVFVGIYQBEENYfACC5+N9nDuBq0AAAAASUVORK5CYII=" InformativeScreenshot="720db47048d55e4e9927ff5e34d43869.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Incoming Message Details - Google Chrome' /&gt;" SearchSteps="Selector" />
                                                 </uix:NClick.Target>
@@ -526,12 +530,12 @@
                                     <uix:TargetAnchorable BrowserURL="https://bavdwasapp01:9448/BrowserWeb/servlet/BrowserServlet" DesignTimeRectangle="205, 191, 96, 21" ElementType="Text" FriendlyName="'Save as PDF'" FullSelectorArgument="&lt;webctrl aaname='Save as PDF' parentid='EnquiryactionDiv' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Save as PDF' parentid='EnquiryactionDiv' tag='A' type='' check:text='Save as PDF' /&gt;" Guid="e43a2be0-4bc1-4893-b892-37700331be21" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAySURBVBhXYzh4+Mj/jMzM/+vWrfu/fv36/3CBa9dv/L9x8xZC4PbTp//vPH+GLvDsPwBkjjG8v4fG1QAAAABJRU5ErkJggg==" InformativeScreenshot="52f58bd9fa82c00117a5c3770b7e05fd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Incoming Message Details' /&gt;" SearchSteps="Selector" WaitForReadyArgument="Complete" />
                                   </uix:NCheckState.Target>
                                 </uix:NCheckState>
-                                <uix:NClick ClickType="Single" DisplayName="Click 'Save as PDF'" sap:VirtualizedContainerService.HintSize="780,156" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c0ffa673-ca1a-4e3a-a83d-61e54c93b8e9" Version="V1">
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save as PDF'" sap:VirtualizedContainerService.HintSize="780,156" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c0ffa673-ca1a-4e3a-a83d-61e54c93b8e9" Version="V1">
                                   <uix:NClick.Target>
                                     <uix:TargetAnchorable BrowserURL="https://bavdwasapp01:9448/BrowserWeb/servlet/BrowserServlet" DesignTimeRectangle="8, 105, 0, 0" ElementType="Text" FriendlyName="'Save as PDF'" FullSelectorArgument="&lt;webctrl aaname='Enquiry Actions' parentid='enq_toolHeader' tag='IMG' /&gt;&lt;nav up='1' /&gt;&lt;webctrl aaname='Save as PDF' parentid='EnquiryactionDiv' tag='A' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Save as PDF' parentid='EnquiryactionDiv' tag='A' type='' check:text='Save as PDF' /&gt;" Guid="c0422ba4-c66b-487f-94c0-d5e391e6ab25" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAqSURBVBhXY3j48OH/VatW/YcBuMCt23fAGC4we/FiMIYL7DpyBIiP/AcAVJ011z6P/GcAAAAASUVORK5CYII=" InformativeScreenshot="90acb1e6accadd209c7d2f557c3a6c4e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Incoming Message Details' /&gt;" SearchSteps="Selector" WaitForReadyArgument="Complete" />
                                   </uix:NClick.Target>
                                 </uix:NClick>
-                                <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="File has been downloaded" DisplayName="Check App State 'INC_MSG_DETS.pdf Open'" sap:VirtualizedContainerService.HintSize="780,900" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="c0ffa673-ca1a-4e3a-a83d-61e54c93b8e9" Timeout="20" Version="V1">
+                                <uix:NCheckState sap2010:Annotation.AnnotationText="File has been downloaded" DisplayName="Check App State 'INC_MSG_DETS.pdf Open'" sap:VirtualizedContainerService.HintSize="780,900" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="c0ffa673-ca1a-4e3a-a83d-61e54c93b8e9" Timeout="20" Version="V1">
                                   <uix:NCheckState.IfExists>
                                     <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_24">
                                       <Sequence.Variables>
@@ -563,7 +567,7 @@
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <uix:NClick ClickType="Single" DisplayName="Click 'Close' Saved PDF file complete" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="380cee1c-69df-4699-b362-1f7ffbbec71a" Version="V1">
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close' Saved PDF file complete" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="380cee1c-69df-4699-b362-1f7ffbbec71a" Version="V1">
                                                 <uix:NClick.Target>
                                                   <uix:TargetAnchorable DesignTimeRectangle="746, 1, 46, 29" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;ctrl name='Incoming Message Details - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Incoming Message Details - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:text='Close' /&gt;" Guid="709eb396-3630-406a-b68e-f58f2f2eb0e4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAgCAYAAABQISshAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD2SURBVFhH7dNLDoIwEIBhzwEFXeDNRD0dBGJceBPlofi6xsgQiixGRFNKS7r4A8l0MV/Szvz1FnRr5W+aPG8JrruAWV48QaeyywPS8x2S/AZJdq0gjjM3kNFCBIecsqKGuNOAMKYppLpWZcdUY0jzRsr38YY404DYtoGMlzSIzRjs9gdyhuEMz1CzPtEQJh7CF6UwXbO+SYNg1MIiEJhUCNZeXBQCoyCWNSAE4wBRCMxA/o0j8Nv+p87+klQItbgojDRI18IiMNIg3xblGGrWp1Ee+xAZiGoZiGoZiGoZiGoZiGp9hMRxDDoVRVFVGIYQBEENYfACC5+N9nDuBq0AAAAASUVORK5CYII=" InformativeScreenshot="720db47048d55e4e9927ff5e34d43869.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Incoming Message Details - Google Chrome' /&gt;" SearchSteps="Selector" />
                                                 </uix:NClick.Target>
@@ -617,7 +621,7 @@
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <uix:NClick ClickType="Single" DisplayName="Click Close Context Enquiries Pop up" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c0ffa673-ca1a-4e3a-a83d-61e54c93b8e9" Timeout="15" Version="V1">
+                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Close Context Enquiries Pop up" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c0ffa673-ca1a-4e3a-a83d-61e54c93b8e9" Timeout="15" Version="V1">
                                           <uix:NClick.Target>
                                             <uix:TargetAnchorable DesignTimeRectangle="262, 1, 46, 29" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;ctrl name='Context Enquiries - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Context Enquiries - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:text='Close' /&gt;" Guid="63682ae6-7607-4bc5-98f7-8bbb094c6c44" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAgCAYAAABQISshAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD2SURBVFhH7dNLDoIwEIBhzwEFXeDNRD0dBGJceBPlofi6xsgQiixGRFNKS7r4A8l0MV/Szvz1FnRr5W+aPG8JrruAWV48QaeyywPS8x2S/AZJdq0gjjM3kNFCBIecsqKGuNOAMKYppLpWZcdUY0jzRsr38YY404DYtoGMlzSIzRjs9gdyhuEMz1CzPtEQJh7CF6UwXbO+SYNg1MIiEJhUCNZeXBQCoyCWNSAE4wBRCMxA/o0j8Nv+p87+klQItbgojDRI18IiMNIg3xblGGrWp1Ee+xAZiGoZiGoZiGoZiGoZiGp9hMRxDDoVRVFVGIYQBEENYfACC5+N9nDuBq0AAAAASUVORK5CYII=" InformativeScreenshot="ba89aed816f700ebd174aff313daa75f.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Context Enquiries - Google Chrome' /&gt;" SearchSteps="Selector" WaitForReadyArgument="Complete" />
                                           </uix:NClick.Target>
@@ -696,7 +700,7 @@
                         <InArgument x:TypeArguments="x:Int32">0</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="Check to see if file has been downloaded for 20 secs" Condition="[not blnLCFileDownloaded and intRobotLCLoopCounter&lt;10]" DisplayName="Do While blnLCFileDownloaded and intRobotLCLoopCounter&lt;10" sap:VirtualizedContainerService.HintSize="604,613" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+                    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Check to see if file has been downloaded for 20 secs" Condition="[not blnLCFileDownloaded and intRobotLCLoopCounter&lt;10]" DisplayName="Do While blnLCFileDownloaded and intRobotLCLoopCounter&lt;10" sap:VirtualizedContainerService.HintSize="604,613" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
                       <ui:InterruptibleDoWhile.Body>
                         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="426,417" sap2010:WorkflowViewState.IdRef="Sequence_32">
                           <sap:WorkflowViewStateService.ViewState>
@@ -759,7 +763,7 @@
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <uix:NClick ClickType="Single" DisplayName="Click 'Close' file not downloaded" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="590a52cd-9e99-4392-862c-8fbd77ce0950" Timeout="10" Version="V1">
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close' file not downloaded" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="590a52cd-9e99-4392-862c-8fbd77ce0950" Timeout="10" Version="V1">
                                     <uix:NClick.Target>
                                       <uix:TargetAnchorable DesignTimeRectangle="746, 1, 46, 29" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;ctrl name='Incoming Message Details - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Incoming Message Details - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:text='Close' /&gt;" Guid="32311ef7-3e92-4da0-a7fc-5d6ad204999a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAgCAYAAABQISshAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEISURBVFhH7dM7DoJAEIBhzsFLC7yLNp7C15ks7QWh8NV5DCOgGPUao2NcsZgommXZxS3+QDJbzFeM0R+MQLV6/eEzz2uB6zbBSLMLsLJwLX2H2Qr2t9JgCYm/uEMcp6EhlYWIHDJ/QNx6QGxbUQgisHiqMITdCN5HDnHqAbEsDakuYZBuuwOb8YScYTjDN9SsSDTE5g9hi1KYd7OiCYNg1MI8EJhQCPa6OC8ERkFMs0QIxgC8EJiG/BpD4Pf1n3r7TUIh1OK8MMIg7xbmgREG+bQow1CzIlVy7GWkIbKlIbKlIbKlIbL1XxAVSg5niPcn2CVH2MZZDomiCFQqDMN7QRCA7/sPiA1X6ITg5f+VqAsAAAAASUVORK5CYII=" InformativeScreenshot="720db47048d55e4e9927ff5e34d43869.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Incoming Message Details - Google Chrome' /&gt;" SearchSteps="Selector" WaitForReadyArgument="Complete" />
                                     </uix:NClick.Target>
@@ -790,7 +794,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <ui:MoveFile ContinueOnError="{x:Null}" Destination="[in_Config(&quot;SaveLCsFolder_Business&quot;).ToString+in_strTFReference+&quot;_&quot;+strLCRef+&quot;_&quot;+strLCLoopCounter+&quot;.pdf&quot;]" DisplayName="Move File to in_Config(&quot;SaveLCsFolder_Business&quot;).ToString" sap:VirtualizedContainerService.HintSize="604,157" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="[in_Config(&quot;SaveLCsFilePath_Robot&quot;).ToString]">
+                    <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[in_Config(&quot;SaveLCsFolder_Business&quot;).ToString+in_strTFReference+&quot;_&quot;+strLCRef+&quot;_&quot;+strLCLoopCounter+&quot;.pdf&quot;]" DisplayName="Move File to in_Config(&quot;SaveLCsFolder_Business&quot;).ToString" sap:VirtualizedContainerService.HintSize="604,157" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="[in_Config(&quot;SaveLCsFilePath_Robot&quot;).ToString]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -814,7 +818,7 @@
                         <InArgument x:TypeArguments="x:Int32">0</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="wait until file has been moved" Condition="[bln_MovedLCExists=False AND intLoopCounter&lt;10]" DisplayName="Do While file hasn't been downloaded" sap:VirtualizedContainerService.HintSize="604,813" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="wait until file has been moved" Condition="[bln_MovedLCExists=False AND intLoopCounter&lt;10]" DisplayName="Do While file hasn't been downloaded" sap:VirtualizedContainerService.HintSize="604,813" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
                       <ui:InterruptibleDoWhile.Body>
                         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="426,617" sap2010:WorkflowViewState.IdRef="Sequence_26">
                           <sap:WorkflowViewStateService.ViewState>
@@ -948,7 +952,7 @@
                                 </Sequence>
                               </If.Else>
                             </If>
-                            <ui:WriteTextFile DisplayName="Write Text File strLCText" FileName="[strTextFileLocation]" sap:VirtualizedContainerService.HintSize="484,132" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[strLCText]" />
+                            <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File strLCText" FileName="[strTextFileLocation]" sap:VirtualizedContainerService.HintSize="484,132" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[strLCText]" />
                           </Sequence>
                         </If.Then>
                         <If.Else>
@@ -976,12 +980,12 @@
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NClick ClickType="Single" DisplayName="Click 'Close' Incoming message details" sap:VirtualizedContainerService.HintSize="554,156" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9312d87a-8cc4-4bcf-bf95-2e57f10a0b7a" Version="V1">
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close' Incoming message details" sap:VirtualizedContainerService.HintSize="554,156" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9312d87a-8cc4-4bcf-bf95-2e57f10a0b7a" Version="V1">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable DesignTimeRectangle="746, 1, 46, 29" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;ctrl name='Incoming Message Details - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Incoming Message Details - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:text='Close' /&gt;" Guid="3e163c42-a7c7-4ab8-9b19-ed9275e05601" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAgCAYAAABQISshAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADcSURBVFhH7dNdCoJAEMBx75EHrI63lO1HtpYlhtARgl66xsYUGz4MFlsj67DCH4XZh/mBmzkmT3a93d2Umy+W7txdeECatuMBqZuWB6SqTzwgdn/kASntgQfE7CoeEL21PCDKlP+HzPLcrQqNziCYwRlsFhJApCaA+EUxzNAsNIAU0tD8WtjCFAgIIGup6e5If3EqBPSEbBTtZfcAKgSUIN/mEfDuf2Nnf4kUgi1OhSGDDC1MgSGDfFrUY7BZSKNc9jFKkNhKkNhKkNhKkNhKkNh6Q4QQbsq9IMo9AM2xQAX/F36rAAAAAElFTkSuQmCC" InformativeScreenshot="c92ad8ab17723c1ae25c7b6dad6df4ed.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Incoming Message Details - Google Chrome' /&gt;" SearchSteps="Selector" />
                             </uix:NClick.Target>
                           </uix:NClick>
-                          <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Incoming Message'" sap:VirtualizedContainerService.HintSize="554,332" sap2010:WorkflowViewState.IdRef="NCheckState_6" Mode="WaitDisappear" ScopeIdentifier="9312d87a-8cc4-4bcf-bf95-2e57f10a0b7a" Timeout="20" Version="V1">
+                          <uix:NCheckState DisplayName="Check App State 'Incoming Message'" sap:VirtualizedContainerService.HintSize="554,332" sap2010:WorkflowViewState.IdRef="NCheckState_6" Mode="WaitDisappear" ScopeIdentifier="9312d87a-8cc4-4bcf-bf95-2e57f10a0b7a" Timeout="20" Version="V1">
                             <uix:NCheckState.IfExists>
                               <Sequence DisplayName="Target disappears" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_42">
                                 <sap:WorkflowViewStateService.ViewState>

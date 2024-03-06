@@ -1,80 +1,84 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="TEST_LOGIN_SECURITYPAGE" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1142,2397" sap2010:WorkflowViewState.IdRef="TEST_LOGIN_SECURITYPAGE_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="TEST_LOGIN_SECURITYPAGE" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1142,2397" sap2010:WorkflowViewState.IdRef="TEST_LOGIN_SECURITYPAGE_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
-      <x:String>System.Activities</x:String>
-      <x:String>System.Activities.Statements</x:String>
-      <x:String>System.Activities.Expressions</x:String>
-      <x:String>System.Activities.Validation</x:String>
-      <x:String>System.Activities.XamlIntegration</x:String>
       <x:String>Microsoft.VisualBasic</x:String>
       <x:String>Microsoft.VisualBasic.Activities</x:String>
       <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
       <x:String>System.Collections</x:String>
       <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.ComponentModel</x:String>
       <x:String>System.Data</x:String>
       <x:String>System.Diagnostics</x:String>
       <x:String>System.Drawing</x:String>
       <x:String>System.IO</x:String>
       <x:String>System.Linq</x:String>
       <x:String>System.Net.Mail</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Windows.Markup</x:String>
       <x:String>System.Xml</x:String>
       <x:String>System.Xml.Linq</x:String>
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
-      <x:String>System.Windows.Markup</x:String>
-      <x:String>System.Security</x:String>
-      <x:String>UiPath.UIAutomationNext.Enums</x:String>
-      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
-      <x:String>System.Collections.ObjectModel</x:String>
-      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
-      <x:String>System.Runtime.Serialization</x:String>
-      <x:String>System.Reflection</x:String>
-      <x:String>System.Runtime.InteropServices</x:String>
-      <x:String>UiPath.UIAutomationNext.Activities</x:String>
-      <x:String>System.Activities.DynamicUpdate</x:String>
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
-      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
-      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Drawing</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>PresentationCore</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
-      <AssemblyReference>System.ServiceModel</AssemblyReference>
-      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
-      <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="TEST_LOGIN_SECURITYPAGE" sap:VirtualizedContainerService.HintSize="832,2332" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -126,7 +130,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NClick ClickType="Single" ContinueOnError="True" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Version="V1">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Version="V1">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="299, 9, 24, 22" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;ctrl name='Restore pages?' role='dialog' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Restore pages?' role='dialog' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:fulltext='Close' /&gt;" Guid="1be31958-32d4-42b9-9590-dc7f5dff2d0b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAaCAYAAACkVDyJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACzSURBVEhL7ZPBCsIwDED9Uw9e/AjFgeJQcEwU/dKeMx6smBUZaYnDQx8MRlL2miVZycJUoTtV6M5/CvvHS9prJyGEMfKBGLn78z1G5jEJz5ebrDdb2TeniZR3YuQ4Y8Ek5MO7w3Ei1TJy+iJzmHuYSktkkDU0Wloig2xhrCxW+jOhllGZ/r05UvPQpD3jKZGahHEt0p5pKbtowSRk8ZF+q4IYOc5YyBoaD6rQnSp0Z2GhyABRpwF2fV4G3wAAAABJRU5ErkJggg==" InformativeScreenshot="a967e199561c261b8cd4c3b0c1e0fee1.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Restore pages?' /&gt;" SearchSteps="Selector, Image" />
                       </uix:NClick.Target>
@@ -153,7 +157,7 @@
               </sap:WorkflowViewStateService.ViewState>
               <PickBranch DisplayName="PickBranch Security Page" sap:VirtualizedContainerService.HintSize="250,357" sap2010:WorkflowViewState.IdRef="PickBranch_1">
                 <PickBranch.Trigger>
-                  <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="check we are on the sign in page" DisplayName="Check App State 'Security Page'" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Timeout="60" Version="V1">
+                  <uix:NCheckState sap2010:Annotation.AnnotationText="check we are on the sign in page" DisplayName="Check App State 'Security Page'" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Timeout="60" Version="V1">
                     <uix:NCheckState.IfExists>
                       <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_17">
                         <sap:WorkflowViewStateService.ViewState>
@@ -191,12 +195,12 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ClickType="Single" DisplayName="Click 'chrome.exe Privacy'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Version="V1">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'chrome.exe Privacy'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Version="V1">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="500, 577, 96, 42" FriendlyName="'chrome.exe Privacy'" Guid="16117a4b-0a64-4f2b-a751-89e2ff942dbf" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGAAAAAqCAYAAABMW14yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJoSURBVHhe7ZvNahsxFIXzpl5kk4fIIuCHMO6iFBcCXQcCBXfRB4h3DaEvYMjPC6SL2zn689X1jG0yI98szgciGY0ka84nKVmML4S4QgHOUIAzFOBMJeDl9U1+/votX7//kC/fblkmKsgTuSJfSxGAm2j45+mvvL//S7VkCpAnckW+VkIRAENoRNqBfJGzpgiAHa78tiBf5KwpAnBWkfbYnCngzFCAMxTgDAU4QwHOUIAzFOAMBTjz+QQ8LGW22KSLT8qEczyTgI2sLq9kfrdN1weggMiUAp7vbmS+WMr8+l6eU90gFBCZTsBW1tc3st7mn6m6EHfHLJSlPJaHQ/srWT3EVoHtfZEIqbFP6hdbxDZ5nHS/3nlx3L57j4v++uE5jqe9ABtaNXEbcnrQ1Ma2DzspBNP1W+x2UwgutwsC7HUWHz9vF+5G1un3+rP0vA7PcSzNBSCc8sB5dcaruJXtsaRXl5IXg+jbQR22j/4MHWA1ngah1mMX2cfmOJLGAvYfDELKaup7kKpOhW7b4rocC3bFawHqMweD00eMGfPoHMfRVoANKZe8onDfrK6hY2dPnO6nAzkmYHAH1H0KJ8xxDA0F2LMzo3dFXHm7Nmkl6ocLx8ZSVl3JAdkAEPBJAtL4fX8DqjEqTpjjCNoJ6Akisx9Ydx1K116v5kAU2VuX+q26f3Hr8YYEgBRg7lvq6zFn+ug8OseP03AHkFOgAGcowBkKcIYCnKEAZyjAGQpwZlAA3w1tz8F3Q/l2dHsOvh3N7we0A3kiV+Q7+P0AgJswhIY4q1imKcgTudrwQSWAnB8KcIYCXBH5D9bWo3z1p/UWAAAAAElFTkSuQmCC" InformativeScreenshot="547eb33d5f2f6f460d40fcc0755b553e.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Privacy error - Google Chrome' /&gt;" SearchSteps="Image" TargetType="ImageBased" />
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <uix:NClick ClickType="Single" DisplayName="Click 'chrome.exe Privacy'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Version="V1">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'chrome.exe Privacy'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Version="V1">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="499, 743, 71, 21" FriendlyName="'chrome.exe Privacy'" Guid="ccbed6c3-6fb5-4b99-a7c7-ccfd2a96a73e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEcAAAAVCAYAAAAU9vPjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGoSURBVFhH7ZRRbsMgDIZ30z30ZYfoQ6QeouprLzBNkfqUKzSPvUKkXoJhbMAYQ5N10jrJv4QUsMH2h8mbMzVlcDoyOB0ZnI7+N5zryb0fZ5r8pmZ33g0CDgTbfbAxuGkh2yuqBwds+4u703SbWnB4sADr5G40fTn9KRy3uGlP3bNc3MGDmsYhdNX5ih53muudBvtzJx7GbLwd9XVMLNrkedzmL60Bp8wp54o15PUyLteP4IgDwZ93FgHEOYLJ/rMHi98h+RQH/bAA/g3T+rxki6BWdw765/3yPC707cIJRcQARaIg/XDoiLAG/mpb463wjoA4AWJVEMQg38rmJfItJPzLCyE197c6B24jDp6MCke2vSi0GZjFiAN8ZXwaAbZ2XjOGF9gEnOoZPbjAB8+KaWvniOSyIDA/h2lDsSC1G6IUOOvhPg2HAvK1wgc7RPvnhJ9xM6kaOEracL4WDubG9z/5zymkwAEhoPgEpJ0KoCETy/vY86Qikk0pEG0+Vi9fFiPFFWfrYECQt+wcU6EE5/NrTERt4LDO6cjgdGRwOjI4HRmcppz7Bqg4jO4a6NILAAAAAElFTkSuQmCC" InformativeScreenshot="b029797dfb7420e031a7b4c7b0264909.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Privacy error - Google Chrome' /&gt;" SearchSteps="Image" TargetType="ImageBased" />
                     </uix:NClick.Target>
@@ -205,7 +209,7 @@
               </PickBranch>
               <PickBranch DisplayName="PickBranch Normal Login" sap:VirtualizedContainerService.HintSize="250,357" sap2010:WorkflowViewState.IdRef="PickBranch_2">
                 <PickBranch.Trigger>
-                  <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="check we are on the sign in page" DisplayName="Check App State 'T24 Sign in'" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Timeout="60" Version="V1">
+                  <uix:NCheckState sap2010:Annotation.AnnotationText="check we are on the sign in page" DisplayName="Check App State 'T24 Sign in'" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Timeout="60" Version="V1">
                     <uix:NCheckState.IfExists>
                       <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_19">
                         <sap:WorkflowViewStateService.ViewState>
@@ -246,7 +250,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="check we are on the sign in page" DisplayName="Check App State 'T24 Sign in'" sap:VirtualizedContainerService.HintSize="680,1153" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Timeout="60" Version="V1">
+                  <uix:NCheckState sap2010:Annotation.AnnotationText="check we are on the sign in page" DisplayName="Check App State 'T24 Sign in'" sap:VirtualizedContainerService.HintSize="680,1153" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Timeout="60" Version="V1">
                     <uix:NCheckState.IfExists>
                       <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,906" sap2010:WorkflowViewState.IdRef="Sequence_5">
                         <sap:WorkflowViewStateService.ViewState>
@@ -254,7 +258,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_Config(&quot;T24Credentials&quot;).ToString]" DisplayName="Get Credential" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[str_HalT24Password]" Username="[str_HalT24Username]" />
+                        <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_Config(&quot;T24Credentials&quot;).ToString]" CacheStrategy="None" DisplayName="Get Credential" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[str_HalT24Password]" Username="[str_HalT24Username]" />
                         <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into T24 'Username' 1" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Text="[str_HalT24Username]" Version="V1">
                           <uix:NTypeInto.Target>
                             <uix:TargetAnchorable BrowserURL="https://bavdwasapp01:9448/BrowserWeb/servlet/BrowserServlet" DesignTimeRectangle="786, 325, 206, 19" ElementType="InputBox" FriendlyName="'INPUT signOnName'" FullSelectorArgument="&lt;webctrl id='signOnName' tag='INPUT' /&gt;" FuzzyAccuracy="0.47" FuzzySelectorArgument="&lt;webctrl id='signOnName' tag='INPUT' type='' aaname='Username' /&gt;" Guid="79c37556-7445-4f58-93a9-91a2dbfff46d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANIAAAAXCAYAAAB+vBFFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEFSURBVHhe7ds7DoJAFEZhwgroCY/NAIWNrRvUDUh49HbWLsQNXHMRyEBGjHo7z5981QDd6YZAGGM/j5AYM9gipLqupSxLSdNUoigCsKJtaCNt247VPDeH1DSN90UAfl3XjfU4IWllerjbHyQMQ7nc7gBWTvV1aERb0WamzSHFcTwcHs9XCYLA+xEA96ERbSXP87EeJyQ9UPogIQHbpl6mERLwBUICDBASYICQAAOEBBggJMAAIQEGCAkwQEiAAUICDLwMSe8N6QF37YBtm3ft3NvfhAT4vb39zf9IwGf6vh/rcULSaUxFUUiSJN4XgX+XZZlUVbX4qU+3CIkx9t0IibGfJ/IA1htI2WRbTeoAAAAASUVORK5CYII=" InformativeScreenshot="b1b06ed7bd2e6125ae1eb493573b50b1.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='T24 Sign in' /&gt;" SearchSteps="FuzzySelector, Image">
@@ -277,7 +281,7 @@
                             </uix:TargetAnchorable>
                           </uix:NTypeInto.Target>
                         </uix:NTypeInto>
-                        <uix:NClick ClickType="Single" DisplayName="Click T24 'Sign in'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Version="V1">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click T24 'Sign in'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Version="V1">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://bavdwasapp01:9448/BrowserWeb/servlet/BrowserServlet" DesignTimeRectangle="786, 429, 55, 19" ElementType="Button" FriendlyName="'Sign in'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Sign in' check:text='Sign in' /&gt;" Guid="d8a62050-e7b8-4295-a164-83636285cb84" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADsAAAAXCAYAAAC1Szf+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIaSURBVFhH5ZfNTgIxEMd5Ju9ewBANLyB+3LlyMqAHvGhQDop64ALhxJnF6IkDBxOfYMXgR9SgxPiR+AJjp53dbUuBBdHsyiT/wLadtr/OzGYbgRmy2Ya9f3qDjd06RJcPYG5pJ1TCPWfyFjx234lGNQX26qYHi+snUG204fzyBS7sr1AJ91xtXEF89Qiu716JyjMXFiOKoKZJwqj42hE8Pn8QnTAXNpOvQ/W0bXQMoyqWDZt7DaIT5sJivg9P3SakIhGIuErAdsvrL6VZW7opjZ+CWmWY19bxqzPGEkseEp0wFxYL3OQkJEDnCx2vTdtI0GBRyCSbP9gBiyKgcgAB02Swpshq0iPLnynlU+kc+81BCfvo4FLphNs/MCPkQx7HjzQhLFMNN0yLMKVqar8Cy8cSnN2B7Sj6yLDSWHrW5/P6ZFiffqTJYSV5UTPXrB5lBV4G4P0ia/zB+vQjTQXWEYeKlsFy/nNAEUkl5cMEaxVYnciRktv7YMMeWb6Q/oISizltCuDImg0yLJeYfNBLSo8mf+bj2AYLAYvs6C+oHwgjTelu7P8FDf2Cyu5Z/MZgchxXao1TGss1/Acq123Y2m8QnTAXFu+A8bVjo+P40lL+j6OKWlgpQrf3SXTCXFi0NrsD4qAKOxVMA9MkQRbuGSMaSxbh9uGNqDxTYNHwDphlt33MdyzwMAn3nGXXOj2ijvXB/mebIViAbxSdjA87SukKAAAAAElFTkSuQmCC" InformativeScreenshot="ca4e0789a50fd169ccde4f2b9c1b78f7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='T24 Sign in' /&gt;" SearchSteps="FuzzySelector, Image" />
                           </uix:NClick.Target>
@@ -314,7 +318,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="Check we/ve got past the login screen" DisplayName="Check App State 'Trade Finance' Check Have logged In" EnableIfExists="False" sap:VirtualizedContainerService.HintSize="674,93" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Timeout="120" Version="V1">
+            <uix:NCheckState sap2010:Annotation.AnnotationText="Check we/ve got past the login screen" DisplayName="Check App State 'Trade Finance' Check Have logged In" EnableIfExists="False" sap:VirtualizedContainerService.HintSize="674,93" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Timeout="120" Version="V1">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
@@ -353,7 +357,7 @@
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Trade Finance'" sap:VirtualizedContainerService.HintSize="854,516" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Timeout="3" Version="V1">
+              <uix:NCheckState DisplayName="Check App State 'Trade Finance'" sap:VirtualizedContainerService.HintSize="854,516" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Timeout="3" Version="V1">
                 <uix:NCheckState.IfExists>
                   <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,290" sap2010:WorkflowViewState.IdRef="Sequence_9">
                     <sap:WorkflowViewStateService.ViewState>
@@ -361,7 +365,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NClick ClickType="Single" DisplayName="Click 'Trade Finance'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Timeout="10" Version="V1">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Trade Finance'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Timeout="10" Version="V1">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://bavdwasapp01:9448/BrowserWeb/servlet/BrowserServlet" DesignTimeRectangle="15, 211, 97, 16" FriendlyName="'Trade Finance'" FullSelectorArgument="&lt;webctrl tag='FRAME' title='Welcome to TF Officer Home Page - T24*' idx='2' /&gt;&lt;webctrl tag='SPAN' aaname='Trade Finance ' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='FRAME' title='Welcome to TF Officer Home Page - T24*' /&gt;&lt;webctrl tag='SPAN' aaname='Trade Finance ' type='' check:text='Trade Finance' /&gt;" Guid="e3fffb14-c74f-47a8-9aff-6ff2686871e6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAUCAYAAACUAvOrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIySURBVGhD7ZVLagMxDIbnLm1P0JaUPpcTGJhNIDdoTpBFcoxAIOQSWSaHyCqQA3SdHkL1eyRbnk6Yobjgxb8wsmVJn2QXX98XyEpLGUqCylASVIaSoDKUBJU2lMMSinoDR87WR9JvsYQdZ0tAPaHsYV4UIkFe8wN35gr1gLJbcDEZEP8Zynq9hs/ZjLWF0oB6g8DqCWW8PbO21BWFIoG8vX/Aze0daw8VQrGF0V1bwep0geO2Qp3rF+4Mq7qxKREodDLbih6FctrAWJ03k6LWS1ihuPA5f+Ka/HSs8631J+Q1EM2VTibx651joUggzy+vMJ1O+0Opq/j0qGdEw5JrlcRiT+0uYM+/KW7MdxSKFH6+jB+3V62bmLB0kW1xTQO5+PTa+uFysbEqIM5m/KC9ARQJZDR6grquYTKZ9IZCAgskz9gCmM7DRUZQVJJeR7X5VzYRD9uNARQMIczDyUwVhhJMlYrnNx8edByPEIEigdw/PEJZllBVldIQzxfdZzrDFsudYRLxoaAzTi1Quk9KGxS9bu6kTRSH4hXeSt2H/VlFoMhPXULwhffE1QWKNw0mwM5QWqeOahgoXnHVua5QvFys1H0NAE7Rj/56dYFC9+wWlfhz8NomZfYjKKz/QxzSIFCITUCQ8XaCwucSz3NPIP0xFCFVEBGU3UsKrxMlY43/AjNZrM3TIFDEunk29Z5mYtuhuLWLF0+Hnye+f1AoWUMpQ0lQGUqCylASVIaSnC7wA+cl8iy6WjbhAAAAAElFTkSuQmCC" InformativeScreenshot="3eaf035c94a2122279388848ccf2c511.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Welcome to TF Officer Home Page - T24*' /&gt;" SearchSteps="Selector" />
                       </uix:NClick.Target>
@@ -394,7 +398,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NCheckState>
-              <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Export LCs'" sap:VirtualizedContainerService.HintSize="854,516" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Version="V1">
+              <uix:NCheckState DisplayName="Check App State 'Export LCs'" sap:VirtualizedContainerService.HintSize="854,516" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Version="V1">
                 <uix:NCheckState.IfExists>
                   <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,290" sap2010:WorkflowViewState.IdRef="Sequence_11">
                     <sap:WorkflowViewStateService.ViewState>
@@ -402,7 +406,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NClick ClickType="Single" DisplayName="Click 'Export LCs'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Version="V1">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Export LCs'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Version="V1">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://bavdwasapp01:9448/BrowserWeb/servlet/BrowserServlet" DesignTimeRectangle="31, 243, 77, 16" FriendlyName="'Export LCs'" FullSelectorArgument="&lt;webctrl tag='FRAME' title='Welcome to TF Officer Home Page - T24*' idx='2' /&gt;&lt;webctrl tag='SPAN' /&gt;&lt;nav up='1' /&gt;&lt;webctrl aaname='Export LCs' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='TRADEFINANCE378434374802' tag='FRAME' /&gt;&lt;webctrl aaname='Export LCs' tag='SPAN' type='' check:text='Export LCs' /&gt;" Guid="6b9b1df3-831d-48c9-86d7-c45fb7fcbe6f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFEAAAAUCAYAAAD1GtHpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH1SURBVFhH7ZZLbsIwEEBzl7YnaCuqfpdBipQNEjcoJ8gCjoGEhLgESzgEKyQOwJoeYpoZ42TGmSSoMUUgL56AjBPPPE9sov3PAS7GegJRNIGlFrsigkQPXFbijRAkeiBI9ECQ6AEPEleQRVF+QEj6i50y9oxs59BvPaQw1wSmWy1mWI55Hc1jLY0SZ7MZfI9GaqykPbF/wYNEEpjOYWOv4TPHq8o4l1qJKPDj8wvu7h/UeElDYvQXhsdM12ZrG+Or7nbvDqYpi7NiNouEftNnHsvW5rnF2FqZbbnWL4Kdi+Cic1SJKPD17R2Gw2E3iQgmd5wUV7oQVUmaCbYCC3Hmt72XCkoTyLj0jp1oF8a9bmiusSIRBfZ6L5CmKQwGgxMl2g4wGBElJC8vWqygsvL0OmEhJEQmbcSZ+/l3G+8qsZjbuW5wF1UiJKLAx6dniOMYkiQhOnciokjRJBbdoAlhHa12zVklIuX24h6aQiIeIijNhY+p0ibRTJ4tnCK7dqJniVo+KkputQfL6TRL5AWL4itJ8+fIPdDEnD1RlVjdSiRNuR47TWwT+Xh32zjmwufxJNG0OQcLpmKFKLa3kER5jxQgn8tfIVWiva4+y6LnysfS28Bi+Bdn497nzO1B4h859fW5AoJEDwSJHricxBsiSOzMAX4BpQG/IvED5yQAAAAASUVORK5CYII=" InformativeScreenshot="6353cce8a690a4101fbfa9c245f81b0b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Welcome to TF Officer Home Page - T24*' /&gt;" SearchSteps="Selector" />
                       </uix:NClick.Target>
@@ -435,7 +439,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NCheckState>
-              <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'List of' 5" sap:VirtualizedContainerService.HintSize="854,516" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Version="V1">
+              <uix:NCheckState DisplayName="Check App State 'List of' 5" sap:VirtualizedContainerService.HintSize="854,516" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Version="V1">
                 <uix:NCheckState.IfExists>
                   <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,290" sap2010:WorkflowViewState.IdRef="Sequence_13">
                     <sap:WorkflowViewStateService.ViewState>
@@ -443,7 +447,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NClick ClickType="Single" DisplayName="Click 'List of Export Lc's Pending Action' 5" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Version="V1">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'List of Export Lc's Pending Action' 5" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9bd0ae72-47e1-48d6-8ee7-51812759fa8f" Version="V1">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://bavdwasapp01:9448/BrowserWeb/servlet/BrowserServlet" DesignTimeRectangle="47, 358, 213, 16" ElementType="Text" FriendlyName="'List of'" FullSelectorArgument="&lt;webctrl tag='FRAME' title='Welcome to TF Officer Home Page - T24*1' idx='2' /&gt;&lt;webctrl tag='SPAN' /&gt;&lt;nav up='1' /&gt;&lt;webctrl aaname='List of Export LCs Pending Action ' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='TRADEFINANCE378434374802' tag='FRAME' /&gt;&lt;webctrl aaname='List of Export LCs Pending Action ' tag='A' type='' check:text='List of Export LCs Pending Action' /&gt;" Guid="d158edd6-baf5-4116-a157-3d079cb8af34" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANkAAAAUCAYAAAAAyJgcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUDSURBVHhe7Zy9alRBFMd9Jt8iD5LSF5A0AUm12KRdJJWFBEkhQkI0RYKFlYWYRkQklXYSLCQ4zjnzsf9zzszcuWY3qEzx4+7unDlzvv737hbJvc/fvrrE6etTd/PrJvATrj+v+fXFmwt39eXKvXj5wl1/v877BoNBHSsyEhQLy0IiI3HR6yG0waCPgsiSqJLYVqJjkf24Zt5/eO9OT06Fs8FgYGk8yVbiIlHRlZ5eBIkrvcb9g8HAIkRGopEiC0+t9Jqg32RXnz7m32a4fzAYWIzI0tdBFlW88nv4PF3niezSLR/sue2nl4W1NXN55La39tx9z+5ZYX1wx5y73a19t7yM788OfG8O3LGx+3s4Xvj5WZwX1+Zin2QoqMIVX1uRqWIK+kRGyd1OiNPncAGjCDMPjty7gu0m6cl1yubd032Rx9ybiqnFmgZLcpci82fN6mWYF103rssmRHb4/JAFVOS7fE9PMrLH/W2R9dEzeG2mY7j9GeuhJ46WTRAYDuvcAbP+2efabzi3n4teQk3mnFUW2TqpiyyJiq5KYIk5IqNm0p0yNVTcgWNT9V25PoChMNk233Ho/On91cGNXzNXBcenojqTkXfjlCODg8p+vW36Guvj7c21HWtrmGQtakNk/KdYYT3HCTmFfUdwhqyFzi8PfqpBso/nLcHexoN+WoKgHu273YX3ZZ5C5dkQ+XnId44dffDTN9lB3afi91iRJVHVIIHF67wnGQ5sW4w6SEkc9lwA9EvvWzEEmmfAkHGxq+fE9Th43Cw1hHkv+9x32wsQXrRp59qwoaajkBUy9jrGP+QvclB157UkFG0LPsJe1RP8usi2EEOsVbANwkiiCsOPfhXkl2KYOp9yyb0IeWnhinw43j+JPyBF9qxDZADZ4/72gOOQyoYhpumaQhI47L0iW92VbBzBnxeFaBTGHz/LschhYEwjbEyTuXpqNjLnAnowKmj/WZylmCEnriHUDePJPuLatMjwHKilXqvUMUExhR5I4bRrNS0ynWszRlyL9kJkyyfLophqkD3ubw+4HtIoNB8QNlk33cBJ4fB7qGkzRdY8o1CoosjyWYUzMc5SzJ7pOOo2kyIjeJipxvbsBA8Q20SST45ZrTHBF++riEyvmZ70iiy+TvnzGbVcdI1hJqzokT6RyR7Anmb8ASGyxeNFUUw1yB73m2IKSkPqUUHahBQmKT1wrRgCU2eEdfq9gX4K8edYbGHtINnhmMzVU7Up1KEG+agNWdt/ZaA92udmRJZsvT+mnm8QYLKT9nI+NH0is/n8ocge7T0qiqkG2eP+9oBXRKaC4oSqBSG0n7Bfvq83g6AzioNFwB1QvC7Ej3dI2Yhgm983RNbOtR0r7xd+6Vx7TmvIJv3jcJ2dZ996TZyBImJUT7pFRvm0exko9zznZs7wftVvMpFn3Js/U/kEQffEHxAi23m4Mxvcnw7Qd5RVwVJDlZ1IENaqAyj3yyGhtXZjuICwn6GzuJhyL9tyHLEZek/2q9Yxp4rIenItxqqHW6x5Pz5++Xm9HnkQC2smJ/AjhtCjhWziwhhmiQx9ELaO+uyMOWflR+SMazGnYn55P8QwV2SDFniTKK0PNs+/2YO1imyl9P8P3eCSzWC9UJ2PF/WnRGnP38Srtx84zvEk62Y8ye6ec19z+bXzX6y/EBn9qYuG/oZMfHYS/hwG9w0GgzpGZOPfDwwG6+Sr+w1PEUcUZhUyOwAAAABJRU5ErkJggg==" InformativeScreenshot="0e596076d732f76b482d9a54715785e8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Welcome to TF Officer Home Page - T24*' /&gt;" SearchSteps="Selector" />
                       </uix:NClick.Target>

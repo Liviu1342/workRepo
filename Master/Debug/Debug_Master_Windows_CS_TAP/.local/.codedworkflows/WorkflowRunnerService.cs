@@ -27,31 +27,6 @@ namespace Debug_Master_Windows_CS_TAP
         }
 
         /// <summary>
-        /// Invokes the Entry Points/Entry Point 1.xaml
-        /// </summary>
-        public void Entry_Point_1(System.Collections.Generic.List<int> in_ErrorCodes)
-        {
-            var result = _runWorkflowHandler(@"Entry Points\Entry Point 1.xaml", new Dictionary<string, object>{{"in_ErrorCodes", in_ErrorCodes}}, default, default, default);
-        }
-
-        /// <summary>
-        /// Invokes the Global Handlers/GlobalHandler-Retry.xaml
-        /// </summary>
-        public UiPath.Activities.Contracts.ErrorAction GlobalHandler_Retry(UiPath.Activities.Contracts.ExceptionHandlerArgs errorInfo)
-        {
-            var result = _runWorkflowHandler(@"Global Handlers\GlobalHandler-Retry.xaml", new Dictionary<string, object>{{"errorInfo", errorInfo}}, default, default, default);
-            return (UiPath.Activities.Contracts.ErrorAction)result["result"];
-        }
-
-        /// <summary>
-        /// Invokes the Files to Use For Invoke/Errors.xaml
-        /// </summary>
-        public void Errors(int in_ErrorCode)
-        {
-            var result = _runWorkflowHandler(@"Files to Use For Invoke\Errors.xaml", new Dictionary<string, object>{{"in_ErrorCode", in_ErrorCode}}, default, default, default);
-        }
-
-        /// <summary>
         /// Invokes the Files to Use For Invoke/File actions.xaml
         /// </summary>
         public void File_actions(string in_Filename, string in_OrchFolder, string in_OrchStorageBucketName, string in_TextForFile, string in_LocalFile)
@@ -60,21 +35,19 @@ namespace Debug_Master_Windows_CS_TAP
         }
 
         /// <summary>
-        /// Invokes the Global Handlers/GlobalHandler-Continue.xaml
+        /// Invokes the Entry Points/Entry Point 1.xaml
         /// </summary>
-        public UiPath.Activities.Contracts.ErrorAction GlobalHandler_Continue(UiPath.Activities.Contracts.ExceptionHandlerArgs errorInfo)
+        public void Entry_Point_1(System.Collections.Generic.List<int> in_ErrorCodes)
         {
-            var result = _runWorkflowHandler(@"Global Handlers\GlobalHandler-Continue.xaml", new Dictionary<string, object>{{"errorInfo", errorInfo}}, default, default, default);
-            return (UiPath.Activities.Contracts.ErrorAction)result["result"];
+            var result = _runWorkflowHandler(@"Entry Points\Entry Point 1.xaml", new Dictionary<string, object>{{"in_ErrorCodes", in_ErrorCodes}}, default, default, default);
         }
 
         /// <summary>
-        /// Invokes the Global Handlers/GlobalHandler-Ignore.xaml
+        /// Invokes the Files to Use For Invoke/Loops.xaml
         /// </summary>
-        public UiPath.Activities.Contracts.ErrorAction GlobalHandler_Ignore(UiPath.Activities.Contracts.ExceptionHandlerArgs errorInfo)
+        public void Loops(int in_NoOfSteps, string BreakTriggerScopeInArgument, System.Collections.Generic.List<int> in_MyList)
         {
-            var result = _runWorkflowHandler(@"Global Handlers\GlobalHandler-Ignore.xaml", new Dictionary<string, object>{{"errorInfo", errorInfo}}, default, default, default);
-            return (UiPath.Activities.Contracts.ErrorAction)result["result"];
+            var result = _runWorkflowHandler(@"Files to Use For Invoke\Loops.xaml", new Dictionary<string, object>{{"in_NoOfSteps", in_NoOfSteps}, {"BreakTriggerScopeInArgument", BreakTriggerScopeInArgument}, {"in_MyList", in_MyList}}, default, default, default);
         }
 
         /// <summary>
@@ -86,11 +59,11 @@ namespace Debug_Master_Windows_CS_TAP
         }
 
         /// <summary>
-        /// Invokes the Files to Use For Invoke/Loops.xaml
+        /// Invokes the Files to Use For Invoke/Errors.xaml
         /// </summary>
-        public void Loops(int in_NoOfSteps, string BreakTriggerScopeInArgument, System.Collections.Generic.List<int> in_MyList)
+        public void Errors(int in_ErrorCode, UiPath.Core.Activities.GlobalVariableTriggerArgs TriggerEventArgs)
         {
-            var result = _runWorkflowHandler(@"Files to Use For Invoke\Loops.xaml", new Dictionary<string, object>{{"in_NoOfSteps", in_NoOfSteps}, {"BreakTriggerScopeInArgument", BreakTriggerScopeInArgument}, {"in_MyList", in_MyList}}, default, default, default);
+            var result = _runWorkflowHandler(@"Files to Use For Invoke\Errors.xaml", new Dictionary<string, object>{{"in_ErrorCode", in_ErrorCode}, {"TriggerEventArgs", TriggerEventArgs}}, default, default, default);
         }
 
         /// <summary>
@@ -103,11 +76,30 @@ namespace Debug_Master_Windows_CS_TAP
         }
 
         /// <summary>
-        /// Invokes the Coded/Coded Wfs/PetActivity.cs
+        /// Invokes the Global Handlers/GlobalHandler-Continue.xaml
         /// </summary>
-        public void PetActivity()
+        public UiPath.Activities.Contracts.ErrorAction GlobalHandler_Continue(UiPath.Activities.Contracts.ExceptionHandlerArgs errorInfo)
         {
-            var result = _runWorkflowHandler(@"Coded\Coded Wfs\PetActivity.cs", new Dictionary<string, object>{}, default, default, default);
+            var result = _runWorkflowHandler(@"Global Handlers\GlobalHandler-Continue.xaml", new Dictionary<string, object>{{"errorInfo", errorInfo}}, default, default, default);
+            return (UiPath.Activities.Contracts.ErrorAction)result["result"];
+        }
+
+        /// <summary>
+        /// Invokes the Global Handlers/GlobalHandler-Retry.xaml
+        /// </summary>
+        public UiPath.Activities.Contracts.ErrorAction GlobalHandler_Retry(UiPath.Activities.Contracts.ExceptionHandlerArgs errorInfo)
+        {
+            var result = _runWorkflowHandler(@"Global Handlers\GlobalHandler-Retry.xaml", new Dictionary<string, object>{{"errorInfo", errorInfo}}, default, default, default);
+            return (UiPath.Activities.Contracts.ErrorAction)result["result"];
+        }
+
+        /// <summary>
+        /// Invokes the Global Handlers/GlobalHandler-Ignore.xaml
+        /// </summary>
+        public UiPath.Activities.Contracts.ErrorAction GlobalHandler_Ignore(UiPath.Activities.Contracts.ExceptionHandlerArgs errorInfo)
+        {
+            var result = _runWorkflowHandler(@"Global Handlers\GlobalHandler-Ignore.xaml", new Dictionary<string, object>{{"errorInfo", errorInfo}}, default, default, default);
+            return (UiPath.Activities.Contracts.ErrorAction)result["result"];
         }
 
         /// <summary>
@@ -124,6 +116,14 @@ namespace Debug_Master_Windows_CS_TAP
         public void ConditionalBreakpoints_Test()
         {
             var result = _runWorkflowHandler(@"Files to Use For Invoke\ConditionalBreakpoints-Test.xaml", new Dictionary<string, object>{}, default, default, default);
+        }
+
+        /// <summary>
+        /// Invokes the Coded/Coded Wfs/PetActivity.cs
+        /// </summary>
+        public void PetActivity()
+        {
+            var result = _runWorkflowHandler(@"Coded\Coded Wfs\PetActivity.cs", new Dictionary<string, object>{}, default, default, default);
         }
     }
 }

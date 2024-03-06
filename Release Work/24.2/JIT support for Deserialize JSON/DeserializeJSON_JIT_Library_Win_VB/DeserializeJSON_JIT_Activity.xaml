@@ -1,0 +1,174 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_propertyLevel2="Pisica" this:Main.in_propertyLevel3="Tom" this:Main.in_propertyLevel1="Animal" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uwavsdb="clr-namespace:UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON_0806a7.Bundle;assembly=DeserializeJSON_0806.qpZQQ1lmxEO1efWe61x7ljO2" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_propertyLevel2" Type="InArgument(x:String)" />
+    <x:Property Name="in_propertyLevel3" Type="InArgument(x:String)" />
+    <x:Property Name="in_propertyLevel1" Type="InArgument(x:String)" />
+    <x:Property Name="_out_DeserializeJson_Generic_1_3__JsonObject" Type="OutArgument(uwavsdb:DeserializeJSON_0806a7)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
+  <sap:VirtualizedContainerService.HintSize>1776.6666666666667,1548.6666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON_234ffa.Bundle</x:String>
+      <x:String>UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON_8fdc12.Bundle</x:String>
+      <x:String>UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON_5f1a31.Bundle</x:String>
+      <x:String>UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON_72f5d4.Bundle</x:String>
+      <x:String>UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON_313d06.Bundle</x:String>
+      <x:String>UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON_befa90.Bundle</x:String>
+      <x:String>UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON_8ba7bb.Bundle</x:String>
+      <x:String>UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON_2e20b5.Bundle</x:String>
+      <x:String>UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON_0806a7.Bundle</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>DeserializeJSON_234f.UeflK2C4EaJ13Kx2M4y5p4V</AssemblyReference>
+      <AssemblyReference>DeserializeJSON_8fdc.W4yFX2x4BmI1332o8EeJ733</AssemblyReference>
+      <AssemblyReference>DeserializeJSON_5f1a.qagIg2UGzPO1XPIZcd6tWv1</AssemblyReference>
+      <AssemblyReference>DeserializeJSON_72f5.Gp0FyGY8FB1qWRQq2QIkM41</AssemblyReference>
+      <AssemblyReference>DeserializeJSON_313d.i5OMd2sxCvH1boYwQD9KV71</AssemblyReference>
+      <AssemblyReference>DeserializeJSON_befa.SCJ0E3YjdWD1VrryY3vYt3G4</AssemblyReference>
+      <AssemblyReference>DeserializeJSON_8ba7.90RCl3f5M8K1puGi430gJ9Z</AssemblyReference>
+      <AssemblyReference>DeserializeJSON_2e20.y8IVN1VsEyG11qnjx1EjgjH1</AssemblyReference>
+      <AssemblyReference>DeserializeJSON_0806.qpZQQ1lmxEO1efWe61x7ljO2</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="512,1484" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="_out_ReadTextFile_1__Content" />
+      <Variable x:TypeArguments="njl:JObject" Name="_out_DeserializeJson_Generic_1_1__JsonObject" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadTextFile File="{x:Null}" Content="[_out_ReadTextFile_1__Content]" DisplayName="Read Text File" FileName="Files\myJsonFile.json" sap:VirtualizedContainerService.HintSize="450,122" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="450,132" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[_out_DeserializeJson_Generic_1_1__JsonObject]" JsonSample="" JsonString="[_out_ReadTextFile_1__Content]" />
+    <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="450,460" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[_out_DeserializeJson_Generic_1_1__JsonObject(in_propertyLevel1)(in_propertyLevel2)(in_propertyLevel3)]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="njl:JToken">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="njl:JToken" Name="currentJToken" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[currentJToken]" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <ui:DeserializeJson x:TypeArguments="uwavsdb:DeserializeJSON_0806a7" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="450,132" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_3" JsonObject="[_out_DeserializeJson_Generic_1_3__JsonObject]" JsonSample="{}{&#xA;    &quot;Animal&quot;: {&#xA;        &quot;Pisica&quot;: {&#xA;            &quot;Tom&quot;: {&#xA;                &quot;Rasa&quot;: &quot;&quot;,&#xA;                &quot;Varsta&quot;: 0,&#xA;                &quot;Talie&quot;: &quot;&quot;,&#xA;                &quot;Greutate&quot;: 0,&#xA;                &quot;Sterilizat&quot;: false,&#xA;                &quot;Culoare&quot;: &quot;&quot;&#xA;            },&#xA;            &quot;Garfield&quot;: {&#xA;                &quot;Rasa&quot;: &quot;&quot;,&#xA;                &quot;Varsta&quot;: 0,&#xA;                &quot;Talie&quot;: &quot;&quot;,&#xA;                &quot;Greutate&quot;: 0,&#xA;                &quot;Sterilizat&quot;: false,&#xA;                &quot;Culoare&quot;: &quot;&quot;&#xA;            }&#xA;        },&#xA;        &quot;Caine&quot;: {&#xA;            &quot;Jack&quot;: {&#xA;                &quot;Rasa&quot;: &quot;&quot;,&#xA;                &quot;Talie&quot;: &quot;&quot;,&#xA;                &quot;Greutate&quot;: 0,&#xA;                &quot;Agresiv&quot;: false,&#xA;                &quot;Loial&quot;: true&#xA;            },&#xA;            &quot;Daisy&quot;: {&#xA;                &quot;Rasa&quot;: &quot;&quot;,&#xA;                &quot;Talie&quot;: &quot;&quot;,&#xA;                &quot;Greutate&quot;: 0,&#xA;                &quot;Agresiv&quot;: true,&#xA;                &quot;Loial&quot;: false&#xA;            }&#xA;        },&#xA;        &quot;Cal&quot;: {&#xA;            &quot;BlackBeauty&quot;: {&#xA;                &quot;Rasa&quot;: &quot;&quot;,&#xA;                &quot;Greutate&quot;: 0,&#xA;                &quot;Culoare&quot;: &quot;&quot;,&#xA;                &quot;Varsta&quot;: 0,&#xA;                &quot;Atletic&quot;: false,&#xA;                &quot;Sterilizat&quot;: true&#xA;            }&#xA;        }&#xA;    },&#xA;    &quot;Properietar&quot;: {&#xA;        &quot;Nume&quot;: &quot;&quot;,&#xA;        &quot;Varsta&quot;: 0,&#xA;        &quot;Inaltime&quot;: 0,&#xA;        &quot;Atletic&quot;: false&#xA;    }&#xA;}" JsonString="[_out_ReadTextFile_1__Content]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,184.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[_out_DeserializeJson_Generic_1_3__JsonObject.Animal.Cal.BlackBeauty]" />
+    <If Condition="[_out_DeserializeJson_Generic_1_3__JsonObject.Animal.Cal.BlackBeauty.Atletic.Value]" sap:VirtualizedContainerService.HintSize="450,365.3333333333333" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,101.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,101.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>

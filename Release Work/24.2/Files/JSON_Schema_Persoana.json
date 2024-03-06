@@ -1,0 +1,64 @@
+{
+  "$id": "https://example.com/person.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Persoana",
+  "type": "object",
+  "required": [
+    "nume",
+	"prenume",
+    "cnp",
+	"varsta"
+  ],
+  "properties": {
+    "nume": {
+      "type": "string",
+      "description": "The person's first name."
+    },
+    "prenume": {
+      "type": "string",
+      "description": "The person's last name."
+    },
+    "varsta": {
+      "description": "Age in years which must be equal to or greater than zero.",
+      "type": "integer",
+      "minimum": 0
+    },
+	"areSapca": {
+		"description" : "Boolean property. Does the person wear a cap? True / False",
+		"type": "boolean",
+		"default": false
+	},
+	"cnp": {
+		"description": "Number property. The wealth in $$$$ of the person",
+		"type": "number",
+		"default": 0.0,
+		"minimum": 0
+	},
+	"dataNasterii": {
+		"description": "Properietate de tip Date",
+		"type" : "string",
+		"format": "date"
+	},
+	"limbiStraine": {
+		"type": "array",
+		"items": {
+			"type": "string"
+		}
+	},
+	"notaPerLimbaStraina": {
+		"type": "array",
+		"items": {
+			"type": "integer"
+		}
+	},
+	"object1": {
+		"type": "object"
+	},
+	"object2": {
+		"type": "object"
+	},
+	"object3": {
+		"type": "object"
+	}
+  }
+}

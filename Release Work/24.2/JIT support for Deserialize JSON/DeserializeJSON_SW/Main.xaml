@@ -1,0 +1,101 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:Annotation.AnnotationText="UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9" sap:VirtualizedContainerService.HintSize="1268,1271.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ucas="clr-namespace:UiPath.Core.Activities.Storage;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uwavsdb="clr-namespace:UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON_330b7a.Bundle;assembly=DeserializeJSON_330b.lVuxz3VeXlM1TrxfX1IxLGP1" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.Core.Activities.Storage</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON_330b7a.Bundle</x:String>
+      <x:String>UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON_d95124.Bundle</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
+      <AssemblyReference>DeserializeJSON_330b.lVuxz3VeXlM1TrxfX1IxLGP1</AssemblyReference>
+      <AssemblyReference>DeserializeJSON_d951.Wiopu2xV0vP192V8J3mFVY04</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="608,1206.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="result">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">ReadStorageText_1</x:String>
+            <x:String x:Key="SourcePropertyName">Result</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+      <Variable x:TypeArguments="uwavsdb:DeserializeJSON_330b7a" Default="[new UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON_330b7a.Bundle.DeserializeJSON_330b7a]" Name="jsonObject" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap:VirtualizedContainerService.HintSize="545.6,86.4" sap2010:WorkflowViewState.IdRef="ManualTrigger_2" />
+    <ucas:ReadStorageText TimeoutMS="{x:Null}" DisplayName="Read Storage Text" FolderPath="test" sap:VirtualizedContainerService.HintSize="545.6,235.2" sap2010:WorkflowViewState.IdRef="ReadStorageText_1" Path="myJsonFile.json" Result="[result]" StorageBucketName="My Orchestrator Files" />
+    <ui:DeserializeJson x:TypeArguments="uwavsdb:DeserializeJSON_330b7a" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="545.6,130.4" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jsonObject]" JsonSample="{}{&#xA;    &quot;Animal&quot;: {&#xA;        &quot;Pisica&quot;: {&#xA;            &quot;Tom&quot;: &#x9;&#xA;&#x9;&#x9;&#x9;{&#xA;                &quot;Rasa&quot;: &quot;Albastru de Rusia&quot;,&#xA;                &quot;Varsta&quot;: 5,&#xA;                &quot;Talie&quot;: &quot;Mare&quot;,&#xA;                &quot;Greutate&quot;: 4,&#xA;                &quot;Sterilizat&quot;: true,&#xA;                &quot;Culoare&quot;: &quot;Argintiu&quot;&#xA;            },&#xA;            &quot;Garfield&quot; :&#xA;&#x9;&#x9;&#x9;{&#xA;                &quot;Rasa&quot;: &quot;Europeana&quot;,&#xA;                &quot;Varsta&quot;: 10,&#xA;                &quot;Talie&quot;: &quot;Mare&quot;,&#xA;                &quot;Greutate&quot;: 20,&#xA;                &quot;Sterilizat&quot;: true,&#xA;                &quot;Culoare&quot;: &quot;Portocaliu&quot;&#xA;            }&#xA;        },&#xA;        &quot;Caine&quot;: {&#xA;            &quot;Jack&quot; : &#xA;&#x9;&#x9;&#x9;{&#xA;                &quot;Rasa&quot;: &quot;Doberman&quot;,&#xA;                &quot;Talie&quot;: &quot;Medie&quot;,&#xA;                &quot;Greutate&quot;: 15,&#xA;                &quot;Agresiv&quot;: true,&#xA;                &quot;Loial&quot;: true&#xA;            },&#xA;            &quot;Daisy&quot; : &#xA;&#x9;&#x9;&#x9;{&#xA;                &quot;Rasa&quot;: &quot;Cocker spaniol&quot;,&#xA;                &quot;Talie&quot;: &quot;Mica&quot;,&#xA;                &quot;Greutate&quot;: 1,&#xA;                &quot;Agresiv&quot;: false,&#xA;                &quot;Loial&quot;: true&#xA;            }&#xA;        },&#xA;        &quot;Cal&quot;: {&#xA;&#x9;&#x9;&#x9;&quot;BlackBeauty&quot; : &#xA;&#x9;&#x9;&#x9;{&#xA;            &quot;Rasa&quot;: &quot;Icelandic&quot;,&#xA;            &quot;Greutate&quot;: 230,&#xA;            &quot;Culoare&quot;: &quot;Maro&quot;,&#xA;            &quot;Varsta&quot;: 10,&#xA;            &quot;Atletic&quot;: true,&#xA;            &quot;Sterilizat&quot;: false&#xA;&#x9;&#x9;&#x9;}&#xA;        }&#xA;    },&#xA;    &quot;Properietar&quot;: {&#xA;        &quot;Nume&quot;: &quot;Jim&quot;,&#xA;        &quot;Varsta&quot;: 30,&#xA;        &quot;Inaltime&quot;: 180,&#xA;        &quot;Atletic&quot;: true&#xA;    },&#xA;    &quot;test&quot; : 12345&#xA;}" JsonString="[string.Format(&quot;{0}&quot;, result)]" />
+    <If Condition="[(jsonObject.Properietar.Atletic).GetValueOrDefault()]" DisplayName="If" sap:VirtualizedContainerService.HintSize="545.6,665.6" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,252" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[string.Format(&quot;{0}&quot;, jsonObject.Animal.Pisica.Tom.Rasa)]" />
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="512,252" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message 1" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[string.Format(&quot;{0}&quot;, jsonObject.Animal.Cal.BlackBeauty.Greutate)]" />
+        </Sequence>
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>

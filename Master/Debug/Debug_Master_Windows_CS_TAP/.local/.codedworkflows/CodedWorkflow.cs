@@ -19,7 +19,7 @@ namespace Debug_Master_Windows_CS_TAP
     {
         public CodedWorkflow()
         {
-            _ = new System.Type[]{typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService)};
+            _ = new System.Type[]{typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.Testing.API.ITestingService)};
             workflows = new WorkflowRunnerService(this.RunWorkflow);
             connections = new ConnectionsManager(this.serviceContainer);
         }

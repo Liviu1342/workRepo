@@ -1,9 +1,10 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Errors" this:Errors.in_ErrorCode="3" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_ErrorCode" Type="InArgument(x:Int32)" />
+    <x:Property Name="TriggerEventArgs" Type="InArgument(ui:GlobalVariableTriggerArgs)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1209.6,642.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1060,1316.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -36,7 +37,6 @@
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
-      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
       <AssemblyReference>Microsoft.CSharp</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
@@ -78,22 +78,24 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>Debug_Master_Windows_CS_TAP.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Errors" sap:VirtualizedContainerService.HintSize="559.2,565.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Errors" sap:VirtualizedContainerService.HintSize="559.6,1251.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="496.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn">
+    <ui:GlobalVariableChangedTrigger VariableName="{x:Null}" DisplayName="Global Variable Changed Trigger" Enabled="True" sap:VirtualizedContainerService.HintSize="497.6,153.2" sap2010:WorkflowViewState.IdRef="GlobalVariableChangedTrigger_1" SchedulingMode="Sequential" TriggerId="bbee6417-4487-440c-852e-18033c8588a7" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="497.6,183.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"Entering Errors.xaml"</CSharpValue>
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <Switch x:TypeArguments="x:Int32" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="496.8,188" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+    <Switch x:TypeArguments="x:Int32" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="497.6,659.6" sap2010:WorkflowViewState.IdRef="Switch`1_1">
       <Switch.Default>
         <Throw sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="Throw_1">
           <InArgument x:TypeArguments="s:Exception">
@@ -106,17 +108,17 @@
           <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">in_ErrorCode</CSharpValue>
         </InArgument>
       </Switch.Expression>
-      <Throw x:Key="1" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="Throw_2">
+      <Throw x:Key="1" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_2">
         <InArgument x:TypeArguments="s:Exception">
           <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">new NullReferenceException("Intended NRE thrown from Errors.xaml")</CSharpValue>
         </InArgument>
       </Throw>
-      <Throw x:Key="2" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="Throw_3">
+      <Throw x:Key="2" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_3">
         <InArgument x:TypeArguments="s:Exception">
           <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">new ArgumentOutOfRangeException("Intended ArgumentOutOfRangeException thrown from Errors.xaml")</CSharpValue>
         </InArgument>
       </Throw>
-      <Sequence x:Key="3" sap:VirtualizedContainerService.HintSize="449.6,335.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence x:Key="3" sap:VirtualizedContainerService.HintSize="416,383.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
         <Sequence.Variables>
           <Variable x:TypeArguments="s:Int32[]" Name="nullArray" />
         </Sequence.Variables>
@@ -125,21 +127,21 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3">
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,183.6" sap2010:WorkflowViewState.IdRef="LogMessage_3">
           <ui:LogMessage.Message>
             <InArgument x:TypeArguments="x:Object">
               <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">nullArray.Count()</CSharpValue>
             </InArgument>
           </ui:LogMessage.Message>
         </ui:LogMessage>
-        <Throw sap:VirtualizedContainerService.HintSize="387.2,90.4" sap2010:WorkflowViewState.IdRef="Throw_4">
+        <Throw sap:VirtualizedContainerService.HintSize="354,114.4" sap2010:WorkflowViewState.IdRef="Throw_4">
           <InArgument x:TypeArguments="s:Exception">
             <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">new NotFiniteNumberException("Intended NotFiniteNumberException thrown from Errors.xaml")</CSharpValue>
           </InArgument>
         </Throw>
       </Sequence>
     </Switch>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="496.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="497.6,166.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">"Exiting Errors.xaml"</CSharpValue>

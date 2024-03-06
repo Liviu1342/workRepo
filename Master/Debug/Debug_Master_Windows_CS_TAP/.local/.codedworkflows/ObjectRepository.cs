@@ -6,6 +6,7 @@ namespace Debug_Master_Windows_CS_TAP.ObjectRepository
     {
         public static class Calculator
         {
+            static string _reference = "WbUlBSG6ZkqytFl2nCEITg/LT0WRLrnRkKJgGIIMttjUA";
             public static _Implementation._Calculator.__Main_screen Main_screen { get; private set; } = new _Implementation._Calculator.__Main_screen();
         }
     }
