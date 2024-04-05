@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="979.2,640" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1241.6,888.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uwavsdb="clr-namespace:UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON_941b52.Bundle;assembly=DeserializeJSON_941b.W2zGC2L42nC1kB6fzHLbx" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -34,6 +34,7 @@
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Collections.Specialized</x:String>
       <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON_941b52.Bundle</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -80,16 +81,17 @@
       <AssemblyReference>System.Collections.Specialized</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>DeserializeJSON_941b.W2zGC2L42nC1kB6fzHLbx</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="416,475.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="416,489.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadTextFile Content="{x:Null}" File="{x:Null}" FileName="{x:Null}" DisplayName="Read Text File" sap:VirtualizedContainerService.HintSize="353.6,120.8" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-    <ui:LogMessage Message="{x:Null}" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,182.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" />
-    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonObject="{x:Null}" JsonString="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="353.6,83.2" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" />
+    <ui:ReadTextFile Content="{x:Null}" File="{x:Null}" FileName="{x:Null}" DisplayName="Read Text File" sap:VirtualizedContainerService.HintSize="353.6,112.8" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+    <ui:LogMessage Message="{x:Null}" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" />
+    <ui:DeserializeJson x:TypeArguments="uwavsdb:DeserializeJSON_941b52" JsonObject="{x:Null}" JsonString="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="353.6,113.6" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonSample="{}{&#xA;    &quot;Animal&quot;: {&#xA;        &quot;Pisica&quot;: {&#xA;            &quot;Tom&quot;:  &#xA;   {&#xA;                &quot;Rasa&quot;: &quot;&quot;,&#xA;                &quot;Varsta&quot;: 0,&#xA;                &quot;Talie&quot;: &quot;&quot;,&#xA;                &quot;Greutate&quot;: null,&#xA;                &quot;Sterilizat&quot;: null,&#xA;                &quot;Culoare&quot;: null&#xA;            },&#xA;            &quot;Garfield&quot; :&#xA;   {&#xA;                &quot;Rasa&quot;: &quot;&quot;,&#xA;                &quot;Varsta&quot;: 0,&#xA;                &quot;Talie&quot;: &quot;&quot;,&#xA;                &quot;Greutate&quot;: 0,&#xA;                &quot;Sterilizat&quot;: false,&#xA;                &quot;Culoare&quot;: &quot;&quot;&#xA;            }&#xA;        },&#xA;        &quot;Caine&quot;: {&#xA;            &quot;Jack&quot; : &#xA;   {&#xA;                &quot;Rasa&quot;: &quot;&quot;,&#xA;                &quot;Talie&quot;: null,&#xA;                &quot;Greutate&quot;: 5,&#xA;                &quot;Agresiv&quot;: false,&#xA;                &quot;Loial&quot;: true&#xA;            },&#xA;            &quot;Daisy&quot; : &#xA;   {&#xA;                &quot;Rasa&quot;: &quot;&quot;,&#xA;                &quot;Talie&quot;: &quot;&quot;,&#xA;                &quot;Greutate&quot;: null,&#xA;                &quot;Agresiv&quot;: true,&#xA;                &quot;Loial&quot;: false&#xA;            }&#xA;        },&#xA;        &quot;Cal 2.01&quot;: {&#xA;   &quot;Black_Beauty_12345&quot; : &#xA;   {&#xA;            &quot;Rasa&quot;: &quot;&quot;,&#xA;            &quot;Greutate&quot;: 0,&#xA;            &quot;Culoare&quot;: &quot;&quot;,&#xA;            &quot;Varsta&quot;: null,&#xA;            &quot;Atletic&quot;: false,&#xA;            &quot;Sterilizat&quot;: true&#xA;   }&#xA;        }&#xA;    },&#xA;    &quot;Properietar&quot;: {&#xA;        &quot;Nume&quot;: &quot;&quot;,&#xA;        &quot;Varsta&quot;: 0,&#xA;        &quot;Inaltime&quot;: 0,&#xA;        &quot;Atletic&quot;: true&#xA;    }&#xA;}" />
   </Sequence>
 </Activity>

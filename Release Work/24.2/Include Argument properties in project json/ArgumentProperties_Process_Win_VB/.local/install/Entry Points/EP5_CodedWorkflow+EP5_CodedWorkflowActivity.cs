@@ -3,40 +3,27 @@ using System.Activities;
 using UiPath.CodedWorkflows;
 using UiPath.CodedWorkflows.Utils;
 using System.Runtime;
-using ArgumentProperties_Process_Win_VB.ObjectRepository;
-using System.Collections.Generic;
-using System.Data;
-using UiPath.Core;
-using UiPath.Core.Activities.Storage;
-using UiPath.Excel;
-using UiPath.Excel.Activities;
-using UiPath.Excel.Activities.API;
-using UiPath.Excel.Activities.API.Models;
-using UiPath.Orchestrator.Client.Models;
-using UiPath.Testing;
-using UiPath.Testing.Activities.TestData;
-using UiPath.Testing.Activities.TestDataQueues.Enums;
-using UiPath.Testing.Enums;
-using UiPath.UIAutomationNext.API.Contracts;
-using UiPath.UIAutomationNext.API.Models;
-using UiPath.UIAutomationNext.Enums;
 
 namespace ArgumentProperties_Process_Win_VB.EntryPoints
 {
     public class EP5_CodedWorkflowActivity : System.Activities.Activity
     {
+        public InArgument<System.String> arg1 { get; set; }
+
         public EP5_CodedWorkflowActivity()
         {
             this.Implementation = () =>
             {
                 return new EP5_CodedWorkflowActivityChild()
-                {};
+                {arg1 = (this.arg1 == null ? (InArgument<System.String>)Argument.CreateReference((Argument)new InArgument<System.String>(), "arg1") : (InArgument<System.String>)Argument.CreateReference((Argument)this.arg1, "arg1")), };
             };
         }
     }
 
     internal class EP5_CodedWorkflowActivityChild : UiPath.CodedWorkflows.AsyncTaskCodedWorkflowActivity
     {
+        public InArgument<System.String> arg1 { get; set; }
+
         public System.Collections.Generic.IDictionary<string, object> newResult { get; set; }
 
         public EP5_CodedWorkflowActivityChild()
@@ -46,6 +33,7 @@ namespace ArgumentProperties_Process_Win_VB.EntryPoints
 
         protected override async System.Threading.Tasks.Task<Action<AsyncCodeActivityContext>> ExecuteAsync(AsyncCodeActivityContext context, System.Threading.CancellationToken cancellationToken)
         {
+            var var_arg1 = arg1.Get(context);
             var codedWorkflow = new global::ArgumentProperties_Process_Win_VB.EntryPoints.EP5_CodedWorkflow();
             CodedWorkflowHelper.Initialize(codedWorkflow, new UiPath.CodedWorkflows.Utils.CodedWorkflowsFeatureChecker(new System.Collections.Generic.List<string>()
             {UiPath.CodedWorkflows.Utils.CodedWorkflowsFeatures.AsyncEntrypoints}), context);
@@ -63,7 +51,7 @@ namespace ArgumentProperties_Process_Win_VB.EntryPoints
                 ControlledExecution.Run(() =>
                 {
                     {
-                        codedWorkflow.Execute();
+                        codedWorkflow.Execute(var_arg1);
                         newResult = new System.Collections.Generic.Dictionary<string, object>{};
                     }
                 }, cancellationToken);

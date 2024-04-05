@@ -1,438 +1,5 @@
 {
   "ActivityBindings": {
-    "Connections_Cross_CS_Library.Disabled_Connections.Disalbed_GMail_Enabled_Outlook": [
-      {
-        "Type": "Connection",
-        "PublishNullValues": false,
-        "Key": {
-          "Value": "GetNewestEmail_1_Connection0_ResourceKey",
-          "ValueSource": "Property"
-        },
-        "Values": {
-          "ConnectionId": {
-            "Value": "GetNewestEmail_1_Connection0",
-            "ValueSource": "Property"
-          }
-        },
-        "Arguments": {
-          "BindingsVersion": {
-            "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "Connector": {
-            "Value": "uipath-microsoft-outlook365",
-            "ValueSource": "Constant"
-          },
-          "UseConnectionService": {
-            "Value": "True",
-            "ValueSource": "Constant"
-          }
-        },
-        "SubBindings": [
-          {
-            "Type": "Property",
-            "PublishNullValues": false,
-            "Key": {
-              "Value": "GetNewestEmail_1_Connection0_Property0_Metadata_ResourceKey",
-              "ValueSource": "Property"
-            },
-            "Values": {
-              "parentFolderName": {
-                "Value": "GetNewestEmail_1_BrowserFolder",
-                "ValueSource": "Property"
-              },
-              "parentFolderId": {
-                "Value": "GetNewestEmail_1_BrowserFolderId",
-                "ValueSource": "Property"
-              }
-            },
-            "Arguments": {
-              "BindingsVersion": {
-                "Value": "2.1",
-                "ValueSource": "Constant"
-              },
-              "ActivityName": {
-                "Value": "Connections_Cross_CS_Library.Disabled_Connections.Disalbed_GMail_Enabled_Outlook",
-                "ValueSource": "Constant"
-              },
-              "ObjectName": {
-                "Value": "Message",
-                "ValueSource": "Constant"
-              },
-              "DisplayLabel": {
-                "Value": "parentFolderName",
-                "ValueSource": "Constant"
-              }
-            },
-            "SubBindings": [],
-            "DefaultValueSource": "Property"
-          }
-        ],
-        "DefaultValueSource": "Property"
-      }
-    ],
-    "Connections_Cross_CS_Library.GSuite_activity": [
-      {
-        "Type": "Connection",
-        "PublishNullValues": false,
-        "Key": {
-          "Value": "GetNewestEmailConnections_1_Connection0_ResourceKey",
-          "ValueSource": "Property"
-        },
-        "Values": {
-          "ConnectionId": {
-            "Value": "GetNewestEmailConnections_1_Connection0",
-            "ValueSource": "Property"
-          }
-        },
-        "Arguments": {
-          "BindingsVersion": {
-            "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "Connector": {
-            "Value": "uipath-google-gmail",
-            "ValueSource": "Constant"
-          },
-          "UseConnectionService": {
-            "Value": "True",
-            "ValueSource": "Constant"
-          }
-        },
-        "SubBindings": [
-          {
-            "Type": "Property",
-            "PublishNullValues": false,
-            "Key": {
-              "Value": "GetNewestEmailConnections_1_Connection0_Property0_Metadata_ResourceKey",
-              "ValueSource": "Property"
-            },
-            "Values": {
-              "ParentFolders[*].Name": {
-                "Value": "GetNewestEmailConnections_1_BrowserFolderPath",
-                "ValueSource": "Property"
-              },
-              "ParentFolders[*].ID": {
-                "Value": "GetNewestEmailConnections_1_BrowserFolderLabelId",
-                "ValueSource": "Property"
-              }
-            },
-            "Arguments": {
-              "BindingsVersion": {
-                "Value": "2.1",
-                "ValueSource": "Constant"
-              },
-              "ActivityName": {
-                "Value": "Connections_Cross_CS_Library.GSuite_activity",
-                "ValueSource": "Constant"
-              },
-              "ObjectName": {
-                "Value": "NormalizedMessage",
-                "ValueSource": "Constant"
-              },
-              "DisplayLabel": {
-                "Value": "ParentFolders[*].Name",
-                "ValueSource": "Constant"
-              }
-            },
-            "SubBindings": [],
-            "DefaultValueSource": "Property"
-          }
-        ],
-        "DefaultValueSource": "Property"
-      }
-    ],
-    "Connections_Cross_CS_Library.Microsoft_activity": [
-      {
-        "Type": "Connection",
-        "PublishNullValues": false,
-        "Key": {
-          "Value": "GetNewestEmail_1_Connection0_ResourceKey",
-          "ValueSource": "Property"
-        },
-        "Values": {
-          "ConnectionId": {
-            "Value": "GetNewestEmail_1_Connection0",
-            "ValueSource": "Property"
-          }
-        },
-        "Arguments": {
-          "BindingsVersion": {
-            "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "Connector": {
-            "Value": "uipath-microsoft-outlook365",
-            "ValueSource": "Constant"
-          },
-          "UseConnectionService": {
-            "Value": "True",
-            "ValueSource": "Constant"
-          }
-        },
-        "SubBindings": [
-          {
-            "Type": "Property",
-            "PublishNullValues": false,
-            "Key": {
-              "Value": "GetNewestEmail_1_Connection0_Property0_Metadata_ResourceKey",
-              "ValueSource": "Property"
-            },
-            "Values": {
-              "parentFolderName": {
-                "Value": "GetNewestEmail_1_BrowserFolder",
-                "ValueSource": "Property"
-              },
-              "parentFolderId": {
-                "Value": "GetNewestEmail_1_BrowserFolderId",
-                "ValueSource": "Property"
-              }
-            },
-            "Arguments": {
-              "BindingsVersion": {
-                "Value": "2.1",
-                "ValueSource": "Constant"
-              },
-              "ActivityName": {
-                "Value": "Connections_Cross_CS_Library.Microsoft_activity",
-                "ValueSource": "Constant"
-              },
-              "ObjectName": {
-                "Value": "Message",
-                "ValueSource": "Constant"
-              },
-              "DisplayLabel": {
-                "Value": "parentFolderName",
-                "ValueSource": "Constant"
-              }
-            },
-            "SubBindings": [],
-            "DefaultValueSource": "Property"
-          }
-        ],
-        "DefaultValueSource": "Property"
-      }
-    ],
-    "Connections_Cross_CS_Library.Microsoft_activity___personal_account": [
-      {
-        "Type": "Connection",
-        "PublishNullValues": false,
-        "Key": {
-          "Value": "GetFileFolderConnections_1_Connection0_ResourceKey",
-          "ValueSource": "Property"
-        },
-        "Values": {
-          "ConnectionId": {
-            "Value": "GetFileFolderConnections_1_Connection0",
-            "ValueSource": "Property"
-          }
-        },
-        "Arguments": {
-          "BindingsVersion": {
-            "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "Connector": {
-            "Value": "uipath-microsoft-onedrive",
-            "ValueSource": "Constant"
-          },
-          "UseConnectionService": {
-            "Value": "True",
-            "ValueSource": "Constant"
-          }
-        },
-        "SubBindings": [
-          {
-            "Type": "Property",
-            "PublishNullValues": false,
-            "Key": {
-              "Value": "GetFileFolderConnections_1_Connection0_Property0_Metadata_ResourceKey",
-              "ValueSource": "Property"
-            },
-            "Values": {
-              "FullName": {
-                "Value": "GetFileFolderConnections_1_BrowserItemFriendlyName",
-                "ValueSource": "Property"
-              },
-              "ID": {
-                "Value": "GetFileFolderConnections_1_BrowserItemId",
-                "ValueSource": "Property"
-              },
-              "ParentDriveID": {
-                "Value": "GetFileFolderConnections_1_BrowserDriveId",
-                "ValueSource": "Property"
-              }
-            },
-            "Arguments": {
-              "BindingsVersion": {
-                "Value": "2.1",
-                "ValueSource": "Constant"
-              },
-              "ActivityName": {
-                "Value": "Connections_Cross_CS_Library.Microsoft_activity___personal_account",
-                "ValueSource": "Constant"
-              },
-              "ObjectName": {
-                "Value": "CuratedFile",
-                "ValueSource": "Constant"
-              },
-              "DisplayLabel": {
-                "Value": "FullName",
-                "ValueSource": "Constant"
-              }
-            },
-            "SubBindings": [],
-            "DefaultValueSource": "Property"
-          }
-        ],
-        "DefaultValueSource": "Property"
-      }
-    ],
-    "Connections_Cross_CS_Library.Microsoft_activity_2": [
-      {
-        "Type": "Connection",
-        "PublishNullValues": false,
-        "Key": {
-          "Value": "GetEventListConnections_1_Connection0_ResourceKey",
-          "ValueSource": "Property"
-        },
-        "Values": {
-          "ConnectionId": {
-            "Value": "GetEventListConnections_1_Connection0",
-            "ValueSource": "Property"
-          }
-        },
-        "Arguments": {
-          "BindingsVersion": {
-            "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "Connector": {
-            "Value": "uipath-microsoft-outlook365",
-            "ValueSource": "Constant"
-          },
-          "UseConnectionService": {
-            "Value": "True",
-            "ValueSource": "Constant"
-          }
-        },
-        "SubBindings": [
-          {
-            "Type": "Property",
-            "PublishNullValues": false,
-            "Key": {
-              "Value": "GetEventListConnections_1_Connection0_Property0_Metadata_ResourceKey",
-              "ValueSource": "Property"
-            },
-            "Values": {
-              "FullName": {
-                "Value": "GetEventListConnections_1_BrowserCalendarFriendlyName",
-                "ValueSource": "Property"
-              },
-              "ID": {
-                "Value": "GetEventListConnections_1_BrowserCalendarId",
-                "ValueSource": "Property"
-              }
-            },
-            "Arguments": {
-              "BindingsVersion": {
-                "Value": "2.1",
-                "ValueSource": "Constant"
-              },
-              "ActivityName": {
-                "Value": "Connections_Cross_CS_Library.Microsoft_activity_2",
-                "ValueSource": "Constant"
-              },
-              "ObjectName": {
-                "Value": "CalendarList",
-                "ValueSource": "Constant"
-              },
-              "DisplayLabel": {
-                "Value": "FullName",
-                "ValueSource": "Constant"
-              }
-            },
-            "SubBindings": [],
-            "DefaultValueSource": "Property"
-          },
-          {
-            "Type": "Property",
-            "PublishNullValues": false,
-            "Key": {
-              "Value": "GetEventListConnections_1_Connection0_Property1_Metadata_ResourceKey",
-              "ValueSource": "Property"
-            },
-            "Values": {
-              "parentFolderName": {
-                "Value": "GetEmailListConnections_1_BrowserFolder",
-                "ValueSource": "Property"
-              },
-              "parentFolderId": {
-                "Value": "GetEmailListConnections_1_BrowserFolderId",
-                "ValueSource": "Property"
-              }
-            },
-            "Arguments": {
-              "BindingsVersion": {
-                "Value": "2.1",
-                "ValueSource": "Constant"
-              },
-              "ActivityName": {
-                "Value": "Connections_Cross_CS_Library.Microsoft_activity_2",
-                "ValueSource": "Constant"
-              },
-              "ObjectName": {
-                "Value": "Message",
-                "ValueSource": "Constant"
-              },
-              "DisplayLabel": {
-                "Value": "parentFolderName",
-                "ValueSource": "Constant"
-              }
-            },
-            "SubBindings": [],
-            "DefaultValueSource": "Property"
-          }
-        ],
-        "DefaultValueSource": "Property"
-      }
-    ],
-    "Connections_Cross_CS_Library.Slack_activity": [
-      {
-        "Type": "Connection",
-        "PublishNullValues": false,
-        "Key": {
-          "Value": "ConnectorActivity_1_Connection0_ResourceKey",
-          "ValueSource": "Property"
-        },
-        "Values": {
-          "ConnectionId": {
-            "Value": "ConnectorActivity_1_Connection0",
-            "ValueSource": "Property"
-          }
-        },
-        "Arguments": {
-          "UseConnectionService": {
-            "Value": "true",
-            "ValueSource": "Constant"
-          },
-          "BindingsVersion": {
-            "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "Connector": {
-            "Value": "uipath-salesforce-slack",
-            "ValueSource": "Constant"
-          },
-          "ActivityName": {
-            "Value": "List All Channels",
-            "ValueSource": "Constant"
-          }
-        },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
-      }
-    ],
     "Connections_Win_VB_Library.Connections.Disabled.Outlook_Disabled_Gmail_Enabled_activity": [
       {
         "Type": "Connection",
@@ -458,6 +25,14 @@
           },
           "UseConnectionService": {
             "Value": "True",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityId": {
+            "Value": "GetNewestEmailConnections_1",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityDisplayName": {
+            "Value": "Get Newest Email",
             "ValueSource": "Constant"
           }
         },
@@ -495,6 +70,14 @@
               "DisplayLabel": {
                 "Value": "ParentFolders[*].Name",
                 "ValueSource": "Constant"
+              },
+              "CompilerActivityId": {
+                "Value": "GetNewestEmailConnections_1",
+                "ValueSource": "Constant"
+              },
+              "CompilerActivityDisplayName": {
+                "Value": "Get Newest Email",
+                "ValueSource": "Constant"
               }
             },
             "SubBindings": [],
@@ -529,6 +112,14 @@
           },
           "UseConnectionService": {
             "Value": "True",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityId": {
+            "Value": "GetFileFolderConnections_1",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityDisplayName": {
+            "Value": "Get File/Folder",
             "ValueSource": "Constant"
           }
         },
@@ -566,6 +157,14 @@
               "DisplayLabel": {
                 "Value": "FullName",
                 "ValueSource": "Constant"
+              },
+              "CompilerActivityId": {
+                "Value": "GetFileFolderConnections_1",
+                "ValueSource": "Constant"
+              },
+              "CompilerActivityDisplayName": {
+                "Value": "Get File/Folder",
+                "ValueSource": "Constant"
               }
             },
             "SubBindings": [],
@@ -600,6 +199,14 @@
           },
           "UseConnectionService": {
             "Value": "True",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityId": {
+            "Value": "GetEmailListConnections_1",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityDisplayName": {
+            "Value": "Get Email List",
             "ValueSource": "Constant"
           }
         },
@@ -637,6 +244,14 @@
               "DisplayLabel": {
                 "Value": "parentFolderName",
                 "ValueSource": "Constant"
+              },
+              "CompilerActivityId": {
+                "Value": "GetEmailListConnections_1",
+                "ValueSource": "Constant"
+              },
+              "CompilerActivityDisplayName": {
+                "Value": "Get Email List",
+                "ValueSource": "Constant"
               }
             },
             "SubBindings": [],
@@ -649,12 +264,12 @@
         "Type": "Connection",
         "PublishNullValues": false,
         "Key": {
-          "Value": "DownloadEmailConnections_1_Connection1_ResourceKey",
+          "Value": "DownloadEmailConnections_1_Connection0_ResourceKey",
           "ValueSource": "Property"
         },
         "Values": {
           "ConnectionId": {
-            "Value": "DownloadEmailConnections_1_Connection1",
+            "Value": "DownloadEmailConnections_1_Connection0",
             "ValueSource": "Property"
           }
         },
@@ -669,6 +284,14 @@
           },
           "UseConnectionService": {
             "Value": "True",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityId": {
+            "Value": "DownloadEmailConnections_1",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityDisplayName": {
+            "Value": "Download Email",
             "ValueSource": "Constant"
           }
         },
@@ -701,6 +324,14 @@
           },
           "UseConnectionService": {
             "Value": "True",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityId": {
+            "Value": "GetEmailListConnections_1",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityDisplayName": {
+            "Value": "Get Email List",
             "ValueSource": "Constant"
           }
         },
@@ -738,6 +369,14 @@
               "DisplayLabel": {
                 "Value": "parentFolderName",
                 "ValueSource": "Constant"
+              },
+              "CompilerActivityId": {
+                "Value": "GetEmailListConnections_1",
+                "ValueSource": "Constant"
+              },
+              "CompilerActivityDisplayName": {
+                "Value": "Get Email List",
+                "ValueSource": "Constant"
               }
             },
             "SubBindings": [],
@@ -750,12 +389,12 @@
         "Type": "Connection",
         "PublishNullValues": false,
         "Key": {
-          "Value": "GetNewestEmail_1_Connection1_ResourceKey",
+          "Value": "GetNewestEmail_1_Connection0_ResourceKey",
           "ValueSource": "Property"
         },
         "Values": {
           "ConnectionId": {
-            "Value": "GetNewestEmail_1_Connection1",
+            "Value": "GetNewestEmail_1_Connection0",
             "ValueSource": "Property"
           }
         },
@@ -771,6 +410,14 @@
           "UseConnectionService": {
             "Value": "True",
             "ValueSource": "Constant"
+          },
+          "CompilerActivityId": {
+            "Value": "GetNewestEmail_1",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityDisplayName": {
+            "Value": "Get Newest Email",
+            "ValueSource": "Constant"
           }
         },
         "SubBindings": [
@@ -778,7 +425,7 @@
             "Type": "Property",
             "PublishNullValues": false,
             "Key": {
-              "Value": "GetNewestEmail_1_Connection1_Property0_Metadata_ResourceKey",
+              "Value": "GetNewestEmail_1_Connection0_Property1_Metadata_ResourceKey",
               "ValueSource": "Property"
             },
             "Values": {
@@ -806,6 +453,14 @@
               },
               "DisplayLabel": {
                 "Value": "parentFolderName",
+                "ValueSource": "Constant"
+              },
+              "CompilerActivityId": {
+                "Value": "GetNewestEmail_1",
+                "ValueSource": "Constant"
+              },
+              "CompilerActivityDisplayName": {
+                "Value": "Get Newest Email",
                 "ValueSource": "Constant"
               }
             },
@@ -841,6 +496,14 @@
           },
           "UseConnectionService": {
             "Value": "True",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityId": {
+            "Value": "GetFileListConnections_1",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityDisplayName": {
+            "Value": "Get File/Folder List",
             "ValueSource": "Constant"
           }
         },
@@ -882,6 +545,14 @@
               "DisplayLabel": {
                 "Value": "FullName",
                 "ValueSource": "Constant"
+              },
+              "CompilerActivityId": {
+                "Value": "GetFileListConnections_1",
+                "ValueSource": "Constant"
+              },
+              "CompilerActivityDisplayName": {
+                "Value": "Get File/Folder List",
+                "ValueSource": "Constant"
               }
             },
             "SubBindings": [],
@@ -921,6 +592,58 @@
           "BindingsVersion": {
             "Value": "2.1",
             "ValueSource": "Constant"
+          },
+          "CompilerActivityId": {
+            "Value": "ListAllUsers_1",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityDisplayName": {
+            "Value": "List All Users",
+            "ValueSource": "Constant"
+          }
+        },
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "Connections_Win_VB_Library.Integration_activity": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "Connections_Slack_activity_xaml__ListAllUsers_1_Connection0_ResourceKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "Connections_Slack_activity_xaml__ListAllUsers_1_Connection0",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "UseConnectionService": {
+            "Value": "True",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "uipath-salesforce-slack",
+            "ValueSource": "Constant"
+          },
+          "ActivityName": {
+            "Value": "List All Users",
+            "ValueSource": "Constant"
+          },
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityId": {
+            "Value": "ListAllUsers_1",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityDisplayName": {
+            "Value": "List All Users",
+            "ValueSource": "Constant"
           }
         },
         "SubBindings": [],
@@ -952,6 +675,14 @@
           },
           "UseConnectionService": {
             "Value": "True",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityId": {
+            "Value": "GetFileListConnections_1",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityDisplayName": {
+            "Value": "Get File/Folder List",
             "ValueSource": "Constant"
           }
         },
@@ -989,6 +720,14 @@
               "DisplayLabel": {
                 "Value": "FullName",
                 "ValueSource": "Constant"
+              },
+              "CompilerActivityId": {
+                "Value": "GetFileListConnections_1",
+                "ValueSource": "Constant"
+              },
+              "CompilerActivityDisplayName": {
+                "Value": "Get File/Folder List",
+                "ValueSource": "Constant"
               }
             },
             "SubBindings": [],
@@ -1001,12 +740,12 @@
         "Type": "Connection",
         "PublishNullValues": false,
         "Key": {
-          "Value": "GetNewestEmailConnections_1_Connection1_ResourceKey",
+          "Value": "GetNewestEmailConnections_1_Connection0_ResourceKey",
           "ValueSource": "Property"
         },
         "Values": {
           "ConnectionId": {
-            "Value": "GetNewestEmailConnections_1_Connection1",
+            "Value": "GetNewestEmailConnections_1_Connection0",
             "ValueSource": "Property"
           }
         },
@@ -1022,6 +761,14 @@
           "UseConnectionService": {
             "Value": "True",
             "ValueSource": "Constant"
+          },
+          "CompilerActivityId": {
+            "Value": "GetNewestEmailConnections_1",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityDisplayName": {
+            "Value": "Get Newest Email",
+            "ValueSource": "Constant"
           }
         },
         "SubBindings": [
@@ -1029,7 +776,7 @@
             "Type": "Property",
             "PublishNullValues": false,
             "Key": {
-              "Value": "GetNewestEmailConnections_1_Connection1_Property0_Metadata_ResourceKey",
+              "Value": "GetNewestEmailConnections_1_Connection0_Property1_Metadata_ResourceKey",
               "ValueSource": "Property"
             },
             "Values": {
@@ -1058,6 +805,14 @@
               "DisplayLabel": {
                 "Value": "ParentFolders[*].Name",
                 "ValueSource": "Constant"
+              },
+              "CompilerActivityId": {
+                "Value": "GetNewestEmailConnections_1",
+                "ValueSource": "Constant"
+              },
+              "CompilerActivityDisplayName": {
+                "Value": "Get Newest Email",
+                "ValueSource": "Constant"
               }
             },
             "SubBindings": [],
@@ -1070,12 +825,12 @@
         "Type": "Connection",
         "PublishNullValues": false,
         "Key": {
-          "Value": "ListAllUsers_1_Connection2_ResourceKey",
+          "Value": "ListAllUsers_1_Connection0_ResourceKey",
           "ValueSource": "Property"
         },
         "Values": {
           "ConnectionId": {
-            "Value": "ListAllUsers_1_Connection2",
+            "Value": "ListAllUsers_1_Connection0",
             "ValueSource": "Property"
           }
         },
@@ -1094,6 +849,14 @@
           },
           "BindingsVersion": {
             "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityId": {
+            "Value": "ListAllUsers_1",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityDisplayName": {
+            "Value": "List All Users",
             "ValueSource": "Constant"
           }
         },
@@ -3022,8 +2785,8 @@
                 "Value": "LocationFriendlyName",
                 "ValueSource": "Property"
               },
-              "ParentID": {
-                "Value": "BrowserLocationBindingId",
+              "ID": {
+                "Value": "BrowserLocation",
                 "ValueSource": "Property"
               }
             },
@@ -3042,10 +2805,6 @@
               },
               "DisplayLabel": {
                 "Value": "FullName",
-                "ValueSource": "Constant"
-              },
-              "PrimaryKey": {
-                "Value": "ParentID",
                 "ValueSource": "Constant"
               }
             },
@@ -3109,8 +2868,8 @@
                 "Value": "LocationFriendlyName",
                 "ValueSource": "Property"
               },
-              "ParentID": {
-                "Value": "BrowserLocationBindingId",
+              "ID": {
+                "Value": "BrowserLocation",
                 "ValueSource": "Property"
               }
             },
@@ -3129,10 +2888,6 @@
               },
               "DisplayLabel": {
                 "Value": "FullName",
-                "ValueSource": "Constant"
-              },
-              "PrimaryKey": {
-                "Value": "ParentID",
                 "ValueSource": "Constant"
               }
             },
@@ -3196,8 +2951,8 @@
                 "Value": "LocationFriendlyName",
                 "ValueSource": "Property"
               },
-              "ParentID": {
-                "Value": "BrowserLocationBindingId",
+              "ID": {
+                "Value": "BrowserLocation",
                 "ValueSource": "Property"
               }
             },
@@ -3216,10 +2971,6 @@
               },
               "DisplayLabel": {
                 "Value": "FullName",
-                "ValueSource": "Constant"
-              },
-              "PrimaryKey": {
-                "Value": "ParentID",
                 "ValueSource": "Constant"
               }
             },
@@ -3904,77 +3655,6 @@
               },
               "ID": {
                 "Value": "ParentFileFolderId",
-                "ValueSource": "Property"
-              }
-            },
-            "Arguments": {
-              "ActivityName": {
-                "Value": "DisplayName",
-                "ValueSource": "Property"
-              },
-              "BindingsVersion": {
-                "Value": "2.1",
-                "ValueSource": "Constant"
-              },
-              "ObjectName": {
-                "Value": "ObjectName",
-                "ValueSource": "Property"
-              },
-              "DisplayLabel": {
-                "Value": "FullName",
-                "ValueSource": "Constant"
-              }
-            },
-            "SubBindings": [],
-            "DefaultValueSource": "Property"
-          }
-        ],
-        "DefaultValueSource": "Property"
-      }
-    ],
-    "UiPath.GSuite.Activities.GetFileLabelsConnections": [
-      {
-        "Type": "Connection",
-        "PublishNullValues": false,
-        "Key": {
-          "Value": "BindingsKey",
-          "ValueSource": "Property"
-        },
-        "Values": {
-          "ConnectionId": {
-            "Value": "ConnectionId",
-            "ValueSource": "Property"
-          }
-        },
-        "Arguments": {
-          "BindingsVersion": {
-            "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "Connector": {
-            "Value": "Connector",
-            "ValueSource": "Property"
-          },
-          "UseConnectionService": {
-            "Value": "UseConnectionService",
-            "ValueSource": "Property"
-          }
-        },
-        "SubBindings": [
-          {
-            "Type": "Property",
-            "PublishNullValues": false,
-            "Key": {
-              "Value": "ResourceKey",
-              "ValueSource": "Property"
-            },
-            "Values": {
-              "FullName": {
-                "Value": "FileFriendlyName",
-                "ValueSource": "Property"
-              },
-              "ID": {
-                "Value": "BrowserFileId",
                 "ValueSource": "Property"
               }
             },
@@ -5693,22 +5373,6 @@
             "DefaultValueSource": "Property"
           }
         ],
-        "DefaultValueSource": "Property"
-      }
-    ],
-    "UiPath.IntegrationService.Activities.Runtime.Activities.ConnectorActivity": [
-      {
-        "PublishNullValues": false,
-        "SubBindings": [],
-        "FromInstanceProperty": "BindingsJson",
-        "DefaultValueSource": "Property"
-      }
-    ],
-    "UiPath.IntegrationService.Activities.Runtime.Activities.ConnectorTriggerActivity": [
-      {
-        "PublishNullValues": false,
-        "SubBindings": [],
-        "FromInstanceProperty": "BindingsJson",
         "DefaultValueSource": "Property"
       }
     ],
@@ -9651,70 +9315,6 @@
             "DefaultValueSource": "Property"
           }
         ],
-        "DefaultValueSource": "Property"
-      }
-    ],
-    "UiPath.MicrosoftOffice365.Activities.Mail.TurnOffAutomaticRepliesConnections": [
-      {
-        "Type": "Connection",
-        "PublishNullValues": false,
-        "Key": {
-          "Value": "BindingsKey",
-          "ValueSource": "Property"
-        },
-        "Values": {
-          "ConnectionId": {
-            "Value": "ConnectionId",
-            "ValueSource": "Property"
-          }
-        },
-        "Arguments": {
-          "BindingsVersion": {
-            "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "Connector": {
-            "Value": "Connector",
-            "ValueSource": "Property"
-          },
-          "UseConnectionService": {
-            "Value": "UseConnectionService",
-            "ValueSource": "Property"
-          }
-        },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
-      }
-    ],
-    "UiPath.MicrosoftOffice365.Activities.Mail.TurnOnAutomaticRepliesConnections": [
-      {
-        "Type": "Connection",
-        "PublishNullValues": false,
-        "Key": {
-          "Value": "BindingsKey",
-          "ValueSource": "Property"
-        },
-        "Values": {
-          "ConnectionId": {
-            "Value": "ConnectionId",
-            "ValueSource": "Property"
-          }
-        },
-        "Arguments": {
-          "BindingsVersion": {
-            "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "Connector": {
-            "Value": "Connector",
-            "ValueSource": "Property"
-          },
-          "UseConnectionService": {
-            "Value": "UseConnectionService",
-            "ValueSource": "Property"
-          }
-        },
-        "SubBindings": [],
         "DefaultValueSource": "Property"
       }
     ],

@@ -1,0 +1,285 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="TestCase" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:Library_Win_VB_Complex;assembly=DataService.Library_Win_VB_Complex" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:SwaggerPetstore;assembly=SwaggerPetstore" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:ujic="clr-namespace:UiPath.Jira.IntegrationService.Client;assembly=UiPath.Jira.IntegrationService" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:utat="clr-namespace:UiPath.Testing.Activities.TestData;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_RepoName" Type="InArgument(x:String)" />
+    <x:Property Name="out_RepoId" Type="OutArgument(x:Int32)" />
+    <x:Property Name="out_RepoName" Type="OutArgument(x:String)" />
+    <x:Property Name="in_JiraIssue" Type="InArgument(x:String)" />
+    <x:Property Name="in_SendTo" Type="InArgument(scg:IEnumerable(x:String))" />
+    <x:Property Name="out_JiraFields" Type="OutArgument(ujic:Curated_issueFields)" />
+    <x:Property Name="out_JiraId" Type="OutArgument(x:String)" />
+    <x:Property Name="out_JiraKey" Type="OutArgument(x:String)" />
+    <x:Property Name="in_CatName" Type="InArgument(x:String)" />
+    <x:Property Name="out_Cat" Type="OutArgument(l:CatEntity)" />
+    <x:Property Name="out_CalculatorResult" Type="OutArgument(x:String)" />
+    <x:Property Name="in_FirstName" Type="InArgument(x:String)" />
+    <x:Property Name="in_LastName" Type="InArgument(x:String)" />
+    <x:Property Name="in_Username" Type="InArgument(x:String)" />
+    <x:Property Name="in_Password" Type="InArgument(x:String)" />
+    <x:Property Name="in_Email" Type="InArgument(x:String)" />
+    <x:Property Name="out_User" Type="OutArgument(s:User)" />
+  </x:Members>
+  <this:TestCase.in_RepoName>
+    <InArgument x:TypeArguments="x:String" />
+  </this:TestCase.in_RepoName>
+  <this:TestCase.in_JiraIssue>
+    <InArgument x:TypeArguments="x:String" />
+  </this:TestCase.in_JiraIssue>
+  <this:TestCase.in_SendTo>
+    <InArgument x:TypeArguments="scg:IEnumerable(x:String)" />
+  </this:TestCase.in_SendTo>
+  <this:TestCase.in_CatName>
+    <InArgument x:TypeArguments="x:String" />
+  </this:TestCase.in_CatName>
+  <this:TestCase.in_FirstName>
+    <InArgument x:TypeArguments="x:String" />
+  </this:TestCase.in_FirstName>
+  <this:TestCase.in_Username>
+    <InArgument x:TypeArguments="x:String" />
+  </this:TestCase.in_Username>
+  <this:TestCase.in_Password>
+    <InArgument x:TypeArguments="x:String" />
+  </this:TestCase.in_Password>
+  <this:TestCase.in_Email>
+    <InArgument x:TypeArguments="x:String" />
+  </this:TestCase.in_Email>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1390,2942</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>TestCase_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Jira.IntegrationService.Client</x:String>
+      <x:String>Library_Win_VB_Complex</x:String>
+      <x:String>UiPath.DataService.Definition</x:String>
+      <x:String>SwaggerPetstore</x:String>
+      <x:String>UiPath.Testing.Enums</x:String>
+      <x:String>UiPath.Testing.Activities.TestData</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Testing.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.Jira.IntegrationService</AssemblyReference>
+      <AssemblyReference>DataService.Library_Win_VB_Complex</AssemblyReference>
+      <AssemblyReference>Library_Win_VB_Complex.Core</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
+      <AssemblyReference>SwaggerPetstore</AssemblyReference>
+      <AssemblyReference>UiPath.Testing</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="TestCase" sap:VirtualizedContainerService.HintSize="602.6666666666666,2877.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="540.6666666666666,2182" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="email1" />
+        <Variable x:TypeArguments="x:String" Name="email2" />
+        <Variable x:TypeArguments="x:Decimal" Name="jiraNumber" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <utat:RandomString Case="LowerCase" DisplayName="Random String" sap:VirtualizedContainerService.HintSize="478.6666666666667,228.66666666666666" sap2010:WorkflowViewState.IdRef="RandomString_1" Length="10" Output="[in_CatName]" />
+      <utat:RandomString Case="LowerCase" DisplayName="Random String" sap:VirtualizedContainerService.HintSize="478.6666666666667,228.66666666666666" sap2010:WorkflowViewState.IdRef="RandomString_2" Length="10" Output="[in_FirstName]" />
+      <utat:RandomString Case="LowerCase" DisplayName="Random String" sap:VirtualizedContainerService.HintSize="478.6666666666667,228.66666666666666" sap2010:WorkflowViewState.IdRef="RandomString_3" Length="10" Output="[email1]" />
+      <utat:RandomString Case="LowerCase" DisplayName="Random String" sap:VirtualizedContainerService.HintSize="478.6666666666667,228.66666666666666" sap2010:WorkflowViewState.IdRef="RandomString_4" Length="6" Output="[email2]" />
+      <utat:RandomNumber Decimals="{x:Null}" DisplayName="Random Number" sap:VirtualizedContainerService.HintSize="478.6666666666667,229.33333333333334" sap2010:WorkflowViewState.IdRef="RandomNumber_1" Max="68000" Min="64000" Output="[jiraNumber]" />
+      <utat:RandomString Case="CamelCase" DisplayName="Random String" sap:VirtualizedContainerService.HintSize="478.6666666666667,228.66666666666666" sap2010:WorkflowViewState.IdRef="RandomString_5" Length="10" Output="[in_LastName]" />
+      <utat:RandomString Case="Mixed" DisplayName="Random String" sap:VirtualizedContainerService.HintSize="478.6666666666667,228.66666666666666" sap2010:WorkflowViewState.IdRef="RandomString_6" Length="20" Output="[in_Password]" />
+      <utat:RandomString Case="CamelCase" DisplayName="Random String" sap:VirtualizedContainerService.HintSize="478.6666666666667,228.66666666666666" sap2010:WorkflowViewState.IdRef="RandomString_7" Length="10" Output="[in_Username]" />
+      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.6666666666667,232" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+        <ui:MultipleAssign.AssignOperations>
+          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[in_Email]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[email1 +"@" + email2 + ".test"]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[in_JiraIssue]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">["STUD-" + (jiraNumber).ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[in_RepoName]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">Studio</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="scg:IEnumerable(x:String)">[in_SendTo]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="scg:IEnumerable(x:String)">[{"liviu.ponova@uipath.com"}]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+          </scg:List>
+        </ui:MultipleAssign.AssignOperations>
+      </ui:MultipleAssign>
+    </Sequence>
+    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="540.6666666666666,258" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,138" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Aggregator_CustomActivity.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="in_RepoName">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_RepoName" />
+          </InArgument>
+          <OutArgument x:TypeArguments="x:Int32" x:Key="out_RepoId">
+            <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="out_RepoId" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_RepoName">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="out_RepoName" />
+          </OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_JiraIssue">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_JiraIssue" />
+          </InArgument>
+          <InArgument x:TypeArguments="scg:IEnumerable(x:String)" x:Key="in_SendTo">
+            <VisualBasicValue x:TypeArguments="scg:IEnumerable(x:String)" ExpressionText="in_SendTo" />
+          </InArgument>
+          <OutArgument x:TypeArguments="ujic:Curated_issueFields" x:Key="out_JiraFields">
+            <VisualBasicReference x:TypeArguments="ujic:Curated_issueFields" ExpressionText="out_JiraFields" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_JiraId">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="out_JiraId" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_JiraKey">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="out_JiraKey" />
+          </OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_CatName">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_CatName" />
+          </InArgument>
+          <OutArgument x:TypeArguments="l:CatEntity" x:Key="out_Cat">
+            <VisualBasicReference x:TypeArguments="l:CatEntity" ExpressionText="out_Cat" />
+          </OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_CalculatorResult">
+            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="out_CalculatorResult" />
+          </OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_FirstName">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_FirstName" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_LastName">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_LastName" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_Username">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Username" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_Password">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Password" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_Email">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Email" />
+          </InArgument>
+          <OutArgument x:TypeArguments="s:User" x:Key="out_User">
+            <VisualBasicReference x:TypeArguments="s:User" ExpressionText="out_User" />
+          </OutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+    </Sequence>
+    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="540.6666666666666,349.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uta:VerifyExpression AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[out_CalculatorResult.Equals(&quot;12&quot;)]" sap:VirtualizedContainerService.HintSize="388,124" sap2010:WorkflowViewState.IdRef="VerifyExpression_1" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False" />
+      <uta:VerifyExpression AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[out_RepoId = 29263350]" sap:VirtualizedContainerService.HintSize="388,114.66666666666667" sap2010:WorkflowViewState.IdRef="VerifyExpression_2" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False" />
+    </Sequence>
+  </Sequence>
+</Activity>

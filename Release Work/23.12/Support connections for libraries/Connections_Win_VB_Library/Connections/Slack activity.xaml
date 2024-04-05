@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Slack_activity" VisualBasic.Settings="{x:Null}" sap2010:Annotation.AnnotationText="UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9" sap:VirtualizedContainerService.HintSize="1237.2,642" sap2010:WorkflowViewState.IdRef="Slack_activity_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:usia="clr-namespace:UiPath.Slack.IntegrationService.Activities;assembly=UiPath.Slack.IntegrationService.Activities" xmlns:usic="clr-namespace:UiPath.Slack.IntegrationService.Client;assembly=UiPath.Slack.IntegrationService" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Slack_activity" VisualBasic.Settings="{x:Null}" sap2010:Annotation.AnnotationText="UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9" sap:VirtualizedContainerService.HintSize="1134.4,632.8" sap2010:WorkflowViewState.IdRef="Slack_activity_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:usia="clr-namespace:UiPath.Slack.IntegrationService.Activities;assembly=UiPath.Slack.IntegrationService.Activities" xmlns:usic="clr-namespace:UiPath.Slack.IntegrationService.Client;assembly=UiPath.Slack.IntegrationService" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -81,9 +81,10 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>Connections_Win_VB_Library.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Slack_activity" sap:VirtualizedContainerService.HintSize="450,449.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Slack_activity" sap:VirtualizedContainerService.HintSize="416,439.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="usic:Users[]" Name="_out_ListAllUsers_1__Response" />
     </Sequence.Variables>
@@ -92,55 +93,31 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <usia:ListAllUsers Language="{x:Null}" ActivityInstanceId="41ad3859-8a28-449c-a8f4-61de3d7c5e7c" BindingsVersion="2.1" BusinessEntityName="users" ConfiguredBusinessEntity="users" ConnectionId="0fdf3771-f7b3-4126-962f-0cc052707c93" Connector="uipath-salesforce-slack" CrudOperation="Search" DesignConnectionEnabled="True" DisplayName="List All Users" sap:VirtualizedContainerService.HintSize="388,154.4" sap2010:WorkflowViewState.IdRef="ListAllUsers_1" UseRawCEQL="False">
+    <usia:ListAllUsers ActivityInstanceId="41ad3859-8a28-449c-a8f4-61de3d7c5e7c" BindingsVersion="2.1" BusinessEntityName="users" ConfiguredBusinessEntity="users" ConnectionId="0fdf3771-f7b3-4126-962f-0cc052707c93" Connector="uipath-salesforce-slack" CrudOperation="Search" DesignConnectionEnabled="True" DisplayName="List All Users" sap:VirtualizedContainerService.HintSize="353.6,184.8" sap2010:WorkflowViewState.IdRef="ListAllUsers_1" UseRawCEQL="False">
       <usia:ListAllUsers.BusinessEntity>
-        <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID3}" Name="users">
+        <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID2}" Name="users">
           <uibi:BusinessEntity.AllFields>
             <scg:List x:TypeArguments="uibi:EntityField" Capacity="8">
-              <uiisi:OperationEntityField x:TypeArguments="x:Int32" InArgumentValue="{x:Reference __ReferenceID1}" Value="{x:Reference __ReferenceID0}" x:Name="__ReferenceID6" ArgumentDirection="In" ArgumentType="x:Int32" DataType="Int32" Description="The maximum number of records to return." DisplayName="Max records" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="maximumRecordsReturned" ShouldFilterOnChange="False">
+              <x:Reference>__ReferenceID3</x:Reference>
+              <x:Reference>__ReferenceID4</x:Reference>
+              <uiisi:OperationEntityField x:TypeArguments="x:Int32" InArgumentValue="{x:Reference __ReferenceID5}" ArgumentDirection="In" ArgumentType="x:Int32" DataType="Int32" Description="The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the users list hasn't been reached. Providing no `limit` value will result in Slack attempting to deliver you the entire result set. If the collection is too large you may experience `limit_required` or HTTP 500 errors." DisplayName="Page size" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="pageSize" ShouldFilterOnChange="False">
                 <uiisi:OperationEntityField.ArgumentValue>
-                  <InArgument x:TypeArguments="x:Int32" x:Name="__ReferenceID1">
-                    <Literal x:TypeArguments="x:Int32" x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="Literal`1_3" Value="50" />
-                  </InArgument>
-                </uiisi:OperationEntityField.ArgumentValue>
-              </uiisi:OperationEntityField>
-              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" x:Name="__ReferenceID4" ArgumentDirection="In" ArgumentType="x:Boolean" DataType="Boolean" Description="Whether to include the native user language in the response?" DisplayName="Include locale?" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="include_locale" ShouldFilterOnChange="False">
-                <uiisi:OperationEntityField.Metadata>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsPermanentlyHidden">False</x:Boolean>
-                  </scg:Dictionary>
-                </uiisi:OperationEntityField.Metadata>
-              </uiisi:OperationEntityField>
-              <uiisi:OperationEntityField x:TypeArguments="x:Int32" InArgumentValue="{x:Reference __ReferenceID2}" ArgumentDirection="In" ArgumentType="x:Int32" DataType="Int32" Description="The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the users list hasn't been reached. Providing no `limit` value will result in Slack attempting to deliver you the entire result set. If the collection is too large you may experience `limit_required` or HTTP 500 errors." DisplayName="Page size" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="pageSize" ShouldFilterOnChange="False">
-                <uiisi:OperationEntityField.ArgumentValue>
-                  <InArgument x:TypeArguments="x:Int32" x:Name="__ReferenceID2">
+                  <InArgument x:TypeArguments="x:Int32" x:Name="__ReferenceID5">
                     <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_4" Value="1000" />
                   </InArgument>
                 </uiisi:OperationEntityField.ArgumentValue>
               </uiisi:OperationEntityField>
-              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID7" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The page token taken from the next page token of the previous page." DisplayName="Page Token" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="nextPage" ShouldFilterOnChange="False" />
+              <x:Reference>__ReferenceID6</x:Reference>
               <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Encoded team id to list channels in, required if token belongs to org-wide app" DisplayName="Team ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="team_id" ShouldFilterOnChange="False" />
               <uiisi:OperationEntityField x:TypeArguments="usic:Users" ArgumentDirection="Out" ArgumentType="usic:Users" DataType="Users" Description="The first record returned." DisplayName="First users Record" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="findFirstRecordResultField" ShouldFilterOnChange="False" />
-              <uiisi:OperationEntityField x:TypeArguments="usic:Users[]" x:Name="__ReferenceID5" ArgumentDirection="Out" ArgumentType="usic:Users[]" DataType="Users[]" Description="The users object returned." DisplayName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response" OutArgumentValue="[_out_ListAllUsers_1__Response]" ShouldFilterOnChange="False">
-                <uiisi:OperationEntityField.ArgumentValue>
-                  <OutArgument x:TypeArguments="usic:Users[]">[_out_ListAllUsers_1__Response]</OutArgument>
-                </uiisi:OperationEntityField.ArgumentValue>
-                <uiisi:OperationEntityField.Metadata>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsPermanentlyHidden">False</x:Boolean>
-                  </scg:Dictionary>
-                </uiisi:OperationEntityField.Metadata>
-                <uiisi:OperationEntityField.Value>
-                  <VisualBasicReference x:TypeArguments="usic:Users[]">[_out_ListAllUsers_1__Response]</VisualBasicReference>
-                </uiisi:OperationEntityField.Value>
-              </uiisi:OperationEntityField>
+              <x:Reference>__ReferenceID7</x:Reference>
               <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="The token for the next page of records. Use this token to iterate through the pages until a empty list is returned." DisplayName="Next Page Token" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Header" Name="nextPageTokenFromHeader" ShouldFilterOnChange="False" />
             </scg:List>
           </uibi:BusinessEntity.AllFields>
           <uibi:BusinessEntity.EntityMetadata>
             <uibi:EntityMetadata DisplayName="users" EligibleOperations="64" IsCustomEntity="False" Name="users">
               <uibi:EntityMetadata.Metadata>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID3">
+                <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID2">
                   <x:String x:Key="Object">users</x:String>
                   <x:String x:Key="Client">UiPath.Slack.IntegrationService.Client.UsersAPIClient</x:String>
                   <x:String x:Key="Operation">GetUsers</x:String>
@@ -158,9 +135,9 @@
           <uibi:BusinessEntity.SelectedFields>
             <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
               <x:Reference>__ReferenceID4</x:Reference>
-              <x:Reference>__ReferenceID5</x:Reference>
-              <x:Reference>__ReferenceID6</x:Reference>
               <x:Reference>__ReferenceID7</x:Reference>
+              <x:Reference>__ReferenceID3</x:Reference>
+              <x:Reference>__ReferenceID6</x:Reference>
             </scg:List>
           </uibi:BusinessEntity.SelectedFields>
           <uibi:BusinessEntity.TelemetryProperties>
@@ -180,16 +157,40 @@
       </usia:ListAllUsers.DesignConnectionRequest>
       <usia:ListAllUsers.SelectedFields>
         <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
-          <x:Reference>__ReferenceID4</x:Reference>
-          <x:Reference>__ReferenceID5</x:Reference>
-          <x:Reference>__ReferenceID6</x:Reference>
-          <x:Reference>__ReferenceID7</x:Reference>
+          <uiisi:OperationEntityField x:TypeArguments="x:Boolean" x:Name="__ReferenceID4" ArgumentDirection="In" ArgumentType="x:Boolean" DataType="Boolean" Description="Whether to include the native user language in the response?" DisplayName="Include locale?" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="include_locale" ShouldFilterOnChange="False">
+            <uiisi:OperationEntityField.Metadata>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsPermanentlyHidden">False</x:Boolean>
+              </scg:Dictionary>
+            </uiisi:OperationEntityField.Metadata>
+          </uiisi:OperationEntityField>
+          <uiisi:OperationEntityField x:TypeArguments="usic:Users[]" x:Name="__ReferenceID7" ArgumentDirection="Out" ArgumentType="usic:Users[]" DataType="Users[]" Description="The users object returned." DisplayName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response" OutArgumentValue="[_out_ListAllUsers_1__Response]" ShouldFilterOnChange="False">
+            <uiisi:OperationEntityField.ArgumentValue>
+              <OutArgument x:TypeArguments="usic:Users[]">[_out_ListAllUsers_1__Response]</OutArgument>
+            </uiisi:OperationEntityField.ArgumentValue>
+            <uiisi:OperationEntityField.Metadata>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsPermanentlyHidden">False</x:Boolean>
+              </scg:Dictionary>
+            </uiisi:OperationEntityField.Metadata>
+            <uiisi:OperationEntityField.Value>
+              <VisualBasicReference x:TypeArguments="usic:Users[]">[_out_ListAllUsers_1__Response]</VisualBasicReference>
+            </uiisi:OperationEntityField.Value>
+          </uiisi:OperationEntityField>
+          <uiisi:OperationEntityField x:TypeArguments="x:Int32" InArgumentValue="{x:Reference __ReferenceID0}" Value="{x:Reference __ReferenceID1}" x:Name="__ReferenceID3" ArgumentDirection="In" ArgumentType="x:Int32" DataType="Int32" Description="The maximum number of records to return." DisplayName="Max records" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="maximumRecordsReturned" ShouldFilterOnChange="False">
+            <uiisi:OperationEntityField.ArgumentValue>
+              <InArgument x:TypeArguments="x:Int32" x:Name="__ReferenceID0">
+                <Literal x:TypeArguments="x:Int32" x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="Literal`1_3" Value="50" />
+              </InArgument>
+            </uiisi:OperationEntityField.ArgumentValue>
+          </uiisi:OperationEntityField>
+          <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID6" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The token for the next page of records. Use this token to iterate through the pages until a empty list is returned." DisplayName="Next Page Token" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="nextPage" ShouldFilterOnChange="False" />
         </scg:List>
       </usia:ListAllUsers.SelectedFields>
       <usia:ListAllUsers.TelemetryProperties>
         <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
       </usia:ListAllUsers.TelemetryProperties>
     </usia:ListAllUsers>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Found &quot; + _out_ListAllUsers_1__Response.Length.ToString + &quot; channels&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Found &quot; + _out_ListAllUsers_1__Response.Length.ToString + &quot; channels&quot;]" />
   </Sequence>
 </Activity>

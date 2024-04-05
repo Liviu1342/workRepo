@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
+    "net8.0": {
       "AutoMapper/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -2715,7 +2715,7 @@
         }
       }
     },
-    "net6.0/win10-x64": {
+    "net8.0/win-x64": {
       "AutoMapper/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -3822,15 +3822,6 @@
           "runtimes/win/lib/netstandard1.5/System.Runtime.Extensions.dll": {}
         }
       },
-      "runtime.win7.System.Private.Uri/4.3.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard/_._": {}
-        },
-        "runtime": {
-          "runtimes/win/lib/netstandard1.0/System.Private.Uri.dll": {}
-        }
-      },
       "SharpZipLib/1.3.3": {
         "type": "package",
         "compile": {
@@ -4279,8 +4270,7 @@
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
-          "Microsoft.NETCore.Targets": "1.1.0",
-          "runtime.win7.System.Private.Uri": "4.3.0"
+          "Microsoft.NETCore.Targets": "1.1.0"
         },
         "compile": {
           "ref/netstandard/_._": {}
@@ -7437,23 +7427,6 @@
         "runtimes/win/lib/net/_._",
         "runtimes/win/lib/netcore50/System.Runtime.Extensions.dll",
         "runtimes/win/lib/netstandard1.5/System.Runtime.Extensions.dll"
-      ]
-    },
-    "runtime.win7.System.Private.Uri/4.3.0": {
-      "sha512": "Q+IBgaPYicSQs2tBlmXqbS25c/JLIthWrgrpMwxKSOobW/OqIMVFruUGfuaz4QABVzV8iKdCAbN7APY7Tclbnw==",
-      "type": "package",
-      "path": "runtime.win7.system.private.uri/4.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "ref/netstandard/_._",
-        "runtime.win7.system.private.uri.4.3.0.nupkg.sha512",
-        "runtime.win7.system.private.uri.nuspec",
-        "runtimes/aot/lib/netcore50/System.Private.Uri.dll",
-        "runtimes/win/lib/netcore50/System.Private.Uri.dll",
-        "runtimes/win/lib/netstandard1.0/System.Private.Uri.dll"
       ]
     },
     "SharpZipLib/1.3.3": {
@@ -11198,7 +11171,7 @@
   },
   "projectFileDependencyGroups": {
     "": [],
-    "net6.0": [
+    "net8.0": [
       "UiPath.Jira.IntegrationService.Activities >= 6.1.0 <= 6.1.0",
       "UiPath.System.Activities >= 23.12.0-beta.4810241 <= 23.12.0-beta.4810241",
       "UiPath.Testing.Activities >= 23.10.0 <= 23.10.0",
@@ -11207,22 +11180,18 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Liviu.Ponova\\.nuget\\packages": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Liviu.Ponova\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "Test_Process_Debug_Cross_CS",
       "projectName": "Test_Process_Debug_Cross_CS",
-      "projectPath": "C:\\Git\\Repos\\workRepo\\Release Work\\23.12\\Modify values during debug\\Crossplatform\\Test_Process_Debug_Cross_CS\\.local",
-      "packagesPath": "C:\\Users\\Liviu.Ponova\\.nuget\\packages",
-      "outputPath": "C:\\Git\\Repos\\workRepo\\Release Work\\23.12\\Modify values during debug\\Crossplatform\\Test_Process_Debug_Cross_CS\\.local",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ]
+      "projectPath": "C:\\Work\\Repos\\Git\\workRepo\\Release Work\\23.12\\Modify values during debug\\Crossplatform\\Test_Process_Debug_Cross_CS\\.local",
+      "packagesPath": "C:\\Users\\Liviu.Ponova\\.nuget\\packages\\",
+      "outputPath": "C:\\Work\\Repos\\Git\\workRepo\\Release Work\\23.12\\Modify values during debug\\Crossplatform\\Test_Process_Debug_Cross_CS\\.local"
     },
     "frameworks": {
-      "net6.0": {
+      "net8.0": {
         "dependencies": {
           "UiPath.Jira.IntegrationService.Activities": {
             "include": "Runtime",
@@ -11250,11 +11219,11 @@
             "version": "[1.18.0, 1.18.0]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Liviu.Ponova\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Liviu.Ponova\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
-      "win10-x64": {
+      "win-x64": {
         "#import": []
       }
     }

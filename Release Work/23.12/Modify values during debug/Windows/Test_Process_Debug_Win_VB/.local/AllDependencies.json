@@ -688,33 +688,40 @@
           }
         }
       },
-      "Microsoft.Extensions.DependencyInjection/3.1.6": {
+      "Microsoft.Extensions.DependencyInjection/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.6"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.6": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "Microsoft.Extensions.FileSystemGlobbing/5.0.0": {
@@ -936,17 +943,14 @@
           }
         }
       },
-      "Microsoft.Management.Infrastructure/2.0.0": {
+      "Microsoft.Management.Infrastructure/3.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Management.Infrastructure.Runtime.Unix": "2.0.0",
-          "Microsoft.Management.Infrastructure.Runtime.Win": "2.0.0"
+          "Microsoft.Management.Infrastructure.Runtime.Unix": "3.0.0",
+          "Microsoft.Management.Infrastructure.Runtime.Win": "3.0.0"
         },
         "compile": {
           "ref/netstandard1.6/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard1.6/_._": {}
         }
       },
       "Microsoft.Management.Infrastructure.CimCmdlets/7.2.15": {
@@ -966,7 +970,7 @@
           }
         }
       },
-      "Microsoft.Management.Infrastructure.Runtime.Unix/2.0.0": {
+      "Microsoft.Management.Infrastructure.Runtime.Unix/3.0.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/unix/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll": {
@@ -975,92 +979,36 @@
           }
         }
       },
-      "Microsoft.Management.Infrastructure.Runtime.Win/2.0.0": {
+      "Microsoft.Management.Infrastructure.Runtime.Win/3.0.0": {
         "type": "package",
         "runtimeTargets": {
-          "runtimes/win-arm/lib/netstandard1.6/Microsoft.Management.Infrastructure.Native.dll": {
+          "runtimes/win-arm64/lib/netstandard1.6/microsoft.management.infrastructure.dll": {
             "assetType": "runtime",
-            "rid": "win-arm"
+            "rid": "win-arm64"
           },
-          "runtimes/win-arm/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll": {
+          "runtimes/win-arm64/lib/netstandard1.6/microsoft.management.infrastructure.native.dll": {
             "assetType": "runtime",
-            "rid": "win-arm"
+            "rid": "win-arm64"
           },
-          "runtimes/win-arm/native/_._": {
+          "runtimes/win-x64/lib/netstandard1.6/microsoft.management.infrastructure.dll": {
+            "assetType": "runtime",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/lib/netstandard1.6/microsoft.management.infrastructure.native.dll": {
+            "assetType": "runtime",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/_._": {
             "assetType": "native",
-            "rid": "win-arm"
+            "rid": "win-x64"
           },
-          "runtimes/win-arm64/lib/netstandard1.6/Microsoft.Management.Infrastructure.Native.dll": {
+          "runtimes/win-x86/lib/netstandard1.6/microsoft.management.infrastructure.dll": {
             "assetType": "runtime",
-            "rid": "win-arm64"
+            "rid": "win-x86"
           },
-          "runtimes/win-arm64/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll": {
+          "runtimes/win-x86/lib/netstandard1.6/microsoft.management.infrastructure.native.dll": {
             "assetType": "runtime",
-            "rid": "win-arm64"
-          },
-          "runtimes/win10-x64/lib/netstandard1.6/Microsoft.Management.Infrastructure.Native.dll": {
-            "assetType": "runtime",
-            "rid": "win10-x64"
-          },
-          "runtimes/win10-x64/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll": {
-            "assetType": "runtime",
-            "rid": "win10-x64"
-          },
-          "runtimes/win10-x86/lib/netstandard1.6/Microsoft.Management.Infrastructure.Native.dll": {
-            "assetType": "runtime",
-            "rid": "win10-x86"
-          },
-          "runtimes/win10-x86/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll": {
-            "assetType": "runtime",
-            "rid": "win10-x86"
-          },
-          "runtimes/win7-x64/lib/netstandard1.6/Microsoft.Management.Infrastructure.Native.dll": {
-            "assetType": "runtime",
-            "rid": "win7-x64"
-          },
-          "runtimes/win7-x64/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll": {
-            "assetType": "runtime",
-            "rid": "win7-x64"
-          },
-          "runtimes/win7-x86/lib/netstandard1.6/Microsoft.Management.Infrastructure.Native.dll": {
-            "assetType": "runtime",
-            "rid": "win7-x86"
-          },
-          "runtimes/win7-x86/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll": {
-            "assetType": "runtime",
-            "rid": "win7-x86"
-          },
-          "runtimes/win8-x64/lib/netstandard1.6/Microsoft.Management.Infrastructure.Native.dll": {
-            "assetType": "runtime",
-            "rid": "win8-x64"
-          },
-          "runtimes/win8-x64/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll": {
-            "assetType": "runtime",
-            "rid": "win8-x64"
-          },
-          "runtimes/win8-x86/lib/netstandard1.6/Microsoft.Management.Infrastructure.Native.dll": {
-            "assetType": "runtime",
-            "rid": "win8-x86"
-          },
-          "runtimes/win8-x86/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll": {
-            "assetType": "runtime",
-            "rid": "win8-x86"
-          },
-          "runtimes/win81-x64/lib/netstandard1.6/Microsoft.Management.Infrastructure.Native.dll": {
-            "assetType": "runtime",
-            "rid": "win81-x64"
-          },
-          "runtimes/win81-x64/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll": {
-            "assetType": "runtime",
-            "rid": "win81-x64"
-          },
-          "runtimes/win81-x86/lib/netstandard1.6/Microsoft.Management.Infrastructure.Native.dll": {
-            "assetType": "runtime",
-            "rid": "win81-x86"
-          },
-          "runtimes/win81-x86/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll": {
-            "assetType": "runtime",
-            "rid": "win81-x86"
+            "rid": "win-x86"
           }
         }
       },
@@ -1954,7 +1902,7 @@
           }
         }
       },
-      "System.Activities.ViewModels/1.0.0-20231101.6": {
+      "System.Activities.ViewModels/1.0.0-20240209.4": {
         "type": "package",
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -1992,6 +1940,9 @@
           },
           "lib/net6.0-windows7.0/tr/System.Activities.ViewModels.resources.dll": {
             "locale": "tr"
+          },
+          "lib/net6.0-windows7.0/zh-CN/System.Activities.ViewModels.resources.dll": {
+            "locale": "zh-CN"
           }
         }
       },
@@ -2304,17 +2255,23 @@
           }
         }
       },
-      "System.Diagnostics.DiagnosticSource/5.0.1": {
+      "System.Diagnostics.DiagnosticSource/6.0.0": {
         "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
         "compile": {
-          "lib/net5.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Diagnostics.DiagnosticSource.dll": {
+          "lib/net6.0/System.Diagnostics.DiagnosticSource.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Diagnostics.EventLog/6.0.0": {
@@ -4096,17 +4053,20 @@
           }
         }
       },
-      "System.Threading.Tasks.Dataflow/5.0.0": {
+      "System.Threading.Tasks.Dataflow/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll": {
+          "lib/net6.0/System.Threading.Tasks.Dataflow.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Threading.Tasks.Extensions/4.5.4": {
@@ -4306,9 +4266,11 @@
           "lib/net6.0-windows7.0/UiPath.BAF.Infrastructure.dll": {}
         }
       },
-      "UiPath.CodedWorkflows/23.10.0": {
+      "UiPath.CodedWorkflows/23.10.4": {
         "type": "package",
         "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "Newtonsoft.Json": "13.0.1",
           "System.IO.Abstractions": "3.0.10",
           "System.ValueTuple": "4.5.0"
@@ -4896,11 +4858,24 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
-      "UiPath.Platform/23.10.0": {
+      "UiPath.OpenTelemetry.Contracts/2.1.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/UiPath.OpenTelemetry.Contracts.dll": {}
+        }
+      },
+      "UiPath.Platform/24.2.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
           "System.IO.Abstractions": "3.0.10",
+          "System.Threading.Tasks.Dataflow": "6.0.0",
           "System.ValueTuple": "4.5.0"
         },
         "compile": {
@@ -4949,7 +4924,7 @@
           }
         }
       },
-      "UiPath.System.Activities/23.12.0-alpha.4717855": {
+      "UiPath.System.Activities/24.3.0-alpha.5309982": {
         "type": "package",
         "dependencies": {
           "CsvHelper": "16.0.0",
@@ -4959,15 +4934,16 @@
           "Microsoft.CodeAnalysis.CSharp": "4.5.0-2.22527.10",
           "Microsoft.CodeAnalysis.Common": "4.5.0-2.22527.10",
           "Microsoft.CodeAnalysis.VisualBasic": "4.5.0-2.22527.10",
+          "Microsoft.Management.Infrastructure": "3.0.0",
           "Microsoft.Rest.ClientRuntime": "2.3.24",
           "Microsoft.VisualBasic": "10.3.0",
           "SharpZipLib": "1.3.3",
-          "System.Activities.ViewModels": "1.0.0-20231101.6",
+          "System.Activities.ViewModels": "1.0.0-20240209.4",
           "System.Management.Automation": "7.2.15",
-          "UiPath.CodedWorkflows": "23.10.0",
-          "UiPath.Platform": "23.10.0",
-          "UiPath.System.Activities.Runtime": "23.12.0-alpha.4717855",
-          "UiPath.Telemetry.Client": "1.6.69"
+          "UiPath.CodedWorkflows": "23.10.4",
+          "UiPath.Platform": "24.2.0",
+          "UiPath.System.Activities.Runtime": "24.3.0-alpha.5309982",
+          "UiPath.Telemetry.Client": "2.1.3"
         },
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -5018,10 +4994,10 @@
           }
         }
       },
-      "UiPath.System.Activities.Runtime/23.12.0-alpha.4717855": {
+      "UiPath.System.Activities.Runtime/24.3.0-alpha.5309982": {
         "type": "package",
         "dependencies": {
-          "UiPath.System.Activities.Runtime.Windows": "23.12.0-alpha.4717855"
+          "UiPath.System.Activities.Runtime.Windows": "24.3.0-alpha.5309982"
         },
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -5030,7 +5006,7 @@
           "lib/net6.0-windows7.0/UiPath.System.Activities.Package.Runtime.dll": {}
         }
       },
-      "UiPath.System.Activities.Runtime.Windows/23.12.0-alpha.4717855": {
+      "UiPath.System.Activities.Runtime.Windows/24.3.0-alpha.5309982": {
         "type": "package",
         "dependencies": {
           "CsvHelper": "16.0.0",
@@ -5040,14 +5016,15 @@
           "Microsoft.CodeAnalysis.CSharp": "4.5.0-2.22527.10",
           "Microsoft.CodeAnalysis.Common": "4.5.0-2.22527.10",
           "Microsoft.CodeAnalysis.VisualBasic": "4.5.0-2.22527.10",
+          "Microsoft.Management.Infrastructure": "3.0.0",
           "Microsoft.PowerShell.SDK": "7.2.15",
           "Microsoft.Rest.ClientRuntime": "2.3.24",
           "Microsoft.VisualBasic": "10.3.0",
           "SharpZipLib": "1.3.3",
           "System.Management.Automation": "7.2.15",
-          "UiPath.CodedWorkflows": "23.10.0",
-          "UiPath.Platform": "23.10.0",
-          "UiPath.Telemetry.Client": "1.6.69"
+          "UiPath.CodedWorkflows": "23.10.4",
+          "UiPath.Platform": "24.2.0",
+          "UiPath.Telemetry.Client": "2.1.3"
         },
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -5103,12 +5080,13 @@
           }
         }
       },
-      "UiPath.Telemetry.Client/1.6.69": {
+      "UiPath.Telemetry.Client/2.1.3": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
           "System.Threading.Tasks.Dataflow": "5.0.0",
-          "System.ValueTuple": "4.5.0"
+          "System.ValueTuple": "4.5.0",
+          "UiPath.OpenTelemetry.Contracts": "2.1.3"
         },
         "compile": {
           "lib/netstandard2.0/_._": {}
@@ -6380,33 +6358,40 @@
           }
         }
       },
-      "Microsoft.Extensions.DependencyInjection/3.1.6": {
+      "Microsoft.Extensions.DependencyInjection/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.6"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.6": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "Microsoft.Extensions.FileSystemGlobbing/5.0.0": {
@@ -6628,17 +6613,14 @@
           }
         }
       },
-      "Microsoft.Management.Infrastructure/2.0.0": {
+      "Microsoft.Management.Infrastructure/3.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Management.Infrastructure.Runtime.Unix": "2.0.0",
-          "Microsoft.Management.Infrastructure.Runtime.Win": "2.0.0"
+          "Microsoft.Management.Infrastructure.Runtime.Unix": "3.0.0",
+          "Microsoft.Management.Infrastructure.Runtime.Win": "3.0.0"
         },
         "compile": {
           "ref/netstandard1.6/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard1.6/_._": {}
         }
       },
       "Microsoft.Management.Infrastructure.CimCmdlets/7.2.15": {
@@ -6655,11 +6637,18 @@
           "runtimes/win/lib/net6.0/Microsoft.Management.Infrastructure.CimCmdlets.dll": {}
         }
       },
-      "Microsoft.Management.Infrastructure.Runtime.Unix/2.0.0": {
+      "Microsoft.Management.Infrastructure.Runtime.Unix/3.0.0": {
         "type": "package"
       },
-      "Microsoft.Management.Infrastructure.Runtime.Win/2.0.0": {
-        "type": "package"
+      "Microsoft.Management.Infrastructure.Runtime.Win/3.0.0": {
+        "type": "package",
+        "runtime": {
+          "runtimes/win-x64/lib/netstandard1.6/microsoft.management.infrastructure.dll": {},
+          "runtimes/win-x64/lib/netstandard1.6/microsoft.management.infrastructure.native.dll": {}
+        },
+        "native": {
+          "runtimes/win-x64/native/_._": {}
+        }
       },
       "Microsoft.NETCore.Platforms/1.1.1": {
         "type": "package",
@@ -7658,7 +7647,7 @@
           }
         }
       },
-      "System.Activities.ViewModels/1.0.0-20231101.6": {
+      "System.Activities.ViewModels/1.0.0-20240209.4": {
         "type": "package",
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -7696,6 +7685,9 @@
           },
           "lib/net6.0-windows7.0/tr/System.Activities.ViewModels.resources.dll": {
             "locale": "tr"
+          },
+          "lib/net6.0-windows7.0/zh-CN/System.Activities.ViewModels.resources.dll": {
+            "locale": "zh-CN"
           }
         }
       },
@@ -7961,17 +7953,23 @@
           }
         }
       },
-      "System.Diagnostics.DiagnosticSource/5.0.1": {
+      "System.Diagnostics.DiagnosticSource/6.0.0": {
         "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
         "compile": {
-          "lib/net5.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Diagnostics.DiagnosticSource.dll": {
+          "lib/net6.0/System.Diagnostics.DiagnosticSource.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Diagnostics.EventLog/6.0.0": {
@@ -9601,17 +9599,20 @@
           }
         }
       },
-      "System.Threading.Tasks.Dataflow/5.0.0": {
+      "System.Threading.Tasks.Dataflow/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll": {
+          "lib/net6.0/System.Threading.Tasks.Dataflow.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Threading.Tasks.Extensions/4.5.4": {
@@ -9806,9 +9807,11 @@
           "lib/net6.0-windows7.0/UiPath.BAF.Infrastructure.dll": {}
         }
       },
-      "UiPath.CodedWorkflows/23.10.0": {
+      "UiPath.CodedWorkflows/23.10.4": {
         "type": "package",
         "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "Newtonsoft.Json": "13.0.1",
           "System.IO.Abstractions": "3.0.10",
           "System.ValueTuple": "4.5.0"
@@ -10396,11 +10399,24 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
-      "UiPath.Platform/23.10.0": {
+      "UiPath.OpenTelemetry.Contracts/2.1.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/UiPath.OpenTelemetry.Contracts.dll": {}
+        }
+      },
+      "UiPath.Platform/24.2.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
           "System.IO.Abstractions": "3.0.10",
+          "System.Threading.Tasks.Dataflow": "6.0.0",
           "System.ValueTuple": "4.5.0"
         },
         "compile": {
@@ -10449,7 +10465,7 @@
           }
         }
       },
-      "UiPath.System.Activities/23.12.0-alpha.4717855": {
+      "UiPath.System.Activities/24.3.0-alpha.5309982": {
         "type": "package",
         "dependencies": {
           "CsvHelper": "16.0.0",
@@ -10459,15 +10475,16 @@
           "Microsoft.CodeAnalysis.CSharp": "4.5.0-2.22527.10",
           "Microsoft.CodeAnalysis.Common": "4.5.0-2.22527.10",
           "Microsoft.CodeAnalysis.VisualBasic": "4.5.0-2.22527.10",
+          "Microsoft.Management.Infrastructure": "3.0.0",
           "Microsoft.Rest.ClientRuntime": "2.3.24",
           "Microsoft.VisualBasic": "10.3.0",
           "SharpZipLib": "1.3.3",
-          "System.Activities.ViewModels": "1.0.0-20231101.6",
+          "System.Activities.ViewModels": "1.0.0-20240209.4",
           "System.Management.Automation": "7.2.15",
-          "UiPath.CodedWorkflows": "23.10.0",
-          "UiPath.Platform": "23.10.0",
-          "UiPath.System.Activities.Runtime": "23.12.0-alpha.4717855",
-          "UiPath.Telemetry.Client": "1.6.69"
+          "UiPath.CodedWorkflows": "23.10.4",
+          "UiPath.Platform": "24.2.0",
+          "UiPath.System.Activities.Runtime": "24.3.0-alpha.5309982",
+          "UiPath.Telemetry.Client": "2.1.3"
         },
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -10518,10 +10535,10 @@
           }
         }
       },
-      "UiPath.System.Activities.Runtime/23.12.0-alpha.4717855": {
+      "UiPath.System.Activities.Runtime/24.3.0-alpha.5309982": {
         "type": "package",
         "dependencies": {
-          "UiPath.System.Activities.Runtime.Windows": "23.12.0-alpha.4717855"
+          "UiPath.System.Activities.Runtime.Windows": "24.3.0-alpha.5309982"
         },
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -10530,7 +10547,7 @@
           "lib/net6.0-windows7.0/UiPath.System.Activities.Package.Runtime.dll": {}
         }
       },
-      "UiPath.System.Activities.Runtime.Windows/23.12.0-alpha.4717855": {
+      "UiPath.System.Activities.Runtime.Windows/24.3.0-alpha.5309982": {
         "type": "package",
         "dependencies": {
           "CsvHelper": "16.0.0",
@@ -10540,14 +10557,15 @@
           "Microsoft.CodeAnalysis.CSharp": "4.5.0-2.22527.10",
           "Microsoft.CodeAnalysis.Common": "4.5.0-2.22527.10",
           "Microsoft.CodeAnalysis.VisualBasic": "4.5.0-2.22527.10",
+          "Microsoft.Management.Infrastructure": "3.0.0",
           "Microsoft.PowerShell.SDK": "7.2.15",
           "Microsoft.Rest.ClientRuntime": "2.3.24",
           "Microsoft.VisualBasic": "10.3.0",
           "SharpZipLib": "1.3.3",
           "System.Management.Automation": "7.2.15",
-          "UiPath.CodedWorkflows": "23.10.0",
-          "UiPath.Platform": "23.10.0",
-          "UiPath.Telemetry.Client": "1.6.69"
+          "UiPath.CodedWorkflows": "23.10.4",
+          "UiPath.Platform": "24.2.0",
+          "UiPath.Telemetry.Client": "2.1.3"
         },
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -10603,12 +10621,13 @@
           }
         }
       },
-      "UiPath.Telemetry.Client/1.6.69": {
+      "UiPath.Telemetry.Client/2.1.3": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
           "System.Threading.Tasks.Dataflow": "5.0.0",
-          "System.ValueTuple": "4.5.0"
+          "System.ValueTuple": "4.5.0",
+          "UiPath.OpenTelemetry.Contracts": "2.1.3"
         },
         "compile": {
           "lib/netstandard2.0/_._": {}
@@ -12299,38 +12318,54 @@
         "microsoft.extensions.configuration.binder.nuspec"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection/3.1.6": {
-      "sha512": "YMJWflBmBc0PbqYvt3m4ueSCgV51JLfqHhyunoVq0rBs9V4sVQw5JsPTB17bIrlHFJs2pt2olgfavOOvuGwoRg==",
+    "Microsoft.Extensions.DependencyInjection/6.0.0": {
+      "sha512": "k6PWQMuoBDGGHOQTtyois2u4AwyVcIwL2LaSLlTZQm2CYcJ1pxbt6jfAnpWmzENA/wfrYRI/X9DTLoUkE4AsLw==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection/3.1.6",
+      "path": "microsoft.extensions.dependencyinjection/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.targets",
+        "buildTransitive/netcoreapp3.1/_._",
         "lib/net461/Microsoft.Extensions.DependencyInjection.dll",
         "lib/net461/Microsoft.Extensions.DependencyInjection.xml",
-        "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll",
-        "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.xml",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.xml",
-        "microsoft.extensions.dependencyinjection.3.1.6.nupkg.sha512",
-        "microsoft.extensions.dependencyinjection.nuspec"
+        "microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.6": {
-      "sha512": "JVlypPjlPqOEyAhET6pA7TqrK+Ya8TrYe2vvqsp62TYKS87oNuReoS7XpDFW0rrOsQo66G1yYf3K0E+lJHFHuw==",
+    "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
+      "sha512": "xlzi2IYREJH3/m6+lUrQlujzX8wDitm4QGnUu6kUXTQAWPuZY8i+ticFJbzfqaetLA6KR/rO6Ew/HuYD+bxifg==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/3.1.6",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.3.1.6.nupkg.sha512",
-        "microsoft.extensions.dependencyinjection.abstractions.nuspec"
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
     "Microsoft.Extensions.FileSystemGlobbing/5.0.0": {
@@ -12599,15 +12634,18 @@
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
-    "Microsoft.Management.Infrastructure/2.0.0": {
-      "sha512": "IaKZRNBBv3sdrmBWd+aqwHq8cVHk/3WgWFAN/dt40MRY9rbtHiDfTTmaEN0tGTmQqGCGDo/ncntA8MvFMvcsRw==",
+    "Microsoft.Management.Infrastructure/3.0.0": {
+      "sha512": "cGZi0q5IujCTVYKo9h22Pw+UwfZDV82HXO8HTxMG2HqntPlT3Ls8jY6punLp4YzCypJNpfCAu2kae3TIyuAiJw==",
       "type": "package",
-      "path": "microsoft.management.infrastructure/2.0.0",
+      "path": "microsoft.management.infrastructure/3.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/netstandard1.6/_._",
-        "microsoft.management.infrastructure.2.0.0.nupkg.sha512",
+        "_manifest/spdx_2.2/bsi.json",
+        "_manifest/spdx_2.2/manifest.cat",
+        "_manifest/spdx_2.2/manifest.spdx.json",
+        "_manifest/spdx_2.2/manifest.spdx.json.sha256",
+        "microsoft.management.infrastructure.3.0.0.nupkg.sha512",
         "microsoft.management.infrastructure.nuspec",
         "ref/net451/Microsoft.Management.Infrastructure.Native.dll",
         "ref/net451/Microsoft.Management.Infrastructure.dll",
@@ -12634,95 +12672,51 @@
         "runtimes/win/lib/net6.0/Microsoft.Management.Infrastructure.CimCmdlets.dll"
       ]
     },
-    "Microsoft.Management.Infrastructure.Runtime.Unix/2.0.0": {
-      "sha512": "p0lslMX5bdWLxO2P7ao+rjAMOB0LEwPYpzvdCQ2OEYgX2NxFpQ8ILvqPGnYlTAb53rT8gu5DyIol1HboHFYfxQ==",
+    "Microsoft.Management.Infrastructure.Runtime.Unix/3.0.0": {
+      "sha512": "QZE3uEDvZ0m7LabQvcmNOYHp7v1QPBVMpB/ild0WEE8zqUVAP5y9rRI5we37ImI1bQmW5pZ+3HNC70POPm0jBQ==",
       "type": "package",
-      "path": "microsoft.management.infrastructure.runtime.unix/2.0.0",
+      "path": "microsoft.management.infrastructure.runtime.unix/3.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "microsoft.management.infrastructure.runtime.unix.2.0.0.nupkg.sha512",
+        "_manifest/spdx_2.2/bsi.json",
+        "_manifest/spdx_2.2/manifest.cat",
+        "_manifest/spdx_2.2/manifest.spdx.json",
+        "_manifest/spdx_2.2/manifest.spdx.json.sha256",
+        "microsoft.management.infrastructure.runtime.unix.3.0.0.nupkg.sha512",
         "microsoft.management.infrastructure.runtime.unix.nuspec",
-        "runtimes/unix/lib/net451/_._",
         "runtimes/unix/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll"
       ]
     },
-    "Microsoft.Management.Infrastructure.Runtime.Win/2.0.0": {
-      "sha512": "vjBWQeDOjgernkrOdbEgn7M70SF7hof7ORdKPSlL06Uc15+oYdth5dZju9KsgUoti/cwnkZTiwtDx/lRtay0sA==",
+    "Microsoft.Management.Infrastructure.Runtime.Win/3.0.0": {
+      "sha512": "uwMyWN33+iQ8Wm/n1yoPXgFoiYNd0HzJyoqSVhaQZyJfaQrJR3udgcIHjqa1qbc3lS6kvfuUMN4TrF4U4refCQ==",
       "type": "package",
-      "path": "microsoft.management.infrastructure.runtime.win/2.0.0",
+      "path": "microsoft.management.infrastructure.runtime.win/3.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
-        "microsoft.management.infrastructure.runtime.win.2.0.0.nupkg.sha512",
+        "_manifest/spdx_2.2/bsi.json",
+        "_manifest/spdx_2.2/manifest.cat",
+        "_manifest/spdx_2.2/manifest.spdx.json",
+        "_manifest/spdx_2.2/manifest.spdx.json.sha256",
+        "microsoft.management.infrastructure.runtime.win.3.0.0.nupkg.sha512",
         "microsoft.management.infrastructure.runtime.win.nuspec",
-        "runtimes/win-arm/lib/net451/_._",
-        "runtimes/win-arm/lib/netstandard1.6/Microsoft.Management.Infrastructure.Native.dll",
-        "runtimes/win-arm/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll",
-        "runtimes/win-arm/native/Microsoft.Management.Infrastructure.Native.Unmanaged.dll",
-        "runtimes/win-arm/native/mi.dll",
-        "runtimes/win-arm/native/miutils.dll",
-        "runtimes/win-arm64/lib/net451/_._",
-        "runtimes/win-arm64/lib/netstandard1.6/Microsoft.Management.Infrastructure.Native.dll",
-        "runtimes/win-arm64/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll",
-        "runtimes/win-arm64/native/Microsoft.Management.Infrastructure.Native.Unmanaged.dll",
-        "runtimes/win-arm64/native/mi.dll",
-        "runtimes/win-arm64/native/miutils.dll",
-        "runtimes/win10-x64/lib/net451/Microsoft.Management.Infrastructure.Native.dll",
-        "runtimes/win10-x64/lib/net451/Microsoft.Management.Infrastructure.dll",
-        "runtimes/win10-x64/lib/netstandard1.6/Microsoft.Management.Infrastructure.Native.dll",
-        "runtimes/win10-x64/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll",
-        "runtimes/win10-x64/native/Microsoft.Management.Infrastructure.Native.Unmanaged.dll",
-        "runtimes/win10-x64/native/mi.dll",
-        "runtimes/win10-x64/native/miutils.dll",
-        "runtimes/win10-x86/lib/net451/Microsoft.Management.Infrastructure.Native.dll",
-        "runtimes/win10-x86/lib/net451/Microsoft.Management.Infrastructure.dll",
-        "runtimes/win10-x86/lib/netstandard1.6/Microsoft.Management.Infrastructure.Native.dll",
-        "runtimes/win10-x86/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll",
-        "runtimes/win10-x86/native/Microsoft.Management.Infrastructure.Native.Unmanaged.dll",
-        "runtimes/win10-x86/native/mi.dll",
-        "runtimes/win10-x86/native/miutils.dll",
-        "runtimes/win7-x64/lib/net451/Microsoft.Management.Infrastructure.Native.dll",
-        "runtimes/win7-x64/lib/net451/Microsoft.Management.Infrastructure.dll",
-        "runtimes/win7-x64/lib/netstandard1.6/Microsoft.Management.Infrastructure.Native.dll",
-        "runtimes/win7-x64/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll",
-        "runtimes/win7-x64/native/Microsoft.Management.Infrastructure.Native.Unmanaged.dll",
-        "runtimes/win7-x64/native/mi.dll",
-        "runtimes/win7-x64/native/miutils.dll",
-        "runtimes/win7-x86/lib/net451/Microsoft.Management.Infrastructure.Native.dll",
-        "runtimes/win7-x86/lib/net451/Microsoft.Management.Infrastructure.dll",
-        "runtimes/win7-x86/lib/netstandard1.6/Microsoft.Management.Infrastructure.Native.dll",
-        "runtimes/win7-x86/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll",
-        "runtimes/win7-x86/native/Microsoft.Management.Infrastructure.Native.Unmanaged.dll",
-        "runtimes/win7-x86/native/mi.dll",
-        "runtimes/win7-x86/native/miutils.dll",
-        "runtimes/win8-x64/lib/net451/Microsoft.Management.Infrastructure.Native.dll",
-        "runtimes/win8-x64/lib/net451/Microsoft.Management.Infrastructure.dll",
-        "runtimes/win8-x64/lib/netstandard1.6/Microsoft.Management.Infrastructure.Native.dll",
-        "runtimes/win8-x64/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll",
-        "runtimes/win8-x64/native/mi.dll",
-        "runtimes/win8-x64/native/miutils.dll",
-        "runtimes/win8-x86/lib/net451/Microsoft.Management.Infrastructure.Native.dll",
-        "runtimes/win8-x86/lib/net451/Microsoft.Management.Infrastructure.dll",
-        "runtimes/win8-x86/lib/netstandard1.6/Microsoft.Management.Infrastructure.Native.dll",
-        "runtimes/win8-x86/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll",
-        "runtimes/win8-x86/native/mi.dll",
-        "runtimes/win8-x86/native/miutils.dll",
-        "runtimes/win81-x64/lib/net451/Microsoft.Management.Infrastructure.Native.dll",
-        "runtimes/win81-x64/lib/net451/Microsoft.Management.Infrastructure.dll",
-        "runtimes/win81-x64/lib/netstandard1.6/Microsoft.Management.Infrastructure.Native.dll",
-        "runtimes/win81-x64/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll",
-        "runtimes/win81-x64/native/Microsoft.Management.Infrastructure.Native.Unmanaged.dll",
-        "runtimes/win81-x64/native/mi.dll",
-        "runtimes/win81-x64/native/miutils.dll",
-        "runtimes/win81-x86/lib/net451/Microsoft.Management.Infrastructure.Native.dll",
-        "runtimes/win81-x86/lib/net451/Microsoft.Management.Infrastructure.dll",
-        "runtimes/win81-x86/lib/netstandard1.6/Microsoft.Management.Infrastructure.Native.dll",
-        "runtimes/win81-x86/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll",
-        "runtimes/win81-x86/native/Microsoft.Management.Infrastructure.Native.Unmanaged.dll",
-        "runtimes/win81-x86/native/mi.dll",
-        "runtimes/win81-x86/native/miutils.dll"
+        "runtimes/win-arm64/lib/net451/microsoft.management.infrastructure.dll",
+        "runtimes/win-arm64/lib/net451/microsoft.management.infrastructure.native.dll",
+        "runtimes/win-arm64/lib/netstandard1.6/microsoft.management.infrastructure.dll",
+        "runtimes/win-arm64/lib/netstandard1.6/microsoft.management.infrastructure.native.dll",
+        "runtimes/win-arm64/native/microsoft.management.infrastructure.native.unmanaged.dll",
+        "runtimes/win-x64/lib/net451/microsoft.management.infrastructure.dll",
+        "runtimes/win-x64/lib/net451/microsoft.management.infrastructure.native.dll",
+        "runtimes/win-x64/lib/netstandard1.6/microsoft.management.infrastructure.dll",
+        "runtimes/win-x64/lib/netstandard1.6/microsoft.management.infrastructure.native.dll",
+        "runtimes/win-x64/native/microsoft.management.infrastructure.native.unmanaged.dll",
+        "runtimes/win-x86/lib/net451/microsoft.management.infrastructure.dll",
+        "runtimes/win-x86/lib/net451/microsoft.management.infrastructure.native.dll",
+        "runtimes/win-x86/lib/netstandard1.6/microsoft.management.infrastructure.dll",
+        "runtimes/win-x86/lib/netstandard1.6/microsoft.management.infrastructure.native.dll",
+        "runtimes/win-x86/native/microsoft.management.infrastructure.native.unmanaged.dll"
       ]
     },
     "Microsoft.NETCore.Platforms/1.1.1": {
@@ -14646,10 +14640,10 @@
         "sharpziplib.nuspec"
       ]
     },
-    "System.Activities.ViewModels/1.0.0-20231101.6": {
-      "sha512": "gJh781diLI1yQtgB0xveDAcxDJZl/Kce9sCh9t0kTu2IIVMw9OF3XRI+KHlkGuv7cQkv3BNArOJXCCtM1QDJtw==",
+    "System.Activities.ViewModels/1.0.0-20240209.4": {
+      "sha512": "LN+/Y23zW0Ki4gOxQRFgoFNqi5Mppk2Dt1Mpr/EpNhtEzfee+Rxc0eWko4OI5UXcGD62r3H6vAcq2yWD5gpEtQ==",
       "type": "package",
-      "path": "system.activities.viewmodels/1.0.0-20231101.6",
+      "path": "system.activities.viewmodels/1.0.0-20240209.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -14664,6 +14658,7 @@
         "lib/net6.0-windows7.0/pt/System.Activities.ViewModels.resources.dll",
         "lib/net6.0-windows7.0/ru/System.Activities.ViewModels.resources.dll",
         "lib/net6.0-windows7.0/tr/System.Activities.ViewModels.resources.dll",
+        "lib/net6.0-windows7.0/zh-CN/System.Activities.ViewModels.resources.dll",
         "lib/net6.0/System.Activities.ViewModels.dll",
         "lib/net6.0/de/System.Activities.ViewModels.resources.dll",
         "lib/net6.0/es-MX/System.Activities.ViewModels.resources.dll",
@@ -14675,7 +14670,8 @@
         "lib/net6.0/pt/System.Activities.ViewModels.resources.dll",
         "lib/net6.0/ru/System.Activities.ViewModels.resources.dll",
         "lib/net6.0/tr/System.Activities.ViewModels.resources.dll",
-        "system.activities.viewmodels.1.0.0-20231101.6.nupkg.sha512",
+        "lib/net6.0/zh-CN/System.Activities.ViewModels.resources.dll",
+        "system.activities.viewmodels.1.0.0-20240209.4.nupkg.sha512",
         "system.activities.viewmodels.nuspec"
       ]
     },
@@ -15400,32 +15396,29 @@
         "system.diagnostics.debug.nuspec"
       ]
     },
-    "System.Diagnostics.DiagnosticSource/5.0.1": {
-      "sha512": "uXQEYqav2V3zP6OwkOKtLv+qIi6z3m1hsGyKwXX7ZA7htT4shoVccGxnJ9kVRFPNAsi1ArZTq2oh7WOto6GbkQ==",
+    "System.Diagnostics.DiagnosticSource/6.0.0": {
+      "sha512": "frQDfv0rl209cKm1lnwTgFPzNigy2EKk1BS3uAvHvlBVKe5cymGyHO+Sj+NLv5VF/AhHsqPIUUwya5oV4CHMUw==",
       "type": "package",
-      "path": "system.diagnostics.diagnosticsource/5.0.1",
+      "path": "system.diagnostics.diagnosticsource/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net45/System.Diagnostics.DiagnosticSource.dll",
-        "lib/net45/System.Diagnostics.DiagnosticSource.xml",
-        "lib/net46/System.Diagnostics.DiagnosticSource.dll",
-        "lib/net46/System.Diagnostics.DiagnosticSource.xml",
+        "buildTransitive/netcoreapp2.0/System.Diagnostics.DiagnosticSource.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net461/System.Diagnostics.DiagnosticSource.xml",
         "lib/net5.0/System.Diagnostics.DiagnosticSource.dll",
         "lib/net5.0/System.Diagnostics.DiagnosticSource.xml",
-        "lib/netstandard1.1/System.Diagnostics.DiagnosticSource.dll",
-        "lib/netstandard1.1/System.Diagnostics.DiagnosticSource.xml",
-        "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll",
-        "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.xml",
-        "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.dll",
-        "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.xml",
-        "system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
+        "lib/net6.0/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net6.0/System.Diagnostics.DiagnosticSource.xml",
+        "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.dll",
+        "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.xml",
+        "system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
         "system.diagnostics.diagnosticsource.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Diagnostics.EventLog/6.0.0": {
@@ -19446,30 +19439,29 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "System.Threading.Tasks.Dataflow/5.0.0": {
-      "sha512": "NBp0zSAMZp4muDje6XmbDfmkqw9+qsDCHp+YMEtnVgHEjQZ3Q7MzFTTp3eHqpExn4BwMrS7JkUVOTcVchig4Sw==",
+    "System.Threading.Tasks.Dataflow/6.0.0": {
+      "sha512": "+tyDCU3/B1lDdOOAJywHQoFwyXIUghIaP2BxG79uvhfTnO+D9qIgjVlL/JV2NTliYbMHpd6eKDmHp2VHpij7MA==",
       "type": "package",
-      "path": "system.threading.tasks.dataflow/5.0.0",
+      "path": "system.threading.tasks.dataflow/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Threading.Tasks.Dataflow.targets",
+        "buildTransitive/netcoreapp3.1/_._",
         "lib/net461/System.Threading.Tasks.Dataflow.dll",
         "lib/net461/System.Threading.Tasks.Dataflow.xml",
-        "lib/netstandard1.0/System.Threading.Tasks.Dataflow.dll",
-        "lib/netstandard1.0/System.Threading.Tasks.Dataflow.xml",
-        "lib/netstandard1.1/System.Threading.Tasks.Dataflow.dll",
-        "lib/netstandard1.1/System.Threading.Tasks.Dataflow.xml",
+        "lib/net6.0/System.Threading.Tasks.Dataflow.dll",
+        "lib/net6.0/System.Threading.Tasks.Dataflow.xml",
         "lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll",
         "lib/netstandard2.0/System.Threading.Tasks.Dataflow.xml",
-        "lib/portable-net45+win8+wpa81/System.Threading.Tasks.Dataflow.dll",
-        "lib/portable-net45+win8+wpa81/System.Threading.Tasks.Dataflow.xml",
-        "system.threading.tasks.dataflow.5.0.0.nupkg.sha512",
+        "lib/netstandard2.1/System.Threading.Tasks.Dataflow.dll",
+        "lib/netstandard2.1/System.Threading.Tasks.Dataflow.xml",
+        "system.threading.tasks.dataflow.6.0.0.nupkg.sha512",
         "system.threading.tasks.dataflow.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Threading.Tasks.Extensions/4.5.4": {
@@ -19911,10 +19903,10 @@
         "uipath.baf.infrastructure.nuspec"
       ]
     },
-    "UiPath.CodedWorkflows/23.10.0": {
-      "sha512": "nZcxFzlI67IrkyrdWD5T0dX8JLTmi9euy0mQ0hrJOgIACC2UH7f78Us3I3EOlErU43cdo6ASJu9kPGOeu+Wuag==",
+    "UiPath.CodedWorkflows/23.10.4": {
+      "sha512": "GjH6NirTcBVt+EZq3l/BUCZhSwsr/SpfEB/0iaGruUyRfckhY2CF9kwsqr5PkjuPrwpebjzSfp4i6VFPutmLJw==",
       "type": "package",
-      "path": "uipath.codedworkflows/23.10.0",
+      "path": "uipath.codedworkflows/23.10.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -19946,7 +19938,7 @@
         "lib/net6.0/tr/UiPath.CodedWorkflows.resources.dll",
         "lib/net6.0/zh-CN/UiPath.CodedWorkflows.resources.dll",
         "lib/net6.0/zh-TW/UiPath.CodedWorkflows.resources.dll",
-        "uipath.codedworkflows.23.10.0.nupkg.sha512",
+        "uipath.codedworkflows.23.10.4.nupkg.sha512",
         "uipath.codedworkflows.nuspec"
       ]
     },
@@ -20776,10 +20768,24 @@
         "uipath.ocr.contracts.nuspec"
       ]
     },
-    "UiPath.Platform/23.10.0": {
-      "sha512": "9tweZGj1eN51+N8e7rEz4S5FHqZ7P2HuFP9YzqGcj7sRBD8JK9z0g56QqsBeorWgeVVz/vNpiLRWZpzejsX8nA==",
+    "UiPath.OpenTelemetry.Contracts/2.1.3": {
+      "sha512": "jK3dSVWZbdVBHBjh/S8yJ3v0OwMXxnceG9WaSMyhVM7MrCkc7LbatnAZSsJmxnJrsmAiZsdYHPl7DTMVinmPeg==",
       "type": "package",
-      "path": "uipath.platform/23.10.0",
+      "path": "uipath.opentelemetry.contracts/2.1.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "UI_icon.png",
+        "lib/net461/UiPath.OpenTelemetry.Contracts.dll",
+        "lib/netstandard2.0/UiPath.OpenTelemetry.Contracts.dll",
+        "uipath.opentelemetry.contracts.2.1.3.nupkg.sha512",
+        "uipath.opentelemetry.contracts.nuspec"
+      ]
+    },
+    "UiPath.Platform/24.2.0": {
+      "sha512": "8erwsq5PdnvBzpe5QPbepujfCsz43pR7ksrKqtFTx3D82FDV00UVDZl1xZCQJhHxqDFXVKP4lo9eoqBsPvtLRw==",
+      "type": "package",
+      "path": "uipath.platform/24.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -20822,14 +20828,14 @@
         "lib/net6.0/ru/UiPath.Platform.resources.dll",
         "lib/net6.0/tr/UiPath.Platform.resources.dll",
         "lib/net6.0/zh-CN/UiPath.Platform.resources.dll",
-        "uipath.platform.23.10.0.nupkg.sha512",
+        "uipath.platform.24.2.0.nupkg.sha512",
         "uipath.platform.nuspec"
       ]
     },
-    "UiPath.System.Activities/23.12.0-alpha.4717855": {
-      "sha512": "qSu2qjY0vyg4NZzYUqW9P2rqx+T/8hKQWIDMl4HoNSMvcYJHeCUvl7TqLqBf651cGpVAVVb+f6JBUJRGnD4+/w==",
+    "UiPath.System.Activities/24.3.0-alpha.5309982": {
+      "sha512": "4I/La/lhlqrmBZy/oG+wqhyvrTcxXHD7Is6zJUUVzV+CDrNaUH3LbVBwFhVZ8yQNHa4KoomQVHqzjK9DcdB0pQ==",
       "type": "package",
-      "path": "uipath.system.activities/23.12.0-alpha.4717855",
+      "path": "uipath.system.activities/24.3.0-alpha.5309982",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -20864,28 +20870,28 @@
         "lib/net6.0-windows7.0/zh-TW/UiPath.System.Activities.Design.resources.dll",
         "lib/net6.0-windows7.0/zu/UiPath.System.Activities.Design.resources.dll",
         "lib/net6.0/UiPath.System.Activities.ViewModels.dll",
-        "uipath.system.activities.23.12.0-alpha.4717855.nupkg.sha512",
+        "uipath.system.activities.24.3.0-alpha.5309982.nupkg.sha512",
         "uipath.system.activities.nuspec"
       ]
     },
-    "UiPath.System.Activities.Runtime/23.12.0-alpha.4717855": {
-      "sha512": "ruZVe1davcTvytn9qQR45OTLaN2nRYbP8GnepcmdfqbYQxTzkh/XuXtORw+/MM7u+M9nKXWadsHvt+G+u/Fkqg==",
+    "UiPath.System.Activities.Runtime/24.3.0-alpha.5309982": {
+      "sha512": "D6Yn6wkzwPkP7padj+V8PTDnwiH6xkxvj7i94bauDupV7HvUPYaoTNZTo8Sn5HTQUXhNFSA42Nds9fnsXMEq3w==",
       "type": "package",
-      "path": "uipath.system.activities.runtime/23.12.0-alpha.4717855",
+      "path": "uipath.system.activities.runtime/24.3.0-alpha.5309982",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net461/UiPath.System.Activities.Package.Runtime.dll",
         "lib/net6.0-windows7.0/UiPath.System.Activities.Package.Runtime.dll",
         "lib/net6.0/UiPath.System.Activities.Package.Runtime.dll",
-        "uipath.system.activities.runtime.23.12.0-alpha.4717855.nupkg.sha512",
+        "uipath.system.activities.runtime.24.3.0-alpha.5309982.nupkg.sha512",
         "uipath.system.activities.runtime.nuspec"
       ]
     },
-    "UiPath.System.Activities.Runtime.Windows/23.12.0-alpha.4717855": {
-      "sha512": "EwrYReftY1Q6IiSmrJjwY5yfr3wP3a5VIoyl+goF8HtwfgJfTgfVbVW6/u/RevtrnwPFtrkKacvESnnyS5evEw==",
+    "UiPath.System.Activities.Runtime.Windows/24.3.0-alpha.5309982": {
+      "sha512": "jRW1T/jE71og2/EdkBfyAXoxublNFUX7MZoq9k7LnarIAHgM3V8exyHw7La+Ep2HHN7UDpGanOMpQfVT+mfa3A==",
       "type": "package",
-      "path": "uipath.system.activities.runtime.windows/23.12.0-alpha.4717855",
+      "path": "uipath.system.activities.runtime.windows/24.3.0-alpha.5309982",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -20921,21 +20927,21 @@
         "lib/net6.0-windows7.0/zh-CN/UiPath.System.Activities.resources.dll",
         "lib/net6.0-windows7.0/zh-TW/UiPath.System.Activities.resources.dll",
         "lib/net6.0-windows7.0/zu/UiPath.System.Activities.resources.dll",
-        "uipath.system.activities.runtime.windows.23.12.0-alpha.4717855.nupkg.sha512",
+        "uipath.system.activities.runtime.windows.24.3.0-alpha.5309982.nupkg.sha512",
         "uipath.system.activities.runtime.windows.nuspec"
       ]
     },
-    "UiPath.Telemetry.Client/1.6.69": {
-      "sha512": "WVZS1Uo7WVXOacqE1RXcrbvYhpYOzw+6QYfyEvGpTHm3hQe658DSCMK6Pk/Fxfp6nLq26okg1kd0/ycBfhf3sw==",
+    "UiPath.Telemetry.Client/2.1.3": {
+      "sha512": "J8P+1wLcXXwuBWtFEdzFxnSWDVTH/6plaGloTO0VaOAWDa3C4uMddB8OEpFH4ixM86JlYdg0hRw4m3aHzVZeIA==",
       "type": "package",
-      "path": "uipath.telemetry.client/1.6.69",
+      "path": "uipath.telemetry.client/2.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "UI_icon.png",
         "lib/net461/TelemetryClient.dll",
         "lib/netstandard2.0/TelemetryClient.dll",
-        "uipath.telemetry.client.1.6.69.nupkg.sha512",
+        "uipath.telemetry.client.2.1.3.nupkg.sha512",
         "uipath.telemetry.client.nuspec"
       ]
     },
@@ -21762,25 +21768,21 @@
       "UiPath.Excel.Activities >= 2.22.3 <= 2.22.3",
       "UiPath.Jira.IntegrationService.Activities >= 6.1.0 <= 6.1.0",
       "UiPath.Mail.Activities >= 1.21.1 <= 1.21.1",
-      "UiPath.System.Activities >= 23.12.0-alpha.4717855 <= 23.12.0-alpha.4717855",
+      "UiPath.System.Activities >= 24.3.0-alpha.5309982 <= 24.3.0-alpha.5309982",
       "UiPath.Testing.Activities >= 23.10.0 <= 23.10.0",
       "UiPath.UIAutomation.Activities >= 23.10.8 <= 23.10.8"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Liviu.Ponova\\.nuget\\packages": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Liviu.Ponova\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "Test_Process_Debug_Win_VB",
       "projectName": "Test_Process_Debug_Win_VB",
-      "projectPath": "C:\\Git\\Repos\\workRepo\\Release Work\\23.12\\Modify values during debug\\Windows\\Test_Process_Debug_Win_VB\\.local",
-      "packagesPath": "C:\\Users\\Liviu.Ponova\\.nuget\\packages",
-      "outputPath": "C:\\Git\\Repos\\workRepo\\Release Work\\23.12\\Modify values during debug\\Windows\\Test_Process_Debug_Win_VB\\.local",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ]
+      "projectPath": "C:\\Work\\Repos\\Git\\workRepo\\Release Work\\23.12\\Modify values during debug\\Windows\\Test_Process_Debug_Win_VB\\.local",
+      "packagesPath": "C:\\Users\\Liviu.Ponova\\.nuget\\packages\\",
+      "outputPath": "C:\\Work\\Repos\\Git\\workRepo\\Release Work\\23.12\\Modify values during debug\\Windows\\Test_Process_Debug_Win_VB\\.local"
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -21803,7 +21805,7 @@
           "UiPath.System.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[23.12.0-alpha.4717855, 23.12.0-alpha.4717855]"
+            "version": "[24.3.0-alpha.5309982, 24.3.0-alpha.5309982]"
           },
           "UiPath.Testing.Activities": {
             "include": "Runtime",

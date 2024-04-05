@@ -1,0 +1,161 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="OpenAI_CustomActivity" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="877.6,632.8" sap2010:WorkflowViewState.IdRef="OpenAI_CustomActivity_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C34CDF7CEAE_v2_sub_chat_sub_completion_Create.Bundle;assembly=C34CDF7CEAE_v2_sub_c.40HI7r3INR1WUrDI3mpxoQ4" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>C34CDF7CEAE_v2_sub_c.40HI7r3INR1WUrDI3mpxoQ4</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="OpenAI_CustomActivity" sap:VirtualizedContainerService.HintSize="416,522.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="topGeneratedText">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">ConnectorActivity_3</x:String>
+            <x:String x:Key="SourcePropertyName">out_text</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <isactr:ConnectorActivity Configuration="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" ConnectionId="1b0f23e0-3ce1-41c4-ab7f-9434cdf7ceae" DisplayName="Generate Chat Completion" sap:VirtualizedContainerService.HintSize="353.6,268" sap2010:WorkflowViewState.IdRef="ConnectorActivity_3" UiPathActivityTypeId="296e94c2-5189-3dec-8228-e1d757da7de8">
+      <isactr:ConnectorActivity.FieldObjects>
+        <isactr:FieldObject Name="model" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String">gpt-4-0613</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="prompt" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String">Tell me a joke</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="image_type" Type="FieldArgument" />
+        <isactr:FieldObject Name="_file" Type="FieldArgument" />
+        <isactr:FieldObject Name="image_url" Type="FieldArgument" />
+        <isactr:FieldObject Name="instruction" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String">You should reply in the style of Ricky Gervais</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="max_tokens" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Int32">1920</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="n" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Int32">1</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="temperature" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Double">1</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="top_p" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Double">1</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="_stop" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String" />
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="presence_penalty" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Double">0</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="frequency_penalty" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Double">0</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="user" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String" />
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="out_text" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <OutArgument x:TypeArguments="x:String">[topGeneratedText]</OutArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="Jit_v2_sub_chat_sub_completion" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <OutArgument x:TypeArguments="uiascb:v2_sub_chat_sub_completion_Create" />
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+      </isactr:ConnectorActivity.FieldObjects>
+    </isactr:ConnectorActivity>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[topGeneratedText]" />
+  </Sequence>
+</Activity>

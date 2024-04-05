@@ -23,14 +23,14 @@ namespace ArgumentProperties_Process_Win_VB.EntryPoints
     public class EP5_CodedWorkflow : CodedWorkflow
     {
         [Workflow]
+        public void Execute(string arg1)
+        {
+            Log(arg1);
+        }
+        
         public void Execute()
         {
-            // To start using services, use IntelliSense (CTRL + Space) to discover the available services:
-            // e.g. system.GetAsset(...)
-
-            // For accessing UI Elements from Object Repository, you can use the Descriptors class e.g:
-            // var screen = uiAutomation.Open(Descriptors.MyApp.FirstScreen);
-            // screen.Click(Descriptors.MyApp.FirstScreen.SettingsButton);
+            Log("this method does not use an argument");
         }
     }
 }

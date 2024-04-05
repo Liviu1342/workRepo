@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.Data;
+using System.Threading.Tasks;
 using UiPath.CodedWorkflows;
+using UiPath.Activities.Contracts;
+using System.Data;
 using UiPath.Core;
 using UiPath.Core.Activities.Storage;
 using UiPath.Orchestrator.Client.Models;
@@ -12,8 +14,6 @@ using UiPath.Testing.Enums;
 using UiPath.UIAutomationNext.API.Contracts;
 using UiPath.UIAutomationNext.API.Models;
 using UiPath.UIAutomationNext.Enums;
-using System.Threading.Tasks;
-using UiPath.Activities.Contracts;
 
 namespace ArgumentProperties_Process_Cross_CS
 {
@@ -26,19 +26,19 @@ namespace ArgumentProperties_Process_Cross_CS
         }
 
         /// <summary>
-        /// Invokes the EP5_CodedWorkflow.cs
-        /// </summary>
-        public void EP5_CodedWorkflow()
-        {
-            var result = _runWorkflowHandler(@"EP5_CodedWorkflow.cs", new Dictionary<string, object>{}, default, default, default);
-        }
-
-        /// <summary>
         /// Invokes the NEP6_CodedWorkflow.cs
         /// </summary>
         public void NEP6_CodedWorkflow()
         {
             var result = _runWorkflowHandler(@"NEP6_CodedWorkflow.cs", new Dictionary<string, object>{}, default, default, default);
+        }
+
+        /// <summary>
+        /// Invokes the EP5_CodedWorkflow.cs
+        /// </summary>
+        public void EP5_CodedWorkflow()
+        {
+            var result = _runWorkflowHandler(@"EP5_CodedWorkflow.cs", new Dictionary<string, object>{}, default, default, default);
         }
 
         /// <summary>
@@ -93,11 +93,11 @@ namespace ArgumentProperties_Process_Cross_CS
         }
 
         /// <summary>
-        /// Invokes the NEP1_Sequence.xaml
+        /// Invokes the NEP3_Flowchart.xaml
         /// </summary>
-        public void NEP1_Sequence()
+        public void NEP3_Flowchart()
         {
-            var result = _runWorkflowHandler(@"NEP1_Sequence.xaml", new Dictionary<string, object>{}, default, default, default);
+            var result = _runWorkflowHandler(@"NEP3_Flowchart.xaml", new Dictionary<string, object>{}, default, default, default);
         }
 
         /// <summary>
@@ -109,19 +109,19 @@ namespace ArgumentProperties_Process_Cross_CS
         }
 
         /// <summary>
-        /// Invokes the NEP3_Flowchart.xaml
-        /// </summary>
-        public void NEP3_Flowchart()
-        {
-            var result = _runWorkflowHandler(@"NEP3_Flowchart.xaml", new Dictionary<string, object>{}, default, default, default);
-        }
-
-        /// <summary>
         /// Invokes the EP4_Workflow.xaml
         /// </summary>
         public void EP4_Workflow()
         {
             var result = _runWorkflowHandler(@"EP4_Workflow.xaml", new Dictionary<string, object>{}, default, default, default);
+        }
+
+        /// <summary>
+        /// Invokes the NEP1_Sequence.xaml
+        /// </summary>
+        public void NEP1_Sequence()
+        {
+            var result = _runWorkflowHandler(@"NEP1_Sequence.xaml", new Dictionary<string, object>{}, default, default, default);
         }
     }
 }

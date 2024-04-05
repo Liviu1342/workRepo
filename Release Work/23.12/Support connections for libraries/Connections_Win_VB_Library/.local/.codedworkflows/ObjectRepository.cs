@@ -6,11 +6,13 @@ namespace Connections_Win_VB_Library.ObjectRepository
     {
         public static class Calculator
         {
+            static string _reference = "kRVnGAec4kCWArh1a1i6Og/UMFJZ9kdEkqPDWa1nGwgTw";
             public static _Implementation._Calculator.__Main_screen Main_screen { get; private set; } = new _Implementation._Calculator.__Main_screen();
         }
 
         public static class UiPath_Studio
         {
+            static string _reference = "kRVnGAec4kCWArh1a1i6Og/9jThLJIMP0y24COjJiqIpw";
             public static _Implementation._UiPath_Studio.__Backstage Backstage { get; private set; } = new _Implementation._UiPath_Studio.__Backstage();
             public static _Implementation._UiPath_Studio.__Designer Designer { get; private set; } = new _Implementation._UiPath_Studio.__Designer();
         }
