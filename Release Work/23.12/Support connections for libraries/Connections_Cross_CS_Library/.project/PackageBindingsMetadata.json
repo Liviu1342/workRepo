@@ -656,6 +656,38 @@
         "DefaultValueSource": "Property"
       }
     ],
+    "UiPath.GSuite.Activities.ApplyEmailLabelsConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
     "UiPath.GSuite.Activities.ApplyFileLabelsConnections": [
       {
         "Type": "Connection",
@@ -896,6 +928,38 @@
         "DefaultValueSource": "Property"
       }
     ],
+    "UiPath.GSuite.Activities.CompleteTaskConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
     "UiPath.GSuite.Activities.CopyFileConnections": [
       {
         "Type": "Connection",
@@ -952,7 +1016,7 @@
                 "ValueSource": "Constant"
               },
               "ObjectName": {
-                "Value": "ObjectName",
+                "Value": "SecondaryObjectName",
                 "ValueSource": "Property"
               },
               "DisplayLabel": {
@@ -977,6 +1041,77 @@
               },
               "ID": {
                 "Value": "BrowserFileId",
+                "ValueSource": "Property"
+              }
+            },
+            "Arguments": {
+              "ActivityName": {
+                "Value": "DisplayName",
+                "ValueSource": "Property"
+              },
+              "BindingsVersion": {
+                "Value": "2.1",
+                "ValueSource": "Constant"
+              },
+              "ObjectName": {
+                "Value": "ObjectName",
+                "ValueSource": "Property"
+              },
+              "DisplayLabel": {
+                "Value": "FullName",
+                "ValueSource": "Constant"
+              }
+            },
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
+          }
+        ],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.GSuite.Activities.CreateDocumentConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [
+          {
+            "Type": "Property",
+            "PublishNullValues": false,
+            "Key": {
+              "Value": "ResourceKey",
+              "ValueSource": "Property"
+            },
+            "Values": {
+              "FullName": {
+                "Value": "BrowserParentFolderFriendlyName",
+                "ValueSource": "Property"
+              },
+              "ID": {
+                "Value": "BrowserParentFolderId",
                 "ValueSource": "Property"
               }
             },
@@ -1215,6 +1350,70 @@
             "DefaultValueSource": "Property"
           }
         ],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.GSuite.Activities.CreateTaskConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.GSuite.Activities.CreateTaskListConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [],
         "DefaultValueSource": "Property"
       }
     ],
@@ -1609,6 +1808,141 @@
               },
               "ID": {
                 "Value": "BrowserItemId",
+                "ValueSource": "Property"
+              }
+            },
+            "Arguments": {
+              "ActivityName": {
+                "Value": "DisplayName",
+                "ValueSource": "Property"
+              },
+              "BindingsVersion": {
+                "Value": "2.1",
+                "ValueSource": "Constant"
+              },
+              "ObjectName": {
+                "Value": "ObjectName",
+                "ValueSource": "Property"
+              },
+              "DisplayLabel": {
+                "Value": "FullName",
+                "ValueSource": "Constant"
+              }
+            },
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
+          }
+        ],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.GSuite.Activities.DeleteTaskConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.GSuite.Activities.DeleteTaskListConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.GSuite.Activities.DeleteTextConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [
+          {
+            "Type": "Property",
+            "PublishNullValues": false,
+            "Key": {
+              "Value": "ResourceKey",
+              "ValueSource": "Property"
+            },
+            "Values": {
+              "FullName": {
+                "Value": "FileFriendlyName",
+                "ValueSource": "Property"
+              },
+              "ID": {
+                "Value": "BrowserFileId",
                 "ValueSource": "Property"
               }
             },
@@ -2097,6 +2431,148 @@
         "DefaultValueSource": "Property"
       }
     ],
+    "UiPath.GSuite.Activities.FillDocsTemplateConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [
+          {
+            "Type": "Property",
+            "PublishNullValues": false,
+            "Key": {
+              "Value": "ResourceKey",
+              "ValueSource": "Property"
+            },
+            "Values": {
+              "FullName": {
+                "Value": "FileFriendlyName",
+                "ValueSource": "Property"
+              },
+              "ID": {
+                "Value": "BrowserFileId",
+                "ValueSource": "Property"
+              }
+            },
+            "Arguments": {
+              "ActivityName": {
+                "Value": "DisplayName",
+                "ValueSource": "Property"
+              },
+              "BindingsVersion": {
+                "Value": "2.1",
+                "ValueSource": "Constant"
+              },
+              "ObjectName": {
+                "Value": "ObjectName",
+                "ValueSource": "Property"
+              },
+              "DisplayLabel": {
+                "Value": "FullName",
+                "ValueSource": "Constant"
+              }
+            },
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
+          }
+        ],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.GSuite.Activities.FindAndReplaceTextConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [
+          {
+            "Type": "Property",
+            "PublishNullValues": false,
+            "Key": {
+              "Value": "ResourceKey",
+              "ValueSource": "Property"
+            },
+            "Values": {
+              "FullName": {
+                "Value": "FileFriendlyName",
+                "ValueSource": "Property"
+              },
+              "ID": {
+                "Value": "BrowserFileId",
+                "ValueSource": "Property"
+              }
+            },
+            "Arguments": {
+              "ActivityName": {
+                "Value": "DisplayName",
+                "ValueSource": "Property"
+              },
+              "BindingsVersion": {
+                "Value": "2.1",
+                "ValueSource": "Constant"
+              },
+              "ObjectName": {
+                "Value": "ObjectName",
+                "ValueSource": "Property"
+              },
+              "DisplayLabel": {
+                "Value": "FullName",
+                "ValueSource": "Constant"
+              }
+            },
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
+          }
+        ],
+        "DefaultValueSource": "Property"
+      }
+    ],
     "UiPath.GSuite.Activities.ForEachEmailConnections": [
       {
         "Type": "Connection",
@@ -2516,6 +2992,70 @@
         "DefaultValueSource": "Property"
       }
     ],
+    "UiPath.GSuite.Activities.GetCalendarsConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.GSuite.Activities.GetDriveLabelsConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
     "UiPath.GSuite.Activities.GetEmailByIdConnections": [
       {
         "Type": "Connection",
@@ -2609,6 +3149,77 @@
               },
               "DisplayLabel": {
                 "Value": "ParentFolders[*].Name",
+                "ValueSource": "Constant"
+              }
+            },
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
+          }
+        ],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.GSuite.Activities.GetEventByIdConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [
+          {
+            "Type": "Property",
+            "PublishNullValues": false,
+            "Key": {
+              "Value": "ResourceKey",
+              "ValueSource": "Property"
+            },
+            "Values": {
+              "FullName": {
+                "Value": "BrowserCalendarFriendlyName",
+                "ValueSource": "Property"
+              },
+              "ID": {
+                "Value": "BrowserCalendarId",
+                "ValueSource": "Property"
+              }
+            },
+            "Arguments": {
+              "ActivityName": {
+                "Value": "DisplayName",
+                "ValueSource": "Property"
+              },
+              "BindingsVersion": {
+                "Value": "2.1",
+                "ValueSource": "Constant"
+              },
+              "ObjectName": {
+                "Value": "ObjectName",
+                "ValueSource": "Property"
+              },
+              "DisplayLabel": {
+                "Value": "FullName",
                 "ValueSource": "Constant"
               }
             },
@@ -3012,6 +3623,134 @@
         "DefaultValueSource": "Property"
       }
     ],
+    "UiPath.GSuite.Activities.GetTaskConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.GSuite.Activities.GetTaskListConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.GSuite.Activities.GetTaskListsConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.GSuite.Activities.GetTasksConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
     "UiPath.GSuite.Activities.Gmail.Triggers.EmailSent": [
       {
         "Type": "EventTrigger",
@@ -3136,6 +3875,38 @@
             "DefaultValueSource": "Property"
           }
         ],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.GSuite.Activities.HttpRequestConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [],
         "DefaultValueSource": "Property"
       }
     ],
@@ -3330,7 +4101,7 @@
                 "ValueSource": "Constant"
               },
               "ObjectName": {
-                "Value": "ObjectName",
+                "Value": "SecondaryObjectName",
                 "ValueSource": "Property"
               },
               "DisplayLabel": {
@@ -3525,6 +4296,109 @@
         "DefaultValueSource": "Property"
       }
     ],
+    "UiPath.GSuite.Activities.ReadTextConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [
+          {
+            "Type": "Property",
+            "PublishNullValues": false,
+            "Key": {
+              "Value": "ResourceKey",
+              "ValueSource": "Property"
+            },
+            "Values": {
+              "FullName": {
+                "Value": "FileFriendlyName",
+                "ValueSource": "Property"
+              },
+              "ID": {
+                "Value": "BrowserFileId",
+                "ValueSource": "Property"
+              }
+            },
+            "Arguments": {
+              "ActivityName": {
+                "Value": "DisplayName",
+                "ValueSource": "Property"
+              },
+              "BindingsVersion": {
+                "Value": "2.1",
+                "ValueSource": "Constant"
+              },
+              "ObjectName": {
+                "Value": "ObjectName",
+                "ValueSource": "Property"
+              },
+              "DisplayLabel": {
+                "Value": "FullName",
+                "ValueSource": "Constant"
+              }
+            },
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
+          }
+        ],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.GSuite.Activities.RemoveEmailLabelsConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
     "UiPath.GSuite.Activities.RemoveFileLabelsConnections": [
       {
         "Type": "Connection",
@@ -3625,6 +4499,38 @@
             "DefaultValueSource": "Property"
           }
         ],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.GSuite.Activities.RenameTaskListConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [],
         "DefaultValueSource": "Property"
       }
     ],
@@ -4208,6 +5114,284 @@
         "DefaultValueSource": "Property"
       }
     ],
+    "UiPath.GSuite.Activities.Tasks.Triggers.TaskCompleted": [
+      {
+        "Type": "EventTrigger",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "ActivityName": {
+            "Value": "DisplayName",
+            "ValueSource": "Property"
+          },
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "FilterExpression": {
+            "Value": "FilterExpression",
+            "ValueSource": "Property"
+          },
+          "ObjectName": {
+            "Value": "ObjectName",
+            "ValueSource": "Property"
+          },
+          "Operation": {
+            "Value": "Operation",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [
+          {
+            "Type": "Property",
+            "PublishNullValues": false,
+            "Key": {
+              "Value": "ResourceKey",
+              "ValueSource": "Property"
+            },
+            "Values": {
+              "taskListId": {
+                "Value": "ListBrowserId",
+                "ValueSource": "Property"
+              }
+            },
+            "Arguments": {
+              "ActivityName": {
+                "Value": "DisplayName",
+                "ValueSource": "Property"
+              },
+              "BindingsVersion": {
+                "Value": "2.1",
+                "ValueSource": "Constant"
+              },
+              "ObjectName": {
+                "Value": "ObjectName",
+                "ValueSource": "Property"
+              },
+              "DisplayLabel": {
+                "Value": "taskListId",
+                "ValueSource": "Constant"
+              },
+              "PrimaryKey": {
+                "Value": "taskListId",
+                "ValueSource": "Constant"
+              },
+              "TriggerCreateParameters": {
+                "Value": "taskListId",
+                "ValueSource": "Constant"
+              },
+              "Overwritable": {
+                "Value": "false",
+                "ValueSource": "Constant"
+              }
+            },
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
+          }
+        ],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.GSuite.Activities.Tasks.Triggers.TaskCreated": [
+      {
+        "Type": "EventTrigger",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "ActivityName": {
+            "Value": "DisplayName",
+            "ValueSource": "Property"
+          },
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "FilterExpression": {
+            "Value": "FilterExpression",
+            "ValueSource": "Property"
+          },
+          "ObjectName": {
+            "Value": "ObjectName",
+            "ValueSource": "Property"
+          },
+          "Operation": {
+            "Value": "Operation",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [
+          {
+            "Type": "Property",
+            "PublishNullValues": false,
+            "Key": {
+              "Value": "ResourceKey",
+              "ValueSource": "Property"
+            },
+            "Values": {
+              "taskListId": {
+                "Value": "ListBrowserId",
+                "ValueSource": "Property"
+              }
+            },
+            "Arguments": {
+              "ActivityName": {
+                "Value": "DisplayName",
+                "ValueSource": "Property"
+              },
+              "BindingsVersion": {
+                "Value": "2.1",
+                "ValueSource": "Constant"
+              },
+              "ObjectName": {
+                "Value": "ObjectName",
+                "ValueSource": "Property"
+              },
+              "DisplayLabel": {
+                "Value": "taskListId",
+                "ValueSource": "Constant"
+              },
+              "PrimaryKey": {
+                "Value": "taskListId",
+                "ValueSource": "Constant"
+              },
+              "TriggerCreateParameters": {
+                "Value": "taskListId",
+                "ValueSource": "Constant"
+              },
+              "Overwritable": {
+                "Value": "false",
+                "ValueSource": "Constant"
+              }
+            },
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
+          }
+        ],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.GSuite.Activities.TurnOffAutomaticRepliesConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.GSuite.Activities.TurnOnAutomaticRepliesConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.GSuite.Activities.UpdateTaskConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
     "UiPath.GSuite.Activities.UploadFilesConnections": [
       {
         "Type": "Connection",
@@ -4563,7 +5747,94 @@
         "DefaultValueSource": "Property"
       }
     ],
+    "UiPath.GSuite.Activities.WriteTextConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [
+          {
+            "Type": "Property",
+            "PublishNullValues": false,
+            "Key": {
+              "Value": "ResourceKey",
+              "ValueSource": "Property"
+            },
+            "Values": {
+              "FullName": {
+                "Value": "FileFriendlyName",
+                "ValueSource": "Property"
+              },
+              "ID": {
+                "Value": "BrowserFileId",
+                "ValueSource": "Property"
+              }
+            },
+            "Arguments": {
+              "ActivityName": {
+                "Value": "DisplayName",
+                "ValueSource": "Property"
+              },
+              "BindingsVersion": {
+                "Value": "2.1",
+                "ValueSource": "Constant"
+              },
+              "ObjectName": {
+                "Value": "ObjectName",
+                "ValueSource": "Property"
+              },
+              "DisplayLabel": {
+                "Value": "FullName",
+                "ValueSource": "Constant"
+              }
+            },
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
+          }
+        ],
+        "DefaultValueSource": "Property"
+      }
+    ],
     "UiPath.IntegrationService.Activities.Runtime.Activities.ConnectorActivity": [
+      {
+        "PublishNullValues": false,
+        "SubBindings": [],
+        "FromInstanceProperty": "BindingsJson",
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.IntegrationService.Activities.Runtime.Activities.ConnectorHttpActivity": [
+      {
+        "PublishNullValues": false,
+        "SubBindings": [],
+        "FromInstanceProperty": "BindingsJson",
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.IntegrationService.Activities.Runtime.Activities.ConnectorPersistenceActivity": [
       {
         "PublishNullValues": false,
         "SubBindings": [],
@@ -4785,6 +6056,109 @@
         "DefaultValueSource": "Property"
       }
     ],
+    "UiPath.MicrosoftOffice365.Activities.Calendar.GetCalendarsConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.MicrosoftOffice365.Activities.Calendar.GetEventByIdConnections": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [
+          {
+            "Type": "Property",
+            "PublishNullValues": false,
+            "Key": {
+              "Value": "ResourceKey",
+              "ValueSource": "Property"
+            },
+            "Values": {
+              "FullName": {
+                "Value": "BrowserCalendarFriendlyName",
+                "ValueSource": "Property"
+              },
+              "ID": {
+                "Value": "BrowserCalendarId",
+                "ValueSource": "Property"
+              }
+            },
+            "Arguments": {
+              "ActivityName": {
+                "Value": "DisplayName",
+                "ValueSource": "Property"
+              },
+              "BindingsVersion": {
+                "Value": "2.1",
+                "ValueSource": "Constant"
+              },
+              "ObjectName": {
+                "Value": "ObjectName",
+                "ValueSource": "Property"
+              },
+              "DisplayLabel": {
+                "Value": "FullName",
+                "ValueSource": "Constant"
+              }
+            },
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
+          }
+        ],
+        "DefaultValueSource": "Property"
+      }
+    ],
     "UiPath.MicrosoftOffice365.Activities.Calendar.GetEventListConnections": [
       {
         "Type": "Connection",
@@ -4960,7 +6334,54 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
+        "SubBindings": [
+          {
+            "Type": "Property",
+            "PublishNullValues": false,
+            "Key": {
+              "Value": "ResourceKey",
+              "ValueSource": "Property"
+            },
+            "Values": {
+              "FullName": {
+                "Value": "BrowserCalendarFriendlyName",
+                "ValueSource": "Property"
+              },
+              "ID": {
+                "Value": "BrowserCalendarId",
+                "ValueSource": "Property"
+              },
+              "calendarID": {
+                "Value": "BrowserCalendarId",
+                "ValueSource": "Property"
+              }
+            },
+            "Arguments": {
+              "ActivityName": {
+                "Value": "DisplayName",
+                "ValueSource": "Property"
+              },
+              "BindingsVersion": {
+                "Value": "2.1",
+                "ValueSource": "Constant"
+              },
+              "ObjectName": {
+                "Value": "ObjectName",
+                "ValueSource": "Property"
+              },
+              "DisplayLabel": {
+                "Value": "FullName",
+                "ValueSource": "Constant"
+              },
+              "TriggerCreateParameters": {
+                "Value": "calendarID",
+                "ValueSource": "Constant"
+              }
+            },
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
+          }
+        ],
         "DefaultValueSource": "Property"
       }
     ],
@@ -5004,7 +6425,54 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
+        "SubBindings": [
+          {
+            "Type": "Property",
+            "PublishNullValues": false,
+            "Key": {
+              "Value": "ResourceKey",
+              "ValueSource": "Property"
+            },
+            "Values": {
+              "FullName": {
+                "Value": "BrowserCalendarFriendlyName",
+                "ValueSource": "Property"
+              },
+              "ID": {
+                "Value": "BrowserCalendarId",
+                "ValueSource": "Property"
+              },
+              "calendarID": {
+                "Value": "BrowserCalendarId",
+                "ValueSource": "Property"
+              }
+            },
+            "Arguments": {
+              "ActivityName": {
+                "Value": "DisplayName",
+                "ValueSource": "Property"
+              },
+              "BindingsVersion": {
+                "Value": "2.1",
+                "ValueSource": "Constant"
+              },
+              "ObjectName": {
+                "Value": "ObjectName",
+                "ValueSource": "Property"
+              },
+              "DisplayLabel": {
+                "Value": "FullName",
+                "ValueSource": "Constant"
+              },
+              "TriggerCreateParameters": {
+                "Value": "calendarID",
+                "ValueSource": "Constant"
+              }
+            },
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
+          }
+        ],
         "DefaultValueSource": "Property"
       }
     ],
@@ -5048,7 +6516,54 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
+        "SubBindings": [
+          {
+            "Type": "Property",
+            "PublishNullValues": false,
+            "Key": {
+              "Value": "ResourceKey",
+              "ValueSource": "Property"
+            },
+            "Values": {
+              "FullName": {
+                "Value": "BrowserCalendarFriendlyName",
+                "ValueSource": "Property"
+              },
+              "ID": {
+                "Value": "BrowserCalendarId",
+                "ValueSource": "Property"
+              },
+              "calendarID": {
+                "Value": "BrowserCalendarId",
+                "ValueSource": "Property"
+              }
+            },
+            "Arguments": {
+              "ActivityName": {
+                "Value": "DisplayName",
+                "ValueSource": "Property"
+              },
+              "BindingsVersion": {
+                "Value": "2.1",
+                "ValueSource": "Constant"
+              },
+              "ObjectName": {
+                "Value": "ObjectName",
+                "ValueSource": "Property"
+              },
+              "DisplayLabel": {
+                "Value": "FullName",
+                "ValueSource": "Constant"
+              },
+              "TriggerCreateParameters": {
+                "Value": "calendarID",
+                "ValueSource": "Constant"
+              }
+            },
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
+          }
+        ],
         "DefaultValueSource": "Property"
       }
     ],
@@ -5092,7 +6607,54 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
+        "SubBindings": [
+          {
+            "Type": "Property",
+            "PublishNullValues": false,
+            "Key": {
+              "Value": "ResourceKey",
+              "ValueSource": "Property"
+            },
+            "Values": {
+              "FullName": {
+                "Value": "BrowserCalendarFriendlyName",
+                "ValueSource": "Property"
+              },
+              "ID": {
+                "Value": "BrowserCalendarId",
+                "ValueSource": "Property"
+              },
+              "calendarID": {
+                "Value": "BrowserCalendarId",
+                "ValueSource": "Property"
+              }
+            },
+            "Arguments": {
+              "ActivityName": {
+                "Value": "DisplayName",
+                "ValueSource": "Property"
+              },
+              "BindingsVersion": {
+                "Value": "2.1",
+                "ValueSource": "Constant"
+              },
+              "ObjectName": {
+                "Value": "ObjectName",
+                "ValueSource": "Property"
+              },
+              "DisplayLabel": {
+                "Value": "FullName",
+                "ValueSource": "Constant"
+              },
+              "TriggerCreateParameters": {
+                "Value": "calendarID",
+                "ValueSource": "Constant"
+              }
+            },
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
+          }
+        ],
         "DefaultValueSource": "Property"
       }
     ],
@@ -6024,8 +7586,8 @@
               "ValueSource": "Property"
             },
             "Values": {
-              "TableName": {
-                "Value": "TableName",
+              "SheetTableID": {
+                "Value": "SheetTableId",
                 "ValueSource": "Property"
               }
             },
@@ -6043,15 +7605,15 @@
                 "ValueSource": "Property"
               },
               "DisplayLabel": {
-                "Value": "TableName",
+                "Value": "SheetTableID",
                 "ValueSource": "Constant"
               },
               "PrimaryKey": {
-                "Value": "TableName",
+                "Value": "SheetTableID",
                 "ValueSource": "Constant"
               },
               "TriggerCreateParameters": {
-                "Value": "TableName",
+                "Value": "SheetTableID",
                 "ValueSource": "Constant"
               },
               "Overwritable": {
@@ -6169,7 +7731,7 @@
               "ValueSource": "Property"
             },
             "Values": {
-              "WorksheetName": {
+              "WorksheetID": {
                 "Value": "SheetName",
                 "ValueSource": "Property"
               },
@@ -6192,15 +7754,15 @@
                 "ValueSource": "Property"
               },
               "DisplayLabel": {
-                "Value": "WorksheetName",
+                "Value": "WorksheetID",
                 "ValueSource": "Constant"
               },
               "PrimaryKey": {
-                "Value": "WorksheetName,CellAddress",
+                "Value": "WorksheetID,CellAddress",
                 "ValueSource": "Constant"
               },
               "TriggerCreateParameters": {
-                "Value": "WorksheetName,CellAddress",
+                "Value": "WorksheetID,CellAddress",
                 "ValueSource": "Constant"
               },
               "Overwritable": {
@@ -6716,7 +8278,7 @@
                 "ValueSource": "Constant"
               },
               "ObjectName": {
-                "Value": "ObjectName",
+                "Value": "SecondaryObjectName",
                 "ValueSource": "Property"
               },
               "DisplayLabel": {
@@ -7101,6 +8663,48 @@
             },
             "SubBindings": [],
             "DefaultValueSource": "Property"
+          },
+          {
+            "Type": "Property",
+            "PublishNullValues": false,
+            "Key": {
+              "Value": "RelativePathBindingsKey",
+              "ValueSource": "Property"
+            },
+            "Values": {
+              "FullName": {
+                "Value": "BrowserParentItemFriendlyName",
+                "ValueSource": "Property"
+              },
+              "ID": {
+                "Value": "BrowserParentItemId",
+                "ValueSource": "Property"
+              },
+              "ParentDriveID": {
+                "Value": "BrowserParentDriveId",
+                "ValueSource": "Property"
+              }
+            },
+            "Arguments": {
+              "ActivityName": {
+                "Value": "DisplayName",
+                "ValueSource": "Property"
+              },
+              "BindingsVersion": {
+                "Value": "2.1",
+                "ValueSource": "Constant"
+              },
+              "ObjectName": {
+                "Value": "ParentFolderObjectName",
+                "ValueSource": "Property"
+              },
+              "DisplayLabel": {
+                "Value": "FullName",
+                "ValueSource": "Constant"
+              }
+            },
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
         ],
         "DefaultValueSource": "Property"
@@ -7283,7 +8887,7 @@
                 "ValueSource": "Constant"
               },
               "ObjectName": {
-                "Value": "ObjectName",
+                "Value": "SecondaryObjectName",
                 "ValueSource": "Property"
               },
               "DisplayLabel": {
@@ -7647,6 +9251,38 @@
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Files.UseDriveCard": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "ConnectionId",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "Connector",
+            "ValueSource": "Property"
+          },
+          "UseConnectionService": {
+            "Value": "UseConnectionService",
+            "ValueSource": "Property"
+          }
+        },
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.MicrosoftOffice365.Activities.General.HttpRequestConnections": [
       {
         "Type": "Connection",
         "PublishNullValues": false,
@@ -8322,7 +9958,54 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
+        "SubBindings": [
+          {
+            "Type": "Property",
+            "PublishNullValues": false,
+            "Key": {
+              "Value": "SharedMailboxBindingKey",
+              "ValueSource": "Property"
+            },
+            "Values": {
+              "sharedMailboxAddress": {
+                "Value": "Mailbox",
+                "ValueSource": "Property"
+              }
+            },
+            "Arguments": {
+              "ActivityName": {
+                "Value": "DisplayName",
+                "ValueSource": "Property"
+              },
+              "BindingsVersion": {
+                "Value": "2.1",
+                "ValueSource": "Constant"
+              },
+              "ObjectName": {
+                "Value": "ObjectName",
+                "ValueSource": "Property"
+              },
+              "DisplayLabel": {
+                "Value": "sharedMailboxAddress",
+                "ValueSource": "Constant"
+              },
+              "PrimaryKey": {
+                "Value": "sharedMailboxAddress",
+                "ValueSource": "Constant"
+              },
+              "TriggerCreateParameters": {
+                "Value": "sharedMailboxAddress",
+                "ValueSource": "Constant"
+              },
+              "Overwritable": {
+                "Value": "false",
+                "ValueSource": "Constant"
+              }
+            },
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
+          }
+        ],
         "DefaultValueSource": "Property"
       }
     ],
@@ -8367,6 +10050,52 @@
           }
         },
         "SubBindings": [
+          {
+            "Type": "Property",
+            "PublishNullValues": false,
+            "Key": {
+              "Value": "SharedMailboxBindingKey",
+              "ValueSource": "Property"
+            },
+            "Values": {
+              "sharedMailboxAddress": {
+                "Value": "Mailbox",
+                "ValueSource": "Property"
+              }
+            },
+            "Arguments": {
+              "ActivityName": {
+                "Value": "DisplayName",
+                "ValueSource": "Property"
+              },
+              "BindingsVersion": {
+                "Value": "2.1",
+                "ValueSource": "Constant"
+              },
+              "ObjectName": {
+                "Value": "ObjectName",
+                "ValueSource": "Property"
+              },
+              "DisplayLabel": {
+                "Value": "sharedMailboxAddress",
+                "ValueSource": "Constant"
+              },
+              "PrimaryKey": {
+                "Value": "sharedMailboxAddress",
+                "ValueSource": "Constant"
+              },
+              "TriggerCreateParameters": {
+                "Value": "sharedMailboxAddress",
+                "ValueSource": "Constant"
+              },
+              "Overwritable": {
+                "Value": "false",
+                "ValueSource": "Constant"
+              }
+            },
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
+          },
           {
             "Type": "Property",
             "PublishNullValues": false,

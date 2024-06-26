@@ -2,7 +2,7 @@
   <x:Members>
     <x:Property Name="in_CatName" Type="InArgument(x:String)" />
     <x:Property Name="in_Arb" Type="InArgument(x:String)" />
-    <x:Property Name="out_Entity" Type="InArgument(l:CatEntity)" />
+    <x:Property Name="out_Entity" Type="OutArgument(l:CatEntity)" />
   </x:Members>
   <this:Entities_CustomActivity.in_CatName>
     <InArgument x:TypeArguments="x:String" />
@@ -10,13 +10,10 @@
   <this:Entities_CustomActivity.in_Arb>
     <InArgument x:TypeArguments="x:String" />
   </this:Entities_CustomActivity.in_Arb>
-  <this:Entities_CustomActivity.out_Entity>
-    <InArgument x:TypeArguments="l:CatEntity" />
-  </this:Entities_CustomActivity.out_Entity>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1390,884</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1138.4,685.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Entities_CustomActivity_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -102,13 +99,13 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Entities_CustomActivity" sap:VirtualizedContainerService.HintSize="512,623.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Entities_CustomActivity" sap:VirtualizedContainerService.HintSize="492.8,620.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uda:CreateEntityRecord x:TypeArguments="l:CatEntity" InputEntity="{x:Null}" IsInRecordView="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" ContinueOnError="False" DisplayName="Create Entity Record" EntityId="e60e179b-1d7a-ed11-ade6-a085fc8e3893" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="450,368" sap2010:WorkflowViewState.IdRef="CreateEntityRecord`1_1" InputEntityInFieldView="[new Library_Cross_VB_Complex.CatEntity() With {  .ChoiceSet = (new Library_Cross_VB_Complex.CatChoiceSet(){Library_Cross_VB_Complex.CatChoiceSet.DN8,Library_Cross_VB_Complex.CatChoiceSet.DN2,Library_Cross_VB_Complex.CatChoiceSet.DN5,Library_Cross_VB_Complex.CatChoiceSet.DN1}).ToHashSet(),  .ChoiceSet2 = (new Library_Cross_VB_Complex.CatChoiceSet2(){Library_Cross_VB_Complex.CatChoiceSet2.Name5,Library_Cross_VB_Complex.CatChoiceSet2.Name4,Library_Cross_VB_Complex.CatChoiceSet2.Nam6added}).ToHashSet(),  .Name = in_CatName,  .abc = in_Arb }]" OutputEntity="[out_Entity]" TimeoutInMs="30000">
+    <uda:CreateEntityRecord x:TypeArguments="l:CatEntity" InputEntity="{x:Null}" IsInRecordView="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" ContinueOnError="False" DisplayName="Create Entity Record" EntityId="e60e179b-1d7a-ed11-ade6-a085fc8e3893" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="449.6,366.4" sap2010:WorkflowViewState.IdRef="CreateEntityRecord`1_1" InputEntityInFieldView="[new Library_Cross_VB_Complex.CatEntity() With {  .ChoiceSet = (new Library_Cross_VB_Complex.CatChoiceSet(){Library_Cross_VB_Complex.CatChoiceSet.DN8,Library_Cross_VB_Complex.CatChoiceSet.DN2,Library_Cross_VB_Complex.CatChoiceSet.DN5,Library_Cross_VB_Complex.CatChoiceSet.DN1}).ToHashSet(),  .ChoiceSet2 = (new Library_Cross_VB_Complex.CatChoiceSet2(){Library_Cross_VB_Complex.CatChoiceSet2.Name5,Library_Cross_VB_Complex.CatChoiceSet2.Name4,Library_Cross_VB_Complex.CatChoiceSet2.Nam6added}).ToHashSet(),  .Name = in_CatName,  .abc = in_Arb }]" OutputEntity="[out_Entity]" TimeoutInMs="30000">
       <uda:CreateEntityRecord.State>
         <udam:RecordState RequiredFieldCount="3">
           <udam:RecordState.SelectedFields>
@@ -138,6 +135,6 @@
         </udam:RecordState>
       </uda:CreateEntityRecord.State>
     </uda:CreateEntityRecord>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[out_Entity.Name + &quot; was added with ID: &quot; + out_Entity.Id.ToString]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[out_Entity.Name + &quot; was added with ID: &quot; + out_Entity.Id.ToString]" />
   </Sequence>
 </Activity>

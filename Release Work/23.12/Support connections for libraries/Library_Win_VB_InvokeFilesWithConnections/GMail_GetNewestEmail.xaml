@@ -1,0 +1,128 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugagm="clr-namespace:UiPath.GSuite.Activities.Gmail.Models;assembly=UiPath.GSuite.Activities" xmlns:ugm="clr-namespace:UiPath.GSuite.Models;assembly=UiPath.GSuite" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_Gmail_email" Type="OutArgument(ugm:GmailMessage)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1670.6666666666667,941.3333333333334</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Filters</x:String>
+      <x:String>UiPath.GSuite.Activities.Filters</x:String>
+      <x:String>UiPath.GSuite.Gmail.Enums</x:String>
+      <x:String>UiPath.GSuite.Models</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.Api.Google.Gmail.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.GSuite</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="416,495.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uga:GetNewestEmailConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Filter="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID0}" ManualEntryFolder="{x:Null}" AllLabels="W3siSWQiOiJDSEFUIiwiTmFtZSI6IkNIQVQiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IlNFTlQiLCJOYW1lIjoiU0VOVCIsIlR5cGUiOiJzeXN0ZW0ifSx7IklkIjoiSU5CT1giLCJOYW1lIjoiSU5CT1giLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IklNUE9SVEFOVCIsIk5hbWUiOiJJTVBPUlRBTlQiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IlRSQVNIIiwiTmFtZSI6IlRSQVNIIiwiVHlwZSI6InN5c3RlbSJ9LHsiSWQiOiJEUkFGVCIsIk5hbWUiOiJEUkFGVCIsIlR5cGUiOiJzeXN0ZW0ifSx7IklkIjoiU1BBTSIsIk5hbWUiOiJTUEFNIiwiVHlwZSI6InN5c3RlbSJ9LHsiSWQiOiJDQVRFR09SWV9GT1JVTVMiLCJOYW1lIjoiQ0FURUdPUllfRk9SVU1TIiwiVHlwZSI6InN5c3RlbSJ9LHsiSWQiOiJDQVRFR09SWV9VUERBVEVTIiwiTmFtZSI6IkNBVEVHT1JZX1VQREFURVMiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IkNBVEVHT1JZX1BFUlNPTkFMIiwiTmFtZSI6IkNBVEVHT1JZX1BFUlNPTkFMIiwiVHlwZSI6InN5c3RlbSJ9LHsiSWQiOiJDQVRFR09SWV9QUk9NT1RJT05TIiwiTmFtZSI6IkNBVEVHT1JZX1BST01PVElPTlMiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IkNBVEVHT1JZX1NPQ0lBTCIsIk5hbWUiOiJDQVRFR09SWV9TT0NJQUwiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IlNUQVJSRUQiLCJOYW1lIjoiU1RBUlJFRCIsIlR5cGUiOiJzeXN0ZW0ifSx7IklkIjoiVU5SRUFEIiwiTmFtZSI6IlVOUkVBRCIsIlR5cGUiOiJzeXN0ZW0ifSx7IklkIjoiTGFiZWxfMSIsIk5hbWUiOiJDaGl0YW7Fo2UiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF8zIiwiTmFtZSI6IlBlcnNvbmFsZSIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzQiLCJOYW1lIjoiU2VydmljaXUiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF81IiwiTmFtZSI6Ikp1bmsgRS1tYWlsIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNTMiLCJOYW1lIjoiQWx0ZWxlIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNTQiLCJOYW1lIjoiQmlsZXRlIGF2aW9uIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNTUiLCJOYW1lIjoiQ2lzY28iLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF81NiIsIk5hbWUiOiJDb2xlZ2kiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF81NyIsIk5hbWUiOiJEaXBsb21hIExpY2VudGEiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF81OCIsIk5hbWUiOiJEcmFmdHMgMiIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzU5IiwiTmFtZSI6IkVORUwgLSBjdXJlbnQiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF82IiwiTmFtZSI6IkRlbGV0ZWQgSXRlbXMiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF82MCIsIk5hbWUiOiJFbWFnIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNjEiLCJOYW1lIjoiRXZlbnRpbSIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzYyIiwiTmFtZSI6IkZhY2Vib29rIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNjMiLCJOYW1lIjoiRmFjdWx0YXRlIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNjQiLCJOYW1lIjoiRmlubGFuZGEiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF82NSIsIk5hbWUiOiJGbG9yeSBFeCIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzY2IiwiTmFtZSI6IkdERiBTdWV6IC0gR2F6ZSIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzY3IiwiTmFtZSI6IkhhIEhBIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNjgiLCJOYW1lIjoiSGF3YWlpIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNjkiLCJOYW1lIjoiSVRDIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNyIsIk5hbWUiOiJTZW50IEl0ZW1zIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNzAiLCJOYW1lIjoiSm9icyIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzcxIiwiTmFtZSI6IkxpbmtJRCIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzcyIiwiTmFtZSI6Ik1hZGFsaW5hIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNzMiLCJOYW1lIjoiTWFsdGEyMDA5IiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNzQiLCJOYW1lIjoiTWFtYSIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzc1IiwiTmFtZSI6Ik1hc3RlciBJQ1NGRVQiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF83NiIsIk5hbWUiOiJNZXNhamUgZGluIEFtZXJpY2EiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF83NyIsIk5hbWUiOiJOb2tpYSIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzc4IiwiTmFtZSI6Ik9mZXJ0ZSIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzc5IiwiTmFtZSI6Ik9yYW5nZSIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzgwIiwiTmFtZSI6IlBlcnNvbmFsIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfODEiLCJOYW1lIjoiUGxhdGkgT3JhbmdlIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfODIiLCJOYW1lIjoiUHJpZXRlbmkiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF84MyIsIk5hbWUiOiJQcm9tb3RpaSIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzg0IiwiTmFtZSI6IlByb21vdGlpXC9EZWFsIEZldmVyIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfODUiLCJOYW1lIjoiUHJvbW90aWlcL0ZvdG9sYW5kIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfODYiLCJOYW1lIjoiUHJvbW90aWlcL0Z1biBEZWFsIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfODciLCJOYW1lIjoiUHJvbW90aWlcL1RvcCBEZWFscyIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzg4IiwiTmFtZSI6IlByb21vdGlpXC9XZWxsbmVzcyIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzg5IiwiTmFtZSI6IlByb21vdGlpXC9adW16aSIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzkwIiwiTmFtZSI6IlJDUy1SRFMgLSBOZXQrVFYiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF85MSIsIk5hbWUiOiJSb21hIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfOTIiLCJOYW1lIjoiUzdTIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfOTMiLCJOYW1lIjoiVGF0YSIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzk0IiwiTmFtZSI6IlVucm9sbC5tZSIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzk1IiwiTmFtZSI6IlZlcmkiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF85NiIsIk5hbWUiOiJXZXN0ZXJuIERpZ2l0YWwiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF85NyIsIk5hbWUiOiJXb3JrIGFuZCBUcmF2ZWwiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF85OCIsIk5hbWUiOiJSZXZ2b2x1dGlvbiIsIlR5cGUiOiJ1c2VyIn1d" AuthScopesInvalid="False" BrowserFolder="Emag" BrowserFolderLabelId="Label_60" ConnectionId="17d677e4-6ae6-ec11-b656-e42aac668fcd" DisplayName="Get Newest Email" FolderInputSelectionMode="Browse" sap:VirtualizedContainerService.HintSize="354,240" sap2010:WorkflowViewState.IdRef="GetNewestEmailConnections_1" ImportantOnly="False" MarkAsRead="False" Result="[out_Gmail_email]" StarredOnly="False" UnreadOnly="False" UseConnectionService="True" WithAttachmentsOnly="False">
+      <uga:GetNewestEmailConnections.Folder>
+        <ugagm:FolderArgument ConnectionDescriptor="{x:Null}" ManualEntryFolderName="{x:Null}" BrowserFolderId="Label_60" BrowserFolderName="Emag" ConnectionKey="17d677e4-6ae6-ec11-b656-e42aac668fcd" InputMode="Browse">
+          <ugagm:FolderArgument.Backup>
+            <usau:BackupSlot x:TypeArguments="ugage:FolderInputMode" x:Name="__ReferenceID0" StoredValue="Browse">
+              <usau:BackupSlot.BackupValues>
+                <scg:Dictionary x:TypeArguments="ugage:FolderInputMode, scg:List(x:Object)" />
+              </usau:BackupSlot.BackupValues>
+            </usau:BackupSlot>
+          </ugagm:FolderArgument.Backup>
+        </ugagm:FolderArgument>
+      </uga:GetNewestEmailConnections.Folder>
+    </uga:GetNewestEmailConnections>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn" Message="[out_Gmail_email.Subject]" />
+  </Sequence>
+</Activity>

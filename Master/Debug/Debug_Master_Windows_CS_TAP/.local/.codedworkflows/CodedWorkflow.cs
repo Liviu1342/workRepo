@@ -17,21 +17,29 @@ namespace Debug_Master_Windows_CS_TAP
 {
     public partial class CodedWorkflow : CodedWorkflowBase
     {
+        private Lazy<Debug_Master_Windows_CS_TAP.WorkflowRunnerService> _workflowRunnerServiceLazy;
+        private Lazy<ConnectionsManager> _connectionsManagerLazy;
         public CodedWorkflow()
         {
-            _ = new System.Type[]{typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.Testing.API.ITestingService)};
-            workflows = new WorkflowRunnerService(this.RunWorkflow);
-            connections = new ConnectionsManager(this.serviceContainer);
+            _ = new System.Type[]{typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService)};
+            _workflowRunnerServiceLazy = new Lazy<Debug_Master_Windows_CS_TAP.WorkflowRunnerService>(() => new Debug_Master_Windows_CS_TAP.WorkflowRunnerService(this.services));
+#pragma warning disable
+            _connectionsManagerLazy = new Lazy<ConnectionsManager>(() => new ConnectionsManager(serviceContainer));
+#pragma warning restore
         }
 
-        protected WorkflowRunnerService workflows { get; private set; }
-
-        protected ConnectionsManager connections { get; set; }
-
+        protected Debug_Master_Windows_CS_TAP.WorkflowRunnerService workflows => _workflowRunnerServiceLazy.Value;
+        protected ConnectionsManager connections => _connectionsManagerLazy.Value;
+#pragma warning disable
         protected UiPath.Core.Activities.API.ISystemService system { get => serviceContainer.Resolve<UiPath.Core.Activities.API.ISystemService>() ; }
+#pragma warning restore
 
+#pragma warning disable
         protected UiPath.Testing.API.ITestingService testing { get => serviceContainer.Resolve<UiPath.Testing.API.ITestingService>() ; }
+#pragma warning restore
 
+#pragma warning disable
         protected UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService uiAutomation { get => serviceContainer.Resolve<UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService>() ; }
+#pragma warning restore
     }
 }

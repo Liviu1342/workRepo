@@ -17,14 +17,19 @@ namespace Library_Cross_CS_Entities
 {
     public partial class CodedWorkflow : CodedWorkflowBase
     {
+        private Lazy<Library_Cross_CS_Entities.WorkflowRunnerService> _workflowRunnerServiceLazy;
+        private Lazy<ConnectionsManager> _connectionsManagerLazy;
         public CodedWorkflow()
         {
-            _ = new System.Type[]{typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.Testing.API.ITestingService)};
-            workflows = new WorkflowRunnerService(this.RunWorkflow);
+            _ = new System.Type[]{typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService)};
+            _workflowRunnerServiceLazy = new Lazy<Library_Cross_CS_Entities.WorkflowRunnerService>(() => new Library_Cross_CS_Entities.WorkflowRunnerService(this.RunWorkflow));
+#pragma warning disable
+            _connectionsManagerLazy = new Lazy<ConnectionsManager>(() => new ConnectionsManager(serviceContainer));
+#pragma warning restore
         }
 
-        protected WorkflowRunnerService workflows { get; private set; }
-
+        protected Library_Cross_CS_Entities.WorkflowRunnerService workflows => _workflowRunnerServiceLazy.Value;
+        protected ConnectionsManager connections => _connectionsManagerLazy.Value;
 #pragma warning disable
         protected UiPath.Core.Activities.API.ISystemService system { get => serviceContainer.Resolve<UiPath.Core.Activities.API.ISystemService>() ; }
 #pragma warning restore

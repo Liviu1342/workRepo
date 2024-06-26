@@ -2,7 +2,7 @@
   <x:Members>
     <x:Property Name="in_StringList" Type="InOutArgument(scg:List(x:String))" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1723.2,1894.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1204.8,1741.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -92,7 +92,7 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="700.8,1829.6" sap2010:WorkflowViewState.IdRef="Sequence_16">
+  <Sequence sap:VirtualizedContainerService.HintSize="721.6,1676.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="_out_ForEach_Generic_1_1__CurrentIndex" />
     </Sequence.Variables>
@@ -101,42 +101,42 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Continue and Break in ForEach" sap:VirtualizedContainerService.HintSize="638.8,1718.4" sap2010:WorkflowViewState.IdRef="Sequence_15">
+    <Sequence DisplayName="Continue and Break in ForEach" sap:VirtualizedContainerService.HintSize="659.2,1588" sap2010:WorkflowViewState.IdRef="Sequence_15">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[_out_ForEach_Generic_1_1__CurrentIndex]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="576.8,1607.2" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_StringList]">
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[_out_ForEach_Generic_1_1__CurrentIndex]" DisplayName="For Each currentItem" sap:VirtualizedContainerService.HintSize="596.8,1476" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_StringList]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="x:String">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="542.8,1418.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="563.2,1338.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="500.8,1146.8" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+              <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="500.8,1105.6" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
                 <ui:IfElseIf.ConditionBlocks>
                   <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
-                    <ui:IfElseIfBlock BlockType="If" Condition="[_out_ForEach_Generic_1_1__CurrentIndex &lt; 1]">
+                    <ui:IfElseIfBlock BlockType="If" Condition="[_out_ForEach_Generic_1_1__CurrentIndex &lt; 1]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
                       <ui:IfElseIfBlock.Then>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,503.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450.4,432" sap2010:WorkflowViewState.IdRef="Sequence_10">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Current index is: &quot; + _out_ForEach_Generic_1_1__CurrentIndex.ToString]" />
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Current index is: &quot; + _out_ForEach_Generic_1_1__CurrentIndex.ToString]" />
                           <ui:Continue sap:VirtualizedContainerService.HintSize="388,24.8" sap2010:WorkflowViewState.IdRef="Continue_3" />
                           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Current item is: &quot; + currentItem]" />
                         </Sequence>
                       </ui:IfElseIfBlock.Then>
                     </ui:IfElseIfBlock>
-                    <ui:IfElseIfBlock BlockType="ElseIf" Condition="[_out_ForEach_Generic_1_1__CurrentIndex &gt; 1]">
+                    <ui:IfElseIfBlock BlockType="ElseIf" Condition="[_out_ForEach_Generic_1_1__CurrentIndex &gt; 1]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_2">
                       <ui:IfElseIfBlock.Then>
                         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,319.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
                           <sap:WorkflowViewStateService.ViewState>

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1337.2,1346" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:Connections_Win_VB_Library;assembly=Connections_Win_VB_Library" xmlns:c1="clr-namespace:Connections_Cross_CS_Library;assembly=Connections_Cross_CS_Library" xmlns:ccd="clr-namespace:Connections_Win_VB_Library.Connections.Disabled;assembly=Connections_Win_VB_Library" xmlns:cd="clr-namespace:Connections_Cross_CS_Library.Disabled_Connections;assembly=Connections_Cross_CS_Library" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1157.6,836.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:cf="clr-namespace:Connections_Win_VB_Library.From_Gabriela;assembly=Connections_Win_VB_Library" xmlns:cm="clr-namespace:Connections_Win_VB_Library.Multiple_connections;assembly=Connections_Win_VB_Library" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -83,6 +83,12 @@
       <x:String>Connections_Win_VB_Library.Connections</x:String>
       <x:String>UiPath.MicrosoftOffice365.Mail.Models</x:String>
       <x:String>Connections_Cross_CS_Library.Disabled_Connections</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.GSuite</x:String>
+      <x:String>Connections_Win_VB_Library.From_Gabriela</x:String>
+      <x:String>Microsoft.Graph</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -143,43 +149,18 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Text.Encoding.CodePages</AssemblyReference>
       <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="450,1280.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="416,772" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,91.2" sap2010:WorkflowViewState.IdRef="WriteLine_1" />
-    <c:NoConnection argument1="{x:Null}" argument2="{x:Null}" argument3="{x:Null}" argument4="{x:Null}" sap:VirtualizedContainerService.HintSize="388,196" sap2010:WorkflowViewState.IdRef="NoConnection_1" />
-    <c1:Microsoft_activity___personal_account DisplayName="Microsoft activity - personal account" sap:VirtualizedContainerService.HintSize="388,154.4" sap2010:WorkflowViewState.IdRef="Microsoft_activity___personal_account_1">
-      <c1:Microsoft_activity___personal_account.GetFileFolderConnections_1_BrowserDriveId>
-        <InArgument x:TypeArguments="x:String">
-          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_7">me</Literal>
-        </InArgument>
-      </c1:Microsoft_activity___personal_account.GetFileFolderConnections_1_BrowserDriveId>
-      <c1:Microsoft_activity___personal_account.GetFileFolderConnections_1_BrowserItemFriendlyName>
-        <InArgument x:TypeArguments="x:String">
-          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_5">OneDrive</Literal>
-        </InArgument>
-      </c1:Microsoft_activity___personal_account.GetFileFolderConnections_1_BrowserItemFriendlyName>
-      <c1:Microsoft_activity___personal_account.GetFileFolderConnections_1_BrowserItemId>
-        <InArgument x:TypeArguments="x:String">
-          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_6">root</Literal>
-        </InArgument>
-      </c1:Microsoft_activity___personal_account.GetFileFolderConnections_1_BrowserItemId>
-      <c1:Microsoft_activity___personal_account.GetFileFolderConnections_1_Connection0>
-        <InArgument x:TypeArguments="x:String">
-          <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_4">6c7f2070-9d31-4c48-8be2-75a2929ce624</Literal>
-        </InArgument>
-      </c1:Microsoft_activity___personal_account.GetFileFolderConnections_1_Connection0>
-    </c1:Microsoft_activity___personal_account>
-    <ccd:Disabled_Gmail_Connection_activity DisplayName="Disabled Gmail Connection activity" sap:VirtualizedContainerService.HintSize="388,24.8" sap2010:WorkflowViewState.IdRef="Disabled_Gmail_Connection_activity_1" />
-    <ccd:Outlook_Disabled_Gmail_Enabled_activity GetNewestEmailConnections_1_BrowserFolderLabelId="{x:Null}" GetNewestEmailConnections_1_BrowserFolderPath="{x:Null}" DisplayName="Outlook Disabled Gmail Enabled activity" GetNewestEmailConnections_1_Connection0="17d677e4-6ae6-ec11-b656-e42aac668fcd" sap:VirtualizedContainerService.HintSize="388,154.4" sap2010:WorkflowViewState.IdRef="Outlook_Disabled_Gmail_Enabled_activity_1" />
-    <cd:Disabled_GMail DisplayName="Disabled GMail" sap:VirtualizedContainerService.HintSize="388,24.8" sap2010:WorkflowViewState.IdRef="Disabled_GMail_1" />
-    <cd:Disabled_Outlook DisplayName="Disabled Outlook" sap:VirtualizedContainerService.HintSize="388,24.8" sap2010:WorkflowViewState.IdRef="Disabled_Outlook_1" />
-    <cd:Disalbed_GMail_Enabled_Outlook GetNewestEmail_1_BrowserFolder="{x:Null}" GetNewestEmail_1_BrowserFolderId="{x:Null}" DisplayName="Disalbed GMail Enabled Outlook" GetNewestEmail_1_Connection0="7ab8e158-a79f-ec11-a99b-e42aac668fcd" sap:VirtualizedContainerService.HintSize="388,154.4" sap2010:WorkflowViewState.IdRef="Disalbed_GMail_Enabled_Outlook_1" />
-    <cd:Multiple_Disabled_Connections DisplayName="Multiple Disabled Connections" sap:VirtualizedContainerService.HintSize="388,24.8" sap2010:WorkflowViewState.IdRef="Multiple_Disabled_Connections_1" />
+    <cm:MultipleConnections_activity_1 GetFileListConnections_1_BrowserLocation="{x:Null}" GetFileListConnections_1_LocationFriendlyName="{x:Null}" GetNewestEmailConnections_1_BrowserFolderLabelId="{x:Null}" out_GSuite_Email="{x:Null}" out_GSuite_FilesOrFolders="{x:Null}" out_Slack_UsersList="{x:Null}" DisplayName="MultipleConnections activity 1" GSuite___Get_File_Folder_List="fc7c19d6-6da0-ec11-a99b-e42aac668fcd" GSuite___Get_Newest_Email="17d677e4-6ae6-ec11-b656-e42aac668fcd" sap:VirtualizedContainerService.HintSize="353.6,403.2" sap2010:WorkflowViewState.IdRef="MultipleConnections_activity_1_1" Slack___List_All_Users="0fdf3771-f7b3-4126-962f-0cc052707c93" />
+    <cf:_2SameTypeSameConnection_1DifferentType DownloadFileConnections_1_BrowserFileId="{x:Null}" DownloadFileConnections_1_FileFriendlyName="{x:Null}" DownloadFileConnections_2_BrowserFileId="{x:Null}" DownloadFileConnections_2_FileFriendlyName="{x:Null}" DownloadFileConnections_3_BrowserDriveId="{x:Null}" DownloadFileConnections_3_BrowserItemFriendlyName="{x:Null}" DownloadFileConnections_3_BrowserItemId="{x:Null}" GSuite_DownloadFileCV_OutArg="{x:Null}" GSuite_DownloadFilePV_OutArg="{x:Null}" MSOffice_DownloadFile_OutArg="{x:Null}" DisplayName="2SameTypeSameConnection_1DifferentType" GSuite_Download_File_CV="fc7c19d6-6da0-ec11-a99b-e42aac668fcd" sap:VirtualizedContainerService.HintSize="353.6,280" sap2010:WorkflowViewState.IdRef="_2SameTypeSameConnection_1DifferentType_1" MSOffice_Download_File="6c7f2070-9d31-4c48-8be2-75a2929ce624" />
   </Sequence>
 </Activity>

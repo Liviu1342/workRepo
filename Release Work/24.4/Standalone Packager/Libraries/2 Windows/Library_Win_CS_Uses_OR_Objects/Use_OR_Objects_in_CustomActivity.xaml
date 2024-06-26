@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_InputText="ala bala portocala" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_InputText="ala bala portocala" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_InputText" Type="InArgument(x:String)" />
     <x:Property Name="out_CalculatorResult" Type="OutArgument(x:String)" />
@@ -7,7 +7,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>877.6,2148</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1623.3333333333333,2592.6666666666665</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -114,45 +114,59 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="512,2083.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap:VirtualizedContainerService.HintSize="512,2528" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Main Screen" sap:VirtualizedContainerService.HintSize="449.6,1350.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="b847602d-ecd3-48e5-abed-0cfd17c54bf9" Version="V2">
+    <ui:GetAttribute ContinueOnError="{x:Null}" Result="{x:Null}" Attribute="test" DisplayName="Get Attribute 'button  Memory subtract'" sap:VirtualizedContainerService.HintSize="450,238" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
+      <ui:GetAttribute.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5e9b8134-5993-419c-8ced-218809bd5e3f" InformativeScreenshot="064020d1bcd8c817c55b20729a9442c2" Selector="&lt;wnd app='applicationframehost.exe' appid='Microsoft.WindowsCalculator_8wekyb3d8bbwe!App' title='Calculator' /&gt;&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='MemoryPanel' cls='NamedContainerAutomationPeer' name='Memory controls' /&gt;&lt;uia automationid='MemMinus-23wqea' cls='Button' name='Memory subtract-23rq3wa' /&gt;" TimeoutMS="1000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:GetAttribute.Target>
+    </ui:GetAttribute>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Main Screen" sap:VirtualizedContainerService.HintSize="450,1558" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="b847602d-ecd3-48e5-abed-0cfd17c54bf9" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1027.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1228.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Digit 5'" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="354,191.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b847602d-ecd3-48e5-abed-0cfd17c54bf9" Timeout="1" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="18, 398, 115, 76" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='StandardFunctions' cls='NamedContainerAutomationPeer' name='Standard functions' /&gt;&lt;uia automationid='invertButton' cls='Button' name='Reciprocal' /&gt;" FuzzySelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='StandardFunctions' cls='NamedContainerAutomationPeer' name='Standard functions' /&gt;&lt;uia automationid='invertButton' cls='Button' name='Reciprocal' role='button' check:fulltext='' /&gt;" Guid="91bfe1cf-6419-4c47-846e-af6f17fe5d9f" InformativeScreenshot="53065a032604f5bd03112c399ebbf76f.png" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='Microsoft.WindowsCalculator_8wekyb3d8bbwe!App' title='Calculator' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Digit 5'" sap:VirtualizedContainerService.HintSize="354,191.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable ContentHash="cfMAoj16SESBZS7vtYC3jQ" DesignTimeRectangle="133, 551, 116, 79" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='NumberPad' cls='NamedContainerAutomationPeer' name='Number pad' /&gt;&lt;uia automationid='num5Button' cls='Button' name='Five' /&gt;" FuzzySelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='NumberPad' cls='NamedContainerAutomationPeer' name='Number pad' /&gt;&lt;uia automationid='num5Button' cls='Button' name='Five' role='button' check:fulltext='5' /&gt;" Guid="588f9b91-adda-4dac-b270-2a96e6e370d1" InformativeScreenshot="fd028e378b1679f59ef3803c5e0443c8.png" Reference="WbrhqUuiMkW6seLbyOSsUQ/3ucdVCG7JUew1HCKzL2a8w" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='Microsoft.WindowsCalculator_8wekyb3d8bbwe!App' title='Calculator' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Operator - Add'" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Operator - Add'" sap:VirtualizedContainerService.HintSize="354,191.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable ContentHash="LX8_S7rZFU2HsO0vEMa6Mg" DesignTimeRectangle="372, 633, 116, 81" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='StandardOperators' cls='NamedContainerAutomationPeer' name='Standard operators' /&gt;&lt;uia automationid='plusButton' cls='Button' name='Plus' /&gt;" FuzzySelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='StandardOperators' cls='NamedContainerAutomationPeer' name='Standard operators' /&gt;&lt;uia automationid='plusButton' cls='Button' name='Plus' role='button' check:fulltext='' /&gt;" Guid="690dc78c-60b3-437d-88f4-3f05d8a182d6" InformativeScreenshot="486d94ba17ee17702b551e6975478f4a.png" Reference="WbrhqUuiMkW6seLbyOSsUQ/20aP02MgDkCMAeWDz_hyNQ" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='Microsoft.WindowsCalculator_8wekyb3d8bbwe!App' title='Calculator' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Digit 7'" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Digit 7'" sap:VirtualizedContainerService.HintSize="354,191.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable ContentHash="UkA7nVxJ4E6z3ypr2ADYYQ" DesignTimeRectangle="14, 469, 116, 79" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='NumberPad' cls='NamedContainerAutomationPeer' name='Number pad' /&gt;&lt;uia automationid='num7Button' cls='Button' name='Seven' /&gt;" FuzzySelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='NumberPad' cls='NamedContainerAutomationPeer' name='Number pad' /&gt;&lt;uia automationid='num7Button' cls='Button' name='Seven' role='button' check:fulltext='7' /&gt;" Guid="2f2b265d-4912-44d7-80f9-41fa517c1a60" InformativeScreenshot="a0b3373169344edd70d5afae039a382c.png" Reference="WbrhqUuiMkW6seLbyOSsUQ/y88oA2vdjkq2CjCwc2p-MQ" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='Microsoft.WindowsCalculator_8wekyb3d8bbwe!App' title='Calculator' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Operator - Equals'" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Operator - Equals'" sap:VirtualizedContainerService.HintSize="354,191.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable ContentHash="QGZ89AF6FUaIgxE48we3Hg" DesignTimeRectangle="372, 717, 116, 79" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='StandardOperators' cls='NamedContainerAutomationPeer' name='Standard operators' /&gt;&lt;uia automationid='equalButton' cls='Button' name='Equals' /&gt;" FuzzySelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='StandardOperators' cls='NamedContainerAutomationPeer' name='Standard operators' /&gt;&lt;uia automationid='equalButton' cls='Button' name='Equals' role='button' check:fulltext='' /&gt;" Guid="835ce713-5ca0-4111-8726-6ba083eaad26" InformativeScreenshot="a92074a307479131fc5ebaf728103f39.png" Reference="WbrhqUuiMkW6seLbyOSsUQ/LtE_WqItZUyY-RITeYVOgA" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='Microsoft.WindowsCalculator_8wekyb3d8bbwe!App' title='Calculator' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NGetText DisplayName="Get Text 'Text - Result'" sap:VirtualizedContainerService.HintSize="353.6,182.4" sap2010:WorkflowViewState.IdRef="NGetText_1" Version="V3">
+            <uix:NGetText DisplayName="Get Text 'Text - Result'" sap:VirtualizedContainerService.HintSize="354,184.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_1" Version="V3">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable ContentHash="4TZDhSKvr06qN8ofFNFzFQ" DesignTimeRectangle="9, 136, 484, 116" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='CalculatorResults' name='Display is 0' role='text' /&gt;" FuzzySelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='CalculatorResults' role='text' /&gt;" Guid="30e266bc-b199-4f18-ae31-fb54f72a414f" InformativeScreenshot="ba21574db3901a29ddfdc6b8e954938b.png" Reference="WbrhqUuiMkW6seLbyOSsUQ/TdeLFT9xCU-wnxRAtbAjnQ" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='Microsoft.WindowsCalculator_8wekyb3d8bbwe!App' title='Calculator' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
               </uix:NGetText.Target>

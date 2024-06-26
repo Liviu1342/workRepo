@@ -38,5 +38,6 @@ namespace Library_Win_VB_Simple.Coded
             else {
                 Log(team.name + " failed to qualify for next year's UEFA Champions League");
             }
+        }
     }
 }

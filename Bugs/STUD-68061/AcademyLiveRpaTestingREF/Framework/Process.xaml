@@ -1,0 +1,179 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Process" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property sap2010:Annotation.AnnotationText="Transaction item to be processed." Name="io_TransactionItem" Type="InOutArgument(sd:DataRow)" />
+    <x:Property Name="out_isTransactionSkipped" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="in_BrowserElement" Type="InArgument(ui:UiElement)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>999,1179</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="50">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Windows.Forms</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="80">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="867,1114" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message Process Row Start" sap:VirtualizedContainerService.HintSize="825,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Processing Row: [Email: &quot;+io_TransactionItem(&quot;Email&quot;).ToString+&quot;] [Loan Amount: &quot;+io_TransactionItem(&quot;Loan Amount&quot;).ToString+&quot;] [Loan Term: &quot;+io_TransactionItem(&quot;Loan Term&quot;).ToString+&quot;] [Income: &quot;+io_TransactionItem(&quot;Income&quot;).ToString+&quot;] [Age: &quot;+io_TransactionItem(&quot;Age&quot;).ToString+&quot;]&quot;]" />
+    <If sap2010:Annotation.AnnotationText="Elements previously processed with System Exception will not be skipped" Condition="[String.IsNullOrEmpty(io_TransactionItem(&quot;LoanID&quot;).ToString)]" DisplayName="If transaction item must be processed else skip it" sap:VirtualizedContainerService.HintSize="825,819" sap2010:WorkflowViewState.IdRef="If_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="476,630" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ValidateLoan workflow" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\ValidateAndProcessLoan.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="ui:UiElement" x:Key="in_BrowserElement">[in_BrowserElement]</InArgument>
+              <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_TransactionItem">[io_TransactionItem]</InOutArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="434,386" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[in_BrowserElement]" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="1fe2a96b-5f32-49b9-91f9-99a21a55689b" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'ApplyForAnotherLoan'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1fe2a96b-5f32-49b9-91f9-99a21a55689b" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://uibank.uipath.com/loans/result/62bc30dbf826774c03b6fc45/8/true" ContentHash="eFObJKXVXEyt6Mf7HPyW_g" DesignTimeRectangle="845, 536, 230, 50" ElementType="Button" FriendlyName="'ApplyForAnotherLoan'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='applyForNewLoanButton' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='applyForNewLoanButton' class='btn form-button btn-blue-outline btn-xl' check:text='Apply For Another Loan' /&gt;" Guid="7365e8cb-cb40-47f1-9580-61f1f7d273eb" ImageBase64="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" InformativeScreenshot="5f975fd6a4da22ea21c4aa13ed9823a7.png" Reference="ZtXXAvY13EqoFsr0QYyqIg/fIRlwqXa_EmP3tXy8XbObQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='UiBank' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="0, 0, 0, 0" />
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Boolean">[out_isTransactionSkipped]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>

@@ -1,0 +1,24 @@
+[02/28/2024 22:20:22] [UiPath.Executor]
+FileTarget(Name=TraceLog): Failed to create file appender: C:\Users\studioadmin\AppData\Local\UiPath\Logs\internal/Robot.log
+System.UnauthorizedAccessException: Access to the path 'C:\Users\studioadmin\AppData\Local\UiPath\Logs\internal\Robot.log' is denied.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.MutexMultiProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.MutexMultiProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+[02/28/2024 22:20:22] [UiPath.Executor.exe]
+FileTarget(Name=TraceLog): Failed to create file appender: C:\Users\studioadmin\AppData\Local\UiPath\Logs\internal/Robot.log
+System.UnauthorizedAccessException: Access to the path 'C:\Users\studioadmin\AppData\Local\UiPath\Logs\internal\Robot.log' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.MutexMultiProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.MutexMultiProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)

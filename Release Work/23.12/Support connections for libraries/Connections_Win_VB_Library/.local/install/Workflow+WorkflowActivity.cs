@@ -6,6 +6,7 @@ using System.Runtime;
 
 namespace Connections_Win_VB_Library
 {
+    [System.ComponentModel.Browsable(false)]
     public class WorkflowActivity : System.Activities.Activity
     {
         public WorkflowActivity()

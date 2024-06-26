@@ -2,33 +2,19 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UiPath.CodedWorkflows;
+using UiPath.CodedWorkflows.Interfaces;
 using UiPath.Activities.Contracts;
-using Library_Win_CS_Simple.ObjectRepository;
-using System.Data;
-using UiPath.Core;
-using UiPath.Core.Activities.Storage;
-using UiPath.Excel;
-using UiPath.Excel.Activities;
-using UiPath.Excel.Activities.API;
-using UiPath.Excel.Activities.API.Models;
-using UiPath.Mail.Activities.Api;
-using UiPath.Orchestrator.Client.Models;
-using UiPath.Testing;
-using UiPath.Testing.Activities.TestData;
-using UiPath.Testing.Activities.TestDataQueues.Enums;
-using UiPath.Testing.Enums;
-using UiPath.UIAutomationNext.API.Contracts;
-using UiPath.UIAutomationNext.API.Models;
-using UiPath.UIAutomationNext.Enums;
+using Library_Win_CS_Simple;
 
+[assembly: WorkflowRunnerServiceAttribute(typeof(WorkflowRunnerService))]
 namespace Library_Win_CS_Simple
 {
     public class WorkflowRunnerService
     {
-        private readonly Func<string, IDictionary<string, object>, TimeSpan?, bool, InvokeTargetSession, IDictionary<string, object>> _runWorkflowHandler;
-        public WorkflowRunnerService(Func<string, IDictionary<string, object>, TimeSpan?, bool, InvokeTargetSession, IDictionary<string, object>> runWorkflowHandler)
+        private readonly ICodedWorkflowServices _services;
+        public WorkflowRunnerService(ICodedWorkflowServices services)
         {
-            _runWorkflowHandler = runWorkflowHandler;
+            _services = services;
         }
 
         /// <summary>
@@ -36,7 +22,7 @@ namespace Library_Win_CS_Simple
         /// </summary>
         public void MessageBox_CustomActivity(string in_Message)
         {
-            var result = _runWorkflowHandler(@"MessageBox_CustomActivity.xaml", new Dictionary<string, object>{{"in_Message", in_Message}}, default, default, default);
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"MessageBox_CustomActivity.xaml", new Dictionary<string, object>{{"in_Message", in_Message}}, default, default, default, GetAssemblyName());
         }
 
         /// <summary>
@@ -44,7 +30,13 @@ namespace Library_Win_CS_Simple
         /// </summary>
         public void UseFootballTeam_Custom_Activity_Coded()
         {
-            var result = _runWorkflowHandler(@"Coded\UseFootballTeam_Custom_Activity_Coded.cs", new Dictionary<string, object>{}, default, default, default);
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Coded\UseFootballTeam_Custom_Activity_Coded.cs", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+        }
+
+        private string GetAssemblyName()
+        {
+            var assemblyProvider = _services.Container.Resolve<ILibraryAssemblyProvider>();
+            return assemblyProvider.GetLibraryAssemblyName(GetType().Assembly);
         }
     }
 }

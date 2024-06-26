@@ -1,0 +1,154 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:Library_Cross_VB_Entities;assembly=DataService.Library_Cross_VB_Entities" xmlns:l1="clr-namespace:Library_Cross_VB_CustomViewModels;assembly=Library_Cross_VB_CustomViewModels" xmlns:l2="clr-namespace:Library_Cross_VB_Entities;assembly=Library_Cross_VB_Entities" xmlns:l3="clr-namespace:Library_Cross_VB_Simple;assembly=Library_Cross_VB_Simple" xmlns:l4="clr-namespace:Library_Cross_VB_UsesOR_Objects;assembly=Library_Cross_VB_UsesOR_Objects" xmlns:l5="clr-namespace:Library_Cross_VB_Webservice;assembly=Library_Cross_VB_Webservice" xmlns:lc="clr-namespace:Library_Cross_VB_Entities.Coded;assembly=Library_Cross_VB_Entities.Core" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:s1="clr-namespace:SwaggerPetstore;assembly=SwaggerPetstore" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_Cat" Type="OutArgument(l:CatEntity)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1208,1356.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>Library_Cross_VB_CustomViewModels</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>Library_Cross_VB_Entities</x:String>
+      <x:String>UiPath.DataService.Definition</x:String>
+      <x:String>UiPath.DataService.Activities</x:String>
+      <x:String>UiPath.DataService.Activities.Models</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>Library_Cross_VB_Entities.Coded</x:String>
+      <x:String>Library_Cross_VB_Simple</x:String>
+      <x:String>Library_Cross_VB_UsesOR_Objects</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>SwaggerPetstore</x:String>
+      <x:String>Library_Cross_VB_Webservice</x:String>
+      <x:String>UiPath.WebClient.PetClientNamespace</x:String>
+      <x:String>UiPath.WebClient.Activities.Generator.Swagger</x:String>
+      <x:String>UiPath.WebClient.Activities.Generator.Code</x:String>
+      <x:String>System.Numerics</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>Library_Cross_VB_CustomViewModels</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>Library_Cross_VB_Entities</AssemblyReference>
+      <AssemblyReference>Library_Cross_VB_Entities.Core</AssemblyReference>
+      <AssemblyReference>DataService.Library_Cross_VB_Entities</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>Library_Cross_VB_Simple.Core</AssemblyReference>
+      <AssemblyReference>Library_Cross_VB_Simple</AssemblyReference>
+      <AssemblyReference>Library_Cross_VB_UsesOR_Objects</AssemblyReference>
+      <AssemblyReference>Library_Cross_VB_UsesOR_Objects.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>SwaggerPetstore</AssemblyReference>
+      <AssemblyReference>Library_Cross_VB_Webservice.Core</AssemblyReference>
+      <AssemblyReference>Library_Cross_VB_Webservice</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="512,1292" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s1:Pet" Name="outpet">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">Pet_CustomActivity_1</x:String>
+            <x:String x:Key="SourcePropertyName">out_Pet</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <l1:CustomViewModels_CustomActivity array_Int_Arg="{x:Null}" list_String_Arg="{x:Null}" sap:VirtualizedContainerService.HintSize="449.6,278.4" sap2010:WorkflowViewState.IdRef="CustomViewModels_CustomActivity_1" bool_Arg="[3 &gt; 2]" int_Arg="1000" string_Arg="test" />
+    <l2:Entities_CustomACtivity sap:VirtualizedContainerService.HintSize="449.6,122.4" sap2010:WorkflowViewState.IdRef="Entities_CustomACtivity_1" in_Abc="testing" in_CatName="Tom" outputRecord="[out_Cat]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[out_Cat.Name + &quot; was added with ID: &quot; + out_Cat.Id.ToString]" />
+    <lc:UseFootballTeam_Custom_Activity_CodedActivity DisplayName="UseFootballTeam Custom Activity CodedActivity" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="UseFootballTeam_Custom_Activity_CodedActivity_1" />
+    <l3:Custom_LogMessage sap:VirtualizedContainerService.HintSize="449.6,122.4" sap2010:WorkflowViewState.IdRef="Custom_LogMessage_1" in_Message="[out_Cat.CreatedBy.ToString]" />
+    <l4:GoogleChrome_CustomActivity DisplayName="NewActivity" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="GoogleChrome_CustomActivity_1" />
+    <l5:Pet_CustomActivity sap:VirtualizedContainerService.HintSize="449.6,226.4" sap2010:WorkflowViewState.IdRef="Pet_CustomActivity_1" in_PetName="Gigi" out_Pet="[outpet]">
+      <l5:Pet_CustomActivity.in_PetID>
+        <InArgument x:TypeArguments="s:Nullable(x:Int64)">
+          <Literal x:TypeArguments="s:Nullable(x:Int64)" Value="230495" />
+        </InArgument>
+      </l5:Pet_CustomActivity.in_PetID>
+    </l5:Pet_CustomActivity>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[outpet.Name.ToUpper]" />
+  </Sequence>
+</Activity>

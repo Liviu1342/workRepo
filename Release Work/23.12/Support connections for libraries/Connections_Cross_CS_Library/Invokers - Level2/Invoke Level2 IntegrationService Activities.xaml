@@ -1,0 +1,138 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Invoke_Level2_IntegrationService_Activities" this:Invoke_Level2_IntegrationService_Activities.in_Git_Repo="Activities" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C8F4F95C39B_issue_comment_List.Bundle;assembly=C8F4F95C39B_issue_co.3UOJc4CaZlO1L22d51RUY65" xmlns:uiascb1="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C962E9A0AB3_ConversationsInfo_GET_Retrieve.Bundle;assembly=C962E9A0AB3_Conversa.1hWvh2Kf9CN13EzY4gGbIM2" xmlns:uiascb2="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C2AAC668FCD_branches_List.Bundle;assembly=C2AAC668FCD_branches.Wut8A4iAsdO1cB6763dlZxH3" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_Jira_comments" Type="OutArgument(uiascb:issue_comment_List[])" />
+    <x:Property Name="out_Slack_channel" Type="OutArgument(uiascb1:ConversationsInfo_GET_Retrieve)" />
+    <x:Property Name="in_Git_Repo" Type="InArgument(x:String)" />
+    <x:Property Name="out_GitHub_branches" Type="OutArgument(uiascb2:branches_List[])" />
+  </x:Members>
+  <sap2010:Annotation.AnnotationText>UPTF000000A8eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjoiaHR0cHM6XC9cL3d3dy5nb29nbGUuY29tIiwiPEluaXRpYWxUb29sdGlwPmtfX0JhY2tpbmdGaWVsZCI6bnVsbCwiPFZlcnNpb24+a19fQmFja2luZ0ZpZWxkIjoxfQ==</sap2010:Annotation.AnnotationText>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>978.4,911.2</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.C8F4F95C39B_issue_comment_List.Bundle</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.C962E9A0AB3_ConversationsInfo_GET_Retrieve.Bundle</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.C2AAC668FCD_branches_List.Bundle</x:String>
+      <x:String>System.Numerics</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>C8F4F95C39B_issue_co.3UOJc4CaZlO1L22d51RUY65</AssemblyReference>
+      <AssemblyReference>C962E9A0AB3_Conversa.1hWvh2Kf9CN13EzY4gGbIM2</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>C2AAC668FCD_branches.Wut8A4iAsdO1cB6763dlZxH3</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Invoke_Level2_IntegrationService_Activities" sap:VirtualizedContainerService.HintSize="512.8,809.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke IntegrationService Activities - Invoke Workflow File (Invoke IntegrationService Activities.xaml)" sap:VirtualizedContainerService.HintSize="450.4,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Invoke IntegrationService Activities.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="uiascb:issue_comment_List[]" x:Key="out_Jira_comments">
+          <CSharpReference x:TypeArguments="uiascb:issue_comment_List[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">out_Jira_comments</CSharpReference>
+        </OutArgument>
+        <OutArgument x:TypeArguments="uiascb1:ConversationsInfo_GET_Retrieve" x:Key="out_Slack_channel">
+          <CSharpReference x:TypeArguments="uiascb1:ConversationsInfo_GET_Retrieve" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">out_Slack_channel</CSharpReference>
+        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Git_Repo">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">in_Git_Repo</CSharpValue>
+        </InArgument>
+        <OutArgument x:TypeArguments="uiascb2:branches_List[]" x:Key="out_GitHub_branches">
+          <CSharpReference x:TypeArguments="uiascb2:branches_List[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">out_GitHub_branches</CSharpReference>
+        </OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">"Invoke Level2: " + out_GitHub_branches.Count().ToString() + " branches in repo " + in_Git_Repo</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">"Invoke Level2: " + out_Jira_comments.Count().ToString()</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">"Invoke Level2: " + out_Slack_channel.name_normalized.ToUpper()</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+  </Sequence>
+</Activity>

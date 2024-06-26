@@ -18,6 +18,7 @@ using UiPath.UIAutomationNext.Enums;
 
 namespace Debug_Master_Windows_CS_TAP.Coded.CodedWfs
 {
+    [System.ComponentModel.Browsable(false)]
     public class TestCase_CodedActivity : System.Activities.Activity
     {
         public TestCase_CodedActivity()

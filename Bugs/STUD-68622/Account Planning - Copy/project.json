@@ -1,0 +1,104 @@
+{
+  "name": "GetInformationForCompany",
+  "projectId": "a5772b04-4eb8-476d-99f7-b2fa57cabf7d",
+  "description": "Get information for a company based on company name",
+  "main": "Main.xaml",
+  "dependencies": {
+    "Newtonsoft.Json": "[13.0.3]",
+    "UiPath.CodedWorkflows": "[23.12.0-alpha.4641997]",
+    "UiPath.MicrosoftOffice365.Activities": "[2.5.7]",
+    "UiPath.System.Activities": "[24.2.0-preview]",
+    "UiPath.WebAPI.Runtime": "[1.18.0]",
+    "UiPath.Word.Activities": "[1.19.2-alpha.5175237]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "23.10.3.0",
+  "projectVersion": "1.0.31",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": false,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": false,
+    "saveToCloud": false
+  },
+  "arguments": {
+    "input": [
+      {
+        "name": "Account_Name",
+        "type": "System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+        "required": true,
+        "hasDefault": true
+      },
+      {
+        "name": "URL_of_Sharepoint_Folder_for_Output",
+        "type": "System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+        "required": false,
+        "hasDefault": true
+      }
+    ],
+    "output": [
+      {
+        "name": "SharePointLink",
+        "type": "System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+      }
+    ]
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "741d7c36-3d39-471b-a712-d9f851cf01b3",
+      "input": [
+        {
+          "name": "Account_Name",
+          "type": "System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+          "required": true,
+          "hasDefault": true
+        },
+        {
+          "name": "URL_of_Sharepoint_Folder_for_Output",
+          "type": "System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+          "required": false,
+          "hasDefault": true
+        }
+      ],
+      "output": [
+        {
+          "name": "SharePointLink",
+          "type": "System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+        }
+      ]
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Portable"
+}

@@ -18,14 +18,19 @@ namespace Library_Cross_VB_Complex
 {
     public partial class CodedWorkflow : CodedWorkflowBase
     {
+        private Lazy<Library_Cross_VB_Complex.WorkflowRunnerService> _workflowRunnerServiceLazy;
+        private Lazy<ConnectionsManager> _connectionsManagerLazy;
         public CodedWorkflow()
         {
-            _ = new System.Type[]{typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.MicrosoftOffice365.Activities.Api.IOffice365ConnectionsService), typeof(UiPath.Testing.API.ITestingService)};
-            workflows = new WorkflowRunnerService(this.RunWorkflow);
+            _ = new System.Type[]{typeof(UiPath.MicrosoftOffice365.Activities.Api.IOffice365ConnectionsService), typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService)};
+            _workflowRunnerServiceLazy = new Lazy<Library_Cross_VB_Complex.WorkflowRunnerService>(() => new Library_Cross_VB_Complex.WorkflowRunnerService(this.services));
+#pragma warning disable
+            _connectionsManagerLazy = new Lazy<ConnectionsManager>(() => new ConnectionsManager(serviceContainer));
+#pragma warning restore
         }
 
-        protected WorkflowRunnerService workflows { get; private set; }
-
+        protected Library_Cross_VB_Complex.WorkflowRunnerService workflows => _workflowRunnerServiceLazy.Value;
+        protected ConnectionsManager connections => _connectionsManagerLazy.Value;
 #pragma warning disable
         protected UiPath.MicrosoftOffice365.Activities.Api.IOffice365ConnectionsService office365 { get => serviceContainer.Resolve<UiPath.MicrosoftOffice365.Activities.Api.IOffice365ConnectionsService>() ; }
 #pragma warning restore

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="877.6,1042.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:Library_Win_VB_Connections;assembly=Library_Win_VB_Connections" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1740.6666666666667,884" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:Library_Win_VB_Connections;assembly=Library_Win_VB_Connections" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -39,6 +39,10 @@
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
       <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.MicrosoftOffice365</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -82,16 +86,22 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="416,977.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="416,638.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <l:Outlook_CustomActivity GetEmailListConnections_1_BrowserFolder="{x:Null}" GetEmailListConnections_1_BrowserFolderId="{x:Null}" GetEmailListConnections_2_BrowserFolder="{x:Null}" GetEmailListConnections_2_BrowserFolderId="{x:Null}" GetEmailListConnections_1_Connection0="7ab8e158-a79f-ec11-a99b-e42aac668fcd" GetEmailListConnections_2_Connection0="7ab8e158-a79f-ec11-a99b-e42aac668fcd" sap:VirtualizedContainerService.HintSize="353.6,299.2" sap2010:WorkflowViewState.IdRef="Outlook_CustomActivity_1" />
-    <l:Outlook_CustomActivity GetEmailListConnections_1_BrowserFolder="{x:Null}" GetEmailListConnections_1_BrowserFolderId="{x:Null}" GetEmailListConnections_2_BrowserFolder="{x:Null}" GetEmailListConnections_2_BrowserFolderId="{x:Null}" GetEmailListConnections_1_Connection0="7ab8e158-a79f-ec11-a99b-e42aac668fcd" GetEmailListConnections_2_Connection0="7ab8e158-a79f-ec11-a99b-e42aac668fcd" sap:VirtualizedContainerService.HintSize="353.6,299.2" sap2010:WorkflowViewState.IdRef="Outlook_CustomActivity_2" />
-    <l:Outlook_CustomActivity GetEmailListConnections_1_BrowserFolder="{x:Null}" GetEmailListConnections_1_BrowserFolderId="{x:Null}" GetEmailListConnections_2_BrowserFolder="{x:Null}" GetEmailListConnections_2_BrowserFolderId="{x:Null}" GetEmailListConnections_1_Connection0="7ab8e158-a79f-ec11-a99b-e42aac668fcd" GetEmailListConnections_2_Connection0="7ab8e158-a79f-ec11-a99b-e42aac668fcd" sap:VirtualizedContainerService.HintSize="353.6,290.4" sap2010:WorkflowViewState.IdRef="Outlook_CustomActivity_3" />
+    <l:Outlook_CustomActivity GetEmailListConnections_1_BrowserFolder="{x:Null}" GetEmailListConnections_1_BrowserFolderId="AAMkADIxOTk4ODViLWEzOGUtNDMzYy04YzM2LTE1ZWQ1YWMzMTM5YwAuAAAAAADJ1v1iaUE7Ro0D_ZnWVvehAQDRF-qtdOjXT4c9QsLpW7vVAAAEc7D5AAA=" GetEmailListConnections_1_Connection0="7ab8e158-a79f-ec11-a99b-e42aac668fcd" sap:VirtualizedContainerService.HintSize="354,186.66666666666666" sap2010:WorkflowViewState.IdRef="Outlook_CustomActivity_1" />
+    <l:Outlook_CustomActivity GetEmailListConnections_1_BrowserFolder="{x:Null}" GetEmailListConnections_1_BrowserFolderId="AQMkADAwATNiZmYAZC1jZGQAYS01MjU4LTAwAi0wMAoALgAAA4lGR5-xDiJNnmASwqamAFbcAQC3MaJlrBdsTYzHyjd2YGAAqQAAAgEIAAAA" GetEmailListConnections_1_Connection0="0dbd2c18-2889-4a95-8361-723612849cad" sap:VirtualizedContainerService.HintSize="354,186.66666666666666" sap2010:WorkflowViewState.IdRef="Outlook_CustomActivity_2" />
+    <l:Outlook_CustomActivity GetEmailListConnections_1_BrowserFolder="{x:Null}" GetEmailListConnections_1_BrowserFolderId="AAMkADIxOTk4ODViLWEzOGUtNDMzYy04YzM2LTE1ZWQ1YWMzMTM5YwAuAAAAAADJ1v1iaUE7Ro0D_ZnWVvehAQDRF-qtdOjXT4c9QsLpW7vVAATS09xRAAA=" GetEmailListConnections_1_Connection0="2f0ccaae-8a8d-4c94-aff5-5f3663378bd9" sap:VirtualizedContainerService.HintSize="354,177.33333333333334" sap2010:WorkflowViewState.IdRef="Outlook_CustomActivity_3" />
   </Sequence>
 </Activity>

@@ -1,0 +1,229 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Run_Invoke_Level2_1_Gmail_1_GDrive_1GitHub_1_Jira_1_Slack_1_OpenAI" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ci="clr-namespace:Connections_Win_VB_Library.Invokers___Level_1;assembly=Connections_Win_VB_Library" xmlns:ci1="clr-namespace:Connections_Win_VB_Library.Invokers___Level_2;assembly=Connections_Win_VB_Library" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ugdm="clr-namespace:UiPath.GSuite.Drive.Models;assembly=UiPath.GSuite" xmlns:ugm="clr-namespace:UiPath.GSuite.Models;assembly=UiPath.GSuite" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C8F4F95C39B_issue_comment_List.Bundle;assembly=C8F4F95C39B_issue_co.GUwsoSSANG1iXbAN1PoT8B3" xmlns:uiascb1="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.CC052707C93_usergroups_List.Bundle;assembly=CC052707C93_usergrou.SJ9rN4iLYYO1zq1cVWnNDd" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Path" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Run_Invoke_Level2_1_Gmail_1_GDrive_1GitHub_1_Jira_1_Slack_1_OpenAI.in_Path>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Run_Invoke_Level2_1_Gmail_1_GDrive_1GitHub_1_Jira_1_Slack_1_OpenAI.in_Path>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1194.4,4080.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Run_Invoke_Level2_1_Gmail_1_GDrive_1GitHub_1_Jira_1_Slack_1_OpenAI_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.GSuite.Models</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.Api.Google.Gmail.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.CC052707C93_usergroups_List.Bundle</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.C8F4F95C39B_issue_comment_List.Bundle</x:String>
+      <x:String>Connections_Win_VB_Library.Invokers___Level_2</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.GSuite</x:String>
+      <x:String>UiPath.Platform</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>Connections_Win_VB_Library.Invokers___Level_1</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>CC052707C93_usergrou.SJ9rN4iLYYO1zq1cVWnNDd</AssemblyReference>
+      <AssemblyReference>C8F4F95C39B_issue_co.GUwsoSSANG1iXbAN1PoT8B3</AssemblyReference>
+      <AssemblyReference>Connections_Win_VB_Library</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Run_Invoke_Level2_1_Gmail_1_GDrive_1GitHub_1_Jira_1_Slack_1_OpenAI" sap:VirtualizedContainerService.HintSize="512,4016" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="uiascb:issue_comment_List[]" Name="outjirajitcomments">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">_2nd_Invoker_1</x:String>
+            <x:String x:Key="SourcePropertyName">out_JIRA_Jit_Comments</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+      <Variable x:TypeArguments="uiascb1:usergroups_List[]" Name="outjitusergroups">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">_2nd_Invoker_1</x:String>
+            <x:String x:Key="SourcePropertyName">out_Jit_UserGroups</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+      <Variable x:TypeArguments="upr:IResource" Name="outgithubdownloadfile">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">_2nd_Invoker_1</x:String>
+            <x:String x:Key="SourcePropertyName">out_GitHub_DownloadFile</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+      <Variable x:TypeArguments="ugm:GmailMessage" Name="outgmailemail">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">_2nd_Invoker_1</x:String>
+            <x:String x:Key="SourcePropertyName">out_GMail_email</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+      <Variable x:TypeArguments="ugdm:GDriveRemoteItem" Name="outgoogledrivefileorfilder">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">_2nd_Invoker_1</x:String>
+            <x:String x:Key="SourcePropertyName">out_GoogleDrive_FileOrFilder</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="outopenaitopgeneratedtext">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">_2nd_Invoker_1</x:String>
+            <x:String x:Key="SourcePropertyName">out_OpenAI_TopGeneratedText</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[in_Path]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["Qa/E2E/UtilityProjects/DataManager/POCDataManager.zip"]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ci:Invoke_2_Google_1_GitHub___Private_DAP DisplayName="Invoke_2_Google_1_GitHub + Private_DAP ()" GetNewestEmailConnections_1_BrowserFolderLabelId="INBOX" sap:VirtualizedContainerService.HintSize="449.6,964.8" sap2010:WorkflowViewState.IdRef="Invoke_2_Google_1_GitHub___Private_DAP_1" MoveFileConnections_1_BrowserFileId="1eTd4yXLZssJJftTpd1FHkYHbVHU-yuYY4Xhh6b1axBY" MoveFileConnections_1_BrowserFolderId="1K4w0nAiuztqqUM1rt-ivJ3AhxG85pJZC" MoveFileConnections_1_FileFriendlyName="CSBT -usage guide for UiPath" MoveFileConnections_1_FolderFriendlyName="Network feed" Private_DAP_Connections__Generate_Text_Completion="1b0f23e0-3ce1-41c4-ab7f-9434cdf7ceae" Private_DAP_Connections__Get_Comments="a62937ff-b3d5-4146-8e45-a08f4f95c39b" Private_DAP_Connections__List_All_User_Groups="33dce89c-5bcf-4da1-a9c6-90b97bf74137" _2_Google_SameConnection_1_GitHub__Download_File="60e52541-022c-4e4d-bfef-a7c41552cf2e" _2_Google_SameConnection_1_GitHub__Get_Newest_Email="17d677e4-6ae6-ec11-b656-e42aac668fcd" _2_Google_SameConnection_1_GitHub__Move_File_or_Folder="fc7c19d6-6da0-ec11-a99b-e42aac668fcd" in_GitHub_Path="[in_Path]" out_GMail_email="[outgmailemail]" out_GitHub_DownloadFile="[outgithubdownloadfile]" out_GoogleDrive_FileOrFilder="[outgoogledrivefileorfilder]" out_JIRA_Jit_Comments="[outjirajitcomments]" out_Jit_UserGroups="[outjitusergroups]" out_OpenAI_TopGeneratedText="[outopenaitopgeneratedtext]" />
+    <ci1:_2nd_Invoker out_GMail_email="{x:Null}" out_GitHub_DownloadFile="{x:Null}" out_GoogleDrive_FileOrFilder="{x:Null}" out_JIRA_Jit_Comments="{x:Null}" out_Jit_UserGroups="{x:Null}" out_OpenAI_TopGeneratedText="{x:Null}" DisplayName="2nd_Invoker ()" GetNewestEmailConnections_1_BrowserFolderLabelId="INBOX" sap:VirtualizedContainerService.HintSize="449.6,808.8" sap2010:WorkflowViewState.IdRef="_2nd_Invoker_1" Invoke_2_Google_1_GitHub_Private_DAP__Private_DAP_Connections__Generate_Text_Completion="1b0f23e0-3ce1-41c4-ab7f-9434cdf7ceae" Invoke_2_Google_1_GitHub_Private_DAP__Private_DAP_Connections__Get_Comments="a62937ff-b3d5-4146-8e45-a08f4f95c39b" Invoke_2_Google_1_GitHub_Private_DAP__Private_DAP_Connections__List_All_User_Groups="33dce89c-5bcf-4da1-a9c6-90b97bf74137" Invoke_2_Google_1_GitHub_Private_DAP___2_Google_SameConnection_1_GitHub__Download_File="e173e903-6ea0-ec11-a99b-e42aac668fcd" Invoke_2_Google_1_GitHub_Private_DAP___2_Google_SameConnection_1_GitHub__Get_Newest_Email="17d677e4-6ae6-ec11-b656-e42aac668fcd" Invoke_2_Google_1_GitHub_Private_DAP___2_Google_SameConnection_1_GitHub__Move_File_or_Folder="fc7c19d6-6da0-ec11-a99b-e42aac668fcd" MoveFileConnections_1_BrowserFileId="1aRqiWj7lzxcHXp7VFiiI9Xw3bay_jG1X4G2PNTEtvVA" MoveFileConnections_1_BrowserFolderId="1K4w0nAiuztqqUM1rt-ivJ3AhxG85pJZC" MoveFileConnections_1_FileFriendlyName="FisierExcel" MoveFileConnections_1_FolderFriendlyName="Network feed" in_GitHub_Path="[in_Path]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Found &quot; + outjirajitcomments.Count.ToString + &quot; comments&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Found &quot; + outjitusergroups.Count.ToString + &quot; Slack user groups&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[outgithubdownloadfile.FullName + &quot; found in GitHub repo&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Warn" Message="[outgmailemail.Sender.DisplayName + &quot; said: &quot; + outgmailemail.Subject]" />
+    <If Condition="[outgoogledrivefileorfilder.IsFolder]" sap:VirtualizedContainerService.HintSize="449.6,676.8" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,254.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Folder &quot; + outgoogledrivefileorfilder.FullName + &quot; was moved to a new location on GoogleDrive&quot;]" />
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;File &quot; + outgoogledrivefileorfilder.FullName + &quot; was moved to a new location on GoogleDrive&quot;]" />
+        </Sequence>
+      </If.Else>
+    </If>
+    <If Condition="[outopenaitopgeneratedtext IsNot Nothing]" sap:VirtualizedContainerService.HintSize="449.6,665.6" sap2010:WorkflowViewState.IdRef="If_2">
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Warn" Message="[&quot;ChatGPT says: &quot; + outopenaitopgeneratedtext]" />
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Error" Message="[&quot;Sorry! You're too poor to use OpenAI GPT...&quot;]" />
+        </Sequence>
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>

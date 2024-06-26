@@ -1,0 +1,272 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="DAP_Connections" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.CC052707C93_usergroups_List.Bundle;assembly=CC052707C93_usergrou.SJ9rN4iLYYO1zq1cVWnNDd" xmlns:uiascb1="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C8F4F95C39B_issue_comment_List.Bundle;assembly=C8F4F95C39B_issue_co.GUwsoSSANG1iXbAN1PoT8B3" xmlns:uiascb2="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C34CDF7CEAE_generateTextCompletion_Create.Bundle;assembly=C34CDF7CEAE_generate.umGzw33txvL1gAqCx1Yoed01" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_Jit_UserGroups" Type="OutArgument(uiascb:usergroups_List[])" />
+    <x:Property Name="out_JIRA_DAP_Comments" Type="OutArgument(uiascb1:issue_comment_List[])" />
+    <x:Property Name="out_OpenAI_topGeneratedText" Type="OutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1670.6666666666667,1299.3333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>DAP_Connections_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.CC052707C93_usergroups_List.Bundle</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.C8F4F95C39B_issue_comment_List.Bundle</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>C8F4F95C39B_issue_co.GUwsoSSANG1iXbAN1PoT8B3</AssemblyReference>
+      <AssemblyReference>CC052707C93_usergrou.SJ9rN4iLYYO1zq1cVWnNDd</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>C34CDF7CEAE_generate.umGzw33txvL1gAqCx1Yoed01</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="DAP_Connections" sap:VirtualizedContainerService.HintSize="496,1234.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACs1W/24aRxB+ldX1jyQqXAA7UYLkSgbjmNY2xOCkamQly90AW9/tXnb3bFOE1Nfo6/VJ+u3eYc4+N1Wl/lHLQrAzOzsz3zc/1sGxoCQ2fSUtF5J00F0HE+I6WvJZQoUw6H66agRDmeX2/mAdnPOUgm4gjMlpGI/0T7QKGsGRMFnCV6Vw6ITulEykRWaFkjidKjajhZANRtKSZnZJbJ4nCfO22DWtno+1+pUi22x39vZfwMB0lTl7xmohF/g9UdqOdOz8bTeCU6Wu88y5Ppq5a1XXPmciuobeVusDT+BSN8ArOBtzu8SPl1715SNVZ8bFWuqaPE25Xk3pzgbIx7FI4DwM4NNF9TUnvTpYz/3xJtj4qMUCovU2KzvlNUxuWJOtK0Y3/mEe91ZHNOd5YoOu1TnBSWVEmbqxFk7dWfdQHEZOUCJ0QV9zoSne3vMapyri28su2EYwkn0ub7gp1DaNeyiVS2ivjqJPNJutakAWAgefJgOHDZQYZ3P3bsgOo4gynD2LNHFL8TNmFTMAjkUqTQG9V8dtoVmpwmJ8ht/Gu9MIBjJPqxw8NBHJuNDc4vt9aRKputdz3tcUm/eKV1XIKkmfUKRkXE17JanvHezfyirdZVzGtaQO7o8fpPTSEPtUXLl6/p3/YiB54XInZJTkMTEex941joqRc6VT7wvjM5VXcivkFpkMDKGQTZfCsIxrvO+qjpfwfNFICYE2PRWvvjTY7VJES1yzuZbGmyhNshkU2Fbb2T+Znp0+hda/zpFnjKnlqOw2j3M0ySgSc0+dgmtwU5UePw4bAa8SFFXIyqLyuhzNxljkmOu4NPFEGDsyDM2JiGOSW8f/JsJKRCm/E2meXoA6OjYX3jdw7HGEZ/wOrnqdeptEGKUZBsLPgJmab7V3Ee8cF+imC9+/jj0pXAOWdq/jLfvgS863W61WPYZzJelbIN0ugXstgo/b05rv/cH7U2b8LGEgMhBxTG4wVbQMb45FCc8NgXXCLh19neTjyeBi4MbALSINGYLBfZ5mCfRcCylMgvhM+XZvWMKNZamKBbCMGWoBMj53LB9FlnU6DdZptd/++fsfDf9AzSk8D0bMSqcOnLmz0toResMPB7jqLDTbrWanM221uv4/RB5/+U+Ig9Yzyu2TA/ZHYT8Xk6yswxoE/bLkn0ShmKnbrrBz9lK4cRCCILTQ3psJ6RsRUehmyg0aDJlw8nEgbfG1/+Z4//jtq/7e295Ddz6fCmPDXi7jhMK6BIOJPXU3fHd5a9Rkcnj+ri1+nh2et8dq+qa312AfSDtMDtohEhy2cB3MzQGLpNxqnjTYOJ8lIsLCMVXXJA8kdoegGH9kwPo5T0CpWqqLBNcYjs3GIMdee3dyhm3oouwhFdHmChgOpesdEY23vRSW1kHpNh7yjuMdLFUS9FR+NeoGuciQ8Sa3oJcRXDZ/FZpDrcz3qgSmnwMO3yqeWGZ2FDixNjsjFA08C96RdbOpz6MlxZU9xzv2YENzxBq6K5Pp5VHztfvb8amvkjz128RD8acdJdiYS0qu2JECBq58sTKB9IzLFVptdM0XVBTTXEV5MT4Ob7hI3DbJpIpRwgLpI44ynaPGKXO3fSf3FyAUGHFFlSYIH/UMBGmhUCaokomvsaK/PfY6WLf8TtXe1EpkFw4U/i/heDIVmPW0ujWkh5ZShxnOx8XrVVa9DltNnmRLHnZanf3Wq/ZeuFelWVV3P9xv/xOFRhkVlQ+ZK9UaqwbT2oq8rrJp83Jn7JTLRQ6H3cbjZhIm2xg/J+K3+4Fzwk0Pu5ZLcH8JdUdPX6ubvwB+8ynahwwAAA==" ConnectionId="a62937ff-b3d5-4146-8e45-a08f4f95c39b" DisplayName="Get Comments" sap:VirtualizedContainerService.HintSize="434,217.33333333333334" sap2010:WorkflowViewState.IdRef="ConnectorActivity_1" UiPathActivityTypeId="8e9155ce-f36a-33fe-b2fa-d471070fe96f">
+      <isactr:ConnectorActivity.FieldObjects>
+        <isactr:FieldObject Name="issueIdOrKey" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String">STUD-66666</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="Jit_issue_comment" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <OutArgument x:TypeArguments="uiascb1:issue_comment_List[]">[out_JIRA_DAP_Comments]</OutArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="orderBy" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String">+created</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="expand" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String" />
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="maximumRecordsReturned" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Int32">1000</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+      </isactr:ConnectorActivity.FieldObjects>
+    </isactr:ConnectorActivity>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[&quot;Found &quot; + out_JIRA_DAP_Comments.Count.ToString + &quot; comments&quot;]" />
+    <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACrVU70/bMBD9VyJ/LlnawhiV0DQC28pa2pECQtOEXOdovBo72OdupeJ/3+UHtF1hbNKmfInvnX3v3Tt7wd5LUKmLjUYuNVjWWbAEuBUZHyuoQNb58rXBujr3+BhYsBN+A6zDpBbKp3AljNfIGuxQulzxeY12KzQo0bcFDE5YmaM0muCLDDADG6AJ6nMCWgfa34wpaq4D78A6wgLgIitXwcQanxdHjeZ5UWJsjAKuKZAYiwObFiKaZSU5oSILNjRO1gUTEEan3M7ZfaOS3jOC1+BnDwQ02EDHXM84yUTr4b6xobVk9azWR/RPpCrpcCn02ti/Vdr6r0pT6Yo5SJ8Vu5rwkt6H3BV17iV57X8oj4Z44PHJKT6WWLpakdpQe7YGrekckYnLnYEFtBJmZUNqXWdyyDELuxphYkuKCdiZFBC+EyhnpAhcmFwcaax+4zjaae1Gu/Fee4XTVY8mJTzwOlUQ/hKm6xk8tStMjvfsybbsXV4Omne3TXF+oU8O00ZwTsNGPPabYVR8tNsr9Bb2NXi0XDWCoR8rKT7BfGSmoPe1V4oUncKtB4esc82Vg83GV+3d6Dw9Ho46XGYvI316cE7B5Ua76qF5sIkc7WqHXAsYcksOYHGhyP+aNhUqiVMderc0CDSWmFLYy5xaveW4Akd3ScCWU1xMKbFu9bz2JPbkRGnSYPyNDqh9XhuBj4h5n4bYEDH2AbCYtJguJ5BiM/X5OVfUDOL1GD+w5jud0EW4qeNDqs4nsEr8dRhtcZVnPGxFre1op9kO26tKlrmt8E2481uKgxyqiSKgGIQN1kcjChXjR4tXa1t7XE88USMAijvX5z+GtEzkHYWaURTRUdwdWOBTqSdxRumF2NL4+5/WwO5lNwYAAA==" ConnectionId="8f630a36-5914-4e85-a061-b4962e9a0ab3" DisplayName="List All User Groups" sap:VirtualizedContainerService.HintSize="434,164.66666666666666" sap2010:WorkflowViewState.IdRef="ConnectorActivity_4" UiPathActivityTypeId="54dfe228-2db4-31bd-b2cb-da257683238c">
+      <isactr:ConnectorActivity.FieldObjects>
+        <isactr:FieldObject Name="Jit_usergroups" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <OutArgument x:TypeArguments="uiascb:usergroups_List[]">[out_Jit_UserGroups]</OutArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="include_count" Type="FieldArgument" />
+        <isactr:FieldObject Name="include_users" Type="FieldArgument" />
+        <isactr:FieldObject Name="include_disabled" Type="FieldArgument" />
+      </isactr:ConnectorActivity.FieldObjects>
+    </isactr:ConnectorActivity>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Found &quot; + out_Jit_UserGroups.Count.ToString + &quot; user groups&quot;]" />
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,411.3333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <Sequence sap:VirtualizedContainerService.HintSize="416,469.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <isactr:ConnectorActivity Configuration="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" ConnectionId="1b0f23e0-3ce1-41c4-ab7f-9434cdf7ceae" DisplayName="Generate Text Completion" sap:VirtualizedContainerService.HintSize="354,217.33333333333334" sap2010:WorkflowViewState.IdRef="ConnectorActivity_6" UiPathActivityTypeId="652dfbbc-e788-39b9-83a3-29bf382692c4">
+            <isactr:ConnectorActivity.FieldObjects>
+              <isactr:FieldObject Name="prompt" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <InArgument x:TypeArguments="x:String">Write an email to a new sales lead</InArgument>
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="model" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <InArgument x:TypeArguments="x:String">gpt-3.5-turbo-instruct</InArgument>
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="max_tokens" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <InArgument x:TypeArguments="x:Int32">1920</InArgument>
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="n" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <InArgument x:TypeArguments="x:Int64">1</InArgument>
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="temperature" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <InArgument x:TypeArguments="x:Double">1</InArgument>
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="top_p" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <InArgument x:TypeArguments="x:Double">1</InArgument>
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="suffix" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <InArgument x:TypeArguments="x:String" />
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="stream" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="logprobs" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="echo" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="_stop" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <InArgument x:TypeArguments="x:String" />
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="presence_penalty" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <InArgument x:TypeArguments="x:Double">0</InArgument>
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="frequency_penalty" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <InArgument x:TypeArguments="x:Double">0</InArgument>
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="best_of" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="user" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <InArgument x:TypeArguments="x:String" />
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="out_text" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <OutArgument x:TypeArguments="x:String">[out_OpenAI_topGeneratedText]</OutArgument>
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="Jit_generateTextCompletion" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <OutArgument x:TypeArguments="uiascb2:generateTextCompletion_Create" />
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+            </isactr:ConnectorActivity.FieldObjects>
+          </isactr:ConnectorActivity>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[out_OpenAI_topGeneratedText]" />
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,216.66666666666666" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error" Message="[&quot;Sorry! You're too poor to use OpenAI connections!&quot;]" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>

@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1782,3991.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1717.3333333333333,3924</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>File_actions_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -87,7 +87,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="File_actions" sap:VirtualizedContainerService.HintSize="664,3926.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="File_actions" sap:VirtualizedContainerService.HintSize="670,3859.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:IEnumerable(ucas:StorageFileInfo)" Name="_out_ListStorageFiles_1__Result" />
       <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(Of String)]" Name="orchFileNames" />
@@ -103,20 +103,20 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ucas:ListStorageFiles Filter="{x:Null}" TimeoutMS="{x:Null}" Directory="\" DisplayName="List Storage Files" FolderPath="[in_OrchFolder]" sap:VirtualizedContainerService.HintSize="602,196.8" sap2010:WorkflowViewState.IdRef="ListStorageFiles_1" Recursive="True" Result="[_out_ListStorageFiles_1__Result]" StorageBucketName="[in_OrchStorageBucketName]" />
-    <ui:ForEach x:TypeArguments="ucas:StorageFileInfo" CurrentIndex="{x:Null}" DisplayName="For each" sap:VirtualizedContainerService.HintSize="602,420" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[_out_ListStorageFiles_1__Result]">
+    <ucas:ListStorageFiles Filter="{x:Null}" TimeoutMS="{x:Null}" Directory="\" DisplayName="List Storage Files" FolderPath="[in_OrchFolder]" sap:VirtualizedContainerService.HintSize="608,229.33333333333334" sap2010:WorkflowViewState.IdRef="ListStorageFiles_1" Recursive="True" Result="[_out_ListStorageFiles_1__Result]" StorageBucketName="[in_OrchStorageBucketName]" />
+    <ui:ForEach x:TypeArguments="ucas:StorageFileInfo" CurrentIndex="{x:Null}" DisplayName="For each" sap:VirtualizedContainerService.HintSize="608,456" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[_out_ListStorageFiles_1__Result]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="ucas:StorageFileInfo">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ucas:StorageFileInfo" Name="file" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="492,231.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,256" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uasc:AppendItemToCollection x:TypeArguments="x:String" Collection="[orchFileNames]" DisplayName="Append items to collection" sap:VirtualizedContainerService.HintSize="450,143.2" sap2010:WorkflowViewState.IdRef="AppendItemToCollection`1_2" Result="[orchFileNames]">
+            <uasc:AppendItemToCollection x:TypeArguments="x:String" Collection="[orchFileNames]" DisplayName="Append items to collection" sap:VirtualizedContainerService.HintSize="450,168" sap2010:WorkflowViewState.IdRef="AppendItemToCollection`1_2" Result="[orchFileNames]">
               <uasc:AppendItemToCollection.Items>
                 <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                   <InArgument x:TypeArguments="x:String">[file.FileFullPath]</InArgument>
@@ -127,26 +127,26 @@
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <Sequence DisplayName="Add File to Orch if it doesn't exist" sap:VirtualizedContainerService.HintSize="602,815.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+    <Sequence DisplayName="Add File to Orch if it doesn't exist" sap:VirtualizedContainerService.HintSize="608,924.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_6">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uasc:ExistsInCollection x:TypeArguments="x:String" Index="{x:Null}" Collection="[orchFileNames]" DisplayName="Exists in collection" Exists="[_out_ExistsInCollection_Generic_1_1__Exists]" sap:VirtualizedContainerService.HintSize="526,143.6" sap2010:WorkflowViewState.IdRef="ExistsInCollection`1_2" Item="[in_Filename]" />
-      <If Condition="[not _out_ExistsInCollection_Generic_1_1__Exists]" sap:VirtualizedContainerService.HintSize="526,520.8" sap2010:WorkflowViewState.IdRef="If_1">
+      <uasc:ExistsInCollection x:TypeArguments="x:String" Index="{x:Null}" Collection="[orchFileNames]" DisplayName="Exists in collection" Exists="[_out_ExistsInCollection_Generic_1_1__Exists]" sap:VirtualizedContainerService.HintSize="546,176.66666666666666" sap2010:WorkflowViewState.IdRef="ExistsInCollection`1_2" Item="[in_Filename]" />
+      <If Condition="[not _out_ExistsInCollection_Generic_1_1__Exists]" sap:VirtualizedContainerService.HintSize="546,628" sap2010:WorkflowViewState.IdRef="If_1">
         <If.Then>
-          <Sequence sap:VirtualizedContainerService.HintSize="492,337.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,360.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ucas:WriteStorageText TimeoutMS="{x:Null}" DisplayName="Write Storage Text" FolderPath="[in_OrchFolder]" sap:VirtualizedContainerService.HintSize="450,249.2" sap2010:WorkflowViewState.IdRef="WriteStorageText_1" Path="[in_Filename]" StorageBucketName="[in_OrchStorageBucketName]" Text="[in_TextForFile]" />
+            <ucas:WriteStorageText TimeoutMS="{x:Null}" DisplayName="Write Storage Text" FolderPath="[in_OrchFolder]" sap:VirtualizedContainerService.HintSize="450,272.6666666666667" sap2010:WorkflowViewState.IdRef="WriteStorageText_1" Path="[in_Filename]" StorageBucketName="[in_OrchStorageBucketName]" Text="[in_TextForFile]" />
           </Sequence>
         </If.Then>
         <If.Else>
-          <Sequence sap:VirtualizedContainerService.HintSize="416,81.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -156,9 +156,9 @@
         </If.Else>
       </If>
     </Sequence>
-    <ucas:ReadStorageText TimeoutMS="{x:Null}" DisplayName="Read Storage Text" FolderPath="[in_OrchFolder]" sap:VirtualizedContainerService.HintSize="602,196.8" sap2010:WorkflowViewState.IdRef="ReadStorageText_1" Path="[in_Filename]" Result="[_out_ReadStorageText_1__Result]" StorageBucketName="[in_OrchStorageBucketName]" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="602,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;File actions.xaml: &quot; + _out_ReadStorageText_1__Result]" />
-    <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists" Exists="[_out_PathExists_1__Exists]" sap:VirtualizedContainerService.HintSize="602,142.4" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[in_LocalFile]" PathType="File" />
+    <ucas:ReadStorageText TimeoutMS="{x:Null}" DisplayName="Read Storage Text" FolderPath="[in_OrchFolder]" sap:VirtualizedContainerService.HintSize="608,229.33333333333334" sap2010:WorkflowViewState.IdRef="ReadStorageText_1" Path="[in_Filename]" Result="[_out_ReadStorageText_1__Result]" StorageBucketName="[in_OrchStorageBucketName]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="608,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;File actions.xaml: &quot; + _out_ReadStorageText_1__Result]" />
+    <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists" Exists="[_out_PathExists_1__Exists]" sap:VirtualizedContainerService.HintSize="608,176" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[in_LocalFile]" PathType="File" />
     <If Condition="[_out_PathExists_1__Exists]" sap:VirtualizedContainerService.HintSize="602,1239.6" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
         <Sequence sap:VirtualizedContainerService.HintSize="492,703.6" sap2010:WorkflowViewState.IdRef="Sequence_7">

@@ -1,4 +1,13 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Microsoft_activity_2" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1723.2,1142.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umac="clr-namespace:UiPath.MicrosoftOffice365.Activities.Calendar;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umace="clr-namespace:UiPath.MicrosoftOffice365.Activities.Calendar.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umcm="clr-namespace:UiPath.MicrosoftOffice365.Calendar.Models;assembly=UiPath.MicrosoftOffice365" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Microsoft_activity_2" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umac="clr-namespace:UiPath.MicrosoftOffice365.Activities.Calendar;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umace="clr-namespace:UiPath.MicrosoftOffice365.Activities.Calendar.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umcm="clr-namespace:UiPath.MicrosoftOffice365.Calendar.Models;assembly=UiPath.MicrosoftOffice365" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="_out_GetEventListConnections_1__EventList" Type="InArgument(scg:List(umcm:O365EventItem))" />
+  </x:Members>
+  <this:Microsoft_activity_2._out_GetEventListConnections_1__EventList>
+    <InArgument x:TypeArguments="scg:List(umcm:O365EventItem)" />
+  </this:Microsoft_activity_2._out_GetEventListConnections_1__EventList>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>1360.8,1116.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -83,16 +92,13 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Microsoft_activity_2" sap:VirtualizedContainerService.HintSize="588,1077.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
-    <Sequence.Variables>
-      <Variable x:TypeArguments="scg:List(umcm:O365EventItem)" Name="_out_GetEventListConnections_1__EventList" />
-    </Sequence.Variables>
+  <Sequence DisplayName="Microsoft_activity_2" sap:VirtualizedContainerService.HintSize="608,1052" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <umac:GetEventListConnections Calendar="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Filter="{x:Null}" AuthScopesInvalid="False" CalendarInputMode="Browse" DisplayName="Get Event List" sap:VirtualizedContainerService.HintSize="526,259.2" sap2010:WorkflowViewState.IdRef="GetEventListConnections_1" UseConnectionService="True">
+    <umac:GetEventListConnections Calendar="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Filter="{x:Null}" AuthScopesInvalid="False" CalendarInputMode="Browse" DisplayName="Get Event List" sap:VirtualizedContainerService.HintSize="545.6,288.8" sap2010:WorkflowViewState.IdRef="GetEventListConnections_1" UseConnectionService="True">
       <umac:GetEventListConnections.BrowserCalendarFriendlyName>
         <InArgument x:TypeArguments="x:String">
           <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_9">Product - Dev Coffees - Calendar (view only)</Literal>
@@ -130,7 +136,7 @@
       </umac:GetEventListConnections.EndDate>
       <umac:GetEventListConnections.EventList>
         <OutArgument x:TypeArguments="scg:List(umcm:O365EventItem)">
-          <CSharpReference x:TypeArguments="scg:List(umcm:O365EventItem)">_out_GetEventListConnections_1__EventList</CSharpReference>
+          <CSharpReference x:TypeArguments="scg:List(umcm:O365EventItem)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">_out_GetEventListConnections_1__EventList</CSharpReference>
         </OutArgument>
       </umac:GetEventListConnections.EventList>
       <umac:GetEventListConnections.MaxResults>
@@ -149,22 +155,22 @@
         </InArgument>
       </umac:GetEventListConnections.StartDate>
     </umac:GetEventListConnections>
-    <ui:ForEach x:TypeArguments="umcm:O365EventItem" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="526,420.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+    <ui:ForEach x:TypeArguments="umcm:O365EventItem" CurrentIndex="{x:Null}" DisplayName="For Each currentItem" sap:VirtualizedContainerService.HintSize="545.6,400.8" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="umcm:O365EventItem">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="umcm:O365EventItem" Name="currentItem" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="492,232" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,254.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1">
               <ui:LogMessage.Message>
                 <InArgument x:TypeArguments="x:Object">
-                  <CSharpValue x:TypeArguments="x:Object">currentItem.Subject</CSharpValue>
+                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">currentItem.Subject</CSharpValue>
                 </InArgument>
               </ui:LogMessage.Message>
             </ui:LogMessage>
@@ -173,11 +179,11 @@
       </ui:ForEach.Body>
       <ui:ForEach.Values>
         <InArgument x:TypeArguments="sc:IEnumerable">
-          <CSharpValue x:TypeArguments="sc:IEnumerable">_out_GetEventListConnections_1__EventList</CSharpValue>
+          <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">_out_GetEventListConnections_1__EventList</CSharpValue>
         </InArgument>
       </ui:ForEach.Values>
     </ui:ForEach>
-    <umam:GetEmailListConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" EmailList="{x:Null}" Filter="{x:Null}" Mailbox="{x:Null}" ManualEntryFolder="{x:Null}" AuthScopesInvalid="False" BrowserFolderId="AAMkADIxOTk4ODViLWEzOGUtNDMzYy04YzM2LTE1ZWQ1YWMzMTM5YwAuAAAAAADJ1v1iaUE7Ro0D_ZnWVvehAQDRF-qtdOjXT4c9QsLpW7vVAAAAAAEMAAA=" DisplayName="Get Email List" sap:VirtualizedContainerService.HintSize="526,206.4" sap2010:WorkflowViewState.IdRef="GetEmailListConnections_1" SelectionMode="Browse" UseConnectionService="True">
+    <umam:GetEmailListConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" EmailList="{x:Null}" Filter="{x:Null}" Mailbox="{x:Null}" ManualEntryFolder="{x:Null}" AuthScopesInvalid="False" BrowserFolderId="AAMkADIxOTk4ODViLWEzOGUtNDMzYy04YzM2LTE1ZWQ1YWMzMTM5YwAuAAAAAADJ1v1iaUE7Ro0D_ZnWVvehAQDRF-qtdOjXT4c9QsLpW7vVAAAAAAEMAAA=" DisplayName="Get Email List" sap:VirtualizedContainerService.HintSize="545.6,273.6" sap2010:WorkflowViewState.IdRef="GetEmailListConnections_1" SelectionMode="Browse" UseConnectionService="True" UseSharedMailbox="False">
       <umam:GetEmailListConnections.BodyAsHtml>
         <InArgument x:TypeArguments="x:Boolean">
           <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_17" />
@@ -210,6 +216,13 @@
           <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_13" />
         </InArgument>
       </umam:GetEmailListConnections.IncludeSubfolders>
+      <umam:GetEmailListConnections.MailboxBackup>
+        <usau:BackupSlot x:TypeArguments="umame:MailboxSelectionMode" StoredValue="NoMailbox">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="umame:MailboxSelectionMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </umam:GetEmailListConnections.MailboxBackup>
       <umam:GetEmailListConnections.MarkAsRead>
         <InArgument x:TypeArguments="x:Boolean">
           <Literal x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="Literal`1_19" />

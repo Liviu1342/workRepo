@@ -1,0 +1,181 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ANAF_SPV_Login" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Password" Type="InArgument(ss:SecureString)" />
+    <x:Property Name="Username" Type="InArgument(x:String)" />
+    <x:Property Name="Testrail_username" Type="InArgument(x:String)" />
+    <x:Property Name="Testrail_password" Type="InArgument(ss:SecureString)" />
+  </x:Members>
+  <this:ANAF_SPV_Login.Password>
+    <InArgument x:TypeArguments="ss:SecureString" />
+  </this:ANAF_SPV_Login.Password>
+  <this:ANAF_SPV_Login.Username>
+    <InArgument x:TypeArguments="x:String" />
+  </this:ANAF_SPV_Login.Username>
+  <this:ANAF_SPV_Login.Testrail_username>
+    <InArgument x:TypeArguments="x:String" />
+  </this:ANAF_SPV_Login.Testrail_username>
+  <this:ANAF_SPV_Login.Testrail_password>
+    <InArgument x:TypeArguments="ss:SecureString" />
+  </this:ANAF_SPV_Login.Testrail_password>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
+  <sap:VirtualizedContainerService.HintSize>1173.6,1843.2</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ANAF_SPV_Login_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ANAF_SPV_Login" sap:VirtualizedContainerService.HintSize="608,1778.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="SingleWindow" DisplayName="Use Browser: pfinternet.anaf.ro" sap:VirtualizedContainerService.HintSize="545.6,1106.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="89884386-d289-4e29-9c20-954244fd90aa" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,772" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="test_credential_1" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="449.6,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[password]" Username="[username]" />
+            <uix:NTypeInto ActivateBefore="True" DisplayName="Type Into 'Utilizator'" sap:VirtualizedContainerService.HintSize="449.6,190.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="89884386-d289-4e29-9c20-954244fd90aa" Text="[username]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://pfinternet.anaf.ro/my.policy" DesignTimeRectangle="90, 567, 243, 27" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='credentials_table' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='input_1' tableRow='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='credentials_table' tag='TABLE' /&gt;&lt;webctrl id='input_1' type='text' tag='INPUT' class='credentials_input_text' aaname='' /&gt;" Guid="212ac0a5-501d-4606-a503-4fc08f8bb2b7" InformativeScreenshot="b956bc940903fde16ed3108aef3c47f3.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='pfinternet.anaf.ro' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="None">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="90, 546, 1213, 22" ElementType="Text" FullSelectorArgument="&lt;webctrl id='credentials_table' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='credentials_table' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='Utilizator' check:innerText='Utilizator' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" DisplayName="Type Into 'Parola'" sap:VirtualizedContainerService.HintSize="449.6,190.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="89884386-d289-4e29-9c20-954244fd90aa" SecureText="[password]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://pfinternet.anaf.ro/my.policy" DesignTimeRectangle="90, 628, 243, 27" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='credentials_table' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='input_2' tableRow='4' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='credentials_table' tag='TABLE' /&gt;&lt;webctrl id='input_2' type='password' tag='INPUT' class='credentials_input_password' aaname='' /&gt;" Guid="68672aab-db50-499c-becb-b3c34539f1ac" InformativeScreenshot="e96143305acbaad92b4fb11df383b130.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='pfinternet.anaf.ro' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="None">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="90, 606, 1213, 22" ElementType="Text" FullSelectorArgument="&lt;webctrl id='credentials_table' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='credentials_table' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='Parola' check:innerText='Parola' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Autentificare'" sap:VirtualizedContainerService.HintSize="449.6,129.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="89884386-d289-4e29-9c20-954244fd90aa" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://pfinternet.anaf.ro/my.policy" DesignTimeRectangle="90, 676, 111, 28" ElementType="Button" FullSelectorArgument="&lt;webctrl id='credentials_table' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='credentials_table' tag='TABLE' /&gt;&lt;webctrl type='submit' tag='INPUT' class='credentials_input_submit' aaname='Autentificare' check:text='Autentificare' /&gt;" Guid="86310831-b9eb-4809-bd2f-6fcbfba5da5a" InformativeScreenshot="ab79aeac168c7bfc43e5ffba4892000c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='pfinternet.anaf.ro' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" InformativeScreenshot="329faedb257dab43c1b0c08ddf822f2a.jpg" Selector="&lt;html title='pfinternet.anaf.ro' app='chrome.exe' /&gt;" Title="pfinternet.anaf.ro" Url="https://pfinternet.anaf.ro/my.policy" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="IfOpenedByAppBrowser" ConnectionId="5a23a5fe76d64a4f8acc7896ffc42f18_1713277345689_dGVzdHJhaWw" ConnectionName="testrail" DisplayName="Use Browser: All Projects - TestRail" sap:VirtualizedContainerService.HintSize="545.6,583.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" IsAuthenticationRequired="True" ScopeGuid="1a216e37-3694-4b46-a7cd-40fca4d01b3b" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,252.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Testrail Credentials" CacheStrategy="None" DisplayName="Get Credential" FolderPath="test" sap:VirtualizedContainerService.HintSize="449.6,166.4" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[Testrail_password]" Username="[Testrail_username]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" InformativeScreenshot="1d284370d9f39dda0c29e173384b2663.png" Selector="&lt;html title='All Projects - TestRail' app='chrome.exe' /&gt;" Url="https://uipath.testrail.com/index.php?/auth/login/L3J1bnMvb3ZlcnZpZXcvMjgtZjcwOWE1ZTRjMWNiMDBiNDc4YWU3YmU1MmEzZWU2YTA3YTMzOTUwY2MxNzhiZThhMjVjNjYyMTU2YmU1YzQzNQ::" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

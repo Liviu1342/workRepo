@@ -2,7 +2,7 @@
   <x:Members>
     <x:Property Name="in_StringList" Type="InOutArgument(scg:List(x:String))" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1723.2,2359.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1204.8,2357.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -93,7 +93,7 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="634,2294.4" sap2010:WorkflowViewState.IdRef="Sequence_15">
+  <Sequence sap:VirtualizedContainerService.HintSize="670.4,2292.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="counter" />
       <Variable x:TypeArguments="x:String" Name="_out_RandomString_1__Output" />
@@ -103,13 +103,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Continue and Break in DoWhile" sap:VirtualizedContainerService.HintSize="572,2183.2" sap2010:WorkflowViewState.IdRef="Sequence_14">
+    <Sequence DisplayName="Continue and Break in DoWhile" sap:VirtualizedContainerService.HintSize="608,2204" sap2010:WorkflowViewState.IdRef="Sequence_14">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign sap:VirtualizedContainerService.HintSize="510,82.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign sap:VirtualizedContainerService.HintSize="545.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Int32">[counter]</OutArgument>
         </Assign.To>
@@ -119,23 +119,23 @@
           </InArgument>
         </Assign.Value>
       </Assign>
-      <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[counter &lt; 5]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="510,1949.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+      <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[counter &lt; 5]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="545.6,1978.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
         <ui:InterruptibleDoWhile.Body>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,1812.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,1840.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <utat:RandomString Case="LowerCase" DisplayName="Random String" sap:VirtualizedContainerService.HintSize="434,194.8" sap2010:WorkflowViewState.IdRef="RandomString_1" Output="[_out_RandomString_1__Output]">
+            <utat:RandomString Case="LowerCase" DisplayName="Random String" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="RandomString_1" Output="[_out_RandomString_1__Output]">
               <utat:RandomString.Length>
                 <InArgument x:TypeArguments="x:Int32">
                   <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_2" Value="10" />
                 </InArgument>
               </utat:RandomString.Length>
             </utat:RandomString>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Adding &quot; + _out_RandomString_1__Output + &quot; to the list&quot;]" />
-            <Assign sap:VirtualizedContainerService.HintSize="434,82.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Adding &quot; + _out_RandomString_1__Output + &quot; to the list&quot;]" />
+            <Assign sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[counter]</OutArgument>
               </Assign.To>
@@ -143,32 +143,38 @@
                 <InArgument x:TypeArguments="x:Int32">[counter+1]</InArgument>
               </Assign.Value>
             </Assign>
-            <If Condition="[counter = 3]" sap:VirtualizedContainerService.HintSize="434,480" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[counter = 3]" sap:VirtualizedContainerService.HintSize="449.6,586.4" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="376,296.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,311.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:Continue sap:VirtualizedContainerService.HintSize="334,24.8" sap2010:WorkflowViewState.IdRef="Continue_1" />
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;This message should never be logged&quot;]" />
+                  <ui:Continue sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;This message should never be logged&quot;]" />
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_4" />
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
               </If.Else>
             </If>
-            <uasc:AppendItemToCollection x:TypeArguments="x:String" Collection="[in_StringList]" DisplayName="Append Items to Collection" sap:VirtualizedContainerService.HintSize="434,143.2" sap2010:WorkflowViewState.IdRef="AppendItemToCollection`1_1">
+            <uasc:AppendItemToCollection x:TypeArguments="x:String" Collection="[in_StringList]" DisplayName="Append Items to Collection" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="AppendItemToCollection`1_1">
               <uasc:AppendItemToCollection.Items>
                 <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                   <InArgument x:TypeArguments="x:String">[_out_RandomString_1__Output]</InArgument>
                 </scg:List>
               </uasc:AppendItemToCollection.Items>
             </uasc:AppendItemToCollection>
-            <If Condition="[counter = 4]" sap:VirtualizedContainerService.HintSize="434,480" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[counter = 4]" sap:VirtualizedContainerService.HintSize="449.6,478.4" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="376,296.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="376,296.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -179,7 +185,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_6" />
+                <Sequence DisplayName="Else" sap2010:WorkflowViewState.IdRef="Sequence_6" />
               </If.Else>
             </If>
           </Sequence>

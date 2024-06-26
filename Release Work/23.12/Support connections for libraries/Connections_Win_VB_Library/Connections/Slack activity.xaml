@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Slack_activity" VisualBasic.Settings="{x:Null}" sap2010:Annotation.AnnotationText="UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9" sap:VirtualizedContainerService.HintSize="1134.4,632.8" sap2010:WorkflowViewState.IdRef="Slack_activity_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:usia="clr-namespace:UiPath.Slack.IntegrationService.Activities;assembly=UiPath.Slack.IntegrationService.Activities" xmlns:usic="clr-namespace:UiPath.Slack.IntegrationService.Client;assembly=UiPath.Slack.IntegrationService" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Slack_activity" VisualBasic.Settings="{x:Null}" sap2010:Annotation.AnnotationText="UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9" sap:VirtualizedContainerService.HintSize="1670.6666666666667,941.3333333333334" sap2010:WorkflowViewState.IdRef="Slack_activity_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:usia="clr-namespace:UiPath.Slack.IntegrationService.Activities;assembly=UiPath.Slack.IntegrationService.Activities" xmlns:usic="clr-namespace:UiPath.Slack.IntegrationService.Client;assembly=UiPath.Slack.IntegrationService" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -84,7 +84,7 @@
       <AssemblyReference>Connections_Win_VB_Library.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Slack_activity" sap:VirtualizedContainerService.HintSize="416,439.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Slack_activity" sap:VirtualizedContainerService.HintSize="416,442" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="usic:Users[]" Name="_out_ListAllUsers_1__Response" />
     </Sequence.Variables>
@@ -93,7 +93,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <usia:ListAllUsers ActivityInstanceId="41ad3859-8a28-449c-a8f4-61de3d7c5e7c" BindingsVersion="2.1" BusinessEntityName="users" ConfiguredBusinessEntity="users" ConnectionId="0fdf3771-f7b3-4126-962f-0cc052707c93" Connector="uipath-salesforce-slack" CrudOperation="Search" DesignConnectionEnabled="True" DisplayName="List All Users" sap:VirtualizedContainerService.HintSize="353.6,184.8" sap2010:WorkflowViewState.IdRef="ListAllUsers_1" UseRawCEQL="False">
+    <usia:ListAllUsers ActivityInstanceId="41ad3859-8a28-449c-a8f4-61de3d7c5e7c" BindingsVersion="2.1" BusinessEntityName="users" ConfiguredBusinessEntity="users" ConnectionId="0fdf3771-f7b3-4126-962f-0cc052707c93" Connector="uipath-salesforce-slack" CrudOperation="Search" DesignConnectionEnabled="True" DisplayName="List All Users" sap:VirtualizedContainerService.HintSize="354,186.66666666666666" sap2010:WorkflowViewState.IdRef="ListAllUsers_1" UseRawCEQL="False">
       <usia:ListAllUsers.BusinessEntity>
         <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID2}" Name="users">
           <uibi:BusinessEntity.AllFields>
@@ -191,6 +191,6 @@
         <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
       </usia:ListAllUsers.TelemetryProperties>
     </usia:ListAllUsers>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Found &quot; + _out_ListAllUsers_1__Response.Length.ToString + &quot; channels&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Found &quot; + _out_ListAllUsers_1__Response.Length.ToString + &quot; channels&quot;]" />
   </Sequence>
 </Activity>

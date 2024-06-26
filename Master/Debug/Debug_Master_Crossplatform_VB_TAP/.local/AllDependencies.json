@@ -457,33 +457,40 @@
           }
         }
       },
-      "Microsoft.Extensions.DependencyInjection/3.1.6": {
+      "Microsoft.Extensions.DependencyInjection/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.6"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.6": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "Microsoft.Extensions.Logging/3.1.6": {
@@ -652,7 +659,7 @@
           }
         }
       },
-      "System.Activities.ViewModels/1.0.0-20231124.2": {
+      "System.Activities.ViewModels/1.0.0-20240418.6": {
         "type": "package",
         "compile": {
           "lib/net6.0/_._": {}
@@ -690,6 +697,12 @@
           },
           "lib/net6.0/tr/System.Activities.ViewModels.resources.dll": {
             "locale": "tr"
+          },
+          "lib/net6.0/zh-CN/System.Activities.ViewModels.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0/zh-TW/System.Activities.ViewModels.resources.dll": {
+            "locale": "zh-TW"
           }
         }
       },
@@ -727,6 +740,25 @@
           "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Diagnostics.DiagnosticSource/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Diagnostics.DiagnosticSource.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Drawing.Common/5.0.0": {
@@ -1100,17 +1132,20 @@
           }
         }
       },
-      "System.Threading.Tasks.Dataflow/5.0.0": {
+      "System.Threading.Tasks.Dataflow/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll": {
+          "lib/net6.0/System.Threading.Tasks.Dataflow.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Threading.Tasks.Extensions/4.5.4": {
@@ -1177,9 +1212,11 @@
           "lib/net5.0/UiPath.Activities.RuntimeGovernance.dll": {}
         }
       },
-      "UiPath.CodedWorkflows/23.10.2": {
+      "UiPath.CodedWorkflows/24.10.0": {
         "type": "package",
         "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "Newtonsoft.Json": "13.0.1",
           "System.IO.Abstractions": "3.0.10",
           "System.ValueTuple": "4.5.0"
@@ -1273,11 +1310,24 @@
           "lib/net6.0/UiPath.Driver.Portable.dll": {}
         }
       },
-      "UiPath.Platform/23.10.0": {
+      "UiPath.OpenTelemetry.Contracts/2.1.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/UiPath.OpenTelemetry.Contracts.dll": {}
+        }
+      },
+      "UiPath.Platform/24.10.1": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
           "System.IO.Abstractions": "3.0.10",
+          "System.Threading.Tasks.Dataflow": "6.0.0",
           "System.ValueTuple": "4.5.0"
         },
         "compile": {
@@ -1326,7 +1376,7 @@
           }
         }
       },
-      "UiPath.System.Activities/24.2.0-alpha.4952676": {
+      "UiPath.System.Activities/24.10.0-alpha.6118717": {
         "type": "package",
         "dependencies": {
           "CsvHelper": "16.0.0",
@@ -1339,11 +1389,11 @@
           "Microsoft.Rest.ClientRuntime": "2.3.24",
           "Microsoft.VisualBasic": "10.3.0",
           "SharpZipLib": "1.3.3",
-          "System.Activities.ViewModels": "1.0.0-20231124.2",
-          "UiPath.CodedWorkflows": "23.10.2",
-          "UiPath.Platform": "23.10.0",
-          "UiPath.System.Activities.Runtime": "24.2.0-alpha.4952676",
-          "UiPath.Telemetry.Client": "1.6.69"
+          "System.Activities.ViewModels": "1.0.0-20240418.6",
+          "UiPath.CodedWorkflows": "24.10.0",
+          "UiPath.Platform": "24.10.1",
+          "UiPath.System.Activities.Runtime": "24.10.0-alpha.6118717",
+          "UiPath.Telemetry.Client": "2.1.3"
         },
         "compile": {
           "lib/net6.0/_._": {}
@@ -1352,10 +1402,10 @@
           "lib/net6.0/UiPath.System.Activities.ViewModels.dll": {}
         }
       },
-      "UiPath.System.Activities.Runtime/24.2.0-alpha.4952676": {
+      "UiPath.System.Activities.Runtime/24.10.0-alpha.6118717": {
         "type": "package",
         "dependencies": {
-          "UiPath.System.Activities.Runtime.Portable": "24.2.0-alpha.4952676"
+          "UiPath.System.Activities.Runtime.Portable": "24.10.0-alpha.6118717"
         },
         "compile": {
           "lib/net6.0/_._": {}
@@ -1364,7 +1414,7 @@
           "lib/net6.0/UiPath.System.Activities.Package.Runtime.dll": {}
         }
       },
-      "UiPath.System.Activities.Runtime.Portable/24.2.0-alpha.4952676": {
+      "UiPath.System.Activities.Runtime.Portable/24.10.0-alpha.6118717": {
         "type": "package",
         "dependencies": {
           "CsvHelper": "16.0.0",
@@ -1377,9 +1427,9 @@
           "Microsoft.Rest.ClientRuntime": "2.3.24",
           "Microsoft.VisualBasic": "10.3.0",
           "SharpZipLib": "1.3.3",
-          "UiPath.CodedWorkflows": "23.10.2",
-          "UiPath.Platform": "23.10.0",
-          "UiPath.Telemetry.Client": "1.6.69"
+          "UiPath.CodedWorkflows": "24.10.0",
+          "UiPath.Platform": "24.10.1",
+          "UiPath.Telemetry.Client": "2.1.3"
         },
         "compile": {
           "lib/net6.0/_._": {}
@@ -1435,12 +1485,13 @@
           }
         }
       },
-      "UiPath.Telemetry.Client/1.6.69": {
+      "UiPath.Telemetry.Client/2.1.3": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
           "System.Threading.Tasks.Dataflow": "5.0.0",
-          "System.ValueTuple": "4.5.0"
+          "System.ValueTuple": "4.5.0",
+          "UiPath.OpenTelemetry.Contracts": "2.1.3"
         },
         "compile": {
           "lib/netstandard2.0/_._": {}
@@ -2209,33 +2260,40 @@
           }
         }
       },
-      "Microsoft.Extensions.DependencyInjection/3.1.6": {
+      "Microsoft.Extensions.DependencyInjection/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.6"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.6": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "Microsoft.Extensions.Logging/3.1.6": {
@@ -2455,7 +2513,7 @@
           }
         }
       },
-      "System.Activities.ViewModels/1.0.0-20231124.2": {
+      "System.Activities.ViewModels/1.0.0-20240418.6": {
         "type": "package",
         "compile": {
           "lib/net6.0/_._": {}
@@ -2493,6 +2551,12 @@
           },
           "lib/net6.0/tr/System.Activities.ViewModels.resources.dll": {
             "locale": "tr"
+          },
+          "lib/net6.0/zh-CN/System.Activities.ViewModels.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0/zh-TW/System.Activities.ViewModels.resources.dll": {
+            "locale": "zh-TW"
           }
         }
       },
@@ -2530,6 +2594,25 @@
           "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Diagnostics.DiagnosticSource/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Diagnostics.DiagnosticSource.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Drawing.Common/5.0.0": {
@@ -2869,17 +2952,20 @@
           }
         }
       },
-      "System.Threading.Tasks.Dataflow/5.0.0": {
+      "System.Threading.Tasks.Dataflow/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll": {
+          "lib/net6.0/System.Threading.Tasks.Dataflow.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Threading.Tasks.Extensions/4.5.4": {
@@ -2940,9 +3026,11 @@
           "lib/net5.0/UiPath.Activities.RuntimeGovernance.dll": {}
         }
       },
-      "UiPath.CodedWorkflows/23.10.2": {
+      "UiPath.CodedWorkflows/24.10.0": {
         "type": "package",
         "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "Newtonsoft.Json": "13.0.1",
           "System.IO.Abstractions": "3.0.10",
           "System.ValueTuple": "4.5.0"
@@ -3036,11 +3124,24 @@
           "lib/net6.0/UiPath.Driver.Portable.dll": {}
         }
       },
-      "UiPath.Platform/23.10.0": {
+      "UiPath.OpenTelemetry.Contracts/2.1.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/UiPath.OpenTelemetry.Contracts.dll": {}
+        }
+      },
+      "UiPath.Platform/24.10.1": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
           "System.IO.Abstractions": "3.0.10",
+          "System.Threading.Tasks.Dataflow": "6.0.0",
           "System.ValueTuple": "4.5.0"
         },
         "compile": {
@@ -3089,7 +3190,7 @@
           }
         }
       },
-      "UiPath.System.Activities/24.2.0-alpha.4952676": {
+      "UiPath.System.Activities/24.10.0-alpha.6118717": {
         "type": "package",
         "dependencies": {
           "CsvHelper": "16.0.0",
@@ -3102,11 +3203,11 @@
           "Microsoft.Rest.ClientRuntime": "2.3.24",
           "Microsoft.VisualBasic": "10.3.0",
           "SharpZipLib": "1.3.3",
-          "System.Activities.ViewModels": "1.0.0-20231124.2",
-          "UiPath.CodedWorkflows": "23.10.2",
-          "UiPath.Platform": "23.10.0",
-          "UiPath.System.Activities.Runtime": "24.2.0-alpha.4952676",
-          "UiPath.Telemetry.Client": "1.6.69"
+          "System.Activities.ViewModels": "1.0.0-20240418.6",
+          "UiPath.CodedWorkflows": "24.10.0",
+          "UiPath.Platform": "24.10.1",
+          "UiPath.System.Activities.Runtime": "24.10.0-alpha.6118717",
+          "UiPath.Telemetry.Client": "2.1.3"
         },
         "compile": {
           "lib/net6.0/_._": {}
@@ -3115,10 +3216,10 @@
           "lib/net6.0/UiPath.System.Activities.ViewModels.dll": {}
         }
       },
-      "UiPath.System.Activities.Runtime/24.2.0-alpha.4952676": {
+      "UiPath.System.Activities.Runtime/24.10.0-alpha.6118717": {
         "type": "package",
         "dependencies": {
-          "UiPath.System.Activities.Runtime.Portable": "24.2.0-alpha.4952676"
+          "UiPath.System.Activities.Runtime.Portable": "24.10.0-alpha.6118717"
         },
         "compile": {
           "lib/net6.0/_._": {}
@@ -3127,7 +3228,7 @@
           "lib/net6.0/UiPath.System.Activities.Package.Runtime.dll": {}
         }
       },
-      "UiPath.System.Activities.Runtime.Portable/24.2.0-alpha.4952676": {
+      "UiPath.System.Activities.Runtime.Portable/24.10.0-alpha.6118717": {
         "type": "package",
         "dependencies": {
           "CsvHelper": "16.0.0",
@@ -3140,9 +3241,9 @@
           "Microsoft.Rest.ClientRuntime": "2.3.24",
           "Microsoft.VisualBasic": "10.3.0",
           "SharpZipLib": "1.3.3",
-          "UiPath.CodedWorkflows": "23.10.2",
-          "UiPath.Platform": "23.10.0",
-          "UiPath.Telemetry.Client": "1.6.69"
+          "UiPath.CodedWorkflows": "24.10.0",
+          "UiPath.Platform": "24.10.1",
+          "UiPath.Telemetry.Client": "2.1.3"
         },
         "compile": {
           "lib/net6.0/_._": {}
@@ -3198,12 +3299,13 @@
           }
         }
       },
-      "UiPath.Telemetry.Client/1.6.69": {
+      "UiPath.Telemetry.Client/2.1.3": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
           "System.Threading.Tasks.Dataflow": "5.0.0",
-          "System.ValueTuple": "4.5.0"
+          "System.ValueTuple": "4.5.0",
+          "UiPath.OpenTelemetry.Contracts": "2.1.3"
         },
         "compile": {
           "lib/netstandard2.0/_._": {}
@@ -4257,38 +4359,54 @@
         "microsoft.extensions.configuration.binder.nuspec"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection/3.1.6": {
-      "sha512": "YMJWflBmBc0PbqYvt3m4ueSCgV51JLfqHhyunoVq0rBs9V4sVQw5JsPTB17bIrlHFJs2pt2olgfavOOvuGwoRg==",
+    "Microsoft.Extensions.DependencyInjection/6.0.0": {
+      "sha512": "k6PWQMuoBDGGHOQTtyois2u4AwyVcIwL2LaSLlTZQm2CYcJ1pxbt6jfAnpWmzENA/wfrYRI/X9DTLoUkE4AsLw==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection/3.1.6",
+      "path": "microsoft.extensions.dependencyinjection/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.targets",
+        "buildTransitive/netcoreapp3.1/_._",
         "lib/net461/Microsoft.Extensions.DependencyInjection.dll",
         "lib/net461/Microsoft.Extensions.DependencyInjection.xml",
-        "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll",
-        "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.xml",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.xml",
-        "microsoft.extensions.dependencyinjection.3.1.6.nupkg.sha512",
-        "microsoft.extensions.dependencyinjection.nuspec"
+        "microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.6": {
-      "sha512": "JVlypPjlPqOEyAhET6pA7TqrK+Ya8TrYe2vvqsp62TYKS87oNuReoS7XpDFW0rrOsQo66G1yYf3K0E+lJHFHuw==",
+    "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
+      "sha512": "xlzi2IYREJH3/m6+lUrQlujzX8wDitm4QGnUu6kUXTQAWPuZY8i+ticFJbzfqaetLA6KR/rO6Ew/HuYD+bxifg==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/3.1.6",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.3.1.6.nupkg.sha512",
-        "microsoft.extensions.dependencyinjection.abstractions.nuspec"
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
     "Microsoft.Extensions.Logging/3.1.6": {
@@ -4706,10 +4824,10 @@
         "sharpziplib.nuspec"
       ]
     },
-    "System.Activities.ViewModels/1.0.0-20231124.2": {
-      "sha512": "P5Jg8Qfk7Td3eyjSTSm0ZLST2DDlxMq/4Cj3doNn8oAITUcFrQ1R867CXlNJo/m+RSmQL1qzzeRczkU2xXaY6g==",
+    "System.Activities.ViewModels/1.0.0-20240418.6": {
+      "sha512": "MU2uD1jNA5zF7HFqh8y4+qkIinAPLp0qmkEKiwXhCTmOWW2kVwblJS5Ryw4WJQl9kH0VZy4N1ynO1b2zEMh9DA==",
       "type": "package",
-      "path": "system.activities.viewmodels/1.0.0-20231124.2",
+      "path": "system.activities.viewmodels/1.0.0-20240418.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4724,6 +4842,8 @@
         "lib/net6.0-windows7.0/pt/System.Activities.ViewModels.resources.dll",
         "lib/net6.0-windows7.0/ru/System.Activities.ViewModels.resources.dll",
         "lib/net6.0-windows7.0/tr/System.Activities.ViewModels.resources.dll",
+        "lib/net6.0-windows7.0/zh-CN/System.Activities.ViewModels.resources.dll",
+        "lib/net6.0-windows7.0/zh-TW/System.Activities.ViewModels.resources.dll",
         "lib/net6.0/System.Activities.ViewModels.dll",
         "lib/net6.0/de/System.Activities.ViewModels.resources.dll",
         "lib/net6.0/es-MX/System.Activities.ViewModels.resources.dll",
@@ -4735,7 +4855,9 @@
         "lib/net6.0/pt/System.Activities.ViewModels.resources.dll",
         "lib/net6.0/ru/System.Activities.ViewModels.resources.dll",
         "lib/net6.0/tr/System.Activities.ViewModels.resources.dll",
-        "system.activities.viewmodels.1.0.0-20231124.2.nupkg.sha512",
+        "lib/net6.0/zh-CN/System.Activities.ViewModels.resources.dll",
+        "lib/net6.0/zh-TW/System.Activities.ViewModels.resources.dll",
+        "system.activities.viewmodels.1.0.0-20240418.6.nupkg.sha512",
         "system.activities.viewmodels.nuspec"
       ]
     },
@@ -4784,6 +4906,31 @@
         "system.configuration.configurationmanager.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "System.Diagnostics.DiagnosticSource/6.0.0": {
+      "sha512": "frQDfv0rl209cKm1lnwTgFPzNigy2EKk1BS3uAvHvlBVKe5cymGyHO+Sj+NLv5VF/AhHsqPIUUwya5oV4CHMUw==",
+      "type": "package",
+      "path": "system.diagnostics.diagnosticsource/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Diagnostics.DiagnosticSource.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net461/System.Diagnostics.DiagnosticSource.xml",
+        "lib/net5.0/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net5.0/System.Diagnostics.DiagnosticSource.xml",
+        "lib/net6.0/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net6.0/System.Diagnostics.DiagnosticSource.xml",
+        "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.dll",
+        "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.xml",
+        "system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
+        "system.diagnostics.diagnosticsource.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Drawing.Common/5.0.0": {
@@ -5801,30 +5948,29 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "System.Threading.Tasks.Dataflow/5.0.0": {
-      "sha512": "NBp0zSAMZp4muDje6XmbDfmkqw9+qsDCHp+YMEtnVgHEjQZ3Q7MzFTTp3eHqpExn4BwMrS7JkUVOTcVchig4Sw==",
+    "System.Threading.Tasks.Dataflow/6.0.0": {
+      "sha512": "+tyDCU3/B1lDdOOAJywHQoFwyXIUghIaP2BxG79uvhfTnO+D9qIgjVlL/JV2NTliYbMHpd6eKDmHp2VHpij7MA==",
       "type": "package",
-      "path": "system.threading.tasks.dataflow/5.0.0",
+      "path": "system.threading.tasks.dataflow/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Threading.Tasks.Dataflow.targets",
+        "buildTransitive/netcoreapp3.1/_._",
         "lib/net461/System.Threading.Tasks.Dataflow.dll",
         "lib/net461/System.Threading.Tasks.Dataflow.xml",
-        "lib/netstandard1.0/System.Threading.Tasks.Dataflow.dll",
-        "lib/netstandard1.0/System.Threading.Tasks.Dataflow.xml",
-        "lib/netstandard1.1/System.Threading.Tasks.Dataflow.dll",
-        "lib/netstandard1.1/System.Threading.Tasks.Dataflow.xml",
+        "lib/net6.0/System.Threading.Tasks.Dataflow.dll",
+        "lib/net6.0/System.Threading.Tasks.Dataflow.xml",
         "lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll",
         "lib/netstandard2.0/System.Threading.Tasks.Dataflow.xml",
-        "lib/portable-net45+win8+wpa81/System.Threading.Tasks.Dataflow.dll",
-        "lib/portable-net45+win8+wpa81/System.Threading.Tasks.Dataflow.xml",
-        "system.threading.tasks.dataflow.5.0.0.nupkg.sha512",
+        "lib/netstandard2.1/System.Threading.Tasks.Dataflow.dll",
+        "lib/netstandard2.1/System.Threading.Tasks.Dataflow.xml",
+        "system.threading.tasks.dataflow.6.0.0.nupkg.sha512",
         "system.threading.tasks.dataflow.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Threading.Tasks.Extensions/4.5.4": {
@@ -6024,10 +6170,10 @@
         "uipath.activities.runtimegovernance.nuspec"
       ]
     },
-    "UiPath.CodedWorkflows/23.10.2": {
-      "sha512": "m+BelgPDzvJdToT+s2ZPp9SmUh6nHoV3Y6IxtGyZlJTEJBjxAFB89sf6ESj4dEfvtCjjVks2eq6iWJkXWSjs8g==",
+    "UiPath.CodedWorkflows/24.10.0": {
+      "sha512": "Ol5pmU38rruyLgjIe+zSgeG5GS07eh45K/1f93Zz/Cvx1rIN0jgo7Cz/kX0BiD94aLXIZkiHJf9VeITrwnNtWg==",
       "type": "package",
-      "path": "uipath.codedworkflows/23.10.2",
+      "path": "uipath.codedworkflows/24.10.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6059,7 +6205,7 @@
         "lib/net6.0/tr/UiPath.CodedWorkflows.resources.dll",
         "lib/net6.0/zh-CN/UiPath.CodedWorkflows.resources.dll",
         "lib/net6.0/zh-TW/UiPath.CodedWorkflows.resources.dll",
-        "uipath.codedworkflows.23.10.2.nupkg.sha512",
+        "uipath.codedworkflows.24.10.0.nupkg.sha512",
         "uipath.codedworkflows.nuspec"
       ]
     },
@@ -6107,10 +6253,24 @@
         "uipath.driver.portable.nuspec"
       ]
     },
-    "UiPath.Platform/23.10.0": {
-      "sha512": "9tweZGj1eN51+N8e7rEz4S5FHqZ7P2HuFP9YzqGcj7sRBD8JK9z0g56QqsBeorWgeVVz/vNpiLRWZpzejsX8nA==",
+    "UiPath.OpenTelemetry.Contracts/2.1.3": {
+      "sha512": "jK3dSVWZbdVBHBjh/S8yJ3v0OwMXxnceG9WaSMyhVM7MrCkc7LbatnAZSsJmxnJrsmAiZsdYHPl7DTMVinmPeg==",
       "type": "package",
-      "path": "uipath.platform/23.10.0",
+      "path": "uipath.opentelemetry.contracts/2.1.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "UI_icon.png",
+        "lib/net461/UiPath.OpenTelemetry.Contracts.dll",
+        "lib/netstandard2.0/UiPath.OpenTelemetry.Contracts.dll",
+        "uipath.opentelemetry.contracts.2.1.3.nupkg.sha512",
+        "uipath.opentelemetry.contracts.nuspec"
+      ]
+    },
+    "UiPath.Platform/24.10.1": {
+      "sha512": "WyM3LooamTJ328sYAeZYwNeU6+C86inJrPsrbLh318BSGBkxPr7eZROu4xD36StgJdRpbv2nIY/+WvDQDCkGNw==",
+      "type": "package",
+      "path": "uipath.platform/24.10.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6153,14 +6313,14 @@
         "lib/net6.0/ru/UiPath.Platform.resources.dll",
         "lib/net6.0/tr/UiPath.Platform.resources.dll",
         "lib/net6.0/zh-CN/UiPath.Platform.resources.dll",
-        "uipath.platform.23.10.0.nupkg.sha512",
+        "uipath.platform.24.10.1.nupkg.sha512",
         "uipath.platform.nuspec"
       ]
     },
-    "UiPath.System.Activities/24.2.0-alpha.4952676": {
-      "sha512": "75OgVf1VTxf/8XxbbH+htkhHyA6PT6SeVvXGBBl+FoDCiaDXsZgh8zr4N57/U9wOgt1BaNr2bSGFqVDCKId9Ww==",
+    "UiPath.System.Activities/24.10.0-alpha.6118717": {
+      "sha512": "81onIQWIXUhtzMoJTOwvzPRq8cS3lF0xOAJnAjPc4rvhM8TBKxQOW2jVPm6AWMR4wvqOXp/DyHRh1tzo4gPR1A==",
       "type": "package",
-      "path": "uipath.system.activities/24.2.0-alpha.4952676",
+      "path": "uipath.system.activities/24.10.0-alpha.6118717",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6195,28 +6355,28 @@
         "lib/net6.0-windows7.0/zh-TW/UiPath.System.Activities.Design.resources.dll",
         "lib/net6.0-windows7.0/zu/UiPath.System.Activities.Design.resources.dll",
         "lib/net6.0/UiPath.System.Activities.ViewModels.dll",
-        "uipath.system.activities.24.2.0-alpha.4952676.nupkg.sha512",
+        "uipath.system.activities.24.10.0-alpha.6118717.nupkg.sha512",
         "uipath.system.activities.nuspec"
       ]
     },
-    "UiPath.System.Activities.Runtime/24.2.0-alpha.4952676": {
-      "sha512": "roUIQxpUu+x0Zckd2Xil5b/CTAU+H4Ysz9/Lb/Okhr4DykoWmg5lplhT1Jz8jUD2YX3YzowsqZH2R0H20Xw0Yg==",
+    "UiPath.System.Activities.Runtime/24.10.0-alpha.6118717": {
+      "sha512": "zekzoeRxfv2Ak93+KN7aa9tBqtzb8Ul3A9vvtm3H0ZESX5gN0tPMb5Ppd8eZYoAvKXdD1hkJYgiPfa1Vu/C+TA==",
       "type": "package",
-      "path": "uipath.system.activities.runtime/24.2.0-alpha.4952676",
+      "path": "uipath.system.activities.runtime/24.10.0-alpha.6118717",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net461/UiPath.System.Activities.Package.Runtime.dll",
         "lib/net6.0-windows7.0/UiPath.System.Activities.Package.Runtime.dll",
         "lib/net6.0/UiPath.System.Activities.Package.Runtime.dll",
-        "uipath.system.activities.runtime.24.2.0-alpha.4952676.nupkg.sha512",
+        "uipath.system.activities.runtime.24.10.0-alpha.6118717.nupkg.sha512",
         "uipath.system.activities.runtime.nuspec"
       ]
     },
-    "UiPath.System.Activities.Runtime.Portable/24.2.0-alpha.4952676": {
-      "sha512": "YTQAHVhZb2Y4LuzphB0Rb14M9MmRVlPNylqgjKnlE6osgUkDomIZLPh7igaukyHKuakSzWMCKsZc/8MpkFl3AQ==",
+    "UiPath.System.Activities.Runtime.Portable/24.10.0-alpha.6118717": {
+      "sha512": "zkmNudi02Q04h3TFIXQ4aIlxCqopCfM3Z/X+CmoXnEOzvcLiu59guC1vDBwUrbEB3M2YU5DdeHZBeEVy4XAsTQ==",
       "type": "package",
-      "path": "uipath.system.activities.runtime.portable/24.2.0-alpha.4952676",
+      "path": "uipath.system.activities.runtime.portable/24.10.0-alpha.6118717",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6237,21 +6397,21 @@
         "lib/net6.0/zh-CN/UiPath.System.Activities.resources.dll",
         "lib/net6.0/zh-TW/UiPath.System.Activities.resources.dll",
         "lib/net6.0/zu/UiPath.System.Activities.resources.dll",
-        "uipath.system.activities.runtime.portable.24.2.0-alpha.4952676.nupkg.sha512",
+        "uipath.system.activities.runtime.portable.24.10.0-alpha.6118717.nupkg.sha512",
         "uipath.system.activities.runtime.portable.nuspec"
       ]
     },
-    "UiPath.Telemetry.Client/1.6.69": {
-      "sha512": "WVZS1Uo7WVXOacqE1RXcrbvYhpYOzw+6QYfyEvGpTHm3hQe658DSCMK6Pk/Fxfp6nLq26okg1kd0/ycBfhf3sw==",
+    "UiPath.Telemetry.Client/2.1.3": {
+      "sha512": "J8P+1wLcXXwuBWtFEdzFxnSWDVTH/6plaGloTO0VaOAWDa3C4uMddB8OEpFH4ixM86JlYdg0hRw4m3aHzVZeIA==",
       "type": "package",
-      "path": "uipath.telemetry.client/1.6.69",
+      "path": "uipath.telemetry.client/2.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "UI_icon.png",
         "lib/net461/TelemetryClient.dll",
         "lib/netstandard2.0/TelemetryClient.dll",
-        "uipath.telemetry.client.1.6.69.nupkg.sha512",
+        "uipath.telemetry.client.2.1.3.nupkg.sha512",
         "uipath.telemetry.client.nuspec"
       ]
     },
@@ -6822,26 +6982,22 @@
     "": [],
     "net8.0": [
       "EntitiesLibrary >= 1.0.1 <= 1.0.1",
-      "UiPath.System.Activities >= 24.2.0-alpha.4952676 <= 24.2.0-alpha.4952676",
+      "UiPath.System.Activities >= 24.10.0-alpha.6118717 <= 24.10.0-alpha.6118717",
       "UiPath.Testing.Activities >= 23.10.0-preview <= 23.10.0-preview",
       "UiPath.UIAutomation.Activities >= 23.10.0-preview <= 23.10.0-preview",
       "UiPath.WebAPI.Activities >= 1.16.0-preview <= 1.16.0-preview"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Liviu.Ponova\\.nuget\\packages": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Liviu.Ponova\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "Debug_Master_Crossplatform_VB_TAP",
       "projectName": "Debug_Master_Crossplatform_VB_TAP",
-      "projectPath": "C:\\Git\\Repos\\workRepo\\Master\\Debug\\Debug_Master_Crossplatform_VB_TAP\\.local",
-      "packagesPath": "C:\\Users\\Liviu.Ponova\\.nuget\\packages",
-      "outputPath": "C:\\Git\\Repos\\workRepo\\Master\\Debug\\Debug_Master_Crossplatform_VB_TAP\\.local",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ]
+      "projectPath": "C:\\Work\\Repos\\Git\\workRepo\\Master\\Debug\\Debug_Master_Crossplatform_VB_TAP\\.local",
+      "packagesPath": "C:\\Users\\Liviu.Ponova\\.nuget\\packages\\",
+      "outputPath": "C:\\Work\\Repos\\Git\\workRepo\\Master\\Debug\\Debug_Master_Crossplatform_VB_TAP\\.local"
     },
     "frameworks": {
       "net8.0": {
@@ -6854,7 +7010,7 @@
           "UiPath.System.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[24.2.0-alpha.4952676, 24.2.0-alpha.4952676]"
+            "version": "[24.10.0-alpha.6118717, 24.10.0-alpha.6118717]"
           },
           "UiPath.Testing.Activities": {
             "include": "Runtime",
@@ -6872,7 +7028,7 @@
             "version": "[1.16.0-preview, 1.16.0-preview]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Liviu.Ponova\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

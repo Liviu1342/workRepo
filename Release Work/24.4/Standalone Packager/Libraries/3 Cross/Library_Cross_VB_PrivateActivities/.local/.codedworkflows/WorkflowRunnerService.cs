@@ -15,11 +15,11 @@ namespace Library_Cross_VB_PrivateActivities
         }
 
         /// <summary>
-        /// Invokes the Private Activities/GetAsset_Custom_Private.xaml
+        /// Invokes the UsesPrivateXamls_Custom_Activity.xaml
         /// </summary>
-        public string GetAsset_Custom_Private()
+        public string UsesPrivateXamls_Custom_Activity(string in_Message)
         {
-            var result = _runWorkflowHandler(@"Private Activities\GetAsset_Custom_Private.xaml", new Dictionary<string, object>{}, default, default, default);
+            var result = _runWorkflowHandler(@"UsesPrivateXamls_Custom_Activity.xaml", new Dictionary<string, object>{{"in_Message", in_Message}}, default, default, default);
             return (string)result["out_AssetValue"];
         }
 
@@ -32,12 +32,20 @@ namespace Library_Cross_VB_PrivateActivities
         }
 
         /// <summary>
-        /// Invokes the UsesPrivateXamls_Custom_Activity.xaml
+        /// Invokes the Private Activities/GetAsset_Custom_Private.xaml
         /// </summary>
-        public string UsesPrivateXamls_Custom_Activity(string in_Message)
+        public string GetAsset_Custom_Private()
         {
-            var result = _runWorkflowHandler(@"UsesPrivateXamls_Custom_Activity.xaml", new Dictionary<string, object>{{"in_Message", in_Message}}, default, default, default);
+            var result = _runWorkflowHandler(@"Private Activities\GetAsset_Custom_Private.xaml", new Dictionary<string, object>{}, default, default, default);
             return (string)result["out_AssetValue"];
+        }
+
+        /// <summary>
+        /// Invokes the Coded/UseFootballTeam_Custom_Activity_Coded.cs
+        /// </summary>
+        public void UseFootballTeam_Custom_Activity_Coded()
+        {
+            var result = _runWorkflowHandler(@"Coded\UseFootballTeam_Custom_Activity_Coded.cs", new Dictionary<string, object>{}, default, default, default);
         }
     }
 }

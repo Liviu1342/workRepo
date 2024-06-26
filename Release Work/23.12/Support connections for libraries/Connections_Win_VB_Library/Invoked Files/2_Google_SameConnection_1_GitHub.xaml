@@ -1,0 +1,195 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_2_Google_SameConnection_1_GitHub" this:_2_Google_SameConnection_1_GitHub.in_GitHub_Path="Qa/README.md" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugagm="clr-namespace:UiPath.GSuite.Activities.Gmail.Models;assembly=UiPath.GSuite.Activities" xmlns:ugam="clr-namespace:UiPath.GSuite.Activities.Models;assembly=UiPath.GSuite.Activities" xmlns:ugdm="clr-namespace:UiPath.GSuite.Drive.Models;assembly=UiPath.GSuite" xmlns:ugm="clr-namespace:UiPath.GSuite.Models;assembly=UiPath.GSuite" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_GoogleDrive_FileOrFilder" Type="OutArgument(ugdm:GDriveRemoteItem)" />
+    <x:Property Name="out_GMail_email" Type="OutArgument(ugm:GmailMessage)" />
+    <x:Property Name="in_GitHub_Path" Type="InArgument(x:String)" />
+    <x:Property Name="out_GitHub_DownloadFile" Type="OutArgument(upr:IResource)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1194.4,1512.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>_2_Google_SameConnection_1_GitHub_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Filters</x:String>
+      <x:String>UiPath.GSuite.Activities.Filters</x:String>
+      <x:String>UiPath.GSuite.Gmail.Enums</x:String>
+      <x:String>UiPath.GSuite.Models</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.Api.Google.Gmail.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive</x:String>
+      <x:String>UiPath.GSuite.Activities.Models</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.GSuite</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>UiPath.Platform</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>Microsoft.Extensions.DependencyModel</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>Connections_Win_VB_Library.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="_2_Google_SameConnection_1_GitHub" sap:VirtualizedContainerService.HintSize="416,1448" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uga:GetNewestEmailConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Filter="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID0}" ManualEntryFolder="{x:Null}" AllLabels="W3siSWQiOiJDSEFUIiwiTmFtZSI6IkNIQVQiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IlNFTlQiLCJOYW1lIjoiU0VOVCIsIlR5cGUiOiJzeXN0ZW0ifSx7IklkIjoiSU5CT1giLCJOYW1lIjoiSU5CT1giLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IklNUE9SVEFOVCIsIk5hbWUiOiJJTVBPUlRBTlQiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IlRSQVNIIiwiTmFtZSI6IlRSQVNIIiwiVHlwZSI6InN5c3RlbSJ9LHsiSWQiOiJEUkFGVCIsIk5hbWUiOiJEUkFGVCIsIlR5cGUiOiJzeXN0ZW0ifSx7IklkIjoiU1BBTSIsIk5hbWUiOiJTUEFNIiwiVHlwZSI6InN5c3RlbSJ9LHsiSWQiOiJDQVRFR09SWV9GT1JVTVMiLCJOYW1lIjoiQ0FURUdPUllfRk9SVU1TIiwiVHlwZSI6InN5c3RlbSJ9LHsiSWQiOiJDQVRFR09SWV9VUERBVEVTIiwiTmFtZSI6IkNBVEVHT1JZX1VQREFURVMiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IkNBVEVHT1JZX1BFUlNPTkFMIiwiTmFtZSI6IkNBVEVHT1JZX1BFUlNPTkFMIiwiVHlwZSI6InN5c3RlbSJ9LHsiSWQiOiJDQVRFR09SWV9QUk9NT1RJT05TIiwiTmFtZSI6IkNBVEVHT1JZX1BST01PVElPTlMiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IkNBVEVHT1JZX1NPQ0lBTCIsIk5hbWUiOiJDQVRFR09SWV9TT0NJQUwiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IlNUQVJSRUQiLCJOYW1lIjoiU1RBUlJFRCIsIlR5cGUiOiJzeXN0ZW0ifSx7IklkIjoiVU5SRUFEIiwiTmFtZSI6IlVOUkVBRCIsIlR5cGUiOiJzeXN0ZW0ifSx7IklkIjoiTGFiZWxfMSIsIk5hbWUiOiJDaGl0YW7Fo2UiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF8zIiwiTmFtZSI6IlBlcnNvbmFsZSIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzQiLCJOYW1lIjoiU2VydmljaXUiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF81IiwiTmFtZSI6Ikp1bmsgRS1tYWlsIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNTMiLCJOYW1lIjoiQWx0ZWxlIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNTQiLCJOYW1lIjoiQmlsZXRlIGF2aW9uIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNTUiLCJOYW1lIjoiQ2lzY28iLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF81NiIsIk5hbWUiOiJDb2xlZ2kiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF81NyIsIk5hbWUiOiJEaXBsb21hIExpY2VudGEiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF81OCIsIk5hbWUiOiJEcmFmdHMgMiIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzU5IiwiTmFtZSI6IkVORUwgLSBjdXJlbnQiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF82IiwiTmFtZSI6IkRlbGV0ZWQgSXRlbXMiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF82MCIsIk5hbWUiOiJFbWFnIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNjEiLCJOYW1lIjoiRXZlbnRpbSIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzYyIiwiTmFtZSI6IkZhY2Vib29rIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNjMiLCJOYW1lIjoiRmFjdWx0YXRlIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNjQiLCJOYW1lIjoiRmlubGFuZGEiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF82NSIsIk5hbWUiOiJGbG9yeSBFeCIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzY2IiwiTmFtZSI6IkdERiBTdWV6IC0gR2F6ZSIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzY3IiwiTmFtZSI6IkhhIEhBIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNjgiLCJOYW1lIjoiSGF3YWlpIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNjkiLCJOYW1lIjoiSVRDIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNyIsIk5hbWUiOiJTZW50IEl0ZW1zIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNzAiLCJOYW1lIjoiSm9icyIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzcxIiwiTmFtZSI6IkxpbmtJRCIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzcyIiwiTmFtZSI6Ik1hZGFsaW5hIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNzMiLCJOYW1lIjoiTWFsdGEyMDA5IiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNzQiLCJOYW1lIjoiTWFtYSIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzc1IiwiTmFtZSI6Ik1hc3RlciBJQ1NGRVQiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF83NiIsIk5hbWUiOiJNZXNhamUgZGluIEFtZXJpY2EiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF83NyIsIk5hbWUiOiJOb2tpYSIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzc4IiwiTmFtZSI6Ik9mZXJ0ZSIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzc5IiwiTmFtZSI6Ik9yYW5nZSIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzgwIiwiTmFtZSI6IlBlcnNvbmFsIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfODEiLCJOYW1lIjoiUGxhdGkgT3JhbmdlIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfODIiLCJOYW1lIjoiUHJpZXRlbmkiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF84MyIsIk5hbWUiOiJQcm9tb3RpaSIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzg0IiwiTmFtZSI6IlByb21vdGlpXC9EZWFsIEZldmVyIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfODUiLCJOYW1lIjoiUHJvbW90aWlcL0ZvdG9sYW5kIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfODYiLCJOYW1lIjoiUHJvbW90aWlcL0Z1biBEZWFsIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfODciLCJOYW1lIjoiUHJvbW90aWlcL1RvcCBEZWFscyIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzg4IiwiTmFtZSI6IlByb21vdGlpXC9XZWxsbmVzcyIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzg5IiwiTmFtZSI6IlByb21vdGlpXC9adW16aSIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzkwIiwiTmFtZSI6IlJDUy1SRFMgLSBOZXQrVFYiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF85MSIsIk5hbWUiOiJSb21hIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfOTIiLCJOYW1lIjoiUzdTIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfOTMiLCJOYW1lIjoiVGF0YSIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzk0IiwiTmFtZSI6IlVucm9sbC5tZSIsIlR5cGUiOiJ1c2VyIn0seyJJZCI6IkxhYmVsXzk1IiwiTmFtZSI6IlZlcmkiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF85NiIsIk5hbWUiOiJXZXN0ZXJuIERpZ2l0YWwiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF85NyIsIk5hbWUiOiJXb3JrIGFuZCBUcmF2ZWwiLCJUeXBlIjoidXNlciJ9LHsiSWQiOiJMYWJlbF85OCIsIk5hbWUiOiJSZXZ2b2x1dGlvbiIsIlR5cGUiOiJ1c2VyIn1d" AuthScopesInvalid="False" BrowserFolder="Emag" BrowserFolderLabelId="Label_60" ConnectionId="17d677e4-6ae6-ec11-b656-e42aac668fcd" DisplayName="Get Newest Email" FolderInputSelectionMode="Browse" sap:VirtualizedContainerService.HintSize="353.6,236" sap2010:WorkflowViewState.IdRef="GetNewestEmailConnections_1" ImportantOnly="False" MarkAsRead="False" Result="[out_GMail_email]" StarredOnly="False" UnreadOnly="False" UseConnectionService="True" WithAttachmentsOnly="False">
+      <uga:GetNewestEmailConnections.Folder>
+        <ugagm:FolderArgument ConnectionDescriptor="{x:Null}" ManualEntryFolderName="{x:Null}" BrowserFolderId="Label_60" BrowserFolderName="Emag" ConnectionKey="17d677e4-6ae6-ec11-b656-e42aac668fcd" InputMode="Browse">
+          <ugagm:FolderArgument.Backup>
+            <usau:BackupSlot x:TypeArguments="ugage:FolderInputMode" x:Name="__ReferenceID0" StoredValue="Browse">
+              <usau:BackupSlot.BackupValues>
+                <scg:Dictionary x:TypeArguments="ugage:FolderInputMode, scg:List(x:Object)" />
+              </usau:BackupSlot.BackupValues>
+            </usau:BackupSlot>
+          </ugagm:FolderArgument.Backup>
+        </ugagm:FolderArgument>
+      </uga:GetNewestEmailConnections.Folder>
+    </uga:GetNewestEmailConnections>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;GMail: Email subject is: &quot; + out_GMail_email.Subject]" />
+    <uga:MoveFileConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" File="{x:Null}" Folder="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID1}" ManualFileId="{x:Null}" ManualFolderId="{x:Null}" NewFileName="{x:Null}" AuthScopesInvalid="False" BrowserFileId="https://docs.google.com/spreadsheets/d/1aRqiWj7lzxcHXp7VFiiI9Xw3bay_jG1X4G2PNTEtvVA/edit?usp=drivesdk" BrowserFolderId="https://drive.google.com/drive/folders/1K4w0nAiuztqqUM1rt-ivJ3AhxG85pJZC" ConflictResolution="AddSeparate" ConnectionId="fc7c19d6-6da0-ec11-a99b-e42aac668fcd" DisplayName="Move File or Folder" FileFriendlyName="FisierExcel" FileInputMode="Browse" FolderFriendlyName="Network feed" FolderInputMode="Browse" sap:VirtualizedContainerService.HintSize="353.6,340.8" sap2010:WorkflowViewState.IdRef="MoveFileConnections_1" Result="[out_GoogleDrive_FileOrFilder]" UseConnectionService="True">
+      <uga:MoveFileConnections.Destination>
+        <ugam:DriveItemArgument ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://drive.google.com/drive/folders/1K4w0nAiuztqqUM1rt-ivJ3AhxG85pJZC" ConnectionKey="fc7c19d6-6da0-ec11-a99b-e42aac668fcd" FriendlyName="Network feed" FullPathHint="My Drive/Network feed" InputMode="Browse">
+          <ugam:DriveItemArgument.Backup>
+            <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID1" StoredValue="Browse">
+              <usau:BackupSlot.BackupValues>
+                <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+              </usau:BackupSlot.BackupValues>
+            </usau:BackupSlot>
+          </ugam:DriveItemArgument.Backup>
+        </ugam:DriveItemArgument>
+      </uga:MoveFileConnections.Destination>
+      <uga:MoveFileConnections.FileIdBackup>
+        <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID2" StoredValue="Browse">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:MoveFileConnections.FileIdBackup>
+      <uga:MoveFileConnections.Item>
+        <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID2}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/1aRqiWj7lzxcHXp7VFiiI9Xw3bay_jG1X4G2PNTEtvVA/edit?usp=drivesdk" ConnectionKey="fc7c19d6-6da0-ec11-a99b-e42aac668fcd" FriendlyName="FisierExcel" FullPathHint="My Drive/Fisiere de test/FisierExcel" InputMode="Browse" />
+      </uga:MoveFileConnections.Item>
+    </uga:MoveFileConnections>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;GoogleDrive file or folder: &quot; + out_GoogleDrive_FileOrFilder.FullName]" />
+    <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACqVU224TMRD9FcvPyTYX6EMekGjaQkRLQlP1hVbI8c5mTXftxR6XhqgSv8Hv8SWM9xK2SSBCPCWeOR7POXN21vxcQRa7sdEolAbLR2s+B2FlKhYZVEk++njX4RNdeNwE1vy9yIGPuIXC8A4/Va7IxKoOXlHQKTR2FVLgpFUFKqMpdZ0C04RiJmFI/+0GGrFNTjmmDTIpHDAHmvLqASKqdb0qQn2HVuklnefG4tTGoe9+h18Yc++LQGG6+AwSWy063qRvROZDNDxEwZnAlE5Hz0HhZqBZoe6eShZqSQTWhBDxyeoUEuEz5CO0HqhMIFExnFmVC2JOl0q5XsuQqFW8gi9eWYibeyXiwkhRX/7goRRtqsdCPwhX4Z46G72L0O+23iWJfUonKiOlLYvpTRlEZuF+xM4eWfcVY7ccwWGEj3jL/67uoK3AfrL/Tc1CssdJCVjQEg4aSZo8V3i0sELL9AjFMmL1jEZbRvv5/YdjcZVjFf6At4b/Mv85SKPjtgMOi0DOmHrc+4GFEZ6arzqjZ3fkaRLsnFA7Em1na4ZGImCXeILIeTU3cgEfJSJzROUKXEF+hYZacx57K/DP463636FGi8Nd0mppqpTXGtYk0EQ7pAnATFiihGDp3prf0G9Vth/1oh5VpQ2lSwu/gxWFvQpG7uZKWuNMgt2lwtQvCBg+tweFq5ps03Xn+U6Ia2k+BXkp+RaxuARMDfXG3wCG2Y2FTCFubY2ytXLhhflMAnSOPlatBTg2mc/Lj71J0WjnpaXOjc0FbuP4zkzre6U6VQsn1nx1YCcIeWiB4jMh78US2jIdR72uyIpURIPe4EXvZX8YDdu6/cYOomE0OD6kyLQAUu65kXaEOrturdDtChdCLz11STnQdL4UjzM6ztU3CvV7PSom3Am58J7UGaeEDgqXLnz6BVchOq+ZBgAA" ConnectionId="e173e903-6ea0-ec11-a99b-e42aac668fcd" DisplayName="Download File" sap:VirtualizedContainerService.HintSize="353.6,268" sap2010:WorkflowViewState.IdRef="ConnectorActivity_1" UiPathActivityTypeId="a3aa600b-971b-310d-8278-0ed5e97e771c">
+      <isactr:ConnectorActivity.FieldObjects>
+        <isactr:FieldObject Name="repo" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String">Studio</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="path" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String">[in_GitHub_Path]</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="fileDownload" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <OutArgument x:TypeArguments="upr:IResource">[out_GitHub_DownloadFile]</OutArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="_ref" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String" />
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+      </isactr:ConnectorActivity.FieldObjects>
+    </isactr:ConnectorActivity>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn" Message="[&quot;GitHub file is: &quot; + out_GitHub_DownloadFile.FullName]" />
+  </Sequence>
+</Activity>

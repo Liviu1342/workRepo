@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1724,5290</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1640,5206</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Entry_Point_1_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -40,6 +40,7 @@
       <x:String>UiPath.DataService.Activities</x:String>
       <x:String>UiPath.DataService.Definition</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -88,9 +89,10 @@
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Entry_Point_1" sap:VirtualizedContainerService.HintSize="726,5224.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Entry_Point_1" sap:VirtualizedContainerService.HintSize="766,5141.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="errorCode" />
     </Sequence.Variables>
@@ -99,13 +101,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="664,183.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Starting main entry point&quot;]" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Files to Use For Invoke\Errors.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="664,216" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Files to Use For Invoke\Errors.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:Int32" x:Key="in_ErrorCode" />
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
-    <Sequence sap:VirtualizedContainerService.HintSize="664,668" sap2010:WorkflowViewState.IdRef="Sequence_19">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="704,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Starting main entry point - modified on debug&quot;]" />
+    <Sequence sap:VirtualizedContainerService.HintSize="704,444.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_19">
       <Sequence.Variables>
         <Variable x:TypeArguments="s:Guid" Default="[new Guid(&quot;74AACAB7-AA5E-EE11-9937-00224802FD72&quot;)]" Name="entity_RecordId" />
       </Sequence.Variables>
@@ -114,7 +111,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Files to Use For Invoke\File actions.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,425.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Files to Use For Invoke\File actions.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Files to Use For Invoke\File actions.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Files to Use For Invoke\File actions.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="in_Filename">Fisier de test pentru debug.txt</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="in_OrchFolder">test</InArgument>
@@ -123,17 +120,22 @@
           <InArgument x:TypeArguments="x:String" x:Key="in_LocalFile">Files\myTextFile.txt</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <e:Get_Name_of_Entity_by_ID DisplayName="Get Name of Entity by ID" sap:VirtualizedContainerService.HintSize="450,114.4" sap2010:WorkflowViewState.IdRef="Get_Name_of_Entity_by_ID_1" in_Id="[entity_RecordId]" />
+      <e:Get_Name_of_Entity_by_ID DisplayName="Get Name of Entity by ID" sap:VirtualizedContainerService.HintSize="450,114.66666666666667" sap2010:WorkflowViewState.IdRef="Get_Name_of_Entity_by_ID_1" in_Id="[entity_RecordId]" />
     </Sequence>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="664,958.4" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Files to Use For Invoke\Errors.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="704,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Files to Use For Invoke\Errors.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:Int32" x:Key="in_ErrorCode" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="704,1014.6666666666666" sap2010:WorkflowViewState.IdRef="TryCatch_3">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="492,264.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="512,288.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Files to Use For Invoke\UIA actions.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Files to Use For Invoke\UIA actions.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Files to Use For Invoke\UIA actions.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,200.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Files to Use For Invoke\UIA actions.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_AppToSearch">Benefits</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
@@ -146,35 +148,35 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="492,232" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="512,252" sap2010:WorkflowViewState.IdRef="Sequence_7">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Possible exception thrown because Chrome extension not installed on the target machine&quot;]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Possible exception thrown because Chrome extension not installed on the target machine&quot;]" />
             </Sequence>
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="492,232" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="512,252" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Moving on&quot;]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Moving on&quot;]" />
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>
-    <Sequence DisplayName="Handled exceptions" sap:VirtualizedContainerService.HintSize="664,2822.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_12">
+    <Sequence DisplayName="Handled exceptions" sap:VirtualizedContainerService.HintSize="704,2896.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_12">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign sap:VirtualizedContainerService.HintSize="602,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign sap:VirtualizedContainerService.HintSize="642,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
           <OutArgument x:TypeArguments="scg:List(x:Int32)">[in_ErrorCodes]</OutArgument>
         </Assign.To>
@@ -182,27 +184,27 @@
           <InArgument x:TypeArguments="scg:List(x:Int32)">[new List(Of Integer) from {1,2,3,100}]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" DisplayName="For each" sap:VirtualizedContainerService.HintSize="602,2586.6666666666665" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[in_ErrorCodes]">
+      <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" DisplayName="For each" sap:VirtualizedContainerService.HintSize="642,2659.3333333333335" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[in_ErrorCodes]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="errorCode" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="568,2412.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="608,2468.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_11">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="526,2325.3333333333335" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="546,2384" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                 <TryCatch.Try>
-                  <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="492,264.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="512,284.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Files to Use For Invoke\Errors.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Files to Use For Invoke\Errors.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Files to Use For Invoke\Errors.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,200" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Files to Use For Invoke\Errors.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="x:Int32" x:Key="in_ErrorCode">[errorCode]</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
@@ -215,13 +217,13 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:NullReferenceException" Name="exception" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="492,232" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="512,252" sap2010:WorkflowViewState.IdRef="Sequence_9">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Handled Exception - NullReferenceException&quot;]" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Handled Exception - NullReferenceException&quot;]" />
                       </Sequence>
                     </ActivityAction>
                   </Catch>
@@ -230,13 +232,13 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:ArgumentNullException" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="492,232" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                      <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="512,252" sap2010:WorkflowViewState.IdRef="Sequence_13">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;This branch should have never been reached&quot;]" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;This branch should have never been reached&quot;]" />
                       </Sequence>
                     </ActivityAction>
                   </Catch>
@@ -245,13 +247,13 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:NotFiniteNumberException" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="492,232" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                      <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="512,252" sap2010:WorkflowViewState.IdRef="Sequence_14">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Handled Exception - NotFiniteNumberException&quot;]" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Handled Exception - NotFiniteNumberException&quot;]" />
                       </Sequence>
                     </ActivityAction>
                   </Catch>
@@ -260,13 +262,13 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:ArgumentOutOfRangeException" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="492,232" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                      <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="512,252" sap2010:WorkflowViewState.IdRef="Sequence_15">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Handled Exception - ArgumentOutOfRangeException&quot;]" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Handled Exception - ArgumentOutOfRangeException&quot;]" />
                       </Sequence>
                     </ActivityAction>
                   </Catch>
@@ -275,13 +277,13 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:InvalidOperationException" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="492,232" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                      <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="512,252" sap2010:WorkflowViewState.IdRef="Sequence_16">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;This branch should have never been reached&quot;]" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;This branch should have never been reached&quot;]" />
                       </Sequence>
                     </ActivityAction>
                   </Catch>
@@ -290,19 +292,19 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:Exception" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="492,232" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                      <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="512,252" sap2010:WorkflowViewState.IdRef="Sequence_17">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[&quot;Handled Exception - Generic exception&quot;]" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[&quot;Handled Exception - Generic exception&quot;]" />
                       </Sequence>
                     </ActivityAction>
                   </Catch>
                 </TryCatch.Catches>
                 <TryCatch.Finally>
-                  <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="416,81.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,101.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -316,13 +318,13 @@
         </ui:ForEach.Body>
       </ui:ForEach>
     </Sequence>
-    <Sequence DisplayName="Unhandled Exception" sap:VirtualizedContainerService.HintSize="664,288" sap2010:WorkflowViewState.IdRef="Sequence_18">
+    <Sequence DisplayName="Unhandled Exception" sap:VirtualizedContainerService.HintSize="704,310.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_18">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Files to Use For Invoke\Errors.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Files to Use For Invoke\Errors.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Files to Use For Invoke\Errors.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,200" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Files to Use For Invoke\Errors.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:Int32" x:Key="in_ErrorCode">1</InArgument>
         </ui:InvokeWorkflowFile.Arguments>

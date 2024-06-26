@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1209.6,2152</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1874,2136</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Errors_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -33,6 +33,8 @@
       <x:String>System.Reflection</x:String>
       <x:String>System.Collections.ObjectModel</x:String>
       <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -73,9 +75,11 @@
       <AssemblyReference>System.Linq</AssemblyReference>
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Errors" sap:VirtualizedContainerService.HintSize="588.8,2087.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Errors" sap:VirtualizedContainerService.HintSize="608,2071.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="nullArray" />
     </Sequence.Variables>
@@ -84,17 +88,17 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="526.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Entering Errors.xaml&quot;]" />
-    <Throw Exception="[new NullReferenceException(&quot;Intended NRE thrown from Errors.xaml&quot;)]" sap:VirtualizedContainerService.HintSize="526.4,90.4" sap2010:WorkflowViewState.IdRef="Throw_5" />
-    <Switch x:TypeArguments="x:Int32" DisplayName="Switch" Expression="[in_ErrorCode]" sap:VirtualizedContainerService.HintSize="526.4,1480" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="546,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Entering Errors.xaml&quot;]" />
+    <Throw Exception="[new NullReferenceException(&quot;Intended NRE thrown from Errors.xaml&quot;)]" sap:VirtualizedContainerService.HintSize="546,124" sap2010:WorkflowViewState.IdRef="Throw_5" />
+    <Switch x:TypeArguments="x:Int32" DisplayName="Switch" Expression="[in_ErrorCode]" sap:VirtualizedContainerService.HintSize="546,1515.3333333333333" sap2010:WorkflowViewState.IdRef="Switch`1_2">
       <Switch.Default>
-        <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="492.8,180" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="512,199.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Throw Exception="[new Exception(&quot;Intended error from Errors.xaml&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,90.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
+          <Throw Exception="[new Exception(&quot;Intended error from Errors.xaml&quot;)]" sap:VirtualizedContainerService.HintSize="450,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_1" />
         </Sequence>
       </Switch.Default>
       <sap:WorkflowViewStateService.ViewState>
@@ -103,33 +107,33 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence x:Key="1" DisplayName="" sap:VirtualizedContainerService.HintSize="492.8,180" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence x:Key="1" DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,202.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Throw Exception="[new NullReferenceException(&quot;Intended NRE thrown from Errors.xaml&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,90.4" sap2010:WorkflowViewState.IdRef="Throw_2" />
+        <Throw Exception="[new NullReferenceException(&quot;Intended NRE thrown from Errors.xaml&quot;)]" sap:VirtualizedContainerService.HintSize="450,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_2" />
       </Sequence>
-      <Sequence x:Key="2" DisplayName="" sap:VirtualizedContainerService.HintSize="492.8,362.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <Sequence x:Key="2" DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,379.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;Throwing ArgumentOutOfRangeException&quot;]" />
-        <Throw Exception="[new ArgumentOutOfRangeException(&quot;Intended ArgumentOutOfRangeException thrown from Errors.xaml&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,90.4" sap2010:WorkflowViewState.IdRef="Throw_3" />
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;Throwing ArgumentOutOfRangeException&quot;]" />
+        <Throw Exception="[new ArgumentOutOfRangeException(&quot;Intended ArgumentOutOfRangeException thrown from Errors.xaml&quot;)]" sap:VirtualizedContainerService.HintSize="450,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_3" />
       </Sequence>
-      <Sequence x:Key="3" DisplayName="" sap:VirtualizedContainerService.HintSize="492.8,362.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <Sequence x:Key="3" DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,376" sap2010:WorkflowViewState.IdRef="Sequence_5">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[nullArray.Count]" />
-        <Throw Exception="[new NotFiniteNumberException(&quot;Intended NotFiniteNumberException thrown from Errors.xaml&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,90.4" sap2010:WorkflowViewState.IdRef="Throw_4" />
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Test: &quot; + nullArray.Count.ToString]" />
+        <Throw Exception="[new NotFiniteNumberException(&quot;Intended NotFiniteNumberException thrown from Errors.xaml&quot;)]" sap:VirtualizedContainerService.HintSize="450,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_4" />
       </Sequence>
     </Switch>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="526.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Exiting Errors.xaml&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="546,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Exiting Errors.xaml&quot;]" />
   </Sequence>
 </Activity>

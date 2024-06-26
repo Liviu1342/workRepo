@@ -19,6 +19,7 @@ using UiPath.UIAutomationNext.Enums;
 
 namespace Debug_Master_Windows_CS_TAP.Coded.CodedWfs
 {
+    [System.ComponentModel.Browsable(false)]
     public class PetActivityActivity : System.Activities.Activity
     {
         public PetActivityActivity()

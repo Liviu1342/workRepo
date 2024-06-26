@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="OneDrive_activity" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1362,642" sap2010:WorkflowViewState.IdRef="OneDrive_activity_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umaf="clr-namespace:UiPath.MicrosoftOffice365.Activities.Files;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umafe="clr-namespace:UiPath.MicrosoftOffice365.Activities.Files.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:ume="clr-namespace:UiPath.MicrosoftOffice365.Enums;assembly=UiPath.MicrosoftOffice365" xmlns:umfm="clr-namespace:UiPath.MicrosoftOffice365.Files.Models;assembly=UiPath.MicrosoftOffice365" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="OneDrive_activity" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1670.6666666666667,941.3333333333334" sap2010:WorkflowViewState.IdRef="OneDrive_activity_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugam="clr-namespace:UiPath.GSuite.Activities.Models;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umaf="clr-namespace:UiPath.MicrosoftOffice365.Activities.Files;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umafe="clr-namespace:UiPath.MicrosoftOffice365.Activities.Files.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:ume="clr-namespace:UiPath.MicrosoftOffice365.Enums;assembly=UiPath.MicrosoftOffice365" xmlns:umfm="clr-namespace:UiPath.MicrosoftOffice365.Files.Models;assembly=UiPath.MicrosoftOffice365" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:usau1="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -35,6 +35,10 @@
       <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
       <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
       <x:String>System.Reflection</x:String>
+      <x:String>UiPath.GSuite.Activities.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -83,9 +87,11 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="OneDrive_activity" sap:VirtualizedContainerService.HintSize="450,449.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="OneDrive_activity" sap:VirtualizedContainerService.HintSize="416,786.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="umfm:O365DriveRemoteItem[]" Name="_out_GetFileListConnections_1__Result" />
     </Sequence.Variables>
@@ -94,7 +100,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <umaf:GetFileListConnections BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Filter="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" SimpleSearch="{x:Null}" AuthScopesInvalid="False" DisplayName="Get File/Folder List" sap:VirtualizedContainerService.HintSize="388,154.4" sap2010:WorkflowViewState.IdRef="GetFileListConnections_1" ItemSelectionMode="Browse" Result="[_out_GetFileListConnections_1__Result]" SearchMode="UseSimple" UseConnectionService="True">
+    <umaf:GetFileListConnections BrowserParentItemId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Filter="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" SimpleSearch="{x:Null}" AuthScopesInvalid="False" DisplayName="Get File/Folder List" sap:VirtualizedContainerService.HintSize="354,186.66666666666666" sap2010:WorkflowViewState.IdRef="GetFileListConnections_1" ItemSelectionMode="Browse" Result="[_out_GetFileListConnections_1__Result]" SearchMode="UseSimple" UseConnectionService="True">
       <umaf:GetFileListConnections.BrowserDriveId>
         <InArgument x:TypeArguments="x:String">
           <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_37">b!frXXpPiMUUeySBdPnsYDdp3DcBCUf9JJj0-gqeG1o5if5BnfZwKOTptt-oCH_wTS</Literal>
@@ -171,6 +177,29 @@
         </InArgument>
       </umaf:GetFileListConnections.WhatToReturn>
     </umaf:GetFileListConnections>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Found &quot; + _out_GetFileListConnections_1__Result.Length.ToString + &quot; files&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Found &quot; + _out_GetFileListConnections_1__Result.Length.ToString + &quot; files&quot;]" />
+    <uga:MoveFileConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" File="{x:Null}" Folder="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID0}" ManualFileId="{x:Null}" ManualFolderId="{x:Null}" NewFileName="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" BrowserFileId="https://docs.google.com/document/d/1eTd4yXLZssJJftTpd1FHkYHbVHU-yuYY4Xhh6b1axBY/edit?usp=drivesdk" BrowserFolderId="https://drive.google.com/drive/folders/1d4jMVekDj-rPynPMzpNIXj9oFvASSJbZ" ConflictResolution="AddSeparate" ConnectionId="fc7c19d6-6da0-ec11-a99b-e42aac668fcd" DisplayName="Move File or Folder" FileFriendlyName="CSBT -usage guide for UiPath" FileInputMode="Browse" FolderFriendlyName="Rezultate" FolderInputMode="Browse" sap:VirtualizedContainerService.HintSize="354,335.3333333333333" sap2010:WorkflowViewState.IdRef="MoveFileConnections_2" UseConnectionService="True">
+      <uga:MoveFileConnections.Destination>
+        <ugam:DriveItemArgument ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://drive.google.com/drive/folders/1d4jMVekDj-rPynPMzpNIXj9oFvASSJbZ" ConnectionKey="fc7c19d6-6da0-ec11-a99b-e42aac668fcd" FriendlyName="Rezultate" FullPathHint="My Drive/Rezultate" InputMode="Browse">
+          <ugam:DriveItemArgument.Backup>
+            <usau1:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID0" StoredValue="Browse">
+              <usau1:BackupSlot.BackupValues>
+                <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+              </usau1:BackupSlot.BackupValues>
+            </usau1:BackupSlot>
+          </ugam:DriveItemArgument.Backup>
+        </ugam:DriveItemArgument>
+      </uga:MoveFileConnections.Destination>
+      <uga:MoveFileConnections.FileIdBackup>
+        <usau1:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID1" StoredValue="Browse">
+          <usau1:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+          </usau1:BackupSlot.BackupValues>
+        </usau1:BackupSlot>
+      </uga:MoveFileConnections.FileIdBackup>
+      <uga:MoveFileConnections.Item>
+        <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID1}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/document/d/1eTd4yXLZssJJftTpd1FHkYHbVHU-yuYY4Xhh6b1axBY/edit?usp=drivesdk" ConnectionKey="fc7c19d6-6da0-ec11-a99b-e42aac668fcd" FriendlyName="CSBT -usage guide for UiPath" FullPathHint="My Drive/Fisiere de test/CSBT -usage guide for UiPath" InputMode="Browse" />
+      </uga:MoveFileConnections.Item>
+    </uga:MoveFileConnections>
   </Sequence>
 </Activity>

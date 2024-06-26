@@ -15,14 +15,6 @@ namespace Connections_Win_VB_Process
         }
 
         /// <summary>
-        /// Invokes the Workflow.cs
-        /// </summary>
-        public void Workflow()
-        {
-            var result = _runWorkflowHandler(@"Workflow.cs", new Dictionary<string, object>{}, default, default, default);
-        }
-
-        /// <summary>
         /// Invokes the Sequence.xaml
         /// </summary>
         public void Sequence(string in_arg1, string in_arg2, string in_arg3)
@@ -31,11 +23,27 @@ namespace Connections_Win_VB_Process
         }
 
         /// <summary>
-        /// Invokes the Main.xaml
+        /// Invokes the Tests/TestCase - No error.xaml
         /// </summary>
-        public void Main()
+        public void TestCase___No_error()
         {
-            var result = _runWorkflowHandler(@"Main.xaml", new Dictionary<string, object>{}, default, default, default);
+            var result = _runWorkflowHandler(@"Tests\TestCase - No error.xaml", new Dictionary<string, object>{}, default, default, default);
+        }
+
+        /// <summary>
+        /// Invokes the Errors/Analyzer Error - High Argument Count.xaml
+        /// </summary>
+        public void Analyzer_Error___High_Argument_Count(string argument1, string argument2, string argument3, string argument4, string argument5, string argument6, string argument7, string argument8, string argument9, string argument10, string argument11, string argument12, string argument13, string argument14, string argument15, string argument16, string argument17, string argument18, string argument19, string argument20)
+        {
+            var result = _runWorkflowHandler(@"Errors\Analyzer Error - High Argument Count.xaml", new Dictionary<string, object>{{"argument1", argument1}, {"argument2", argument2}, {"argument3", argument3}, {"argument4", argument4}, {"argument5", argument5}, {"argument6", argument6}, {"argument7", argument7}, {"argument8", argument8}, {"argument9", argument9}, {"argument10", argument10}, {"argument11", argument11}, {"argument12", argument12}, {"argument13", argument13}, {"argument14", argument14}, {"argument15", argument15}, {"argument16", argument16}, {"argument17", argument17}, {"argument18", argument18}, {"argument19", argument19}, {"argument20", argument20}}, default, default, default);
+        }
+
+        /// <summary>
+        /// Invokes the Tests/TestCase - Validation Error.xaml
+        /// </summary>
+        public void TestCase___Validation_Error(string argument1, string argument2, string argument3, string argument4, string argument5, string argument6, string argument7, string argument8, string argument9, string argument10, string argument11, string argument12, string argument13, string argument14, string argument15, string argument16, string argument17, string argument18, string argument19, string argument20)
+        {
+            var result = _runWorkflowHandler(@"Tests\TestCase - Validation Error.xaml", new Dictionary<string, object>{{"argument1", argument1}, {"argument2", argument2}, {"argument3", argument3}, {"argument4", argument4}, {"argument5", argument5}, {"argument6", argument6}, {"argument7", argument7}, {"argument8", argument8}, {"argument9", argument9}, {"argument10", argument10}, {"argument11", argument11}, {"argument12", argument12}, {"argument13", argument13}, {"argument14", argument14}, {"argument15", argument15}, {"argument16", argument16}, {"argument17", argument17}, {"argument18", argument18}, {"argument19", argument19}, {"argument20", argument20}}, default, default, default);
         }
 
         /// <summary>
@@ -47,19 +55,19 @@ namespace Connections_Win_VB_Process
         }
 
         /// <summary>
+        /// Invokes the Tests/TestCase - Analyzer Error.xaml
+        /// </summary>
+        public void TestCase___Analyzer_Error(string in_Arg)
+        {
+            var result = _runWorkflowHandler(@"Tests\TestCase - Analyzer Error.xaml", new Dictionary<string, object>{{"in_Arg", in_Arg}}, default, default, default);
+        }
+
+        /// <summary>
         /// Invokes the Errors/No Error.xaml
         /// </summary>
         public void No_Error(string argument1)
         {
             var result = _runWorkflowHandler(@"Errors\No Error.xaml", new Dictionary<string, object>{{"argument1", argument1}}, default, default, default);
-        }
-
-        /// <summary>
-        /// Invokes the Errors/Analyzer Error - High Argument Count.xaml
-        /// </summary>
-        public void Analyzer_Error___High_Argument_Count(string argument1, string argument2, string argument3, string argument4, string argument5, string argument6, string argument7, string argument8, string argument9, string argument10, string argument11, string argument12, string argument13, string argument14, string argument15, string argument16, string argument17, string argument18, string argument19, string argument20)
-        {
-            var result = _runWorkflowHandler(@"Errors\Analyzer Error - High Argument Count.xaml", new Dictionary<string, object>{{"argument1", argument1}, {"argument2", argument2}, {"argument3", argument3}, {"argument4", argument4}, {"argument5", argument5}, {"argument6", argument6}, {"argument7", argument7}, {"argument8", argument8}, {"argument9", argument9}, {"argument10", argument10}, {"argument11", argument11}, {"argument12", argument12}, {"argument13", argument13}, {"argument14", argument14}, {"argument15", argument15}, {"argument16", argument16}, {"argument17", argument17}, {"argument18", argument18}, {"argument19", argument19}, {"argument20", argument20}}, default, default, default);
         }
 
         /// <summary>
@@ -76,6 +84,22 @@ namespace Connections_Win_VB_Process
         public void Validation_Error()
         {
             var result = _runWorkflowHandler(@"Errors\Validation Error.xaml", new Dictionary<string, object>{}, default, default, default);
+        }
+
+        /// <summary>
+        /// Invokes the Main.xaml
+        /// </summary>
+        public void Main()
+        {
+            var result = _runWorkflowHandler(@"Main.xaml", new Dictionary<string, object>{}, default, default, default);
+        }
+
+        /// <summary>
+        /// Invokes the Workflow.cs
+        /// </summary>
+        public void Workflow()
+        {
+            var result = _runWorkflowHandler(@"Workflow.cs", new Dictionary<string, object>{}, default, default, default);
         }
     }
 }

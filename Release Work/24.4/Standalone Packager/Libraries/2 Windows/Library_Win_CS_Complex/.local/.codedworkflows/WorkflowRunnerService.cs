@@ -3,25 +3,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UiPath.CodedWorkflows;
 using UiPath.Activities.Contracts;
-using Library_Win_CS_Complex.ObjectRepository;
-using System.Data;
-using UiPath.Core;
-using UiPath.Core.Activities.Storage;
-using UiPath.Excel;
-using UiPath.Excel.Activities;
-using UiPath.Excel.Activities.API;
-using UiPath.Excel.Activities.API.Models;
-using UiPath.GSuite.Activities.Api;
-using UiPath.Mail.Activities.Api;
-using UiPath.MicrosoftOffice365.Activities.Api;
-using UiPath.Orchestrator.Client.Models;
-using UiPath.Testing;
-using UiPath.Testing.Activities.TestData;
-using UiPath.Testing.Activities.TestDataQueues.Enums;
-using UiPath.Testing.Enums;
-using UiPath.UIAutomationNext.API.Contracts;
-using UiPath.UIAutomationNext.API.Models;
-using UiPath.UIAutomationNext.Enums;
 
 namespace Library_Win_CS_Complex
 {
@@ -61,15 +42,6 @@ namespace Library_Win_CS_Complex
         }
 
         /// <summary>
-        /// Invokes the Webservice/Webservice_Pet_CustomActivity.xaml
-        /// </summary>
-        public SwaggerPetstore.Pet Webservice_Pet_CustomActivity(System.Nullable<long> in_PetId, string in_PetName)
-        {
-            var result = _runWorkflowHandler(@"Webservice\Webservice_Pet_CustomActivity.xaml", new Dictionary<string, object>{{"in_PetId", in_PetId}, {"in_PetName", in_PetName}}, default, default, default);
-            return (SwaggerPetstore.Pet)result["out_Pet"];
-        }
-
-        /// <summary>
         /// Invokes the Entities/Entities_CustomActivity.xaml
         /// </summary>
         public Library_Win_CS_Complex.CatEntity Entities_CustomActivity(string in_CatName)
@@ -85,6 +57,15 @@ namespace Library_Win_CS_Complex
         {
             var result = _runWorkflowHandler(@"UIA\OR_Calculator_CustomActivity.xaml", new Dictionary<string, object>{}, default, default, default);
             return (string)result["out_CalculatorResult"];
+        }
+
+        /// <summary>
+        /// Invokes the Webservice/Webservice_Pet_CustomActivity.xaml
+        /// </summary>
+        public SwaggerPetstore.Pet Webservice_Pet_CustomActivity(System.Nullable<long> in_PetId, string in_PetName)
+        {
+            var result = _runWorkflowHandler(@"Webservice\Webservice_Pet_CustomActivity.xaml", new Dictionary<string, object>{{"in_PetId", in_PetId}, {"in_PetName", in_PetName}}, default, default, default);
+            return (SwaggerPetstore.Pet)result["out_Pet"];
         }
 
         /// <summary>

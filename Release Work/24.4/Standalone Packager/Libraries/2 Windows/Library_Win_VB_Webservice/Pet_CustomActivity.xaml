@@ -1,19 +1,18 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:s1="clr-namespace:SwaggerPetstore;assembly=SwaggerPetstore" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uwp="clr-namespace:UiPath.WebClient.PetClientNamespace;assembly=SwaggerPetstore" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_PetName="test gigi" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:s1="clr-namespace:SwaggerPetstore;assembly=SwaggerPetstore" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uwp="clr-namespace:UiPath.WebClient.PetClientNamespace;assembly=SwaggerPetstore" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_PetID" Type="InArgument(s:Nullable(x:Int64))" />
     <x:Property Name="in_PetName" Type="InArgument(x:String)" />
     <x:Property Name="out_PetResponse" Type="OutArgument(s1:Pet)" />
   </x:Members>
   <this:Main.in_PetID>
-    <InArgument x:TypeArguments="s:Nullable(x:Int64)" />
+    <InArgument x:TypeArguments="s:Nullable(x:Int64)">
+      <Literal x:TypeArguments="s:Nullable(x:Int64)" Value="23498" />
+    </InArgument>
   </this:Main.in_PetID>
-  <this:Main.in_PetName>
-    <InArgument x:TypeArguments="x:String" />
-  </this:Main.in_PetName>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>877.6,1764</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1204.8,1764</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">

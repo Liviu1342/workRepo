@@ -1,0 +1,73 @@
+{
+  "$id": "https://example.com/person.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Persoana",
+  "type": "object",
+  "required": [
+	"nume + prenume",
+    "cnp",
+	"varsta-persoanei",
+	"data Nasterii",
+	"are Sapca ?"
+  ],
+  "properties": {
+    "nume": {
+      "type": "string",
+      "description": "The person's first name."
+    },
+  "`1234567890-=][poiuytrewqasdfghjkl;'/.,mnbvcxz.*/-+~!@#$%^&*()_+|}{POIUYTREWQASDFGHJKL:?><MNBVCXZ": {
+      "type": "string",
+      "description": "Property with multiple illegal chars"
+    },
+    "prenume": {
+      "type": "string",
+      "description": "The person's last name."
+    },
+	" nume + prenume": {
+      "type": "string",
+      "description": "The person's full name."
+    },
+    "varsta-persoanei": {
+      "description": "Age in years which must be equal to or greater than zero.",
+      "type": "integer",
+      "minimum": 0
+    },
+	"are Sapca ?": {
+		"description" : "Boolean property. Does the person wear a cap? True / False",
+		"type": "boolean",
+		"default": false
+	},
+	"cnp": {
+		"description": "Number property. The wealth in $$$$ of the person",
+		"type": "number",
+		"default": 0.0,
+		"minimum": 0
+	},
+	"data Nasterii": {
+		"description": "Properietate de tip Date",
+		"type" : "string",
+		"format": "date"
+	},
+	"limbi Straine": {
+		"type": "array",
+		"items": {
+			"type": "string"
+		}
+	},
+	"nota-Per-Limba-Straina": {
+		"type": "array",
+		"items": {
+			"type": "integer"
+		}
+	},
+	"object1": {
+		"type": "object"
+	},
+	"object2": {
+		"type": "object"
+	},
+	"object3": {
+		"type": "object"
+	}
+  }
+}

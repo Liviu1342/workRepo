@@ -19,14 +19,19 @@ namespace Library_Cross_VB_Connections
 {
     public partial class CodedWorkflow : CodedWorkflowBase
     {
+        private Lazy<ConnectionsManager> _connectionsManagerLazy;
         public CodedWorkflow()
         {
-            _ = new System.Type[]{typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.MicrosoftOffice365.Activities.Api.IOffice365ConnectionsService), typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.GSuite.Activities.Api.IGoogleConnectionsService)};
+            _ = new System.Type[]{typeof(UiPath.GSuite.Activities.Api.IGoogleConnectionsService), typeof(UiPath.MicrosoftOffice365.Activities.Api.IOffice365ConnectionsService), typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService)};
             workflows = new WorkflowRunnerService(this.RunWorkflow);
+#pragma warning disable
+            _connectionsManagerLazy = new Lazy<ConnectionsManager>(() => new ConnectionsManager(serviceContainer));
+#pragma warning restore
         }
 
         protected WorkflowRunnerService workflows { get; private set; }
 
+        protected ConnectionsManager connections => _connectionsManagerLazy.Value;
 #pragma warning disable
         protected UiPath.GSuite.Activities.Api.IGoogleConnectionsService google { get => serviceContainer.Resolve<UiPath.GSuite.Activities.Api.IGoogleConnectionsService>() ; }
 #pragma warning restore

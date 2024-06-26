@@ -4,7 +4,7 @@
     <x:Property Name="TriggerEventArgs" Type="InArgument(ui:GlobalVariableTriggerArgs)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1060,1316.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1740.6666666666667,913.3333333333334</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -81,21 +81,27 @@
       <AssemblyReference>Debug_Master_Windows_CS_TAP.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Errors" sap:VirtualizedContainerService.HintSize="559.6,1251.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Errors" sap:VirtualizedContainerService.HintSize="558.6666666666666,802.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GlobalVariableChangedTrigger VariableName="{x:Null}" DisplayName="Global Variable Changed Trigger" Enabled="True" sap:VirtualizedContainerService.HintSize="497.6,153.2" sap2010:WorkflowViewState.IdRef="GlobalVariableChangedTrigger_1" SchedulingMode="Sequential" TriggerId="bbee6417-4487-440c-852e-18033c8588a7" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="497.6,183.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn">
+    <ui:GlobalVariableChangedTrigger DisplayName="Global Variable Changed Trigger" Enabled="True" sap:VirtualizedContainerService.HintSize="496.6666666666667,145.33333333333334" sap2010:WorkflowViewState.IdRef="GlobalVariableChangedTrigger_1" SchedulingMode="Sequential" TriggerId="bbee6417-4487-440c-852e-18033c8588a7">
+      <ui:GlobalVariableChangedTrigger.VariableName>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">GlobalVariables.run_errors</CSharpValue>
+        </InArgument>
+      </ui:GlobalVariableChangedTrigger.VariableName>
+    </ui:GlobalVariableChangedTrigger>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="496.6666666666667,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"Entering Errors.xaml"</CSharpValue>
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <Switch x:TypeArguments="x:Int32" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="497.6,659.6" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+    <Switch x:TypeArguments="x:Int32" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="496.6666666666667,225.33333333333334" sap2010:WorkflowViewState.IdRef="Switch`1_1">
       <Switch.Default>
         <Throw sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="Throw_1">
           <InArgument x:TypeArguments="s:Exception">
@@ -108,17 +114,17 @@
           <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">in_ErrorCode</CSharpValue>
         </InArgument>
       </Switch.Expression>
-      <Throw x:Key="1" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_2">
+      <Throw x:Key="1" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="Throw_2">
         <InArgument x:TypeArguments="s:Exception">
           <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">new NullReferenceException("Intended NRE thrown from Errors.xaml")</CSharpValue>
         </InArgument>
       </Throw>
-      <Throw x:Key="2" sap:VirtualizedContainerService.HintSize="334,91.2" sap2010:WorkflowViewState.IdRef="Throw_3">
+      <Throw x:Key="2" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="Throw_3">
         <InArgument x:TypeArguments="s:Exception">
           <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">new ArgumentOutOfRangeException("Intended ArgumentOutOfRangeException thrown from Errors.xaml")</CSharpValue>
         </InArgument>
       </Throw>
-      <Sequence x:Key="3" sap:VirtualizedContainerService.HintSize="416,383.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence x:Key="3" sap:VirtualizedContainerService.HintSize="416,286.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
         <Sequence.Variables>
           <Variable x:TypeArguments="s:Int32[]" Name="nullArray" />
         </Sequence.Variables>
@@ -127,7 +133,7 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,183.6" sap2010:WorkflowViewState.IdRef="LogMessage_3">
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3">
           <ui:LogMessage.Message>
             <InArgument x:TypeArguments="x:Object">
               <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">nullArray.Count()</CSharpValue>
@@ -141,7 +147,7 @@
         </Throw>
       </Sequence>
     </Switch>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="497.6,166.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="496.6666666666667,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">"Exiting Errors.xaml"</CSharpValue>

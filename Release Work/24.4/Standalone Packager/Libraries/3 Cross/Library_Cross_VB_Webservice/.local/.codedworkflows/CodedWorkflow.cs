@@ -17,14 +17,19 @@ namespace Library_Cross_VB_Webservice
 {
     public partial class CodedWorkflow : CodedWorkflowBase
     {
+        private Lazy<ConnectionsManager> _connectionsManagerLazy;
         public CodedWorkflow()
         {
-            _ = new System.Type[]{typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.Testing.API.ITestingService)};
+            _ = new System.Type[]{typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService)};
             workflows = new WorkflowRunnerService(this.RunWorkflow);
+#pragma warning disable
+            _connectionsManagerLazy = new Lazy<ConnectionsManager>(() => new ConnectionsManager(serviceContainer));
+#pragma warning restore
         }
 
         protected WorkflowRunnerService workflows { get; private set; }
 
+        protected ConnectionsManager connections => _connectionsManagerLazy.Value;
 #pragma warning disable
         protected UiPath.Core.Activities.API.ISystemService system { get => serviceContainer.Resolve<UiPath.Core.Activities.API.ISystemService>() ; }
 #pragma warning restore

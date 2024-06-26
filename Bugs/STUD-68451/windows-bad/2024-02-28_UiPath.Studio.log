@@ -1,0 +1,67 @@
+﻿22:20:29.6978 => [WARN] [UiPath.Studio] [1] Studio version: 24.4.0-alpha.16026+Branch.develop.Sha.9c0d91ae57cf680688e8e9be2fd1d97d32ab9439.9c0d91ae57cf680688e8e9be2fd1d97d32ab9439
+22:20:30.3460 => [WARN] [UiPath.Studio] [1] Session id: 7e188326-9a77-4411-bcec-cf37e3b77cc9
+22:20:32.1664 => [WARN] [UiPath.Studio] [1] Office version: 2016
+22:20:32.1664 => [WARN] [UiPath.Studio] [1] Office build version: 16.0.17231.20236
+22:21:19.9621 => [WARN] [UiPath.Studio] [1] GetCompilableWorkflows: allWfCount = 5, normalizedDistinctWfCount = 4
+22:22:31.5077 => [ERROR] [UiPath.Studio] [1] System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.EvaluateLocalsCategory(List`1 locals, CancellationToken token) in D:\a\1\s\Studio\UiPath.Studio.Plugin.Workflow\Debugger\Locals\Services\ProjectLocalsService.cs:line 427
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.UpdateAsync(Boolean shouldReevaluate, CancellationToken cancellationToken) in D:\a\1\s\Studio\UiPath.Studio.Plugin.Workflow\Debugger\Locals\Services\ProjectLocalsService.cs:line 191, HResult -2146233029
+22:22:43.2934 => [ERROR] [UiPath.Studio] [1] System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.EvaluateLocalsCategory(List`1 locals, CancellationToken token) in D:\a\1\s\Studio\UiPath.Studio.Plugin.Workflow\Debugger\Locals\Services\ProjectLocalsService.cs:line 427
+   at UiPath.Studio.Plugin.Workflow.Debugger.Locals.Services.ProjectLocalsService.UpdateAsync(Boolean shouldReevaluate, CancellationToken cancellationToken) in D:\a\1\s\Studio\UiPath.Studio.Plugin.Workflow\Debugger\Locals\Services\ProjectLocalsService.cs:line 192, HResult -2146233029
+22:23:45.5197 => [WARN] [UiPath.Studio.App.Logging.OutputLogger] [39] 10
+22:23:48.5498 => [ERROR] [UiPath.Studio] [40] RemoteException wrapping System.Exception: Cannot evaluate 'a == b' at current context.  ---> RemoteException wrapping System.NotSupportedException: Expression Activity type 'CSharpValue`1' requires compilation in order to run.  Please ensure that the workflow has been compiled. 
+   at System.Activities.WorkflowApplication.Invoke(Activity activity, IDictionary`2 inputs, WorkflowInstanceExtensionManager extensions, TimeSpan timeout)
+   at System.Activities.WorkflowInvoker.Invoke(Activity workflow, IDictionary`2 inputs)
+   at UiPath.Activities.Debugger.CsharpRValueEvaluator.Evaluate(String expressionString, Type locationValueType, IList`1 referencedAssemblies, IList`1 includedNamespaces) in D:\a\1\s\Robot\UiPath.Executor.Debugger\WfInternals\RValue\CsharpRValueEvaluator.cs:line 59
+	--- End of inner exception stack trace ---
+   at UiPath.Activities.Debugger.CsharpRValueEvaluator.Evaluate(String expressionString, Type locationValueType, IList`1 referencedAssemblies, IList`1 includedNamespaces) in D:\a\1\s\Robot\UiPath.Executor.Debugger\WfInternals\RValue\CsharpRValueEvaluator.cs:line 65
+   at UiPath.Activities.Debugger.DebugInfo.EvaluateExpression(String expressionString, IList`1 referencedAssemblies, IList`1 includedNamespaces, ExpressionLanguage expressionLanguage) in D:\a\1\s\Robot\UiPath.Executor.Debugger\WfInternals\DebugInfo.cs:line 158
+   at UiPath.Executor.Tracking.DebugTrackingParticipant.EvaluateExpressionInternal(String expression) in D:\a\1\s\Robot\UiPath.Executor.Debugger\DebugTrackingParticipant.cs:line 275
+   at UiPath.Executor.Tracking.DebugTrackingParticipant.EvaluateExpression(String expression) in D:\a\1\s\Robot\UiPath.Executor.Debugger\DebugTrackingParticipant.cs:line 97
+   at UiPath.Executor.DebuggerPlugin.EvaluateExpression(String expression, CancellationToken cancellationToken) in D:\a\1\s\Robot\UiPath.Executor.Debugger\DebuggerPlugin.cs:line 129
+   at UiPath.CoreIpc.Server.<>c__DisplayClass7_3.<<-ctor>g__InvokeMethod|6>d.MoveNext()
+--- End of stack trace from previous location ---
+   at UiPath.CoreIpc.Server.<>c__DisplayClass7_1.<<-ctor>g__HandleRequest|3>d.MoveNext()
+--- End of stack trace from previous location ---
+   at UiPath.CoreIpc.Server.<>c__DisplayClass7_2.<<-ctor>b__5>d.MoveNext()
+--- End of stack trace from previous location ---
+   at UiPath.CoreIpc.Helpers.Timeout[TResult](TimeSpan timeout, List`1 cancellationTokens, Func`2 func, String message, Func`2 exceptionHandler)
+22:23:48.5498 => [ERROR] [UiPath.Studio] [40] RemoteException wrapping System.Exception: Cannot evaluate 'work1_var2' at current context.  ---> RemoteException wrapping System.NotSupportedException: Expression Activity type 'CSharpValue`1' requires compilation in order to run.  Please ensure that the workflow has been compiled. 
+   at System.Activities.WorkflowApplication.Invoke(Activity activity, IDictionary`2 inputs, WorkflowInstanceExtensionManager extensions, TimeSpan timeout)
+   at System.Activities.WorkflowInvoker.Invoke(Activity workflow, IDictionary`2 inputs)
+   at UiPath.Activities.Debugger.CsharpRValueEvaluator.Evaluate(String expressionString, Type locationValueType, IList`1 referencedAssemblies, IList`1 includedNamespaces) in D:\a\1\s\Robot\UiPath.Executor.Debugger\WfInternals\RValue\CsharpRValueEvaluator.cs:line 59
+	--- End of inner exception stack trace ---
+   at UiPath.Activities.Debugger.CsharpRValueEvaluator.Evaluate(String expressionString, Type locationValueType, IList`1 referencedAssemblies, IList`1 includedNamespaces) in D:\a\1\s\Robot\UiPath.Executor.Debugger\WfInternals\RValue\CsharpRValueEvaluator.cs:line 65
+   at UiPath.Activities.Debugger.DebugInfo.EvaluateExpression(String expressionString, IList`1 referencedAssemblies, IList`1 includedNamespaces, ExpressionLanguage expressionLanguage) in D:\a\1\s\Robot\UiPath.Executor.Debugger\WfInternals\DebugInfo.cs:line 158
+   at UiPath.Executor.Tracking.DebugTrackingParticipant.EvaluateExpressionInternal(String expression) in D:\a\1\s\Robot\UiPath.Executor.Debugger\DebugTrackingParticipant.cs:line 275
+   at UiPath.Executor.Tracking.DebugTrackingParticipant.EvaluateExpression(String expression) in D:\a\1\s\Robot\UiPath.Executor.Debugger\DebugTrackingParticipant.cs:line 97
+   at UiPath.Executor.DebuggerPlugin.EvaluateExpression(String expression, CancellationToken cancellationToken) in D:\a\1\s\Robot\UiPath.Executor.Debugger\DebuggerPlugin.cs:line 129
+   at UiPath.CoreIpc.Server.<>c__DisplayClass7_3.<<-ctor>g__InvokeMethod|6>d.MoveNext()
+--- End of stack trace from previous location ---
+   at UiPath.CoreIpc.Server.<>c__DisplayClass7_1.<<-ctor>g__HandleRequest|3>d.MoveNext()
+--- End of stack trace from previous location ---
+   at UiPath.CoreIpc.Server.<>c__DisplayClass7_2.<<-ctor>b__5>d.MoveNext()
+--- End of stack trace from previous location ---
+   at UiPath.CoreIpc.Helpers.Timeout[TResult](TimeSpan timeout, List`1 cancellationTokens, Func`2 func, String message, Func`2 exceptionHandler)
+22:23:48.5498 => [ERROR] [UiPath.Studio] [40] RemoteException wrapping System.Exception: Cannot evaluate 'work1_var1' at current context.  ---> RemoteException wrapping System.NotSupportedException: Expression Activity type 'CSharpValue`1' requires compilation in order to run.  Please ensure that the workflow has been compiled. 
+   at System.Activities.WorkflowApplication.Invoke(Activity activity, IDictionary`2 inputs, WorkflowInstanceExtensionManager extensions, TimeSpan timeout)
+   at System.Activities.WorkflowInvoker.Invoke(Activity workflow, IDictionary`2 inputs)
+   at UiPath.Activities.Debugger.CsharpRValueEvaluator.Evaluate(String expressionString, Type locationValueType, IList`1 referencedAssemblies, IList`1 includedNamespaces) in D:\a\1\s\Robot\UiPath.Executor.Debugger\WfInternals\RValue\CsharpRValueEvaluator.cs:line 59
+	--- End of inner exception stack trace ---
+   at UiPath.Activities.Debugger.CsharpRValueEvaluator.Evaluate(String expressionString, Type locationValueType, IList`1 referencedAssemblies, IList`1 includedNamespaces) in D:\a\1\s\Robot\UiPath.Executor.Debugger\WfInternals\RValue\CsharpRValueEvaluator.cs:line 65
+   at UiPath.Activities.Debugger.DebugInfo.EvaluateExpression(String expressionString, IList`1 referencedAssemblies, IList`1 includedNamespaces, ExpressionLanguage expressionLanguage) in D:\a\1\s\Robot\UiPath.Executor.Debugger\WfInternals\DebugInfo.cs:line 158
+   at UiPath.Executor.Tracking.DebugTrackingParticipant.EvaluateExpressionInternal(String expression) in D:\a\1\s\Robot\UiPath.Executor.Debugger\DebugTrackingParticipant.cs:line 275
+   at UiPath.Executor.Tracking.DebugTrackingParticipant.EvaluateExpression(String expression) in D:\a\1\s\Robot\UiPath.Executor.Debugger\DebugTrackingParticipant.cs:line 97
+   at UiPath.Executor.DebuggerPlugin.EvaluateExpression(String expression, CancellationToken cancellationToken) in D:\a\1\s\Robot\UiPath.Executor.Debugger\DebuggerPlugin.cs:line 129
+   at UiPath.CoreIpc.Server.<>c__DisplayClass7_3.<<-ctor>g__InvokeMethod|6>d.MoveNext()
+--- End of stack trace from previous location ---
+   at UiPath.CoreIpc.Server.<>c__DisplayClass7_1.<<-ctor>g__HandleRequest|3>d.MoveNext()
+--- End of stack trace from previous location ---
+   at UiPath.CoreIpc.Server.<>c__DisplayClass7_2.<<-ctor>b__5>d.MoveNext()
+--- End of stack trace from previous location ---
+   at UiPath.CoreIpc.Helpers.Timeout[TResult](TimeSpan timeout, List`1 cancellationTokens, Func`2 func, String message, Func`2 exceptionHandler)

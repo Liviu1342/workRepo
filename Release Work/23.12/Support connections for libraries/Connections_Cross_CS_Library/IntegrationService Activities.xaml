@@ -1,0 +1,194 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="IntegrationService_Activities" this:IntegrationService_Activities.in_Git_Repo="Studio" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C8F4F95C39B_issue_comment_List.Bundle;assembly=C8F4F95C39B_issue_co.3UOJc4CaZlO1L22d51RUY65" xmlns:uiascb1="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C962E9A0AB3_ConversationsInfo_GET_Retrieve.Bundle;assembly=C962E9A0AB3_Conversa.1hWvh2Kf9CN13EzY4gGbIM2" xmlns:uiascb2="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C2AAC668FCD_branches_List.Bundle;assembly=C2AAC668FCD_branches.Wut8A4iAsdO1cB6763dlZxH3" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_Jira_comments" Type="OutArgument(uiascb:issue_comment_List[])" />
+    <x:Property Name="out_Slack_channel" Type="OutArgument(uiascb1:ConversationsInfo_GET_Retrieve)" />
+    <x:Property Name="in_Git_Repo" Type="InArgument(x:String)" />
+    <x:Property Name="out_GitHub_branches" Type="OutArgument(uiascb2:branches_List[])" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>978.4,1368</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.C8F4F95C39B_issue_comment_List.Bundle</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.C962E9A0AB3_ConversationsInfo_GET_Retrieve.Bundle</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.C2AAC668FCD_branches_List.Bundle</x:String>
+      <x:String>UiPath.GSuite.Activities.Docs.Enums</x:String>
+      <x:String>UiPath.GSuite.Activities.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>C8F4F95C39B_issue_co.3UOJc4CaZlO1L22d51RUY65</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>C962E9A0AB3_Conversa.1hWvh2Kf9CN13EzY4gGbIM2</AssemblyReference>
+      <AssemblyReference>C2AAC668FCD_search_r.Qxxyt2dHvqF1wQXaZ4kjWCM4</AssemblyReference>
+      <AssemblyReference>C2AAC668FCD_branches.Wut8A4iAsdO1cB6763dlZxH3</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="IntegrationService_Activities" sap:VirtualizedContainerService.HintSize="512,1303.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACr1W4W4aORB+FWvvR1sdbGBDeleknFQIudCSQgNpdK2i1uwacNm1t7Y3CYeQ7jXu9e5J7rN3gU0WtX9OJyEE9nj8zTffjGftnXMWR7orhaFcMOW1196YURUu6DRm+abX/nRb8/oizcxuYe29ownz2h7XOmP9aKjespVX8864TmO6Kjb7dtOuMh0qnhouBVYnkkzZnIsaYcIwRcyCkVkWx8T5Iku2ej5S8isLTb0ZHLdewMFklVp/2igu5vg/lsoMVWTxNmveQMplllrow6k9Vob2OeXhEnZbqw80BqS2h1uwNqJmgT9HzvToial1Y2MtbHWWJFStJuzBeODjnMcADwf4tlF9y5hana5nbnnjbVzUfI6t9ZaVvfEaLjekTtYlpxt3MY06qzM2o1lsvLZRGQNIqXlB3Uhxa269u1S8Du1GkaEr9i3jikXbc85iIEO6PWyDrXlD0aXijurcbFPbpVJaQjvVLDqiyXRVSWS+YdOnmAZgDSNCycze65PXYchSrD0LFaOGRc+IkUQjcSSUSYLUO3Oc5ooUJiTCt//9fAc1ryeypKzB1zpkIsott/n9uXAJqnZ2Fn3FsL4zvC2nrET6mIVSRGXaS6S+t2n/HqvsIaUiqpDa2y0/ovRaM/IpP3L7/Cf3Q2PnheWOizDOIkZoFDloFBUjZlIlDguhU5mVuOVim5kUCmE+mSy4JilVuN9WHS3S80WBEgbZdGS0+lIj9wseLnDMZEpo56JwSaYwIFtr6/9icjk4lK3DHJU4cQrRFU6K7vKUk3HKQj5zUsm1BViyQPg0TAS4ilFEPimKyNlSNBdtwClVUeHiAOx98vv6gkcRE9tk/jiihD7wJEuuIBUV6SuHDZp6GuElfQBUZ1NtiwijcEMg8ClyJGdb633Ee+Ac3XPu+tW5E4FtuMIcB86zC77QeLPRaFRjeCcFK4dwv0BeK4hvtqsVrN3e+wHR7q0gECoyYJVaIzJvCc4dCWOaaQZVcbOw8rQ7Nxe9q55t8/eIzCcAj/M0SWPY2RaRu4SwiXTtXJOYakMSGXHkLiLQOvbozKp4GBoSBDUSNJqv/vnr75q7oAIK10MB0wLUqXV3WXg7Q+3/doqj1kO92agHwaTRaLuPD94+/idCQWsZZubgA/qGm8/5S1XUWSUF3aKkD2YhfzO3Vb8He81tu/chCDZXDs2YqTseMt++GXdoIEz745ueMPnP7q/nrfNXJ93jV53HcD4PuDZ+JxNRzPzqDh4ecuisf3w9fBO2uvRjPGwOgiA6aV5d//HypEY+MGVzctr0QbDfwHEoNUNaBMuMonGNjLJpzEMMFBO5ZOJUYDbw8ueNaah8RmNIqkJ1TnClFWNy0eDYWe9XLjHtXBU9o7S1uUUO+8L2ipCNtr0SntZeARsXOeC4B0OTgDylG33aXsZTMF6nBvLSnIr6V64ozAq+V0ViuhnS4VrDgWFlL4ELY9JLhqIBMu93Zuzb06XhgkWlOcYBezSBWWH17ZHx5Pqs/vIXqHqvp66Ms8RNC4+3P42zNLUPcxGRHSlsYx3wqaIK6rglI5lmMXCTvrhDUm6kWs5ieU+ommtX3GTK3ctK7hwwMlMyISh91LYwanV0z6M5okAhjF0Z5S3rKTBv3XBjUXNTqYI9Yhj8j4idJHLmO0reY79vWGKZx/qIhks6Z2VtvPQbdRqnC+oHjaDVOAkC33K8E0vZtuW3Wj8SwjBlef1izxZcRRu9SWWQXZc1sTnaOxtQMc8A2M4l9iXBezTC3zH/c/dMXFDdwUS0BDPdBcytyFzFbf4FlzCRDy0MAAA=" ConnectionId="a62937ff-b3d5-4146-8e45-a08f4f95c39b" DisplayName="Get Comments in JIRA issue" sap:VirtualizedContainerService.HintSize="449.6,216" sap2010:WorkflowViewState.IdRef="ConnectorActivity_2" UiPathActivityTypeId="8e9155ce-f36a-33fe-b2fa-d471070fe96f">
+      <isactr:ConnectorActivity.FieldObjects>
+        <isactr:FieldObject Name="issueIdOrKey" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String">STUD-67201</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="Jit_issue_comment" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <OutArgument x:TypeArguments="uiascb:issue_comment_List[]">
+              <CSharpReference x:TypeArguments="uiascb:issue_comment_List[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">out_Jira_comments</CSharpReference>
+            </OutArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="orderBy" Type="FieldArgument" />
+      </isactr:ConnectorActivity.FieldObjects>
+    </isactr:ConnectorActivity>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"Found " + out_Jira_comments.Count().ToString() + " comments for your JIRA issue"</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACq1VzW4bNxB+FYK9ShtJToLagFFYa8dVE0eq5TgtikCmdme1rCiS4Y9cxTCQUx4g5/bl/CQdcncl2VKKHAofvBp+M/xm5pvhHX3FQeQ2VdIxLsHQozs6Bmaykk0FVIf06I8PLTqQ2ru14Y6+ZQugRzRTcgnGMseVtANZqEFOW/SUWy3YqsakJZMSRLCDzQzXAYz2q5UG4kogEnFEGTI4JaqIFu2ngmfBpg1fMgckq4IkZFA034RbIpUjhfIyJ1xGz9wo3c7VrWyRlfIkY5IU3FhH8GYlxGMMcbw2TZVzakGcIjNwhNVWtmRchEo0V1rC8Co8QteGfcMGyRpwhsPysT1mVxiMPhYsmxOmNeYWK0Yevnwll3xWOpKhbU7Q5Erm1r7hPG1OHj7/nSq9evj8z157vKg5HDFrKxZKc8gfk7nlrlTeBccfggN2JvQCW2KRv5zh77EybmjyoIhui75Rau51EMdw+idkrmm+N9iafNIUhzbIayZ8APAghhFzJX4/e4r+qYhqOuZ5K7BaO4fgQWO0tmKQD/dRO3yGsrlDGMv7q1MomBeOHjnjAc+jNk+yKMRKspfw0XMDeQWpEW9UVXpkFIm16FCmTC6ZbSKttc1lJnwOE4EuAnZkPaiOyeb4kbrHqCNXokRRUzch8k34MpABrwVSOaJ8TQXcnqWE1PlV/gUTFm42fZoqJYBJupvUrx7Miu7JQvrFZAGLKd7wzVQQQ7Ywu/lsp1IHjqlUTpiBl65OCIjVkPEiqu9/zAwbO/Ru7zL6hbtJ+nQhTc7Prr5/JSHt+owE5w2vdzzIJRlIBzPUMcLHYJY8gyRobskdB5uM359JV32mhy97Z4cnnZP+wX5Ok8t6WSR9XF8Ckv9Gtci+iEm3fL8se6+Lw/Rt9+Ds0+/PZ+fTwUWvRa7xGAMdd5NO+EN3LLk3cCzBO8NEi4zijn0Nqys1B3ksvQj1CEMDFscqNma3C1Xtd8YGHwiL5Y/ojeUCH5VLsBoTqh6TesbCPA+kdUxmMGIGe+KC5HC2a9p4USSO92CqEleOMsgUzZ5r7EPb4uRYFFoGbRu2KgLrPqzqhqXVuglMt3fWt/Txs3P6AnAvIkd6Dq6/wpcMaaYsKyHfWmuR5r5nLwgx/KPp1fXB4cHJu982skuV8Iu4l2gJQret8zlX7Rzs3Ckdslz7oL7HcQu/UmbB3NMAdEfLewKSNtkEjNWu0ugbdWvBDBwsQhpoH2Ht2Ay2y/4y6bSZ0CVLep3e886LXi/pbvdhg+0lPyYvvrfAQw3V3CCmEfVO3SOyeTB2Ij2721P3+/BwMDnzmAZ6QVgdF+yvEf4c809o6nY6HbyH2b4BNsfChgGfhT5Gid//C82CqfEFCQAA" ConnectionId="33dce89c-5bcf-4da1-a9c6-90b97bf74137" DisplayName="Get Channel Info for help-studio-desktop" sap:VirtualizedContainerService.HintSize="449.6,216" sap2010:WorkflowViewState.IdRef="ConnectorActivity_1" UiPathActivityTypeId="f9995f55-16e3-3c65-b860-af01aa2a1e47">
+      <isactr:ConnectorActivity.FieldObjects>
+        <isactr:FieldObject Name="conversationsInfoId" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String">CTV393AUX</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="Jit_ConversationsInfo_GET" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <OutArgument x:TypeArguments="uiascb1:ConversationsInfo_GET_Retrieve">
+              <CSharpReference x:TypeArguments="uiascb1:ConversationsInfo_GET_Retrieve" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">out_Slack_channel</CSharpReference>
+            </OutArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+      </isactr:ConnectorActivity.FieldObjects>
+    </isactr:ConnectorActivity>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">out_Slack_channel.name + ": " + out_Slack_channel.purpose.value</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACnVUXW/aMBT9K5Gf0xRCxyqkPkD6xdYWBKyVNlWVCRfi4diZfd2WIf77rpO00MKUl+T42Pfc43OzZpcC5MwmWiEXCgzrrNkYuEkzPpVQLbLOr8eQ9VXh8B1YszueA+swA4VmITsXtpB8VYOjGgSbGlGg0IrASQZBzZ6sCk+zaIRa0PcI/jhhYMY6aByElagbnfJ665BjRrSBSrh65raibcJ3ETl/FbnLR5BqM7MjQGcUnfZZ1i1/JQUl56C6+phAuXwKJtDzN3aAml79qVvxQiEsyDBSq03OkaC+wlZcnjznTuI9l46YzUZjv6M7rYBtyNaBw4O+fhP4NDVcpRnYvUZ6OwsfutjK+yG8aRFJgoUpq47BPIsUom6K4lmgABuNHy4UVq9J3O0m7fbpZXL+XvfpRliMek7NJEQfQApEcGhH9ODwtHsiunY2aKa99td2ayZ/vl63wuAejCUVZ82o4R/aTxY5A2cKHBouw2DoplKk32E10UtQZ8pJWWcDLNk759IeyEZl4F46KLCWPCzZW+SWQj4CW2hlq3DXUXrc+IBbpC5gyA25jCTXD0MtmwqVwqkOzYqCFLUhpQQ7UZDRR7lIjbZ6jkcLgZmbErE2elXfyBXQfInUKy2guhJCvZuMqiec/KO+9NIVZXDK6oPpbypV3Tplo0962X4qEi1drnx8tsmgaI3L8arS+ZnJ/p+p0oxKTs/oFwumj5B7OYQPebrkC9h1pR01jrgsMh7Fjfik8SWOo+auTVtuHLWitu9/p6vddvZ8Cdk1YnELmGnf+dXFhKDyZ9Bhx2v/M9kc7+y/4WrhSB2tgp9UmvchfY7F37cxvOa2Z4AvyZckI7Z3uczV5h8pxAAACgUAAA==" ConnectionId="e173e903-6ea0-ec11-a99b-e42aac668fcd" DisplayName="List All Branches in GitHub repo" sap:VirtualizedContainerService.HintSize="449.6,268" sap2010:WorkflowViewState.IdRef="ConnectorActivity_4" UiPathActivityTypeId="5d6fae7f-1ab5-3727-8c27-6cfa57ded5ed">
+      <isactr:ConnectorActivity.FieldObjects>
+        <isactr:FieldObject Name="repo" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String">
+              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">in_Git_Repo</CSharpValue>
+            </InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="Jit_branches" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <OutArgument x:TypeArguments="uiascb2:branches_List[]">
+              <CSharpReference x:TypeArguments="uiascb2:branches_List[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">out_GitHub_branches</CSharpReference>
+            </OutArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+      </isactr:ConnectorActivity.FieldObjects>
+    </isactr:ConnectorActivity>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">out_GitHub_branches.Count().ToString() + " branches found in GitHub repo " + in_Git_Repo</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+  </Sequence>
+</Activity>

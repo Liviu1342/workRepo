@@ -1,0 +1,217 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="TestCase" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:Library_Cross_VB_Complex_No_Coded;assembly=DataService.Library_Cross_VB_Complex_No_Coded" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:s1="clr-namespace:SwaggerPetstore;assembly=SwaggerPetstore" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:ujic="clr-namespace:UiPath.Jira.IntegrationService.Client;assembly=UiPath.Jira.IntegrationService" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:utat="clr-namespace:UiPath.Testing.Activities.TestData;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_RepoName" Type="InArgument(x:String)" />
+    <x:Property Name="in_JiraISsue" Type="InArgument(x:String)" />
+    <x:Property Name="in_SendTo" Type="InArgument(scg:IEnumerable(x:String))" />
+    <x:Property Name="in_CatName" Type="InArgument(x:String)" />
+    <x:Property Name="in_Abc" Type="InArgument(x:String)" />
+    <x:Property Name="in_petId" Type="InArgument(s:Nullable(x:Int64))" />
+    <x:Property Name="in_PetNAme" Type="InArgument(x:String)" />
+    <x:Property Name="out_RepoId" Type="OutArgument(x:Int32)" />
+    <x:Property Name="out_JiraFields" Type="OutArgument(ujic:Curated_issueFields)" />
+    <x:Property Name="out_RepoFullName" Type="OutArgument(x:String)" />
+    <x:Property Name="out_RepoName" Type="OutArgument(x:String)" />
+    <x:Property Name="out_Pet" Type="OutArgument(s1:Pet)" />
+    <x:Property Name="out_Cat" Type="OutArgument(l:CatEntity)" />
+  </x:Members>
+  <this:TestCase.in_RepoName>
+    <InArgument x:TypeArguments="x:String" />
+  </this:TestCase.in_RepoName>
+  <this:TestCase.in_JiraISsue>
+    <InArgument x:TypeArguments="x:String" />
+  </this:TestCase.in_JiraISsue>
+  <this:TestCase.in_SendTo>
+    <InArgument x:TypeArguments="scg:IEnumerable(x:String)" />
+  </this:TestCase.in_SendTo>
+  <this:TestCase.in_CatName>
+    <InArgument x:TypeArguments="x:String" />
+  </this:TestCase.in_CatName>
+  <this:TestCase.in_Abc>
+    <InArgument x:TypeArguments="x:String" />
+  </this:TestCase.in_Abc>
+  <this:TestCase.in_petId>
+    <InArgument x:TypeArguments="s:Nullable(x:Int64)" />
+  </this:TestCase.in_petId>
+  <this:TestCase.in_PetNAme>
+    <InArgument x:TypeArguments="x:String" />
+  </this:TestCase.in_PetNAme>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1202.4,2516</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>TestCase_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Testing.Enums</x:String>
+      <x:String>UiPath.Testing.Activities.TestData</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Jira.IntegrationService.Client</x:String>
+      <x:String>UiPath.Testing.Activities</x:String>
+      <x:String>SwaggerPetstore</x:String>
+      <x:String>Library_Cross_VB_Complex_No_Coded</x:String>
+      <x:String>UiPath.DataService.Definition</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.Testing</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.Jira.IntegrationService</AssemblyReference>
+      <AssemblyReference>SwaggerPetstore</AssemblyReference>
+      <AssemblyReference>DataService.Library_Cross_VB_Complex_No_Coded</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="TestCase" sap:VirtualizedContainerService.HintSize="536,2451.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="492.8,1696" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:Decimal" Name="jiraNumber" />
+        <Variable x:TypeArguments="x:Decimal" Name="petId" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <utat:RandomString Case="CamelCase" DisplayName="Random String" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="RandomString_1" Length="10" Output="[in_CatName]" />
+      <utat:RandomString Case="UpperCase" DisplayName="Random String" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="RandomString_2" Length="10" Output="[in_Abc]" />
+      <utat:RandomNumber Decimals="0" DisplayName="Random Number" sap:VirtualizedContainerService.HintSize="449.6,226.4" sap2010:WorkflowViewState.IdRef="RandomNumber_2" Max="99999" Min="10000" Output="[petId]" />
+      <utat:RandomNumber Decimals="0" DisplayName="Random Number" sap:VirtualizedContainerService.HintSize="449.6,226.4" sap2010:WorkflowViewState.IdRef="RandomNumber_1" Max="68000" Min="64000" Output="[jiraNumber]" />
+      <utat:RandomString Case="Mixed" DisplayName="Random String" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="RandomString_3" Length="10" Output="[in_PetNAme]" />
+      <Assign sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[in_JiraISsue]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["STUD-" + jiraNumber.ToString]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[in_RepoName]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Studio</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="scg:IEnumerable(x:String)">[in_SendTo]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="scg:IEnumerable(x:String)">[{"liviu.ponova@uipath.com"}]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="449.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_4">
+        <Assign.To>
+          <OutArgument x:TypeArguments="s:Nullable(x:Int64)">[in_petId]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="s:Nullable(x:Int64)">[CType(petId, long?)]</InArgument>
+        </Assign.Value>
+      </Assign>
+    </Sequence>
+    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="492.8,318.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Aggregator_CustomActivity - Invoke Workflow File (Aggregator_CustomActivity.xaml)" sap:VirtualizedContainerService.HintSize="449.6,197.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Aggregator_CustomActivity.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="in_RepoName">[in_RepoName]</InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_RepoFullName">[out_RepoFullName]</OutArgument>
+          <OutArgument x:TypeArguments="x:Int32" x:Key="out_RepoId">[out_RepoId]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_RepoName">[out_RepoName]</OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_JiraISsue">[in_JiraISsue]</InArgument>
+          <InArgument x:TypeArguments="scg:IEnumerable(x:String)" x:Key="in_SendTo">[in_SendTo]</InArgument>
+          <OutArgument x:TypeArguments="ujic:Curated_issueFields" x:Key="out_JiraFields">[out_JiraFields]</OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_CatName">[in_CatName]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_Abc">[in_Abc]</InArgument>
+          <InArgument x:TypeArguments="s:Nullable(x:Int64)" x:Key="in_PetId">[in_petId]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_PetName">[in_PetNAme]</InArgument>
+          <OutArgument x:TypeArguments="s1:Pet" x:Key="out_Pet">[out_Pet]</OutArgument>
+          <OutArgument x:TypeArguments="l:CatEntity" x:Key="out_Cat">[out_Cat]</OutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+    </Sequence>
+    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="492.8,348" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uta:VerifyExpression AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[out_RepoId = 29263350]" sap:VirtualizedContainerService.HintSize="449.6,122.4" sap2010:WorkflowViewState.IdRef="VerifyExpression_1" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False" />
+      <uta:VerifyExpression AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[out_JiraFields.Status.Name.Equals(&quot;Closed&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="VerifyExpression_2" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False" />
+    </Sequence>
+  </Sequence>
+</Activity>

@@ -1,0 +1,75 @@
+{
+  "name": "UiBankWebLibrary",
+  "projectId": "33d6b69e-1786-4999-b353-ad7a2c38a240",
+  "description": "",
+  "main": "NewActivity.xaml",
+  "dependencies": {
+    "ChromeUiBank.Descriptors": "2.0.1",
+    "UiPath.System.Activities": "23.10.2",
+    "UiPath.Testing.Activities": "23.10.0",
+    "UiPath.UIAutomation.Activities": "23.10.3"
+  },
+  "webServices": [
+    {
+      "namespace": "uibankapi",
+      "serviceDocument": "Services\\uibankapi.json",
+      "webDocumentUri": "https://uibank-api.uipath.com/explorer/swagger.json",
+      "uniqueReference": "a+gExGnAPXYQh42oaHxvCBg67d2J8BQdGBrYU2GNUEI="
+    }
+  ],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "23.4.4.0",
+  "projectVersion": "4.4.4",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Library",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "d8995ae2-eaab-43d6-a8a1-1d7076da845c",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TC_LoanApproved.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "2cbacfae-6b14-4feb-abe6-71c64a601b7d",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TC_LoanNotApproved.xaml"
+      }
+    ],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}

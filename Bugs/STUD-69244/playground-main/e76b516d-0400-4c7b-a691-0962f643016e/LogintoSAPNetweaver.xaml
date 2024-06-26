@@ -1,0 +1,185 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="LogintoSAPNetweaver" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Username" Type="InOutArgument(x:String)" />
+    <x:Property Name="Password" Type="InOutArgument(ss:SecureString)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>390,45</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DocumentClassification</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.DataExtraction</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Results</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Dom</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.Invoices.Bundle</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Entity</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Enums</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Telemetry</x:String>
+      <x:String>UiPath.BAF.Infrastructure</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Connection</x:String>
+      <x:String>UiPath.OpenAI.IntegrationService.Activities</x:String>
+      <x:String>UiPath.IntegrationCore.Activities</x:String>
+      <x:String>UiPath.BAF.Activities</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Contracts</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Filters</x:String>
+      <x:String>UiPath.GSuite.Activities.Filters</x:String>
+      <x:String>UiPath.GSuite.Drive.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>ExtendedExtractionRe.Ja4YU4iKt3F1DmKQdfn5zl</AssemblyReference>
+      <AssemblyReference>ExtendedExtractionRe.l6Qmb3j2jWO14D71C2TlCFk2</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>Interop.UiPath</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.StudioWeb.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR</AssemblyReference>
+      <AssemblyReference>UiPath.BAF.Infrastructure</AssemblyReference>
+      <AssemblyReference>TelemetryClient</AssemblyReference>
+      <AssemblyReference>UiPath.OpenAI.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OpenAI.IntegrationService</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome Browser: Login to SAP Netweaver" sap:VirtualizedContainerService.HintSize="738,1102" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="c8f058c6-975d-430e-9ebb-8d01e4bf8e13" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,770" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="SAP" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Password]" Username="[Username]" />
+            <uix:NTypeInto ActivateBefore="True" DelayBefore="5" DisplayName="Type Into 'INPUT sap-user'" sap:VirtualizedContainerService.HintSize="450,190" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="c8f058c6-975d-430e-9ebb-8d01e4bf8e13" Text="[Username]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui#" CVScreenId="9c9aa02d-a7b2-4534-89e5-263b9c4537f8" CvElementArea="851, 280, 129, 25" CvType="InputBox" DesignTimeRectangle="854, 283, 124, 20" ElementType="InputBox" FullSelectorArgument="&lt;webctrl sapweb-lsid='sap-user' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-lsid='sap-user' tag='INPUT' type='text' class='lsField__input' aaname='User' /&gt;" Guid="2b2f3d53-1492-4c2c-8a6e-574e5436bad1" InformativeScreenshot="9311b0eee8aa7006823770283118b38c.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Logon' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="None">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="9c9aa02d-a7b2-4534-89e5-263b9c4537f8" CvTextArea="717, 286, 35, 12" CvTextArgument="User:*" CvType="Text" DesignTimeRectangle="718, 286, 25, 14" ElementType="Text" FullSelectorArgument="&lt;webctrl sapweb-lsid='l3' /&gt;&lt;webctrl class='lsLabel__text' parentid='l3' tableRow='6' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-lsid='l3' /&gt;&lt;webctrl class='lsLabel__text' parentid='l3' type='' tag='SPAN' aaname='User' check:innerText='User' /&gt;" Guid="1c1fcdc3-632b-4cea-9315-d835e94935be" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" DisplayName="Type Into 'INPUT sap-password'" sap:VirtualizedContainerService.HintSize="450,190" sap2010:WorkflowViewState.IdRef="NTypeInto_11" ScopeIdentifier="c8f058c6-975d-430e-9ebb-8d01e4bf8e13" SecureText="[Password]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui#" CVScreenId="9c9aa02d-a7b2-4534-89e5-263b9c4537f8" CvElementArea="851, 308, 129, 25" CvType="InputBox" DesignTimeRectangle="854, 310, 124, 20" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl sapweb-lsid='sap-password' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-lsid='sap-password' tag='INPUT' type='password' class='lsField__input' aaname='Password' /&gt;" Guid="326d0d70-c11b-4128-a430-3b298e4a8a1b" InformativeScreenshot="0f4901ca75860377b01bfdea8570fe31.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Logon' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="None">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="9c9aa02d-a7b2-4534-89e5-263b9c4537f8" CvTextArea="717, 313, 63, 12" CvTextArgument="Password:*" CvType="Text" DesignTimeRectangle="718, 312, 67, 16" ElementType="Text" FullSelectorArgument="&lt;webctrl sapweb-lsid='l4' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-lsid='l4' tag='LABEL' type='' class='lsLabel lsLabel--valign lsControl--startaligned  lsLabel--standalone lsLabel--noWrapping lsControl--noWrapping lsLabel--designbar-colon' aaname='' check:innerText='Password' /&gt;" Guid="cdd0904e-7cd7-4e49-83d2-2e6ba8aece60" SearchSteps="Selector, FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log On Emphasized'" sap:VirtualizedContainerService.HintSize="450,130" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c8f058c6-975d-430e-9ebb-8d01e4bf8e13" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui#" CVScreenId="9c9aa02d-a7b2-4534-89e5-263b9c4537f8" CvElementArea="851, 362, 58, 24" CvTextArea="860, 367, 41, 14" CvTextArgument="Log On" CvType="Button" DesignTimeRectangle="853, 363, 55, 22" ElementType="Button" FullSelectorArgument="&lt;webctrl sapweb-lsid='LOGON_BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl sapweb-lsid='LOGON_BUTTON' tag='DIV' type='' class='lsButton lsButton--base urInlineMetricTop urNoUserSelect urBtnRadius lsButton--active lsButton--focusable lsButton--up lsButton--design-emphasized lsButton--default' aaname='' check:innerText='Log On&amp;#xD;&amp;#xA;Emphasized' /&gt;" Guid="28a96f74-9450-4768-9b5e-d148b6952707" InformativeScreenshot="26db4f4bcf6ba46382fa0e5773923d55.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Logon' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" InformativeScreenshot="c808f04dd1bb1987113aaed7b5447ec9.png" Selector="&lt;html title='Logon' app='chrome.exe' /&gt;" Title="Logon" Url="https://20.16.188.67:44351/sap/bc/gui/sap/its/webgui#" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
