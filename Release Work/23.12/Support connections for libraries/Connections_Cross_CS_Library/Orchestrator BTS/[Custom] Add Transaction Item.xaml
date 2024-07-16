@@ -3,7 +3,7 @@
     <x:Property Name="out_transactionItem" Type="OutArgument(ui:QueueItem)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1670.6666666666667,941.3333333333334</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1186.4,884.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -91,7 +91,7 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="__Custom__Add_Transaction_Item" sap:VirtualizedContainerService.HintSize="512,661.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="__Custom__Add_Transaction_Item" sap:VirtualizedContainerService.HintSize="512,656" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Decimal" Name="output">
         <sap:WorkflowViewStateService.ViewState>
@@ -107,14 +107,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <utat:RandomNumber Decimals="0" DisplayName="Random Number" sap:VirtualizedContainerService.HintSize="450,229.33333333333334" sap2010:WorkflowViewState.IdRef="RandomNumber_1" Max="99999999" Min="10000000">
+    <utat:RandomNumber Decimals="0" DisplayName="Random Number" sap:VirtualizedContainerService.HintSize="449.6,226.4" sap2010:WorkflowViewState.IdRef="RandomNumber_1" Max="99999999" Min="10000000">
       <utat:RandomNumber.Output>
         <OutArgument x:TypeArguments="x:Decimal">
           <CSharpReference x:TypeArguments="x:Decimal" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">output</CSharpReference>
         </OutArgument>
       </utat:RandomNumber.Output>
     </utat:RandomNumber>
-    <ui:AddTransactionItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Transaction Item" FolderPath="test" sap:VirtualizedContainerService.HintSize="450,176.66666666666666" sap2010:WorkflowViewState.IdRef="AddTransactionItem_1" QueueType="test_Queue_1">
+    <ui:AddTransactionItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Transaction Item" FolderPath="test" sap:VirtualizedContainerService.HintSize="449.6,175.2" sap2010:WorkflowViewState.IdRef="AddTransactionItem_1" QueueType="test_Queue_1">
       <ui:AddTransactionItem.Reference>
         <InArgument x:TypeArguments="x:String">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">output.ToString()</CSharpValue>
@@ -131,7 +131,7 @@
         </OutArgument>
       </ui:AddTransactionItem.TransactionItem>
     </ui:AddTransactionItem>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">"Transaction item with ID " + out_transactionItem.Id + " was added with reference " + out_transactionItem.Reference + " to queue " + out_transactionItem.QueueName + " with status " + out_transactionItem.Status</CSharpValue>
