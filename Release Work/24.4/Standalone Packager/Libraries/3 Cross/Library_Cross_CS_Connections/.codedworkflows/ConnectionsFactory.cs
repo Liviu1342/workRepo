@@ -60,10 +60,13 @@ namespace Library_Cross_CS_Connections
 
         public UiPath.GSuite.Activities.Api.DriveConnection test_liviu_ponova_uipath_com { get; set; }
 
+        public UiPath.GSuite.Activities.Api.DriveConnection test_ponova_liviu_gmail_com { get; set; }
+
         public DriveFactory(ICodedWorkflowsServiceContainer resolver)
         {
             My_Workspace_liviu_ponova_uipath_com = new UiPath.GSuite.Activities.Api.DriveConnection("fc7c19d6-6da0-ec11-a99b-e42aac668fcd", resolver);
             test_liviu_ponova_uipath_com = new UiPath.GSuite.Activities.Api.DriveConnection("a6575722-b2d8-4fee-b249-b1317161db35", resolver);
+            test_ponova_liviu_gmail_com = new UiPath.GSuite.Activities.Api.DriveConnection("686ddd1a-8f41-493d-b731-b1271763dd22", resolver);
         }
     }
 
@@ -71,9 +74,15 @@ namespace Library_Cross_CS_Connections
     {
         public UiPath.GSuite.Activities.Api.GmailConnection My_Workspace_ponova_liviu_gmail_com { get; set; }
 
+        public UiPath.GSuite.Activities.Api.GmailConnection test_ponova_liviu_gmail_com { get; set; }
+
+        public UiPath.GSuite.Activities.Api.GmailConnection test_travellingthroughart_gmail_com { get; set; }
+
         public GmailFactory(ICodedWorkflowsServiceContainer resolver)
         {
             My_Workspace_ponova_liviu_gmail_com = new UiPath.GSuite.Activities.Api.GmailConnection("17d677e4-6ae6-ec11-b656-e42aac668fcd", resolver);
+            test_ponova_liviu_gmail_com = new UiPath.GSuite.Activities.Api.GmailConnection("3311c5e4-3532-4f56-960f-c222a7171aff", resolver);
+            test_travellingthroughart_gmail_com = new UiPath.GSuite.Activities.Api.GmailConnection("0b1f6291-0374-4186-a76e-65a0b8dce537", resolver);
         }
     }
 
