@@ -1,0 +1,122 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Trigger___IntegrationService___GitHub" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1144.8,628.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C2AAC668FCD_pull_Trigger.Bundle;assembly=C2AAC668FCD_pull_Tri.CpvT82xNCnE1byssSs29nY4" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>C2AAC668FCD_pull_Tri.CpvT82xNCnE1byssSs29nY4</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Trigger___IntegrationService___GitHub" sap:VirtualizedContainerService.HintSize="416,512" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="pullId">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">ConnectorTriggerActivity_1</x:String>
+            <x:String x:Key="SourcePropertyName">out_Pull_20_ID</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <isactr:ConnectorTriggerActivity Configuration="H4sIAAAAAAAACrVX708bORD9V6z9cB9OYY+mXKFI6ARJaHNHIRfSnqpTFTm7k8THrr31D2gU8b/fs71JFpLScuoJCRJ7Zjzz5s2zWSbngorcdJS0XEjSyfEy6d2StHE9Of57mVxyK25ptKgoOU6M1ULOklZypXNv/qKV9E3HaW4p3zgmx1Y7asG19E4TbijVNIVbl0ymRWWFktgYzYlJ2DA1ZRafJ5rLbM4WyrE7Lm1Yy+ZczsiwyhUF5UxIq1I2mgvDzFy5ImcTYlwy+iKMRWqrGEpGb6c1smKaKmWEVXqRso8In3EplWXGTUphGQ/RYfTZkcGxCu7U8EEoblfbBuYl6Rl5O858cT5/jnhz0s2TfL3CVAVf1ECcwRaLj7EEKGIGPJb3960fgrfKFzuxztBn+JgV3s2qt5ONUZ6R7ESpgrh8Zra55lO7lW5f5iKDn2F3cwrAPk6YgQKcBe9tpLt10EeZ/Rh858Tz5/AZFWjyrNZrNnMsiLIqqMQZlKfsXGFTK2P2GrRrlmtA/RDU+AMk2Tulb1rhOFPxjJjPit0JOwcqzgCwQtyAo5iU4/DdWx7HjLbxegvnrWb/oAaXkJYoL2OM3bhUuZguvqPhGz/j55VFxy0ebBfzbu3Y8Nsmw5NcRgSaocTnlSpdOQlOD2u7DMvMSYGMiwUTOfyRk9erLVr7FqLVAh1/SksGTZ/1uVvZg1clt3Hp1cH/ITZR3CuVeoJ9cySeKmm4YX4d6xt8/E8JW2GL3XmGnVWiku4e0owN8UFo3EFOFmQwj8Y4TDEuoooyMRUY462SRvVhT6joJyQtK/fwyg3OHqsnQHoG1jsyuFDqxlX+wr+a/EOZbZxp1tsfeOECr2M7BtzO8e2Xh0be0+cdrT7dN6qDBc/PFl2aclfYVSMGPquY8kCLkiM/OIX6TzO/4aMBlhXgKz8AwScF9b5UGvhHu7gTfC8U9COG/dORD4oYV87uxNaPz86Z2kJ1g9174QFI+364wDFsX5O+FRmlPu1b1EQmvf6rh9kOHzvt09POq1dH553u2FNpPNJihrFMz5zMC0qbay22yzrtVLejo/aXy47svZgsjLk27dfy40GLfYAqIoGTF+m+/4E7AHaaTiQ5q3nRYgM3KUT2By1G6obkiYy1Devb/njKC7MDuYgXDPvmd/FwfvrGC+sQ1w2Qp8ZWnMuNKvW7u9Uqrn8F3OuFsVSm14GfLVZ/BT9uMc1pR2m6EJNN3UffW/dhRtnRr/nhhPjh4esjeh4GX6vYs7yjygkumfxcFJb0hpWxrL40FnctDbgGBDAA/ZZJnT5MQuNgh7e3xPgpjYyx7EQFju2Vwj8G1NTuzXAduAkMa44tarxqmavp4zWwOcaeQGYs5LjWkKCGVxVF2vqGvL+4GHeGvdNRrzvuX46HvcHVyu6dykPPVFFE2a1jb4bzgUR1cJtq/y8EXOs8layzBHbkF4cOkhkchzQNQD7UOMi2j0INfNdnvCHc5Ki11z1/HP60En6pEjh+KmZuVd4yeYc3hEK05E1vBJP3uvDChUbwnFv+Gy+KqAkn/riffBYnS//7PpQrr12WoZs+0rqSkleBPPi7dVxQ8KjOBR5jvh2RRLj8laoSXLbPwaAm5souyHCQ2J+hr/gBbXg2p7yh0iHXEMmf0PelX1uXi8YN0lGFK0P/VlsIFAcuPhMe2yVbc1z7Rf6HFM60usPrso9p9SlgvdZ08LnW8QHPbviMmtw/TPf3eFHNedrebx/sH7YPUv84WQ/DqvXCvg3kX29sgrTTl+nL9pr4O5X8yZm4wFPcIS9skX8NvuXmTBO/ARyd+ExfN6LjjFVlZEytHl1QSRQB9eZ07OTsWgMed2qN5/39vxZeptuMDwAA" ConnectionId="e173e903-6ea0-ec11-a99b-e42aac668fcd" DisplayName="Pull Request Created" sap:VirtualizedContainerService.HintSize="353.6,257.6" sap2010:WorkflowViewState.IdRef="ConnectorTriggerActivity_1" UiPathActivityTypeId="b5c43088-1c16-32ee-ac7c-cfda7d957cc9">
+      <isactr:ConnectorTriggerActivity.FieldObjects>
+        <isactr:FieldObject Name="repo" Type="FieldLiteral" Value="Studio" />
+        <isactr:FieldObject Name="Pull" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <OutArgument x:TypeArguments="uiascb:pull_Trigger" />
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="out_Pull_20_ID" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <OutArgument x:TypeArguments="x:String">
+              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">pullId</CSharpReference>
+            </OutArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+      </isactr:ConnectorTriggerActivity.FieldObjects>
+      <isactr:ConnectorTriggerActivity.UiPathAdditionalEventData>
+        <InArgument x:TypeArguments="x:String" />
+      </isactr:ConnectorTriggerActivity.UiPathAdditionalEventData>
+      <isactr:ConnectorTriggerActivity.UiPathEvent>
+        <InArgument x:TypeArguments="x:String" />
+      </isactr:ConnectorTriggerActivity.UiPathEvent>
+      <isactr:ConnectorTriggerActivity.UiPathEventConnector>
+        <InArgument x:TypeArguments="x:String" />
+      </isactr:ConnectorTriggerActivity.UiPathEventConnector>
+      <isactr:ConnectorTriggerActivity.UiPathEventObjectId>
+        <InArgument x:TypeArguments="x:String" />
+      </isactr:ConnectorTriggerActivity.UiPathEventObjectId>
+      <isactr:ConnectorTriggerActivity.UiPathEventObjectType>
+        <InArgument x:TypeArguments="x:String" />
+      </isactr:ConnectorTriggerActivity.UiPathEventObjectType>
+    </isactr:ConnectorTriggerActivity>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">pullId</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+  </Sequence>
+</Activity>
