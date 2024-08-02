@@ -42,12 +42,12 @@ namespace Library_Win_CS_Complex
         }
 
         /// <summary>
-        /// Invokes the Entities/Entities_CustomActivity.xaml
+        /// Invokes the Webservice/Webservice_Pet_CustomActivity.xaml
         /// </summary>
-        public Library_Win_CS_Complex.CatEntity Entities_CustomActivity(string in_CatName)
+        public SwaggerPetstore.Pet Webservice_Pet_CustomActivity(System.Nullable<long> in_PetId, string in_PetName)
         {
-            var result = _runWorkflowHandler(@"Entities\Entities_CustomActivity.xaml", new Dictionary<string, object>{{"in_CatName", in_CatName}}, default, default, default);
-            return (Library_Win_CS_Complex.CatEntity)result["out_Cat"];
+            var result = _runWorkflowHandler(@"Webservice\Webservice_Pet_CustomActivity.xaml", new Dictionary<string, object>{{"in_PetId", in_PetId}, {"in_PetName", in_PetName}}, default, default, default);
+            return (SwaggerPetstore.Pet)result["out_Pet"];
         }
 
         /// <summary>
@@ -60,12 +60,12 @@ namespace Library_Win_CS_Complex
         }
 
         /// <summary>
-        /// Invokes the Webservice/Webservice_Pet_CustomActivity.xaml
+        /// Invokes the Entities/Entities_CustomActivity.xaml
         /// </summary>
-        public SwaggerPetstore.Pet Webservice_Pet_CustomActivity(System.Nullable<long> in_PetId, string in_PetName)
+        public Library_Win_CS_Complex.CatEntity Entities_CustomActivity(string in_CatName)
         {
-            var result = _runWorkflowHandler(@"Webservice\Webservice_Pet_CustomActivity.xaml", new Dictionary<string, object>{{"in_PetId", in_PetId}, {"in_PetName", in_PetName}}, default, default, default);
-            return (SwaggerPetstore.Pet)result["out_Pet"];
+            var result = _runWorkflowHandler(@"Entities\Entities_CustomActivity.xaml", new Dictionary<string, object>{{"in_CatName", in_CatName}}, default, default, default);
+            return (Library_Win_CS_Complex.CatEntity)result["out_Cat"];
         }
 
         /// <summary>

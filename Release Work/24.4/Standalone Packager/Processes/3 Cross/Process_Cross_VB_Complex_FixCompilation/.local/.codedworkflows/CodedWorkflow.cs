@@ -23,7 +23,7 @@ namespace Process_Cross_VB_Complex_FixCompilation
         private Lazy<Library_Cross_VB_Complex.WorkflowRunnerService> _library_Cross_VB_ComplexLazy;
         public CodedWorkflow()
         {
-            _ = new System.Type[]{typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.MicrosoftOffice365.Activities.Api.IOffice365ConnectionsService)};
+            _ = new System.Type[]{typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.MicrosoftOffice365.Activities.Api.IOffice365ConnectionsService)};
             _workflowRunnerServiceLazy = new Lazy<Process_Cross_VB_Complex_FixCompilation.WorkflowRunnerService>(() => new Process_Cross_VB_Complex_FixCompilation.WorkflowRunnerService(this.services));
 #pragma warning disable
             _connectionsManagerLazy = new Lazy<ConnectionsManager>(() => new ConnectionsManager(serviceContainer));

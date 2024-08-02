@@ -25,13 +25,18 @@ namespace Library_Win_CS_Complex
     public partial class CodedWorkflow : CodedWorkflowBase
     {
         private Lazy<Library_Win_CS_Complex.WorkflowRunnerService> _workflowRunnerServiceLazy;
+        private Lazy<ConnectionsManager> _connectionsManagerLazy;
         public CodedWorkflow()
         {
-            _ = new System.Type[]{typeof(UiPath.Excel.Activities.API.IExcelService), typeof(UiPath.GSuite.Activities.Api.IGoogleConnectionsService), typeof(UiPath.Mail.Activities.Api.IMailService), typeof(UiPath.MicrosoftOffice365.Activities.Api.IOffice365ConnectionsService), typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService)};
+            _ = new System.Type[]{typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.Excel.Activities.API.IExcelService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.GSuite.Activities.Api.IGoogleConnectionsService), typeof(UiPath.Mail.Activities.Api.IMailService), typeof(UiPath.MicrosoftOffice365.Activities.Api.IOffice365ConnectionsService), typeof(UiPath.Testing.API.ITestingService)};
             _workflowRunnerServiceLazy = new Lazy<Library_Win_CS_Complex.WorkflowRunnerService>(() => new Library_Win_CS_Complex.WorkflowRunnerService(this.RunWorkflow));
+#pragma warning disable
+            _connectionsManagerLazy = new Lazy<ConnectionsManager>(() => new ConnectionsManager(serviceContainer));
+#pragma warning restore
         }
 
         protected Library_Win_CS_Complex.WorkflowRunnerService workflows => _workflowRunnerServiceLazy.Value;
+        protected ConnectionsManager connections => _connectionsManagerLazy.Value;
 #pragma warning disable
         protected UiPath.Excel.Activities.API.IExcelService excel { get => serviceContainer.Resolve<UiPath.Excel.Activities.API.IExcelService>() ; }
 #pragma warning restore

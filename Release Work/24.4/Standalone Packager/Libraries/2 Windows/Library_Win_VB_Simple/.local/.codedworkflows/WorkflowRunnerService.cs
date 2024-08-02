@@ -6,7 +6,7 @@ using UiPath.CodedWorkflows.Interfaces;
 using UiPath.Activities.Contracts;
 using Library_Win_VB_Simple;
 
-[assembly: WorkflowRunnerServiceAttribute(typeof(WorkflowRunnerService))]
+[assembly: WorkflowRunnerServiceAttribute(typeof(Library_Win_VB_Simple.WorkflowRunnerService))]
 namespace Library_Win_VB_Simple
 {
     public class WorkflowRunnerService

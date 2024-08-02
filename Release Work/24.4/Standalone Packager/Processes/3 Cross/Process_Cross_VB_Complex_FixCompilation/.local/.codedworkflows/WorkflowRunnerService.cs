@@ -6,7 +6,7 @@ using UiPath.CodedWorkflows.Interfaces;
 using UiPath.Activities.Contracts;
 using Process_Cross_VB_Complex_FixCompilation;
 
-[assembly: WorkflowRunnerServiceAttribute(typeof(WorkflowRunnerService))]
+[assembly: WorkflowRunnerServiceAttribute(typeof(Process_Cross_VB_Complex_FixCompilation.WorkflowRunnerService))]
 namespace Process_Cross_VB_Complex_FixCompilation
 {
     public class WorkflowRunnerService
@@ -15,6 +15,15 @@ namespace Process_Cross_VB_Complex_FixCompilation
         public WorkflowRunnerService(ICodedWorkflowServices services)
         {
             _services = services;
+        }
+
+        /// <summary>
+        /// Invokes the Tests/TestCase_Webservice.xaml
+        /// </summary>
+        public SwaggerPetstore.Pet TestCase_Webservice()
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Tests\TestCase_Webservice.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+            return (SwaggerPetstore.Pet)result["out_Pet"];
         }
 
         /// <summary>
@@ -36,29 +45,12 @@ namespace Process_Cross_VB_Complex_FixCompilation
         }
 
         /// <summary>
-        /// Invokes the Tests/TestCase_Webservice.xaml
-        /// </summary>
-        public SwaggerPetstore.Pet TestCase_Webservice()
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Tests\TestCase_Webservice.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
-            return (SwaggerPetstore.Pet)result["out_Pet"];
-        }
-
-        /// <summary>
         /// Invokes the EntryPoints/EP2_Entity.xaml
         /// </summary>
         public Library_Cross_VB_Entities.CatEntity EP2_Entity()
         {
             var result = _services.WorkflowInvocationService.RunWorkflow(@"EntryPoints\EP2_Entity.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
             return (Library_Cross_VB_Entities.CatEntity)result["cat"];
-        }
-
-        /// <summary>
-        /// Invokes the Private/Private_Flowchart.xaml
-        /// </summary>
-        public void Private_Flowchart()
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Private\Private_Flowchart.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
         }
 
         /// <summary>
@@ -70,19 +62,27 @@ namespace Process_Cross_VB_Complex_FixCompilation
         }
 
         /// <summary>
-        /// Invokes the Non_EntryPoints/NEP1.xaml
-        /// </summary>
-        public void NEP1()
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Non_EntryPoints\NEP1.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
-        }
-
-        /// <summary>
         /// Invokes the Main.xaml
         /// </summary>
         public void Main()
         {
             var result = _services.WorkflowInvocationService.RunWorkflow(@"Main.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+        }
+
+        /// <summary>
+        /// Invokes the Private/Private_Flowchart.xaml
+        /// </summary>
+        public void Private_Flowchart()
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Private\Private_Flowchart.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+        }
+
+        /// <summary>
+        /// Invokes the Non_EntryPoints/NEP1.xaml
+        /// </summary>
+        public void NEP1()
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Non_EntryPoints\NEP1.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
         }
 
         /// <summary>

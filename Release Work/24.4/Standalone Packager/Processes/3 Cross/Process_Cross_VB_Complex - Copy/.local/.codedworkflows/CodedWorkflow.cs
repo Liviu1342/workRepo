@@ -18,18 +18,18 @@ namespace Process_Cross_VB_Complex
 {
     public partial class CodedWorkflow : CodedWorkflowBase
     {
+        private Lazy<Process_Cross_VB_Complex.WorkflowRunnerService> _workflowRunnerServiceLazy;
         private Lazy<ConnectionsManager> _connectionsManagerLazy;
         public CodedWorkflow()
         {
-            _ = new System.Type[]{typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.MicrosoftOffice365.Activities.Api.IOffice365ConnectionsService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.Core.Activities.API.ISystemService)};
-            workflows = new WorkflowRunnerService(this.RunWorkflow);
+            _ = new System.Type[]{typeof(UiPath.MicrosoftOffice365.Activities.Api.IOffice365ConnectionsService), typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.Core.Activities.API.ISystemService)};
+            _workflowRunnerServiceLazy = new Lazy<Process_Cross_VB_Complex.WorkflowRunnerService>(() => new Process_Cross_VB_Complex.WorkflowRunnerService(this.RunWorkflow));
 #pragma warning disable
             _connectionsManagerLazy = new Lazy<ConnectionsManager>(() => new ConnectionsManager(serviceContainer));
 #pragma warning restore
         }
 
-        protected WorkflowRunnerService workflows { get; private set; }
-
+        protected Process_Cross_VB_Complex.WorkflowRunnerService workflows => _workflowRunnerServiceLazy.Value;
         protected ConnectionsManager connections => _connectionsManagerLazy.Value;
 #pragma warning disable
         protected UiPath.MicrosoftOffice365.Activities.Api.IOffice365ConnectionsService office365 { get => serviceContainer.Resolve<UiPath.MicrosoftOffice365.Activities.Api.IOffice365ConnectionsService>() ; }
