@@ -1,0 +1,134 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Trigger___IS___Jira___Get_Record" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C0897D633F1_curated_get_issue_Trigger.Bundle;assembly=C0897D633F1_curated_.IqXrm3FmtSJ153wnQV0Qd44" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_JiraIssues" Type="OutArgument(uiascb:curated_get_issue_Trigger)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1144.8,628</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Trigger___IS___Jira___Get_Record_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.C0897D633F1_curated_get_issue_Trigger.Bundle</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>C0897D633F1_curated_.IqXrm3FmtSJ153wnQV0Qd44</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Trigger___IS___Jira___Get_Record" sap:VirtualizedContainerService.HintSize="512,389.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <isactr:ConnectorTriggerActivity Configuration="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" ConnectionId="a282478c-2f87-4a13-a376-200897d633f1" DisplayName="Issue Updated" sap:VirtualizedContainerService.HintSize="449.6,300.8" sap2010:WorkflowViewState.IdRef="ConnectorTriggerActivity_1" UiPathActivityTypeId="035cc74b-859d-3f67-925c-543287edabe8">
+      <isactr:ConnectorTriggerActivity.FieldObjects>
+        <isactr:FieldObject Name="project" Type="FieldLiteral" Value="STUD" />
+        <isactr:FieldObject Name="issuetype" Type="FieldLiteral" Value="Bug" />
+        <isactr:FieldObject Name="Issues" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <OutArgument x:TypeArguments="uiascb:curated_get_issue_Trigger">[out_JiraIssues]</OutArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="out_Issues_20_ID" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <OutArgument x:TypeArguments="x:String" />
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="TriggerFilterProperty" Type="FilterTreeValue">
+          <isactr:FieldObject.Value>
+            <isactr:FilterValuesTree>
+              <isactr:FilterValuesTree.Values>
+                <x:String>Project Packager</x:String>
+              </isactr:FilterValuesTree.Values>
+            </isactr:FilterValuesTree>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+      </isactr:ConnectorTriggerActivity.FieldObjects>
+      <isactr:ConnectorTriggerActivity.UiPathAdditionalEventData>
+        <InArgument x:TypeArguments="x:String" />
+      </isactr:ConnectorTriggerActivity.UiPathAdditionalEventData>
+      <isactr:ConnectorTriggerActivity.UiPathEvent>
+        <InArgument x:TypeArguments="x:String" />
+      </isactr:ConnectorTriggerActivity.UiPathEvent>
+      <isactr:ConnectorTriggerActivity.UiPathEventConnector>
+        <InArgument x:TypeArguments="x:String" />
+      </isactr:ConnectorTriggerActivity.UiPathEventConnector>
+      <isactr:ConnectorTriggerActivity.UiPathEventObjectId>
+        <InArgument x:TypeArguments="x:String" />
+      </isactr:ConnectorTriggerActivity.UiPathEventObjectId>
+      <isactr:ConnectorTriggerActivity.UiPathEventObjectType>
+        <InArgument x:TypeArguments="x:String" />
+      </isactr:ConnectorTriggerActivity.UiPathEventObjectType>
+    </isactr:ConnectorTriggerActivity>
+  </Sequence>
+</Activity>

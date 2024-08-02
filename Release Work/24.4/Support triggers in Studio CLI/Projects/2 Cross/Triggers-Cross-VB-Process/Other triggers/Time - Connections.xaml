@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Time___Connections" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1144.8,766.4" sap2010:WorkflowViewState.IdRef="Time___Connections_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:lc="clr-namespace:Library_Cross_VB_Complex.Connections;assembly=Library_Cross_VB_Complex" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Time___Connections" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1144.8,628.8" sap2010:WorkflowViewState.IdRef="Time___Connections_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:Library_with_Connections;assembly=Library_with_Connections" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -45,6 +45,17 @@
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
       <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>Library_with_Connections</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Filters</x:String>
+      <x:String>UiPath.GSuite.Activities.Filters</x:String>
+      <x:String>UiPath.GSuite.Gmail.Enums</x:String>
+      <x:String>UiPath.GSuite.Models</x:String>
+      <x:String>UiPath.Shared.Api.Google.Gmail.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -91,14 +102,20 @@
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
       <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>Library_with_Connections</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Time___Connections" sap:VirtualizedContainerService.HintSize="512,701.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Time___Connections" sap:VirtualizedContainerService.HintSize="512,486.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <lc:MultipleConnections_CustomActivity out_JiraFields="{x:Null}" out_JiraId="{x:Null}" out_JiraKey="{x:Null}" out_email="{x:Null}" GetNewestEmailConnections_1_BrowserFolder="INBOX" GetNewestEmailConnections_1_BrowserFolderLabelId="INBOX" Get_Newest_Email="17d677e4-6ae6-ec11-b656-e42aac668fcd" Get_Record="a62937ff-b3d5-4146-8e45-a08f4f95c39b" sap:VirtualizedContainerService.HintSize="449.6,612.8" sap2010:WorkflowViewState.IdRef="MultipleConnections_CustomActivity_1" Send_Email="7ab8e158-a79f-ec11-a99b-e42aac668fcd" in_JiraIssue="STUD-66584" in_SendTo="[{&quot;liviu.ponova@uipath.com&quot;}]" />
+    <ui:TimeTrigger DailyRepeat="{x:Null}" DailyStartingTime="{x:Null}" DaysOfMonthToRunOn="{x:Null}" HourlyRepeat="{x:Null}" HourlyStartingMinutes="{x:Null}" MonthlyDaysToRunOn="{x:Null}" MonthlyRepeat="{x:Null}" MonthlyStartingTime="{x:Null}" Result="{x:Null}" TimeZone="{x:Null}" WeeklyDaysToRunOn="{x:Null}" WeeklyStartingTime="{x:Null}" CronExpression="0 */1 * * * ? *" DisplayName="Time Trigger" Frequency="MinuteByMinute" sap:VirtualizedContainerService.HintSize="449.6,221.6" sap2010:WorkflowViewState.IdRef="TimeTrigger_1" MinuteByMinuteRepeat="1" MonthDaySelection="DayOfMonth" />
+    <l:GMail GetNewestEmailConnections_1_BrowserFolder="INBOX" GetNewestEmailConnections_1_BrowserFolderLabelId="INBOX" Get_Newest_Email="17d677e4-6ae6-ec11-b656-e42aac668fcd" sap:VirtualizedContainerService.HintSize="449.6,176" sap2010:WorkflowViewState.IdRef="GMail_1" />
   </Sequence>
 </Activity>

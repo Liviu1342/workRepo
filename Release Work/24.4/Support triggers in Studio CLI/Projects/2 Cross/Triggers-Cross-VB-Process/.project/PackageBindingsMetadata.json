@@ -211,6 +211,93 @@
         "DefaultValueSource": "Property"
       }
     ],
+    "Library_with_Connections.GMail": [
+      {
+        "Type": "Connection",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "Get_Newest_Email_ResourceKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "ConnectionId": {
+            "Value": "Get_Newest_Email",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          },
+          "Connector": {
+            "Value": "uipath-google-gmail",
+            "ValueSource": "Constant"
+          },
+          "UseConnectionService": {
+            "Value": "True",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityId": {
+            "Value": "GetNewestEmailConnections_1",
+            "ValueSource": "Constant"
+          },
+          "CompilerActivityDisplayName": {
+            "Value": "Get Newest Email",
+            "ValueSource": "Constant"
+          }
+        },
+        "SubBindings": [
+          {
+            "Type": "Property",
+            "PublishNullValues": false,
+            "Key": {
+              "Value": "Get_Newest_Email_Email_folder_or_label_ResourceKey",
+              "ValueSource": "Property"
+            },
+            "Values": {
+              "ParentFolders[*].Name": {
+                "Value": "GetNewestEmailConnections_1_BrowserFolder",
+                "ValueSource": "Property"
+              },
+              "ParentFolders[*].ID": {
+                "Value": "GetNewestEmailConnections_1_BrowserFolderLabelId",
+                "ValueSource": "Property"
+              }
+            },
+            "Arguments": {
+              "BindingsVersion": {
+                "Value": "2.1",
+                "ValueSource": "Constant"
+              },
+              "ActivityName": {
+                "Value": "DisplayName",
+                "ValueSource": "Property"
+              },
+              "ObjectName": {
+                "Value": "NormalizedMessage",
+                "ValueSource": "Constant"
+              },
+              "DisplayLabel": {
+                "Value": "ParentFolders[*].Name",
+                "ValueSource": "Constant"
+              },
+              "CompilerActivityId": {
+                "Value": "GetNewestEmailConnections_1",
+                "ValueSource": "Constant"
+              },
+              "CompilerActivityDisplayName": {
+                "Value": "Get Newest Email",
+                "ValueSource": "Constant"
+              }
+            },
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
+          }
+        ],
+        "DefaultValueSource": "Property"
+      }
+    ],
     "UiPath.Core.Activities.AddAndProcessQueueItem": [
       {
         "Type": "queue",
@@ -7246,6 +7333,38 @@
             "DefaultValueSource": "Property"
           }
         ],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.IntegrationService.Activities.Runtime.Activities.ConnectorActivity": [
+      {
+        "PublishNullValues": false,
+        "SubBindings": [],
+        "FromInstanceProperty": "BindingsJson",
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.IntegrationService.Activities.Runtime.Activities.ConnectorHttpActivity": [
+      {
+        "PublishNullValues": false,
+        "SubBindings": [],
+        "FromInstanceProperty": "BindingsJson",
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.IntegrationService.Activities.Runtime.Activities.ConnectorPersistenceActivity": [
+      {
+        "PublishNullValues": false,
+        "SubBindings": [],
+        "FromInstanceProperty": "BindingsJson",
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.IntegrationService.Activities.Runtime.Activities.ConnectorTriggerActivity": [
+      {
+        "PublishNullValues": false,
+        "SubBindings": [],
+        "FromInstanceProperty": "BindingsJson",
         "DefaultValueSource": "Property"
       }
     ],

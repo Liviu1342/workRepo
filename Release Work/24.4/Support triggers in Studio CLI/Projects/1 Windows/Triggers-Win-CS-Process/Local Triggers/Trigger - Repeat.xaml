@@ -1,9 +1,9 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Trigger___Repeat" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:utat="clr-namespace:UiPath.Testing.Activities.TestData;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Trigger___Repeat" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:lc="clr-namespace:Library_Win_VB_Complex.Connections;assembly=Library_Win_VB_Complex" xmlns:le="clr-namespace:Library_Win_VB_Complex.Entities;assembly=Library_Win_VB_Complex" xmlns:lw="clr-namespace:Library_Win_VB_Complex.Webservice;assembly=Library_Win_VB_Complex" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:SwaggerPetstore;assembly=SwaggerPetstore" xmlns:s1="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:utat="clr-namespace:UiPath.Testing.Activities.TestData;assembly=UiPath.Testing.Activities" xmlns:uwp="clr-namespace:UiPath.WebClient.PetClientNamespace;assembly=SwaggerPetstore" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="TriggerEventArgs" Type="InArgument(ui:RepeatTriggerArgs)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1144.8,688.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1144.8,3013.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -38,6 +38,49 @@
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Runtime.Serialization</x:String>
+      <x:String>Library_Win_VB_Complex</x:String>
+      <x:String>UiPath.DataService.Definition</x:String>
+      <x:String>Library_Win_VB_Complex.Entities</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>UiPath.DataService.Activities.Models</x:String>
+      <x:String>UiPath.DataService.Activities</x:String>
+      <x:String>SwaggerPetstore</x:String>
+      <x:String>Library_Win_VB_Complex.Webservice</x:String>
+      <x:String>UiPath.WebClient.UserClientNamespace</x:String>
+      <x:String>UiPath.WebClient.Activities.Generator.Swagger</x:String>
+      <x:String>UiPath.WebClient.Activities.Generator.Code</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.WebClient.PetClientNamespace</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.C2AAC668FCD_repos.Bundle</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.GSuite.Models</x:String>
+      <x:String>UiPath.Shared.Api.Google.Gmail.Models</x:String>
+      <x:String>Library_Win_VB_Complex.Connections</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Filters</x:String>
+      <x:String>UiPath.GSuite.Activities.Filters</x:String>
+      <x:String>UiPath.GSuite.Gmail.Enums</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>UiPath.GSuite</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -89,28 +132,128 @@
       <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
       <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>DataService.Library_Win_VB_Complex</AssemblyReference>
+      <AssemblyReference>Library_Win_VB_Complex</AssemblyReference>
+      <AssemblyReference>Library_Win_VB_Complex.Core</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>SwaggerPetstore</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>C2AAC668FCD_repos.rRv13uNR4M1s3KkG1SqwHA</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Trigger___Repeat" sap:VirtualizedContainerService.HintSize="416,624" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Trigger___Repeat" sap:VirtualizedContainerService.HintSize="540.8,2948.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:Pet" Name="petBody" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:RepeatTrigger DisplayName="Repeat Trigger" Enabled="True" sap:VirtualizedContainerService.HintSize="353.6,144" sap2010:WorkflowViewState.IdRef="RepeatTrigger_1" Interval="00:00:05" SchedulingMode="Sequential" TriggerId="d2a8c25f-0b2f-461f-9e2f-9cfd13dee3b4" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+    <ui:RepeatTrigger DisplayName="Repeat Trigger" Enabled="True" sap:VirtualizedContainerService.HintSize="478.4,144" sap2010:WorkflowViewState.IdRef="RepeatTrigger_1" Interval="00:00:05" SchedulingMode="Sequential" TriggerId="d2a8c25f-0b2f-461f-9e2f-9cfd13dee3b4" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"Repeat Trigger: Changing value for gv1 every 5 seconds"</CSharpValue>
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <utat:RandomString Case="LowerCase" DisplayName="Random String" sap:VirtualizedContainerService.HintSize="353.6,216.8" sap2010:WorkflowViewState.IdRef="RandomString_1" Length="10">
+    <utat:RandomString Case="LowerCase" DisplayName="Random String" sap:VirtualizedContainerService.HintSize="478.4,225.6" sap2010:WorkflowViewState.IdRef="RandomString_1" Length="10">
       <utat:RandomString.Output>
         <OutArgument x:TypeArguments="x:String">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">GlobalVariables.gv1</CSharpReference>
         </OutArgument>
       </utat:RandomString.Output>
     </utat:RandomString>
+    <le:Entities_CustomActivity out_Cat="{x:Null}" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="Entities_CustomActivity_1" in_CatName="Test cat" />
+    <lw:Webservice_User_CustomActivity out_User="{x:Null}" sap:VirtualizedContainerService.HintSize="478.4,434.4" sap2010:WorkflowViewState.IdRef="Webservice_User_CustomActivity_1" in_Email="gigi@becali.fcsb" in_FirstName="Gigi" in_LastNAme="Becali" in_Password="hehehehhehehehe" in_Username="RazboiniculLuminii">
+      <lw:Webservice_User_CustomActivity.userBody>
+        <InArgument x:TypeArguments="s:User" />
+      </lw:Webservice_User_CustomActivity.userBody>
+    </lw:Webservice_User_CustomActivity>
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="s1:Nullable(x:Int64)">
+                <CSharpReference x:TypeArguments="s1:Nullable(x:Int64)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">petBody.Id</CSharpReference>
+              </OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="s1:Nullable(x:Int64)">
+                <Literal x:TypeArguments="s1:Nullable(x:Int64)" Value="123984" />
+              </InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">petBody.Name</CSharpReference>
+              </OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">Test</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+    </ui:MultipleAssign>
+    <uwp:AddPetActivity BearerToken="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" Headers="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" Username="{x:Null}" DisplayName="AddPet" Endpoint="https://petstore.swagger.io/v2" sap:VirtualizedContainerService.HintSize="478.4,590.4" sap2010:WorkflowViewState.IdRef="AddPetActivity_1" TimeoutMS="30000">
+      <uwp:AddPetActivity.Request>
+        <uwp:PetClientAddPetRequest>
+          <uwp:PetClientAddPetRequest.Body>
+            <InArgument x:TypeArguments="s:Pet">
+              <CSharpValue x:TypeArguments="s:Pet" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">petBody</CSharpValue>
+            </InArgument>
+          </uwp:PetClientAddPetRequest.Body>
+        </uwp:PetClientAddPetRequest>
+      </uwp:AddPetActivity.Request>
+    </uwp:AddPetActivity>
+    <lc:MultipleConnections_CustomActivity out_Email="{x:Null}" out_GitHub_Repo="{x:Null}" Connector_activity="e173e903-6ea0-ec11-a99b-e42aac668fcd" GetNewestEmailConnections_1_BrowserFolder="INBOX" GetNewestEmailConnections_1_BrowserFolderLabelId="INBOX" Get_Newest_Email="17d677e4-6ae6-ec11-b656-e42aac668fcd" sap:VirtualizedContainerService.HintSize="478.4,351.2" sap2010:WorkflowViewState.IdRef="MultipleConnections_CustomActivity_1" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Main Screen" sap:VirtualizedContainerService.HintSize="478.4,585.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="006f9b90-f1d7-4162-a4ef-d80dac815aec" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,271.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'digit 5'" sap:VirtualizedContainerService.HintSize="353.6,182.4" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable ContentHash="_JN4qCdflEetMxjisUpUzA" DesignTimeRectangle="217, 849, 197, 130" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='NumberPad' cls='NamedContainerAutomationPeer' name='Number pad' /&gt;&lt;uia automationid='num5Button' cls='Button' name='Five' /&gt;" FuzzySelectorArgument="&lt;uia cls='LandmarkTarget' /&gt;&lt;uia automationid='NumberPad' cls='NamedContainerAutomationPeer' name='Number pad' /&gt;&lt;uia automationid='num5Button' cls='Button' name='Five' role='button' check:fulltext='5' /&gt;" Guid="971db7f3-d33f-4ca3-ae65-84c0187af7f0" InformativeScreenshot="8b7c20f4ffe3ec1730309b9ee85af44a.png" Reference="LcgIwV9so0Oc0ke5IBfnPQ/85THQ_sGRU-Fi-cEwVRCfw" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='Microsoft.WindowsCalculator_8wekyb3d8bbwe!App' title='Calculator' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" ContentHash="gVmn-cP-b06MHyKZhj5frg" FilePath="Microsoft.WindowsCalculator_8wekyb3d8bbwe!App" IconBase64="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" InformativeScreenshot="054cddc5e389166bbe833736b5fab4d5.png" Reference="LcgIwV9so0Oc0ke5IBfnPQ/5U1tDRtj3UyZ8o1dAnau2g" Selector="&lt;wnd app='applicationframehost.exe' appid='Microsoft.WindowsCalculator_8wekyb3d8bbwe!App' title='Calculator' /&gt;" Title="Calculator" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
   </Sequence>
 </Activity>
