@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="EP_RootFolder_Bindings" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1732,1086.6666666666667" sap2010:WorkflowViewState.IdRef="EP_RootFolder_Bindings_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:usavssb="clr-namespace:UiPath.System.Activities.ViewModels.SWEntities.SpacificData_JSON_Persoana_90e0e.Bundle;assembly=SpacificData_JSON_Pe.UgF0635fftH1t4vQC4dMpfs" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="EP_RootFolder_Bindings" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1728.6666666666667,1325.3333333333333" sap2010:WorkflowViewState.IdRef="EP_RootFolder_Bindings_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:usavssb="clr-namespace:UiPath.System.Activities.ViewModels.SWEntities.SpacificData_JSON_Persoana_90e0e.Bundle;assembly=SpacificData_JSON_Pe.PvmjF3p3GpC1YJvNY4xv6Xa4" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -28,6 +28,7 @@
       <x:String>System.Linq.Expressions</x:String>
       <x:String>UiPath.System.Activities.ViewModels.SWEntities.SpacificData_JSON_Persoana_90e0e.Bundle</x:String>
       <x:String>System.Numerics</x:String>
+      <x:String>UiPath</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -74,9 +75,22 @@
       <AssemblyReference>SpecificData_JSON_Sc.geomO316s1K1r0gAY1M1ttl1</AssemblyReference>
       <AssemblyReference>SpacificData_JSON_Pe.UgF0635fftH1t4vQC4dMpfs</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>DeserializeJSON930ff.a1gNC49TJwN13NAsy1YfCoT1</AssemblyReference>
+      <AssemblyReference>DeserializeJSON8a979.vnslO2MPQmQ1u977tXpAbp2</AssemblyReference>
+      <AssemblyReference>SpacificData_JSON_Pe.PvmjF3p3GpC1YJvNY4xv6Xa4</AssemblyReference>
+      <AssemblyReference>Library_Cross_CS_Bindings</AssemblyReference>
+      <AssemblyReference>Library_Cross_VB_Webservice</AssemblyReference>
+      <AssemblyReference>Library_Cross_VB_Entities</AssemblyReference>
+      <AssemblyReference>UiPath.Locator</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities.Api</AssemblyReference>
+      <AssemblyReference>UiPath.Driver.Portable</AssemblyReference>
+      <AssemblyReference>Library_Cross_VB_Complex</AssemblyReference>
+      <AssemblyReference>Interop.UiPath</AssemblyReference>
+      <AssemblyReference>Library_Cross_VB_CustomViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Api</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="EP_RootFolder_Bindings" sap:VirtualizedContainerService.HintSize="512,1022" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="EP_RootFolder_Bindings" sap:VirtualizedContainerService.HintSize="512,1260.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Object" Name="value">
         <sap:WorkflowViewStateService.ViewState>
@@ -86,21 +100,14 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </Variable>
-      <Variable x:TypeArguments="usavssb:SpacificData_JSON_Persoana_90e0e" Name="specificData">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:String x:Key="SourceIdRef">GetQueueItem_1</x:String>
-            <x:String x:Key="SourcePropertyName">SpecificData</x:String>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </Variable>
+      <Variable x:TypeArguments="usavssb:SpacificData_JSON_Persoana_90e0e" Name="specificData" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeProcess ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process" FolderPath="test" sap:VirtualizedContainerService.HintSize="450,176.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeProcess_1" ProcessName="3_WriteLine-Activities">
+    <ui:InvokeProcess ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process" FolderPath="test" sap:VirtualizedContainerService.HintSize="450,348.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeProcess_1" ProcessName="3_WriteLine-Activities">
       <ui:InvokeProcess.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeProcess.Arguments>
@@ -111,11 +118,11 @@
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[value.ToString.ToUpper]" />
-    <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" TransactionItem="{x:Null}" DisplayName="Get Transaction Item" FolderPath="test" sap:VirtualizedContainerService.HintSize="450,236.66666666666666" sap2010:WorkflowViewState.IdRef="GetQueueItem_1" QueueType="SpacificData_JSON_Persoana">
+    <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" TransactionItem="{x:Null}" DisplayName="Get Transaction Item" FolderPath="test" sap:VirtualizedContainerService.HintSize="450,303.3333333333333" sap2010:WorkflowViewState.IdRef="GetQueueItem_1" QueueType="SpacificData_JSON_Persoana">
       <ui:GetQueueItem.SpecificData>
         <OutArgument x:TypeArguments="usavssb:SpacificData_JSON_Persoana_90e0e">[specificData]</OutArgument>
       </ui:GetQueueItem.SpecificData>
     </ui:GetQueueItem>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[specificData.prenume + &quot; &quot; + specificData.nume + &quot; are &quot; + specificData.varsta.ToString + &quot; ani&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[specificData.prenume + &quot; &quot; + specificData.nume + &quot; are &quot; + specificData.varsta_2D_persoanei.ToString + &quot; ani&quot;]" />
   </Sequence>
 </Activity>
