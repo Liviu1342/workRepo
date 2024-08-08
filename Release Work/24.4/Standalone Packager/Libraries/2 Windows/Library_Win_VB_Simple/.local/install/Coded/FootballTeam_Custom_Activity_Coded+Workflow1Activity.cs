@@ -6,6 +6,7 @@ using System.Runtime;
 
 namespace Library_Win_VB_Simple.Coded
 {
+    [System.ComponentModel.Browsable(false)]
     public class Workflow1Activity : System.Activities.Activity
     {
         public Workflow1Activity()

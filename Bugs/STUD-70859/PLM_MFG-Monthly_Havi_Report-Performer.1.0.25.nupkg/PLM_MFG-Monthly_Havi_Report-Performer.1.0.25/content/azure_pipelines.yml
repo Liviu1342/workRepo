@@ -1,0 +1,144 @@
+## To use this file:
+## 1. Acquire a copy of this file
+## 2. Create development and main branches if they do not exist
+## 3. Update the ProcessName Variable to refer to the folder in which this document is located
+## 4. Update the Trigger=>Paths=>Include value to refer to the folder in which this document is located
+## 5. Add the modified file to both main and development branches
+## 6. Create a pipeline under ADO=>Pipelines and select this file. Reference the file in main(no need to do this for the one in development)
+
+
+## NOTE: The Include path is not compatible with variables and must be set directly 
+## The Include path is necessary to allow each bot to be built only when the changes in the commit are relevant to that bot
+## By separating each bot in the process into a subfolder, we can keep them together in Git while building and deploying them as distinct pieces
+## By only building bots that are changed we can maintain the flexibility to update one, some or all of the bots without generating needless rebuilds and versions in other bots.
+trigger:
+  branches: 
+    include: 
+    - main
+    - development
+  paths:
+    include:
+    - PLM_MFG-Monthly_Havi_Report-Performer/*
+pool:
+  vmImage: windows-latest
+
+
+variables:
+- name: ProcessName ## Setting this variable provides the name for use in paths, artifact names etc throughout the document.
+  value: PLM_MFG-Monthly_Havi_Report-Performer
+- name: isMainCommit ## Setting this variable provides a condition so jobs can tell which branch triggered the run
+  value: $[eq(variables['Build.SourceBranch'], 'refs/heads/main')]
+
+stages:
+- stage: BuildAndDeploy
+  jobs:
+  - job: BumpVersionNumber
+    condition:  eq(variables.isMainCommit, 'false') ## only runs on non-main pushes, which means development since the trigger only watches that branch
+    steps: 
+    - checkout: self
+      persistCredentials: true ## Allows use of git commands under the same authentication used by the checkout
+      clean: true ## wipe the directory before pulling from git, prevents leftovers from causing weirdness
+
+    ##Necessary to set git config for the push, checking out the branch makes sure we have an upstream to push version bumps 
+    - task: Bash@3 
+      inputs:
+        targetType: 'inline'
+        script: |
+          git config --global user.email "RPADevs@dart.biz"
+          git config --global user.name "Azure Pipelines"
+          echo "Git Config Done"
+          git fetch
+          echo "Fetched"
+          git checkout $(Build.SourceBranchName)
+          echo "Checked Out"
+
+    ## Bump the version number
+    ## Doing this allows us to have the Git Push effectively perform same function as Publish-to-Dev was in Studio
+    - task: PowerShell@1
+      name: getProcessVersion
+      inputs:
+        scriptType: 'inlineScript'
+        inlineScript: |
+          $projectObject = Get-Content '$(Build.SourcesDirectory)\$(ProcessName)\project.json'| ConvertFrom-Json
+          $version = $projectObject.projectVersion 
+          Write-Host "Initial Version:" $version
+          $vArray = $version.split(".") 
+          Write-Host "Version Array:" $vArray
+          $newVersion= $vArray[0],$vArray[1],(([int]$vArray[2])+1) -join "."
+          Write-Host "New Version:" $newVersion
+          $projectObject.projectVersion = $newVersion
+          $projectObject | ConvertTo-Json -depth 32 | set-content '$(Build.SourcesDirectory)\$(ProcessName)\project.json'
+          Write-Host "##vso[task.setvariable variable=processVersion;]$newVersion" 
+
+    ## Add the changed file to a commit, create a commit message, including the flag to prevent the commit from triggering build and starting a loop.
+    ## Pull any changes(including version bumps from other folders) and push.
+    - task: PowerShell@1
+      name: commitToGit
+      inputs: 
+        failOnStandardError: false
+        scriptType: 'inlineScript'
+        inlineScript: |
+          git add *
+          echo "Added"
+          git commit -m "Azure Pipelines: Version Number Adjustment ***NO_CI***"
+          echo "Committed"
+          git pull
+          echo "Pulled"
+          git push 
+          echo "Pushed"
+
+  - job: PackAndPublish
+    dependsOn: BumpVersionNumber
+    condition: in(dependencies.BumpVersionNumber.result, 'Succeeded', 'Skipped')
+    steps:
+    - checkout: self
+      persistCredentials: true ## Allows use of git commands under the same authentication used by the checkout
+      clean: true ## wipe the directory before pulling from git, prevents leftovers from causing weirdness
+
+    ## Pull any changes(including version bumps from previous steps).
+    - task: PowerShell@1
+      name: pullChanges
+      inputs: 
+        failOnStandardError: false
+        scriptType: 'inlineScript'
+        inlineScript: |
+          git fetch
+          echo "Fetched"
+          git checkout $(Build.SourceBranchName)
+          echo "Checked Out"
+          
+
+    ##Get the project version
+    - task: PowerShell@1
+      name: GetVersion
+      inputs:
+        scriptType: 'inlineScript'
+        inlineScript: |
+          $projectObject = Get-Content '$(Build.SourcesDirectory)\$(ProcessName)\project.json'| ConvertFrom-Json
+          $version = $projectObject.projectVersion 
+          Write-Host "Project Version:" $version
+          Write-Host "##vso[task.setvariable variable=processVersion;]$version" 
+
+
+    # Install the platform
+    - task: UiPathInstallPlatform@4
+      inputs:
+        cliVersion: 'WIN_23.10.8753.32995'
+
+    # Build the Package
+    - task: UiPathPack@4
+      inputs:
+        versionType: 'CurrentVersion'
+        projectJsonPath: '$(Build.SourcesDirectory)'
+        orchestratorConnection: 'UiPath Dev Orchestrator'
+        outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+        traceLevel: 'Warning'
+
+      # Publish the package
+
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: $(Build.ArtifactStagingDirectory)\Output\$(ProcessName).$(processVersion).nupkg
+        ArtifactName: '$(ProcessName)_Build'
+        publishLocation: 'Container'
+
