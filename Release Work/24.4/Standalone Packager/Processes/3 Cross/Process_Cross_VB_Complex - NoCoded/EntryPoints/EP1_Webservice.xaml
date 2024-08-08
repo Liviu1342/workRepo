@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="EP1_Webservice" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:Library_Cross_VB_Webservice;assembly=Library_Cross_VB_Webservice" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:s1="clr-namespace:SwaggerPetstore;assembly=SwaggerPetstore" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uwavsdb="clr-namespace:UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJsonJObject_60432e.Bundle;assembly=DeserializeJsonJObje.kb5LJgSNVD1WZnX510zA3U" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="EP1_Webservice" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:Library_Cross_VB_Webservice;assembly=Library_Cross_VB_Webservice" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:s1="clr-namespace:SwaggerPetstore;assembly=SwaggerPetstore" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uwavsdb="clr-namespace:UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON8a9793.Bundle;assembly=DeserializeJSON8a979.vnslO2MPQmQ1u977tXpAbp2" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_PetId" Type="InArgument(s:Nullable(x:Int64))" />
     <x:Property Name="in_PetName" Type="InArgument(x:String)" />
@@ -13,7 +13,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1220,1017.5999999999999</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1728.6666666666667,1169.3333333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>EP1_Webservice_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -59,6 +59,8 @@
       <x:String>System.Collections.Specialized</x:String>
       <x:String>UiPath.Web.Activities</x:String>
       <x:String>UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJsonJObject_60432e.Bundle</x:String>
+      <x:String>UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON930ff8.Bundle</x:String>
+      <x:String>UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON8a9793.Bundle</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -118,9 +120,12 @@
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
       <AssemblyReference>DeserializeJsonJObje.kb5LJgSNVD1WZnX510zA3U</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>DeserializeJSON930ff.a1gNC49TJwN13NAsy1YfCoT1</AssemblyReference>
+      <AssemblyReference>DeserializeJSON8a979.vnslO2MPQmQ1u977tXpAbp2</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="EP1_Webservice" sap:VirtualizedContainerService.HintSize="512,952.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="EP1_Webservice" sap:VirtualizedContainerService.HintSize="512,967.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="outputTo">
         <sap:WorkflowViewStateService.ViewState>
@@ -130,7 +135,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </Variable>
-      <Variable x:TypeArguments="uwavsdb:DeserializeJsonJObject_60432e" Name="jsonObject">
+      <Variable x:TypeArguments="uwavsdb:DeserializeJSON8a9793" Name="jsonObject">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:String x:Key="SourceIdRef">DeserializeJson`1_1</x:String>
@@ -144,9 +149,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadTextFile File="{x:Null}" Content="[outputTo]" DisplayName="Read Text File" FileName="Utils/PetDetails.json" sap:VirtualizedContainerService.HintSize="449.6,122.4" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-    <ui:DeserializeJson x:TypeArguments="uwavsdb:DeserializeJsonJObject_60432e" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="449.6,122.4" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jsonObject]" JsonSample="{}{&#xD;&#xA; &quot;Pet&quot;: {&#xD;&#xA;  &quot;name&quot;: &quot;text&quot;,&#xD;&#xA;  &quot;Id&quot;: 0&#xD;&#xA; }&#xD;&#xA;}" JsonString="[outputTo]" />
-    <Assign sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:ReadTextFile File="{x:Null}" Content="[outputTo]" DisplayName="Read Text File" FileName="Utils/PetDetails.json" sap:VirtualizedContainerService.HintSize="450,124" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+    <ui:DeserializeJson x:TypeArguments="uwavsdb:DeserializeJSON8a9793" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="450,124" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jsonObject]" JsonSample="{}{&#xA; &quot;Pet&quot;: {&#xA;  &quot;name&quot;: &quot;text&quot;,&#xA;  &quot;Id&quot;: 0&#xA; }&#xA;}" JsonString="[outputTo]" />
+    <Assign sap:VirtualizedContainerService.HintSize="450,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="s:Nullable(x:Int64)">[in_PetId]</OutArgument>
       </Assign.To>
@@ -154,7 +159,7 @@
         <InArgument x:TypeArguments="s:Nullable(x:Int64)">[jsonObject.Pet.Id.GetValueOrDefault]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign sap:VirtualizedContainerService.HintSize="450,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[in_PetName]</OutArgument>
       </Assign.To>
@@ -162,7 +167,7 @@
         <InArgument x:TypeArguments="x:String">[jsonObject.Pet.name]</InArgument>
       </Assign.Value>
     </Assign>
-    <l:Pet_CustomActivity sap:VirtualizedContainerService.HintSize="449.6,226.4" sap2010:WorkflowViewState.IdRef="Pet_CustomActivity_1" in_PetID="[in_PetId]" in_PetName="[in_PetName]" out_Pet="[out_Pet]" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[out_Pet.Name.ToUpper + &quot;: &quot; + out_Pet.Id.ToString]" />
+    <l:Pet_CustomActivity sap:VirtualizedContainerService.HintSize="450,229.33333333333334" sap2010:WorkflowViewState.IdRef="Pet_CustomActivity_1" in_PetID="[in_PetId]" in_PetName="[in_PetName]" out_Pet="[out_Pet]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[out_Pet.Name.ToUpper + &quot;: &quot; + out_Pet.Id.ToString]" />
   </Sequence>
 </Activity>
