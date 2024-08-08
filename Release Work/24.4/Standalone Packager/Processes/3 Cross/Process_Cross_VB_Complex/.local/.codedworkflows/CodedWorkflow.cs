@@ -24,7 +24,7 @@ namespace Process_Cross_VB_Complex
         private Lazy<Library_Cross_VB_Complex.WorkflowRunnerService> _library_Cross_VB_ComplexLazy;
         public CodedWorkflow()
         {
-            _ = new System.Type[]{typeof(UiPath.MicrosoftOffice365.Activities.Api.IOffice365ConnectionsService), typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.GSuite.Activities.Api.IGoogleConnectionsService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.Testing.API.ITestingService)};
+            _ = new System.Type[]{typeof(UiPath.GSuite.Activities.Api.IGoogleConnectionsService), typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.MicrosoftOffice365.Activities.Api.IOffice365ConnectionsService)};
             _workflowRunnerServiceLazy = new Lazy<Process_Cross_VB_Complex.WorkflowRunnerService>(() => new Process_Cross_VB_Complex.WorkflowRunnerService(this.services));
 #pragma warning disable
             _connectionsManagerLazy = new Lazy<ConnectionsManager>(() => new ConnectionsManager(serviceContainer));
