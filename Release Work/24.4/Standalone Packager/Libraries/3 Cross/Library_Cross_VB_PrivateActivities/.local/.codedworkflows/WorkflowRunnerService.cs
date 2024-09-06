@@ -15,20 +15,20 @@ namespace Library_Cross_VB_PrivateActivities
         }
 
         /// <summary>
+        /// Invokes the Private Activities/LogWarnMessage_Custom_Private.xaml
+        /// </summary>
+        public void LogWarnMessage_Custom_Private(string in_Message)
+        {
+            var result = _runWorkflowHandler(@"Private Activities\LogWarnMessage_Custom_Private.xaml", new Dictionary<string, object>{{"in_Message", in_Message}}, default, default, default);
+        }
+
+        /// <summary>
         /// Invokes the UsesPrivateXamls_Custom_Activity.xaml
         /// </summary>
         public string UsesPrivateXamls_Custom_Activity(string in_Message)
         {
             var result = _runWorkflowHandler(@"UsesPrivateXamls_Custom_Activity.xaml", new Dictionary<string, object>{{"in_Message", in_Message}}, default, default, default);
             return (string)result["out_AssetValue"];
-        }
-
-        /// <summary>
-        /// Invokes the Private Activities/LogWarnMessage_Custom_Private.xaml
-        /// </summary>
-        public void LogWarnMessage_Custom_Private(string in_Message)
-        {
-            var result = _runWorkflowHandler(@"Private Activities\LogWarnMessage_Custom_Private.xaml", new Dictionary<string, object>{{"in_Message", in_Message}}, default, default, default);
         }
 
         /// <summary>

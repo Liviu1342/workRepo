@@ -38,7 +38,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1144.8,1984.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1766,2042</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -135,13 +135,13 @@
       <AssemblyReference>SwaggerPetstore</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="608,1920" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="608,1977.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ugia:GetRecord ActivityInstanceId="4be21b3c-68b7-4fb6-b339-fa473002865a" BindingsVersion="2.1" BusinessEntityName="Repository" ConfiguredBusinessEntity="" ConnectionId="e173e903-6ea0-ec11-a99b-e42aac668fcd" Connector="uipath-microsoft-github" CrudOperation="Get" DesignConnectionEnabled="True" DisplayName="Get Record" sap:VirtualizedContainerService.HintSize="545.6,268.8" sap2010:WorkflowViewState.IdRef="GetRecord_1" IsAdditionalPropertiesActive="True">
+    <ugia:GetRecord ActivityInstanceId="4be21b3c-68b7-4fb6-b339-fa473002865a" BindingsVersion="2.1" BusinessEntityName="Repository" ConfiguredBusinessEntity="" ConnectionId="b207c933-c44e-4afe-96a7-4f77678eec41" Connector="uipath-microsoft-github" CrudOperation="Get" DesignConnectionEnabled="True" DisplayName="Get Record" sap:VirtualizedContainerService.HintSize="546,270" sap2010:WorkflowViewState.IdRef="GetRecord_1" IsAdditionalPropertiesActive="True">
       <ugia:GetRecord.BusinessEntity>
         <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID0}" Name="repos">
           <uibi:BusinessEntity.AllFields>
@@ -1092,7 +1092,7 @@
         <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)" />
       </ugia:GetRecord.CachedLookupValues>
       <ugia:GetRecord.DesignConnectionRequest>
-        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="e173e903-6ea0-ec11-a99b-e42aac668fcd" ConnectionName="LiviuPonova" ConnectorKey="uipath-microsoft-github">
+        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="b207c933-c44e-4afe-96a7-4f77678eec41" ConnectionName="LiviuPonova" ConnectorKey="uipath-microsoft-github">
           <uiisi:ConnectionParameters.TelemetryInfo>
             <uiisi:TelemetryInfo ActivityPack="UiPath.GitHub.IntegrationService.Activities" ActivityPackVersion="5.1.0" Source="StudioDesktop" />
           </uiisi:ConnectionParameters.TelemetryInfo>
@@ -1138,8 +1138,8 @@
         <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
       </ugia:GetRecord.TelemetryProperties>
     </ugia:GetRecord>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="545.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[out_RepoFullName + &quot; has ID: &quot; + out_RepoId.ToString]" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="MultipleConnections_CustomActivity - Invoke Workflow File (Connections\MultipleConnections_CustomActivity.xaml)" sap:VirtualizedContainerService.HintSize="545.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Connections\MultipleConnections_CustomActivity.xaml">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="546,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[out_RepoFullName + &quot; has ID: &quot; + out_RepoId.ToString]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="MultipleConnections_CustomActivity - Invoke Workflow File (Connections\MultipleConnections_CustomActivity.xaml)" sap:VirtualizedContainerService.HintSize="546,253.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Connections\MultipleConnections_CustomActivity.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_JiraIssue">[in_JiraISsue]</InArgument>
         <InArgument x:TypeArguments="scg:IEnumerable(x:String)" x:Key="in_SendTo">[in_SendTo]</InArgument>
@@ -1148,16 +1148,16 @@
         <OutArgument x:TypeArguments="x:String" x:Key="out_JiraKey" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Entities_CustomActivity - Invoke Workflow File (Entities\Entities_CustomActivity.xaml)" sap:VirtualizedContainerService.HintSize="545.6,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Entities\Entities_CustomActivity.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Entities_CustomActivity - Invoke Workflow File (Entities\Entities_CustomActivity.xaml)" sap:VirtualizedContainerService.HintSize="546,210" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Entities\Entities_CustomActivity.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_CatName">[in_CatName]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Arb">[in_Abc]</InArgument>
         <OutArgument x:TypeArguments="l:CatEntity" x:Key="out_Entity" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="545.6,777.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="546,782" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="OR_GoogleChrome_CustomActivity - Invoke Workflow File (UIA\OR_GoogleChrome_CustomActivity.xaml)" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="UIA\OR_GoogleChrome_CustomActivity.xaml">
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="OR_GoogleChrome_CustomActivity - Invoke Workflow File (UIA\OR_GoogleChrome_CustomActivity.xaml)" sap:VirtualizedContainerService.HintSize="453.3333333333333,178" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="UIA\OR_GoogleChrome_CustomActivity.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <scg:Dictionary x:TypeArguments="x:String, Argument" />
           </ui:InvokeWorkflowFile.Arguments>
@@ -1169,13 +1169,13 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,254.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,255.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[&quot;Browser exception&quot;]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[&quot;Browser exception&quot;]" />
             </Sequence>
           </ActivityAction>
         </Catch>
@@ -1190,7 +1190,7 @@
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Webservice_Pet_CustomActivity - Invoke Workflow File (Webservice\Webservice_Pet_CustomActivity.xaml)" sap:VirtualizedContainerService.HintSize="507.2,197.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Webservice\Webservice_Pet_CustomActivity.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Webservice_Pet_CustomActivity - Invoke Workflow File (Webservice\Webservice_Pet_CustomActivity.xaml)" sap:VirtualizedContainerService.HintSize="545.6,197.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Webservice\Webservice_Pet_CustomActivity.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="s:Nullable(x:Int64)" x:Key="in_PetId">[in_PetId]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_PetName">[in_PetName]</InArgument>

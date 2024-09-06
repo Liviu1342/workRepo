@@ -17,19 +17,14 @@ namespace Library_Cross_VB_PrivateActivities
 {
     public partial class CodedWorkflow : CodedWorkflowBase
     {
-        private Lazy<ConnectionsManager> _connectionsManagerLazy;
+        private Lazy<Library_Cross_VB_PrivateActivities.WorkflowRunnerService> _workflowRunnerServiceLazy;
         public CodedWorkflow()
         {
             _ = new System.Type[]{typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService)};
-            workflows = new WorkflowRunnerService(this.RunWorkflow);
-#pragma warning disable
-            _connectionsManagerLazy = new Lazy<ConnectionsManager>(() => new ConnectionsManager(serviceContainer));
-#pragma warning restore
+            _workflowRunnerServiceLazy = new Lazy<Library_Cross_VB_PrivateActivities.WorkflowRunnerService>(() => new Library_Cross_VB_PrivateActivities.WorkflowRunnerService(this.RunWorkflow));
         }
 
-        protected WorkflowRunnerService workflows { get; private set; }
-
-        protected ConnectionsManager connections => _connectionsManagerLazy.Value;
+        protected Library_Cross_VB_PrivateActivities.WorkflowRunnerService workflows => _workflowRunnerServiceLazy.Value;
 #pragma warning disable
         protected UiPath.Core.Activities.API.ISystemService system { get => serviceContainer.Resolve<UiPath.Core.Activities.API.ISystemService>() ; }
 #pragma warning restore

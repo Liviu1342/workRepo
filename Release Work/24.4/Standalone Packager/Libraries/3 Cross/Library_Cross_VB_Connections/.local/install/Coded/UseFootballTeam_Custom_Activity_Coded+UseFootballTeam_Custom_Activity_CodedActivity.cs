@@ -6,6 +6,7 @@ using System.Runtime;
 
 namespace Library_Cross_VB_Connections.Coded
 {
+    [System.ComponentModel.Browsable(false)]
     public class UseFootballTeam_Custom_Activity_CodedActivity : System.Activities.Activity
     {
         public UseFootballTeam_Custom_Activity_CodedActivity()

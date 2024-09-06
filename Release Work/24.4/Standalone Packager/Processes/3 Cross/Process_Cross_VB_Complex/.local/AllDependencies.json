@@ -329,29 +329,7 @@
           "lib/net8.0/Library_Cross_CS_Bindings_Expressions_9437072.dll": {}
         }
       },
-      "Library_Cross_VB_Complex/32.45.78": {
-        "type": "package",
-        "dependencies": {
-          "Library_Cross_VB_Complex.Library.Runtime": "32.45.78",
-          "OR_Library_Cross_CS_HomeAutomationCloud.Descriptors": "11.0.1",
-          "UiPath.DataService.Activities": "23.10.0",
-          "UiPath.GSuite.Activities": "2.7.20-alpha.6420139",
-          "UiPath.GitHub.IntegrationService.Activities": "5.1.0",
-          "UiPath.Jira.IntegrationService.Activities": "6.2.0-alpha.20230829.4287886",
-          "UiPath.MicrosoftOffice365.Activities": "2.7.10-alpha.6066203",
-          "UiPath.System.Activities": "24.10.1",
-          "UiPath.Testing.Activities": "24.10.0",
-          "UiPath.UIAutomation.Activities": "24.10.1",
-          "UiPath.WebAPI.Activities": "1.21.0"
-        },
-        "compile": {
-          "lib/net8.0/_._": {}
-        },
-        "runtime": {
-          "lib/net8.0/Library_Cross_VB_Complex.ViewModels.dll": {}
-        }
-      },
-      "Library_Cross_VB_Complex.Library.Runtime/32.45.78": {
+      "Library_Cross_VB_Complex/33.2.2": {
         "type": "package",
         "dependencies": {
           "OR_Library_Cross_CS_HomeAutomationCloud.Descriptors": "11.0.1",
@@ -370,13 +348,17 @@
         },
         "runtime": {
           "lib/net8.0/DataService.Library_Cross_VB_Complex.dll": {},
-          "lib/net8.0/Library_Cross_VB_Complex.Core.dll": {},
-          "lib/net8.0/Library_Cross_VB_Complex.dll": {},
-          "lib/net8.0/Library_Cross_VB_Complex_Expressions_17082148.dll": {},
-          "lib/net8.0/Library_Cross_VB_Complex_Expressions_20981117.dll": {},
-          "lib/net8.0/Library_Cross_VB_Complex_Expressions_2123360.dll": {},
-          "lib/net8.0/Library_Cross_VB_Complex_Expressions_22746039.dll": {},
-          "lib/net8.0/Library_Cross_VB_Complex_Expressions_6896979.dll": {},
+          "lib/net8.0/Library_Cross_VB_Complex.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Library_Cross_VB_Complex.dll": {
+            "related": ".Core.xml"
+          },
+          "lib/net8.0/Library_Cross_VB_Complex_Expressions_28656359.dll": {},
+          "lib/net8.0/Library_Cross_VB_Complex_Expressions_30195551.dll": {},
+          "lib/net8.0/Library_Cross_VB_Complex_Expressions_41719811.dll": {},
+          "lib/net8.0/Library_Cross_VB_Complex_Expressions_55634702.dll": {},
+          "lib/net8.0/Library_Cross_VB_Complex_Expressions_57605217.dll": {},
           "lib/net8.0/SwaggerPetstore.dll": {},
           "lib/net8.0/UiPath.DataService.Definition.dll": {}
         },
@@ -1128,7 +1110,7 @@
           }
         }
       },
-      "Microsoft.NETCore.Platforms/5.0.0": {
+      "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -1207,23 +1189,23 @@
           }
         }
       },
-      "Microsoft.Win32.SystemEvents/5.0.0": {
+      "Microsoft.Win32.SystemEvents/6.0.0": {
         "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "5.0.0"
-        },
         "compile": {
-          "ref/netstandard2.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll": {
+          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
             "related": ".xml"
           }
         },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
         "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll": {
+          "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1471,7 +1453,7 @@
           }
         }
       },
-      "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/debian.8-x64/native/_._": {
@@ -1480,7 +1462,7 @@
           }
         }
       },
-      "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/fedora.23-x64/native/_._": {
@@ -1489,7 +1471,7 @@
           }
         }
       },
-      "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/fedora.24-x64/native/_._": {
@@ -1549,19 +1531,19 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "dependencies": {
-          "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
+          "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
         },
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -1570,7 +1552,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/opensuse.13.2-x64/native/_._": {
@@ -1579,7 +1561,7 @@
           }
         }
       },
-      "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/opensuse.42.1-x64/native/_._": {
@@ -1597,7 +1579,7 @@
           }
         }
       },
-      "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/osx.10.10-x64/native/_._": {
@@ -1606,7 +1588,7 @@
           }
         }
       },
-      "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/rhel.7-x64/native/_._": {
@@ -1615,7 +1597,7 @@
           }
         }
       },
-      "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/ubuntu.14.04-x64/native/_._": {
@@ -1624,7 +1606,7 @@
           }
         }
       },
-      "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/ubuntu.16.04-x64/native/_._": {
@@ -1633,7 +1615,7 @@
           }
         }
       },
-      "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/ubuntu.16.10-x64/native/_._": {
@@ -1655,7 +1637,7 @@
           }
         }
       },
-      "System.Activities.ViewModels/1.0.0-20240418.6": {
+      "System.Activities.ViewModels/1.0.0-20240620.4": {
         "type": "package",
         "compile": {
           "lib/net6.0/_._": {}
@@ -1793,21 +1775,24 @@
           }
         }
       },
-      "System.Configuration.ConfigurationManager/5.0.0": {
+      "System.Configuration.ConfigurationManager/6.0.0": {
         "type": "package",
         "dependencies": {
-          "System.Security.Cryptography.ProtectedData": "5.0.0",
-          "System.Security.Permissions": "5.0.0"
+          "System.Security.Cryptography.ProtectedData": "6.0.0",
+          "System.Security.Permissions": "6.0.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {
+          "lib/net6.0/System.Configuration.ConfigurationManager.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Console/4.3.0": {
@@ -1892,27 +1877,30 @@
           }
         }
       },
-      "System.Drawing.Common/5.0.0": {
+      "System.Drawing.Common/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Win32.SystemEvents": "5.0.0"
+          "Microsoft.Win32.SystemEvents": "6.0.0"
         },
         "compile": {
-          "ref/netcoreapp3.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.0/System.Drawing.Common.dll": {
+          "lib/net6.0/System.Drawing.Common.dll": {
             "related": ".xml"
           }
         },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
         "runtimeTargets": {
-          "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll": {
+          "runtimes/unix/lib/net6.0/System.Drawing.Common.dll": {
             "assetType": "runtime",
             "rid": "unix"
           },
-          "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll": {
+          "runtimes/win/lib/net6.0/System.Drawing.Common.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -2271,10 +2259,10 @@
           }
         }
       },
-      "System.Net.Http/4.3.4": {
+      "System.Net.Http/4.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.1",
+          "Microsoft.NETCore.Platforms": "1.1.0",
           "System.Collections": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
           "System.Diagnostics.DiagnosticSource": "4.3.0",
@@ -2299,10 +2287,12 @@
           "System.Threading.Tasks": "4.3.0",
           "runtime.native.System": "4.3.0",
           "runtime.native.System.Net.Http": "4.3.0",
-          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
+          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/_._": {
+            "related": ".xml"
+          }
         },
         "runtimeTargets": {
           "runtimes/unix/lib/netstandard1.6/System.Net.Http.dll": {
@@ -2514,23 +2504,26 @@
           }
         }
       },
-      "System.Runtime.Caching/5.0.0": {
+      "System.Runtime.Caching/6.0.0": {
         "type": "package",
         "dependencies": {
-          "System.Configuration.ConfigurationManager": "5.0.0"
+          "System.Configuration.ConfigurationManager": "6.0.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/System.Runtime.Caching.dll": {
+          "lib/net6.0/System.Runtime.Caching.dll": {
             "related": ".xml"
           }
         },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll": {
+          "runtimes/win/lib/net6.0/System.Runtime.Caching.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -2637,24 +2630,23 @@
           "lib/netstandard1.3/System.Runtime.Numerics.dll": {}
         }
       },
-      "System.Security.AccessControl/5.0.0": {
+      "System.Security.AccessControl/6.0.0": {
         "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "5.0.0",
-          "System.Security.Principal.Windows": "5.0.0"
-        },
         "compile": {
-          "ref/netstandard2.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/System.Security.AccessControl.dll": {
+          "lib/net6.0/System.Security.AccessControl.dll": {
             "related": ".xml"
           }
         },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
         "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll": {
+          "runtimes/win/lib/net6.0/System.Security.AccessControl.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -2935,21 +2927,24 @@
           }
         }
       },
-      "System.Security.Permissions/5.0.0": {
+      "System.Security.Permissions/6.0.0": {
         "type": "package",
         "dependencies": {
-          "System.Security.AccessControl": "5.0.0",
-          "System.Windows.Extensions": "5.0.0"
+          "System.Security.AccessControl": "6.0.0",
+          "System.Windows.Extensions": "6.0.0"
         },
         "compile": {
-          "ref/net5.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Security.Permissions.dll": {
+          "lib/net6.0/System.Security.Permissions.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Security.Principal/4.3.0": {
@@ -3186,23 +3181,23 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
-      "System.Windows.Extensions/5.0.0": {
+      "System.Windows.Extensions/6.0.0": {
         "type": "package",
         "dependencies": {
-          "System.Drawing.Common": "5.0.0"
+          "System.Drawing.Common": "6.0.0"
         },
         "compile": {
-          "ref/netcoreapp3.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.0/System.Windows.Extensions.dll": {
+          "lib/net6.0/System.Windows.Extensions.dll": {
             "related": ".xml"
           }
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll": {
+          "runtimes/win/lib/net6.0/System.Windows.Extensions.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -3261,7 +3256,7 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "UiPath/24.10.93.21985": {
+      "UiPath/24.10.94.62718": {
         "type": "package",
         "compile": {
           "lib/net6.0/_._": {}
@@ -3356,18 +3351,17 @@
           }
         }
       },
-      "UiPath.ConnectionClient/2.0.4": {
+      "UiPath.ConnectionClient/2.0.7": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "11.0.2",
-          "System.Net.Http": "4.3.4",
-          "System.Runtime.Caching": "5.0.0"
+          "Newtonsoft.Json": "13.0.3",
+          "System.Runtime.Caching": "6.0.0"
         },
         "compile": {
-          "lib/net5.0/_._": {}
+          "lib/net6.0/_._": {}
         },
         "runtime": {
-          "lib/net5.0/ConnectionClient.dll": {}
+          "lib/net6.0/ConnectionClient.dll": {}
         }
       },
       "UiPath.DataService.Activities/23.10.0": {
@@ -3400,7 +3394,7 @@
           }
         }
       },
-      "UiPath.Driver.Portable/24.10.93.21985": {
+      "UiPath.Driver.Portable/24.10.94.62718": {
         "type": "package",
         "compile": {
           "lib/net6.0/_._": {}
@@ -3610,7 +3604,7 @@
           }
         }
       },
-      "UiPath.IntegrationService.Activities/1.5.0-alpha.20240422.4": {
+      "UiPath.IntegrationService.Activities/1.7.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
@@ -3618,10 +3612,10 @@
           "Microsoft.Extensions.Http.Polly": "7.0.5",
           "Nito.AsyncEx.Coordination": "5.1.2",
           "Polly.Contrib.WaitAndRetry": "1.1.1",
-          "System.Activities.ViewModels": "1.0.0-20231115.3",
-          "UiPath.ConnectionClient": "1.4.5",
-          "UiPath.Platform": "24.2.0",
-          "UiPath.Telemetry.Client": "2.0.41"
+          "System.Activities.ViewModels": "1.0.0-20240620.4",
+          "UiPath.ConnectionClient": "2.0.7",
+          "UiPath.Platform": "24.10.3",
+          "UiPath.Telemetry.Client": "2.1.3"
         },
         "compile": {
           "lib/net6.0/_._": {}
@@ -3629,6 +3623,44 @@
         "runtime": {
           "lib/net6.0/UiPath.IntegrationService.Activities.Runtime.dll": {},
           "lib/net6.0/UiPath.IntegrationService.Activities.dll": {}
+        },
+        "resource": {
+          "lib/net6.0/de/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0/es-MX/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0/es/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0/fr/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0/ja/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0/ko/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0/pt-BR/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0/pt/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0/ru/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0/tr/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0/zh-CN/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0/zh-TW/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "zh-TW"
+          }
         }
       },
       "UiPath.IntegrationService.Infrastructure/2.0.5": {
@@ -3848,7 +3880,7 @@
           "lib/netstandard2.0/UiPath.OpenTelemetry.Contracts.dll": {}
         }
       },
-      "UiPath.Platform/24.10.2": {
+      "UiPath.Platform/24.10.3": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
@@ -3902,7 +3934,7 @@
           }
         }
       },
-      "UiPath.System.Activities/24.10.1": {
+      "UiPath.System.Activities/24.10.4": {
         "type": "package",
         "dependencies": {
           "CsvHelper": "16.0.0",
@@ -3917,8 +3949,8 @@
           "SharpZipLib": "1.3.3",
           "System.Activities.ViewModels": "1.0.0-20240418.6",
           "UiPath.CodedWorkflows": "24.10.0",
-          "UiPath.Platform": "24.10.2",
-          "UiPath.System.Activities.Runtime": "24.10.1",
+          "UiPath.Platform": "24.10.3",
+          "UiPath.System.Activities.Runtime": "24.10.4",
           "UiPath.Telemetry.Client": "2.1.3"
         },
         "compile": {
@@ -3928,10 +3960,10 @@
           "lib/net6.0/UiPath.System.Activities.ViewModels.dll": {}
         }
       },
-      "UiPath.System.Activities.Runtime/24.10.1": {
+      "UiPath.System.Activities.Runtime/24.10.4": {
         "type": "package",
         "dependencies": {
-          "UiPath.System.Activities.Runtime.Portable": "24.10.1"
+          "UiPath.System.Activities.Runtime.Portable": "24.10.4"
         },
         "compile": {
           "lib/net6.0/_._": {}
@@ -3940,7 +3972,7 @@
           "lib/net6.0/UiPath.System.Activities.Package.Runtime.dll": {}
         }
       },
-      "UiPath.System.Activities.Runtime.Portable/24.10.1": {
+      "UiPath.System.Activities.Runtime.Portable/24.10.4": {
         "type": "package",
         "dependencies": {
           "CsvHelper": "16.0.0",
@@ -3954,7 +3986,7 @@
           "Microsoft.VisualBasic": "10.3.0",
           "SharpZipLib": "1.3.3",
           "UiPath.CodedWorkflows": "24.10.0",
-          "UiPath.Platform": "24.10.2",
+          "UiPath.Platform": "24.10.3",
           "UiPath.Telemetry.Client": "2.1.3"
         },
         "compile": {
@@ -4026,7 +4058,7 @@
           "lib/netstandard2.0/TelemetryClient.dll": {}
         }
       },
-      "UiPath.Testing.Activities/24.10.0": {
+      "UiPath.Testing.Activities/24.10.1": {
         "type": "package",
         "dependencies": {
           "AutoMapper": "9.0.0",
@@ -4145,12 +4177,12 @@
           }
         }
       },
-      "UiPath.UIAutomation.Activities/24.10.1": {
+      "UiPath.UIAutomation.Activities/24.10.3": {
         "type": "package",
         "dependencies": {
           "System.Activities.ViewModels": "1.0.0-20240418.6",
-          "UiPath": "[24.10.93.21985]",
-          "UiPath.UIAutomation.Activities.Runtime.Portable": "[24.10.1]"
+          "UiPath": "[24.10.94.62718]",
+          "UiPath.UIAutomation.Activities.Runtime.Portable": "[24.10.3]"
         },
         "compile": {
           "lib/net6.0/_._": {}
@@ -4194,7 +4226,7 @@
           }
         }
       },
-      "UiPath.UIAutomation.Activities.Runtime.Design/24.10.1": {
+      "UiPath.UIAutomation.Activities.Runtime.Design/24.10.3": {
         "type": "package",
         "compile": {
           "lib/net6.0/_._": {}
@@ -4203,16 +4235,16 @@
           "lib/net6.0/UiPath.UIAutomation.Activities.Runtime.Design.dll": {}
         }
       },
-      "UiPath.UIAutomation.Activities.Runtime.Portable/24.10.1": {
+      "UiPath.UIAutomation.Activities.Runtime.Portable/24.10.3": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
           "System.IO.Abstractions": "3.0.10",
           "UiPath.Activities.RuntimeGovernance": "1.1.6",
           "UiPath.CodedWorkflows": "24.10.0",
-          "UiPath.Driver.Portable": "[24.10.93.21985]",
-          "UiPath.Platform": "24.10.0",
-          "UiPath.UIAutomation.Activities.Runtime.Design": "[24.10.1]"
+          "UiPath.Driver.Portable": "[24.10.94.62718]",
+          "UiPath.Platform": "24.10.3",
+          "UiPath.UIAutomation.Activities.Runtime.Design": "[24.10.3]"
         },
         "compile": {
           "lib/net6.0/_._": {
@@ -4727,29 +4759,7 @@
           "lib/net8.0/Library_Cross_CS_Bindings_Expressions_9437072.dll": {}
         }
       },
-      "Library_Cross_VB_Complex/32.45.78": {
-        "type": "package",
-        "dependencies": {
-          "Library_Cross_VB_Complex.Library.Runtime": "32.45.78",
-          "OR_Library_Cross_CS_HomeAutomationCloud.Descriptors": "11.0.1",
-          "UiPath.DataService.Activities": "23.10.0",
-          "UiPath.GSuite.Activities": "2.7.20-alpha.6420139",
-          "UiPath.GitHub.IntegrationService.Activities": "5.1.0",
-          "UiPath.Jira.IntegrationService.Activities": "6.2.0-alpha.20230829.4287886",
-          "UiPath.MicrosoftOffice365.Activities": "2.7.10-alpha.6066203",
-          "UiPath.System.Activities": "24.10.1",
-          "UiPath.Testing.Activities": "24.10.0",
-          "UiPath.UIAutomation.Activities": "24.10.1",
-          "UiPath.WebAPI.Activities": "1.21.0"
-        },
-        "compile": {
-          "lib/net8.0/_._": {}
-        },
-        "runtime": {
-          "lib/net8.0/Library_Cross_VB_Complex.ViewModels.dll": {}
-        }
-      },
-      "Library_Cross_VB_Complex.Library.Runtime/32.45.78": {
+      "Library_Cross_VB_Complex/33.2.2": {
         "type": "package",
         "dependencies": {
           "OR_Library_Cross_CS_HomeAutomationCloud.Descriptors": "11.0.1",
@@ -4768,13 +4778,17 @@
         },
         "runtime": {
           "lib/net8.0/DataService.Library_Cross_VB_Complex.dll": {},
-          "lib/net8.0/Library_Cross_VB_Complex.Core.dll": {},
-          "lib/net8.0/Library_Cross_VB_Complex.dll": {},
-          "lib/net8.0/Library_Cross_VB_Complex_Expressions_17082148.dll": {},
-          "lib/net8.0/Library_Cross_VB_Complex_Expressions_20981117.dll": {},
-          "lib/net8.0/Library_Cross_VB_Complex_Expressions_2123360.dll": {},
-          "lib/net8.0/Library_Cross_VB_Complex_Expressions_22746039.dll": {},
-          "lib/net8.0/Library_Cross_VB_Complex_Expressions_6896979.dll": {},
+          "lib/net8.0/Library_Cross_VB_Complex.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Library_Cross_VB_Complex.dll": {
+            "related": ".Core.xml"
+          },
+          "lib/net8.0/Library_Cross_VB_Complex_Expressions_28656359.dll": {},
+          "lib/net8.0/Library_Cross_VB_Complex_Expressions_30195551.dll": {},
+          "lib/net8.0/Library_Cross_VB_Complex_Expressions_41719811.dll": {},
+          "lib/net8.0/Library_Cross_VB_Complex_Expressions_55634702.dll": {},
+          "lib/net8.0/Library_Cross_VB_Complex_Expressions_57605217.dll": {},
           "lib/net8.0/SwaggerPetstore.dll": {},
           "lib/net8.0/UiPath.DataService.Definition.dll": {}
         },
@@ -5526,7 +5540,7 @@
           }
         }
       },
-      "Microsoft.NETCore.Platforms/5.0.0": {
+      "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -5600,20 +5614,20 @@
           }
         }
       },
-      "Microsoft.Win32.SystemEvents/5.0.0": {
+      "Microsoft.Win32.SystemEvents/6.0.0": {
         "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "5.0.0"
-        },
         "compile": {
-          "ref/netstandard2.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll": {
+          "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "MimeKit/2.10.0": {
@@ -6017,13 +6031,13 @@
           "lib/netstandard1.3/System.Threading.Timer.dll": {}
         }
       },
-      "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package"
       },
-      "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package"
       },
-      "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package"
       },
       "runtime.native.System/4.3.0": {
@@ -6077,19 +6091,19 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "dependencies": {
-          "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2",
-          "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
+          "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0",
+          "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
         },
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -6098,28 +6112,28 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package"
       },
-      "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package"
       },
       "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple/4.3.0": {
         "type": "package"
       },
-      "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package"
       },
-      "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package"
       },
-      "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package"
       },
-      "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package"
       },
-      "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
+      "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package"
       },
       "runtime.win.Microsoft.Win32.Primitives/4.3.0": {
@@ -6265,7 +6279,7 @@
           }
         }
       },
-      "System.Activities.ViewModels/1.0.0-20240418.6": {
+      "System.Activities.ViewModels/1.0.0-20240620.4": {
         "type": "package",
         "compile": {
           "lib/net6.0/_._": {}
@@ -6404,21 +6418,24 @@
           }
         }
       },
-      "System.Configuration.ConfigurationManager/5.0.0": {
+      "System.Configuration.ConfigurationManager/6.0.0": {
         "type": "package",
         "dependencies": {
-          "System.Security.Cryptography.ProtectedData": "5.0.0",
-          "System.Security.Permissions": "5.0.0"
+          "System.Security.Cryptography.ProtectedData": "6.0.0",
+          "System.Security.Permissions": "6.0.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {
+          "lib/net6.0/System.Configuration.ConfigurationManager.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Console/4.3.0": {
@@ -6507,20 +6524,23 @@
           }
         }
       },
-      "System.Drawing.Common/5.0.0": {
+      "System.Drawing.Common/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Win32.SystemEvents": "5.0.0"
+          "Microsoft.Win32.SystemEvents": "6.0.0"
         },
         "compile": {
-          "ref/netcoreapp3.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll": {
+          "runtimes/win/lib/net6.0/System.Drawing.Common.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Globalization/4.3.0": {
@@ -6860,10 +6880,10 @@
           }
         }
       },
-      "System.Net.Http/4.3.4": {
+      "System.Net.Http/4.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.1",
+          "Microsoft.NETCore.Platforms": "1.1.0",
           "System.Collections": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
           "System.Diagnostics.DiagnosticSource": "4.3.0",
@@ -6888,10 +6908,12 @@
           "System.Threading.Tasks": "4.3.0",
           "runtime.native.System": "4.3.0",
           "runtime.native.System.Net.Http": "4.3.0",
-          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.2"
+          "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/_._": {
+            "related": ".xml"
+          }
         },
         "runtime": {
           "runtimes/win/lib/netstandard1.3/System.Net.Http.dll": {}
@@ -7140,20 +7162,23 @@
           }
         }
       },
-      "System.Runtime.Caching/5.0.0": {
+      "System.Runtime.Caching/6.0.0": {
         "type": "package",
         "dependencies": {
-          "System.Configuration.ConfigurationManager": "5.0.0"
+          "System.Configuration.ConfigurationManager": "6.0.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll": {
+          "runtimes/win/lib/net6.0/System.Runtime.Caching.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {
@@ -7250,21 +7275,20 @@
           "lib/netstandard1.3/System.Runtime.Numerics.dll": {}
         }
       },
-      "System.Security.AccessControl/5.0.0": {
+      "System.Security.AccessControl/6.0.0": {
         "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "5.0.0",
-          "System.Security.Principal.Windows": "5.0.0"
-        },
         "compile": {
-          "ref/netstandard2.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll": {
+          "runtimes/win/lib/net6.0/System.Security.AccessControl.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Security.Claims/4.3.0": {
@@ -7486,21 +7510,24 @@
           "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll": {}
         }
       },
-      "System.Security.Permissions/5.0.0": {
+      "System.Security.Permissions/6.0.0": {
         "type": "package",
         "dependencies": {
-          "System.Security.AccessControl": "5.0.0",
-          "System.Windows.Extensions": "5.0.0"
+          "System.Security.AccessControl": "6.0.0",
+          "System.Windows.Extensions": "6.0.0"
         },
         "compile": {
-          "ref/net5.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/System.Security.Permissions.dll": {
+          "lib/net6.0/System.Security.Permissions.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Security.Principal/4.3.0": {
@@ -7736,18 +7763,18 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
-      "System.Windows.Extensions/5.0.0": {
+      "System.Windows.Extensions/6.0.0": {
         "type": "package",
         "dependencies": {
-          "System.Drawing.Common": "5.0.0"
+          "System.Drawing.Common": "6.0.0"
         },
         "compile": {
-          "ref/netcoreapp3.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll": {
+          "runtimes/win/lib/net6.0/System.Windows.Extensions.dll": {
             "related": ".xml"
           }
         }
@@ -7805,7 +7832,7 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "UiPath/24.10.93.21985": {
+      "UiPath/24.10.94.62718": {
         "type": "package",
         "compile": {
           "lib/net6.0/_._": {}
@@ -7900,18 +7927,17 @@
           }
         }
       },
-      "UiPath.ConnectionClient/2.0.4": {
+      "UiPath.ConnectionClient/2.0.7": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "11.0.2",
-          "System.Net.Http": "4.3.4",
-          "System.Runtime.Caching": "5.0.0"
+          "Newtonsoft.Json": "13.0.3",
+          "System.Runtime.Caching": "6.0.0"
         },
         "compile": {
-          "lib/net5.0/_._": {}
+          "lib/net6.0/_._": {}
         },
         "runtime": {
-          "lib/net5.0/ConnectionClient.dll": {}
+          "lib/net6.0/ConnectionClient.dll": {}
         }
       },
       "UiPath.DataService.Activities/23.10.0": {
@@ -7944,7 +7970,7 @@
           }
         }
       },
-      "UiPath.Driver.Portable/24.10.93.21985": {
+      "UiPath.Driver.Portable/24.10.94.62718": {
         "type": "package",
         "compile": {
           "lib/net6.0/_._": {}
@@ -8154,7 +8180,7 @@
           }
         }
       },
-      "UiPath.IntegrationService.Activities/1.5.0-alpha.20240422.4": {
+      "UiPath.IntegrationService.Activities/1.7.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
@@ -8162,10 +8188,10 @@
           "Microsoft.Extensions.Http.Polly": "7.0.5",
           "Nito.AsyncEx.Coordination": "5.1.2",
           "Polly.Contrib.WaitAndRetry": "1.1.1",
-          "System.Activities.ViewModels": "1.0.0-20231115.3",
-          "UiPath.ConnectionClient": "1.4.5",
-          "UiPath.Platform": "24.2.0",
-          "UiPath.Telemetry.Client": "2.0.41"
+          "System.Activities.ViewModels": "1.0.0-20240620.4",
+          "UiPath.ConnectionClient": "2.0.7",
+          "UiPath.Platform": "24.10.3",
+          "UiPath.Telemetry.Client": "2.1.3"
         },
         "compile": {
           "lib/net6.0/_._": {}
@@ -8173,6 +8199,44 @@
         "runtime": {
           "lib/net6.0/UiPath.IntegrationService.Activities.Runtime.dll": {},
           "lib/net6.0/UiPath.IntegrationService.Activities.dll": {}
+        },
+        "resource": {
+          "lib/net6.0/de/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0/es-MX/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0/es/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0/fr/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0/ja/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0/ko/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0/pt-BR/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0/pt/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0/ru/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0/tr/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0/zh-CN/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0/zh-TW/UiPath.IntegrationService.Activities.Runtime.resources.dll": {
+            "locale": "zh-TW"
+          }
         }
       },
       "UiPath.IntegrationService.Infrastructure/2.0.5": {
@@ -8392,7 +8456,7 @@
           "lib/netstandard2.0/UiPath.OpenTelemetry.Contracts.dll": {}
         }
       },
-      "UiPath.Platform/24.10.2": {
+      "UiPath.Platform/24.10.3": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
@@ -8446,7 +8510,7 @@
           }
         }
       },
-      "UiPath.System.Activities/24.10.1": {
+      "UiPath.System.Activities/24.10.4": {
         "type": "package",
         "dependencies": {
           "CsvHelper": "16.0.0",
@@ -8461,8 +8525,8 @@
           "SharpZipLib": "1.3.3",
           "System.Activities.ViewModels": "1.0.0-20240418.6",
           "UiPath.CodedWorkflows": "24.10.0",
-          "UiPath.Platform": "24.10.2",
-          "UiPath.System.Activities.Runtime": "24.10.1",
+          "UiPath.Platform": "24.10.3",
+          "UiPath.System.Activities.Runtime": "24.10.4",
           "UiPath.Telemetry.Client": "2.1.3"
         },
         "compile": {
@@ -8472,10 +8536,10 @@
           "lib/net6.0/UiPath.System.Activities.ViewModels.dll": {}
         }
       },
-      "UiPath.System.Activities.Runtime/24.10.1": {
+      "UiPath.System.Activities.Runtime/24.10.4": {
         "type": "package",
         "dependencies": {
-          "UiPath.System.Activities.Runtime.Portable": "24.10.1"
+          "UiPath.System.Activities.Runtime.Portable": "24.10.4"
         },
         "compile": {
           "lib/net6.0/_._": {}
@@ -8484,7 +8548,7 @@
           "lib/net6.0/UiPath.System.Activities.Package.Runtime.dll": {}
         }
       },
-      "UiPath.System.Activities.Runtime.Portable/24.10.1": {
+      "UiPath.System.Activities.Runtime.Portable/24.10.4": {
         "type": "package",
         "dependencies": {
           "CsvHelper": "16.0.0",
@@ -8498,7 +8562,7 @@
           "Microsoft.VisualBasic": "10.3.0",
           "SharpZipLib": "1.3.3",
           "UiPath.CodedWorkflows": "24.10.0",
-          "UiPath.Platform": "24.10.2",
+          "UiPath.Platform": "24.10.3",
           "UiPath.Telemetry.Client": "2.1.3"
         },
         "compile": {
@@ -8570,7 +8634,7 @@
           "lib/netstandard2.0/TelemetryClient.dll": {}
         }
       },
-      "UiPath.Testing.Activities/24.10.0": {
+      "UiPath.Testing.Activities/24.10.1": {
         "type": "package",
         "dependencies": {
           "AutoMapper": "9.0.0",
@@ -8689,12 +8753,12 @@
           }
         }
       },
-      "UiPath.UIAutomation.Activities/24.10.1": {
+      "UiPath.UIAutomation.Activities/24.10.3": {
         "type": "package",
         "dependencies": {
           "System.Activities.ViewModels": "1.0.0-20240418.6",
-          "UiPath": "[24.10.93.21985]",
-          "UiPath.UIAutomation.Activities.Runtime.Portable": "[24.10.1]"
+          "UiPath": "[24.10.94.62718]",
+          "UiPath.UIAutomation.Activities.Runtime.Portable": "[24.10.3]"
         },
         "compile": {
           "lib/net6.0/_._": {}
@@ -8738,7 +8802,7 @@
           }
         }
       },
-      "UiPath.UIAutomation.Activities.Runtime.Design/24.10.1": {
+      "UiPath.UIAutomation.Activities.Runtime.Design/24.10.3": {
         "type": "package",
         "compile": {
           "lib/net6.0/_._": {}
@@ -8747,16 +8811,16 @@
           "lib/net6.0/UiPath.UIAutomation.Activities.Runtime.Design.dll": {}
         }
       },
-      "UiPath.UIAutomation.Activities.Runtime.Portable/24.10.1": {
+      "UiPath.UIAutomation.Activities.Runtime.Portable/24.10.3": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
           "System.IO.Abstractions": "3.0.10",
           "UiPath.Activities.RuntimeGovernance": "1.1.6",
           "UiPath.CodedWorkflows": "24.10.0",
-          "UiPath.Driver.Portable": "[24.10.93.21985]",
-          "UiPath.Platform": "24.10.0",
-          "UiPath.UIAutomation.Activities.Runtime.Design": "[24.10.1]"
+          "UiPath.Driver.Portable": "[24.10.94.62718]",
+          "UiPath.Platform": "24.10.3",
+          "UiPath.UIAutomation.Activities.Runtime.Design": "[24.10.3]"
         },
         "compile": {
           "lib/net6.0/_._": {
@@ -9398,13 +9462,12 @@
         "library_cross_cs_bindings.nuspec"
       ]
     },
-    "Library_Cross_VB_Complex/32.45.78": {
-      "sha512": "DxhX2xaoMQDEzS0wDZmkY0txv+BlA1djtONM9mP5c0SUhTc29Jftwa79oitOnw2SPHdJybN2VZPvk/hf8+UtjA==",
+    "Library_Cross_VB_Complex/33.2.2": {
+      "sha512": "Jd4KCHAkiQnXBVhXDOcG7eb6O6kJqPsjYyma9fUVvPpEBq+OtMao3Y9F0hIS0eBr/AX5KJ/4Z0bk7MZxBFb7Fw==",
       "type": "package",
-      "path": "library_cross_vb_complex/32.45.78",
+      "path": "library_cross_vb_complex/33.2.2",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "content/.codedworkflows/ConnectionsFactory.cs",
         "content/.codedworkflows/ConnectionsManager.cs",
         "content/.entities/EntitiesStore.json",
@@ -9422,14 +9485,11 @@
         "content/Entities/Entities_CustomActivity.xaml",
         "content/Entities/Entities_CustomActivity.xaml.json",
         "content/Library_Cross_VB_Complex.Connections_MultipleConnections_CustomActivity.txt",
-        "content/Library_Cross_VB_Complex.Connections_MultipleConnections_CustomActivity_VM.txt",
         "content/Library_Cross_VB_Complex.Core.pdb",
         "content/Library_Cross_VB_Complex.Entities_Entities_CustomActivity.txt",
         "content/Library_Cross_VB_Complex.UIA_OR_GoogleChrome_CustomActivity.txt",
         "content/Library_Cross_VB_Complex.Webservice_Webservice_Pet_CustomActivity.txt",
         "content/Library_Cross_VB_Complex_Aggregator_CustomActivity.txt",
-        "content/Library_Cross_VB_Complex_Aggregator_CustomActivity_VM.txt",
-        "content/Runtime.Mapping.json",
         "content/TestCase.xaml.json",
         "content/UIA/OR_GoogleChrome_CustomActivity.xaml",
         "content/UIA/OR_GoogleChrome_CustomActivity.xaml.json",
@@ -9438,56 +9498,21 @@
         "content/bindings.json",
         "content/bindings_v2.json",
         "content/project.json",
-        "lib/net8.0/Library_Cross_VB_Complex.ViewModels.dll",
-        "library_cross_vb_complex.32.45.78.nupkg.sha512",
-        "library_cross_vb_complex.nuspec"
-      ]
-    },
-    "Library_Cross_VB_Complex.Library.Runtime/32.45.78": {
-      "sha512": "A240uCXiIVnm0nT4lpzjA24xr+OtGvvL+tOX5SCsaLOqOYOX7BiSgfmxaWyNk8wGdPh+GVrMww3CxBnBOiBU0Q==",
-      "type": "package",
-      "path": "library_cross_vb_complex.library.runtime/32.45.78",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "content/.codedworkflows/ConnectionsFactory.cs",
-        "content/.codedworkflows/ConnectionsManager.cs",
-        "content/.entities/EntitiesStore.json",
-        "content/.settings/Release/settings-5190454b.json",
-        "content/.settings/Release/settings-82ca306a.json",
-        "content/.settings/Release/settings-a1b2dac1.json",
-        "content/Connections/MultipleConnections_CustomActivity.xaml",
-        "content/Connections/MultipleConnections_CustomActivity.xaml.json",
-        "content/Entities/Entities_CustomActivity.xaml",
-        "content/Entities/Entities_CustomActivity.xaml.json",
-        "content/Library_Cross_VB_Complex.Connections_MultipleConnections_CustomActivity.txt",
-        "content/Library_Cross_VB_Complex.Connections_MultipleConnections_CustomActivity_VM.txt",
-        "content/Library_Cross_VB_Complex.Core.pdb",
-        "content/Library_Cross_VB_Complex.Entities_Entities_CustomActivity.txt",
-        "content/Library_Cross_VB_Complex.UIA_OR_GoogleChrome_CustomActivity.txt",
-        "content/Library_Cross_VB_Complex.Webservice_Webservice_Pet_CustomActivity.txt",
-        "content/Library_Cross_VB_Complex_Aggregator_CustomActivity.txt",
-        "content/Library_Cross_VB_Complex_Aggregator_CustomActivity_VM.txt",
-        "content/UIA/OR_GoogleChrome_CustomActivity.xaml",
-        "content/UIA/OR_GoogleChrome_CustomActivity.xaml.json",
-        "content/Webservice/Webservice_Pet_CustomActivity.xaml",
-        "content/Webservice/Webservice_Pet_CustomActivity.xaml.json",
-        "content/bindings.json",
-        "content/bindings_v2.json",
         "contentFiles/any/any/.objects/.metadata",
         "contentFiles/any/any/.objects/.type",
         "lib/net8.0/DataService.Library_Cross_VB_Complex.dll",
         "lib/net8.0/Library_Cross_VB_Complex.Core.dll",
+        "lib/net8.0/Library_Cross_VB_Complex.Core.xml",
         "lib/net8.0/Library_Cross_VB_Complex.dll",
-        "lib/net8.0/Library_Cross_VB_Complex_Expressions_17082148.dll",
-        "lib/net8.0/Library_Cross_VB_Complex_Expressions_20981117.dll",
-        "lib/net8.0/Library_Cross_VB_Complex_Expressions_2123360.dll",
-        "lib/net8.0/Library_Cross_VB_Complex_Expressions_22746039.dll",
-        "lib/net8.0/Library_Cross_VB_Complex_Expressions_6896979.dll",
+        "lib/net8.0/Library_Cross_VB_Complex_Expressions_28656359.dll",
+        "lib/net8.0/Library_Cross_VB_Complex_Expressions_30195551.dll",
+        "lib/net8.0/Library_Cross_VB_Complex_Expressions_41719811.dll",
+        "lib/net8.0/Library_Cross_VB_Complex_Expressions_55634702.dll",
+        "lib/net8.0/Library_Cross_VB_Complex_Expressions_57605217.dll",
         "lib/net8.0/SwaggerPetstore.dll",
         "lib/net8.0/UiPath.DataService.Definition.dll",
-        "library_cross_vb_complex.library.runtime.32.45.78.nupkg.sha512",
-        "library_cross_vb_complex.library.runtime.nuspec"
+        "library_cross_vb_complex.33.2.2.nupkg.sha512",
+        "library_cross_vb_complex.nuspec"
       ]
     },
     "Library_Cross_VB_CustomViewModels/1.0.0": {
@@ -10655,22 +10680,19 @@
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
-    "Microsoft.NETCore.Platforms/5.0.0": {
-      "sha512": "VyPlqzH2wavqquTcYpkIIAQ6WdenuKoFN0BdYBbCWsclXacSOHNQn66Gt4z5NBqEYW0FAPm5rlvki9ZiCij5xQ==",
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
-      "path": "microsoft.netcore.platforms/5.0.0",
+      "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
-        "microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+        "microsoft.netcore.platforms.1.1.0.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
-        "runtime.json",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "runtime.json"
       ]
     },
     "Microsoft.NETCore.Targets/1.1.0": {
@@ -10843,32 +10865,33 @@
         "version.txt"
       ]
     },
-    "Microsoft.Win32.SystemEvents/5.0.0": {
-      "sha512": "Bh6blKG8VAKvXiLe2L+sEsn62nc1Ij34MrNxepD2OCrS5cpCwQa9MeLyhVQPQ/R4Wlzwuy6wMK8hLb11QPDRsQ==",
+    "Microsoft.Win32.SystemEvents/6.0.0": {
+      "sha512": "hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A==",
       "type": "package",
-      "path": "microsoft.win32.systemevents/5.0.0",
+      "path": "microsoft.win32.systemevents/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/Microsoft.Win32.SystemEvents.targets",
+        "buildTransitive/netcoreapp3.1/_._",
         "lib/net461/Microsoft.Win32.SystemEvents.dll",
         "lib/net461/Microsoft.Win32.SystemEvents.xml",
+        "lib/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net6.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll",
+        "lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.xml",
         "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
         "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
-        "microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+        "microsoft.win32.systemevents.6.0.0.nupkg.sha512",
         "microsoft.win32.systemevents.nuspec",
-        "ref/net461/Microsoft.Win32.SystemEvents.dll",
-        "ref/net461/Microsoft.Win32.SystemEvents.xml",
-        "ref/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
-        "ref/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
-        "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.dll",
-        "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.xml",
-        "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll",
-        "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.xml",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.xml",
+        "useSharedDesignerContext.txt"
       ]
     },
     "MimeKit/2.10.0": {
@@ -11626,44 +11649,44 @@
         "runtimes/aot/lib/netcore50/_._"
       ]
     },
-    "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
-      "sha512": "7VSGO0URRKoMEAq0Sc9cRz8mb6zbyx/BZDEWhgPdzzpmFhkam3fJ1DAGWFXBI4nGlma+uPKpfuMQP5LXRnOH5g==",
+    "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "sha512": "HdSSp5MnJSsg08KMfZThpuLPJpPwE5hBXvHwoKWosyHHfe8Mh5WKT0ylEOf6yNzX6Ngjxe4Whkafh5q7Ymac4Q==",
       "type": "package",
-      "path": "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "path": "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+        "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/debian.8-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
-    "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
-      "sha512": "0oAaTAm6e2oVH+/Zttt0cuhGaePQYKII1dY8iaqP7CvOpVKgLybKRFvQjXR2LtxXOXTVPNv14j0ot8uV+HrUmw==",
+    "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "sha512": "+yH1a49wJMy8Zt4yx5RhJrxO/DBDByAiCzNwiETI+1S4mPdCu0OY4djdciC7Vssk0l22wQaDLrXxXkp+3+7bVA==",
       "type": "package",
-      "path": "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "path": "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+        "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/fedora.23-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
-    "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
-      "sha512": "G24ibsCNi5Kbz0oXWynBoRgtGvsw5ZSVEWjv13/KiCAM8C6wz9zzcCniMeQFIkJ2tasjo2kXlvlBZhplL51kGg==",
+    "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "sha512": "c3YNH1GQJbfIPJeCnr4avseugSqPrxwIqzthYyZDN6EuOyNOzq+y2KSUfRcXauya1sF4foESTgwM5e1A8arAKw==",
       "type": "package",
-      "path": "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "path": "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+        "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/fedora.24-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
@@ -11724,44 +11747,44 @@
         "runtime.native.system.security.cryptography.apple.nuspec"
       ]
     },
-    "runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
-      "sha512": "QR1OwtwehHxSeQvZKXe+iSd+d3XZNkEcuWMFYa2i0aG1l+lR739HPicKMlTbJst3spmeekDVBUS7SeS26s4U/g==",
+    "runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "sha512": "NS1U+700m4KFRHR5o4vo9DSlTmlCKu/u7dtE5sUHVIPB+xpXxYQvgBgA6wEIeCz6Yfn0Z52/72WYsToCEPJnrw==",
       "type": "package",
-      "path": "runtime.native.system.security.cryptography.openssl/4.3.2",
+      "path": "runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
-        "runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+        "runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.native.system.security.cryptography.openssl.nuspec"
       ]
     },
-    "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
-      "sha512": "I+GNKGg2xCHueRd1m9PzeEW7WLbNNLznmTuEi8/vZX71HudUbx1UTwlGkiwMri7JLl8hGaIAWnA/GONhu+LOyQ==",
+    "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "sha512": "b3pthNgxxFcD+Pc0WSEoC0+md3MyhRS6aCEeenvNE3Fdw1HyJ18ZhRFVJJzIeR/O/jpxPboB805Ho0T3Ul7w8A==",
       "type": "package",
-      "path": "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "path": "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+        "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/opensuse.13.2-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
-    "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
-      "sha512": "1Z3TAq1ytS1IBRtPXJvEUZdVsfWfeNEhBkbiOCGEl9wwAfsjP2lz3ZFDx5tq8p60/EqbS0HItG5piHuB71RjoA==",
+    "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "sha512": "KeLz4HClKf+nFS7p/6Fi/CqyLXh81FpiGzcmuS8DGi9lUqSnZ6Es23/gv2O+1XVGfrbNmviF7CckBpavkBoIFQ==",
       "type": "package",
-      "path": "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "path": "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+        "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/opensuse.42.1-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
@@ -11780,72 +11803,72 @@
         "runtimes/osx.10.10-x64/native/System.Security.Cryptography.Native.Apple.dylib"
       ]
     },
-    "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
-      "sha512": "6mU/cVmmHtQiDXhnzUImxIcDL48GbTk+TsptXyJA+MIOG9LRjPoAQC/qBFB7X+UNyK86bmvGwC8t+M66wsYC8w==",
+    "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "sha512": "X7IdhILzr4ROXd8mI1BUCQMSHSQwelUlBjF1JyTKCjXaOGn2fB4EKBxQbCK2VjO3WaWIdlXZL3W6TiIVnrhX4g==",
       "type": "package",
-      "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+        "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/osx.10.10-x64/native/System.Security.Cryptography.Native.OpenSsl.dylib"
       ]
     },
-    "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
-      "sha512": "vjwG0GGcTW/PPg6KVud8F9GLWYuAV1rrw1BKAqY0oh4jcUqg15oYF1+qkGR2x2ZHM4DQnWKQ7cJgYbfncz/lYg==",
+    "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "sha512": "nyFNiCk/r+VOiIqreLix8yN+q3Wga9+SE8BCgkf+2BwEKiNx6DyvFjCgkfV743/grxv8jHJ8gUK4XEQw7yzRYg==",
       "type": "package",
-      "path": "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "path": "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+        "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/rhel.7-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
-    "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
-      "sha512": "7KMFpTkHC/zoExs+PwP8jDCWcrK9H6L7soowT80CUx3e+nxP/AFnq0AQAW5W76z2WYbLAYCRyPfwYFG6zkvQRw==",
+    "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "sha512": "ytoewC6wGorL7KoCAvRfsgoJPJbNq+64k2SqW6JcOAebWsFUvCCYgfzQMrnpvPiEl4OrblUlhF2ji+Q1+SVLrQ==",
       "type": "package",
-      "path": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "path": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+        "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/ubuntu.14.04-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
-    "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
-      "sha512": "xrlmRCnKZJLHxyyLIqkZjNXqgxnKdZxfItrPkjI+6pkRo5lHX8YvSZlWrSI5AVwLMi4HbNWP7064hcAWeZKp5w==",
+    "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "sha512": "I8bKw2I8k58Wx7fMKQJn2R8lamboCAiHfHeV/pS65ScKWMMI0+wJkLYlEKvgW1D/XvSl/221clBoR2q9QNNM7A==",
       "type": "package",
-      "path": "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "path": "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+        "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/ubuntu.16.04-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
-    "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
-      "sha512": "leXiwfiIkW7Gmn7cgnNcdtNAU70SjmKW3jxGj1iKHOvdn0zRWsgv/l2OJUO5zdGdiv2VRFnAsxxhDgMzofPdWg==",
+    "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
+      "sha512": "VB5cn/7OzUfzdnC8tqAIMQciVLiq2epm2NrAm1E9OjNRyG4lVhfR61SMcLizejzQP8R8Uf/0l5qOIbUEi+RdEg==",
       "type": "package",
-      "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.2",
+      "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
+        "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
@@ -11997,10 +12020,10 @@
         "sharpziplib.nuspec"
       ]
     },
-    "System.Activities.ViewModels/1.0.0-20240418.6": {
-      "sha512": "MU2uD1jNA5zF7HFqh8y4+qkIinAPLp0qmkEKiwXhCTmOWW2kVwblJS5Ryw4WJQl9kH0VZy4N1ynO1b2zEMh9DA==",
+    "System.Activities.ViewModels/1.0.0-20240620.4": {
+      "sha512": "FR0KkxL0gxA+BYgS4mEJBQCVa3KRMTpSd/7FniBDjpsvL4PmAoPYI/MVg9OIDlLR8lHo64aaYE5auDLwbAvgEw==",
       "type": "package",
-      "path": "system.activities.viewmodels/1.0.0-20240418.6",
+      "path": "system.activities.viewmodels/1.0.0-20240620.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -12030,7 +12053,7 @@
         "lib/net6.0/tr/System.Activities.ViewModels.resources.dll",
         "lib/net6.0/zh-CN/System.Activities.ViewModels.resources.dll",
         "lib/net6.0/zh-TW/System.Activities.ViewModels.resources.dll",
-        "system.activities.viewmodels.1.0.0-20240418.6.nupkg.sha512",
+        "system.activities.viewmodels.1.0.0-20240620.4.nupkg.sha512",
         "system.activities.viewmodels.nuspec"
       ]
     },
@@ -12369,28 +12392,29 @@
         "version.txt"
       ]
     },
-    "System.Configuration.ConfigurationManager/5.0.0": {
-      "sha512": "aM7cbfEfVNlEEOj3DsZP+2g9NRwbkyiAv2isQEzw7pnkDg9ekCU2m1cdJLM02Uq691OaCS91tooaxcEn8d0q5w==",
+    "System.Configuration.ConfigurationManager/6.0.0": {
+      "sha512": "7T+m0kDSlIPTHIkPMIu6m6tV6qsMqJpvQWW2jIc2qi7sn40qxFo0q+7mEQAhMPXZHMKnWrnv47ntGlM/ejvw3g==",
       "type": "package",
-      "path": "system.configuration.configurationmanager/5.0.0",
+      "path": "system.configuration.configurationmanager/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Configuration.ConfigurationManager.targets",
+        "buildTransitive/netcoreapp3.1/_._",
         "lib/net461/System.Configuration.ConfigurationManager.dll",
         "lib/net461/System.Configuration.ConfigurationManager.xml",
+        "lib/net6.0/System.Configuration.ConfigurationManager.dll",
+        "lib/net6.0/System.Configuration.ConfigurationManager.xml",
         "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll",
         "lib/netstandard2.0/System.Configuration.ConfigurationManager.xml",
-        "ref/net461/System.Configuration.ConfigurationManager.dll",
-        "ref/net461/System.Configuration.ConfigurationManager.xml",
-        "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll",
-        "ref/netstandard2.0/System.Configuration.ConfigurationManager.xml",
-        "system.configuration.configurationmanager.5.0.0.nupkg.sha512",
+        "runtimes/win/lib/net461/System.Configuration.ConfigurationManager.dll",
+        "runtimes/win/lib/net461/System.Configuration.ConfigurationManager.xml",
+        "system.configuration.configurationmanager.6.0.0.nupkg.sha512",
         "system.configuration.configurationmanager.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Console/4.3.0": {
@@ -12690,46 +12714,43 @@
         "system.diagnostics.tracing.nuspec"
       ]
     },
-    "System.Drawing.Common/5.0.0": {
-      "sha512": "SztFwAnpfKC8+sEKXAFxCBWhKQaEd97EiOL7oZJZP56zbqnLpmxACWA8aGseaUExciuEAUuR9dY8f7HkTRAdnw==",
+    "System.Drawing.Common/6.0.0": {
+      "sha512": "NfuoKUiP2nUWwKZN6twGqXioIe1zVD0RIj2t976A+czLHr2nY454RwwXs6JU9Htc6mwqL6Dn/nEL3dpVf2jOhg==",
       "type": "package",
-      "path": "system.drawing.common/5.0.0",
+      "path": "system.drawing.common/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Drawing.Common.targets",
+        "buildTransitive/netcoreapp3.1/_._",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net461/System.Drawing.Common.dll",
-        "lib/netcoreapp3.0/System.Drawing.Common.dll",
-        "lib/netcoreapp3.0/System.Drawing.Common.xml",
+        "lib/net461/System.Drawing.Common.xml",
+        "lib/net6.0/System.Drawing.Common.dll",
+        "lib/net6.0/System.Drawing.Common.xml",
+        "lib/netcoreapp3.1/System.Drawing.Common.dll",
+        "lib/netcoreapp3.1/System.Drawing.Common.xml",
         "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.xml",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net461/System.Drawing.Common.dll",
-        "ref/netcoreapp3.0/System.Drawing.Common.dll",
-        "ref/netcoreapp3.0/System.Drawing.Common.xml",
-        "ref/netstandard2.0/System.Drawing.Common.dll",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/unix/lib/netcoreapp2.0/System.Drawing.Common.dll",
-        "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll",
-        "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.xml",
-        "runtimes/win/lib/netcoreapp2.0/System.Drawing.Common.dll",
-        "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll",
-        "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.xml",
-        "system.drawing.common.5.0.0.nupkg.sha512",
+        "runtimes/unix/lib/net6.0/System.Drawing.Common.dll",
+        "runtimes/unix/lib/net6.0/System.Drawing.Common.xml",
+        "runtimes/unix/lib/netcoreapp3.1/System.Drawing.Common.dll",
+        "runtimes/unix/lib/netcoreapp3.1/System.Drawing.Common.xml",
+        "runtimes/win/lib/net6.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/net6.0/System.Drawing.Common.xml",
+        "runtimes/win/lib/netcoreapp3.1/System.Drawing.Common.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.Drawing.Common.xml",
+        "system.drawing.common.6.0.0.nupkg.sha512",
         "system.drawing.common.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Globalization/4.3.0": {
@@ -13508,10 +13529,10 @@
         "system.memory.data.nuspec"
       ]
     },
-    "System.Net.Http/4.3.4": {
-      "sha512": "aOa2d51SEbmM+H+Csw7yJOuNZoHkrP2XnAurye5HWYgGVVU54YZDvsLUYRv6h18X3sPnjNCANmN7ZhIPiqMcjA==",
+    "System.Net.Http/4.3.0": {
+      "sha512": "sYg+FtILtRQuYWSIAuNOELwVuVsxVyJGWQyOnlAzhV4xvhyFnON1bAzYYC+jjRW8JREM45R0R5Dgi8MTC5sEwA==",
       "type": "package",
-      "path": "system.net.http/4.3.4",
+      "path": "system.net.http/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -13533,9 +13554,49 @@
         "ref/monotouch10/_._",
         "ref/net45/_._",
         "ref/net46/System.Net.Http.dll",
+        "ref/net46/System.Net.Http.xml",
+        "ref/net46/de/System.Net.Http.xml",
+        "ref/net46/es/System.Net.Http.xml",
+        "ref/net46/fr/System.Net.Http.xml",
+        "ref/net46/it/System.Net.Http.xml",
+        "ref/net46/ja/System.Net.Http.xml",
+        "ref/net46/ko/System.Net.Http.xml",
+        "ref/net46/ru/System.Net.Http.xml",
+        "ref/net46/zh-hans/System.Net.Http.xml",
+        "ref/net46/zh-hant/System.Net.Http.xml",
         "ref/netcore50/System.Net.Http.dll",
+        "ref/netcore50/System.Net.Http.xml",
+        "ref/netcore50/de/System.Net.Http.xml",
+        "ref/netcore50/es/System.Net.Http.xml",
+        "ref/netcore50/fr/System.Net.Http.xml",
+        "ref/netcore50/it/System.Net.Http.xml",
+        "ref/netcore50/ja/System.Net.Http.xml",
+        "ref/netcore50/ko/System.Net.Http.xml",
+        "ref/netcore50/ru/System.Net.Http.xml",
+        "ref/netcore50/zh-hans/System.Net.Http.xml",
+        "ref/netcore50/zh-hant/System.Net.Http.xml",
         "ref/netstandard1.1/System.Net.Http.dll",
+        "ref/netstandard1.1/System.Net.Http.xml",
+        "ref/netstandard1.1/de/System.Net.Http.xml",
+        "ref/netstandard1.1/es/System.Net.Http.xml",
+        "ref/netstandard1.1/fr/System.Net.Http.xml",
+        "ref/netstandard1.1/it/System.Net.Http.xml",
+        "ref/netstandard1.1/ja/System.Net.Http.xml",
+        "ref/netstandard1.1/ko/System.Net.Http.xml",
+        "ref/netstandard1.1/ru/System.Net.Http.xml",
+        "ref/netstandard1.1/zh-hans/System.Net.Http.xml",
+        "ref/netstandard1.1/zh-hant/System.Net.Http.xml",
         "ref/netstandard1.3/System.Net.Http.dll",
+        "ref/netstandard1.3/System.Net.Http.xml",
+        "ref/netstandard1.3/de/System.Net.Http.xml",
+        "ref/netstandard1.3/es/System.Net.Http.xml",
+        "ref/netstandard1.3/fr/System.Net.Http.xml",
+        "ref/netstandard1.3/it/System.Net.Http.xml",
+        "ref/netstandard1.3/ja/System.Net.Http.xml",
+        "ref/netstandard1.3/ko/System.Net.Http.xml",
+        "ref/netstandard1.3/ru/System.Net.Http.xml",
+        "ref/netstandard1.3/zh-hans/System.Net.Http.xml",
+        "ref/netstandard1.3/zh-hant/System.Net.Http.xml",
         "ref/portable-net45+win8+wpa81/_._",
         "ref/win8/_._",
         "ref/wpa81/_._",
@@ -13546,7 +13607,7 @@
         "runtimes/win/lib/net46/System.Net.Http.dll",
         "runtimes/win/lib/netcore50/System.Net.Http.dll",
         "runtimes/win/lib/netstandard1.3/System.Net.Http.dll",
-        "system.net.http.4.3.4.nupkg.sha512",
+        "system.net.http.4.3.0.nupkg.sha512",
         "system.net.http.nuspec"
       ]
     },
@@ -14398,41 +14459,41 @@
         "system.runtime.nuspec"
       ]
     },
-    "System.Runtime.Caching/5.0.0": {
-      "sha512": "30D6MkO8WF9jVGWZIP0hmCN8l9BTY4LCsAzLIe4xFSXzs+AjDotR7DpSmj27pFskDURzUvqYYY0ikModgBTxWw==",
+    "System.Runtime.Caching/6.0.0": {
+      "sha512": "E0e03kUp5X2k+UAoVl6efmI7uU7JRBWi5EIdlQ7cr0NpBGjHG4fWII35PgsBY9T4fJQ8E4QPsL0rKksU9gcL5A==",
       "type": "package",
-      "path": "system.runtime.caching/5.0.0",
+      "path": "system.runtime.caching/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Runtime.Caching.targets",
+        "buildTransitive/netcoreapp3.1/_._",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
-        "lib/net45/_._",
+        "lib/net461/_._",
+        "lib/net6.0/System.Runtime.Caching.dll",
+        "lib/net6.0/System.Runtime.Caching.xml",
+        "lib/netcoreapp3.1/System.Runtime.Caching.dll",
+        "lib/netcoreapp3.1/System.Runtime.Caching.xml",
         "lib/netstandard2.0/System.Runtime.Caching.dll",
         "lib/netstandard2.0/System.Runtime.Caching.xml",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net45/_._",
-        "ref/netstandard2.0/System.Runtime.Caching.dll",
-        "ref/netstandard2.0/System.Runtime.Caching.xml",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/win/lib/net45/_._",
+        "runtimes/win/lib/net461/_._",
+        "runtimes/win/lib/net6.0/System.Runtime.Caching.dll",
+        "runtimes/win/lib/net6.0/System.Runtime.Caching.xml",
+        "runtimes/win/lib/netcoreapp3.1/System.Runtime.Caching.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.Runtime.Caching.xml",
         "runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll",
         "runtimes/win/lib/netstandard2.0/System.Runtime.Caching.xml",
-        "system.runtime.caching.5.0.0.nupkg.sha512",
+        "system.runtime.caching.6.0.0.nupkg.sha512",
         "system.runtime.caching.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Runtime.CompilerServices.Unsafe/6.0.0": {
@@ -14764,51 +14825,33 @@
         "system.runtime.numerics.nuspec"
       ]
     },
-    "System.Security.AccessControl/5.0.0": {
-      "sha512": "dagJ1mHZO3Ani8GH0PHpPEe/oYO+rVdbQjvjJkBRNQkX4t0r1iaeGn8+/ybkSLEan3/slM0t59SVdHzuHf2jmw==",
+    "System.Security.AccessControl/6.0.0": {
+      "sha512": "AUADIc0LIEQe7MzC+I0cl0rAT8RrTAKFHl53yHjEUzNVIaUlhFY11vc2ebiVJzVBuOzun6F7FBA+8KAbGTTedQ==",
       "type": "package",
-      "path": "system.security.accesscontrol/5.0.0",
+      "path": "system.security.accesscontrol/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net46/System.Security.AccessControl.dll",
+        "buildTransitive/netcoreapp2.0/System.Security.AccessControl.targets",
+        "buildTransitive/netcoreapp3.1/_._",
         "lib/net461/System.Security.AccessControl.dll",
         "lib/net461/System.Security.AccessControl.xml",
-        "lib/netstandard1.3/System.Security.AccessControl.dll",
+        "lib/net6.0/System.Security.AccessControl.dll",
+        "lib/net6.0/System.Security.AccessControl.xml",
         "lib/netstandard2.0/System.Security.AccessControl.dll",
         "lib/netstandard2.0/System.Security.AccessControl.xml",
-        "lib/uap10.0.16299/_._",
-        "ref/net46/System.Security.AccessControl.dll",
-        "ref/net461/System.Security.AccessControl.dll",
-        "ref/net461/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/System.Security.AccessControl.dll",
-        "ref/netstandard1.3/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/de/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/es/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/fr/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/it/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/ja/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/ko/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/ru/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/zh-hans/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/zh-hant/System.Security.AccessControl.xml",
-        "ref/netstandard2.0/System.Security.AccessControl.dll",
-        "ref/netstandard2.0/System.Security.AccessControl.xml",
-        "ref/uap10.0.16299/_._",
-        "runtimes/win/lib/net46/System.Security.AccessControl.dll",
         "runtimes/win/lib/net461/System.Security.AccessControl.dll",
         "runtimes/win/lib/net461/System.Security.AccessControl.xml",
-        "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll",
-        "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.xml",
-        "runtimes/win/lib/netstandard1.3/System.Security.AccessControl.dll",
-        "runtimes/win/lib/uap10.0.16299/_._",
-        "system.security.accesscontrol.5.0.0.nupkg.sha512",
+        "runtimes/win/lib/net6.0/System.Security.AccessControl.dll",
+        "runtimes/win/lib/net6.0/System.Security.AccessControl.xml",
+        "runtimes/win/lib/netstandard2.0/System.Security.AccessControl.dll",
+        "runtimes/win/lib/netstandard2.0/System.Security.AccessControl.xml",
+        "system.security.accesscontrol.6.0.0.nupkg.sha512",
         "system.security.accesscontrol.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Security.Claims/4.3.0": {
@@ -15229,36 +15272,33 @@
         "system.security.cryptography.x509certificates.nuspec"
       ]
     },
-    "System.Security.Permissions/5.0.0": {
-      "sha512": "uE8juAhEkp7KDBCdjDIE3H9R1HJuEHqeqX8nLX9gmYKWwsqk3T5qZlPx8qle5DPKimC/Fy3AFTdV7HamgCh9qQ==",
+    "System.Security.Permissions/6.0.0": {
+      "sha512": "T/uuc7AklkDoxmcJ7LGkyX1CcSviZuLCa4jg3PekfJ7SU0niF0IVTXwUiNVP9DSpzou2PpxJ+eNY2IfDM90ZCg==",
       "type": "package",
-      "path": "system.security.permissions/5.0.0",
+      "path": "system.security.permissions/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Security.Permissions.targets",
+        "buildTransitive/netcoreapp3.1/_._",
         "lib/net461/System.Security.Permissions.dll",
         "lib/net461/System.Security.Permissions.xml",
         "lib/net5.0/System.Security.Permissions.dll",
         "lib/net5.0/System.Security.Permissions.xml",
-        "lib/netcoreapp3.0/System.Security.Permissions.dll",
-        "lib/netcoreapp3.0/System.Security.Permissions.xml",
+        "lib/net6.0/System.Security.Permissions.dll",
+        "lib/net6.0/System.Security.Permissions.xml",
+        "lib/netcoreapp3.1/System.Security.Permissions.dll",
+        "lib/netcoreapp3.1/System.Security.Permissions.xml",
         "lib/netstandard2.0/System.Security.Permissions.dll",
         "lib/netstandard2.0/System.Security.Permissions.xml",
-        "ref/net461/System.Security.Permissions.dll",
-        "ref/net461/System.Security.Permissions.xml",
-        "ref/net5.0/System.Security.Permissions.dll",
-        "ref/net5.0/System.Security.Permissions.xml",
-        "ref/netcoreapp3.0/System.Security.Permissions.dll",
-        "ref/netcoreapp3.0/System.Security.Permissions.xml",
-        "ref/netstandard2.0/System.Security.Permissions.dll",
-        "ref/netstandard2.0/System.Security.Permissions.xml",
-        "system.security.permissions.5.0.0.nupkg.sha512",
+        "runtimes/win/lib/net461/System.Security.Permissions.dll",
+        "runtimes/win/lib/net461/System.Security.Permissions.xml",
+        "system.security.permissions.6.0.0.nupkg.sha512",
         "system.security.permissions.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Security.Principal/4.3.0": {
@@ -16069,26 +16109,27 @@
         "version.txt"
       ]
     },
-    "System.Windows.Extensions/5.0.0": {
-      "sha512": "c1ho9WU9ZxMZawML+ssPKZfdnrg/OjR3pe0m9v8230z3acqphwvPJqzAkH54xRYm5ntZHGG1EPP3sux9H3qSPg==",
+    "System.Windows.Extensions/6.0.0": {
+      "sha512": "IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "type": "package",
-      "path": "system.windows.extensions/5.0.0",
+      "path": "system.windows.extensions/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/netcoreapp3.0/System.Windows.Extensions.dll",
-        "lib/netcoreapp3.0/System.Windows.Extensions.xml",
-        "ref/netcoreapp3.0/System.Windows.Extensions.dll",
-        "ref/netcoreapp3.0/System.Windows.Extensions.xml",
-        "runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll",
-        "runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.xml",
-        "system.windows.extensions.5.0.0.nupkg.sha512",
+        "lib/net6.0/System.Windows.Extensions.dll",
+        "lib/net6.0/System.Windows.Extensions.xml",
+        "lib/netcoreapp3.1/System.Windows.Extensions.dll",
+        "lib/netcoreapp3.1/System.Windows.Extensions.xml",
+        "runtimes/win/lib/net6.0/System.Windows.Extensions.dll",
+        "runtimes/win/lib/net6.0/System.Windows.Extensions.xml",
+        "runtimes/win/lib/netcoreapp3.1/System.Windows.Extensions.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.Windows.Extensions.xml",
+        "system.windows.extensions.6.0.0.nupkg.sha512",
         "system.windows.extensions.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Xml.ReaderWriter/4.3.0": {
@@ -16233,10 +16274,10 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "UiPath/24.10.93.21985": {
-      "sha512": "fTSvMoMUEmt4PkjhGVz9qSIGSIB7o4eYPKwbiGO9NkKGuNnrRy8jXoQUOcyQHdgUtJO5+q8nh/OICgEHVdjYpQ==",
+    "UiPath/24.10.94.62718": {
+      "sha512": "KhZn11OuOxfF0lt2/0QXM2tQgs40gv0lh95Et2CXvnW6yql8vI4xkWnlDc5PovvRuq2uKdFUbc7jXLD8TpdtMw==",
       "type": "package",
-      "path": "uipath/24.10.93.21985",
+      "path": "uipath/24.10.94.62718",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -16308,7 +16349,7 @@
         "lib/net461/UiPath.Interop.dll",
         "lib/net6.0-windows7.0/UiPath.Interop.dll",
         "lib/net6.0/UiPath.Locator.dll",
-        "uipath.24.10.93.21985.nupkg.sha512",
+        "uipath.24.10.94.62718.nupkg.sha512",
         "uipath.nuspec"
       ]
     },
@@ -16378,17 +16419,17 @@
         "uipath.codedworkflows.nuspec"
       ]
     },
-    "UiPath.ConnectionClient/2.0.4": {
-      "sha512": "cJlTo8ca58Vg0ZIx3XlJ9pzUgWiJ61PIrwZ69/VMvUBGwLKk6f1caF5V9C2dJwAjIOU2nixTDfdnMm/dMEfgdQ==",
+    "UiPath.ConnectionClient/2.0.7": {
+      "sha512": "Wi2F23VRoZXXscb8wRF1DSJIkHb3r35qU7saaq94pnuUmmJ247iho0sVwRmjSa/Y2rcAmNj/2aaSrYOf1t4Z4g==",
       "type": "package",
-      "path": "uipath.connectionclient/2.0.4",
+      "path": "uipath.connectionclient/2.0.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "UI_icon.png",
         "lib/net461/ConnectionClient.dll",
-        "lib/net5.0/ConnectionClient.dll",
-        "uipath.connectionclient.2.0.4.nupkg.sha512",
+        "lib/net6.0/ConnectionClient.dll",
+        "uipath.connectionclient.2.0.7.nupkg.sha512",
         "uipath.connectionclient.nuspec"
       ]
     },
@@ -16423,16 +16464,16 @@
         "uipath.dataservice.activities.nuspec"
       ]
     },
-    "UiPath.Driver.Portable/24.10.93.21985": {
-      "sha512": "RdJOy20Ne8BA5cYxmyMsmxll63yjsgkWQ59brOFBn4sxbEvAZVvIPSk9n21nQ9sFWZ2IxJc+Snp0kAUYyAtphA==",
+    "UiPath.Driver.Portable/24.10.94.62718": {
+      "sha512": "JjYNSUApZBl+ginveg/R2cGqWOvCdswK3UtZRJUC975h5/o6rXHl09mdzBlMG5vS9RF8lbI48/Lhsopibm7TnQ==",
       "type": "package",
-      "path": "uipath.driver.portable/24.10.93.21985",
+      "path": "uipath.driver.portable/24.10.94.62718",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net6.0/Interop.UiPath.dll",
         "lib/net6.0/UiPath.Driver.Portable.dll",
-        "uipath.driver.portable.24.10.93.21985.nupkg.sha512",
+        "uipath.driver.portable.24.10.94.62718.nupkg.sha512",
         "uipath.driver.portable.nuspec"
       ]
     },
@@ -16632,16 +16673,28 @@
         "uipath.gsuite.activities.nuspec"
       ]
     },
-    "UiPath.IntegrationService.Activities/1.5.0-alpha.20240422.4": {
-      "sha512": "pzbYH/kpA6bft+K7zR86hwFfj+/PpVh677QV8lx3kz62XEnRBDg/hA5onr0X+r6u0z+jWJAhrie9X13j6nO2mQ==",
+    "UiPath.IntegrationService.Activities/1.7.0": {
+      "sha512": "7FRTQH2ZCvAbqjE5yzm34LDnDE/n9oUPZOOjmXHAgdGj5gAqTKqyKAcO1a31x3caRSnr4t/ZE1inUhp78HuJJw==",
       "type": "package",
-      "path": "uipath.integrationservice.activities/1.5.0-alpha.20240422.4",
+      "path": "uipath.integrationservice.activities/1.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net6.0/UiPath.IntegrationService.Activities.Runtime.dll",
         "lib/net6.0/UiPath.IntegrationService.Activities.dll",
-        "uipath.integrationservice.activities.1.5.0-alpha.20240422.4.nupkg.sha512",
+        "lib/net6.0/de/UiPath.IntegrationService.Activities.Runtime.resources.dll",
+        "lib/net6.0/es-MX/UiPath.IntegrationService.Activities.Runtime.resources.dll",
+        "lib/net6.0/es/UiPath.IntegrationService.Activities.Runtime.resources.dll",
+        "lib/net6.0/fr/UiPath.IntegrationService.Activities.Runtime.resources.dll",
+        "lib/net6.0/ja/UiPath.IntegrationService.Activities.Runtime.resources.dll",
+        "lib/net6.0/ko/UiPath.IntegrationService.Activities.Runtime.resources.dll",
+        "lib/net6.0/pt-BR/UiPath.IntegrationService.Activities.Runtime.resources.dll",
+        "lib/net6.0/pt/UiPath.IntegrationService.Activities.Runtime.resources.dll",
+        "lib/net6.0/ru/UiPath.IntegrationService.Activities.Runtime.resources.dll",
+        "lib/net6.0/tr/UiPath.IntegrationService.Activities.Runtime.resources.dll",
+        "lib/net6.0/zh-CN/UiPath.IntegrationService.Activities.Runtime.resources.dll",
+        "lib/net6.0/zh-TW/UiPath.IntegrationService.Activities.Runtime.resources.dll",
+        "uipath.integrationservice.activities.1.7.0.nupkg.sha512",
         "uipath.integrationservice.activities.nuspec",
         "uipath_logo.png"
       ]
@@ -16868,10 +16921,10 @@
         "uipath.opentelemetry.contracts.nuspec"
       ]
     },
-    "UiPath.Platform/24.10.2": {
-      "sha512": "vliLtQgFg/DvitKXE1d9JbQ2Ec0tsGH4yKgfJbkS6BRZwIMESI/QnKDd2foxEoKdw4dshpgxmvyV+kbgfkEOlw==",
+    "UiPath.Platform/24.10.3": {
+      "sha512": "IpvuIPS7ZMQUp03mSYq9LzLFDXPyVo2TSEds0DTHGAtNtAmKJzGEfEOa4uPeF8CqwKRT/3P/VuoLUJK6rM1ryw==",
       "type": "package",
-      "path": "uipath.platform/24.10.2",
+      "path": "uipath.platform/24.10.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -16914,14 +16967,14 @@
         "lib/net6.0/ru/UiPath.Platform.resources.dll",
         "lib/net6.0/tr/UiPath.Platform.resources.dll",
         "lib/net6.0/zh-CN/UiPath.Platform.resources.dll",
-        "uipath.platform.24.10.2.nupkg.sha512",
+        "uipath.platform.24.10.3.nupkg.sha512",
         "uipath.platform.nuspec"
       ]
     },
-    "UiPath.System.Activities/24.10.1": {
-      "sha512": "vdYLi18/R+eb1Y9epNuFpoJPWzENDR9PjibN9Ckoj4mQHKFFj57Oa3U+Dy+8J/pn4u6dI2gEnq8r3Lr3mp/Hig==",
+    "UiPath.System.Activities/24.10.4": {
+      "sha512": "7MQmx5+F98nA6IeWe2Y2uXNd0tMFyiHJFsmPViRKt9u2/um5Xuh7q69dilppM+tCzh7IxXRIrnzr30xsLJl3Og==",
       "type": "package",
-      "path": "uipath.system.activities/24.10.1",
+      "path": "uipath.system.activities/24.10.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -16956,28 +17009,28 @@
         "lib/net6.0-windows7.0/zh-TW/UiPath.System.Activities.Design.resources.dll",
         "lib/net6.0-windows7.0/zu/UiPath.System.Activities.Design.resources.dll",
         "lib/net6.0/UiPath.System.Activities.ViewModels.dll",
-        "uipath.system.activities.24.10.1.nupkg.sha512",
+        "uipath.system.activities.24.10.4.nupkg.sha512",
         "uipath.system.activities.nuspec"
       ]
     },
-    "UiPath.System.Activities.Runtime/24.10.1": {
-      "sha512": "j2jSer50HKLFdeCh84yl+KmTE3xTWeVm4mnwMBENy47WyIP4UPzWTGx8mbx77UtbX6SJeL3wlF+OoyccQ989Jg==",
+    "UiPath.System.Activities.Runtime/24.10.4": {
+      "sha512": "SWNQLyVGyoUIVp0fXQ1Q8xztS4lOHYxFDGGg1RlrWq8wvR2KQtOZwJ9BBN3hVpq3djz3aW8boph6EHcBoYOU8A==",
       "type": "package",
-      "path": "uipath.system.activities.runtime/24.10.1",
+      "path": "uipath.system.activities.runtime/24.10.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net461/UiPath.System.Activities.Package.Runtime.dll",
         "lib/net6.0-windows7.0/UiPath.System.Activities.Package.Runtime.dll",
         "lib/net6.0/UiPath.System.Activities.Package.Runtime.dll",
-        "uipath.system.activities.runtime.24.10.1.nupkg.sha512",
+        "uipath.system.activities.runtime.24.10.4.nupkg.sha512",
         "uipath.system.activities.runtime.nuspec"
       ]
     },
-    "UiPath.System.Activities.Runtime.Portable/24.10.1": {
-      "sha512": "BXpFxGJDHiEvLrNn0vEvoMVGUWgE3ZJ3NKhrP/G1dgFy2f67/hXS4o9MRGwOusEkRXh1DZB3rigUyeqZmNyanA==",
+    "UiPath.System.Activities.Runtime.Portable/24.10.4": {
+      "sha512": "9TFHsCuICFisDJch4aJ8NLrvsUFN6MT5u5EeelQ0t7dLgiAIxo17KKPsZ0eFFBiSCLOnVbDRamv8CNoZhWosvA==",
       "type": "package",
-      "path": "uipath.system.activities.runtime.portable/24.10.1",
+      "path": "uipath.system.activities.runtime.portable/24.10.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -16998,7 +17051,7 @@
         "lib/net6.0/zh-CN/UiPath.System.Activities.resources.dll",
         "lib/net6.0/zh-TW/UiPath.System.Activities.resources.dll",
         "lib/net6.0/zu/UiPath.System.Activities.resources.dll",
-        "uipath.system.activities.runtime.portable.24.10.1.nupkg.sha512",
+        "uipath.system.activities.runtime.portable.24.10.4.nupkg.sha512",
         "uipath.system.activities.runtime.portable.nuspec"
       ]
     },
@@ -17016,10 +17069,10 @@
         "uipath.telemetry.client.nuspec"
       ]
     },
-    "UiPath.Testing.Activities/24.10.0": {
-      "sha512": "C3hLut9AqPwGVWaZWSFnOHWQk3+DIM6B04BZc4meg4dav2y4y3plEpWqmQYeDFWXX05uiG8C5QqKY4BEOlZ3/Q==",
+    "UiPath.Testing.Activities/24.10.1": {
+      "sha512": "Ww60MI20HwRL3C3CHD43LBI/Ya8PUib9HOMQHeI2N+vTVz7n8aIKMw+ksApvQDrBRQF03wuPU5bg4+PfYokKYA==",
       "type": "package",
-      "path": "uipath.testing.activities/24.10.0",
+      "path": "uipath.testing.activities/24.10.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -17154,14 +17207,14 @@
         "lib/net6.0/zh-TW/UiPath.Testing.RulesLibrary.resources.dll",
         "lib/net6.0/zu/UiPath.Testing.Activities.resources.dll",
         "lib/net6.0/zu/UiPath.Testing.RulesLibrary.resources.dll",
-        "uipath.testing.activities.24.10.0.nupkg.sha512",
+        "uipath.testing.activities.24.10.1.nupkg.sha512",
         "uipath.testing.activities.nuspec"
       ]
     },
-    "UiPath.UIAutomation.Activities/24.10.1": {
-      "sha512": "dne6WyvpdKW0Go9aS+f1VomcLyHT+Zl/heEvO0Lkwf0OLEWJCYinDALEZ+ELGSAamuk4nu2Vd2iuxVJM3z1KvA==",
+    "UiPath.UIAutomation.Activities/24.10.3": {
+      "sha512": "rD1aBj8cY8zicGhm3FF2z0KfEDwmOCCV1MWKu5HPvCD8Kh5dETcEbTzD30njDGnLyjAugbPTJy5yEm92eLTetg==",
       "type": "package",
-      "path": "uipath.uiautomation.activities/24.10.1",
+      "path": "uipath.uiautomation.activities/24.10.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -17288,14 +17341,14 @@
         "lib/net6.0/ru/UiPath.UIAutomationNext.Activities.Design.resources.dll",
         "lib/net6.0/tr/UiPath.UIAutomationNext.Activities.Design.resources.dll",
         "lib/net6.0/zh-CN/UiPath.UIAutomationNext.Activities.Design.resources.dll",
-        "uipath.uiautomation.activities.24.10.1.nupkg.sha512",
+        "uipath.uiautomation.activities.24.10.3.nupkg.sha512",
         "uipath.uiautomation.activities.nuspec"
       ]
     },
-    "UiPath.UIAutomation.Activities.Runtime.Design/24.10.1": {
-      "sha512": "k5tcqyC+fmNgPw1TIhNrDbKiLNHJNvUDdKY7yWJ0y/mnvEDOL9zJvZbl0B8rlUkntgnF40ASOusbXDFaa7cuVw==",
+    "UiPath.UIAutomation.Activities.Runtime.Design/24.10.3": {
+      "sha512": "0nta8yg0Mz7LZ11KbUu6q96NoCqELFkX2/riPIPyT+VWrI66AhODGWp2pH0w/v26pmVYTYBE+h97YQXzz6peJg==",
       "type": "package",
-      "path": "uipath.uiautomation.activities.runtime.design/24.10.1",
+      "path": "uipath.uiautomation.activities.runtime.design/24.10.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -17381,14 +17434,14 @@
         "lib/net461/UiPath.UIAutomation.Activities.Runtime.Design.dll",
         "lib/net6.0-windows7.0/UiPath.UIAutomation.Activities.Runtime.Design.dll",
         "lib/net6.0/UiPath.UIAutomation.Activities.Runtime.Design.dll",
-        "uipath.uiautomation.activities.runtime.design.24.10.1.nupkg.sha512",
+        "uipath.uiautomation.activities.runtime.design.24.10.3.nupkg.sha512",
         "uipath.uiautomation.activities.runtime.design.nuspec"
       ]
     },
-    "UiPath.UIAutomation.Activities.Runtime.Portable/24.10.1": {
-      "sha512": "um7W3lLkDw4aUdOiw/Hxes6py9yClyO2RUOe+fsKq9yHH1VzlMvOzTGjc1XXm5faKIFCJqH6tAa+xkjEPm8nsw==",
+    "UiPath.UIAutomation.Activities.Runtime.Portable/24.10.3": {
+      "sha512": "hf7r8LSXWjSPCHCRjt9t7QJ2EVqd4NRM1Lb8FjjVsV92Rky6ZUryqDmBrqRSfuN5LuWFZmWLeE+ON9zlveKpMQ==",
       "type": "package",
-      "path": "uipath.uiautomation.activities.runtime.portable/24.10.1",
+      "path": "uipath.uiautomation.activities.runtime.portable/24.10.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -17409,7 +17462,7 @@
         "lib/net6.0/zh-CN/UiPath.UIAutomationNext.Activities.resources.dll",
         "lib/net6.0/zh-TW/UiPath.UIAutomationNext.Activities.resources.dll",
         "lib/net6.0/zu/UiPath.UIAutomationNext.Activities.resources.dll",
-        "uipath.uiautomation.activities.runtime.portable.24.10.1.nupkg.sha512",
+        "uipath.uiautomation.activities.runtime.portable.24.10.3.nupkg.sha512",
         "uipath.uiautomation.activities.runtime.portable.nuspec"
       ]
     },
@@ -17567,15 +17620,15 @@
     "": [],
     "net8.0": [
       "Library_Cross_CS_Bindings >= 5.0.1 <= 5.0.1",
-      "Library_Cross_VB_Complex >= 32.45.78 <= 32.45.78",
+      "Library_Cross_VB_Complex >= 33.2.2 <= 33.2.2",
       "Library_Cross_VB_CustomViewModels >= 1.0.0 <= 1.0.0",
       "Library_Cross_VB_Entities >= 1.0.0 <= 1.0.0",
       "Library_Cross_VB_Webservice >= 1.0.0 <= 1.0.0",
       "UiPath.CodedWorkflows >= 24.10.0 <= 24.10.0",
-      "UiPath.IntegrationService.Activities >= 1.5.0-alpha.20240422.4 <= 1.5.0-alpha.20240422.4",
-      "UiPath.System.Activities >= 24.10.1 <= 24.10.1",
-      "UiPath.Testing.Activities >= 24.10.0 <= 24.10.0",
-      "UiPath.UIAutomation.Activities >= 24.10.1 <= 24.10.1",
+      "UiPath.IntegrationService.Activities >= 1.7.0 <= 1.7.0",
+      "UiPath.System.Activities >= 24.10.4 <= 24.10.4",
+      "UiPath.Testing.Activities >= 24.10.1 <= 24.10.1",
+      "UiPath.UIAutomation.Activities >= 24.10.3 <= 24.10.3",
       "UiPath.WebAPI.Activities >= 1.21.0 <= 1.21.0"
     ]
   },
@@ -17601,7 +17654,7 @@
           "Library_Cross_VB_Complex": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[32.45.78, 32.45.78]"
+            "version": "[33.2.2, 33.2.2]"
           },
           "Library_Cross_VB_CustomViewModels": {
             "include": "Runtime",
@@ -17626,22 +17679,22 @@
           "UiPath.IntegrationService.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.5.0-alpha.20240422.4, 1.5.0-alpha.20240422.4]"
+            "version": "[1.7.0, 1.7.0]"
           },
           "UiPath.System.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[24.10.1, 24.10.1]"
+            "version": "[24.10.4, 24.10.4]"
           },
           "UiPath.Testing.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[24.10.0, 24.10.0]"
+            "version": "[24.10.1, 24.10.1]"
           },
           "UiPath.UIAutomation.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[24.10.1, 24.10.1]"
+            "version": "[24.10.3, 24.10.3]"
           },
           "UiPath.WebAPI.Activities": {
             "include": "Runtime",
@@ -17649,7 +17702,7 @@
             "version": "[1.21.0, 1.21.0]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Liviu.Ponova\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
