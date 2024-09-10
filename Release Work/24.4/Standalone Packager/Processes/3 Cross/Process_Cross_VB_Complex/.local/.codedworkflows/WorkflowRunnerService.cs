@@ -18,11 +18,19 @@ namespace Process_Cross_VB_Complex
         }
 
         /// <summary>
-        /// Invokes the TestCase_Draft_RootFolder_Entity.xaml
+        /// Invokes the Non_EntryPoints/NEP2.xaml
         /// </summary>
-        public void TestCase_Draft_RootFolder_Entity()
+        public void NEP2()
         {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"TestCase_Draft_RootFolder_Entity.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Non_EntryPoints\NEP2.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+        }
+
+        /// <summary>
+        /// Invokes the EP_RootFolder_OR.xaml
+        /// </summary>
+        public void EP_RootFolder_OR()
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"EP_RootFolder_OR.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
         }
 
         /// <summary>
@@ -31,15 +39,6 @@ namespace Process_Cross_VB_Complex
         public void Sequence()
         {
             var result = _services.WorkflowInvocationService.RunWorkflow(@"Sequence.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
-        }
-
-        /// <summary>
-        /// Invokes the EntryPoints/EP1_Webservice.xaml
-        /// </summary>
-        public SwaggerPetstore.Pet EP1_Webservice(System.Nullable<long> in_PetId, string in_PetName)
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"EntryPoints\EP1_Webservice.xaml", new Dictionary<string, object>{{"in_PetId", in_PetId}, {"in_PetName", in_PetName}}, default, default, default, GetAssemblyName());
-            return (SwaggerPetstore.Pet)result["out_Pet"];
         }
 
         /// <summary>
@@ -61,36 +60,11 @@ namespace Process_Cross_VB_Complex
         }
 
         /// <summary>
-        /// Invokes the Private/Private_Flowchart.xaml
-        /// </summary>
-        public void Private_Private_Flowchart()
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Private\Private_Flowchart.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
-        }
-
-        /// <summary>
-        /// Invokes the Private_Flowchart.xaml
-        /// </summary>
-        public void Private_Flowchart()
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Private_Flowchart.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
-        }
-
-        /// <summary>
         /// Invokes the EP_RootFolder_Entity_Flowchart.xaml
         /// </summary>
         public Library_Cross_VB_Entities.CatEntity EP_RootFolder_Entity_Flowchart(string in_CatName)
         {
             var result = _services.WorkflowInvocationService.RunWorkflow(@"EP_RootFolder_Entity_Flowchart.xaml", new Dictionary<string, object>{{"in_CatName", in_CatName}}, default, default, default, GetAssemblyName());
-            return (Library_Cross_VB_Entities.CatEntity)result["cat"];
-        }
-
-        /// <summary>
-        /// Invokes the EntryPoints/EP2_Entity.xaml
-        /// </summary>
-        public Library_Cross_VB_Entities.CatEntity EP2_Entity()
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"EntryPoints\EP2_Entity.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
             return (Library_Cross_VB_Entities.CatEntity)result["cat"];
         }
 
@@ -101,6 +75,24 @@ namespace Process_Cross_VB_Complex
         {
             var result = _services.WorkflowInvocationService.RunWorkflow(@"EP_RootFolder_Webservice.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
             return (SwaggerPetstore.Pet)result["out_pet"];
+        }
+
+        /// <summary>
+        /// Invokes the EntryPoints/EP1_Webservice.xaml
+        /// </summary>
+        public SwaggerPetstore.Pet EP1_Webservice(System.Nullable<long> in_PetId, string in_PetName)
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"EntryPoints\EP1_Webservice.xaml", new Dictionary<string, object>{{"in_PetId", in_PetId}, {"in_PetName", in_PetName}}, default, default, default, GetAssemblyName());
+            return (SwaggerPetstore.Pet)result["out_Pet"];
+        }
+
+        /// <summary>
+        /// Invokes the EntryPoints/EP2_Entity.xaml
+        /// </summary>
+        public Library_Cross_VB_Entities.CatEntity EP2_Entity()
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"EntryPoints\EP2_Entity.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+            return (Library_Cross_VB_Entities.CatEntity)result["cat"];
         }
 
         /// <summary>
@@ -120,6 +112,46 @@ namespace Process_Cross_VB_Complex
         }
 
         /// <summary>
+        /// Invokes the Private/Private_Flowchart.xaml
+        /// </summary>
+        public void Private_Private_Flowchart()
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Private\Private_Flowchart.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+        }
+
+        /// <summary>
+        /// Invokes the Private_Flowchart.xaml
+        /// </summary>
+        public void Private_Flowchart()
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Private_Flowchart.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+        }
+
+        /// <summary>
+        /// Invokes the TestCase_Draft_RootFolder_Entity.xaml
+        /// </summary>
+        public void TestCase_Draft_RootFolder_Entity()
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"TestCase_Draft_RootFolder_Entity.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+        }
+
+        /// <summary>
+        /// Invokes the Non_EntryPoints/NEP1.xaml
+        /// </summary>
+        public void NEP1()
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Non_EntryPoints\NEP1.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+        }
+
+        /// <summary>
+        /// Invokes the EP_RootFolder.xaml
+        /// </summary>
+        public void EP_RootFolder()
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"EP_RootFolder.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+        }
+
+        /// <summary>
         /// Invokes the Triggers/TimeTrigger.xaml
         /// </summary>
         public void TimeTrigger(string UiPathEventConnector, string UiPathEvent, string UiPathEventObjectType, string UiPathEventObjectId, string UiPathAdditionalEventData)
@@ -128,11 +160,11 @@ namespace Process_Cross_VB_Complex
         }
 
         /// <summary>
-        /// Invokes the EP_RootFolder_OR.xaml
+        /// Invokes the NEP_RootFolder.xaml
         /// </summary>
-        public void EP_RootFolder_OR()
+        public void NEP_RootFolder()
         {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"EP_RootFolder_OR.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"NEP_RootFolder.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
         }
 
         /// <summary>
@@ -161,11 +193,11 @@ namespace Process_Cross_VB_Complex
         }
 
         /// <summary>
-        /// Invokes the EP_RootFolder.xaml
+        /// Invokes the EP_RootFolder_Coded_Workflow.cs
         /// </summary>
-        public void EP_RootFolder()
+        public void EP_RootFolder_Coded_Workflow()
         {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"EP_RootFolder.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"EP_RootFolder_Coded_Workflow.cs", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
         }
 
         /// <summary>
@@ -177,43 +209,11 @@ namespace Process_Cross_VB_Complex
         }
 
         /// <summary>
-        /// Invokes the NEP_RootFolder.xaml
-        /// </summary>
-        public void NEP_RootFolder()
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"NEP_RootFolder.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
-        }
-
-        /// <summary>
-        /// Invokes the Non_EntryPoints/NEP2.xaml
-        /// </summary>
-        public void NEP2()
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Non_EntryPoints\NEP2.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
-        }
-
-        /// <summary>
         /// Invokes the Coded/UseFootballTeam_Coded_Custom_Activity.cs
         /// </summary>
         public void UseFootballTeam_Coded_Custom_Activity()
         {
             var result = _services.WorkflowInvocationService.RunWorkflow(@"Coded\UseFootballTeam_Coded_Custom_Activity.cs", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
-        }
-
-        /// <summary>
-        /// Invokes the Non_EntryPoints/NEP1.xaml
-        /// </summary>
-        public void NEP1()
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Non_EntryPoints\NEP1.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
-        }
-
-        /// <summary>
-        /// Invokes the EP_RootFolder_Coded_Workflow.cs
-        /// </summary>
-        public void EP_RootFolder_Coded_Workflow()
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"EP_RootFolder_Coded_Workflow.cs", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
         }
 
         private string GetAssemblyName()

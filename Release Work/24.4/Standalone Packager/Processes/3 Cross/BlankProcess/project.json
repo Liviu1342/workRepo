@@ -1,22 +1,25 @@
 {
-  "name": "SimpleTestAutomation",
-  "projectId": "1d3363ba-afd4-404c-a686-99d1db2d3a02",
-  "description": "Test Automation Project",
+  "name": "BlankProcess",
+  "projectId": "27594ecc-54b2-49b3-9505-6669329343e9",
+  "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.System.Activities": "[24.3.1]"
+    "UiPath.System.Activities": "[24.11.0-preview]",
+    "UiPath.Testing.Activities": "[24.2.0-preview]",
+    "UiPath.UIAutomation.Activities": "[24.2.0-preview]",
+    "UiPath.WebAPI.Activities": "[1.22.0-alpha.6540773]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
-  "studioVersion": "20.1.0.0",
-  "projectVersion": "1.0.0",
+  "studioVersion": "24.10.5.0",
+  "projectVersion": "1.0.1",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
     "isPausable": true,
     "isAttended": false,
-    "requiresUserInteraction": true,
+    "requiresUserInteraction": false,
     "supportsPersistence": false,
     "workflowSerialization": "DataContract",
     "excludedLoggedData": [
@@ -26,12 +29,12 @@
     "executionType": "Workflow",
     "readyForPiP": false,
     "startsInPiP": false,
-    "mustRestoreAllDependencies": false,
+    "mustRestoreAllDependencies": true,
     "pipType": "ChildSession"
   },
   "designOptions": {
     "projectProfile": "Developement",
-    "outputType": "Tests",
+    "outputType": "Process",
     "libraryOptions": {
       "includeOriginalXaml": false,
       "privateWorkflows": []
@@ -39,28 +42,14 @@
     "processOptions": {
       "ignoredFiles": []
     },
-    "fileInfoCollection": [
-      {
-        "editingStatus": "Publishable",
-        "testCaseId": "bada4ea4-b619-48f8-944b-9cd1f68bbc4d",
-        "testCaseType": "TestCase",
-        "fileName": "TestCase.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "553c8be3-a0b9-4928-b2e0-b213863c5a7e",
-        "dataVariationFilePath": "variations\\tet_Sheet1.json",
-        "testCaseType": "TestCase",
-        "fileName": "DataDrivenTestCase.xaml"
-      }
-    ],
+    "fileInfoCollection": [],
     "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "TestCase.xaml",
-      "uniqueId": "bada4ea4-b619-48f8-944b-9cd1f68bbc4d",
+      "filePath": "Main.xaml",
+      "uniqueId": "1eab244c-4d48-417b-90f4-e84f7587cd59",
       "input": [],
       "output": []
     }
@@ -68,5 +57,5 @@
   "isTemplate": false,
   "templateProjectData": {},
   "publishData": {},
-  "targetFramework": "Legacy"
+  "targetFramework": "Portable"
 }
