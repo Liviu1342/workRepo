@@ -440,7 +440,7 @@
           }
         }
       },
-      "Microsoft.AspNet.SignalR.Client/2.4.0": {
+      "Microsoft.AspNet.SignalR.Client/2.4.3": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2"
@@ -456,140 +456,123 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Connections.Abstractions/3.1.6": {
+      "Microsoft.AspNetCore.Connections.Abstractions/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "3.1.6",
-          "System.IO.Pipelines": "4.7.1"
+          "Microsoft.Extensions.Features": "6.0.0",
+          "System.IO.Pipelines": "6.0.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.1/Microsoft.AspNetCore.Connections.Abstractions.dll": {
+          "lib/net6.0/Microsoft.AspNetCore.Connections.Abstractions.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Http.Connections.Client/3.1.6": {
+      "Microsoft.AspNetCore.Http.Connections.Client/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Connections.Common": "3.1.6",
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.6",
-          "Microsoft.Extensions.Options": "3.1.6"
+          "Microsoft.AspNetCore.Http.Connections.Common": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
         },
         "compile": {
-          "lib/netstandard2.1/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.1/Microsoft.AspNetCore.Http.Connections.Client.dll": {
+          "lib/net6.0/Microsoft.AspNetCore.Http.Connections.Client.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Http.Connections.Common/3.1.6": {
+      "Microsoft.AspNetCore.Http.Connections.Common/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Connections.Abstractions": "3.1.6"
+          "Microsoft.AspNetCore.Connections.Abstractions": "6.0.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.1/Microsoft.AspNetCore.Http.Connections.Common.dll": {
+          "lib/net6.0/Microsoft.AspNetCore.Http.Connections.Common.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Http.Features/3.1.6": {
+      "Microsoft.AspNetCore.SignalR.Client/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.6",
-          "System.IO.Pipelines": "4.7.1"
+          "Microsoft.AspNetCore.Http.Connections.Client": "6.0.0",
+          "Microsoft.AspNetCore.SignalR.Client.Core": "6.0.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.1/Microsoft.AspNetCore.Http.Features.dll": {
+          "lib/net6.0/Microsoft.AspNetCore.SignalR.Client.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.SignalR.Client/3.1.6": {
+      "Microsoft.AspNetCore.SignalR.Client.Core/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Connections.Client": "3.1.6",
-          "Microsoft.AspNetCore.SignalR.Client.Core": "3.1.6"
+          "Microsoft.AspNetCore.SignalR.Common": "6.0.0",
+          "Microsoft.AspNetCore.SignalR.Protocols.Json": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "System.Threading.Channels": "6.0.0"
         },
         "compile": {
-          "lib/netstandard2.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Client.dll": {
+          "lib/net6.0/Microsoft.AspNetCore.SignalR.Client.Core.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.SignalR.Client.Core/3.1.6": {
+      "Microsoft.AspNetCore.SignalR.Common/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.SignalR.Common": "3.1.6",
-          "Microsoft.AspNetCore.SignalR.Protocols.Json": "3.1.6",
-          "Microsoft.Extensions.DependencyInjection": "3.1.6",
-          "Microsoft.Extensions.Logging": "3.1.6",
-          "System.Threading.Channels": "4.7.1"
+          "Microsoft.AspNetCore.Connections.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
         },
         "compile": {
-          "lib/netstandard2.1/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.1/Microsoft.AspNetCore.SignalR.Client.Core.dll": {
+          "lib/net6.0/Microsoft.AspNetCore.SignalR.Common.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.SignalR.Common/3.1.6": {
+      "Microsoft.AspNetCore.SignalR.Protocols.Json/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Connections.Abstractions": "3.1.6",
-          "Microsoft.Extensions.Options": "3.1.6"
+          "Microsoft.AspNetCore.SignalR.Common": "6.0.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.1/Microsoft.AspNetCore.SignalR.Common.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.AspNetCore.SignalR.Protocols.Json/3.1.6": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.SignalR.Common": "3.1.6"
-        },
-        "compile": {
-          "lib/netcoreapp3.1/_._": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/Microsoft.AspNetCore.SignalR.Protocols.Json.dll": {
+          "lib/net6.0/Microsoft.AspNetCore.SignalR.Protocols.Json.dll": {
             "related": ".xml"
           }
         }
@@ -847,6 +830,19 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Features/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Features.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.FileSystemGlobbing/6.0.0": {
@@ -1152,10 +1148,10 @@
           "ref/netstandard1.6/_._": {}
         }
       },
-      "Microsoft.Management.Infrastructure.CimCmdlets/7.2.15": {
+      "Microsoft.Management.Infrastructure.CimCmdlets/7.2.22": {
         "type": "package",
         "dependencies": {
-          "System.Management.Automation": "7.2.15"
+          "System.Management.Automation": "7.2.22"
         },
         "compile": {
           "ref/net6.0/_._": {
@@ -1232,10 +1228,10 @@
       "Microsoft.NETCore.Windows.ApiSets/1.0.1": {
         "type": "package"
       },
-      "Microsoft.PowerShell.Commands.Diagnostics/7.2.15": {
+      "Microsoft.PowerShell.Commands.Diagnostics/7.2.22": {
         "type": "package",
         "dependencies": {
-          "System.Management.Automation": "7.2.15"
+          "System.Management.Automation": "7.2.22"
         },
         "compile": {
           "ref/net6.0/_._": {
@@ -1249,10 +1245,10 @@
           }
         }
       },
-      "Microsoft.PowerShell.Commands.Management/7.2.15": {
+      "Microsoft.PowerShell.Commands.Management/7.2.22": {
         "type": "package",
         "dependencies": {
-          "Microsoft.PowerShell.Security": "7.2.15",
+          "Microsoft.PowerShell.Security": "7.2.22",
           "System.ServiceProcess.ServiceController": "6.0.1"
         },
         "compile": {
@@ -1271,7 +1267,7 @@
           }
         }
       },
-      "Microsoft.PowerShell.Commands.Utility/7.2.15": {
+      "Microsoft.PowerShell.Commands.Utility/7.2.22": {
         "type": "package",
         "dependencies": {
           "Markdig.Signed": "0.31.0",
@@ -1281,7 +1277,7 @@
           "NJsonSchema": "10.5.2",
           "Namotion.Reflection": "2.0.10",
           "System.Drawing.Common": "6.0.0",
-          "System.Management.Automation": "7.2.15",
+          "System.Management.Automation": "7.2.22",
           "System.Threading.AccessControl": "6.0.0"
         },
         "compile": {
@@ -1300,10 +1296,10 @@
           }
         }
       },
-      "Microsoft.PowerShell.ConsoleHost/7.2.15": {
+      "Microsoft.PowerShell.ConsoleHost/7.2.22": {
         "type": "package",
         "dependencies": {
-          "System.Management.Automation": "7.2.15"
+          "System.Management.Automation": "7.2.22"
         },
         "compile": {
           "ref/net6.0/_._": {
@@ -1321,7 +1317,7 @@
           }
         }
       },
-      "Microsoft.PowerShell.CoreCLR.Eventing/7.2.15": {
+      "Microsoft.PowerShell.CoreCLR.Eventing/7.2.22": {
         "type": "package",
         "dependencies": {
           "System.Diagnostics.EventLog": "6.0.0"
@@ -1359,22 +1355,22 @@
           }
         }
       },
-      "Microsoft.PowerShell.SDK/7.2.15": {
+      "Microsoft.PowerShell.SDK/7.2.22": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.ObjectPool": "5.0.17",
-          "Microsoft.Management.Infrastructure.CimCmdlets": "7.2.15",
+          "Microsoft.Management.Infrastructure.CimCmdlets": "7.2.22",
           "Microsoft.NETCore.Windows.ApiSets": "1.0.1",
-          "Microsoft.PowerShell.Commands.Diagnostics": "7.2.15",
-          "Microsoft.PowerShell.Commands.Management": "7.2.15",
-          "Microsoft.PowerShell.Commands.Utility": "7.2.15",
-          "Microsoft.PowerShell.ConsoleHost": "7.2.15",
-          "Microsoft.PowerShell.Security": "7.2.15",
-          "Microsoft.WSMan.Management": "7.2.15",
-          "Microsoft.Windows.Compatibility": "6.0.7",
-          "System.Data.SqlClient": "4.8.5",
+          "Microsoft.PowerShell.Commands.Diagnostics": "7.2.22",
+          "Microsoft.PowerShell.Commands.Management": "7.2.22",
+          "Microsoft.PowerShell.Commands.Utility": "7.2.22",
+          "Microsoft.PowerShell.ConsoleHost": "7.2.22",
+          "Microsoft.PowerShell.Security": "7.2.22",
+          "Microsoft.WSMan.Management": "7.2.22",
+          "Microsoft.Windows.Compatibility": "6.0.8",
+          "System.Data.SqlClient": "4.8.6",
           "System.IO.Packaging": "6.0.0",
-          "System.Management.Automation": "7.2.15",
+          "System.Management.Automation": "7.2.22",
           "System.Net.Http.WinHttpHandler": "6.0.1",
           "System.Private.ServiceModel": "4.9.0",
           "System.ServiceModel.Duplex": "4.9.0",
@@ -1407,10 +1403,10 @@
           }
         }
       },
-      "Microsoft.PowerShell.Security/7.2.15": {
+      "Microsoft.PowerShell.Security/7.2.22": {
         "type": "package",
         "dependencies": {
-          "System.Management.Automation": "7.2.15"
+          "System.Management.Automation": "7.2.22"
         },
         "compile": {
           "ref/net6.0/_._": {
@@ -1567,7 +1563,7 @@
           }
         }
       },
-      "Microsoft.Windows.Compatibility/6.0.7": {
+      "Microsoft.Windows.Compatibility/6.0.8": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry.AccessControl": "6.0.0",
@@ -1578,7 +1574,7 @@
           "System.Configuration.ConfigurationManager": "6.0.1",
           "System.Data.Odbc": "6.0.1",
           "System.Data.OleDb": "6.0.0",
-          "System.Data.SqlClient": "4.8.5",
+          "System.Data.SqlClient": "4.8.6",
           "System.Diagnostics.EventLog": "6.0.0",
           "System.Diagnostics.PerformanceCounter": "6.0.1",
           "System.DirectoryServices": "6.0.1",
@@ -1591,7 +1587,7 @@
           "System.Reflection.Context": "6.0.0",
           "System.Runtime.Caching": "6.0.0",
           "System.Security.AccessControl": "6.0.0",
-          "System.Security.Cryptography.Pkcs": "6.0.4",
+          "System.Security.Cryptography.Pkcs": "6.0.3",
           "System.Security.Cryptography.ProtectedData": "6.0.0",
           "System.Security.Cryptography.Xml": "6.0.1",
           "System.Security.Permissions": "6.0.0",
@@ -1611,11 +1607,11 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "Microsoft.WSMan.Management/7.2.15": {
+      "Microsoft.WSMan.Management/7.2.22": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WSMan.Runtime": "7.2.15",
-          "System.Management.Automation": "7.2.15",
+          "Microsoft.WSMan.Runtime": "7.2.22",
+          "System.Management.Automation": "7.2.22",
           "System.ServiceProcess.ServiceController": "6.0.1"
         },
         "compile": {
@@ -1630,7 +1626,7 @@
           }
         }
       },
-      "Microsoft.WSMan.Runtime/7.2.15": {
+      "Microsoft.WSMan.Runtime/7.2.22": {
         "type": "package",
         "compile": {
           "ref/net6.0/_._": {
@@ -2549,7 +2545,7 @@
           }
         }
       },
-      "System.Data.SqlClient/4.8.5": {
+      "System.Data.SqlClient/4.8.6": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
@@ -3042,17 +3038,20 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "System.IO.Pipelines/4.7.1": {
+      "System.IO.Pipelines/6.0.0": {
         "type": "package",
         "compile": {
-          "ref/netcoreapp2.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.0/System.IO.Pipelines.dll": {
+          "lib/net6.0/System.IO.Pipelines.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.IO.Ports/6.0.0": {
@@ -3189,22 +3188,23 @@
           }
         }
       },
-      "System.Management.Automation/7.2.15": {
+      "System.Management.Automation/7.2.22": {
         "type": "package",
         "dependencies": {
           "Microsoft.ApplicationInsights": "2.21.0",
           "Microsoft.CSharp": "4.7.0",
           "Microsoft.Management.Infrastructure": "2.0.0",
-          "Microsoft.PowerShell.CoreCLR.Eventing": "7.2.15",
+          "Microsoft.PowerShell.CoreCLR.Eventing": "7.2.22",
           "Microsoft.PowerShell.Native": "7.2.1",
           "Microsoft.Win32.Registry.AccessControl": "6.0.0",
           "Newtonsoft.Json": "13.0.3",
           "System.Configuration.ConfigurationManager": "6.0.1",
           "System.Diagnostics.DiagnosticSource": "5.0.1",
           "System.DirectoryServices": "6.0.1",
+          "System.Formats.Asn1": "6.0.1",
           "System.Management": "6.0.2",
           "System.Runtime.CompilerServices.Unsafe": "6.0.0",
-          "System.Security.AccessControl": "6.0.0",
+          "System.Security.AccessControl": "6.0.1",
           "System.Security.Cryptography.Pkcs": "6.0.4",
           "System.Security.Permissions": "6.0.0",
           "System.Text.Encoding.CodePages": "6.0.0"
@@ -3737,7 +3737,7 @@
           "lib/netstandard1.3/System.Runtime.Numerics.dll": {}
         }
       },
-      "System.Security.AccessControl/6.0.0": {
+      "System.Security.AccessControl/6.0.1": {
         "type": "package",
         "compile": {
           "lib/net6.0/_._": {
@@ -4398,17 +4398,20 @@
           }
         }
       },
-      "System.Threading.Channels/4.7.1": {
+      "System.Threading.Channels/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netcoreapp3.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.0/System.Threading.Channels.dll": {
+          "lib/net6.0/System.Threading.Channels.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Threading.Tasks/4.3.0": {
@@ -5592,7 +5595,7 @@
           "lib/net6.0-windows7.0/UiPath.OfficeLibs.Package.dll": {}
         }
       },
-      "UiPath.OpenTelemetry.Contracts/2.1.3": {
+      "UiPath.OpenTelemetry.Contracts/2.3.3": {
         "type": "package",
         "dependencies": {
           "System.Diagnostics.DiagnosticSource": "6.0.0"
@@ -5604,7 +5607,7 @@
           "lib/netstandard2.0/UiPath.OpenTelemetry.Contracts.dll": {}
         }
       },
-      "UiPath.Platform/24.11.0-alpha.6160837": {
+      "UiPath.Platform/24.11.0-alpha.6487324": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
@@ -5658,12 +5661,12 @@
           }
         }
       },
-      "UiPath.System.Activities/24.11.0-alpha.6348978": {
+      "UiPath.System.Activities/24.11.0-preview": {
         "type": "package",
         "dependencies": {
           "CsvHelper": "16.0.0",
-          "Microsoft.AspNet.SignalR.Client": "2.4.0",
-          "Microsoft.AspNetCore.SignalR.Client": "3.1.6",
+          "Microsoft.AspNet.SignalR.Client": "2.4.3",
+          "Microsoft.AspNetCore.SignalR.Client": "6.0.0",
           "Microsoft.CSharp": "4.7.0",
           "Microsoft.CodeAnalysis.CSharp": "4.5.0-2.22527.10",
           "Microsoft.CodeAnalysis.Common": "4.5.0-2.22527.10",
@@ -5673,11 +5676,11 @@
           "Microsoft.VisualBasic": "10.3.0",
           "SharpZipLib": "1.3.3",
           "System.Activities.ViewModels": "1.0.0-20240418.6",
-          "System.Management.Automation": "7.2.15",
+          "System.Management.Automation": "7.2.22",
           "UiPath.CodedWorkflows": "24.10.0",
-          "UiPath.Platform": "24.10.3-alpha.6284986",
-          "UiPath.System.Activities.Runtime": "24.11.0-alpha.6348978",
-          "UiPath.Telemetry.Client": "2.1.3"
+          "UiPath.Platform": "24.11.0-alpha.6487324",
+          "UiPath.System.Activities.Runtime": "24.11.0-preview",
+          "UiPath.Telemetry.Client": "2.3.3"
         },
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -5728,10 +5731,10 @@
           }
         }
       },
-      "UiPath.System.Activities.Runtime/24.11.0-alpha.6348978": {
+      "UiPath.System.Activities.Runtime/24.11.0-preview": {
         "type": "package",
         "dependencies": {
-          "UiPath.System.Activities.Runtime.Windows": "24.11.0-alpha.6348978"
+          "UiPath.System.Activities.Runtime.Windows": "24.11.0-preview"
         },
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -5740,25 +5743,25 @@
           "lib/net6.0-windows7.0/UiPath.System.Activities.Package.Runtime.dll": {}
         }
       },
-      "UiPath.System.Activities.Runtime.Windows/24.11.0-alpha.6348978": {
+      "UiPath.System.Activities.Runtime.Windows/24.11.0-preview": {
         "type": "package",
         "dependencies": {
           "CsvHelper": "16.0.0",
-          "Microsoft.AspNet.SignalR.Client": "2.4.0",
-          "Microsoft.AspNetCore.SignalR.Client": "3.1.6",
+          "Microsoft.AspNet.SignalR.Client": "2.4.3",
+          "Microsoft.AspNetCore.SignalR.Client": "6.0.0",
           "Microsoft.CSharp": "4.7.0",
           "Microsoft.CodeAnalysis.CSharp": "4.5.0-2.22527.10",
           "Microsoft.CodeAnalysis.Common": "4.5.0-2.22527.10",
           "Microsoft.CodeAnalysis.VisualBasic": "4.5.0-2.22527.10",
           "Microsoft.Management.Infrastructure": "3.0.0",
-          "Microsoft.PowerShell.SDK": "7.2.15",
+          "Microsoft.PowerShell.SDK": "7.2.22",
           "Microsoft.Rest.ClientRuntime": "2.3.24",
           "Microsoft.VisualBasic": "10.3.0",
           "SharpZipLib": "1.3.3",
-          "System.Management.Automation": "7.2.15",
+          "System.Management.Automation": "7.2.22",
           "UiPath.CodedWorkflows": "24.10.0",
-          "UiPath.Platform": "24.10.3-alpha.6284986",
-          "UiPath.Telemetry.Client": "2.1.3"
+          "UiPath.Platform": "24.11.0-alpha.6487324",
+          "UiPath.Telemetry.Client": "2.3.3"
         },
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -5814,13 +5817,13 @@
           }
         }
       },
-      "UiPath.Telemetry.Client/2.1.3": {
+      "UiPath.Telemetry.Client/2.3.3": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "11.0.2",
+          "Newtonsoft.Json": "13.0.1",
           "System.Threading.Tasks.Dataflow": "5.0.0",
           "System.ValueTuple": "4.5.0",
-          "UiPath.OpenTelemetry.Contracts": "2.1.3"
+          "UiPath.OpenTelemetry.Contracts": "2.3.3"
         },
         "compile": {
           "lib/netstandard2.0/_._": {}
@@ -6817,7 +6820,7 @@
           }
         }
       },
-      "Microsoft.AspNet.SignalR.Client/2.4.0": {
+      "Microsoft.AspNet.SignalR.Client/2.4.3": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2"
@@ -6833,140 +6836,123 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Connections.Abstractions/3.1.6": {
+      "Microsoft.AspNetCore.Connections.Abstractions/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "3.1.6",
-          "System.IO.Pipelines": "4.7.1"
+          "Microsoft.Extensions.Features": "6.0.0",
+          "System.IO.Pipelines": "6.0.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.1/Microsoft.AspNetCore.Connections.Abstractions.dll": {
+          "lib/net6.0/Microsoft.AspNetCore.Connections.Abstractions.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Http.Connections.Client/3.1.6": {
+      "Microsoft.AspNetCore.Http.Connections.Client/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Connections.Common": "3.1.6",
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.6",
-          "Microsoft.Extensions.Options": "3.1.6"
+          "Microsoft.AspNetCore.Http.Connections.Common": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
         },
         "compile": {
-          "lib/netstandard2.1/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.1/Microsoft.AspNetCore.Http.Connections.Client.dll": {
+          "lib/net6.0/Microsoft.AspNetCore.Http.Connections.Client.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Http.Connections.Common/3.1.6": {
+      "Microsoft.AspNetCore.Http.Connections.Common/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Connections.Abstractions": "3.1.6"
+          "Microsoft.AspNetCore.Connections.Abstractions": "6.0.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.1/Microsoft.AspNetCore.Http.Connections.Common.dll": {
+          "lib/net6.0/Microsoft.AspNetCore.Http.Connections.Common.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Http.Features/3.1.6": {
+      "Microsoft.AspNetCore.SignalR.Client/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.6",
-          "System.IO.Pipelines": "4.7.1"
+          "Microsoft.AspNetCore.Http.Connections.Client": "6.0.0",
+          "Microsoft.AspNetCore.SignalR.Client.Core": "6.0.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.1/Microsoft.AspNetCore.Http.Features.dll": {
+          "lib/net6.0/Microsoft.AspNetCore.SignalR.Client.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.SignalR.Client/3.1.6": {
+      "Microsoft.AspNetCore.SignalR.Client.Core/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Connections.Client": "3.1.6",
-          "Microsoft.AspNetCore.SignalR.Client.Core": "3.1.6"
+          "Microsoft.AspNetCore.SignalR.Common": "6.0.0",
+          "Microsoft.AspNetCore.SignalR.Protocols.Json": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "System.Threading.Channels": "6.0.0"
         },
         "compile": {
-          "lib/netstandard2.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Client.dll": {
+          "lib/net6.0/Microsoft.AspNetCore.SignalR.Client.Core.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.SignalR.Client.Core/3.1.6": {
+      "Microsoft.AspNetCore.SignalR.Common/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.SignalR.Common": "3.1.6",
-          "Microsoft.AspNetCore.SignalR.Protocols.Json": "3.1.6",
-          "Microsoft.Extensions.DependencyInjection": "3.1.6",
-          "Microsoft.Extensions.Logging": "3.1.6",
-          "System.Threading.Channels": "4.7.1"
+          "Microsoft.AspNetCore.Connections.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
         },
         "compile": {
-          "lib/netstandard2.1/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.1/Microsoft.AspNetCore.SignalR.Client.Core.dll": {
+          "lib/net6.0/Microsoft.AspNetCore.SignalR.Common.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.SignalR.Common/3.1.6": {
+      "Microsoft.AspNetCore.SignalR.Protocols.Json/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Connections.Abstractions": "3.1.6",
-          "Microsoft.Extensions.Options": "3.1.6"
+          "Microsoft.AspNetCore.SignalR.Common": "6.0.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.1/Microsoft.AspNetCore.SignalR.Common.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.AspNetCore.SignalR.Protocols.Json/3.1.6": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.SignalR.Common": "3.1.6"
-        },
-        "compile": {
-          "lib/netcoreapp3.1/_._": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/Microsoft.AspNetCore.SignalR.Protocols.Json.dll": {
+          "lib/net6.0/Microsoft.AspNetCore.SignalR.Protocols.Json.dll": {
             "related": ".xml"
           }
         }
@@ -7224,6 +7210,19 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Features/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Features.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.FileSystemGlobbing/6.0.0": {
@@ -7529,10 +7528,10 @@
           "ref/netstandard1.6/_._": {}
         }
       },
-      "Microsoft.Management.Infrastructure.CimCmdlets/7.2.15": {
+      "Microsoft.Management.Infrastructure.CimCmdlets/7.2.22": {
         "type": "package",
         "dependencies": {
-          "System.Management.Automation": "7.2.15"
+          "System.Management.Automation": "7.2.22"
         },
         "compile": {
           "ref/net6.0/_._": {
@@ -7577,10 +7576,10 @@
       "Microsoft.NETCore.Windows.ApiSets/1.0.1": {
         "type": "package"
       },
-      "Microsoft.PowerShell.Commands.Diagnostics/7.2.15": {
+      "Microsoft.PowerShell.Commands.Diagnostics/7.2.22": {
         "type": "package",
         "dependencies": {
-          "System.Management.Automation": "7.2.15"
+          "System.Management.Automation": "7.2.22"
         },
         "compile": {
           "ref/net6.0/_._": {
@@ -7591,10 +7590,10 @@
           "runtimes/win/lib/net6.0/Microsoft.PowerShell.Commands.Diagnostics.dll": {}
         }
       },
-      "Microsoft.PowerShell.Commands.Management/7.2.15": {
+      "Microsoft.PowerShell.Commands.Management/7.2.22": {
         "type": "package",
         "dependencies": {
-          "Microsoft.PowerShell.Security": "7.2.15",
+          "Microsoft.PowerShell.Security": "7.2.22",
           "System.ServiceProcess.ServiceController": "6.0.1"
         },
         "compile": {
@@ -7606,7 +7605,7 @@
           "runtimes/win/lib/net6.0/Microsoft.PowerShell.Commands.Management.dll": {}
         }
       },
-      "Microsoft.PowerShell.Commands.Utility/7.2.15": {
+      "Microsoft.PowerShell.Commands.Utility/7.2.22": {
         "type": "package",
         "dependencies": {
           "Markdig.Signed": "0.31.0",
@@ -7616,7 +7615,7 @@
           "NJsonSchema": "10.5.2",
           "Namotion.Reflection": "2.0.10",
           "System.Drawing.Common": "6.0.0",
-          "System.Management.Automation": "7.2.15",
+          "System.Management.Automation": "7.2.22",
           "System.Threading.AccessControl": "6.0.0"
         },
         "compile": {
@@ -7628,10 +7627,10 @@
           "runtimes/win/lib/net6.0/Microsoft.PowerShell.Commands.Utility.dll": {}
         }
       },
-      "Microsoft.PowerShell.ConsoleHost/7.2.15": {
+      "Microsoft.PowerShell.ConsoleHost/7.2.22": {
         "type": "package",
         "dependencies": {
-          "System.Management.Automation": "7.2.15"
+          "System.Management.Automation": "7.2.22"
         },
         "compile": {
           "ref/net6.0/_._": {
@@ -7642,7 +7641,7 @@
           "runtimes/win/lib/net6.0/Microsoft.PowerShell.ConsoleHost.dll": {}
         }
       },
-      "Microsoft.PowerShell.CoreCLR.Eventing/7.2.15": {
+      "Microsoft.PowerShell.CoreCLR.Eventing/7.2.22": {
         "type": "package",
         "dependencies": {
           "System.Diagnostics.EventLog": "6.0.0"
@@ -7674,22 +7673,22 @@
           "runtimes/win-x64/native/_._": {}
         }
       },
-      "Microsoft.PowerShell.SDK/7.2.15": {
+      "Microsoft.PowerShell.SDK/7.2.22": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.ObjectPool": "5.0.17",
-          "Microsoft.Management.Infrastructure.CimCmdlets": "7.2.15",
+          "Microsoft.Management.Infrastructure.CimCmdlets": "7.2.22",
           "Microsoft.NETCore.Windows.ApiSets": "1.0.1",
-          "Microsoft.PowerShell.Commands.Diagnostics": "7.2.15",
-          "Microsoft.PowerShell.Commands.Management": "7.2.15",
-          "Microsoft.PowerShell.Commands.Utility": "7.2.15",
-          "Microsoft.PowerShell.ConsoleHost": "7.2.15",
-          "Microsoft.PowerShell.Security": "7.2.15",
-          "Microsoft.WSMan.Management": "7.2.15",
-          "Microsoft.Windows.Compatibility": "6.0.7",
-          "System.Data.SqlClient": "4.8.5",
+          "Microsoft.PowerShell.Commands.Diagnostics": "7.2.22",
+          "Microsoft.PowerShell.Commands.Management": "7.2.22",
+          "Microsoft.PowerShell.Commands.Utility": "7.2.22",
+          "Microsoft.PowerShell.ConsoleHost": "7.2.22",
+          "Microsoft.PowerShell.Security": "7.2.22",
+          "Microsoft.WSMan.Management": "7.2.22",
+          "Microsoft.Windows.Compatibility": "6.0.8",
+          "System.Data.SqlClient": "4.8.6",
           "System.IO.Packaging": "6.0.0",
-          "System.Management.Automation": "7.2.15",
+          "System.Management.Automation": "7.2.22",
           "System.Net.Http.WinHttpHandler": "6.0.1",
           "System.Private.ServiceModel": "4.9.0",
           "System.ServiceModel.Duplex": "4.9.0",
@@ -7715,10 +7714,10 @@
           }
         }
       },
-      "Microsoft.PowerShell.Security/7.2.15": {
+      "Microsoft.PowerShell.Security/7.2.22": {
         "type": "package",
         "dependencies": {
-          "System.Management.Automation": "7.2.15"
+          "System.Management.Automation": "7.2.22"
         },
         "compile": {
           "ref/net6.0/_._": {
@@ -7851,7 +7850,7 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "Microsoft.Windows.Compatibility/6.0.7": {
+      "Microsoft.Windows.Compatibility/6.0.8": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry.AccessControl": "6.0.0",
@@ -7862,7 +7861,7 @@
           "System.Configuration.ConfigurationManager": "6.0.1",
           "System.Data.Odbc": "6.0.1",
           "System.Data.OleDb": "6.0.0",
-          "System.Data.SqlClient": "4.8.5",
+          "System.Data.SqlClient": "4.8.6",
           "System.Diagnostics.EventLog": "6.0.0",
           "System.Diagnostics.PerformanceCounter": "6.0.1",
           "System.DirectoryServices": "6.0.1",
@@ -7875,7 +7874,7 @@
           "System.Reflection.Context": "6.0.0",
           "System.Runtime.Caching": "6.0.0",
           "System.Security.AccessControl": "6.0.0",
-          "System.Security.Cryptography.Pkcs": "6.0.4",
+          "System.Security.Cryptography.Pkcs": "6.0.3",
           "System.Security.Cryptography.ProtectedData": "6.0.0",
           "System.Security.Cryptography.Xml": "6.0.1",
           "System.Security.Permissions": "6.0.0",
@@ -7895,11 +7894,11 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "Microsoft.WSMan.Management/7.2.15": {
+      "Microsoft.WSMan.Management/7.2.22": {
         "type": "package",
         "dependencies": {
-          "Microsoft.WSMan.Runtime": "7.2.15",
-          "System.Management.Automation": "7.2.15",
+          "Microsoft.WSMan.Runtime": "7.2.22",
+          "System.Management.Automation": "7.2.22",
           "System.ServiceProcess.ServiceController": "6.0.1"
         },
         "compile": {
@@ -7911,7 +7910,7 @@
           "runtimes/win/lib/net6.0/Microsoft.WSMan.Management.dll": {}
         }
       },
-      "Microsoft.WSMan.Runtime/7.2.15": {
+      "Microsoft.WSMan.Runtime/7.2.22": {
         "type": "package",
         "compile": {
           "ref/net6.0/_._": {
@@ -8967,7 +8966,7 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "System.Data.SqlClient/4.8.5": {
+      "System.Data.SqlClient/4.8.6": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
@@ -9386,17 +9385,20 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "System.IO.Pipelines/4.7.1": {
+      "System.IO.Pipelines/6.0.0": {
         "type": "package",
         "compile": {
-          "ref/netcoreapp2.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.0/System.IO.Pipelines.dll": {
+          "lib/net6.0/System.IO.Pipelines.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.IO.Ports/6.0.0": {
@@ -9517,22 +9519,23 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "System.Management.Automation/7.2.15": {
+      "System.Management.Automation/7.2.22": {
         "type": "package",
         "dependencies": {
           "Microsoft.ApplicationInsights": "2.21.0",
           "Microsoft.CSharp": "4.7.0",
           "Microsoft.Management.Infrastructure": "2.0.0",
-          "Microsoft.PowerShell.CoreCLR.Eventing": "7.2.15",
+          "Microsoft.PowerShell.CoreCLR.Eventing": "7.2.22",
           "Microsoft.PowerShell.Native": "7.2.1",
           "Microsoft.Win32.Registry.AccessControl": "6.0.0",
           "Newtonsoft.Json": "13.0.3",
           "System.Configuration.ConfigurationManager": "6.0.1",
           "System.Diagnostics.DiagnosticSource": "5.0.1",
           "System.DirectoryServices": "6.0.1",
+          "System.Formats.Asn1": "6.0.1",
           "System.Management": "6.0.2",
           "System.Runtime.CompilerServices.Unsafe": "6.0.0",
-          "System.Security.AccessControl": "6.0.0",
+          "System.Security.AccessControl": "6.0.1",
           "System.Security.Cryptography.Pkcs": "6.0.4",
           "System.Security.Permissions": "6.0.0",
           "System.Text.Encoding.CodePages": "6.0.0"
@@ -10076,7 +10079,7 @@
           "lib/netstandard1.3/System.Runtime.Numerics.dll": {}
         }
       },
-      "System.Security.AccessControl/6.0.0": {
+      "System.Security.AccessControl/6.0.1": {
         "type": "package",
         "compile": {
           "lib/net6.0/_._": {
@@ -10637,17 +10640,20 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "System.Threading.Channels/4.7.1": {
+      "System.Threading.Channels/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netcoreapp3.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.0/System.Threading.Channels.dll": {
+          "lib/net6.0/System.Threading.Channels.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Threading.Overlapped/4.3.0": {
@@ -11844,7 +11850,7 @@
           "lib/net6.0-windows7.0/UiPath.OfficeLibs.Package.dll": {}
         }
       },
-      "UiPath.OpenTelemetry.Contracts/2.1.3": {
+      "UiPath.OpenTelemetry.Contracts/2.3.3": {
         "type": "package",
         "dependencies": {
           "System.Diagnostics.DiagnosticSource": "6.0.0"
@@ -11856,7 +11862,7 @@
           "lib/netstandard2.0/UiPath.OpenTelemetry.Contracts.dll": {}
         }
       },
-      "UiPath.Platform/24.11.0-alpha.6160837": {
+      "UiPath.Platform/24.11.0-alpha.6487324": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
@@ -11910,12 +11916,12 @@
           }
         }
       },
-      "UiPath.System.Activities/24.11.0-alpha.6348978": {
+      "UiPath.System.Activities/24.11.0-preview": {
         "type": "package",
         "dependencies": {
           "CsvHelper": "16.0.0",
-          "Microsoft.AspNet.SignalR.Client": "2.4.0",
-          "Microsoft.AspNetCore.SignalR.Client": "3.1.6",
+          "Microsoft.AspNet.SignalR.Client": "2.4.3",
+          "Microsoft.AspNetCore.SignalR.Client": "6.0.0",
           "Microsoft.CSharp": "4.7.0",
           "Microsoft.CodeAnalysis.CSharp": "4.5.0-2.22527.10",
           "Microsoft.CodeAnalysis.Common": "4.5.0-2.22527.10",
@@ -11925,11 +11931,11 @@
           "Microsoft.VisualBasic": "10.3.0",
           "SharpZipLib": "1.3.3",
           "System.Activities.ViewModels": "1.0.0-20240418.6",
-          "System.Management.Automation": "7.2.15",
+          "System.Management.Automation": "7.2.22",
           "UiPath.CodedWorkflows": "24.10.0",
-          "UiPath.Platform": "24.10.3-alpha.6284986",
-          "UiPath.System.Activities.Runtime": "24.11.0-alpha.6348978",
-          "UiPath.Telemetry.Client": "2.1.3"
+          "UiPath.Platform": "24.11.0-alpha.6487324",
+          "UiPath.System.Activities.Runtime": "24.11.0-preview",
+          "UiPath.Telemetry.Client": "2.3.3"
         },
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -11980,10 +11986,10 @@
           }
         }
       },
-      "UiPath.System.Activities.Runtime/24.11.0-alpha.6348978": {
+      "UiPath.System.Activities.Runtime/24.11.0-preview": {
         "type": "package",
         "dependencies": {
-          "UiPath.System.Activities.Runtime.Windows": "24.11.0-alpha.6348978"
+          "UiPath.System.Activities.Runtime.Windows": "24.11.0-preview"
         },
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -11992,25 +11998,25 @@
           "lib/net6.0-windows7.0/UiPath.System.Activities.Package.Runtime.dll": {}
         }
       },
-      "UiPath.System.Activities.Runtime.Windows/24.11.0-alpha.6348978": {
+      "UiPath.System.Activities.Runtime.Windows/24.11.0-preview": {
         "type": "package",
         "dependencies": {
           "CsvHelper": "16.0.0",
-          "Microsoft.AspNet.SignalR.Client": "2.4.0",
-          "Microsoft.AspNetCore.SignalR.Client": "3.1.6",
+          "Microsoft.AspNet.SignalR.Client": "2.4.3",
+          "Microsoft.AspNetCore.SignalR.Client": "6.0.0",
           "Microsoft.CSharp": "4.7.0",
           "Microsoft.CodeAnalysis.CSharp": "4.5.0-2.22527.10",
           "Microsoft.CodeAnalysis.Common": "4.5.0-2.22527.10",
           "Microsoft.CodeAnalysis.VisualBasic": "4.5.0-2.22527.10",
           "Microsoft.Management.Infrastructure": "3.0.0",
-          "Microsoft.PowerShell.SDK": "7.2.15",
+          "Microsoft.PowerShell.SDK": "7.2.22",
           "Microsoft.Rest.ClientRuntime": "2.3.24",
           "Microsoft.VisualBasic": "10.3.0",
           "SharpZipLib": "1.3.3",
-          "System.Management.Automation": "7.2.15",
+          "System.Management.Automation": "7.2.22",
           "UiPath.CodedWorkflows": "24.10.0",
-          "UiPath.Platform": "24.10.3-alpha.6284986",
-          "UiPath.Telemetry.Client": "2.1.3"
+          "UiPath.Platform": "24.11.0-alpha.6487324",
+          "UiPath.Telemetry.Client": "2.3.3"
         },
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -12066,13 +12072,13 @@
           }
         }
       },
-      "UiPath.Telemetry.Client/2.1.3": {
+      "UiPath.Telemetry.Client/2.3.3": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "11.0.2",
+          "Newtonsoft.Json": "13.0.1",
           "System.Threading.Tasks.Dataflow": "5.0.0",
           "System.ValueTuple": "4.5.0",
-          "UiPath.OpenTelemetry.Contracts": "2.1.3"
+          "UiPath.OpenTelemetry.Contracts": "2.3.3"
         },
         "compile": {
           "lib/netstandard2.0/_._": {}
@@ -13318,10 +13324,10 @@
         "microsoft.applicationinsights.nuspec"
       ]
     },
-    "Microsoft.AspNet.SignalR.Client/2.4.0": {
-      "sha512": "xGoQq9dEsBU49U1Whl0To2JyRQePmo8ayYS8VNruLlQaX+fQBzYyLJeMlW9r7mlt8Vc9JP+083m9pKrfYpdDbg==",
+    "Microsoft.AspNet.SignalR.Client/2.4.3": {
+      "sha512": "W+sWtcEUG4Z2Ea+tLZs4n8SVjpVU/7MSb6TrfJ9/AVdQ0Yu75vaDWzbIvjk1TvoqdyQldrpsWXRyHtGU/jHtiQ==",
       "type": "package",
-      "path": "microsoft.aspnet.signalr.client/2.4.0",
+      "path": "microsoft.aspnet.signalr.client/2.4.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -13337,143 +13343,147 @@
         "lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.dll",
         "lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.pdb",
         "lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.xml",
-        "microsoft.aspnet.signalr.client.2.4.0.nupkg.sha512",
-        "microsoft.aspnet.signalr.client.nuspec"
+        "microsoft.aspnet.signalr.client.2.4.3.nupkg.sha512",
+        "microsoft.aspnet.signalr.client.nuspec",
+        "packageIcon.png"
       ]
     },
-    "Microsoft.AspNetCore.Connections.Abstractions/3.1.6": {
-      "sha512": "PGsLbPyqE5PnBSqhBVH0WmdIwvpKyJnQvaNJpC0HYyorJiiyFFeG18a4nns8hWAxHQBsuXfc5lk8zLLPHhMq+A==",
+    "Microsoft.AspNetCore.Connections.Abstractions/6.0.0": {
+      "sha512": "aeOQydxRfisTS750J85PMCc/66ijY+b1+xUcCPmFhnzbdcgFpUQW0Wx4blaDAUxcHWxvsZWwQtxre5hDZ78pEA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.connections.abstractions/3.1.6",
+      "path": "microsoft.aspnetcore.connections.abstractions/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/netcoreapp3.1/Microsoft.AspNetCore.Connections.Abstractions.dll",
-        "lib/netcoreapp3.1/Microsoft.AspNetCore.Connections.Abstractions.xml",
+        "lib/net461/Microsoft.AspNetCore.Connections.Abstractions.dll",
+        "lib/net461/Microsoft.AspNetCore.Connections.Abstractions.xml",
+        "lib/net6.0/Microsoft.AspNetCore.Connections.Abstractions.dll",
+        "lib/net6.0/Microsoft.AspNetCore.Connections.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Connections.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Connections.Abstractions.xml",
         "lib/netstandard2.1/Microsoft.AspNetCore.Connections.Abstractions.dll",
         "lib/netstandard2.1/Microsoft.AspNetCore.Connections.Abstractions.xml",
-        "microsoft.aspnetcore.connections.abstractions.3.1.6.nupkg.sha512",
+        "microsoft.aspnetcore.connections.abstractions.6.0.0.nupkg.sha512",
         "microsoft.aspnetcore.connections.abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Http.Connections.Client/3.1.6": {
-      "sha512": "UDjxn0qZWq/WVNNdsl/0WfmhX5RIIP7ABnKd/bCG9HY8u/l/Z984fKkEFiEJlYiEIy1ZOaiGgOFpe/Safzts5A==",
+    "Microsoft.AspNetCore.Http.Connections.Client/6.0.0": {
+      "sha512": "3KtBO0/c8IoQRbH3gitSlJHEc4QpvCa4C0L1XyJAsKjNXTbKQeSxc9ONnZCAm6gIS7b3x+gxnQt7lz7AvUhHKA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.http.connections.client/3.1.6",
+      "path": "microsoft.aspnetcore.http.connections.client/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.AspNetCore.Http.Connections.Client.dll",
+        "lib/net461/Microsoft.AspNetCore.Http.Connections.Client.xml",
+        "lib/net6.0/Microsoft.AspNetCore.Http.Connections.Client.dll",
+        "lib/net6.0/Microsoft.AspNetCore.Http.Connections.Client.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Connections.Client.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Connections.Client.xml",
         "lib/netstandard2.1/Microsoft.AspNetCore.Http.Connections.Client.dll",
         "lib/netstandard2.1/Microsoft.AspNetCore.Http.Connections.Client.xml",
-        "microsoft.aspnetcore.http.connections.client.3.1.6.nupkg.sha512",
+        "microsoft.aspnetcore.http.connections.client.6.0.0.nupkg.sha512",
         "microsoft.aspnetcore.http.connections.client.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Http.Connections.Common/3.1.6": {
-      "sha512": "G3CbJXAy0g2GTluBxqy5wuwTpwSPKvBIhqzHNPXjZcHA/e5upwE7koINXzLMp5Nj7kNDRr8YXLn6kB6IAS1NxQ==",
+    "Microsoft.AspNetCore.Http.Connections.Common/6.0.0": {
+      "sha512": "JDHt9xDtrEh2e9rDMhXWHbac3L80ccyZtKndjoAp4puaROEHku6ZQadZWs6KWif/xpjAQaNLP7PH069xMX2MtA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.http.connections.common/3.1.6",
+      "path": "microsoft.aspnetcore.http.connections.common/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/netcoreapp3.1/Microsoft.AspNetCore.Http.Connections.Common.dll",
-        "lib/netcoreapp3.1/Microsoft.AspNetCore.Http.Connections.Common.xml",
+        "lib/net461/Microsoft.AspNetCore.Http.Connections.Common.dll",
+        "lib/net461/Microsoft.AspNetCore.Http.Connections.Common.xml",
+        "lib/net6.0/Microsoft.AspNetCore.Http.Connections.Common.dll",
+        "lib/net6.0/Microsoft.AspNetCore.Http.Connections.Common.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Connections.Common.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Connections.Common.xml",
-        "microsoft.aspnetcore.http.connections.common.3.1.6.nupkg.sha512",
+        "microsoft.aspnetcore.http.connections.common.6.0.0.nupkg.sha512",
         "microsoft.aspnetcore.http.connections.common.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Http.Features/3.1.6": {
-      "sha512": "dnV2D6wxXQ7dzqOpZrJB43M4CECujyg3JeT92Dr2K5qv92rl+m59VRTgI9C3jEtRoojJRtr7cUxuU1MbEhZ8vw==",
+    "Microsoft.AspNetCore.SignalR.Client/6.0.0": {
+      "sha512": "GytHtL5QoZ5uHbi6lJd9thNBxyRKEQdnf1d+a0ZzxkE3EjWECXSbnodJ33TmWwyUNHFS/XzpWA8qUxpqt5Fguw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.http.features/3.1.6",
+      "path": "microsoft.aspnetcore.signalr.client/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/netcoreapp3.1/Microsoft.AspNetCore.Http.Features.dll",
-        "lib/netcoreapp3.1/Microsoft.AspNetCore.Http.Features.xml",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
-        "microsoft.aspnetcore.http.features.3.1.6.nupkg.sha512",
-        "microsoft.aspnetcore.http.features.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.SignalR.Client/3.1.6": {
-      "sha512": "fcJLCV35P4iLoofOfxKoTgMsxOl81DL4N8qAnYcDhrGe2ZjTeCHbHvaS27QZrVKDPn6CjgcVumO98nLSLB7YJA==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.signalr.client/3.1.6",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.AspNetCore.SignalR.Client.dll",
+        "lib/net461/Microsoft.AspNetCore.SignalR.Client.xml",
+        "lib/net6.0/Microsoft.AspNetCore.SignalR.Client.dll",
+        "lib/net6.0/Microsoft.AspNetCore.SignalR.Client.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Client.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Client.xml",
-        "microsoft.aspnetcore.signalr.client.3.1.6.nupkg.sha512",
+        "microsoft.aspnetcore.signalr.client.6.0.0.nupkg.sha512",
         "microsoft.aspnetcore.signalr.client.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.SignalR.Client.Core/3.1.6": {
-      "sha512": "yx5xKs7C0ibefLaL5OyhEYVI6z4KfJ+8qGeRM3GpMdyqUE3IMV+UJiMXDk7sbKWG+jmGEtK1SjXEg0CbiQ0aYw==",
+    "Microsoft.AspNetCore.SignalR.Client.Core/6.0.0": {
+      "sha512": "hUyRpqfa2rnXVduN0XxiZQjRJzim+KZdf41VbKupo8hYCKHhNZ7bJJXoN2DPhVqLiu4rpBFmi+qHGyKbh9E6LA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.signalr.client.core/3.1.6",
+      "path": "microsoft.aspnetcore.signalr.client.core/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.AspNetCore.SignalR.Client.Core.dll",
+        "lib/net461/Microsoft.AspNetCore.SignalR.Client.Core.xml",
+        "lib/net6.0/Microsoft.AspNetCore.SignalR.Client.Core.dll",
+        "lib/net6.0/Microsoft.AspNetCore.SignalR.Client.Core.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Client.Core.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Client.Core.xml",
         "lib/netstandard2.1/Microsoft.AspNetCore.SignalR.Client.Core.dll",
         "lib/netstandard2.1/Microsoft.AspNetCore.SignalR.Client.Core.xml",
-        "microsoft.aspnetcore.signalr.client.core.3.1.6.nupkg.sha512",
+        "microsoft.aspnetcore.signalr.client.core.6.0.0.nupkg.sha512",
         "microsoft.aspnetcore.signalr.client.core.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.SignalR.Common/3.1.6": {
-      "sha512": "rYGk842JbQ/IlRhXifTSW2zLggdG4/NzH6e+2iRL+zD+ZE6sg2duFgJzqHySWoO863l3JXbpW1ryTh43PCKIzA==",
+    "Microsoft.AspNetCore.SignalR.Common/6.0.0": {
+      "sha512": "ryux/SB0JMcjivc6HUGpE+gSvUIXJqK6HM2sn5P6CgFqwOaM/YcJhF+dIgeJZTcB+69iaUcPZ8nMSAyYWPMI6A==",
       "type": "package",
-      "path": "microsoft.aspnetcore.signalr.common/3.1.6",
+      "path": "microsoft.aspnetcore.signalr.common/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/netcoreapp3.1/Microsoft.AspNetCore.SignalR.Common.dll",
-        "lib/netcoreapp3.1/Microsoft.AspNetCore.SignalR.Common.xml",
+        "lib/net461/Microsoft.AspNetCore.SignalR.Common.dll",
+        "lib/net461/Microsoft.AspNetCore.SignalR.Common.xml",
+        "lib/net6.0/Microsoft.AspNetCore.SignalR.Common.dll",
+        "lib/net6.0/Microsoft.AspNetCore.SignalR.Common.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Common.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Common.xml",
-        "microsoft.aspnetcore.signalr.common.3.1.6.nupkg.sha512",
+        "microsoft.aspnetcore.signalr.common.6.0.0.nupkg.sha512",
         "microsoft.aspnetcore.signalr.common.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.SignalR.Protocols.Json/3.1.6": {
-      "sha512": "nF9IiFOtkUXJh5vNQKRzkJ90HoFYSxxen9E46BWWKkl56QepC8ICwGvx86R3CQaHN8Ii5T8zd8Cni2JvUNXsog==",
+    "Microsoft.AspNetCore.SignalR.Protocols.Json/6.0.0": {
+      "sha512": "PN4sFeX0wDalyVMzZIJBQaRltMRFE99M5wDbwA6GFOqqAECjMcD6jX0AOkgu6jkNo9aac9yzgit0pLFDS96Knw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.signalr.protocols.json/3.1.6",
+      "path": "microsoft.aspnetcore.signalr.protocols.json/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/netcoreapp3.1/Microsoft.AspNetCore.SignalR.Protocols.Json.dll",
-        "lib/netcoreapp3.1/Microsoft.AspNetCore.SignalR.Protocols.Json.xml",
+        "lib/net461/Microsoft.AspNetCore.SignalR.Protocols.Json.dll",
+        "lib/net461/Microsoft.AspNetCore.SignalR.Protocols.Json.xml",
+        "lib/net6.0/Microsoft.AspNetCore.SignalR.Protocols.Json.dll",
+        "lib/net6.0/Microsoft.AspNetCore.SignalR.Protocols.Json.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Protocols.Json.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Protocols.Json.xml",
-        "microsoft.aspnetcore.signalr.protocols.json.3.1.6.nupkg.sha512",
+        "microsoft.aspnetcore.signalr.protocols.json.6.0.0.nupkg.sha512",
         "microsoft.aspnetcore.signalr.protocols.json.nuspec"
       ]
     },
@@ -14028,6 +14038,25 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Microsoft.Extensions.Features/6.0.0": {
+      "sha512": "EE7RgQufEOvJlQZazvLUuba7thDQ8Pi4vprxzoByGdpkdZCTAK65AybfYxDf/jFsDjumLDK0E8lm6OqWyUZUKw==",
+      "type": "package",
+      "path": "microsoft.extensions.features/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Features.dll",
+        "lib/net461/Microsoft.Extensions.Features.xml",
+        "lib/net6.0/Microsoft.Extensions.Features.dll",
+        "lib/net6.0/Microsoft.Extensions.Features.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Features.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Features.xml",
+        "microsoft.extensions.features.6.0.0.nupkg.sha512",
+        "microsoft.extensions.features.nuspec"
+      ]
+    },
     "Microsoft.Extensions.FileSystemGlobbing/6.0.0": {
       "sha512": "ip8jnL1aPiaPeKINCqaTEbvBFDmVx9dXQEBZ2HOBRXPD1eabGNqP/bKlsIcp7U2lGxiXd5xIhoFcmY8nM4Hdiw==",
       "type": "package",
@@ -14486,19 +14515,15 @@
         "ref/netstandard1.6/Microsoft.Management.Infrastructure.dll"
       ]
     },
-    "Microsoft.Management.Infrastructure.CimCmdlets/7.2.15": {
-      "sha512": "I26aUmbUsYKi/NdCgBDEWwrtMfEuzoYrtKVCwi7c3OOWfMDrESIqo1tCJCkzXDcyNxXxUCmpEAcfNw6QnDOlTQ==",
+    "Microsoft.Management.Infrastructure.CimCmdlets/7.2.22": {
+      "sha512": "wDw9BeitB6/eMd9c3Frr9u0RWC/+LzlmB8CiAwDRMWeNijF/im048yImc6DGXnSQ7zj9PzdMKGrpc9mdEXSaaw==",
       "type": "package",
-      "path": "microsoft.management.infrastructure.cimcmdlets/7.2.15",
+      "path": "microsoft.management.infrastructure.cimcmdlets/7.2.22",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Powershell_black_64.png",
-        "_manifest/spdx_2.2/bsi.json",
-        "_manifest/spdx_2.2/manifest.cat",
-        "_manifest/spdx_2.2/manifest.spdx.json",
-        "_manifest/spdx_2.2/manifest.spdx.json.sha256",
-        "microsoft.management.infrastructure.cimcmdlets.7.2.15.nupkg.sha512",
+        "microsoft.management.infrastructure.cimcmdlets.7.2.22.nupkg.sha512",
         "microsoft.management.infrastructure.cimcmdlets.nuspec",
         "ref/net6.0/Microsoft.Management.Infrastructure.CimCmdlets.dll",
         "ref/net6.0/Microsoft.Management.Infrastructure.CimCmdlets.xml",
@@ -14596,38 +14621,30 @@
         "runtime.json"
       ]
     },
-    "Microsoft.PowerShell.Commands.Diagnostics/7.2.15": {
-      "sha512": "YtYEl3eNKNuzTX+i9AKgQi85IUnPPAVZ9H8MEm6v3S70h8LCqIPg8fDTy5AGnKYcntdCNygOK9R5twiDXNUuSg==",
+    "Microsoft.PowerShell.Commands.Diagnostics/7.2.22": {
+      "sha512": "t9U8TlEXimyuy76kdc+eTCa2N92dRehfAYkWS5gg0oYvSkOIDLpicsZ/VHIFPiJfE+8suxxkinQFvFK/dmpvuw==",
       "type": "package",
-      "path": "microsoft.powershell.commands.diagnostics/7.2.15",
+      "path": "microsoft.powershell.commands.diagnostics/7.2.22",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Powershell_black_64.png",
-        "_manifest/spdx_2.2/bsi.json",
-        "_manifest/spdx_2.2/manifest.cat",
-        "_manifest/spdx_2.2/manifest.spdx.json",
-        "_manifest/spdx_2.2/manifest.spdx.json.sha256",
-        "microsoft.powershell.commands.diagnostics.7.2.15.nupkg.sha512",
+        "microsoft.powershell.commands.diagnostics.7.2.22.nupkg.sha512",
         "microsoft.powershell.commands.diagnostics.nuspec",
         "ref/net6.0/Microsoft.PowerShell.Commands.Diagnostics.dll",
         "ref/net6.0/Microsoft.PowerShell.Commands.Diagnostics.xml",
         "runtimes/win/lib/net6.0/Microsoft.PowerShell.Commands.Diagnostics.dll"
       ]
     },
-    "Microsoft.PowerShell.Commands.Management/7.2.15": {
-      "sha512": "rEBpeF1ZdyUvg9g07qlAVuYqaqqQ6G4W2f4Yp1p3egJG4phXKjCjRdLJGVpp0kwTcdgS/2VOlNjD7O2iC3Ulig==",
+    "Microsoft.PowerShell.Commands.Management/7.2.22": {
+      "sha512": "1WWmgAyrzp03O5G4ymPlhxlzMN0YHlM75JICCg1WtygbFOulTxAhJufxlqN7S6UeoI03yFJ19TKf0z8pPkZbaA==",
       "type": "package",
-      "path": "microsoft.powershell.commands.management/7.2.15",
+      "path": "microsoft.powershell.commands.management/7.2.22",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Powershell_black_64.png",
-        "_manifest/spdx_2.2/bsi.json",
-        "_manifest/spdx_2.2/manifest.cat",
-        "_manifest/spdx_2.2/manifest.spdx.json",
-        "_manifest/spdx_2.2/manifest.spdx.json.sha256",
-        "microsoft.powershell.commands.management.7.2.15.nupkg.sha512",
+        "microsoft.powershell.commands.management.7.2.22.nupkg.sha512",
         "microsoft.powershell.commands.management.nuspec",
         "ref/net6.0/Microsoft.PowerShell.Commands.Management.dll",
         "ref/net6.0/Microsoft.PowerShell.Commands.Management.xml",
@@ -14635,19 +14652,15 @@
         "runtimes/win/lib/net6.0/Microsoft.PowerShell.Commands.Management.dll"
       ]
     },
-    "Microsoft.PowerShell.Commands.Utility/7.2.15": {
-      "sha512": "D8bcMmjUjZ91zfx2VkWTbVYtdp4bd7GvsWyC8VPq/+T1PDEGk4t7htIJT3pm0Kyvv7BNySLMOYZ/pVh8f2TXfQ==",
+    "Microsoft.PowerShell.Commands.Utility/7.2.22": {
+      "sha512": "fp3F6zzvyrX+8oRQYVrzRKvAQjCPB46zUTWa/tmyEW8ES5UqJ75oFv1jtVTYCo6Ue5UTmmUEh28OafMw6lUhSw==",
       "type": "package",
-      "path": "microsoft.powershell.commands.utility/7.2.15",
+      "path": "microsoft.powershell.commands.utility/7.2.22",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Powershell_black_64.png",
-        "_manifest/spdx_2.2/bsi.json",
-        "_manifest/spdx_2.2/manifest.cat",
-        "_manifest/spdx_2.2/manifest.spdx.json",
-        "_manifest/spdx_2.2/manifest.spdx.json.sha256",
-        "microsoft.powershell.commands.utility.7.2.15.nupkg.sha512",
+        "microsoft.powershell.commands.utility.7.2.22.nupkg.sha512",
         "microsoft.powershell.commands.utility.nuspec",
         "ref/net6.0/Microsoft.PowerShell.Commands.Utility.dll",
         "ref/net6.0/Microsoft.PowerShell.Commands.Utility.xml",
@@ -14655,19 +14668,15 @@
         "runtimes/win/lib/net6.0/Microsoft.PowerShell.Commands.Utility.dll"
       ]
     },
-    "Microsoft.PowerShell.ConsoleHost/7.2.15": {
-      "sha512": "9BjdU/UtT6RG8k6aG7f+iwtlDLW4npwWV7RMmhtTe6mYoKboSHHKxw1Wk0yPRP7SKN/Yv8JzgqH5iJGJzU+LpA==",
+    "Microsoft.PowerShell.ConsoleHost/7.2.22": {
+      "sha512": "TCJHpUOL0Abzoy2iTGmrXM6bsz7i/yrv0qi4Dz3MkFF/GtI7RpbU98IiUIWDBtqySNi/DeOZ9blqsOop6z044Q==",
       "type": "package",
-      "path": "microsoft.powershell.consolehost/7.2.15",
+      "path": "microsoft.powershell.consolehost/7.2.22",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Powershell_black_64.png",
-        "_manifest/spdx_2.2/bsi.json",
-        "_manifest/spdx_2.2/manifest.cat",
-        "_manifest/spdx_2.2/manifest.spdx.json",
-        "_manifest/spdx_2.2/manifest.spdx.json.sha256",
-        "microsoft.powershell.consolehost.7.2.15.nupkg.sha512",
+        "microsoft.powershell.consolehost.7.2.22.nupkg.sha512",
         "microsoft.powershell.consolehost.nuspec",
         "ref/net6.0/Microsoft.PowerShell.ConsoleHost.dll",
         "ref/net6.0/Microsoft.PowerShell.ConsoleHost.xml",
@@ -14675,19 +14684,15 @@
         "runtimes/win/lib/net6.0/Microsoft.PowerShell.ConsoleHost.dll"
       ]
     },
-    "Microsoft.PowerShell.CoreCLR.Eventing/7.2.15": {
-      "sha512": "5jvPo18bPobOA5GD3MM4/7d7ScRFQjiIc8VCodGzdiyVMimduRA9ZmZ7jH75tmOiinqDXBZEu/+A+GyMyZnmDA==",
+    "Microsoft.PowerShell.CoreCLR.Eventing/7.2.22": {
+      "sha512": "2Pd65hWvtUg562S8SrC0OG6hmrMQL+6KF9Wcfl84Gl3FUYn/0YmLDxKWycGFNLhvOJJVzq3G4gOaGfPTcAaVTg==",
       "type": "package",
-      "path": "microsoft.powershell.coreclr.eventing/7.2.15",
+      "path": "microsoft.powershell.coreclr.eventing/7.2.22",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Powershell_black_64.png",
-        "_manifest/spdx_2.2/bsi.json",
-        "_manifest/spdx_2.2/manifest.cat",
-        "_manifest/spdx_2.2/manifest.spdx.json",
-        "_manifest/spdx_2.2/manifest.spdx.json.sha256",
-        "microsoft.powershell.coreclr.eventing.7.2.15.nupkg.sha512",
+        "microsoft.powershell.coreclr.eventing.7.2.22.nupkg.sha512",
         "microsoft.powershell.coreclr.eventing.nuspec",
         "ref/net6.0/Microsoft.PowerShell.CoreCLR.Eventing.dll",
         "ref/net6.0/Microsoft.PowerShell.CoreCLR.Eventing.xml",
@@ -14740,18 +14745,14 @@
         "runtimes/win-x86/native/pwrshplugin.dll"
       ]
     },
-    "Microsoft.PowerShell.SDK/7.2.15": {
-      "sha512": "wf9Hn0IRx/wLVERm+8L6Pqrb0JBSOn1KL1wTnCLMjcpTlzLAXuqTbXJk0ncdOzBP4fQ73Y+IehSuNOxhQDTK4w==",
+    "Microsoft.PowerShell.SDK/7.2.22": {
+      "sha512": "55CRc19w6h7VBoprB9lTYQWIfdGLJN7tpV5CByMRP3XZPxxAxJk0+OXPkCI472CE0MWj49uteWyw3wm9d9wcLw==",
       "type": "package",
-      "path": "microsoft.powershell.sdk/7.2.15",
+      "path": "microsoft.powershell.sdk/7.2.22",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Powershell_black_64.png",
-        "_manifest/spdx_2.2/bsi.json",
-        "_manifest/spdx_2.2/manifest.cat",
-        "_manifest/spdx_2.2/manifest.spdx.json",
-        "_manifest/spdx_2.2/manifest.spdx.json.sha256",
         "contentFiles/any/any/ref/Microsoft.CSharp.dll",
         "contentFiles/any/any/ref/Microsoft.VisualBasic.Core.dll",
         "contentFiles/any/any/ref/Microsoft.VisualBasic.dll",
@@ -14928,7 +14929,7 @@
         "contentFiles/any/any/runtimes/win/lib/net6.0/Modules/Microsoft.WSMan.Management/WSMan.format.ps1xml",
         "contentFiles/any/any/runtimes/win/lib/net6.0/Modules/PSDiagnostics/PSDiagnostics.psd1",
         "contentFiles/any/any/runtimes/win/lib/net6.0/Modules/PSDiagnostics/PSDiagnostics.psm1",
-        "microsoft.powershell.sdk.7.2.15.nupkg.sha512",
+        "microsoft.powershell.sdk.7.2.22.nupkg.sha512",
         "microsoft.powershell.sdk.nuspec",
         "ref/net6.0/Microsoft.PowerShell.Commands.Management.dll",
         "ref/net6.0/Microsoft.PowerShell.Commands.Management.xml",
@@ -14942,19 +14943,15 @@
         "runtimes/win/lib/net6.0/Microsoft.PowerShell.SDK.dll"
       ]
     },
-    "Microsoft.PowerShell.Security/7.2.15": {
-      "sha512": "1gJr04nGLxH8Jn3md+SCkGKcCalJ6MGfCRVGGa4S8VF0OGZYFgQp5kGb1EOnKdc+7hC49ZjWP41wGXoblG4bDA==",
+    "Microsoft.PowerShell.Security/7.2.22": {
+      "sha512": "Raj6Jnlbl8luGtPD+0ndJ7hOxJtaeLh9+8WHBPGmr5j2B7vxUmlAt0aOSllAUpiKueAKJK3T3iP6jt+Sj87esg==",
       "type": "package",
-      "path": "microsoft.powershell.security/7.2.15",
+      "path": "microsoft.powershell.security/7.2.22",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Powershell_black_64.png",
-        "_manifest/spdx_2.2/bsi.json",
-        "_manifest/spdx_2.2/manifest.cat",
-        "_manifest/spdx_2.2/manifest.spdx.json",
-        "_manifest/spdx_2.2/manifest.spdx.json.sha256",
-        "microsoft.powershell.security.7.2.15.nupkg.sha512",
+        "microsoft.powershell.security.7.2.22.nupkg.sha512",
         "microsoft.powershell.security.nuspec",
         "ref/net6.0/Microsoft.PowerShell.Security.dll",
         "ref/net6.0/Microsoft.PowerShell.Security.xml",
@@ -15209,10 +15206,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Windows.Compatibility/6.0.7": {
-      "sha512": "ubX/cYXBas9hMYhzb4ZkdsMuS+Z1z0X43oZ0rOQq9HnVsQgdbsBCEUmvgFwBxPd41KiPwSZiNZeuBZC+BSyFPw==",
+    "Microsoft.Windows.Compatibility/6.0.8": {
+      "sha512": "/Yp0fR9z6sGYAQlc3KTeH9e2mWH+bzDCAllb4rSnHu1iEj5NGP/94lcy572Uu8o4K3+LoL9pWKpxHhXu1MEFTg==",
       "type": "package",
-      "path": "microsoft.windows.compatibility/6.0.7",
+      "path": "microsoft.windows.compatibility/6.0.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -15221,43 +15218,35 @@
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/netcoreapp2.0/Microsoft.Windows.Compatibility.targets",
         "buildTransitive/netcoreapp3.1/_._",
-        "microsoft.windows.compatibility.6.0.7.nupkg.sha512",
+        "microsoft.windows.compatibility.6.0.8.nupkg.sha512",
         "microsoft.windows.compatibility.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.WSMan.Management/7.2.15": {
-      "sha512": "uRJan0QofJ2ULQpRitV5Pf9+q6FWFzi7vDofWMzc6n/ZQzD+hqWDYDHF0DVKvEaE+jVfD1AeeFmEnCAK5F8f8w==",
+    "Microsoft.WSMan.Management/7.2.22": {
+      "sha512": "JADS7N/zr1sEbuBdaOuDo3Fj6DZ78CR61+x5ky2UCROTU0pV0YvhBQSvkHOAvpZqg0fVn3Fo3Ah7AglRsnoDZw==",
       "type": "package",
-      "path": "microsoft.wsman.management/7.2.15",
+      "path": "microsoft.wsman.management/7.2.22",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Powershell_black_64.png",
-        "_manifest/spdx_2.2/bsi.json",
-        "_manifest/spdx_2.2/manifest.cat",
-        "_manifest/spdx_2.2/manifest.spdx.json",
-        "_manifest/spdx_2.2/manifest.spdx.json.sha256",
-        "microsoft.wsman.management.7.2.15.nupkg.sha512",
+        "microsoft.wsman.management.7.2.22.nupkg.sha512",
         "microsoft.wsman.management.nuspec",
         "ref/net6.0/Microsoft.WSMan.Management.dll",
         "ref/net6.0/Microsoft.WSMan.Management.xml",
         "runtimes/win/lib/net6.0/Microsoft.WSMan.Management.dll"
       ]
     },
-    "Microsoft.WSMan.Runtime/7.2.15": {
-      "sha512": "um0AA2xd2pN8sGZ6ADNoimwEGKHsqJ9rRf4OCt81sMLQmuRzVBUb+hYy+Pqm5LvOHtqKzxbDMGd/93+00UGnNQ==",
+    "Microsoft.WSMan.Runtime/7.2.22": {
+      "sha512": "AeMDo5PHQlIzY0exiBI37L9tfva3KWmf6KdYTFdT2KvuZ21GR8h02dzuyTr/YGZwZmssMQlb22Qi6HQnnSLd0A==",
       "type": "package",
-      "path": "microsoft.wsman.runtime/7.2.15",
+      "path": "microsoft.wsman.runtime/7.2.22",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Powershell_black_64.png",
-        "_manifest/spdx_2.2/bsi.json",
-        "_manifest/spdx_2.2/manifest.cat",
-        "_manifest/spdx_2.2/manifest.spdx.json",
-        "_manifest/spdx_2.2/manifest.spdx.json.sha256",
-        "microsoft.wsman.runtime.7.2.15.nupkg.sha512",
+        "microsoft.wsman.runtime.7.2.22.nupkg.sha512",
         "microsoft.wsman.runtime.nuspec",
         "ref/net6.0/Microsoft.WSMan.Runtime.dll",
         "ref/net6.0/Microsoft.WSMan.Runtime.xml",
@@ -17313,10 +17302,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Data.SqlClient/4.8.5": {
-      "sha512": "fRqxut4lrndPHrXD+ht1XRmCL3obuKldm4XjCRYS9p5f7FSR7shBxAwTkDrpFMsHC9BhNgjjmUtiIjvehn5zkg==",
+    "System.Data.SqlClient/4.8.6": {
+      "sha512": "2Ij/LCaTQRyAi5lAv7UUTV9R2FobC8xN9mE0fXBZohum/xLl8IZVmE98Rq5ugQHjCgTBRKqpXRb4ORulRdA6Ig==",
       "type": "package",
-      "path": "system.data.sqlclient/4.8.5",
+      "path": "system.data.sqlclient/4.8.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -17393,7 +17382,7 @@
         "runtimes/win/lib/netstandard2.0/System.Data.SqlClient.xml",
         "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.dll",
         "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.xml",
-        "system.data.sqlclient.4.8.5.nupkg.sha512",
+        "system.data.sqlclient.4.8.6.nupkg.sha512",
         "system.data.sqlclient.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -18376,28 +18365,29 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.IO.Pipelines/4.7.1": {
-      "sha512": "TyMTasnXQt7U4k13RQ7tA3CrfWEkvWjR635SFfnKVwwMOgClLE5mdHSkG2D13BLIdNwbPTGVQnhQB8Rk7f53Rg==",
+    "System.IO.Pipelines/6.0.0": {
+      "sha512": "mXX66shZ4xLlI3vNLaJ0lt8OIZdmXTvIqXRdQX5HLVGSkLhINLsVhyZuX2UdRFnOGkqnwmMUs40pIIQ7mna4+A==",
       "type": "package",
-      "path": "system.io.pipelines/4.7.1",
+      "path": "system.io.pipelines/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/netcoreapp3.0/System.IO.Pipelines.dll",
-        "lib/netcoreapp3.0/System.IO.Pipelines.xml",
-        "lib/netstandard1.3/System.IO.Pipelines.dll",
-        "lib/netstandard1.3/System.IO.Pipelines.xml",
+        "buildTransitive/netcoreapp2.0/System.IO.Pipelines.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.IO.Pipelines.dll",
+        "lib/net461/System.IO.Pipelines.xml",
+        "lib/net6.0/System.IO.Pipelines.dll",
+        "lib/net6.0/System.IO.Pipelines.xml",
+        "lib/netcoreapp3.1/System.IO.Pipelines.dll",
+        "lib/netcoreapp3.1/System.IO.Pipelines.xml",
         "lib/netstandard2.0/System.IO.Pipelines.dll",
         "lib/netstandard2.0/System.IO.Pipelines.xml",
-        "ref/netcoreapp2.0/System.IO.Pipelines.dll",
-        "ref/netcoreapp2.0/System.IO.Pipelines.xml",
-        "system.io.pipelines.4.7.1.nupkg.sha512",
+        "system.io.pipelines.6.0.0.nupkg.sha512",
         "system.io.pipelines.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.IO.Ports/6.0.0": {
@@ -18665,23 +18655,19 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Management.Automation/7.2.15": {
-      "sha512": "dk5uXMJ9TVG++j4ZJs/WLLYOi6bbH4aPvMYcT0lLTpPYxH06V9Lj1NOH69kq+tT0rhvJMrAmDYTqB/r39TckaA==",
+    "System.Management.Automation/7.2.22": {
+      "sha512": "DxaER2aXQMnk9RDc7YmxIvWcCokpQXbPpcVFtaO/62UUoOrG8zeqY4aWbfSL2xQDZr5BY8ts+V7UZCIizpWLow==",
       "type": "package",
-      "path": "system.management.automation/7.2.15",
+      "path": "system.management.automation/7.2.22",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Powershell_black_64.png",
-        "_manifest/spdx_2.2/bsi.json",
-        "_manifest/spdx_2.2/manifest.cat",
-        "_manifest/spdx_2.2/manifest.spdx.json",
-        "_manifest/spdx_2.2/manifest.spdx.json.sha256",
         "ref/net6.0/System.Management.Automation.dll",
         "ref/net6.0/System.Management.Automation.xml",
         "runtimes/unix/lib/net6.0/System.Management.Automation.dll",
         "runtimes/win/lib/net6.0/System.Management.Automation.dll",
-        "system.management.automation.7.2.15.nupkg.sha512",
+        "system.management.automation.7.2.22.nupkg.sha512",
         "system.management.automation.nuspec"
       ]
     },
@@ -20114,10 +20100,10 @@
         "system.runtime.numerics.nuspec"
       ]
     },
-    "System.Security.AccessControl/6.0.0": {
-      "sha512": "AUADIc0LIEQe7MzC+I0cl0rAT8RrTAKFHl53yHjEUzNVIaUlhFY11vc2ebiVJzVBuOzun6F7FBA+8KAbGTTedQ==",
+    "System.Security.AccessControl/6.0.1": {
+      "sha512": "IQ4NXP/B3Ayzvw0rDQzVTYsCKyy0Jp9KI6aYcK7UnGVlR9+Awz++TIPCQtPYfLJfOpm8ajowMR09V7quD3sEHw==",
       "type": "package",
-      "path": "system.security.accesscontrol/6.0.0",
+      "path": "system.security.accesscontrol/6.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -20138,7 +20124,7 @@
         "runtimes/win/lib/net6.0/System.Security.AccessControl.xml",
         "runtimes/win/lib/netstandard2.0/System.Security.AccessControl.dll",
         "runtimes/win/lib/netstandard2.0/System.Security.AccessControl.xml",
-        "system.security.accesscontrol.6.0.0.nupkg.sha512",
+        "system.security.accesscontrol.6.0.1.nupkg.sha512",
         "system.security.accesscontrol.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -21481,28 +21467,31 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Threading.Channels/4.7.1": {
-      "sha512": "6akRtHK/wab3246t4p5v3HQrtQk8LboOt5T4dtpNgsp3zvDeM4/Gx8V12t0h+c/W9/enUrilk8n6EQqdQorZAA==",
+    "System.Threading.Channels/6.0.0": {
+      "sha512": "TY8/9+tI0mNaUMgntOxxaq2ndTkdXqLSxvPmas7XEqOlv9lQtB7wLjYGd756lOaO7Dvb5r/WXhluM+0Xe87v5Q==",
       "type": "package",
-      "path": "system.threading.channels/4.7.1",
+      "path": "system.threading.channels/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Threading.Channels.targets",
+        "buildTransitive/netcoreapp3.1/_._",
         "lib/net461/System.Threading.Channels.dll",
         "lib/net461/System.Threading.Channels.xml",
-        "lib/netcoreapp3.0/System.Threading.Channels.dll",
-        "lib/netcoreapp3.0/System.Threading.Channels.xml",
-        "lib/netstandard1.3/System.Threading.Channels.dll",
-        "lib/netstandard1.3/System.Threading.Channels.xml",
+        "lib/net6.0/System.Threading.Channels.dll",
+        "lib/net6.0/System.Threading.Channels.xml",
+        "lib/netcoreapp3.1/System.Threading.Channels.dll",
+        "lib/netcoreapp3.1/System.Threading.Channels.xml",
         "lib/netstandard2.0/System.Threading.Channels.dll",
         "lib/netstandard2.0/System.Threading.Channels.xml",
-        "system.threading.channels.4.7.1.nupkg.sha512",
+        "lib/netstandard2.1/System.Threading.Channels.dll",
+        "lib/netstandard2.1/System.Threading.Channels.xml",
+        "system.threading.channels.6.0.0.nupkg.sha512",
         "system.threading.channels.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Threading.Overlapped/4.3.0": {
@@ -23237,24 +23226,24 @@
         "uipath.officelibs.nuspec"
       ]
     },
-    "UiPath.OpenTelemetry.Contracts/2.1.3": {
-      "sha512": "jK3dSVWZbdVBHBjh/S8yJ3v0OwMXxnceG9WaSMyhVM7MrCkc7LbatnAZSsJmxnJrsmAiZsdYHPl7DTMVinmPeg==",
+    "UiPath.OpenTelemetry.Contracts/2.3.3": {
+      "sha512": "ur3hOgQgeHjI7lbnNzevgS9wUa60semWnMks++RZCow4YQRSBL3O8IedENZh8WsPIl13mvlwIDLgovgkHFT/Eg==",
       "type": "package",
-      "path": "uipath.opentelemetry.contracts/2.1.3",
+      "path": "uipath.opentelemetry.contracts/2.3.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "UI_icon.png",
         "lib/net461/UiPath.OpenTelemetry.Contracts.dll",
         "lib/netstandard2.0/UiPath.OpenTelemetry.Contracts.dll",
-        "uipath.opentelemetry.contracts.2.1.3.nupkg.sha512",
+        "uipath.opentelemetry.contracts.2.3.3.nupkg.sha512",
         "uipath.opentelemetry.contracts.nuspec"
       ]
     },
-    "UiPath.Platform/24.11.0-alpha.6160837": {
-      "sha512": "P7KQEJ328hVuSWmqfPR4RR21g6wTvFfqk/5VHu/n+KgKdL0NTr5NSfEd/qvDPkFbSFiUvno4HH5l0fUhPVEpWg==",
+    "UiPath.Platform/24.11.0-alpha.6487324": {
+      "sha512": "2ChPIyVklHLm/osD0/7oPtE27Nc5/MyX847OB5BSl8k/1Qm8BZyb1AmRIhC+/WRp8goimXFJB0iOyVx1RvWUvg==",
       "type": "package",
-      "path": "uipath.platform/24.11.0-alpha.6160837",
+      "path": "uipath.platform/24.11.0-alpha.6487324",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -23297,14 +23286,14 @@
         "lib/net6.0/ru/UiPath.Platform.resources.dll",
         "lib/net6.0/tr/UiPath.Platform.resources.dll",
         "lib/net6.0/zh-CN/UiPath.Platform.resources.dll",
-        "uipath.platform.24.11.0-alpha.6160837.nupkg.sha512",
+        "uipath.platform.24.11.0-alpha.6487324.nupkg.sha512",
         "uipath.platform.nuspec"
       ]
     },
-    "UiPath.System.Activities/24.11.0-alpha.6348978": {
-      "sha512": "bFXWYvSNNzr6tOpar34bHrWYIKYKlRF83rtO5SAXuP7DrjH5U0BV4VvyQz5rE76ps/hNbFqZsPMETTQuJ/5kGA==",
+    "UiPath.System.Activities/24.11.0-preview": {
+      "sha512": "qh3+fHgCaHmN4Dp4sqkfkQ6kTtgVR5rJKw8onH4qs0j/TmgIcT1/yabwIeFSvpYdmJ96+uC6IxL04fYqgkW2PQ==",
       "type": "package",
-      "path": "uipath.system.activities/24.11.0-alpha.6348978",
+      "path": "uipath.system.activities/24.11.0-preview",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -23339,28 +23328,28 @@
         "lib/net6.0-windows7.0/zh-TW/UiPath.System.Activities.Design.resources.dll",
         "lib/net6.0-windows7.0/zu/UiPath.System.Activities.Design.resources.dll",
         "lib/net6.0/UiPath.System.Activities.ViewModels.dll",
-        "uipath.system.activities.24.11.0-alpha.6348978.nupkg.sha512",
+        "uipath.system.activities.24.11.0-preview.nupkg.sha512",
         "uipath.system.activities.nuspec"
       ]
     },
-    "UiPath.System.Activities.Runtime/24.11.0-alpha.6348978": {
-      "sha512": "wS8wMODs5Ynn/AnKsyEMS3vTB+DrBed/uSHhSlWwtun0YKjxsIU+7V/kR0DAq2N8eE7kBtir7keBREQiwf6T1Q==",
+    "UiPath.System.Activities.Runtime/24.11.0-preview": {
+      "sha512": "FU4jCzcrTEI4vpwRrnlEzzrXpSwc0VH+zhDxCU0SFaVAtaoD9cqFt67npe0742x1TN4VHHAf0WgmR0pH3XKV4w==",
       "type": "package",
-      "path": "uipath.system.activities.runtime/24.11.0-alpha.6348978",
+      "path": "uipath.system.activities.runtime/24.11.0-preview",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net461/UiPath.System.Activities.Package.Runtime.dll",
         "lib/net6.0-windows7.0/UiPath.System.Activities.Package.Runtime.dll",
         "lib/net6.0/UiPath.System.Activities.Package.Runtime.dll",
-        "uipath.system.activities.runtime.24.11.0-alpha.6348978.nupkg.sha512",
+        "uipath.system.activities.runtime.24.11.0-preview.nupkg.sha512",
         "uipath.system.activities.runtime.nuspec"
       ]
     },
-    "UiPath.System.Activities.Runtime.Windows/24.11.0-alpha.6348978": {
-      "sha512": "6MRQqOseo3yoHEPubXUmhvbcxtNxFr5IiScAzaQ6JHyQGGKctanTr+voAi7HSg4iMIpAEhnKkvfu8wqQDN4lGw==",
+    "UiPath.System.Activities.Runtime.Windows/24.11.0-preview": {
+      "sha512": "tJHXZGtlQYIctQL793LVBV1I2a2xE9PYLDHdslNF5M1ZfnNwPyZ8YL4ugi7A4s+LhKxrIZ2XmJwSLhaxZh6i0Q==",
       "type": "package",
-      "path": "uipath.system.activities.runtime.windows/24.11.0-alpha.6348978",
+      "path": "uipath.system.activities.runtime.windows/24.11.0-preview",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -23396,21 +23385,21 @@
         "lib/net6.0-windows7.0/zh-CN/UiPath.System.Activities.resources.dll",
         "lib/net6.0-windows7.0/zh-TW/UiPath.System.Activities.resources.dll",
         "lib/net6.0-windows7.0/zu/UiPath.System.Activities.resources.dll",
-        "uipath.system.activities.runtime.windows.24.11.0-alpha.6348978.nupkg.sha512",
+        "uipath.system.activities.runtime.windows.24.11.0-preview.nupkg.sha512",
         "uipath.system.activities.runtime.windows.nuspec"
       ]
     },
-    "UiPath.Telemetry.Client/2.1.3": {
-      "sha512": "J8P+1wLcXXwuBWtFEdzFxnSWDVTH/6plaGloTO0VaOAWDa3C4uMddB8OEpFH4ixM86JlYdg0hRw4m3aHzVZeIA==",
+    "UiPath.Telemetry.Client/2.3.3": {
+      "sha512": "ZEGLex036Ne5wyuWp/9ccbMFMEhwamyD+V/7jPq8+FwtYhN7Kq/cQQxhbDFQLfen/ehRoahRDB9P9M6PX818/g==",
       "type": "package",
-      "path": "uipath.telemetry.client/2.1.3",
+      "path": "uipath.telemetry.client/2.3.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "UI_icon.png",
         "lib/net461/TelemetryClient.dll",
         "lib/netstandard2.0/TelemetryClient.dll",
-        "uipath.telemetry.client.2.1.3.nupkg.sha512",
+        "uipath.telemetry.client.2.3.3.nupkg.sha512",
         "uipath.telemetry.client.nuspec"
       ]
     },
@@ -24171,7 +24160,7 @@
       "UiPath.GSuite.Activities >= 2.7.20-alpha.6344737 <= 2.7.20-alpha.6344737",
       "UiPath.IntegrationService.Activities >= 1.7.0-alpha.20240725.1 <= 1.7.0-alpha.20240725.1",
       "UiPath.Mail.Activities >= 1.23.10 <= 1.23.10",
-      "UiPath.System.Activities >= 24.11.0-alpha.6348978 <= 24.11.0-alpha.6348978",
+      "UiPath.System.Activities >= 24.11.0-preview <= 24.11.0-preview",
       "UiPath.Testing.Activities >= 24.10.1 <= 24.10.1",
       "UiPath.UIAutomation.Activities >= 24.10.2 <= 24.10.2"
     ]
@@ -24218,7 +24207,7 @@
           "UiPath.System.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[24.11.0-alpha.6348978, 24.11.0-alpha.6348978]"
+            "version": "[24.11.0-preview, 24.11.0-preview]"
           },
           "UiPath.Testing.Activities": {
             "include": "Runtime",
@@ -24231,7 +24220,7 @@
             "version": "[24.10.2, 24.10.2]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Work\\Work\\UiPath.Studio.ProjectPackager.CLI-windows\\PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Liviu.Ponova\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

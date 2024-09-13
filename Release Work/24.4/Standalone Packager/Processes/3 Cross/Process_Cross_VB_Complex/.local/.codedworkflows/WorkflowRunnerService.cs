@@ -18,6 +18,23 @@ namespace Process_Cross_VB_Complex
         }
 
         /// <summary>
+        /// Invokes the EntryPoints/EP1_Webservice.xaml
+        /// </summary>
+        public SwaggerPetstore.Pet EP1_Webservice(System.Nullable<long> in_PetId, string in_PetName)
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"EntryPoints\EP1_Webservice.xaml", new Dictionary<string, object>{{"in_PetId", in_PetId}, {"in_PetName", in_PetName}}, default, default, default, GetAssemblyName());
+            return (SwaggerPetstore.Pet)result["out_Pet"];
+        }
+
+        /// <summary>
+        /// Invokes the TestCase_Draft_RootFolder_Entity.xaml
+        /// </summary>
+        public void TestCase_Draft_RootFolder_Entity()
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"TestCase_Draft_RootFolder_Entity.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+        }
+
+        /// <summary>
         /// Invokes the Non_EntryPoints/NEP2.xaml
         /// </summary>
         public void NEP2()
@@ -34,29 +51,11 @@ namespace Process_Cross_VB_Complex
         }
 
         /// <summary>
-        /// Invokes the Sequence.xaml
+        /// Invokes the Private_Flowchart.xaml
         /// </summary>
-        public void Sequence()
+        public void Private_Flowchart()
         {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Sequence.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
-        }
-
-        /// <summary>
-        /// Invokes the GlobalHandler-Ignore_RootFolder.xaml
-        /// </summary>
-        public UiPath.Activities.Contracts.ErrorAction GlobalHandler_Ignore_RootFolder(UiPath.Activities.Contracts.ExceptionHandlerArgs errorInfo)
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"GlobalHandler-Ignore_RootFolder.xaml", new Dictionary<string, object>{{"errorInfo", errorInfo}}, default, default, default, GetAssemblyName());
-            return (UiPath.Activities.Contracts.ErrorAction)result["result"];
-        }
-
-        /// <summary>
-        /// Invokes the ErrorHandling/GlobalHandler-Ignore.xaml
-        /// </summary>
-        public UiPath.Activities.Contracts.ErrorAction GlobalHandler_Ignore(UiPath.Activities.Contracts.ExceptionHandlerArgs errorInfo)
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"ErrorHandling\GlobalHandler-Ignore.xaml", new Dictionary<string, object>{{"errorInfo", errorInfo}}, default, default, default, GetAssemblyName());
-            return (UiPath.Activities.Contracts.ErrorAction)result["result"];
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Private_Flowchart.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
         }
 
         /// <summary>
@@ -69,21 +68,29 @@ namespace Process_Cross_VB_Complex
         }
 
         /// <summary>
+        /// Invokes the TestCase_RootFolder_Webservice.xaml
+        /// </summary>
+        public void TestCase_RootFolder_Webservice()
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"TestCase_RootFolder_Webservice.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+        }
+
+        /// <summary>
+        /// Invokes the GlobalHandler-Ignore_RootFolder.xaml
+        /// </summary>
+        public UiPath.Activities.Contracts.ErrorAction GlobalHandler_Ignore_RootFolder(UiPath.Activities.Contracts.ExceptionHandlerArgs errorInfo)
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"GlobalHandler-Ignore_RootFolder.xaml", new Dictionary<string, object>{{"errorInfo", errorInfo}}, default, default, default, GetAssemblyName());
+            return (UiPath.Activities.Contracts.ErrorAction)result["result"];
+        }
+
+        /// <summary>
         /// Invokes the EP_RootFolder_Webservice.xaml
         /// </summary>
         public SwaggerPetstore.Pet EP_RootFolder_Webservice()
         {
             var result = _services.WorkflowInvocationService.RunWorkflow(@"EP_RootFolder_Webservice.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
             return (SwaggerPetstore.Pet)result["out_pet"];
-        }
-
-        /// <summary>
-        /// Invokes the EntryPoints/EP1_Webservice.xaml
-        /// </summary>
-        public SwaggerPetstore.Pet EP1_Webservice(System.Nullable<long> in_PetId, string in_PetName)
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"EntryPoints\EP1_Webservice.xaml", new Dictionary<string, object>{{"in_PetId", in_PetId}, {"in_PetName", in_PetName}}, default, default, default, GetAssemblyName());
-            return (SwaggerPetstore.Pet)result["out_Pet"];
         }
 
         /// <summary>
@@ -96,11 +103,11 @@ namespace Process_Cross_VB_Complex
         }
 
         /// <summary>
-        /// Invokes the TestCase_RootFolder_Webservice.xaml
+        /// Invokes the Triggers/TimeTrigger.xaml
         /// </summary>
-        public void TestCase_RootFolder_Webservice()
+        public void TimeTrigger(string UiPathEventConnector, string UiPathEvent, string UiPathEventObjectType, string UiPathEventObjectId, string UiPathAdditionalEventData)
         {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"TestCase_RootFolder_Webservice.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Triggers\TimeTrigger.xaml", new Dictionary<string, object>{{"UiPathEventConnector", UiPathEventConnector}, {"UiPathEvent", UiPathEvent}, {"UiPathEventObjectType", UiPathEventObjectType}, {"UiPathEventObjectId", UiPathEventObjectId}, {"UiPathAdditionalEventData", UiPathAdditionalEventData}}, default, default, default, GetAssemblyName());
         }
 
         /// <summary>
@@ -112,62 +119,6 @@ namespace Process_Cross_VB_Complex
         }
 
         /// <summary>
-        /// Invokes the Private/Private_Flowchart.xaml
-        /// </summary>
-        public void Private_Private_Flowchart()
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Private\Private_Flowchart.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
-        }
-
-        /// <summary>
-        /// Invokes the Private_Flowchart.xaml
-        /// </summary>
-        public void Private_Flowchart()
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Private_Flowchart.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
-        }
-
-        /// <summary>
-        /// Invokes the TestCase_Draft_RootFolder_Entity.xaml
-        /// </summary>
-        public void TestCase_Draft_RootFolder_Entity()
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"TestCase_Draft_RootFolder_Entity.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
-        }
-
-        /// <summary>
-        /// Invokes the Non_EntryPoints/NEP1.xaml
-        /// </summary>
-        public void NEP1()
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Non_EntryPoints\NEP1.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
-        }
-
-        /// <summary>
-        /// Invokes the EP_RootFolder.xaml
-        /// </summary>
-        public void EP_RootFolder()
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"EP_RootFolder.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
-        }
-
-        /// <summary>
-        /// Invokes the Triggers/TimeTrigger.xaml
-        /// </summary>
-        public void TimeTrigger(string UiPathEventConnector, string UiPathEvent, string UiPathEventObjectType, string UiPathEventObjectId, string UiPathAdditionalEventData)
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Triggers\TimeTrigger.xaml", new Dictionary<string, object>{{"UiPathEventConnector", UiPathEventConnector}, {"UiPathEvent", UiPathEvent}, {"UiPathEventObjectType", UiPathEventObjectType}, {"UiPathEventObjectId", UiPathEventObjectId}, {"UiPathAdditionalEventData", UiPathAdditionalEventData}}, default, default, default, GetAssemblyName());
-        }
-
-        /// <summary>
-        /// Invokes the NEP_RootFolder.xaml
-        /// </summary>
-        public void NEP_RootFolder()
-        {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"NEP_RootFolder.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
-        }
-
-        /// <summary>
         /// Invokes the Triggers/GitHub.xaml
         /// </summary>
         public void GitHub(string UiPathEventConnector, string UiPathEvent, string UiPathEventObjectType, string UiPathEventObjectId, string UiPathAdditionalEventData)
@@ -176,11 +127,11 @@ namespace Process_Cross_VB_Complex
         }
 
         /// <summary>
-        /// Invokes the Main.xaml
+        /// Invokes the Sequence.xaml
         /// </summary>
-        public void Main()
+        public void Sequence()
         {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Main.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Sequence.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
         }
 
         /// <summary>
@@ -193,11 +144,11 @@ namespace Process_Cross_VB_Complex
         }
 
         /// <summary>
-        /// Invokes the EP_RootFolder_Coded_Workflow.cs
+        /// Invokes the NEP_RootFolder.xaml
         /// </summary>
-        public void EP_RootFolder_Coded_Workflow()
+        public void NEP_RootFolder()
         {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"EP_RootFolder_Coded_Workflow.cs", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"NEP_RootFolder.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
         }
 
         /// <summary>
@@ -206,6 +157,55 @@ namespace Process_Cross_VB_Complex
         public void TestCase_Entity()
         {
             var result = _services.WorkflowInvocationService.RunWorkflow(@"Tests\TestCase_Entity.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+        }
+
+        /// <summary>
+        /// Invokes the EP_RootFolder.xaml
+        /// </summary>
+        public void EP_RootFolder()
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"EP_RootFolder.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+        }
+
+        /// <summary>
+        /// Invokes the Private/Private_Flowchart.xaml
+        /// </summary>
+        public void Private_Private_Flowchart()
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Private\Private_Flowchart.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+        }
+
+        /// <summary>
+        /// Invokes the Main.xaml
+        /// </summary>
+        public void Main()
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Main.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+        }
+
+        /// <summary>
+        /// Invokes the ErrorHandling/GlobalHandler-Ignore.xaml
+        /// </summary>
+        public UiPath.Activities.Contracts.ErrorAction GlobalHandler_Ignore(UiPath.Activities.Contracts.ExceptionHandlerArgs errorInfo)
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"ErrorHandling\GlobalHandler-Ignore.xaml", new Dictionary<string, object>{{"errorInfo", errorInfo}}, default, default, default, GetAssemblyName());
+            return (UiPath.Activities.Contracts.ErrorAction)result["result"];
+        }
+
+        /// <summary>
+        /// Invokes the EP_RootFolder_Coded_Workflow.cs
+        /// </summary>
+        public void EP_RootFolder_Coded_Workflow()
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"EP_RootFolder_Coded_Workflow.cs", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
+        }
+
+        /// <summary>
+        /// Invokes the Non_EntryPoints/NEP1.xaml
+        /// </summary>
+        public void NEP1()
+        {
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Non_EntryPoints\NEP1.xaml", new Dictionary<string, object>{}, default, default, default, GetAssemblyName());
         }
 
         /// <summary>
